@@ -1,0 +1,673 @@
+<>--------------------------------
+<>	>dcdarc.fls
+<>--------------------------------
+dcd0127.lzh
+	>2003
+	>DcDrawの再開です。
+	>Ouを駆使して、優雅なオブジェクト指向を目指します。
+	>まだまだ、動くレベルではありません。
+
+dcd0211.lzh
+	>DcDrawの再開です。
+	>DcDraw\monolog\DcDrawクラス図_2.mdrw
+	>を追加しました。
+
+dcd0222.lzh
+	>古いクラス図をkyuusiしました。
+
+dcd02221.lzh
+	>クラス図上で重複したクラスを合理化しました。
+
+dcd1122.lzh
+	>さらに、kyuusiにしました。
+	>C01_CdDcd\cwndbase
+	>動作しました。
+
+dcd1126.lzh
+	>C02_CdDcd
+
+dcd11261.lzh
+	>Libs\DcDraw\C02_CdDcd\CdDcdJikken
+	>C02_CdDcd
+	>が動作しました。
+
+dcd1201.lzh
+	>Libs\DcDraw\C02_CdDcd\CdDcdJikken
+	>C02_CdDcd
+	>に、CdDcdSizeXyを追加しました。
+
+dcd1207.lzh
+	>C01_CdDcLogicalSize\cwndbase\CConverter_WinGdi
+
+dcd1221.lzh
+	>C03_IfDcDraw\cwndbase\
+	>が動作しました。
+
+dcd12211.lzh
+	>C03_IfDcDraw\cwndbase\
+	>のDcdType.hを、doxygen対応にしました。
+
+dcd1223.lzh
+	>C03_IfDcDraw\cwndbase\
+	>CDcdTargetItemPositionを追加しました。
+
+dcd1311.lzh
+	>2004
+	>C04_IfDcDraw\cwndbase\
+	>CDcdText,CDcdLine,CDcdFillrectができました。
+
+dcd13111.lzh
+	>C05_Dcd_BitmapCache\cwndbase
+	>ビットマップにキャッシュして表示します。
+
+dcd1318.lzh
+	>C01_DcDraw\C06_DcdFillrectText\cwndbase\RES\MFCSTD.RC2
+
+dcd1321.lzh
+	>C01_DcDraw\C06_DcdFillrectText\
+	>CDcLogicalUnitSIzeXとYを別ファイルに分離しました。
+
+dcd1330.lzh
+	>C01_DcDraw\C07_DcdFillrectFrameText
+
+dcd1405.lzh
+	>C01_DcDraw\C07_DcdFillRectangleText
+	>が動作しました。
+
+dcd1408.lzh
+	>C01_DcDraw\C08_CDcdTargetCompatibleBitmap
+	>が動作しました。
+
+dcd14081.lzh
+	>C01_DcDraw\C08_CDcdTargetCompatibleBitmap
+	>ペンの属性を変化させています。
+
+dcd14082.lzh
+	>C01_DcDraw\
+	>ライブラリ形式を統一しました。
+
+dcd14083.lzh
+	>DcDraw\
+	>ライブラリとしての体裁を形成しました。
+
+dcd1411.lzh
+	>DcDraw\sekkeiを追加しました。
+
+dcd14111.lzh
+	>DcdGrid\sekkei\CDcdGrid_class.mdrw
+
+dcd14112.lzh
+	>DcdGrid\C01_DcdCell\
+	>を開始しました。
+
+dcd1416.lzh
+	>DcdGrid\C01_DcdCell\
+	>CDcdGridColumnを開始しました。
+
+dcd1417.lzh
+	>DcdGrid\C01_DcdCell\
+	>CDcdGridを開始しました。
+
+dcd1422.lzh
+	>DcdGrid\C01_DcdCell\
+	>CDcdGrid作成中・コンテナ操作はコーディング済み。
+
+dcd1423.lzh
+	>DcdGrid\C01_DcdCell\
+	>CDcdGridの位置調整関数をコーディング。
+
+dcd1424.lzh
+	>DcdGrid\C01_DcdCell\
+	>Gridの罫線描画が動作し始めました。
+
+dcd1425.lzh
+	>DcdGrid\C01_DcdCell\
+	>Gridのセル描画が動作し始めました。
+
+dcd1426.lzh
+	>DcdGrid\C01_DcdCell\
+	>Gridのセルの削除ができるようになりました。
+
+dcd1429.lzh
+	>DcdGrid\C01_DcdCell\
+	>
+	>DcDraw\kyuusi\CDcdFillrectText.cpp
+	>DcDraw\kyuusi\CDcdFillrectText.h
+	>DcDraw\kyuusi\CDcdRectangleText.cpp
+	>DcDraw\kyuusi\CDcdRectangleText.h
+	>休止扱いにしました。
+
+
+dcd14291.lzh
+	>サンプルをjikkenディレクトリに移しました。
+
+dcd1501.lzh
+	>DcdGrid\jikken\C02_Scroll\cwndbase
+	>スクロールができるようになりました。
+
+dcd1502.lzh
+	>DcdGrid\jikken\C02_Scroll\cwndbase
+	>CDcdGridのコメントを変更しました。
+
+dcd1510.lzh
+	>DcdGrid\jikken\C03_attach\cwndbase
+	>行・列・セル番号を各オブジェクトの属性に変更しました。
+
+dcd1514.lzh
+	>DcdGrid\jikken\C03_attach\cwndbase
+	>座標計算のコードを変更しました。
+
+dcd15141.lzh
+	>DcdGrid\jikken\C03_attach\cwndbase
+	>セルの結合（クリップなし）ができました。
+
+dcd15142.lzh
+	>IfDcDraw::getInvalidateZone()を
+	>IfDcDraw::getDrawableZone()に変更
+	>
+	>DcdGrid\jikken\C03_attach\cwndbase
+	>CaDcdTargetItemPosition::isDrawable()
+	>を新設しました。
+
+dcd15143.lzh
+	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip.cpp
+	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip.h
+	>を新設しました。
+
+dcd1515.lzh
+	>DcDraw\CaDcdTargetItemPosition
+	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip
+	>
+	>コンストラクタの引数の順序を変更しました。
+
+dcd15151.lzh
+	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip
+	>
+	>結合セルができました。
+
+dcd1521.lzh
+	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip
+	>
+	>コメントを追加しました。
+
+dcd1908.lzh
+	>DcdGrid\jikken\C04_rename\cwndbase\
+	>
+	>DcdGridの行->Y列・列->X列に
+	>名称変更しました。
+
+dcd19081.lzh
+	>DcdGrid\jikken\C04_rename\cwndbase\
+	>
+	>列の、ソース統合化を進めました。
+
+dcd1910.lzh
+	>DcdGrid\jikken\C04_rename\cwndbase\
+	>
+	>結合セルの指定方法を変更しました。
+	>CDcdGridCellの代入演算子を中止しました。
+
+dcd19101.lzh
+	>DcdGrid\jikken\C04_rename\cwndbase\
+	>
+	>代入演算子の実装を変更しました。
+
+dcd1917.lzh
+	>DcdGrid\sekkei\CDcdGrid_各部の名称.txt
+	>を追加しました。ただし、ほとんど書けていません。
+	>
+	>DcDraw\CaDcdTargetClipを
+	>DcdGridから移動しました。
+
+dcd19171.lzh
+	>DcdGrid\jikken\C04_rename\cwndbase\
+	>getCellなどの引数順を
+	>getCell(XcolumnNumber,YcolumnNumber)
+	>の順に変更しました。
+	>Cellの代入を廃止しました。
+	>
+	>DcDraw\doxygen\dcdraw.dxy
+
+dcd1918.lzh
+	>DcdGrid\jikken\C04_rename\cwndbase\
+	>setCellProp->copyCellPropに名称変更
+	>Scrolling->Overlapに名称変更
+
+dcd2230.lzh
+	>DcdGrid\jikken\C04_rename\cwndbase\
+	>
+	>CdDcdGrid::getYcolumnNumberOfPos()
+	>CdDcdGrid::getXcolumnNumberOfPos()
+	>CdDcdGrid::getCellNumberOfPos()
+	>を追加しました。
+
+dcd2717.lzh
+	>2005
+	>
+	>DcdGrid\jikken\C05_manycell\
+	>大量のセルを表示しようとしたら、遅すぎて使い物になりません
+
+dcd2719.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>CdDcdText::getItemSize()が遅いことが分かりました。
+	>しかし、まだまだ遅い
+	>
+	>CdDcdGrid::getXcolumnsSize()
+	>CdDcdGrid::getYcolumnsSize()
+	>を新設しました。
+
+dcd2720.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>標準（４２０）
+	>フォントの生成なし（３３０）
+	>フォント生成・ブラシ塗りこむなし（３１０）
+	>フォント生成・ブラシ塗りこみ・枠線描画なし（３００）
+	>フォント生成・ブラシ塗りこみ・枠線描画・クリッピングなし（２７０）
+	>
+	>OnPaint
+	>標準（400）
+	>フォントの生成なし（310）
+	>フォント生成・ブラシ塗りこむなし（270）
+	>フォント生成・ブラシ塗りこみ・枠線描画なし（270）
+	>フォント生成・ブラシ塗りこみ・枠線描画・クリッピングなし（230）
+
+dcd27201.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>元に戻しました。
+
+dcd27202.lzh
+	>DcDraw\jikken\C09_CDcdText\cwndbase\
+	>フォント生成を毎回行わない
+	>クリッピングなし
+	>MSゴシックを使用
+	>これによって、全画面に瞬時に描画することができることが分かりました。
+
+dcd2721.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>
+	>標準(410)
+	>フォント生成なし(310)
+	>フォント生成・塗りこみなし(280)
+	>フォント生成・罫線描画・塗りこみなし(280)
+	>フォント生成・罫線描画・塗りこみ・クリッピングなし(240)
+	>フォント生成・罫線描画・塗りこみ・クリッピングなし・MSゴシック(50)
+	>罫線描画・塗りこみ・クリッピングなし・MSゴシック(300)
+
+dcd27211.lzh
+	>DcDraw\CGdiCache.cpp
+	>DcDraw\CGdiCache.h
+	>を追加しました。
+	>DcdGrid\jikken\C05_manycell\
+	>クリッピングなし・MSゴシック・フォントのみキャッシュ(100)
+	>クリッピングなし・MSゴシック・フォント・ペン・ブラシのキャッシュ(90)
+	>クリッピングなし・MSゴシック・フォント・ペン・ブラシのキャッシュ・塗りこみなし(70)
+	>クリッピングなし・MSゴシック・フォント・ペン・ブラシのキャッシュ・塗りこみなし・枠線なし(60)
+	>
+
+
+
+dcd27212.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>セルの持ち方を２次元配列に変更しました。
+	>次は、CDcdGrid::adjustProp()の回数を減らし、
+	>行・列の位置計算をキャッシュします。
+	>[22:11:21][403]CMainWnd::OnCreate() 0 
+	>[22:11:21][453]CMainWnd::OnCreate() 10 
+	>[22:11:36][825]CMainWnd::OnCreate() 11 
+	>[22:11:40][710]CMainWnd::OnCreate() 2 
+	>[22:11:49][062]CMainWnd::OnCreate() 3 
+	>[22:11:58][886]CMainWnd::OnPaint() 
+	>[22:12:01][951]CMainWnd::OnPaint()=
+
+dcd2725.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>CDcdGrid::adjustProp()の回数を減らしました。
+	>
+	>[22:41:46][536]CMainWnd::OnCreate() 0 
+	>[22:41:46][546]CMainWnd::OnCreate() 10 
+	>[22:41:47][097]CMainWnd::OnCreate() 11 
+	>[22:41:47][217]CMainWnd::OnCreate() 12 
+	>[22:41:47][227]CMainWnd::OnCreate() 13 
+	>[22:41:47][357]CMainWnd::OnCreate() 14 
+	>[22:41:47][357]CMainWnd::OnCreate() 15 
+	>[22:41:50][842]CMainWnd::OnCreate() 16 
+	>[22:41:50][982]CMainWnd::OnCreate() 2 
+	>[22:42:43][728]CMainWnd::OnPaint() 
+	>[22:42:46][462]CMainWnd::OnPaint()=
+	>
+	>15と16の間が長いのは、
+	>CDcdGridCell::copyCellProp()でCDcdGrid::adjustProp()を
+	>行うためです。
+	>これを見直すと、以下のようになりました。
+	>
+	>[22:55:16][120]CMainWnd::OnCreate() 0 
+	>[22:55:16][130]CMainWnd::OnCreate() 10 
+	>[22:55:16][671]CMainWnd::OnCreate() 11 
+	>[22:55:16][801]CMainWnd::OnCreate() 12 
+	>[22:55:16][801]CMainWnd::OnCreate() 13 
+	>[22:55:16][921]CMainWnd::OnCreate() 14 
+	>[22:55:16][921]CMainWnd::OnCreate() 15 
+	>[22:55:16][921]CMainWnd::OnCreate() 16 
+	>[22:55:17][061]CMainWnd::OnCreate() 2 
+	>[22:55:22][189]CMainWnd::OnPaint() 
+	>[22:55:24][873]CMainWnd::OnPaint()=
+	>
+
+dcd27251.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>CDcdDraw::DcDraw()で、行・列の位置計算をキャッシュしました。
+	>
+	>[00:56:44][951]CMainWnd::OnCreate() 0 
+	>[00:56:44][961]CMainWnd::OnCreate() 10 
+	>[00:56:45][502]CMainWnd::OnCreate() 11 
+	>[00:56:45][632]CMainWnd::OnCreate() 12 
+	>[00:56:45][632]CMainWnd::OnCreate() 13 
+	>[00:56:45][752]CMainWnd::OnCreate() 14 
+	>[00:56:45][752]CMainWnd::OnCreate() 15 
+	>[00:56:45][762]CMainWnd::OnCreate() 16 
+	>[00:56:45][902]CMainWnd::OnCreate() 2 
+	>[00:56:51][010]CMainWnd::OnPaint() 
+	>[00:56:51][150]CMainWnd::OnPaint()=
+
+dcd27252.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>VREDRAW|HREDRAW属性を解除しました。
+
+dcd27253.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>Ouの利用をやめました
+
+dcd2726.lzh
+	>DcdGrid\jikken\C05_manycell\
+	>CDcdGridの初期の列数を１から０に変更しました。
+	>
+	>次は、デフォルト列属性・セル属性を導入します。
+
+
+dcd2903.lzh
+	>DcDraw\CdDrawTextFlags
+	>を
+	>DcDraw\CdDrawTextFormat
+	>に変更
+	>
+	>その他、コメントを修正しました。
+
+dcd29031.lzh
+	>DcDraw\CDcdFillRectangleText
+	>コメントを修正しました。
+
+dcd2908.lzh
+	>DcdGrid\sekkei\CDcdGrid_各部の名称.txt
+	>＜3.2＞スクロールバー
+	>までの執筆を行いました。
+	>
+	>DcdGrid\C05_manycell
+	>名称変更を行いました。
+	>column->Column
+	>FixafterXcolumnNumber->XFixafterColumnNumber ;
+	>FixafterYcolumnNumber->YFixafterColumnNumber ;
+	>FixXcolumnCount->XFixColumnCount
+	>FixYcolumnCount->YFixColumnCount
+	>AttachCellCountX->XAttachCellCount
+	>AttachCellCountY->YAttachCellCount
+
+dcd29081.lzh
+	>DcdGrid\C05_manycell
+	>CellNumberに関連するメソッドを廃止しました。
+
+dcd29082.lzh
+	>DcdGrid\C06_separate
+	>
+	>CdDcdGridColumn、CdDcdGridCellの標準描画オブジェクトを
+	>廃止しました。
+
+dcd29083.lzh
+	>DcdGrid\sekkei\CDcdGrid_class.mdrw
+	>を修正しました。
+	>DcdGrid\C06_separate
+	>コメントコードを整理しました。
+
+dcd2910.lzh
+	>DcdGrid\jikken\C07_CWndDcdGrid\
+	>グリッドウインドウクラスを作成
+	>開始
+	>
+
+dcd2912.lzh
+	>DcdGrid\jikken\C07_CWndDcdGrid\
+	>グリッドウインドウクラスができました。
+	>DcDraw\CDcdTargetGetDC.cpp
+	>DcDraw\CDcdTargetGetDC.h
+	>を追加しました。
+	>コメントを修正しました。
+	>
+	>次は、スクロールバーを作成します。
+
+dcd2913.lzh
+	>DcdGrid\jikken\C07_CWndDcdGrid\
+	>
+	>スクロールバーとフォーカスセルが動作しました。
+
+dcd29131.lzh
+	>DcdGrid\jikken\C07_CWndDcdGrid\
+	>
+	>コメント化コードとLogMsg()を省減しました。
+
+dcd29132.lzh
+	>DcdGrid\jikken\C07_CWndDcdGrid\
+	>
+	>CWndDcdGrid::updateProp()・CWndDcdGrid::Invalidate()を
+	>追加しました。
+
+dcd29133.lzh
+	>DcdGrid\jikken\C07_CWndDcdGrid\
+	>
+	>CWndDcdGrid::OnSetFocusCell()・
+	>CWndDcdGrid::OnSetXFixafterColumnNumber()・
+	>CWndDcdGrid::OnSetYFixafterColumnNumber()・
+	>を追加し、コメント化コードを削除しました。
+
+dcd29134.lzh
+	>DcdGrid\jikken\C07_CWndDcdGrid\
+	>doxygen対応コメントを整備しました。
+
+dcd2914.lzh
+	>DcdGrid\jikken\C08_Print\
+	>を開始しました。
+	>グリッドの描画ができました。
+	>CConverter_WinGdi::toLOGFONT()を修正しました（DPtoLP）。
+	>
+	>DcdGrid\jikken\C08_Print\
+	>PM-670Cで、適切なサイズのグリッドの描画ができました。
+	>CMainWnd::OnPrint() 
+	>
+	>ただし、クリップリージョンを使った場合、プリンタへの描画ができません。
+	>CDcdGrid::DcDraw()
+	>これを解決するには、
+	>１．ディスプレイデバイス以外では、クリップリージョンを使わない
+	>２．代わりに、セルを列番号の大きい方から順に描画する
+	>という方法が考えられます。
+	>
+	>ところで、なぜか１回だけ、プリンタへのクリップリージョンが有効に
+	>なったことがあります。この原因はわかっていません。
+
+dcd29142.lzh
+	>DcdGrid\jikken\C08_Print\
+	>
+	>CDcdGrid::DcDraw()
+	>プリンタ（ディスプレイ以外）では、クリップリージョンの使用をやめました。
+	>これにより、AttachCellも正しくプリントアウトできるようになりましtた。
+
+dcd29143.lzh
+	>DcdGrid\jikken\C08_Print\
+	>CDcdTargetPrinterを作成しました。
+	>CDcdTargetPrinterとCaDcdTargetItemPositionの組み合わせも、
+	>うまく動作しました。
+
+dcd29144.lzh
+	>DcdGrid\
+	>DcdGrid\WndDcdGrid\
+	>ライブラリ化を行い、
+	>DcdGrid\doxygen\DcdGrid.dxy
+	>を追加しました。
+
+dcd29145.lzh
+	>DcdGrid\
+	>DcdGrid\doxygen\DcdGrid.dxy
+	>を修正しました。
+
+dcd2922.lzh
+	>DcdGrid\
+	>CDcdGrid::calcMovedCel()に、引数
+	>bSkipScrolloutColumnを追加しました。
+	>この値が真なら、ScrolloutColumnを飛び越えて移動します。
+
+dcd29221.lzh
+	>DcdGrid\
+	>DcdGrid\jikken\C08_Print\cwndbase\doxygen\cwndbase.dxy
+	>を変更しました。
+
+dcd3404.lzh
+	>2005
+	>OuDiaでの改良を反映しました。
+	>
+	>DcDraw\CConverter_WinGdi
+	>DPtoLP
+	>
+	>DcDraw\CDcDeviceUnitSizeX
+	>DcDraw\CDcDeviceUnitSizeY
+	>を追加しました。
+	>
+	>DcDraw\CdDeviceUnitSize.h
+	>を追加しました。
+	>
+	>DcDraw\CDcdTargetGetDC.h
+	>HWNDがNULLの場合でも（プリンタDCなど）領域のサイズを取得するように
+	>変更
+	>
+	>DcdGrid\
+	>DcDrawをOuで保持するようになりました。
+	>形式の古い（Ou導入前）サンプルを削除しました。
+
+dcd3626.lzh
+	>2005
+	>IfDcdtarget::CreateFont()のHDC引数を廃止しました。
+	>kyuusiのコードを廃止しました。
+	>
+	>kyuusiコードは、
+	>(CDcdGridCe::getCDcdFillRectangleText()などがあったころのものです。
+
+dcd36261.lzh
+	>以下のファイルを、追加しました。
+	>DcDraw\jikken\build.bat
+	>develop\libs\DcDraw\DcDraw\CDcdFillRectangleTextV.cpp
+	>develop\libs\DcDraw\DcDraw\CDcdFillRectangleTextV.h
+	>develop\libs\DcDraw\DcDraw\CDcdFreeLine.cpp
+	>develop\libs\DcDraw\DcDraw\CDcdFreeLine.h
+	>develop\libs\DcDraw\DcDraw\CLineFunc.cpp
+	>develop\libs\DcDraw\DcDraw\CLineFunc.h
+	>develop\libs\DcDraw\DcDraw\Print\CaDcdTargetZoomDisplay.cpp
+	>develop\libs\DcDraw\DcDraw\Print\CaDcdTargetZoomDisplay.h
+	>develop\libs\DcDraw\DcDrawMfc\CDcdTargetMfcPrintInfo.cpp
+	>develop\libs\DcDraw\DcDrawMfc\CDcdTargetMfcPrintInfo.h
+	>develop\libs\DcDraw\DcDrawMfc\DcDrawMfc.dsp
+
+dcd3706.lzh
+	>2006年
+	>以下のファイルを、削除しました。
+	>DcDraw\jikken\C11_CDcdFillRectangleTextV\cwndbase\CDcdFreeLine.cpp
+	>DcDraw\jikken\C11_CDcdFillRectangleTextV\cwndbase\CDcdFreeLine.h
+	>DcDraw\jikken\C11_CDcdFillRectangleTextV\cwndbase\CLineFunc.cpp
+	>DcDraw\jikken\C11_CDcdFillRectangleTextV\cwndbase\CLineFunc.h
+
+dcd37061.lzh
+	>2006年
+	>DcDraw\jikken\C11_CDcdFillRectangleTextV\
+	>縦書きフォントを使用するようになりました。
+
+dcd37062.lzh
+	>2006年
+	>CDcdFillRectangleTextV
+	>縦書きフォントを使用するようになりました。
+
+dcd3707.lzh
+	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
+	>を開始しました。
+	>
+	>Dcdraw\
+	>CdFontProp
+	>strFacename()をsetFacename()に変更
+	>CdFontProp
+	>CdDrawTextProp
+	>コンストラクタの引数名を変更
+
+dcd37071.lzh
+	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
+	>CDcdFillRectangleV2.txt
+	>を追加しました。
+
+dcd3708.lzh
+	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\StringToMojiretsuyousoJikken\
+	>を追加しました。
+
+dcd37081.lzh
+	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
+	>描画のテストに成功しました。
+
+dcd37082.lzh
+	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
+	>ソース整理を行いました。
+
+dcd3712.lzh
+	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
+	>"03.10.01"
+	>のような文字を回転した縦書きにしない不具合がありました
+	>(末尾の"01"だけを横書きにしてしまっていました)
+	>これを修正しました。
+
+dcd3713.lzh
+	>DcDraw\CGdiCache.cpp
+	>デストラクタにASSERTを設定
+	>DcDraw\CDcdFillRectangleTextV2.cpp
+	>DcDraw\CDcdFillRectangleTextV2.h
+	>を追加しました。
+
+dcd3717.lzh
+	>develop\libs\DcDraw\
+	>CDcdFillRectangleTextV2は
+	>"12月20日・1月25～27・30・31日・2月15～17・28日運転"
+	>の先頭の12を回転縦書きにしてしまう不具合（横書きが正）が
+	>ありましたが、修正しました。
+	>CGdiCache
+	>デストラクタでのGDIオブジェクトの開放を、
+	>_ASSERT()で囲んでいたため、ReleaseバージョンでGDIオブジェクトを
+	>開放できなくなる不具合を修正しました。
+	>（ded13123.lzhから）
+
+dcd3828.lzh
+	>DcDraw\CdBrushProp.h
+	>DcDraw\CdFontProp.h
+	>DcDraw\CdPenProp.h
+	>!=演算子を追加しました。
+	>DcDraw\CDcdFillRectangleTextV2.cpp
+	>LogMsgLのレベルを3に変更しました。
+
+dcd3916.lzh
+	>develop\libs\DcDraw\
+	>CDcdFillRectangleTextV2は
+	>"こうや"の"こ"と"や"を半角文字と判定してしまう不具合があったのを
+	>修正しました。
+	>
+
+dcd3922.lzh
+	>DiagramEditからの収穫
+	>develop\libs\DcDraw\DcdGrid\CDcdGrid.cpp
+	>CDcdGrid::calcXFixafterColumnNumberPagemove() 
+	>CDcdGrid::calcYFixafterColumnNumberPagemove() 
+	>ページを後方に移動する場合の処理が正しくなかった
+	>ウインドウのサイズが狭くて(全体を表示可能な列が一つもない場合の
+	>処理が正しくなかった)のを修正。
+	>
+	>CDcdFillRectangleTextV2.cpp
+	>新しいOuLib/Contに対応
+	>

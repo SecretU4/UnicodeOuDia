@@ -1,0 +1,239 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# åxçê: Ç±ÇÃ‹∞∏ΩÕﬂ∞Ω Ãß≤Ÿ Çï“èWÇ‹ÇΩÇÕçÌèúÇµÇ»Ç¢Ç≈Ç≠ÇæÇ≥Ç¢!
+
+###############################################################################
+
+Project: "DcDraw"=..\..\libs\DcDraw\DcDraw\DcDraw.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "DcDrawMfc"=..\..\libs\DCDRAW\DcDrawMfc\DcDrawMfc.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "DcdGrid"=..\..\libs\DcDraw\DcdGrid\DcdGrid.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "DiagramEdit"=.\DiagramEdit.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Hidemdi
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Str
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name FrameLeftPane
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name DcDraw
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name logmsg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name WndDcdGrid
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name DcdGrid
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name OuDlg
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ou
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name cont
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name DcDrawMfc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name MfcUtil
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name OuPropertiesText
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ErrorInfo
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ErrorInfo"=..\..\LIBS\OULIB\STR\OUPROPERTIESTEXT\ErrorInfo\ErrorInfo.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FrameLeftPane"=..\..\libs\OuMfc\FrameLeftPane\FrameLeftPane.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MfcUtil"=..\..\LIBS\OUMFC\MfcUtil\MfcUtil.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "OuDlg"=..\..\libs\OuMfc\OuDlg\OuDlg.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "OuPropertiesText"=..\..\libs\OuLib\Str\OuPropertiesText\OuPropertiesText.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Str"=..\..\libs\OuLib\Str\Str.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "WndDcdGrid"=..\..\libs\DcDraw\DcdGrid\WndDcdGrid\WndDcdGrid.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "cont"=..\..\libs\OuLib\Cont\cont.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "hidemdi"=..\..\libs\OuMfc\Hidemdi\Hidemdi.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "logmsg"=..\..\libs\OuLib\logmsg\logmsg.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ou"=..\..\libs\OuLib\Ou\ou.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

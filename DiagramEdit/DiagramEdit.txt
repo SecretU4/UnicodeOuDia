@@ -1,0 +1,643 @@
+ ****************************************************************
+	DiagramEdit
+$Id: DiagramEdit.txt 422 2017-01-21 05:06:42Z okm $
+ ****************************************************************
+
+--------------------------------
+＜1＞ディレクトリ構成
+--------------------------------
+
+◎ConvDedFile
+　ファイルフォーマットを変換する外部モジュールを収録しています。
+
+◎DiagramEdit
+　OuDia.exe 本体
+
+◎manual
+  html\oudia.hhp をビルドすると、
+  html\oudia.chm が生成されます。
+
+◎DiagramEdit_setup
+　OuDia.x.xx.xx.msiをビルドします。
+(1)  installer\collect.bat で、必要なファイルを Instaiiler\OuDia\ProgramFile\ にコピーしてください。
+(2)  OuDiaInstaller.sln を起動してください。
+(3)　プロパティの以下の項目を確認後、セットアップをビルドしてください。
+  [製品情報][名前]
+  [製品情報][製品コード]
+  [製品情報][バージョン]
+  [概要][タイトル]
+
+
+--------------------------------
+＜2＞ビルド
+--------------------------------
+
+(1)チェックアウト
+
+  Svnから OuDia/trunkをチェックアウト
+
+(2)ビルド
+
+　OuDia_build.txt を参照してください。
+
+
+--------------------------------
+＜3＞Tags
+--------------------------------
+
+◎Version0_04_07
+　[25/03]2007/1/3 Release
+
+
+◎Version0_04_08
+　[31/07]2007/7/7 Release
+
+◎ConvDedFile01To03_Exe
+　[34/20]Exeによるファイルコンバータが動作しました。
+
+◎ConvFileOudia02To03_dll
+　[35/18]DLLによるファイルコンバータに置き換えました。
+
+◎after071209_refuct
+　[36/15]DcdGridのリファクタリングを行いました。
+
+◎beforeConvFile2Dll
+　[35/22]ConvFile2DLLに置き換える直前
+
+◎ConvFile2Dll
+　[35/22]ConvFile2DLLに置き換えました
+
+◎beforeOuPropertiesText
+　[38/23]OuPropertiesTextを採用直前
+
+◎OuPropertiesText
+　[39/14]OuPropertiesTextを採用しました。
+
+◎Version0_05
+　[40/14]Ver0.05をリリースしました。
+
+◎Version0_05_01
+　[40/19]Ver0.05.01をリリースしました。
+ > 【バグ修正】  時刻表ビューにおいて、路線の終点(最下段)に駅時刻を入力しようとすると、アプリケーションエラーになっていました。これを修正しました。
+
+◎Version0_05_02
+　[40/20]
+ >Version0_05_02
+ > 『時刻表の列車種別固有フォント』を導入しました。
+ > ファイルの読み込みを多少高速化しました。
+ > 	OuPropertiesText::CNodeContainer
+ >	のget(),getInName()を高速化しました(clone()を行わないようにしました)。
+ >	OuPropertiesText::IfNodeContainerConstを導入しました。
+ 
+◎VisualStudio2008
+　[41/02]
+ >Version0_05_03
+ > VisualStudio2008でのビルドを行いました。
+ > OuDia.ini・OuDia.logを LOCAL_APPDATAディレクトリ(C:\Documents and Settings\<username>\Local Settings\Application Data\OuDia)に保存するように変更しました(従来はOuDiaインストールディレクトリ)
+
+◎Version0_05_03
+ >　[41/02]
+ > 一部のメニューコマンドのアクセラレータキー（ショートカットキー）を変更
+ > (すべてのメニューコマンドに CTRL キーを追加)
+
+◎Version0_05_04
+ > １． メニューコマンド [編集]-[やり直し] を追加しました。
+ > 
+ > ２． 時刻表ビューの一部のメニューコマンドのアクセラレータキー(ショートカットキー)を変更しました（テンキーによるショートカットキーを追加しました。）
+ > 	[駅時刻]-[通過]: Ctrl+ '-' , テンキーの '-' 
+ > 	[駅時刻]-[経由なし]: Ctrl+Shift+ '-' , テンキーの '/' 
+ > ３． 時刻表ビューの『列車の駅時刻の連続１分修正』機能に、以下のメニューコマンドを追加しました。
+ > [駅時刻]-[(フォーカスを移動せずに)駅時刻を-1分] 
+ > [駅時刻]-[フォーカスを前へ] 
+ > [駅時刻]-[(フォーカスを移動せずに)駅時刻を+1分] 
+ > 
+ > スタートメニューのIconをセットアップに追加しました。
+ > 列車の駅時刻の連続１分修正機能のショートカットキーを変更（J,K,LにShiftキーを組み合わせた操作）
+ > ConvFileOudia03To05.dll を追加しました。
+ > OuDia インストールパッケージのファイル名を変更しました。従来の oudia.msi から oudia_x.x.x.msi になりました(x.x.x の部分はバージョン番号に置き換わります)
+ > OuDia Ver0.05.00 より前のOuDiaで作成された .oud ファイル(FileType=OuDia.3 )のファイル内に、空文字列の列車種別名を持つ列車種別があると、ファイル変換が失敗する不具合を修正。
+
+◎Version0_05_05
+ (2008/11/1)
+1.　時刻表ビューでのメニューコマンド[駅時刻]-[通過]は、時刻をクリアするように変更しました。
+2.　時刻表ビューの幅を設定可能にしました(列車番号6桁に対応)。
+3.　時刻表ビューでの列車の[挿入]動作を変更しました。
+　[挿入]動作が行われたら、ダイアログを表示せずに空行を追加する。
+4.  OuDiaで保存したWinDIA形式ファイル( .dia )がWinDIAで正しく開けない問題を修正。
+
+◎DiagramRessyajouhouHyouji
+ (2008/12/30)
+■＜23.1＞[35/18]列車番号を、複数の位置に指定できるようにする(駅のプロパティにする)[46/11,12,48/06,07,14,27,29]
+
+◎DiagramStopMark
+ (2009/01/31)
+■[46/11]＜23.2＞ダイヤグラムビューで、停車駅に○をつける。[48/30,31,49/04,05,24,25,31]
+
+◎JikokuhyouEkijikokuPasteMulti
+■[48/21]＜23.3＞時刻表ビューで、終着列車と始発列車を自動結合→[49/24][時刻のみ貼り付け]を複数列車で使用可能にする。[49/31]
+
+◎JikokuhyouEkijikokuDecMulti
+ (2009/02/08)
+■[49/24]＜23.4＞駅時刻の連続1分修正を、複数列車で使用可能にする。[50/07,08]
+
+◎ID_EDIT_SELECT_ALL
+■[39/29]＜23.5＞時刻表ビューで[すべて選択]を追加[50/08]
+
+◎JikokuhyouSORT
+ (2009/02/15)
+■[48/21]＜23.6＞時刻表ビューを列車の時刻順に並べ替え[50/14,15]
+
+◎AcceleratorOnRosenView
+ (2009/02/15)
+■[50/15]＜23.7＞路線ビューにフォーカスがあると、アクセラレータキーが効かない[50/20]
+を修正
+
+◎Version0_06
+ (2009/02/15)
+	1.　ダイヤグラムビューで、1列車につき複数個所に列車情報が表示できるようになりました([ダイヤグラム列車情報]が、駅の属性になりました)。
+	2.　ダイヤグラムビューに停車駅明示機能を追加しました。
+	3. 時刻表ビューのメニューコマンド [編集]-[時刻のみ貼り付け] で、複数列車に対する時刻の貼り付けができるようになりました。
+	4.　時刻表ビューにメニューコマンド[編集]-[すべて選択]を追加しました。
+	5.　時刻表ビューにメニューコマンド[時刻表]-[並べ替え]を追加しました。
+	6.　時刻表ビューの『列車の駅時刻の連続１分修正』 機能が、複数列車に対して使用できるようになりました。
+	7.　時刻表ビューのメニューコマンド [時刻表]-[通過駅の駅時刻を表示] を、 [表示]-[通過駅の駅時刻を表示] に移動しました。
+	8. ダイヤグラムビューのメニューコマンド[ダイヤグラム]のサブメニューのうち、表示に関係するものを[表示]のサブメニューに移動しました。
+	9. マニュアルの修正
+	(1)　時刻表ビューのメニューコマンド [駅時刻]-[ダイヤグラムへ移動] の説明が抜けていたのを修正。
+	(2)　マニュアルの 2.3.14. 駅間最小所要時間・駅間最小所要時間列車 に、ダイヤグラムビュー[表示]-[更新] の説明を追記しました。
+	10.　これまでは、路線ビューにフォーカスがあると、アクセラレータキーが効きませんでした。これを効くようにしました。
+
+	OuDiaのホームページ:accesscount:62884
+	OuDiaVer0.05.05ダウンロード:2890
+
+◎beforeMu
+	(2009/2/22)
+
+◎Mu
+	(2009/2/22)
+	Muを導入しました。
+	
+◎Mu_ChangeFuncName
+	(2009/2/28)
+	■＜24.1.2＞関数名の変更[50/22]
+	
+◎beforeGPL
+	(09/3/29)
+
+◎GPL_Version1_00
+	(09/06/06)
+	ソース・マニュアルを、GPL準拠とします。
+
+◎beforeCKeyinputSenderToModalDlg_Modify
+	(09/06/07)
+	CKeyinputSenderToModalDlgの修正の前です。
+
+
+◎CKeyinputSenderToModalDlg_Modify
+	(09/06/07)
+	CKeyinputSenderToModalDlgを一部修正しました。
+	OnKeyUp(),OnKeyDown()は、戻り値をbool
+	{true=メッセージを転送した}に変更しました。
+	
+◎Homepage_install_modify
+	(09/06/17)
+	HomepageのInstallページを修正しました。
+	Windows98・WindowsMe では動作しないことを追記
+	
+	
+◎CKeyinputSenderToModalDlg2
+	(09/07/11)
+	CKeyinputSenderToModalDlg2 クラスを追加しました。
+	時刻表ビューでのCWndDcdGridJikokuhyouState_Ressyahensyu
+	の入力は、CKeyinputSenderToModalDlg2 クラスを
+	利用するようになりました。
+	CDiagramEditDocでは、[名前を付けて保存]を常時有効にしました。
+	
+◎Version1_00
+	 (2009/07/12)
+	OuDia_Ver.1.00を公開しました。
+	[Release]Version=1.00@nifty
+	OuDiaのホームページ:accesscount:79355
+	OuDiaVer0.06ダウンロード:5092
+
+	
+◎Version1_00_url
+	 (2009/07/12)
+	oudia.msi,oudia_src.zipのURLを変更しました。
+	従来のURLはリンク切れになります。
+	
+
+◎D090906_RessyasyubetsuNo
+  (2009/07/26)
+	::HtmlHelp()の第一引数を、DesktopWindowからNULLに変更
+	OuDiaインストールガイド の説明を変更(ソースファイルについて【注意】を追加)。
+	利用許諾契約に、無保証条項を追記。
+  (2009/09/06)
+	1.　『列車のプロパティ』ダイアログの『列車種別』のドロップダウンリストの項目の先頭10個に、"0. " ～ "9. " までの数字を追加(例:　"普通"→"0. 普通" )。 
+	2.　『列車種別ビュー』の左端に番号列を追加し、先頭10個の要素では "0"～"9" を表示。11個目以降は空欄とする。
+	3.　列車種別が1つの場合は、その列車種別を削除できないように修正。
+	　(列車種別を全て削除するとアプリケーションエラーになる不具合を修正)
+
+◎D090912_TestPrjModify
+	src\DiagramEdit\DiagramEdit\entDed\entDedTest
+	src\DiagramEdit\DiagramEdit\DedRosenFileData\DedRosenFileDataTest
+	テストコード内へのデータのハードコードをやめました。
+	ファイルからデータを読み込み、ファイル同士を比較するようになりました。
+
+◎D0909121_CentDedRessyaCont_sort2
+	時刻表ビューの『並べ替え』のアルゴリズムを変更しました。
+	　従来は、A駅発時刻で『並べ替え』を行った場合、A駅どまりの列車は並べ替えの対象からは除外していました。
+	　今回のバージョンからは、A駅発時刻で『並べ替え』を行った場合、A駅どまりの列車も並べ替えの対象に含めるようになりました。
+
+◎D090920_CentDedRosen_add 
+	□[09/08/29]＜25.4＞路線ファイルを追加・路線ファイルを分離[09/09/13,20]
+
+◎D090920_CentDedRessyaCont_direct
+	■[09/08/29]＜25.5＞終着列車と始発列車を結合(直通化・分離)[09/09/19,20]
+
+◎D091011_jr_iida_2009_10_rev02
+	data\jr_iida_2009_03\jr_iida_2009_10.oud
+	Rev.02に変更しました。
+	ホームページを更新しました。
+
+◎D091101_CentDedRosen_insert
+	(09/09/20)
+	以下のの機能に関するリソース(ステータスバープロンプト）・マニュアルを見直し
+	6.　時刻表ビューに、メニューコマンド [駅時刻]-[通過-停車] を追加しました。
+	7.　メニューコマンド [駅時刻]-[直通化]・[駅時刻]-[分断] を追加しました。
+	(09/11/01)
+	メニュー[ファイル]-[路線ファイルの組入れ/切り出し]-[路線ファイルの組入れ]
+	のメニューコマンドを実装しました。
+	メニュー[ファイル]-[路線ファイルの組入れ/切り出し]と
+	メニュー[ファイル]-[時刻表CSVファイル]の
+	メニュー階層を変更しました。
+	[路線ファイルの切り出し]・[路線ファイルの組入れ]・[時刻表CSVファイル]の
+	マニュアルを変更
+	
+◎D091114_erase_using_from_h
+	・CentDedDgrRessya::getDgrXPosOfEkiOrder()の実装をCentDedDgrDia::getDgrXPosOfJikokuOrder()に移動しました。
+	・CdDedJikoku::CConvに、「CdDedJikoku::CConv::ESecond_NotIfZero」を追加。
+	・CDlgEkijikokuPropによる、秒単位の取得・設定ができるようになりました。
+	・CentDedDgrDiaTestのテストデータのディレクトリ構成を変更
+	・CDedRessyaContTransferSort(未完成)を追加
+	・すべての.hファイルから、using namespaceを除去
+	
+	
+◎D091122_CDedRessyaContTransferSort
+	乗継ソートができました。
+	□＜25.7.2.2＞UI[09/11/22]
+	□＜25.7.3＞マニュアルの更新[09/11/22]
+	ソース公開用バッチファイルを変更し、CVSからチェックアウトするようになりました。
+	src\DiagramEdit\makeGplSrc\makeGplSrc.bat
+	src\DiagramEdit\makeGplSrc\oudia_export.bat
+
+◎D0911221_OuDia_1_00_01_Release
+	OuDia.1.00.01を@homepageで公開
+	
+◎D091205_CMuiCopied
+	CentDedRessyaCont等の基本クラスをCMuiCopiedに置き換えました。
+	CMup_deque,CMup_vectorを、CaMup_vectorの派生クラスから解除しました。
+
+◎D091206_HomepageUpdate
+	リンク集に くもゆに写真工房 を追加しました。
+
+◎D091228_HomepageUpdate
+	データファイルに、JR高山本線 2009年12月 を追加しました。
+	データファイルのファイル名を見直し
+
+◎D091231_Bugfix_OnUpdate
+	【バグ修正】
+	「ダイヤグラムビューを開く→駅を追加→その駅に運行する列車を追加」
+	を行うとアプリケーションエラーになる現象を修正。
+	CDedDiagramView::OnUpdate()
+	以下の手順で操作した場合にアプリケーションエラーになる不具合を修正しました。
+	(1)ダイヤグラムビューを開いた状態にする
+	(2)駅を追加
+		( m_bUpdate_All_Requested =true となりますが、
+		ビューがアクティブでないため、
+		CentDedDgrDia::m_CentDedDgrEkiCont の
+		更新が行われません。)
+	(3)その駅に運行する列車を入力する
+		(編集コマンドは CDedRosenFileData_CEditCmd_Ressya 
+		なので、列車の更新が行われます。
+		しかし、CentDedDgrDia::m_CentDedDgrEkiCont が
+		更新されていないため、アプリケーションエラーになります。)
+		
+◎D100109_DiagramEdit_OuDia_Ver1_00_02
+	OuDia本体のVer1.00.02の公開用ファイル作成
+◎D100109_Homepage_OuDia_Ver1_00_02
+	OuDia本体のVer1.00.02を公開しました。
+	データファイルに、hankyu_kyoto_0912.oudを追加しました。
+	
+◎D100123_Homepage_Ooyuudaiya
+	トップページに、OuDiaの読み方「おおゆうだいや」を追記しました。
+	
+◎D100123_DiagramEdit_CDedRessyaContSoater
+	リファクタリング
+	すべての並べ替えクラスを、CDedRessyaContSoaterの派生クラスとしました。
+	src\diagramedit\DiagramEdit
+	に、CDedRessyaContTransferSort・CDedRessyaContSoater_Ressyasyubetsu・
+	CDedRessyaContSoater_Ekijikoku2
+	を導入しました。
+
+◎D100123_DiagramEdit_Branch_OuDia
+	OuDiaのビルド時のライブラリLibを、Branch_OuDiaに対応させました。
+
+◎D100313_DiagramEdit_beforeCWndDcdGrid2
+	CWndDcdGrid2を導入する直前です。
+	
+◎D100313_DiagramEdit_CWndDcdGrid2
+	CWndDcdGrid2を導入しました。
+	
+◎D100314_DiagramEdit_CDedRessyaContSoater_Ekiatsukai
+	CDedRessyaContSoater_EkiatsukaiとCDedRessyaContSoater_TransferSortを
+	選択できるようにしました。
+	
+◎D100327_DiagramEdit_CDedRessyaContSoater_Ekiatsukai_manual
+	CWndDcdGrid2::m_bLButtonIsDown
+	を導入しました。
+	ウインドウがフォーカスを得た時点で既に左ボタンが押し下げられていた場合は、
+	フォーカスセルをマウスの位置に移動しないようにしました。
+	CWndDcdGridJikokuhyouで、選択色を設定できるようにしました。
+	CWndDcdGrid2にあわせてマニュアルの画像を差し替えました。
+	時刻表ビューのソートの種類を、マニュアルに反映しました。
+
+◎D100424_DiagramEdit_CGdiHFontHolder
+	・IfDcdTargetを変更し、CGdiHFontHolderに対応
+	・ダイヤグラムビューのプレビュー画面で、列車情報の
+	フォントの大きさが正しくない問題を修正
+
+◎D100425_DiagramEdit_beforeCentDedRosen_invert
+	・[駅の反転]機能導入直前
+
+◎D100425_DiagramEdit_CentDedRosen_invert
+	・[駅の反転]機能導入
+	・メニューの配置変更
+	3.　駅ビューに、メニューコマンド [駅の反転] を追加。
+	4.　一部のメニューの配置を変更しました。
+	4.1.　駅ビューの[駅]メニューを廃止し、[編集]メニューに統合しました。
+	4.2.　列車種別ビューの[列車種別]メニューを廃止し、[編集]メニューに統合しました。
+	4.3.　メニュー [ファイル]-[路線ファイルの組入れ/切り出し] は、従来は常時表示されていましたが、これを[駅ビュー]表示中のみの表示に変更しました。
+	
+	
+◎D100430_DiagramEdit_CDlgEkijikokuProp_NOMODIFYOPTION	
+	■＜27.5＞[10/04/30]駅時刻の変更機能が正しく動作しなくなっていた不具合を修正[10/04/30_03:02]
+	■＜27.6＞[10/04/30]時刻表ビューでの駅時刻の繰上げ・繰下げの切り替え[10/04/30,]
+	■＜27.6.1＞ソフト[10/04/30_03:02～05:00]
+	■＜27.6.2＞マニュアル[10/04/30_08:30～10:45]
+
+
+◎D100430_DiagramEdit_CDedRessyaContSoater_Bikou
+	□＜27.7＞[10/04/30]備考での並べ替えを追加[10/04/30,]
+	■＜27.7.1＞エンティティクラスコーディング.テスト[10/04/30_17:30～19:15]
+	■＜27.7.2＞UIコーディング.テスト[10/04/30_19:15～19:32]
+	■＜27.7.3＞マニュアル[10/04/30_19:32～19:55]
+
+◎D100501_Homepage_OuDia_Ver1_00_03
+	■＜27.8＞リリース
+
+◎D100522_CDedRessyaContTransferSort
+	「アンカーセルがNULLの場合は、選択セルなし」の制約を削除。
+	100522_選択された列車の乗継ソートの不具合
+	　時刻表ビューで複数選択された列車の乗継ソートが正しくできない問題を修正
+
+◎D100523_CWndDcdGridJikokuhyouState_Ressyasentaku_EkijikokuModifyOperation2
+	□＜28.3＞100523_時刻表ビューで、複数列車選択中の[駅時刻]-[駅時刻変更]を可能にする[10/05/23]
+	□＜28.4＞100523_時刻表ビューの駅時刻変更.駅扱を停車に変更できない場合がある問題[10/05/23]
+
+◎D100529_Homepage_OuDia_Ver1_00_04
+	■＜28.5＞Ver.1.00.04のリリース
+
+◎D100912_OuDia_DiagramView_OnSize
+	＜29＞OuDia_Ver1.00.04→.＜29.2＞ダイヤグラムビューのサイズ変更時の動作変更(サイズ変更時は拡大率を変更しない).＜29.2.4＞ソース整理
+	◎CDlgDiaList
+	　ダイヤ一覧ダイアログの、ダイヤのリストコントロールをダブルクリックすることにより、ダイヤのプロパティダイアログが開くようになりました。
+	◎＜29.2.2.2＞サイズ変更時に時刻・駅の位置が微妙に変化する問題			  CconvDcdPosOnZone_PosOrgAndRate
+	  CconvDcdPosOnZone_DcdZone
+	  CconvDcdPosOnZoneXy
+	  を修正
+
+◎D100912_OuDia_DiagramView_OnSize_2
+	Apps.OuDia.＜29＞OuDia_Ver1.00.04→.＜29.2＞ダイヤグラムビューのサイズ変更時の動作変更(サイズ変更時は拡大率を変更しない).＜29.2.5＞CDcdDiagram::getZone_Dgr()の、ダイヤグラム非表示時動作変更
+
+◎D100927_Homepage_OuDia_Ver1_01
+	＜29＞OuDia_Ver1.00.04→1.01.＜29.3＞『列車種別固有フォント』を選択にする
+	＜29＞OuDia_Ver1.00.04→.＜29.4＞リリース準備
+	
+◎D100102_Homepage_OuDia_Ver1_01_01
+	App.DiagramEdit.＜30＞OuDia_Ver1.01→1.01.01.＜30.1＞Bugfix:ダイヤグラムビューの時刻表示・縦罫線が誤った位置に表示される	
+
+◎D101016_ConvDedFile_Modify
+	ConvFileOudia03To05・ConvFileOudia05To06・ConvFileOudia06To101。
+	0バイトのファイルをIfConvFile::isLeftFormat()に渡すと例外により
+	プロセスが強制終了になる不具合を修正。
+	Homepageのリンク集から、フラットワールドソフトの『new』を削除。
+	
+◎D110122_DiagramEdit_beforeCentDedDgrEkijikoku
+	列車線の分断の対応前
+	
+◎D110122_DiagramEdit_CentDedDgrEkijikoku
+	＜31＞OuDia_Ver1.01.01→1.01.02.＜31.2＞101121_列車線の分断
+	
+◎D1101221_DiagramEdit_CDlgEkijikokuProp
+	＜31＞OuDia_Ver1.01.01→1.01.02.＜31.3＞駅時刻ダイアログの着時刻テキストボックスに、分のみを入力(時を省略)しても発時刻が繰り上げ・繰下げにならない問題
+	＜31＞OuDia_Ver1.01.01→1.01.02.＜31.5＞時刻表ビューにおいて、一部の列車を編集したときに時刻表全体が再描画される不具合を修正
+	
+◎D1101222_DiagramEdit_CDlgEkijikokuProp
+	＜31＞OuDia_Ver1.01.01→1.01.02.＜31.6＞ダイヤグラムビューにおいて、ホイールでスクロールしたときにダイヤグラム全体が再描画される不具合を修正
+
+◎D1101223_DiagramEdit_DlgResourceModify
+	＜31＞OuDia_Ver1.01.01→1.01.02.＜31.4＞一部のダイアログにアクセスキーを追加
+
+
+◎D110123_Homepage_OuDia_Ver1_01_02
+	OuDia Ver1.01.02 を公開
+
+◎D110227_Homepage_DatafileAdd
+データファイルに、以下のファイルを追加しました。
+  台湾高速鉄路 2011年2月
+  台湾鉄路屏東南廻線 2011年2月
+
+◎D110321_DiagramEdit_CCalcCentDedDgrRessyasenOfPoint_VLine
+	App.DiagramEdit.＜32＞OuDia_Ver1.01.02→.＜32.3＞ダイヤグラムビュー：垂線をダブルクリックしても、時刻表ビューへの移動ができない。
+	CCalcCentDedDgrRessyasenOfPoint_modifyForVertLine
+
+◎D110902_Homepage_DatafileAdd
+データファイルに、以下のファイルを追加しました。
+  中国・成昆鉄路 2011年8月
+  JR九州新幹線 2011年4月
+  JR鹿児島本線 2011年4月
+
+◎D111112_DiagramEdit_CConvContentPosToTarget
+	□＜32＞OuDia_Ver1.01.02→
+	■＜32.1＞リファクタリング：駅ビュー,列車種別ビューでの画面更新指示の箇所を見直し
+	■＜32.2＞終着駅の『着時刻=指定なし,発時刻=指定あり』に長時間停車解決が適用される問題([11/10/31]＜32.8＞に関連)[11/03/05_12:45～14:30,11/11/07_00:40～01:50]
+	■＜32.4＞グリッド形式ビュー印刷後に画面が崩れる問題
+	■＜32.5＞リファクタリング：CDcdDiagram に、CConvContentPosToTarget を導入する
+	■＜32.7＞ダイヤグラムビューの横幅を小さくしたときに、スクロールバーが点滅する問題[11/10/09,23,29
+	■＜32.8＞ダイヤグラムビューで、経由なしのあとに運行なし・終点があると、列車線が正しく描画されない問題の修正[11/11/06_23:20～00:05]
+
+◎D1111121_Homepage_OuDia_Ver1_01_03
+	OuDia.1.01.03を公開
+
+◎D111211_OuDia_ViewJikokuhyou_VIEW_DisplayAllEkiJikoku 
+	Develop.App.DiagramEdit.＜33＞OuDia_Ver1.01.03→.App.DiagramEdit.111126_時刻表ビューに[全時刻を表示]を追加
+
+◎D120104_OuDia_ViewJikokuhyou_VIEW_DisplayAllEkiJikoku_FOCUS
+	Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→.120102_時刻表ビューで[全時刻を表示]操作後のフォーカスセルを、操作前と同じ位置に移動.＜2.3＞[全時刻を表示]操作時の動作変更
+
+◎D120108_OuDia_CWndDcdGridJikokuhyou_CXColumnSpecCont
+	App.DiagramEdit.120102_時刻表ビューで[全時刻を表示]操作後のフォーカスセルを、操作前と同じ位置に移動
+	＜2.5＞CWndDcdGridJikokuhyou 関係クラスの名称整理
+
+◎D120212_befort_OuDia_CommandHandlerRefuct
+	Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→.＜2＞全部のコマンドハンドラを、OnXXX_process 形式に変更.＜2.1＞駅ビューのコマンドハンドラを OnXXX_process 形式に変更
+	
+◎D120212_OuDia_CommandHandlerRefuct
+	Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→.＜2＞全部のコマンドハンドラを、OnXXX_process 形式に変更.
+	Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→.＜3＞時刻表ビューで「駅のプロパティ」ダイアログを開く(駅名のダブルクリック・駅名にフォーカスセルがある状態でEnter)
+	Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→.＜4＞ダイヤグラムビューで「駅のプロパティ」ダイアログを開く(駅名のダブルクリック
+	
+◎D120401_Homepage_gyeongchunseon_1203_02
+	データファイルgyeongchunseon_1203_02_arrcut.oud を追加
+	◎12/04/01
+	　データファイルに、以下のファイルを追加しました。
+	韓国・京春線 2012年3月 
+
+◎D1204011_OuDia_EkiJikokuKeisiki
+	＜5＞時刻表ビュー.終着駅の駅時刻形式が『発時刻』の場合に『着時刻』とみなす特例を廃止する。
+	■＜5.1＞時刻表ビューの修正。終着駅の駅時刻形式が『発時刻』の場合に『着時刻』とみなす特例を廃止する(CentDedEkiCont::ContKudari::get,CentDedEkiCont::ContNobori::get)[12/03/03_11:18～12:26]
+	■＜5.2＞駅ビュー.駅時刻形式を変えたとき、全列車の駅時刻を正規化する[12/03/03_12:32～21:15,12/03/04_11:44～12:26]
+	　(駅時刻ダイアログで「駅時刻を駅時刻形式に最適化しない」を選択可能にする)
+	　(「駅時刻を駅時刻形式に最適化しない」は、駅ビューのプロパティ)
+	■＜5.3＞駅ビュー.Index0の駅のプロパティは、駅時刻形式の既定値を『上り着時刻』とする。[12/03/04_10:17～10:53]
+
+◎D120527_OuDia_JIKOKUHYOUVFONT
+	＜6＞時刻表ビュー.縦書きフォントは別途指定可能にする
+	＜5.4＞ConvFileOuDia.路線始発駅,終着駅の特例を廃止
+	OuDia のバージョンを Ver.1.02 に変更。
+	ConvFileOudia06To101 を追加
+
+◎D120530_OuDia_RessyasyubetsuRyakusyou6
+	[17:18～]Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→.＜7＞列車種別ビュー.種別略称の長さ制限を半角6文字に変更
+
+
+◎D120603_OuDia_OutputDirChange
+	Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→.＜8＞時刻表ビュー.時刻設定のない停車駅には○表示
+	.dll・.exe の出力ディレクトリを、既定(Debug,Release)に戻しました。
+	ViewJikokuhyou::WndJikokuhyou::CCellBuilder の効率向上
+	
+◎D120701_OuDia_NOTIMESTOP
+	Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→＜9＞時刻表ビュー.駅扱=停車,着時刻=指定なし,発時刻=指定なし を許可する
+
+◎D120708_OuDia_CONTEXTMENU
+	Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→.＜10＞グリッド形式ビュー、ダイヤグラムビューでコンテキストメニューを提供する
+	
+◎D120715_OuDia_MANUAL_NOTIMESTOP
+	Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→. からのマニュアル修正
+	111126_時刻表ビューに[全時刻を表示]を追加
+	＜3＞時刻表ビューで「駅のプロパティ」ダイアログを開く(駅名のダブルクリック・駅名にフォーカスセルがある状態でEnter)
+	＜4＞ダイヤグラムビューで「駅のプロパティ」ダイアログを開く(駅名のダブルクリック)
+	＜5＞時刻表ビュー.終着駅の駅時刻形式が『発時刻』の場合に『着時刻』とみなす特例を廃止する。
+	＜6＞時刻表ビュー.縦書きフォントは別途指定可能にする
+	＜7＞列車種別ビュー.種別略称の長さ制限を半角6文字に変更
+	＜8＞時刻表ビュー.時刻設定のない停車駅には○表示
+	＜9＞時刻表ビュー.駅扱=停車,着時刻=指定なし,発時刻=指定なし を許可する
+	＜10＞グリッド形式ビュー、ダイヤグラムビューでコンテキストメニューを提供する
+
+
+◎D120720_OuDia_Unifier_CONTEXTMENU_RosenView
+	□＜12＞OuDia.時刻表ビュー.[時刻表]-[列車番号で一本化] [12/07/15_08:37～19:00]
+	[08:44～]Develop.App.OuDia.＜33＞OuDia_Ver1.01.03→.＜13＞路線ビューでコンテキストメニューを提供する
+
+◎D120722_Homepage_OuDia_1_02_00
+	＜33＞OuDia_Ver1.01.03→.＜12＞OuDia.時刻表ビュー.[時刻表]-[列車番号で一本化] 
+		マニュアルの修正
+	＜33＞OuDia_Ver1.01.03→.＜14＞時刻表ビュー.連続入力モードを左右キーで終了すると、セルにゴミが残る問題
+	＜33＞OuDia_Ver1.01.03→.＜15＞リリース準備
+
+	データファイルに以下を追加
+		sintetsu_120700.oud
+		jr_fukuchiyama_120715.oud
+
+　ここまで、CVSのTag。ここから、SubversionのTags
+
+
+◎D120901_Homepage_OuDia_1_02_01
+	Develop.App.OuDia.＜34＞OuDia_Ver.1.02→
+	□＜3＞時刻表ビューの右ボタンメニューの不具合
+	[WndDcdGrid2]
+	・　フォーカスセル以外のセルを右クリックした場合は、フォーカスセルをクリックされたセルに移動する。このとき、セルの複数選択は解除する。その後、コンテキストメニューを表示する
+	・　フォーカスセルを右クリックした場合・もしくはセル以外の場所を右クリックした場合は、セルの複数選択を維持する。その後、コンテキストメニューを表示する
+	【理由】
+	セルを複数選択した状態で、フォーカスセル以外のセルを右クリックすると、
+	セルが複数選択されたまま、コンテキストメニューが表示されてしまいます。
+	これは、Microsoft Excel などの一般的なソフトウエアとは動作が異なり、不便に感じます。
+	
+
+◎D120930_OuDia_Namespace
+	OuDiaに名前空間を導入
+	
+
+◎D1209301_OuDia_PreCompiledHeader
+	OuDiaのプリコンパイルヘッダ適用範囲を拡大
+	
+
+◎D121006_OuDia_LibMerge
+	libs/cpp/OuLib/trunk のRev.126 以降を OuDiaにマージ。
+	libs/cpp/OuMfc/trunk のRev.126以降を OuDiaにマージ。
+	libs/cpp/DcDraw/trunk のRev.126以降を OuDiaにマージ。
+	
+
+◎D130623_Homepage
+	　データファイル に、以下のデータを追加しました。
+	みなとみらい線・東急東横線・東京メトロ副都心線 2013年4月 
+	西鉄天神大牟田・太宰府・甘木線 2012年12月 
+	名鉄名古屋本線・豊川線 2011年12月17日 
+	　リンク集の一部エントリを見直しました。
+
+◎D140505_develop_app_OuDia_MultiSelectPropDlg
+	develop.app.OuDia.120902_＜35＞OuDia_Ver.1.02.01→1.02.02.＜35.2＞非連続の複数選択プロパティダイアログ
+
+◎D140802_Homepage_OuDia_1_02_02
+	OuDia 1.02.02 をリリースしました。
+
+
+◎D160819_develop_app_OuDia_CPropEditUi2
+	develop.app.OuDia.151230_発着番線.＜2＞実装.＜2.3＞既存コードのリファクタリング.＜2.3.2＞libs.＜2.3.2.4＞CPropEditUiのリファクタリング(c#版の逆輸入)
+
+◎D160828_Lacoocan_Mini
+	ホームページサービスを、@nifty の『@homepage』から、『@niftyホームページサービス』に変更しました(『@homepage』のサービス終了のため)
+
+◎D161125_Homepage_OuDia_1_02_03
+	OuDia 1.02.03 をリリースしました。
+
+
+◎D161126_Homepage_OuDia_1_02_04
+	OuDia 1.02.04 をリリースしました。
+
+◎D170121_Homepage_OuDia_1_02_05
+	OuDia 1.02.05 をリリースしました。
+
+
+------------------------------
+＜3.2＞Branches
+------------------------------
+◎D161126_Homepage_OuDia_1_02_04
+	タグ D161126_Homepage_OuDia_1_02_04 から branches にコピー
+
+
+
+
+------------------------------
+＜4＞LibsのTag
+--------------------------------
+	
+◎Branch_OuDia
+	Libsに付与された、OuDiaビルド用タグ
+	
+　ここまで、CVSのBranch。ここから、SubVersionのBranches
+
+
+
+	

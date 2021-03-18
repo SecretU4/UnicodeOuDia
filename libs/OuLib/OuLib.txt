@@ -1,0 +1,55 @@
+$Id: OuLib.txt 355 2016-08-18 16:41:28Z okm $
+
+
+＜1＞tag
+
+◎Mu_Add
+	2009/02/22
+	Mu を追加しました。
+
+◎Mu
+	2009/02/22
+	Mu を Str,OuDia に適用しました。
+	
+◎D091114_erase_using_from_h
+	・すべての.hファイルから、using namespaceを除去
+
+◎D091205_CMuiCopied
+	CMuiCopiedを追加
+	CMup_deque,CMup_vectorを、CaMup_vectorの派生クラスから解除しました。
+
+◎D091205_CInNameIndexContainer
+	CInNameIndexContainer::insert()を高速化
+	LogMsgのLOGMSGARGを廃止。
+
+◎D120901_Before_Namespace
+	OuLib\Str 他に名前空間を適用する前
+
+◎D120921_Namespace
+	OuLib\Str 他に名前空間を適用
+	
+◎D120930_PreCompiledHeader
+	OuDia\trunk\libs\OuLib Rev.91～ の変更を、OuLib\trunk に適用
+	ライブラリコンパイル時の、プリコンパイルヘッダ使用を拡大
+
+◎D140202_CaMuSelect
+	CaMuSelectを追加しました。
+	CaMuSelectTest がパスしました。
+	OuLib\Mu\test内のテストに、名前空間 OuLib::NsMu::NsMuTest を追加
+
+◎D160605_BEFORE_OuLib_REBUILD
+	  作業前タグ	
+	　Cont,OuDowncast,OuTRYをリポジトリから削除
+	　ライブラリビルドプロジェクトを削除
+
+◎D160817_OuLib_NsMu_CMuiCopiedParent
+	■develop\libs\cpp\OuLib\job\NsMu\160807_NsMuに親子関係導入
+
+◎D160819_OuLib_NsMu_CConvTable
+	develop\libs\cpp\OuLib\job\NsMu\CConvTable を追加
+
+
+＜2＞branch
+◎Branch_OuDia
+	Libsに付与された、OuDiaビルド用タグ
+	
