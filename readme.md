@@ -6,11 +6,11 @@ This repository is source code of *Oudia*.
 
 For overview and operating environment about *OuDia*, please refer to the following manual.  
 
-`DiagramEdit\manual\oudia_manual\index.html`
+[Goto index.html](docs\index.html)
 
 ## How to Build
 
-To build *OuDia*, please see `DiagrmaEdit\OuDia_build.txt`.
+To build *OuDia*, please see [OuDia_build.txt](DiagrmaEdit\OuDia_build.txt).
 
 ## Licence
 

@@ -8,7 +8,7 @@
 
 　OuDia の概要・動作環境 につきましては、以下のマニュアルを参照してください。
 
-	DiagramEdit\manual\oudia_manual\index.html
+	docs\index.html
 
 
 ＜2＞ビルド方法
