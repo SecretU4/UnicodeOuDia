@@ -6,11 +6,11 @@ This repository is source code of *Oudia*.
 
 For overview and operating environment about *OuDia*, please refer to the following manual.  
 
-[Goto index.html](docs\index.html)
+[Goto index.html](https://secretu4.github.io/UnicodeOuDia/)
 
 ## How to Build
 
-To build *OuDia*, please see [OuDia_build.txt](DiagrmaEdit\OuDia_build.txt).
+To build *OuDia*, please see [OuDia_build.txt](DiagrmaEdit/OuDia_build.txt).
 
 ## Licence
 
@@ -62,13 +62,7 @@ Copyright (C) 2006-2017 take-okm
 
 Please refer to the file below for the license agreement.
 
-* GNU General Public License  
-  `gpl-3.0.txt`
-* GNU General Public License(GNU 一般公衆利用許諾書)日本語訳  
-   `gpl-3.0.ja.txt`
-* GNU Free Documentation License  
-  `fdl-1.3.txt`
-* GNU Free Documentation License(GNU フリー文書利用許諾契約書)日本語訳  
-  `fdl-1.2.ja.txt`
-
-
+* [GNU General Public License](gpl-3.0.txt)
+* [GNU General Public License(GNU 一般公衆利用許諾書)日本語訳](gpl-3.0.ja.txt)
+* [GNU Free Documentation License](fdl-1.3.txt)
+* [GNU Free Documentation License(GNU フリー文書利用許諾契約書)日本語訳](fdl-1.2.ja.txt)
