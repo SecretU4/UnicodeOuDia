@@ -1,12 +1,13 @@
 # OuDia ReadMe
 
-This repository is source code of *Oudia*.
+This repository is source code of *Oudia* - Win32 Application Software to draw a "Train Service Planning Diagram" based on a "Train Timetable" 
 
 ## About OuDia
 
-For overview and operating environment about *OuDia*, please refer to the following manual.  
+OuDia is Win32 Application Software to drow a **Train Service Planning Diagram** based on a **Train Timetable**.  
 
-[Goto index.html](https://secretu4.github.io/UnicodeOuDia/)
+For overview and operating environment about *OuDia*, please refer to the [following manual](https://secretu4.github.io/UnicodeOuDia/).  
+If you want to go **original publisher site** of *OuDia*, you can visit [this site (Japanese)](http://take-okm.a.la9.jp/oudia/)
 
 ## How to Build
 
@@ -62,7 +63,7 @@ Copyright (C) 2006-2017 take-okm
 
 Please refer to the file below for the license agreement.
 
-* [GNU General Public License](gpl-3.0.txt)
-* [GNU General Public License(GNU 一般公衆利用許諾書)日本語訳](gpl-3.0.ja.txt)
-* [GNU Free Documentation License](fdl-1.3.txt)
-* [GNU Free Documentation License(GNU フリー文書利用許諾契約書)日本語訳](fdl-1.2.ja.txt)
+* [GNU General Public License](docs/c91_siyoujouken/gpl-3.0.txt) or see [LICENSE file](LICENSE)
+* [GNU General Public License(GNU 一般公衆利用許諾書)日本語訳](docs/c91_siyoujouken/gpl-3.0.ja.txt)
+* [GNU Free Documentation License](docs/c91_siyoujouken/fdl-1.3.txt)
+* [GNU Free Documentation License(GNU フリー文書利用許諾契約書)日本語訳](docs/c91_siyoujouken/fdl-1.2.ja.txt)
