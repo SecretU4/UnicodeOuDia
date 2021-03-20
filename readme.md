@@ -10,7 +10,7 @@ For overview and operating environment about *OuDia*, please refer to the follow
 
 ## How to Build
 
-To build *OuDia*, please see [OuDia_build.txt](DiagrmaEdit/OuDia_build.txt).
+To build *OuDia*, please see [OuDia_build.txt](DiagramEdit/OuDia_build.txt).
 
 ## Licence
 
