@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -80,45 +80,45 @@ namespace TreeCtrl{
 // ****************************************************************
 /**
 @brief
-�y�T�v�z
-  CTreeCtrl �̃A�_�v�^�N���X�ł��B
+【概要】
+  CTreeCtrl のアダプタクラスです。
 
-  ���̃N���X�́A CTreeCtrl �Ƃ̊֘A�������܂��B�֘A���� CTreeCtrl �ւ́A�ǉ��̑����񋟂��܂��B
-�@�ǉ��̑���Ƃ��ẮA�ȉ��̂��̂�����܂��B
+  このクラスは、 CTreeCtrl との関連を持ちます。関連する CTreeCtrl への、追加の操作を提供します。
+　追加の操作としては、以下のものがあります。
 
- - HTREEITEM �ƁA�w�A�C�e�����P�[�V�����x�Ƃ̊Ԃ̕ϊ�
- - ���� HTREEITEM �̎q�A�C�e�����
-
-  <H4>
-�y�g�����z
-  </H4>
-
-�@�P�D  ���̃N���X�̃I�u�W�F�N�g�𐶐�����O�ɁACTreeCtrl �I�u�W�F�N�g����������Ă��Ȃ��Ă͂Ȃ�܂���B�Ȃ����A���� CTreeCtrl �́A HWND ����������Ă��Ȃ��Ă͂Ȃ�܂���
-
-�@�Q�D  ���̃N���X�̃I�u�W�F�N�g�𐶐����Ă��������B�R���X�g���N�^�ł́A���삷�� CTreeCtrl �I�u�W�F�N�g���w�肵�Ă��������B
-
-�@�R�D�@���̂��Ƃ́A���ׂẴ��\�b�h�����p�ł��܂��B
+ - HTREEITEM と、『アイテムロケーション』との間の変換
+ - ある HTREEITEM の子アイテムを列挙
 
   <H4>
-�y�A�C�e�����P�[�V�����z
+【使い方】
   </H4>
 
-�@�w�A�C�e�����P�[�V�����x�́A�c���[�R���g���[���̃A�C�e���̈ʒu�������l�ł��B���̒l�́A std::deque<int> �^��
- �\���܂��B���̃N���X�ɂ́A�A�C�e�����P�[�V�����̌^��\��typedef �Ƃ��āA Itemlocation ���`���Ă��܂��B
+　１．  このクラスのオブジェクトを生成する前に、CTreeCtrl オブジェクトが生成されていなくてはなりません。なおかつ、その CTreeCtrl は、 HWND が生成されていなくてはなりません
 
-  �K�w���ł̃A�C�e���̈ʒu�́A��ԏ�̃A�C�e���� 0 �Ƃ����C���f�N�X�Ŏw�肵�܂��B
-  �P�Ԗڂ̊K�w���ł̃C���f�N�X���R���e�i�̃C���f�N�X 0 �̗v�f�E
-�Q�Ԗځi�q�A�C�e���j�� �C���f�N�X�� 1 �E
-����Ȃ�q�A�C�e���̃C���f�N�X�� 2 �E 3 �E�E�E�Ɋi�[����܂��B
-�w�A�C�e�����P�[�V�����x�̃R���e�i�̗v�f���́A���̃A�C�e���̊K�w�̐[����\���܂��B
+　２．  このクラスのオブジェクトを生成してください。コンストラクタでは、操作する CTreeCtrl オブジェクトを指定してください。
+
+　３．　このあとは、すべてのメソッドが利用できます。
+
+  <H4>
+【アイテムロケーション】
+  </H4>
+
+　『アイテムロケーション』は、ツリーコントロールのアイテムの位置を示す値です。この値は、 std::deque<int> 型で
+ 表します。このクラスには、アイテムロケーションの型を表すtypedef として、 Itemlocation を定義しています。
+
+  階層内でのアイテムの位置は、一番上のアイテムを 0 としたインデクスで指定します。
+  １番目の階層内でのインデクスがコンテナのインデクス 0 の要素・
+２番目（子アイテム）は インデクスが 1 ・
+さらなる子アイテムのインデクスは 2 ・ 3 ・・・に格納されます。
+『アイテムロケーション』のコンテナの要素数は、そのアイテムの階層の深さを表します。
   
-  �i��j
+  （例）
 	@code
-	+-- ���̃A�C�e���́w�A�C�e�����P�[�V�����x [0]=0
-	+-- ���̃A�C�e���́w�A�C�e�����P�[�V�����x [0]=1
-	  +-- ���̃A�C�e���́w�A�C�e�����P�[�V�����x [0]=1 [1]=0
-	  +-- ���̃A�C�e���́w�A�C�e�����P�[�V�����x [0]=1 [1]=1
-		+-- ���̃A�C�e���́w�A�C�e�����P�[�V�����x [0]=1 [1]=1  [2]=0
+	+-- このアイテムの『アイテムロケーション』 [0]=0
+	+-- このアイテムの『アイテムロケーション』 [0]=1
+	  +-- このアイテムの『アイテムロケーション』 [0]=1 [1]=0
+	  +-- このアイテムの『アイテムロケーション』 [0]=1 [1]=1
+		+-- このアイテムの『アイテムロケーション』 [0]=1 [1]=1  [2]=0
 	@endcode
  
  */
@@ -126,56 +126,56 @@ class CaTreeCtrl
 {
 public:
 	// ********************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ********************************
 	/**
-	 	�w�A�C�e�����P�[�V�����x�̃f�[�^�^�B
+	 	『アイテムロケーション』のデータ型。
 	 */
 	typedef std::deque<int> Itemlocation ;
 
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-	 	this �����삷�� CTreeCtrl �I�u�W�F�N�g�B
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��̓N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis ���j�������܂Ő������Ȃ��Ă͂Ȃ�܂���B
-	 	�R���X�g���N�^�Ō��܂�܂��B
+	 	this が操作する CTreeCtrl オブジェクト。
+		このオブジェクトの破棄の責務はクラスユーザーにあります。
+		このオブジェクトは、this が破棄されるまで生存しなくてはなりません。
+	 	コンストラクタで決まります。
 	 */
 	CTreeCtrl* m_pCTreeCtrl ;
 	///@}
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	///@{
 	/**
 	  @param pCTreeCtrl [in]
-	 	this �����삷�� CTreeCtrl �I�u�W�F�N�g�B
+	 	this が操作する CTreeCtrl オブジェクト。
 	 */
 	CaTreeCtrl( CTreeCtrl* pCTreeCtrl ) ;
 	///@}
 
 public:
 	// ********************************
-	///@name ����
+	///@name 操作
 	// ********************************
 	///@{
 	/**
-	  	HTREEITEM �ɑΉ�����w�A�C�e�����P�[�V�����x���쐬���܂��B
+	  	HTREEITEM に対応する『アイテムロケーション』を作成します。
 	  @param HTREEITEM [in]
-	 	�w�A�C�e�����P�[�V�����x���擾���� HTREEITEM ���w�肵�Ă��������B
+	 	『アイテムロケーション』を取得する HTREEITEM を指定してください。
 	  @param pItemlocation [out]
-	 	���̊֐��͂��̃R���e�i�ɁA�w�A�C�e�����P�[�V�����x���������݂܂��B
-	 	���̃R���e�i������܂ŕێ����Ă����v�f�͔j�����܂��B
+	 	この関数はこのコンテナに、『アイテムロケーション』を書き込みます。
+	 	このコンテナがそれまで保持していた要素は破棄します。
 	  @return 
-	 	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 	-  -1 ;	//	aHTREEITEM ���s���ł��B
+	 	成功したら 0 以上、エラーなら負の数です。
+	 	-  -1 ;	//	aHTREEITEM が不正です。
 
-	  @b �g�p��
+	  @b 使用例
 	  @code
 		CMup_deque<int>	aItemlocation ;
 		CaTreeCtrl	aCaTreeCtrl( &m_CTreeCtrl ) ;
@@ -186,11 +186,11 @@ public:
 		Itemlocation* pItemlocation ) ;
 	
 	/**
-	  	�w�A�C�e�����P�[�V�����x�ɑΉ�����HTREEITEM �𒲂ׂ܂��B
+	  	『アイテムロケーション』に対応するHTREEITEM を調べます。
 	  @param pItemlocation [in]
-	 	�w�A�C�e�����P�[�V�����x���w�肵�Ă��������B
+	 	『アイテムロケーション』を指定してください。
 	  @return 
-	 	���������� pItemlocation �ɑΉ����� HTREEITEM �A�G���[�Ȃ� NULL �ł��B
+	 	成功したら pItemlocation に対応する HTREEITEM 、エラーなら NULL です。
 	 
 	 */
 	HTREEITEM HTREEITEM_from_Itemlocation( 

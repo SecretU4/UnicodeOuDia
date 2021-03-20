@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 // $Id: CConvTable.h 355 2016-08-18 16:41:28Z okm $
@@ -75,33 +75,33 @@ namespace NsMu{
 
 /**
 @brief
-  �Q�̒l�̕ϊ��\����������N���X�ł��B
+  ２つの値の変換表を実現するクラスです。
 
-  ���̃N���X�́A�Q�̒l�̃y�A���̃e�[�u����ێ����A���̒l���L�[�ɉE�̒l�������E�܂��͂��̋t���s���܂��B
+  このクラスは、２つの値のペアをのテーブルを保持し、左の値をキーに右の値を検索・またはその逆を行います。
   
-  ���̃N���X�ł́A�y�A��2�̒l�����ꂼ��Aleft,right �ƌĂт܂��B
+  このクラスでは、ペアの2つの値をそれぞれ、left,right と呼びます。
 
 <H4>
-�y�g�����z
+【使い方】
 </H4>
 
-1. ���̃N���X�̃C���X�^���X�𐶐����Ă��������B
-  �e���v���[�g�����ɂ́Aleft�Aright �̌^���w�肵�Ă��������B
+1. このクラスのインスタンスを生成してください。
+  テンプレート引数には、left、right の型を指定してください。
 
-2. add() �ŁA�l�̃y�A��o�^���Ă��������B
+2. add() で、値のペアを登録してください。
 
-3. rightFrom() �ŁAleft �ɑΉ����� right �̒l���擾�ł��܂��B�܂��AleftFrom() �ŁAright �ɑΉ����� left ���擾�ł��܂��B
+3. rightFrom() で、left に対応する right の値を取得できます。また、leftFrom() で、right に対応する left を取得できます。
 
-  rightFrom() �́A���o�^�� left ���w�肳�ꂽ�ꍇ�A m_bRightDefaultEnable ���U�Ȃ�΁ALException �� throw ���܂��B
-  m_bRightDefaultEnable ���^�Ȃ�ALException �� throw�����ArightFrom() �̖߂�l�Ƃ��� m_RightDefault ��Ԃ��܂��B
-  ���̐U�镑���́A leftFrom() �����l�ł��B
+  rightFrom() は、未登録の left を指定された場合、 m_bRightDefaultEnable が偽ならば、LException を throw します。
+  m_bRightDefaultEnable が真なら、LException を throwせず、rightFrom() の戻り値として m_RightDefault を返します。
+  この振る舞いは、 leftFrom() も同様です。
 
-  left �ɓ���̒l��2�ȏ�o�^�����ꍇ�ArightFrom() �̖߂�l���ǂ���̒l�ɂȂ�̂��͖���`�ł��B���̐U�镑���́A leftFrom() �����l�ł��B
+  left に同一の値を2つ以上登録した場合、rightFrom() の戻り値がどちらの値になるのかは未定義です。この振る舞いは、 leftFrom() も同様です。
 
 @param TYPE_LEFT
-	left �̌^���w�肵�Ă��������B
+	left の型を指定してください。
 @param TYPE_RIGHT
-	right �̌^���w�肵�Ă��������B
+	right の型を指定してください。
 
 */
 template <class TYPE_LEFT , class TYPE_RIGHT >
@@ -109,40 +109,40 @@ class CConvTable
 {
 public:
 	// ********************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ********************************
 	/**
-		�Ή�����l��������Ȃ��ꍇ�ɃX���[������O�ł��B
+		対応する値が見つからない場合にスローされる例外です。
 	*/
 	class LException
 	{
 	};
 private:
 	// ********************************
-	///@name ���
+	///@name 包含
 	// ********************************
 	///@{
-	/** left �� right �̃y�A���i�[����R���e�i�ł��B */
+	/** left と right のペアを格納するコンテナです。 */
 	std::map<TYPE_LEFT,TYPE_RIGHT>	m_Map ;
 	///@}
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-	- false: left ��Ԃ��֐��ɂ����āA�l��������Ȃ��ꍇ�� LException �� 
-		throw ���܂��B
-	- true: left ��Ԃ��֐��ɂ����āA�l��������Ȃ��ꍇ�� LException �� 
-		throw ������ m_LeftDefault ��Ԃ��܂��B
+	- false: left を返す関数において、値が見つからない場合は LException を 
+		throw します。
+	- true: left を返す関数において、値が見つからない場合は LException を 
+		throw せずに m_LeftDefault を返します。
 	*/
 	bool m_bLeftDefaultEnable ;
 	/** @see m_bLeftDefaultEnable */
 	TYPE_LEFT	m_LeftDefault ;
 	/**
-	- false: right ��Ԃ��֐��ɂ����āA�l��������Ȃ��ꍇ�� LException �� 
-		throw ���܂��B
-	- true: right ��Ԃ��֐��ɂ����āA�l��������Ȃ��ꍇ�� LException �� 
-		throw ������ m_RightDefault ��Ԃ��܂��B
+	- false: right を返す関数において、値が見つからない場合は LException を 
+		throw します。
+	- true: right を返す関数において、値が見つからない場合は LException を 
+		throw せずに m_RightDefault を返します。
 	*/
 	bool m_bRightDefaultEnable ;
 	/** @see m_bRightDefaultEnable */
@@ -151,7 +151,7 @@ private:
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CConvTable()
 		: m_bLeftDefaultEnable( false ) 
@@ -161,12 +161,12 @@ public:
 
 public:
 	// ********************************
-	///@name	CConvTable - ����
+	///@name	CConvTable - 属性
 	// ********************************
 	///@{
 	void setLeftDefaultEnable( bool value ){	m_bLeftDefaultEnable = value ;}
 	bool getLeftDefaultEnable()const{	return m_bLeftDefaultEnable ;}
-	/** m_LeftDefault ��ݒ肵�܂��Bm_bLeftDefaultEnable ��true �ɂȂ�܂��B*/
+	/** m_LeftDefault を設定します。m_bLeftDefaultEnable もtrue になります。*/
 	CConvTable& setLeftDefault( const TYPE_LEFT& value )
 	{
 		m_LeftDefault = value ;
@@ -178,7 +178,7 @@ public:
 	void setRightDefaultEnable( bool value ){	m_bRightDefaultEnable = value ;}
 	bool getRightDefaultEnable()const{	return m_bRightDefaultEnable  ;}
 	/** 
-		m_RightDefault ��ݒ肵�܂��Bm_bRightDefaultEnable ��true �ɂȂ�܂��B
+		m_RightDefault を設定します。m_bRightDefaultEnable もtrue になります。
 	*/
 	CConvTable& setRightDefault( const TYPE_RIGHT& value )
 	{
@@ -190,34 +190,34 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name	CConvTable - ����
+	///@name	CConvTable - 操作
 	// ********************************
 	///@{
 	/**
 	@return
-		�o�^���ꂽ�l�̃y�A�̐���Ԃ��܂��B
+		登録された値のペアの数を返します。
 	*/
 	int size(){	return m_Map.size() ;}
 	/**
-		�l�̃y�A��ǉ����܂��B
+		値のペアを追加します。
 	@param left
-		left �̒l
+		left の値
 	@param rigth 
-		rigth �̒l
+		rigth の値
 	*/
 	CConvTable& add( const TYPE_LEFT& left , const TYPE_RIGHT& right )
 	{
 		m_Map[left] = right ;	return *this ;
 	}
 	/**
-		�w�肳�ꂽ left �̒l�ɑΉ����� rigth ��Ԃ��܂��B
+		指定された left の値に対応する rigth を返します。
 	@param left
-		left ���w�肵�Ă��������B
+		left を指定してください。
 	@return 
-		�Ή����� right �̒l��Ԃ��܂��B
+		対応する right の値を返します。
 
-		left ��ϊ��ł��Ȃ��ꍇ�̋����́A m_bRightDefaultEnable ��
-		�����������������B
+		left を変換できない場合の挙動は、 m_bRightDefaultEnable の
+		説明をご覧下さい。
 
 	@see m_bRightDefaultEnable
 	*/
@@ -236,14 +236,14 @@ public:
 		return rv ;
 	}
 	/**
-		�w�肳�ꂽ right �̒l�ɑΉ����� left ��Ԃ��܂��B
+		指定された right の値に対応する left を返します。
 	@param left
-		right ���w�肵�Ă��������B
+		right を指定してください。
 	@return 
-		�Ή����� left �̒l��Ԃ��܂��B
+		対応する left の値を返します。
 
-		right ��ϊ��ł��Ȃ��ꍇ�̋����́A m_bLeftDefaultEnable ��
-		�����������������B
+		right を変換できない場合の挙動は、 m_bLeftDefaultEnable の
+		説明をご覧下さい。
 
 	@see m_bLeftDefaultEnable
 	*/

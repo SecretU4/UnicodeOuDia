@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -80,68 +80,68 @@ namespace Hidemdi{
 //	CHidemdiMainfrm
 // ****************************************************************
 /** @brief
- * �y�T�v�z
- *   Hidemdi �A�v���P�[�V�����ɂ�����AMDI�t���[���E�C���h�E�N���X�ł��B
+ * 【概要】
+ *   Hidemdi アプリケーションにおける、MDIフレームウインドウクラスです。
  *
- *   Hidemdi �A�v���P�[�V�����̃��C���t���[���E�C���h�E�́A���̃N���X��
- *	�h���N���X�łȂ��Ă͂Ȃ�܂���B
+ *   Hidemdi アプリケーションのメインフレームウインドウは、このクラスの
+ *	派生クラスでなくてはなりません。
  *
- *	  Hidemdi �A�v���P�[�V�����ł́A�I�y���[�^�̃��j���[����ɉ����āA
- *	�T�uView���J���̂́A���C���t���[���E�C���h�E�̐Ӗ��ł��B
- *	�A�v���P�[�V�����́A CHidemdiMainMDIFrameWnd ���p������
- *	�w���C���t���[���E�C���h�E�x�N���X���쐬���A������UI�@�\��
- *	��������K�v������܂��B
+ *	  Hidemdi アプリケーションでは、オペレータのメニュー操作に応じて、
+ *	サブViewを開くのは、メインフレームウインドウの責務です。
+ *	アプリケーションは、 CHidemdiMainMDIFrameWnd を継承した
+ *	『メインフレームウインドウ』クラスを作成し、これらのUI機能を
+ *	実装する必要があります。
  *
- *	�y�g�����z
- *	Doc/View���f����MFC�A�v���P�[�V�����ɂ�����A
- *	��ʓI�ȃ��C���E�C���h�E�̎g�����Ɠ����ł��B
+ *	【使い方】
+ *	Doc/ViewモデルのMFCアプリケーションにおける、
+ *	一般的なメインウインドウの使い方と同じです。
  *	
- *	  CHidemdiApp�h���N���X �� InitInstance() �̃I�[�o���C�h���ŁA
- *	�ȉ��̏������o�āA���C���t���[���E�C���h�E���쐬���Ă��������B
+ *	  CHidemdiApp派生クラス の InitInstance() のオーバライド内で、
+ *	以下の順序を経て、メインフレームウインドウを作成してください。
  *
- *	�P�D  �I�u�W�F�N�g�𐶐����܂��B
+ *	１．  オブジェクトを生成します。
  *
- *	�Q�D CFrameWnd::LoadFrame() �ŃE�C���h�E���쐬���܂��B
+ *	２． CFrameWnd::LoadFrame() でウインドウを作成します。
  *
- *	�R�D CWinApp::m_pMainWnd �ɁA���̃I�u�W�F�N�g�̃|�C���^���Z�b�g���܂��B
+ *	３． CWinApp::m_pMainWnd に、このオブジェクトのポインタをセットします。
  *
- *	���̃I�u�W�F�N�g�̌�n���́AMFC�̃t���[�����[�N���s���܂��B
+ *	このオブジェクトの後始末は、MFCのフレームワークが行います。
  *
- * @see ��L�̎菇�̗�́ACHidemdiRootDoctmpl �̐������������������B
+ * @see 上記の手順の例は、CHidemdiRootDoctmpl の説明をご覧ください。
  *
  * @attention
- *	���C���t���[���E�C���h�E�𐶐�����Ƃ���
- *	CFrameWnd::LoadFrame() �ɓn��ID�ƁA
- *	HidemdiRootDoctmpl() �̃R���X�g���N�^�̑�������
- *	�n��ID�́A�����l�ɂ��ׂ��ł��B
- *	(���̃h�L�������g�e���v���[�g�����p����
- *	���j���[�E�A�C�R���E�A�N�Z�����[�^�ƁA���C���t���[���E�C���h�E
- *	�����p���� ���j���[�E�A�C�R���E�A�N�Z�����[�^ ��
- *	����ł���ׂ��ł��j
+ *	メインフレームウインドウを生成するときに
+ *	CFrameWnd::LoadFrame() に渡すIDと、
+ *	HidemdiRootDoctmpl() のコンストラクタの第一引数に
+ *	渡すIDは、同じ値にすべきです。
+ *	(このドキュメントテンプレートが利用する
+ *	メニュー・アイコン・アクセラレータと、メインフレームウインドウ
+ *	が利用する メニュー・アイコン・アクセラレータ は
+ *	同一であるべきです）
  */
 class CHidemdiMainfrm : public CMDIFrameWnd
 {
 // ********************************
-//	�]���^
+//	従属型
 // ********************************
  public:
 	typedef CMDIFrameWnd	super ;
 
 // ********************************
-///@name	����
+///@name	属性
 // ********************************
 ///@{
  private:
 	/**
-	 *	�^�Ȃ�A�w���[�g�h�L�������g�x�ɕύX��
-	 *	�������Ƃ��ɁA�^�C�g���o�[�� "*" ��\�����܂��B
+	 *	真なら、『ルートドキュメント』に変更が
+	 *	あったときに、タイトルバーに "*" を表示します。
 	 *
-	 *	�����l�� false �ł����A���\�b�h��
-	 *	�ύX�ł��܂����B
+	 *	初期値は false ですが、メソッドで
+	 *	変更できました。
 	 * @attention
-	 *	���̋@�\�́A���ݓ��삵�Ă��܂���B
-	 *	����́A OnUpdateFrameTitle() ���Ăяo�����
-	 *	�񐔂����Ȃ����߂ł��B
+	 *	この機構は、現在動作していません。
+	 *	これは、 OnUpdateFrameTitle() が呼び出される
+	 *	回数が少ないためです。
 	 */
 	bool m_bIsModifiedSign ;
 
@@ -152,18 +152,18 @@ class CHidemdiMainfrm : public CMDIFrameWnd
 // --------------------------------
  protected:
 	/**
-	 * 	�t���[�����[�N���Ăяo���֐��ł��B
+	 * 	フレームワークが呼び出す関数です。
 	 *
-	 *	���̊֐��ł́A���C���t���[���E�C���h�E��
-	 *	�^�C�g���o�[���X�V���܂��B
+	 *	この関数では、メインフレームウインドウの
+	 *	タイトルバーを更新します。
 	 * @param bAddToTitle [in]
-	 *	- true ;	�^�C�g���o�[�ɁA�A�v���P�[�V��������
-	 *		�h�L�������g����t�����܂��B
-	 *	- false ;	�^�C�g���o�[�́A�A�v���P�[�V�������݂̂Ƃ��܂��B
+	 *	- true ;	タイトルバーに、アプリケーション名と
+	 *		ドキュメント名を付加します。
+	 *	- false ;	タイトルバーは、アプリケーション名のみとします。
 	 *
-	 * �y�I�[�o���C�h�z
-	 *	MainwndTitlebarUpdate() ���Ăяo���āA
-	 *	�^�C�g���o�[���X�V���܂��B
+	 * 【オーバライド】
+	 *	MainwndTitlebarUpdate() を呼び出して、
+	 *	タイトルバーを更新します。
 	 */
 	virtual void OnUpdateFrameTitle(BOOL bAddToTitle)  ;
 
@@ -173,30 +173,30 @@ class CHidemdiMainfrm : public CMDIFrameWnd
 // --------------------------------
  protected:
 	/**
-	* 	���C���E�C���h�E�̃^�C�g���o�[���A�ŐV�̏�ԂɍX�V���܂�
+	* 	メインウインドウのタイトルバーを、最新の状態に更新します
 	*
-	* �y�I�[�o���C�h�z
-	* 	 MainwndTitlebarStrGet() �̌��ʂ��^�C�g���o�[�ɃZ�b�g���܂�
+	* 【オーバライド】
+	* 	 MainwndTitlebarStrGet() の結果をタイトルバーにセットします
 	*/
 	virtual BOOL MainwndTitlebarUpdate() ;
 
 	/**
-	* 	���C���E�C���h�E�̃^�C�g���o�[�ɃZ�b�g���ׂ��������
-	* 	�쐬���ĕԂ��܂��B
+	* 	メインウインドウのタイトルバーにセットすべき文字列を
+	* 	作成して返します。
 	*
-	*	���̊֐����I�[�o���C�h���邱�Ƃɂ��A
-	*	�^�C�g���o�[������̍쐬���@��ύX���邱�Ƃ��ł��܂��B
+	*	この関数をオーバライドすることにより、
+	*	タイトルバー文字列の作成方法を変更することができます。
 	*
 	* @param pRString [out]
-	* 	  ���̊֐��͂��̕�����I�u�W�F�N�g�ɁA�^�C�g���o�[�������
-	* 	�Z�b�g���܂��B
-	* 	  �K�v�Ȃ��Ȃ�NULL�ł��܂��܂���B
+	* 	  この関数はこの文字列オブジェクトに、タイトルバー文字列を
+	* 	セットします。
+	* 	  必要ないならNULLでかまいません。
 	*
-	* �y�I�[�o���C�h�z
-	* 	 AfxGetAppName() �̌��ʂƁA���ݕҏW���Ă���t�@�C��������
-	* 	��������쐬���܂��B
+	* 【オーバライド】
+	* 	 AfxGetAppName() の結果と、現在編集しているファイル名から
+	* 	文字列を作成します。
 	*
-	*	(��) "document.ext - ApplicationName"
+	*	(例) "document.ext - ApplicationName"
 	*/
 	virtual void MainwndTitlebarStrGet( CString* pRString ) ;
 
@@ -206,7 +206,7 @@ class CHidemdiMainfrm : public CMDIFrameWnd
 // ********************************
  public:
 	// ********************************
-	///@name	����
+	///@name	属性
 	// ********************************
 	///@{
 	bool getIsModifiedSign()  ;
@@ -221,18 +221,18 @@ class CHidemdiMainfrm : public CMDIFrameWnd
 public:
 	CHidemdiMainfrm();
 
-// �A�g���r���[�g
+// アトリビュート
 public:
 
-// �I�y���[�V����
+// オペレーション
 public:
 
-// �I�[�o�[���C�h
-	// ClassWizard �͉��z�֐��̃I�[�o�[���C�h�𐶐����܂��B
+// オーバーライド
+	// ClassWizard は仮想関数のオーバーライドを生成します。
 	//{{AFX_VIRTUAL(CHidemdiMainfrm)
 	//}}AFX_VIRTUAL
 
-// �C���v�������e�[�V����
+// インプリメンテーション
 public:
 	virtual ~CHidemdiMainfrm();
 #ifdef _DEBUG
@@ -240,9 +240,9 @@ public:
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-protected:  // �R���g���[�� �o�[�p�����o
+protected:  // コントロール バー用メンバ
 
-// �������ꂽ���b�Z�[�W �}�b�v�֐�
+// 生成されたメッセージ マップ関数
 protected:
 	//{{AFX_MSG(CHidemdiMainfrm)
 	//}}AFX_MSG

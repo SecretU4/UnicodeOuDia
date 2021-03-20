@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
-// CDiagramEditDoc.cpp : CDiagramEditDoc ƒNƒ‰ƒX‚Ì“®ì‚Ì’è‹`‚ğs‚¢‚Ü‚·B
+// CDiagramEditDoc.cpp : CDiagramEditDoc ã‚¯ãƒ©ã‚¹ã®å‹•ä½œã®å®šç¾©ã‚’è¡Œã„ã¾ã™ã€‚
 // $Id: CDiagramEditDoc.cpp 295 2016-06-11 05:14:13Z okm $
 /** @file */
 #include "stdafx.h"
@@ -110,10 +110,10 @@ using namespace OuMfc;
 /////////////////////////////////////////////////////////////////////////////
 // CDiagramEditDoc
 
-/**	Undo ‚ÌÅ‘å‰ñ”‚Å‚·B */
+/**	Undo ã®æœ€å¤§å›æ•°ã§ã™ã€‚ */
 const int iUndoLevel = 8 ;
 // --------------------------------
-//@name	‰º¿ŠÖ”-WinDiaŒ`®
+//@name	ä¸‹è«‹é–¢æ•°-WinDiaå½¢å¼
 // --------------------------------
 BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName ) 
 {
@@ -121,37 +121,37 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 	int iRv = 0 ;
 
 	// --------------------------------
-	//	ƒtƒ@ƒCƒ‹‚Ì“à—e‚ğAstring‚É•Û‘¶
+	//	ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã‚’ã€stringã«ä¿å­˜
 	// --------------------------------
 	string	aString ;
 	CString	strError ;
 	if ( iRv >= 0 ){
 		int iResult = stringFromFile( &aString , lpszPathName ) ;
 		//iResult = 
-		//	-1: ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-		//	-2 ; “Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B
-		//	-3 ; ƒtƒ@ƒCƒ‹‚É‚Í "\0" ‚ªŠÜ‚Ü‚ê‚Ü‚·(ƒoƒCƒiƒŠƒtƒ@ƒCƒ‹‚Å‚ ‚é‚Æ 
-		//	v‚í‚ê‚Ü‚·)B
-		//	 ‚±‚Ìê‡ApString ‚É‚ÍA "\0" ‚Ì’¼‘O‚Ü‚Å‚Ìƒf[ƒ^‚ªŠi”[‚³‚ê‚Ä 
-		//	‚¢‚Ü‚·B 
+		//	-1: ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+		//	-2 ; èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
+		//	-3 ; ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¯ "\0" ãŒå«ã¾ã‚Œã¾ã™(ãƒã‚¤ãƒŠãƒªãƒ•ã‚¡ã‚¤ãƒ«ã§ã‚ã‚‹ã¨ 
+		//	æ€ã‚ã‚Œã¾ã™)ã€‚
+		//	 ã“ã®å ´åˆã€pString ã«ã¯ã€ "\0" ã®ç›´å‰ã¾ã§ã®ãƒ‡ãƒ¼ã‚¿ãŒæ ¼ç´ã•ã‚Œã¦ 
+		//	ã„ã¾ã™ã€‚ 
 		if ( iResult < 0 ){
 			iRv = iResult ;
 			switch( iResult ){
-			 case -1 :	// ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
+			 case -1 :	// ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILENOTFOUND ) ;
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
-			 case -2 :	//; “Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B
+			 case -2 :	//; èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEREAD ) ;
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
-			 case -3 :	// ƒtƒ@ƒCƒ‹‚É‚Í "\0" ‚ªŠÜ‚Ü‚ê‚Ü‚·
+			 case -3 :	// ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¯ "\0" ãŒå«ã¾ã‚Œã¾ã™
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEFORMAT ) ;
@@ -160,20 +160,20 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 				break ;
 			}
 			//iRv = 
-			//	-1: ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-			//	-2 ; “Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B
-			//	-3 ; ƒtƒ@ƒCƒ‹‚É‚Í "\0" ‚ªŠÜ‚Ü‚ê‚Ü‚·(ƒoƒCƒiƒŠƒtƒ@ƒCƒ‹‚Å‚ ‚é‚Æ 
-			//	v‚í‚ê‚Ü‚·)B
-			//	 ‚±‚Ìê‡ApString ‚É‚ÍA "\0" ‚Ì’¼‘O‚Ü‚Å‚Ìƒf[ƒ^‚ªŠi”[‚³‚ê‚Ä 
-			//	‚¢‚Ü‚·B 
+			//	-1: ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+			//	-2 ; èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
+			//	-3 ; ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¯ "\0" ãŒå«ã¾ã‚Œã¾ã™(ãƒã‚¤ãƒŠãƒªãƒ•ã‚¡ã‚¤ãƒ«ã§ã‚ã‚‹ã¨ 
+			//	æ€ã‚ã‚Œã¾ã™)ã€‚
+			//	 ã“ã®å ´åˆã€pString ã«ã¯ã€ "\0" ã®ç›´å‰ã¾ã§ã®ãƒ‡ãƒ¼ã‚¿ãŒæ ¼ç´ã•ã‚Œã¦ 
+			//	ã„ã¾ã™ã€‚ 
 		}
 	}
-	//aString = ƒtƒ@ƒCƒ‹‚Ì“à—e‚ğ•Û‚µ‚Ü‚·B
+	//aString = ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã‚’ä¿æŒã—ã¾ã™ã€‚
 
 	LogMsg( "CDiagramEditDoc::OnOpenDocument_WinDia()1" ) ;
 
 	// --------------------------------
-	//	ƒtƒ@ƒCƒ‹‚Ì“à—e‚Ì•¶š—ñ‚ğ‰ğß
+	//	ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã®æ–‡å­—åˆ—ã‚’è§£é‡ˆ
 	// --------------------------------
 	if ( iRv >= 0 ){
 		CDedRosenFileData	aCDedRosenFileData ;
@@ -188,7 +188,7 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 	}	
 
 	// --------------------------------
-	//	˜Hüƒrƒ…[‚ğXV
+	//	è·¯ç·šãƒ“ãƒ¥ãƒ¼ã‚’æ›´æ–°
 	// --------------------------------
 	getCDiagramEditApp()->getCDlgRosenView()->OnUpdate( NULL , 0 , NULL ) ;
 
@@ -203,10 +203,10 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 		AfxMessageBox( strError , MB_ICONSTOP ) ; 
 		return ( FALSE ) ;
 	}
-	//	ƒhƒLƒ…ƒƒ“ƒg‚Ìƒtƒ@ƒCƒ‹–¼‚ÍA
-	//	CDiagramEditDoc::SetPathName()‚Åƒ`ƒFƒbƒN‚³‚ê‚Ü‚·B
-	//	Šg’£q .dia ‚ÍAƒhƒLƒ…ƒƒ“ƒg‚Ì—LŒø‚Èƒtƒ@ƒCƒ‹–¼‚Æ‚Í
-	//	‚µ‚Ü‚¹‚ñ(.dia ‚Ö‚Ìã‘‚«•Û‘¶‚Í‚µ‚Ü‚¹‚ñ)
+	//	ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®ãƒ•ã‚¡ã‚¤ãƒ«åã¯ã€
+	//	CDiagramEditDoc::SetPathName()ã§ãƒã‚§ãƒƒã‚¯ã•ã‚Œã¾ã™ã€‚
+	//	æ‹¡å¼µå­ .dia ã¯ã€ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®æœ‰åŠ¹ãªãƒ•ã‚¡ã‚¤ãƒ«åã¨ã¯
+	//	ã—ã¾ã›ã‚“(.dia ã¸ã®ä¸Šæ›¸ãä¿å­˜ã¯ã—ã¾ã›ã‚“)
 	return TRUE;
 
 }
@@ -215,14 +215,14 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName ) 
 {
 	/*
-	 *	OnSaveDocument() ‚Ì‰º¿ŠÖ”‚Å‚·B
-	 *	ƒhƒLƒ…ƒƒ“ƒg‚Ì“à—e‚ğAWinDia Œ`®‚Ìƒtƒ@ƒCƒ‹‚É•Û‘¶‚µ‚Ü‚·B
+	 *	OnSaveDocument() ã®ä¸‹è«‹é–¢æ•°ã§ã™ã€‚
+	 *	ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®å†…å®¹ã‚’ã€WinDia å½¢å¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«ä¿å­˜ã—ã¾ã™ã€‚
 	 * @param lpszPathName [in]
-	 * 	•Û‘¶‚·‚éƒtƒ@ƒCƒ‹–¼‚ğw’è‚µ‚Ä‰º‚³‚¢B
+	 * 	ä¿å­˜ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«åã‚’æŒ‡å®šã—ã¦ä¸‹ã•ã„ã€‚
 	 * @return
-	 *	¬Œ÷‚µ‚½‚ç TRUE E ƒGƒ‰[‚È‚ç FALSE ‚Å‚·B
+	 *	æˆåŠŸã—ãŸã‚‰ TRUE ãƒ» ã‚¨ãƒ©ãƒ¼ãªã‚‰ FALSE ã§ã™ã€‚
 	 *
-	 *	‚±‚ÌŠÖ”‚ÍAƒGƒ‰[‚Ìê‡‚ÍƒƒbƒZ[ƒWƒ{ƒbƒNƒX‚ğ•\¦‚µ‚Ü‚·B
+	 *	ã“ã®é–¢æ•°ã¯ã€ã‚¨ãƒ©ãƒ¼ã®å ´åˆã¯ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
 	 */
 	// --------------------------------
 	int iRv = 0 ;
@@ -231,14 +231,14 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 	string	aString ;
 
 	// --------------------------------
-	//	•Û‘¶‚·‚éƒ_ƒCƒ„‚ğ‘I‘ğ
+	//	ä¿å­˜ã™ã‚‹ãƒ€ã‚¤ãƒ¤ã‚’é¸æŠ
 	// --------------------------------
 	int idxDia = -1 ;
 	if ( iRv >= 0 ){
 		CentDedRosen* pCentDedRosen = m_CDedRosenFileData.getCentDedRosen();
 		if ( pCentDedRosen->getCentDedDiaCont()->getMuPtr()->size() == 0 )
 		{
-			iRv = -101 ;	//	ƒ_ƒCƒ„‚ª‘¶İ‚µ‚Ü‚¹‚ñB
+			iRv = -101 ;	//	ãƒ€ã‚¤ãƒ¤ãŒå­˜åœ¨ã—ã¾ã›ã‚“ã€‚
 			CString strFmt ;
 			strFmt.LoadString( IDS_ERR_NoDia ) ;
 			strError.Format( strFmt , lpszPathName ) ;
@@ -264,30 +264,30 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 			}
 		}
 	}
-	//idxDia = ‘I‘ğ‚³‚ê‚½ƒ_ƒCƒ„‚ÌƒCƒ“ƒfƒNƒX
+	//idxDia = é¸æŠã•ã‚ŒãŸãƒ€ã‚¤ãƒ¤ã®ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹
 	// --------------------------------
-	//	WinDIAŒ`®‚Ìƒtƒ@ƒCƒ‹‚Ì•¶š—ñ‚ğì¬
+	//	WinDIAå½¢å¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡å­—åˆ—ã‚’ä½œæˆ
 	// --------------------------------
 	if ( iRv >= 0 ){
 		CconvWinDia aCconvWinDia ;
 		int iResult = aCconvWinDia.CDedRosenFileData_To_WinDiaFileString( &m_CDedRosenFileData ,idxDia , &aString ) ;
 		//iResult = 
-		//	-21 ;	//	WinDIA Œ`®‚Å‚ÍA—ñÔí•Ê‚Í24í—Ş‚Ü‚Å‚É§ŒÀ‚³‚ê‚Ä‚¢‚Ü‚·B
-		//	-22 ;	//	—ªÌ‚Ì’·‚³‚ª”¼Šp‚T•¶š‚ğ’´‚¦‚é—ñÔí•Ê‚ª‚ ‚è‚Ü‚·B
-		//			//	WinDIA Œ`®‚É•Û‘¶‚·‚é‚½‚ß‚É‚ÍA‚·‚×‚Ä‚Ì—ñÔí•Ê—ªÌ‚Í
-		//			//	‘SŠp‚Q•¶šˆÈ“à‚Å‚È‚­‚Ä‚Í‚È‚è‚Ü‚¹‚ñB
-		//	-1 ;	//	idxDia ‚Ìw’è‚ª•s³‚Å‚·B
+		//	-21 ;	//	WinDIA å½¢å¼ã§ã¯ã€åˆ—è»Šç¨®åˆ¥ã¯24ç¨®é¡ã¾ã§ã«åˆ¶é™ã•ã‚Œã¦ã„ã¾ã™ã€‚
+		//	-22 ;	//	ç•¥ç§°ã®é•·ã•ãŒåŠè§’ï¼•æ–‡å­—ã‚’è¶…ãˆã‚‹åˆ—è»Šç¨®åˆ¥ãŒã‚ã‚Šã¾ã™ã€‚
+		//			//	WinDIA å½¢å¼ã«ä¿å­˜ã™ã‚‹ãŸã‚ã«ã¯ã€ã™ã¹ã¦ã®åˆ—è»Šç¨®åˆ¥ç•¥ç§°ã¯
+		//			//	å…¨è§’ï¼’æ–‡å­—ä»¥å†…ã§ãªãã¦ã¯ãªã‚Šã¾ã›ã‚“ã€‚
+		//	-1 ;	//	idxDia ã®æŒ‡å®šãŒä¸æ­£ã§ã™ã€‚
 		if ( iResult < 0 ){
 			iRv = iResult ;
 			switch( iResult ){
-			 case -21 : //	WinDIA Œ`®‚Å‚ÍA—ñÔí•Ê‚Í24í—Ş‚Ü‚Å‚É§ŒÀ‚³‚ê‚Ä‚¢‚Ü‚·B
+			 case -21 : //	WinDIA å½¢å¼ã§ã¯ã€åˆ—è»Šç¨®åˆ¥ã¯24ç¨®é¡ã¾ã§ã«åˆ¶é™ã•ã‚Œã¦ã„ã¾ã™ã€‚
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_RessyasyubetsuTooMany ) ;
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
-			 case -22 :	//	—ªÌ‚Ì’·‚³‚ª”¼Šp‚T•¶š‚ğ’´‚¦‚é—ñÔí•Ê‚ª‚ ‚è‚Ü‚·B
+			 case -22 :	//	ç•¥ç§°ã®é•·ã•ãŒåŠè§’ï¼•æ–‡å­—ã‚’è¶…ãˆã‚‹åˆ—è»Šç¨®åˆ¥ãŒã‚ã‚Šã¾ã™ã€‚
 				 {
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_RyakusyouTooLong ) ;
@@ -295,32 +295,32 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 				 }
 			}
 			//iRv = 
-			//	-	-21 ;	//	WinDIA Œ`®‚Å‚ÍA—ñÔí•Ê‚Í24í—Ş‚Ü‚Å‚É§ŒÀ‚³‚ê‚Ä‚¢‚Ü‚·B
-			//	-	-22 :	//	—ªÌ‚Ì’·‚³‚ª”¼Šp‚T•¶š‚ğ’´‚¦‚é—ñÔí•Ê‚ª‚ ‚è‚Ü‚·B
-			//	-	-1 ;	//	idxDia ‚Ìw’è‚ª•s³‚Å‚·B
+			//	-	-21 ;	//	WinDIA å½¢å¼ã§ã¯ã€åˆ—è»Šç¨®åˆ¥ã¯24ç¨®é¡ã¾ã§ã«åˆ¶é™ã•ã‚Œã¦ã„ã¾ã™ã€‚
+			//	-	-22 :	//	ç•¥ç§°ã®é•·ã•ãŒåŠè§’ï¼•æ–‡å­—ã‚’è¶…ãˆã‚‹åˆ—è»Šç¨®åˆ¥ãŒã‚ã‚Šã¾ã™ã€‚
+			//	-	-1 ;	//	idxDia ã®æŒ‡å®šãŒä¸æ­£ã§ã™ã€‚
 		}
 	}	
-	//aString = ƒtƒ@ƒCƒ‹‚É‘‚«‚Şw˜Hüƒtƒ@ƒCƒ‹xŒ`®‚Ì•¶š—ñ‚ğ•Û‚µ‚Ü‚·B
+	//aString = ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€ã€è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã€å½¢å¼ã®æ–‡å­—åˆ—ã‚’ä¿æŒã—ã¾ã™ã€‚
 
 	// --------------------------------
-	//	ƒtƒ@ƒCƒ‹‚Ì•Û‘¶
+	//	ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¿å­˜
 	// --------------------------------
 	LogMsg( "CDiagramEditDoc::OnSaveDocument()1" ) ;
 	if ( iRv >= 0 ){
 		int iResult = stringToFile( aString , lpszPathName ) ;
 		//iResult = 
-		//	-1: ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-		//	-2 ; // ‘‚«‚İ‚É¸”s‚µ‚Ü‚µ‚½B 
+		//	-1: ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+		//	-2 ; // æ›¸ãè¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚ 
 		if ( iResult < 0 ){
 			switch( iResult ){
-			 case -1 :	// ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
+			 case -1 :	// ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILECREATE ) ;
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
-			 case -2 :	//;‘‚«‚İ‚É¸”s‚µ‚Ü‚µ‚½
+			 case -2 :	//;æ›¸ãè¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸ
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEWRITE ) ;
@@ -329,8 +329,8 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 				break ;
 			}
 			//iRv = 
-			//	-1: ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-			//	-2 ; ‘‚«‚İ‚É¸”s‚µ‚Ü‚µ‚½
+			//	-1: ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+			//	-2 ; æ›¸ãè¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸ
 			iRv = iResult - 100 ;
 		}
 	}
@@ -348,25 +348,25 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 		return ( FALSE ) ;
 	}
 
-	//	WinDIA Œ`®‚Ì•Û‘¶‚ÍA³®‚ÈƒhƒLƒ…ƒƒ“ƒg‚Ì•Û‘¶‚Æ‚Í‚µ‚Ü‚¹‚ñB
-	//	WinDIA Œ`®‚Ì•Û‘¶‚É¬Œ÷‚µ‚Ä‚àAƒhƒLƒ…ƒƒ“ƒgƒtƒ@ƒCƒ‹–¼‚Í
-	//	WinDIA ƒtƒ@ƒCƒ‹‚Ìƒtƒ@ƒCƒ‹–¼‚É‚Í‚µ‚Ü‚¹‚ñB
-	//	ƒhƒLƒ…ƒƒ“ƒg‚Ì•ÏXƒtƒ‰ƒO‚àAƒNƒŠƒA‚µ‚Ü‚¹‚ñB
-	//	iWinDIAƒtƒ@ƒCƒ‹‚ÍAƒhƒLƒ…ƒƒ“ƒg‘S‘Ì‚ğ•Û‚·‚é‚±‚Æ‚ª
-	//	‚Å‚«‚È‚¢‚½‚ß‚Å‚·Bj
-	//	‚±‚Ì‚½‚ßAˆÈ‰º‚Ìˆ—‚Ís‚¢‚Ü‚¹‚ñ
+	//	WinDIA å½¢å¼ã®ä¿å­˜ã¯ã€æ­£å¼ãªãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®ä¿å­˜ã¨ã¯ã—ã¾ã›ã‚“ã€‚
+	//	WinDIA å½¢å¼ã®ä¿å­˜ã«æˆåŠŸã—ã¦ã‚‚ã€ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆãƒ•ã‚¡ã‚¤ãƒ«åã¯
+	//	WinDIA ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚¡ã‚¤ãƒ«åã«ã¯ã—ã¾ã›ã‚“ã€‚
+	//	ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®å¤‰æ›´ãƒ•ãƒ©ã‚°ã‚‚ã€ã‚¯ãƒªã‚¢ã—ã¾ã›ã‚“ã€‚
+	//	ï¼ˆWinDIAãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆå…¨ä½“ã‚’ä¿æŒã™ã‚‹ã“ã¨ãŒ
+	//	ã§ããªã„ãŸã‚ã§ã™ã€‚ï¼‰
+	//	ã“ã®ãŸã‚ã€ä»¥ä¸‹ã®å‡¦ç†ã¯è¡Œã„ã¾ã›ã‚“
 	// --------------------------------
 	//	SetModifiedFlag( FALSE ) ;
 	//	return TRUE;
 	// --------------------------------
 	
 	//iRv = 
-	//	-	-101 ;	//	ƒ_ƒCƒ„‚ª‘¶İ‚µ‚Ü‚¹‚ñB
-	//	-	-21 ;	//	WinDIA Œ`®‚Å‚ÍA—ñÔí•Ê‚Í24í—Ş‚Ü‚Å‚É§ŒÀ‚³‚ê‚Ä‚¢‚Ü‚·B
-	//	-	-22 :	//	—ªÌ‚Ì’·‚³‚ª”¼Šp‚T•¶š‚ğ’´‚¦‚é—ñÔí•Ê‚ª‚ ‚è‚Ü‚·B
-	//	-	-1 ;	//	idxDia ‚Ìw’è‚ª•s³‚Å‚·B
-	//	-	-201: ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-	//	-	-202 ; ‘‚«‚İ‚É¸”s‚µ‚Ü‚µ‚½
+	//	-	-101 ;	//	ãƒ€ã‚¤ãƒ¤ãŒå­˜åœ¨ã—ã¾ã›ã‚“ã€‚
+	//	-	-21 ;	//	WinDIA å½¢å¼ã§ã¯ã€åˆ—è»Šç¨®åˆ¥ã¯24ç¨®é¡ã¾ã§ã«åˆ¶é™ã•ã‚Œã¦ã„ã¾ã™ã€‚
+	//	-	-22 :	//	ç•¥ç§°ã®é•·ã•ãŒåŠè§’ï¼•æ–‡å­—ã‚’è¶…ãˆã‚‹åˆ—è»Šç¨®åˆ¥ãŒã‚ã‚Šã¾ã™ã€‚
+	//	-	-1 ;	//	idxDia ã®æŒ‡å®šãŒä¸æ­£ã§ã™ã€‚
+	//	-	-201: ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+	//	-	-202 ; æ›¸ãè¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸ
 	return FALSE ;
 }
 	
@@ -378,9 +378,9 @@ void CDiagramEditDoc::UpdateAllSubDocviews( CView* pSender
 							, LPARAM lHint , CObject* pHint )
 {
 	// --------------------------------
-	//	•\Eƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚É‘Î‰‚·‚é
-	//	ƒ_ƒCƒ„‚ªíœ‚³‚ê‚Ä‚¢‚½‚çA
-	//	‘Î‰‚·‚éƒTƒuView‚ğ•Â‚¶‚Ü‚·B
+	//	æ™‚åˆ»è¡¨ãƒ»ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã«å¯¾å¿œã™ã‚‹
+	//	ãƒ€ã‚¤ãƒ¤ãŒå‰Šé™¤ã•ã‚Œã¦ã„ãŸã‚‰ã€
+	//	å¯¾å¿œã™ã‚‹ã‚µãƒ–Viewã‚’é–‰ã˜ã¾ã™ã€‚
 	// --------------------------------
 	POSITION	LPosition = AfxGetApp()->GetFirstDocTemplatePosition() ;
 	while( LPosition != NULL ){
@@ -404,7 +404,7 @@ void CDiagramEditDoc::UpdateAllSubDocviews( CView* pSender
 					int idxDia = pCentDedRosen->getCentDedDiaCont()->findCentDedDiaByName( 
 						pCJikokuhyouDoc->getDiaName() ) ;
 					if ( idxDia < 0 ){
-						//	‚±‚ÌƒhƒLƒ…ƒƒ“ƒg‚É‘Î‰‚·‚éƒ_ƒCƒ„‚Ííœ‚³‚ê‚Ü‚µ‚½
+						//	ã“ã®ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã«å¯¾å¿œã™ã‚‹ãƒ€ã‚¤ãƒ¤ã¯å‰Šé™¤ã•ã‚Œã¾ã—ãŸ
 						pCJikokuhyouDoc->OnCloseDocument() ;
 						pLDocument = NULL ;
 					}
@@ -421,7 +421,7 @@ void CDiagramEditDoc::UpdateAllSubDocviews( CView* pSender
 					int idxDia = pCentDedRosen->getCentDedDiaCont()->findCentDedDiaByName( 
 						pCDedDiagramDoc->getDiaName() ) ;
 					if ( idxDia < 0 ){
-						//	‚±‚ÌƒhƒLƒ…ƒƒ“ƒg‚É‘Î‰‚·‚éƒ_ƒCƒ„‚Ííœ‚³‚ê‚Ü‚µ‚½
+						//	ã“ã®ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã«å¯¾å¿œã™ã‚‹ãƒ€ã‚¤ãƒ¤ã¯å‰Šé™¤ã•ã‚Œã¾ã—ãŸ
 						pCDedDiagramDoc->OnCloseDocument() ;
 						pLDocument = NULL ;
 					}
@@ -430,11 +430,11 @@ void CDiagramEditDoc::UpdateAllSubDocviews( CView* pSender
 		}
 	}
 	// --------------------------------
-	//	‚·‚×‚Ä‚ÌƒTƒuView‚ğXV
+	//	ã™ã¹ã¦ã®ã‚µãƒ–Viewã‚’æ›´æ–°
 	// --------------------------------
 	super::UpdateAllSubDocviews( pSender , lHint , pHint );
 	// --------------------------------
-	//	˜HüView‚ğXV
+	//	è·¯ç·šViewã‚’æ›´æ–°
 	// --------------------------------
 	getCDiagramEditApp()->getCDlgRosenView()->OnUpdate(  pSender , lHint , pHint ) ;
 
@@ -444,7 +444,7 @@ void CDiagramEditDoc::UpdateAllSubDocviews( CView* pSender
 //	CDiagramEditDoc
 // ********************************
 	// ********************************
-	//@name •ïŠÜ
+	//@name åŒ…å«
 	// ********************************
 const CDedRosenFileData*	CDiagramEditDoc::getCDedRosenFileData()const 
 {
@@ -454,7 +454,7 @@ const CDedRosenFileData*	CDiagramEditDoc::getCDedRosenFileData()const
 
 
 	// ********************************
-	//@name ƒNƒŠƒbƒvƒ{[ƒh‘€ì
+	//@name ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰æ“ä½œ
 	// ********************************
 
 UINT CDiagramEditDoc::getCF_CentDedEki()
@@ -463,18 +463,18 @@ UINT CDiagramEditDoc::getCF_CentDedEki()
 } ;
 
 /**
-	string ‚ğAƒNƒŠƒbƒvƒ{[ƒh‚ÉƒRƒs[‚µ‚Ü‚·B
+	string ã‚’ã€ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã€‚
 @param aHwnd [in]
-	ƒNƒŠƒbƒvƒ{[ƒh‚ÌƒI[ƒi[‚Æ‚È‚éƒEƒCƒ“ƒhƒE‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®ã‚ªãƒ¼ãƒŠãƒ¼ã¨ãªã‚‹ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 @param uiClipboardFormat [in]
-	ƒNƒŠƒbƒvƒ{[ƒhƒtƒH[ƒ}ƒbƒg‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 @param strData [in]
-	ƒNƒŠƒbƒvƒ{[ƒh‚ÉƒRƒs[‚·‚é•¶š—ñ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã‚³ãƒ”ãƒ¼ã™ã‚‹æ–‡å­—åˆ—ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 @return
-	¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	-	-2 ;	//	ƒƒ‚ƒŠ‚ÌŠm•Û‚É¸”s‚µ‚Ü‚µ‚½B
-	-	-11 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-	-	-12 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ìƒf[ƒ^İ’è‚ª¸”s
+	æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	-	-2 ;	//	ãƒ¡ãƒ¢ãƒªã®ç¢ºä¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
+	-	-11 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+	-	-12 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®ãƒ‡ãƒ¼ã‚¿è¨­å®šãŒå¤±æ•—
 */
 static int stringToClipboard( 
 		HWND aHwnd , 
@@ -483,7 +483,7 @@ static int stringToClipboard(
 {
 	int iRv = 0 ;
 	// --------------------------------
-	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ì“]‘—
+	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®è»¢é€
 	// --------------------------------
 	HGLOBAL	hGlobal = NULL ;
 	if ( iRv >= 0 )
@@ -491,7 +491,7 @@ static int stringToClipboard(
 		hGlobal = GlobalAlloc( GMEM_MOVEABLE, strData.length() + 1);
 		if ( hGlobal == NULL )
 		{
-			iRv = -2 ;	//	ƒƒ‚ƒŠ‚ÌŠm•Û‚É¸”s‚µ‚Ü‚µ‚½B
+			iRv = -2 ;	//	ãƒ¡ãƒ¢ãƒªã®ç¢ºä¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
 		}
 		else
 		{
@@ -500,14 +500,14 @@ static int stringToClipboard(
 			GlobalUnlock( hGlobal ) ;
 		}
 	}
-	//hGlobal = CentDedEki ‚Ì“à—e‚ğ•Û‚µ‚Ä‚¢‚Ü‚·B
+	//hGlobal = CentDedEki ã®å†…å®¹ã‚’ä¿æŒã—ã¦ã„ã¾ã™ã€‚
 	
 	bool	bIsOpen = false ;
 	if ( iRv >= 0 )
 	{	
 		if ( !OpenClipboard( aHwnd ) )
 		{
-			iRv = -11 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
+			iRv = -11 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
 		}
 		else
 		{
@@ -519,12 +519,12 @@ static int stringToClipboard(
 		HANDLE hResult = SetClipboardData( uiClipboardFormat , hGlobal);
 		if ( hResult == NULL )
 		{
-			iRv = -12 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ìƒf[ƒ^İ’è‚ª¸”s
+			iRv = -12 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®ãƒ‡ãƒ¼ã‚¿è¨­å®šãŒå¤±æ•—
 		}
 		else
 		{
-			//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ì“]‘—‚ª¬Œ÷‚µ‚Ü‚µ‚½‚Ì‚ÅA
-			//	‚±‚ÌƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Í hGlobal ‚ğ‰ğ•ú‚¹‚¸‚É•úŠü‚µ‚Ü‚·B
+			//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®è»¢é€ãŒæˆåŠŸã—ã¾ã—ãŸã®ã§ã€
+			//	ã“ã®ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã¯ hGlobal ã‚’è§£æ”¾ã›ãšã«æ”¾æ£„ã—ã¾ã™ã€‚
 			hGlobal = NULL ;
 		}
 	}
@@ -543,18 +543,18 @@ static int stringToClipboard(
 
 
 /**
-	string ‚ğAƒNƒŠƒbƒvƒ{[ƒh‚ÉƒRƒs[‚µ‚Ü‚·B
+	string ã‚’ã€ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã€‚
 @param aHwnd [in]
-	ƒNƒŠƒbƒvƒ{[ƒh‚ÌƒI[ƒi[‚Æ‚È‚éƒEƒCƒ“ƒhƒE‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®ã‚ªãƒ¼ãƒŠãƒ¼ã¨ãªã‚‹ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 @param uiClipboardFormat [in]
-	ƒNƒŠƒbƒvƒ{[ƒhƒtƒH[ƒ}ƒbƒg‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 @param pstrData [out]
-	‚±‚ÌŠÖ”‚Í‚±‚Ì•¶š—ñ‚ÉAƒNƒŠƒbƒvƒ{[ƒh‚Ì•¶š—ñ‚ğƒRƒs[‚µ‚Ü‚·B
-	•s—v‚È‚ç NULL ‚ğw’è‚µ‚Ä‚à‚©‚Ü‚¢‚Ü‚¹‚ñB
+	ã“ã®é–¢æ•°ã¯ã“ã®æ–‡å­—åˆ—ã«ã€ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®æ–‡å­—åˆ—ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã™ã€‚
+	ä¸è¦ãªã‚‰ NULL ã‚’æŒ‡å®šã—ã¦ã‚‚ã‹ã¾ã„ã¾ã›ã‚“ã€‚
 @return
-	¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	-	-1 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚É‚Í—LŒø‚Èƒf[ƒ^‚Í‚ ‚è‚Ü‚¹‚ñB
-	-	-11 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
+	æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	-	-1 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã¯æœ‰åŠ¹ãªãƒ‡ãƒ¼ã‚¿ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
+	-	-11 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
 */
 static int stringFromClipboard( 
 		HWND aHwnd , 
@@ -563,14 +563,14 @@ static int stringFromClipboard(
 {
 	int iRv = 0 ;
 	// --------------------------------
-	//	ƒNƒŠƒbƒvƒ{[ƒh‚©‚çƒf[ƒ^‚ğæ“¾
+	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—
 	// --------------------------------
 	string	strData ;
 	if ( iRv >= 0 )
 	{	
 		if ( !IsClipboardFormatAvailable(uiClipboardFormat) ) 
 		{
-			iRv = -1 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚É‚Í—LŒø‚Èƒf[ƒ^‚Í‚ ‚è‚Ü‚¹‚ñB
+			iRv = -1 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã¯æœ‰åŠ¹ãªãƒ‡ãƒ¼ã‚¿ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
 	bool	bIsOpen = false ;
@@ -578,7 +578,7 @@ static int stringFromClipboard(
 	{ 
 		if ( !OpenClipboard( aHwnd ) )
 		{
-			iRv = -11 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
+			iRv = -11 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
 		}
 		else
 		{
@@ -616,7 +616,7 @@ int CDiagramEditDoc::CentDedEki_To_Cliboard(
 	int iRv = 0 ;
 
 	// --------------------------------
-	//	Mu ‚©‚ç EkiCont ‚É•ÏŠ·
+	//	Mu ã‹ã‚‰ EkiCont ã«å¤‰æ›
 	// --------------------------------
 	CentDedEkiCont	aEkiCont ;
 	if ( iRv >= 0 )
@@ -626,7 +626,7 @@ int CDiagramEditDoc::CentDedEki_To_Cliboard(
 	}
 
 	// --------------------------------
-	//	ƒf[ƒ^‚ğ•¶š—ñ‰»
+	//	ãƒ‡ãƒ¼ã‚¿ã‚’æ–‡å­—åˆ—åŒ–
 	// --------------------------------
 	string	strData ;
 	if ( iRv >= 0 )
@@ -638,7 +638,7 @@ int CDiagramEditDoc::CentDedEki_To_Cliboard(
 			&aCNodeContainer ) ;
 		if ( iRv < 0 )
 		{
-			iRv = -1 ;	//	CentDedEki ‚Ì“à—e‚ª•s³‚Å‚·B
+			iRv = -1 ;	//	CentDedEki ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 		}
 		else
 		{
@@ -646,14 +646,14 @@ int CDiagramEditDoc::CentDedEki_To_Cliboard(
 			strData = aCConvNodeContainer.encode( &aCNodeContainer ) ;
 			if ( strData.length() == 0 )
 			{
-				iRv = -1 ;	//	CentDedEki ‚Ì“à—e‚ª•s³‚Å‚·B
+				iRv = -1 ;	//	CentDedEki ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 			}
 		}
 	}
-	//strData = CentDedEki ‚Ì“à—e
+	//strData = CentDedEki ã®å†…å®¹
 
 	// --------------------------------
-	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ì“]‘—
+	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®è»¢é€
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -663,7 +663,7 @@ int CDiagramEditDoc::CentDedEki_To_Cliboard(
 			strData ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -11 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ìƒf[ƒ^İ’è‚ª¸”s
+			iRv = -11 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®ãƒ‡ãƒ¼ã‚¿è¨­å®šãŒå¤±æ•—
 		}
 	}
 	return iRv ;
@@ -674,14 +674,14 @@ int CDiagramEditDoc::CentDedEki_From_Cliboard(
 {
 	int iRv = 0 ;
 	// --------------------------------
-	//	ƒNƒŠƒbƒvƒ{[ƒh‚©‚çƒf[ƒ^‚ğæ“¾
+	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—
 	// --------------------------------
 	string	strData ;
 	if ( iRv >= 0 )
 	{	
 		if (!IsClipboardFormatAvailable(getCF_CentDedEki())) 
 		{
-			iRv = -1 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚É‚Í—LŒø‚Èƒf[ƒ^‚Í‚ ‚è‚Ü‚¹‚ñB
+			iRv = -1 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã¯æœ‰åŠ¹ãªãƒ‡ãƒ¼ã‚¿ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
 	if ( iRv >= 0 )
@@ -692,12 +692,12 @@ int CDiagramEditDoc::CentDedEki_From_Cliboard(
 			&strData ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -2 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚©‚ç‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B	
+			iRv = -2 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚	
 		}
 	}
-	//strData = CentDedEki ‚Ì“à—e
+	//strData = CentDedEki ã®å†…å®¹
 	// --------------------------------
-	//	•¶š—ñ‚©‚ç‰wƒf[ƒ^‚ğì¬
+	//	æ–‡å­—åˆ—ã‹ã‚‰é§…ãƒ‡ãƒ¼ã‚¿ã‚’ä½œæˆ
 	// --------------------------------
 	CNodeContainer aCNodeContainer ;
 	if ( iRv >= 0 )
@@ -708,7 +708,7 @@ int CDiagramEditDoc::CentDedEki_From_Cliboard(
 			&aCNodeContainer ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -3 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ì“à—e‚ª•s³‚Å‚·B
+			iRv = -3 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	CentDedEkiCont	aCentDedEkiCont ;
@@ -721,16 +721,16 @@ int CDiagramEditDoc::CentDedEki_From_Cliboard(
 			aCNodeContainer.getIfNodeContainerConst() , 
 			&aCOuErrorInfoContainer ) ;
 		//iResult = 
-		//	-22 ; // Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
-		//	-32 ; // Ekikibo ‚Ì’l‚ª•s³‚Å‚·B 
+		//	-22 ; // Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+		//	-32 ; // Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚ 
 		if ( iRv < 0 )
 		{
-			iRv = -4 ;	//	CentDedEki ‚Ì“à—e‚ª•s³‚Å‚·B
+			iRv = -4 ;	//	CentDedEki ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 
 	// --------------------------------
-	//	Mu ‚©‚ç EkiCont ‚É•ÏŠ·
+	//	Mu ã‹ã‚‰ EkiCont ã«å¤‰æ›
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -759,7 +759,7 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_To_Cliboard(
 	int iRv = 0 ;
 
 	// --------------------------------
-	//	Mu ‚©‚ç CentDedRessyasyubetsuCont ‚É•ÏŠ·
+	//	Mu ã‹ã‚‰ CentDedRessyasyubetsuCont ã«å¤‰æ›
 	// --------------------------------
 	CentDedRessyasyubetsuCont	aRessyasyubetsuCont ;
 	if ( iRv >= 0 )
@@ -768,7 +768,7 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_To_Cliboard(
 		aCaMui.insert( pMuCentDedRessyasyubetsu ) ;
 	}
 	// --------------------------------
-	//	ƒf[ƒ^‚ğ•¶š—ñ‰»
+	//	ãƒ‡ãƒ¼ã‚¿ã‚’æ–‡å­—åˆ—åŒ–
 	// --------------------------------
 	string	strData ;
 	if ( iRv >= 0 )
@@ -779,11 +779,11 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_To_Cliboard(
 			aRessyasyubetsuCont , 
 			&aCNodeContainer ) ;
 		//iResult = 
-		//	-	-11 ;	//	Syubetsumei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-		//	-	-52 ;	//	DiagramSenStyle ‚Ì’l‚ª•s³‚Å‚·B
+		//	-	-11 ;	//	Syubetsumei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+		//	-	-52 ;	//	DiagramSenStyle ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		if ( iRv < 0 )
 		{
-			iRv = -1 ;	//	CentDedRessyasyubetsuCont ‚Ì“à—e‚ª•s³‚Å‚·B
+			iRv = -1 ;	//	CentDedRessyasyubetsuCont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 		}
 		else
 		{
@@ -791,13 +791,13 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_To_Cliboard(
 			strData = aCConvNodeContainer.encode( &aCNodeContainer ) ;
 			if ( strData.length() == 0 )
 			{
-				iRv = -1 ;	//	CentDedRessyasyubetsu ‚Ì“à—e‚ª•s³‚Å‚·B
+				iRv = -1 ;	//	CentDedRessyasyubetsu ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 			}
 		}
 	}
-	//strData = CentDedRessyasyubetsu ‚Ì“à—e	return iRv ;
+	//strData = CentDedRessyasyubetsu ã®å†…å®¹	return iRv ;
 	// --------------------------------
-	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ì“]‘—
+	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®è»¢é€
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -807,7 +807,7 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_To_Cliboard(
 			strData ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -11 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ìƒf[ƒ^İ’è‚ª¸”s
+			iRv = -11 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®ãƒ‡ãƒ¼ã‚¿è¨­å®šãŒå¤±æ•—
 		}
 	}
 	return iRv ;
@@ -818,14 +818,14 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_From_Cliboard(
 {
 	int iRv = 0 ;
 	// --------------------------------
-	//	ƒNƒŠƒbƒvƒ{[ƒh‚©‚çƒf[ƒ^‚ğæ“¾
+	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—
 	// --------------------------------
 	string	strData ;
 	if ( iRv >= 0 )
 	{	
 		if (!IsClipboardFormatAvailable(getCF_CentDedRessyasyubetsu())) 
 		{
-			iRv = -1 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚É‚Í—LŒø‚Èƒf[ƒ^‚Í‚ ‚è‚Ü‚¹‚ñB
+			iRv = -1 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã¯æœ‰åŠ¹ãªãƒ‡ãƒ¼ã‚¿ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
 	if ( iRv >= 0 )
@@ -836,12 +836,12 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_From_Cliboard(
 			&strData ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -2 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚©‚ç‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B	
+			iRv = -2 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚	
 		}
 	}
-	//strData = CentDedEki ‚Ì“à—e
+	//strData = CentDedEki ã®å†…å®¹
 	// --------------------------------
-	//	•¶š—ñ‚©‚ç—ñÔí•Êƒf[ƒ^‚ğì¬
+	//	æ–‡å­—åˆ—ã‹ã‚‰åˆ—è»Šç¨®åˆ¥ãƒ‡ãƒ¼ã‚¿ã‚’ä½œæˆ
 	// --------------------------------
 	CNodeContainer aCNodeContainer ;
 	if ( iRv >= 0 )
@@ -852,7 +852,7 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_From_Cliboard(
 			&aCNodeContainer ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -3 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ì“à—e‚ª•s³‚Å‚·B
+			iRv = -3 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	CentDedRessyasyubetsuCont	aCentDedRessyasyubetsuCont ;
@@ -865,16 +865,16 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_From_Cliboard(
 			aCNodeContainer.getIfNodeContainerConst() , 
 			&aCOuErrorInfoContainer ) ;
 		//iResult = 
-		//-	-11 ;	//	Syubetsumei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-		//-	-52 ;	//	DiagramSenStyle ‚Ì’l‚ª•s³‚Å‚·B
-		//-	-101 ;	//	’l‚ÌŒ`®‚ª³‚µ‚­‚ ‚è‚Ü‚¹‚ñB
+		//-	-11 ;	//	Syubetsumei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+		//-	-52 ;	//	DiagramSenStyle ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+		//-	-101 ;	//	å€¤ã®å½¢å¼ãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ã€‚
 		if ( iRv < 0 )
 		{
-			iRv = -4 ;	//	CentDedEki ‚Ì“à—e‚ª•s³‚Å‚·B
+			iRv = -4 ;	//	CentDedEki ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	// --------------------------------
-	//	Mu ‚©‚ç EkiCont ‚É•ÏŠ·
+	//	Mu ã‹ã‚‰ EkiCont ã«å¤‰æ›
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -903,7 +903,7 @@ int CDiagramEditDoc::CentDedRessyaCont_To_Cliboard(
 	int iRv = 0 ;
 
 	// --------------------------------
-	//	ƒf[ƒ^‚ğ•¶š—ñ‰»
+	//	ãƒ‡ãƒ¼ã‚¿ã‚’æ–‡å­—åˆ—åŒ–
 	// --------------------------------
 	string	strData ;
 	if ( iRv >= 0 )
@@ -915,7 +915,7 @@ int CDiagramEditDoc::CentDedRessyaCont_To_Cliboard(
 			&aCNodeContainer ) ;
 		if ( iRv < 0 )
 		{
-			iRv = -1 ;	//	aCentDedRessyaCont ‚Ì“à—e‚ª•s³‚Å‚·B
+			iRv = -1 ;	//	aCentDedRessyaCont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 		}
 		else
 		{
@@ -923,14 +923,14 @@ int CDiagramEditDoc::CentDedRessyaCont_To_Cliboard(
 			strData = aCConvNodeContainer.encode( &aCNodeContainer ) ;
 			if ( strData.length() == 0 )
 			{
-				iRv = -1 ;	//	aCentDedRessyaCont ‚Ì“à—e‚ª•s³‚Å‚·B
+				iRv = -1 ;	//	aCentDedRessyaCont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 			}
 		}
 	}
-	//string = aCentDedRessyaCont ‚Ì“à—e
+	//string = aCentDedRessyaCont ã®å†…å®¹
 
 	// --------------------------------
-	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ì“]‘—
+	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®è»¢é€
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -940,7 +940,7 @@ int CDiagramEditDoc::CentDedRessyaCont_To_Cliboard(
 			strData ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -11 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ö‚Ìƒf[ƒ^İ’è‚ª¸”s
+			iRv = -11 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã¸ã®ãƒ‡ãƒ¼ã‚¿è¨­å®šãŒå¤±æ•—
 		}
 	}
 	// --------------------------------
@@ -952,12 +952,12 @@ int CDiagramEditDoc::CentDedRessyaCont_From_Cliboard(
 {
 	int iRv = 0 ;
 	// --------------------------------
-	//	ƒNƒŠƒbƒvƒ{[ƒh‚©‚çƒf[ƒ^‚ğæ“¾
+	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—
 	// --------------------------------
 	string	strData ;
 	if ( iRv >= 0 ){	
 		if (!IsClipboardFormatAvailable(getCF_CentDedRessyaCont())) {
-			iRv = -1 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚É‚Í—LŒø‚Èƒf[ƒ^‚Í‚ ‚è‚Ü‚¹‚ñB
+			iRv = -1 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«ã¯æœ‰åŠ¹ãªãƒ‡ãƒ¼ã‚¿ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
 	if ( iRv >= 0 )
@@ -968,12 +968,12 @@ int CDiagramEditDoc::CentDedRessyaCont_From_Cliboard(
 			&strData ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -2 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚©‚ç‚Ì“Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B	
+			iRv = -2 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‹ã‚‰ã®èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚	
 		}
 	}
-	//strData = CentDedRessyaCont ‚Ì“à—e
+	//strData = CentDedRessyaCont ã®å†…å®¹
 	// --------------------------------
-	//	•¶š—ñ‚©‚ç—ñÔƒf[ƒ^‚ğì¬
+	//	æ–‡å­—åˆ—ã‹ã‚‰åˆ—è»Šãƒ‡ãƒ¼ã‚¿ã‚’ä½œæˆ
 	// --------------------------------
 	CNodeContainer aCNodeContainer ;
 	if ( iRv >= 0 )
@@ -984,7 +984,7 @@ int CDiagramEditDoc::CentDedRessyaCont_From_Cliboard(
 			&aCNodeContainer ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -3 ;	//	ƒNƒŠƒbƒvƒ{[ƒh‚Ì“à—e‚ª•s³‚Å‚·B
+			iRv = -3 ;	//	ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 
@@ -998,10 +998,10 @@ int CDiagramEditDoc::CentDedRessyaCont_From_Cliboard(
 			&aCOuErrorInfoContainer ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -4 ;	//	CentDedRessyaCont ‚Ì“à—e‚ª•s³‚Å‚·B
+			iRv = -4 ;	//	CentDedRessyaCont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
-	//pCentDedRessyaCont = CentDedRessyaCont ‚Ì“à—e
+	//pCentDedRessyaCont = CentDedRessyaCont ã®å†…å®¹
 
 	// --------------------------------
 	return ( iRv ) ;
@@ -1012,20 +1012,20 @@ bool CDiagramEditDoc::CentDedRessyaCont_IsClipboardFormatAvailable()
 	return ( IsClipboardFormatAvailable( getCF_CentDedRessyaCont() ) != 0 );
 }
 	// ********************************
-	//@name ‘€ì
+	//@name æ“ä½œ
 	// ********************************
 int CDiagramEditDoc::executeEditCmd( Ou< CRfEditCmd > pCmd ) 
 {
 	int iRv = 0 ;
 	// --------------------------------
-	//	ƒRƒ}ƒ“ƒh‚ğÀs
+	//	ã‚³ãƒãƒ³ãƒ‰ã‚’å®Ÿè¡Œ
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
 		iRv = pCmd->execute( &m_CDedRosenFileData ) ;
 	}
 	// --------------------------------
-	//	ƒrƒ…[‚ÌXV
+	//	ãƒ“ãƒ¥ãƒ¼ã®æ›´æ–°
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -1033,8 +1033,8 @@ int CDiagramEditDoc::executeEditCmd( Ou< CRfEditCmd > pCmd )
 			&CRfEditCmdHolder( pCmd ) ) ;
 	}
 	// --------------------------------
-	//	Undo,RedoŠÖŒW“à•”ƒf[ƒ^ ‚ğXV
-	//	Undoî•ñ‚Ì•Û‘¶/Redoî•ñ‚ÍƒNƒŠƒA
+	//	Undo,Redoé–¢ä¿‚å†…éƒ¨ãƒ‡ãƒ¼ã‚¿ ã‚’æ›´æ–°
+	//	Undoæƒ…å ±ã®ä¿å­˜/Redoæƒ…å ±ã¯ã‚¯ãƒªã‚¢
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -1059,7 +1059,7 @@ int CDiagramEditDoc::executeEditCmd( Ou< CRfEditCmd > pCmd )
 		}
 	}
 	// --------------------------------
-	//	ModifiedFlag ‚ğXV
+	//	ModifiedFlag ã‚’æ›´æ–°
 	// --------------------------------
 	SetModifiedFlag( m_iModifyCountFromDoc != 0 ) ;
 
@@ -1078,42 +1078,42 @@ int CDiagramEditDoc::undo()
 
 	Ou< CRfEditCmd >	pCmd ;
 	// --------------------------------
-	//	ƒRƒ}ƒ“ƒh‚ğƒLƒ…[‚©‚çæ“¾
+	//	ã‚³ãƒãƒ³ãƒ‰ã‚’ã‚­ãƒ¥ãƒ¼ã‹ã‚‰å–å¾—
 	// --------------------------------
 	if ( iRv >= 0 ){
 		if ( m_contUndo.size() >= 1 ){
 			pCmd = m_contUndo.get( INT_MAX ) ;
 		}	else	{
-			iRv = -1 ;	//	undo î•ñ‚ª‚ ‚è‚Ü‚¹‚ñB
+			iRv = -1 ;	//	undo æƒ…å ±ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
-	//pcmdUndo = undo ‚Ì‚½‚ß‚ÌƒRƒ}ƒ“ƒh
+	//pcmdUndo = undo ã®ãŸã‚ã®ã‚³ãƒãƒ³ãƒ‰
 	// --------------------------------
-	//	ƒRƒ}ƒ“ƒh‚ğÀs
+	//	ã‚³ãƒãƒ³ãƒ‰ã‚’å®Ÿè¡Œ
 	// --------------------------------
 	Ou< CRfEditCmd >	pUndoCmd ;
 	if ( iRv >= 0 ){
 		pUndoCmd = pCmd->createUndoCmd() ;
 		if ( pUndoCmd == NULL ){
-			iRv = -2 ;	//	undo ‚ÌÀs‚É¸”s
+			iRv = -2 ;	//	undo ã®å®Ÿè¡Œã«å¤±æ•—
 		}
 	}
 	if ( iRv >= 0 ){
 		int iResult  = pUndoCmd->execute( &m_CDedRosenFileData ) ;
 		if ( iResult < 0 ){
-			iRv = -2 ;	//	undo ‚ÌÀs‚É¸”s
+			iRv = -2 ;	//	undo ã®å®Ÿè¡Œã«å¤±æ•—
 		}
 	}
 	// --------------------------------
-	//	ƒrƒ…[‚ÌXV
+	//	ãƒ“ãƒ¥ãƒ¼ã®æ›´æ–°
 	// --------------------------------
 	if ( iRv >= 0 ){
 		UpdateAllSubDocviews( NULL , 0 , 
 			&CRfEditCmdHolder( pUndoCmd ) ) ;
 	}
 	// --------------------------------
-	//	Undo,RedoŠÖŒW“à•”ƒf[ƒ^ ‚ğXV
-	//	Undoî•ñ‚ğRedoî•ñ‚ÉˆÚ“®
+	//	Undo,Redoé–¢ä¿‚å†…éƒ¨ãƒ‡ãƒ¼ã‚¿ ã‚’æ›´æ–°
+	//	Undoæƒ…å ±ã‚’Redoæƒ…å ±ã«ç§»å‹•
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -1127,7 +1127,7 @@ int CDiagramEditDoc::undo()
 	}
 
 	// --------------------------------
-	//	ModifiedFlag ‚ğXV
+	//	ModifiedFlag ã‚’æ›´æ–°
 	// --------------------------------
 	SetModifiedFlag( m_iModifyCountFromDoc != 0 ) ;
 	LogMsg( "CDiagramEditDoc::undo()=" ) ;
@@ -1148,36 +1148,36 @@ int CDiagramEditDoc::redo()
 
 	Ou< CRfEditCmd >	pCmd ;
 	// --------------------------------
-	//	ƒRƒ}ƒ“ƒh‚ğƒLƒ…[‚©‚çæ“¾
+	//	ã‚³ãƒãƒ³ãƒ‰ã‚’ã‚­ãƒ¥ãƒ¼ã‹ã‚‰å–å¾—
 	// --------------------------------
 	if ( iRv >= 0 ){
 		if ( m_contRedo.size() >= 1 ){
 			pCmd = m_contRedo.get( INT_MAX ) ;
 		}	else	{
-			iRv = -1 ;	//	redo î•ñ‚ª‚ ‚è‚Ü‚¹‚ñB
+			iRv = -1 ;	//	redo æƒ…å ±ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
-	//pcmdUndo = undo ‚Ì‚½‚ß‚ÌƒRƒ}ƒ“ƒh
+	//pcmdUndo = undo ã®ãŸã‚ã®ã‚³ãƒãƒ³ãƒ‰
 	// --------------------------------
-	//	ƒRƒ}ƒ“ƒh‚ğÀs
+	//	ã‚³ãƒãƒ³ãƒ‰ã‚’å®Ÿè¡Œ
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
 		int iResult  = pCmd->execute( &m_CDedRosenFileData ) ;
 		if ( iResult < 0 ){
-			iRv = -2 ;	//	redo ‚ÌÀs‚É¸”s
+			iRv = -2 ;	//	redo ã®å®Ÿè¡Œã«å¤±æ•—
 		}
 	}
 	// --------------------------------
-	//	ƒrƒ…[‚ÌXV
+	//	ãƒ“ãƒ¥ãƒ¼ã®æ›´æ–°
 	// --------------------------------
 	if ( iRv >= 0 ){
 		UpdateAllSubDocviews( NULL , 0 , 
 			&CRfEditCmdHolder( pCmd ) ) ;
 	}
 	// --------------------------------
-	//	Undo,RedoŠÖŒW“à•”ƒf[ƒ^ ‚ğXV
-	//	Redoî•ñ‚ğUndoî•ñ‚ÉˆÚ“®
+	//	Undo,Redoé–¢ä¿‚å†…éƒ¨ãƒ‡ãƒ¼ã‚¿ ã‚’æ›´æ–°
+	//	Redoæƒ…å ±ã‚’Undoæƒ…å ±ã«ç§»å‹•
 	// --------------------------------
 	if ( iRv >= 0 ){
 		m_contRedo.erase( INT_MAX ) ;
@@ -1190,7 +1190,7 @@ int CDiagramEditDoc::redo()
 	}
 
 	// --------------------------------
-	//	ModifiedFlag ‚ğXV
+	//	ModifiedFlag ã‚’æ›´æ–°
 	// --------------------------------
 	SetModifiedFlag( m_iModifyCountFromDoc != 0 ) ;
 
@@ -1217,7 +1217,7 @@ BEGIN_MESSAGE_MAP(CDiagramEditDoc, CHidemdiRootDoc)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CDiagramEditDoc ƒNƒ‰ƒX‚Ì\’z/Á–Å
+// CDiagramEditDoc ã‚¯ãƒ©ã‚¹ã®æ§‹ç¯‰/æ¶ˆæ»…
 
 CDiagramEditDoc::CDiagramEditDoc()
 	: m_iModifyCountFromDoc( 0 ) 
@@ -1234,8 +1234,8 @@ BOOL CDiagramEditDoc::OnNewDocument()
 	if (!CHidemdiRootDoc::OnNewDocument())
 		return FALSE;
 
-	// TODO: ‚±‚ÌˆÊ’u‚ÉÄ‰Šú‰»ˆ—‚ğ’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢B
-	// (SDI ƒhƒLƒ…ƒƒ“ƒg‚Í‚±‚ÌƒhƒLƒ…ƒƒ“ƒg‚ğÄ—˜—p‚µ‚Ü‚·B)
+	// TODO: ã“ã®ä½ç½®ã«å†åˆæœŸåŒ–å‡¦ç†ã‚’è¿½åŠ ã—ã¦ãã ã•ã„ã€‚
+	// (SDI ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã¯ã“ã®ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã‚’å†åˆ©ç”¨ã—ã¾ã™ã€‚)
 
 	return TRUE;
 }
@@ -1244,7 +1244,7 @@ BOOL CDiagramEditDoc::OnNewDocument()
 
 
 /////////////////////////////////////////////////////////////////////////////
-// CDiagramEditDoc ƒNƒ‰ƒX‚Ìf’f
+// CDiagramEditDoc ã‚¯ãƒ©ã‚¹ã®è¨ºæ–­
 
 #ifdef _DEBUG
 void CDiagramEditDoc::AssertValid() const
@@ -1259,20 +1259,20 @@ void CDiagramEditDoc::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 /////////////////////////////////////////////////////////////////////////////
-// CDiagramEditDoc ƒRƒ}ƒ“ƒh
+// CDiagramEditDoc ã‚³ãƒãƒ³ãƒ‰
 
 void CDiagramEditDoc::DeleteContents() 
 {
 	m_CDedRosenFileData.clear() ;
 	// --------------------------------
-	//	Undo,RedoŠÖŒW“à•”ƒf[ƒ^ ‚ğXV
+	//	Undo,Redoé–¢ä¿‚å†…éƒ¨ãƒ‡ãƒ¼ã‚¿ ã‚’æ›´æ–°
 	// --------------------------------
 	m_contUndo.erase( 0 , INT_MAX ) ;
 	m_contRedo.erase( 0 , INT_MAX ) ;
 	m_iModifyCountFromDoc = 0 ;
 
 	// --------------------------------
-	//	˜Hüƒrƒ…[‚ğXV
+	//	è·¯ç·šãƒ“ãƒ¥ãƒ¼ã‚’æ›´æ–°
 	// --------------------------------
 	getCDiagramEditApp()->getCDlgRosenView()->OnUpdate( NULL , 0 , NULL ) ;
 	// --------------------------------
@@ -1307,7 +1307,7 @@ int CDiagramEditDoc::OnOpenDocument_ConvFile(
 					pIfConvFile = aCConvFileDll.getIfConvFile() ;
 				}
 			}
-			//aCConvFileDll = DLL‚ğƒ[ƒh‚µ‚Ü‚µ‚½B
+			//aCConvFileDll = DLLã‚’ãƒ­ãƒ¼ãƒ‰ã—ã¾ã—ãŸã€‚
 	
 			LogMsg( "CDiagramEditDoc::OnOpenDocument()31" ) ;
 			if ( iRv >= 0 )
@@ -1318,7 +1318,7 @@ int CDiagramEditDoc::OnOpenDocument_ConvFile(
 				LogMsg( "CDiagramEditDoc::OnOpenDocument()32" ) ;
 				if ( iResult >= 0 )
 				{
-					//	FileFormat ‚ªA‚±‚ÌDLL‚Å‚ ‚é‚±‚Æ‚ªŠm”F‚Å‚«‚Ü‚µ‚½B
+					//	FileFormat ãŒã€ã“ã®DLLã§ã‚ã‚‹ã“ã¨ãŒç¢ºèªã§ãã¾ã—ãŸã€‚
 					string strErrorInfoString ;
 					int iResult = pIfConvFile->LeftToRight( 
 						&CaByteBuffer_vector< std::vector< char > >( pbinFileContent ) , 
@@ -1339,12 +1339,12 @@ int CDiagramEditDoc::OnOpenDocument_ConvFile(
 							strError += strErrorInfoString.c_str() ;
 							strError += "\n" ;
 						}
-						iRv = -102 ;	//	ƒtƒ@ƒCƒ‹‚Ì•ÏŠ·‚É¸”s‚µ‚Ü‚µ‚½B
+						iRv = -102 ;	//	ãƒ•ã‚¡ã‚¤ãƒ«ã®å¤‰æ›ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
 					}
 				}
 				else	
 				{
-					iRv = -1 ;	//‚±‚ÌDLL‚ªƒTƒ|[ƒg‚·‚éƒtƒ@ƒCƒ‹Œ`®‚Å‚Í‚ ‚è‚Ü‚¹‚ñ‚Å‚µ‚½B
+					iRv = -1 ;	//ã“ã®DLLãŒã‚µãƒãƒ¼ãƒˆã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«å½¢å¼ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚
 				}
 			}
 			LogMsg( "CDiagramEditDoc::OnOpenDocument()33" ) ;
@@ -1363,14 +1363,14 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 	CWaitCursor	aCWaitCursor ;
 
 	LogMsg( "CDiagramEditDoc::OnOpenDocument(%s)" , lpszPathName ) ;
-	//	Serialize ‚Íg‚¢‚Ü‚¹‚ñB
+	//	Serialize ã¯ä½¿ã„ã¾ã›ã‚“ã€‚
 	//
 	//if (!CHidemdiRootDoc::OnOpenDocument(lpszPathName))
 	//	return FALSE;
 
 	// --------------------------------
-	//	Šg’£q‚ª .dia ‚È‚çA
-	//	WinDIA ‚Ìˆ—
+	//	æ‹¡å¼µå­ãŒ .dia ãªã‚‰ã€
+	//	WinDIA ã®å‡¦ç†
 	// --------------------------------
 	CdFilenameStr	aCdFilenameStr( lpszPathName ) ;
 	if ( stricmp( "dia" , aCdFilenameStr.Extension().c_str() ) == 0 )
@@ -1382,37 +1382,37 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 	CString	strError ;
 
 	// --------------------------------
-	//	ƒtƒ@ƒCƒ‹‚Ì“à—e‚ğAstring‚É•Û‘¶
+	//	ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã‚’ã€stringã«ä¿å­˜
 	// --------------------------------
 	string	strFile ;
 	if ( iRv >= 0 )
 	{
 		int iResult = stringFromFile( &strFile , lpszPathName ) ;
 		//iResult = 
-		//	-1: ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-		//	-2 ; “Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B
-		//	-3 ; ƒtƒ@ƒCƒ‹‚É‚Í "\0" ‚ªŠÜ‚Ü‚ê‚Ü‚·(ƒoƒCƒiƒŠƒtƒ@ƒCƒ‹‚Å‚ ‚é‚Æ 
-		//	v‚í‚ê‚Ü‚·)B
-		//	 ‚±‚Ìê‡ApString ‚É‚ÍA "\0" ‚Ì’¼‘O‚Ü‚Å‚Ìƒf[ƒ^‚ªŠi”[‚³‚ê‚Ä 
-		//	‚¢‚Ü‚·B 
+		//	-1: ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+		//	-2 ; èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
+		//	-3 ; ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¯ "\0" ãŒå«ã¾ã‚Œã¾ã™(ãƒã‚¤ãƒŠãƒªãƒ•ã‚¡ã‚¤ãƒ«ã§ã‚ã‚‹ã¨ 
+		//	æ€ã‚ã‚Œã¾ã™)ã€‚
+		//	 ã“ã®å ´åˆã€pString ã«ã¯ã€ "\0" ã®ç›´å‰ã¾ã§ã®ãƒ‡ãƒ¼ã‚¿ãŒæ ¼ç´ã•ã‚Œã¦ 
+		//	ã„ã¾ã™ã€‚ 
 		if ( iResult < 0 ){
 			iRv = iResult ;
 			switch( iResult ){
-			 case -1 :	// ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
+			 case -1 :	// ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILENOTFOUND ) ;
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
-			 case -2 :	//; “Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B
+			 case -2 :	//; èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEREAD ) ;
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
-			 case -3 :	// ƒtƒ@ƒCƒ‹‚É‚Í "\0" ‚ªŠÜ‚Ü‚ê‚Ü‚·
+			 case -3 :	// ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¯ "\0" ãŒå«ã¾ã‚Œã¾ã™
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEFORMAT ) ;
@@ -1421,20 +1421,20 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 				break ;
 			}
 			//iRv = 
-			//	-1: ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-			//	-2 ; “Ç‚İ‚İ‚É¸”s‚µ‚Ü‚µ‚½B
-			//	-3 ; ƒtƒ@ƒCƒ‹‚É‚Í "\0" ‚ªŠÜ‚Ü‚ê‚Ü‚·(ƒoƒCƒiƒŠƒtƒ@ƒCƒ‹‚Å‚ ‚é‚Æ 
-			//	v‚í‚ê‚Ü‚·)B
-			//	 ‚±‚Ìê‡ApString ‚É‚ÍA "\0" ‚Ì’¼‘O‚Ü‚Å‚Ìƒf[ƒ^‚ªŠi”[‚³‚ê‚Ä 
-			//	‚¢‚Ü‚·B 
+			//	-1: ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+			//	-2 ; èª­ã¿è¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
+			//	-3 ; ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¯ "\0" ãŒå«ã¾ã‚Œã¾ã™(ãƒã‚¤ãƒŠãƒªãƒ•ã‚¡ã‚¤ãƒ«ã§ã‚ã‚‹ã¨ 
+			//	æ€ã‚ã‚Œã¾ã™)ã€‚
+			//	 ã“ã®å ´åˆã€pString ã«ã¯ã€ "\0" ã®ç›´å‰ã¾ã§ã®ãƒ‡ãƒ¼ã‚¿ãŒæ ¼ç´ã•ã‚Œã¦ 
+			//	ã„ã¾ã™ã€‚ 
 		}
 	}
-	//strFile = ƒtƒ@ƒCƒ‹‚Ì“à—e
+	//strFile = ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹
 
 	string strOudFile = strFile ;
-	//strOudFile = ƒtƒ@ƒCƒ‹‚Ì“à—e‚ğ•Û‚µ‚Ü‚·B
-	//	’A‚µA‚±‚Ìƒtƒ@ƒCƒ‹‚ÌƒtƒH[ƒ}ƒbƒg‚ªŒÃ‚¢ê‡‚ÍA
-	//	¡Œã‚Ìˆ—‚Å“à—e‚ª‘ã‚í‚è‚Ü‚·B
+	//strOudFile = ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã‚’ä¿æŒã—ã¾ã™ã€‚
+	//	ä½†ã—ã€ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆãŒå¤ã„å ´åˆã¯ã€
+	//	ä»Šå¾Œã®å‡¦ç†ã§å†…å®¹ãŒä»£ã‚ã‚Šã¾ã™ã€‚
 
 
 	LogMsg( "CDiagramEditDoc::OnOpenDocument()1" ) ;
@@ -1442,8 +1442,8 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 
 
 	// --------------------------------
-	//	ƒtƒ@ƒCƒ‹‚ª‰ğß•s”\‚Ìê‡‚Í
-	//	•ÏŠ·‚ğ‚İ‚Ü‚·B
+	//	ãƒ•ã‚¡ã‚¤ãƒ«ãŒè§£é‡ˆä¸èƒ½ã®å ´åˆã¯
+	//	å¤‰æ›ã‚’è©¦ã¿ã¾ã™ã€‚
 	// --------------------------------
 	CconvCDedRosenFileData	aConv ;
 	if ( iRv >= 0 && aConv.isEncodeAbleFormat( strOudFile ) < 0 )
@@ -1457,15 +1457,15 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		LogMsg( "CDiagramEditDoc::OnOpenDocument()3" ) ;
 
 		// --------------------------------
-		//	ƒtƒ@ƒCƒ‹•ÏŠ·‚ğ‡ŸÀs
+		//	ãƒ•ã‚¡ã‚¤ãƒ«å¤‰æ›ã‚’é †æ¬¡å®Ÿè¡Œ
 		// --------------------------------
 		const TCHAR* const arstrConvFileDllFilename[] = 
 		{
-			_T("ConvFileOudia02To03.dll" ),		//	Ver01,Ver02 ¨ Ver03 ‚É•ÏŠ·
-			_T(  "ConvFileOudia03To05.dll"  ) , //	Ver03 ¨ Ver05 ‚É•ÏŠ·
-			_T( "ConvFileOudia05To06.dll"  ) ,	//	Ver05 ¨ Ver06 ‚É•ÏŠ·
-			_T( "ConvFileOudia06To101.dll" ) ,	//	Ver06 ¨ Ver1.01 ‚É•ÏŠ·
-			_T( "ConvFileOudia101To102.dll" ) ,	//	Ver1.01 ¨ Ver1.02 ‚É•ÏŠ·
+			_T("ConvFileOudia02To03.dll" ),		//	Ver01,Ver02 â†’ Ver03 ã«å¤‰æ›
+			_T(  "ConvFileOudia03To05.dll"  ) , //	Ver03 â†’ Ver05 ã«å¤‰æ›
+			_T( "ConvFileOudia05To06.dll"  ) ,	//	Ver05 â†’ Ver06 ã«å¤‰æ›
+			_T( "ConvFileOudia06To101.dll" ) ,	//	Ver06 â†’ Ver1.01 ã«å¤‰æ›
+			_T( "ConvFileOudia101To102.dll" ) ,	//	Ver1.01 â†’ Ver1.02 ã«å¤‰æ›
  		};
 		for ( int idx = 0 ;
 			iRv >= 0 && idx < sizeof(arstrConvFileDllFilename)/sizeof(arstrConvFileDllFilename[0]);
@@ -1477,9 +1477,9 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 				&strError ) ;
 			if ( iRv == -1 )
 			{
-				//	ƒtƒH[ƒ}ƒbƒg‚ª”F¯‚Å‚«‚È‚¢ê‡‚ÍA
-				//	‘¼‚ÌƒtƒH[ƒ}ƒbƒg•ÏŠ·‚ğs‚·‚é‚½‚ßA
-				//	ƒGƒ‰[‚É‚Í‚µ‚Ü‚¹‚ñB
+				//	ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆãŒèªè­˜ã§ããªã„å ´åˆã¯ã€
+				//	ä»–ã®ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆå¤‰æ›ã‚’è©¦è¡Œã™ã‚‹ãŸã‚ã€
+				//	ã‚¨ãƒ©ãƒ¼ã«ã¯ã—ã¾ã›ã‚“ã€‚
 				iRv = 0 ;	
 			}
 			else
@@ -1493,9 +1493,9 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		{
 			strError.Format( MfcUtil::LoadCString( IDS_ERR_FILEFORMAT ) , 
 					lpszPathName ) ;
-			iRv = -31 ;	// FileType‚ª”F¯‚Å‚«‚Ü‚¹‚ñB
+			iRv = -31 ;	// FileTypeãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚
 				//iRv = 
-				//	-31 ; // FileType‚ª”F¯‚Å‚«‚Ü‚¹‚ñB
+				//	-31 ; // FileTypeãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚
 		}
 		if ( iRv >= 0 )
 		{
@@ -1503,12 +1503,12 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		}
 		LogMsg( "CDiagramEditDoc::OnOpenDocument()101" ) ;
 	}
-	//strOudFile = ‹Œƒo[ƒWƒ‡ƒ“ƒtƒ@ƒCƒ‹‚©‚ç•ÏŠ·Œã‚Ì“à—e‚É•Ï‚í‚è‚Ü‚µ‚½B
+	//strOudFile = æ—§ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰å¤‰æ›å¾Œã®å†…å®¹ã«å¤‰ã‚ã‚Šã¾ã—ãŸã€‚
 
 	// --------------------------------
 	//	CDedRosenFileData
-	//	ƒJƒŒƒ“ƒgƒo[ƒWƒ‡ƒ“ƒtƒ@ƒCƒ‹
-	//	aString ƒtƒ@ƒCƒ‹‚Ì“à—e‚ğ‰ğß‚µ‚Ü‚·B
+	//	ã‚«ãƒ¬ãƒ³ãƒˆãƒãƒ¼ã‚¸ãƒ§ãƒ³ãƒ•ã‚¡ã‚¤ãƒ«
+	//	aString ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã‚’è§£é‡ˆã—ã¾ã™ã€‚
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -1520,50 +1520,50 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 			strOudFile , 
 			&aCOuErrorInfoContainer ) ;
 		//iResult = 
-		//	-	-1 ;	//	ƒfƒBƒŒƒNƒgƒŠ‚ª“r’†‚Å•Â‚¶‚Ä‚¢‚Ü‚·B	
-		//	-	-1001 ;	//	FileType ‚ª³‚µ‚­‚ ‚è‚Ü‚¹‚ñB
-		//	-	-1002 ;	//	Rosen Directory‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
-		//	-	-1022 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
-		//	-	-1032 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
-		//	-	-1101 ;	//	Eki ‚ªƒfƒBƒŒƒNƒgƒŠ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
-		//	-	-1111 ;	//	Syubetsumei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-		//	-	-1152 ;	//	DiagramSenStyle ‚Ì’l‚ª•s³‚Å‚·B
-		//	-	-1201 ;	//	Ressyasyubetsu ‚ªƒfƒBƒŒƒNƒgƒŠ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
-		//	-	-1211 ;	//	DiaName ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-		//	-	-1212 ;	//	RessyaCont‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
-		//	-	-1352 ;	//	‹N“_‚Ìİ’è‚ª•s“KØ‚Å‚·B
-		//	-	-1003 ;	//	DispProp Directory‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
-		//	-	-1512 ;	//	JikokuhyouFont ‚Ì“à—e‚ª•s³‚Å‚·B
-		//	-	-1522 ;	//	DiaEkimeiFont ‚Ì“à—e‚ª•s³‚Å‚·B
-		//	-	-1532 ;	//	DiaJikokuFont ‚Ì“à—e‚ª•s³‚Å‚·B
-		//	-	-1582 ;	//	DisplayRessyabangou ‚ª•s³‚Å‚·B
-		//	-	-1592 ;	//	DisplayRessyamei ‚ª•s³‚Å‚·B
-		//	-	-1602 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari ‚ª•s³‚Å‚·B
-		//	-	-1612 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori ‚ª•s³‚Å‚·B
+		//	-	-1 ;	//	ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãŒé€”ä¸­ã§é–‰ã˜ã¦ã„ã¾ã™ã€‚	
+		//	-	-1001 ;	//	FileType ãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ã€‚
+		//	-	-1002 ;	//	Rosen DirectoryãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
+		//	-	-1022 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+		//	-	-1032 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+		//	-	-1101 ;	//	Eki ãŒãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
+		//	-	-1111 ;	//	Syubetsumei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+		//	-	-1152 ;	//	DiagramSenStyle ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+		//	-	-1201 ;	//	Ressyasyubetsu ãŒãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
+		//	-	-1211 ;	//	DiaName ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+		//	-	-1212 ;	//	RessyaContãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
+		//	-	-1352 ;	//	èµ·ç‚¹æ™‚åˆ»ã®è¨­å®šãŒä¸é©åˆ‡ã§ã™ã€‚
+		//	-	-1003 ;	//	DispProp DirectoryãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
+		//	-	-1512 ;	//	JikokuhyouFont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
+		//	-	-1522 ;	//	DiaEkimeiFont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
+		//	-	-1532 ;	//	DiaJikokuFont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
+		//	-	-1582 ;	//	DisplayRessyabangou ãŒä¸æ­£ã§ã™ã€‚
+		//	-	-1592 ;	//	DisplayRessyamei ãŒä¸æ­£ã§ã™ã€‚
+		//	-	-1602 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari ãŒä¸æ­£ã§ã™ã€‚
+		//	-	-1612 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori ãŒä¸æ­£ã§ã™ã€‚
 		if ( iResult < 0 )
 		{
 			iRv = iResult ;
 			//iRv = 
-			//	-	-1 ;	//	ƒfƒBƒŒƒNƒgƒŠ‚ª“r’†‚Å•Â‚¶‚Ä‚¢‚Ü‚·B	
-			//	-	-1001 ;	//	FileType ‚ª³‚µ‚­‚ ‚è‚Ü‚¹‚ñB
-			//	-	-1002 ;	//	Rosen Directory‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
-			//	-	-1022 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
-			//	-	-1032 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
-			//	-	-1101 ;	//	Eki ‚ªƒfƒBƒŒƒNƒgƒŠ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
-			//	-	-1111 ;	//	Syubetsumei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-			//	-	-1152 ;	//	DiagramSenStyle ‚Ì’l‚ª•s³‚Å‚·B
-			//	-	-1201 ;	//	Ressyasyubetsu ‚ªƒfƒBƒŒƒNƒgƒŠ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
-			//	-	-1211 ;	//	DiaName ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-			//	-	-1212 ;	//	RessyaCont‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
-			//	-	-1352 ;	//	‹N“_‚Ìİ’è‚ª•s“KØ‚Å‚·B
-			//	-	-1003 ;	//	DispProp Directory‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
-			//	-	-1512 ;	//	JikokuhyouFont ‚Ì“à—e‚ª•s³‚Å‚·B
-			//	-	-1522 ;	//	DiaEkimeiFont ‚Ì“à—e‚ª•s³‚Å‚·B
-			//	-	-1532 ;	//	DiaJikokuFont ‚Ì“à—e‚ª•s³‚Å‚·B
-			//	-	-1582 ;	//	DisplayRessyabangou ‚ª•s³‚Å‚·B
-			//	-	-1592 ;	//	DisplayRessyamei ‚ª•s³‚Å‚·B
-			//	-	-1602 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari ‚ª•s³‚Å‚·B
-			//	-	-1612 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori ‚ª•s³‚Å‚·B
+			//	-	-1 ;	//	ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãŒé€”ä¸­ã§é–‰ã˜ã¦ã„ã¾ã™ã€‚	
+			//	-	-1001 ;	//	FileType ãŒæ­£ã—ãã‚ã‚Šã¾ã›ã‚“ã€‚
+			//	-	-1002 ;	//	Rosen DirectoryãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
+			//	-	-1022 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+			//	-	-1032 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+			//	-	-1101 ;	//	Eki ãŒãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
+			//	-	-1111 ;	//	Syubetsumei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+			//	-	-1152 ;	//	DiagramSenStyle ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+			//	-	-1201 ;	//	Ressyasyubetsu ãŒãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
+			//	-	-1211 ;	//	DiaName ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+			//	-	-1212 ;	//	RessyaContãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
+			//	-	-1352 ;	//	èµ·ç‚¹æ™‚åˆ»ã®è¨­å®šãŒä¸é©åˆ‡ã§ã™ã€‚
+			//	-	-1003 ;	//	DispProp DirectoryãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
+			//	-	-1512 ;	//	JikokuhyouFont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
+			//	-	-1522 ;	//	DiaEkimeiFont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
+			//	-	-1532 ;	//	DiaJikokuFont ã®å†…å®¹ãŒä¸æ­£ã§ã™ã€‚
+			//	-	-1582 ;	//	DisplayRessyabangou ãŒä¸æ­£ã§ã™ã€‚
+			//	-	-1592 ;	//	DisplayRessyamei ãŒä¸æ­£ã§ã™ã€‚
+			//	-	-1602 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari ãŒä¸æ­£ã§ã™ã€‚
+			//	-	-1612 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori ãŒä¸æ­£ã§ã™ã€‚
 
 			{
 				CString	strFmt ;
@@ -1589,17 +1589,17 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 
 
 	// --------------------------------
-	//	˜Hüƒrƒ…[‚ğXV
+	//	è·¯ç·šãƒ“ãƒ¥ãƒ¼ã‚’æ›´æ–°
 	// --------------------------------
 	getCDiagramEditApp()->getCDlgRosenView()->OnUpdate( NULL , 0 , NULL ) ;
 	// --------------------------------
-	//	ƒGƒ‰[ƒƒbƒZ[ƒW‚Ì•\¦
+	//	ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®è¡¨ç¤º
 	// --------------------------------
 	LogMsg( "CDiagramEditDoc::OnOpenDocument()=%d" , iRv ) ;
 	if ( iRv < 0 )
 	{
 		string strFileTypeAppComment ;
-		//	strFileTypeAppComment ‚ğæ“¾
+		//	strFileTypeAppComment ã‚’å–å¾—
 		CNodeContainer aCNodeContainer ;
 		CConvNodeContainer aCConvNodeContainer ;
 		int iResult = aCConvNodeContainer.decode( 
@@ -1609,7 +1609,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		{
 			strFileTypeAppComment = aCNodeContainer.getValue( nameFileTypeAppComment );
 		}
-		//strFileTypeAppComment = €–Ú–¼ FileTypeAppComment ‚Ì“à—e
+		//strFileTypeAppComment = é …ç›®å FileTypeAppComment ã®å†…å®¹
 
 		
 		if ( strError.IsEmpty() )
@@ -1639,14 +1639,14 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 
 	
 	LogMsg( "CDiagramEditDoc::OnSaveDocument(%s)" , lpszPathName ) ;
-	//Serialize() ‚Íg‚¢‚Ü‚¹‚ñB
+	//Serialize() ã¯ä½¿ã„ã¾ã›ã‚“ã€‚
 	//
 	//return CHidemdiRootDoc::OnSaveDocument(lpszPathName);
 
 
 	// --------------------------------
-	//	Šg’£q‚ª .dia ‚È‚çA
-	//	WinDIA ‚Ìˆ—
+	//	æ‹¡å¼µå­ãŒ .dia ãªã‚‰ã€
+	//	WinDIA ã®å‡¦ç†
 	// --------------------------------
 	CdFilenameStr	aCdFilenameStr( lpszPathName ) ;
 	if ( stricmp( "dia" , aCdFilenameStr.Extension().c_str() ) == 0 )
@@ -1659,7 +1659,7 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 	CString strError ;
 
 	// --------------------------------
-	//	ƒtƒ@ƒCƒ‹‚Ì“à—e‚ÌCdConnectedString2‚ğì¬
+	//	ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã®CdConnectedString2ã‚’ä½œæˆ
 	// --------------------------------
 	CNodeContainer aCNodeContainer ;
 	if ( iRv >= 0 )
@@ -1669,29 +1669,29 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 			&m_CDedRosenFileData , 
 			&aCNodeContainer ) ;
 		//iResult = 
-		//		-	-22 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
-		//		-	-32 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
-		//		-	-111 ;	//	Syubetsumei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-		//		-	-152 ;	//	DiagramSenStyle ‚Ì’l‚ª•s³‚Å‚·B
-		//		-	-212 ;	//	DiagramEkiatsukai ‚Ì’l‚ª•s³‚Å‚·B
+		//		-	-22 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+		//		-	-32 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+		//		-	-111 ;	//	Syubetsumei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+		//		-	-152 ;	//	DiagramSenStyle ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+		//		-	-212 ;	//	DiagramEkiatsukai ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		if ( iResult < 0 )
 		{
 			iRv = iResult ;
 			strError.Format( IDS_ERR_FILEFORMAT , lpszPathName ) ;
 			//iRv = 
-			//		-	-22 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
-			//		-	-32 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
-			//		-	-111 ;	//	Syubetsumei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-			//		-	-152 ;	//	DiagramSenStyle ‚Ì’l‚ª•s³‚Å‚·B
-			//		-	-212 ;	//	DiagramEkiatsukai ‚Ì’l‚ª•s³‚Å‚·B
+			//		-	-22 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+			//		-	-32 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+			//		-	-111 ;	//	Syubetsumei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+			//		-	-152 ;	//	DiagramSenStyle ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+			//		-	-212 ;	//	DiagramEkiatsukai ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}	
-	//aString = ƒtƒ@ƒCƒ‹‚É‘‚«‚Şw˜Hüƒtƒ@ƒCƒ‹xŒ`®‚Ì•¶š—ñ‚ğ•Û‚µ‚Ü‚·B
+	//aString = ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã‚€ã€è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã€å½¢å¼ã®æ–‡å­—åˆ—ã‚’ä¿æŒã—ã¾ã™ã€‚
 
 	LogMsg( "CDiagramEditDoc::OnSaveDocument()1" ) ;
 
 	// --------------------------------
-	//	FileTypeAppComment ‚ğ•t—^
+	//	FileTypeAppComment ã‚’ä»˜ä¸
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -1703,35 +1703,35 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 	}
 	
 	// --------------------------------
-	//	aCNodeContainer ‚Ì“à—e‚ğ
-	//	•¶š—ñ‚ÉŠi”[
+	//	aCNodeContainer ã®å†…å®¹ã‚’
+	//	æ–‡å­—åˆ—ã«æ ¼ç´
 	// --------------------------------
 	string aString ;
 	if ( iRv >= 0 ){
-		//	CConnectedStringCompress ‚É‚æ‚éˆ³k
+		//	CConnectedStringCompress ã«ã‚ˆã‚‹åœ§ç¸®
 		CConvNodeContainer aCConvNodeContainer ;
 		aString = aCConvNodeContainer.encode( &aCNodeContainer ) ;
 	}
-	//	aString = ƒtƒ@ƒCƒ‹‚Éo—Í‚·‚é•¶š—ñ
+	//	aString = ãƒ•ã‚¡ã‚¤ãƒ«ã«å‡ºåŠ›ã™ã‚‹æ–‡å­—åˆ—
 
 	// --------------------------------
-	//	string‚Ì“à—e‚ğAƒtƒ@ƒCƒ‹‚É‘‚«‚İ
+	//	stringã®å†…å®¹ã‚’ã€ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãè¾¼ã¿
 	// --------------------------------
 	if ( iRv >= 0 ){
 		int iResult = stringToFile( aString , lpszPathName ) ;
 		//iResult = 
-		//	-1: ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-		//	-2 ; // ‘‚«‚İ‚É¸”s‚µ‚Ü‚µ‚½B 
+		//	-1: ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+		//	-2 ; // æ›¸ãè¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚ 
 		if ( iResult < 0 ){
 			iRv = iResult ;
 			switch( iResult ){
-			 case -1 :	// ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
+			 case -1 :	// ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
 				{
 					CString	strFmt ;
 					strError.Format( IDS_ERR_FILECREATE , lpszPathName ) ;
 				}
 				break ;
-			 case -2 :	//;‘‚«‚İ‚É¸”s‚µ‚Ü‚µ‚½
+			 case -2 :	//;æ›¸ãè¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸ
 				{
 					CString	strFmt ;
 					strError.Format( IDS_ERR_FILEWRITE , lpszPathName ) ;
@@ -1739,8 +1739,8 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 				break ;
 			}
 			//iRv = 
-			//	-1: ƒtƒ@ƒCƒ‹‚ªƒI[ƒvƒ“‚Å‚«‚Ü‚¹‚ñB
-			//	-2 ; ‘‚«‚İ‚É¸”s‚µ‚Ü‚µ‚½B
+			//	-1: ãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ªãƒ¼ãƒ—ãƒ³ã§ãã¾ã›ã‚“ã€‚
+			//	-2 ; æ›¸ãè¾¼ã¿ã«å¤±æ•—ã—ã¾ã—ãŸã€‚
 		}
 	}
 
@@ -1758,12 +1758,12 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 		AfxMessageBox( strError , MB_ICONSTOP ) ; 
 		return ( FALSE ) ;
 	}
-	//	•Û‘¶‚É¬Œ÷‚µ‚½‚çA–¾¦“I‚É
-	//	•ÏXƒtƒ‰ƒO‚ğ‰ğœ‚µ‚È‚­‚Ä‚Í‚È‚è‚Ü‚¹‚ñB
+	//	ä¿å­˜ã«æˆåŠŸã—ãŸã‚‰ã€æ˜ç¤ºçš„ã«
+	//	å¤‰æ›´ãƒ•ãƒ©ã‚°ã‚’è§£é™¤ã—ãªãã¦ã¯ãªã‚Šã¾ã›ã‚“ã€‚
 
 	// --------------------------------
-	//	Undo,RedoŠÖŒW“à•”ƒf[ƒ^ ‚ğXV
-	//	Undoî•ñ‚ğRedoî•ñ‚ÉˆÚ“®
+	//	Undo,Redoé–¢ä¿‚å†…éƒ¨ãƒ‡ãƒ¼ã‚¿ ã‚’æ›´æ–°
+	//	Undoæƒ…å ±ã‚’Redoæƒ…å ±ã«ç§»å‹•
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -1771,7 +1771,7 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 	}
 
 	// --------------------------------
-	//	ModifiedFlag ‚ğXV
+	//	ModifiedFlag ã‚’æ›´æ–°
 	// --------------------------------
 	SetModifiedFlag( m_iModifyCountFromDoc != 0 ) ;
 	return TRUE;
@@ -1798,7 +1798,7 @@ void CDiagramEditDoc::OnFileSaveAs()
 
 void CDiagramEditDoc::OnUpdateFileSaveAs(CCmdUI *pCmdUI)
 {
-	//	–¼‘O‚ğ•t‚¯‚Ä•Û‘¶ ‚ÍAí—LŒø‚É‚µ‚Ü‚µ‚½B
+	//	åå‰ã‚’ä»˜ã‘ã¦ä¿å­˜ ã¯ã€å¸¸æ™‚æœ‰åŠ¹ã«ã—ã¾ã—ãŸã€‚
 	pCmdUI->Enable( TRUE ) ;
 }
 
@@ -1807,10 +1807,10 @@ void CDiagramEditDoc::SetPathName(LPCTSTR lpszPathName, BOOL bAddToMRU)
 	CdFilenameStr	aCdFilenameStr( lpszPathName ) ;
 	if ( stricmp( "dia" , aCdFilenameStr.Extension().c_str() ) == 0 )
 	{
-		//	Šg’£q .dia ‚ÍAƒhƒLƒ…ƒƒ“ƒg‚Ì—LŒø‚Èƒtƒ@ƒCƒ‹–¼‚Æ‚Í
-		//	”F‚ß‚Ü‚¹‚ñB
-		//	‚½‚¾‚µAƒhƒLƒ…ƒƒ“ƒg‚Ìƒ^ƒCƒgƒ‹‚Æ‚µ‚ÄA
-		//	Šg’£q‚ğæ‚èœ‚¢‚½åƒtƒ@ƒCƒ‹–¼‚ğİ’è‚µ‚Ü‚·B
+		//	æ‹¡å¼µå­ .dia ã¯ã€ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®æœ‰åŠ¹ãªãƒ•ã‚¡ã‚¤ãƒ«åã¨ã¯
+		//	èªã‚ã¾ã›ã‚“ã€‚
+		//	ãŸã ã—ã€ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®ã‚¿ã‚¤ãƒˆãƒ«ã¨ã—ã¦ã€
+		//	æ‹¡å¼µå­ã‚’å–ã‚Šé™¤ã„ãŸä¸»ãƒ•ã‚¡ã‚¤ãƒ«åã‚’è¨­å®šã—ã¾ã™ã€‚
 
 		if ( GetTitle().IsEmpty() )
 		{

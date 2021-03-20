@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -100,7 +100,7 @@ Copyright (C) 2006-2017 take-okm
 static char THIS_FILE[] = __FILE__;
 #endif
 
-/** �z�� a �̗v�f����Ԃ��܂��B */
+/** 配列 a の要素数を返します。 */
 #define arrayof(a) (sizeof(a)/sizeof(a[0]))
 
 
@@ -113,14 +113,14 @@ using namespace std ;
 //	CWndDcdGridEki
 // ****************************************************************
 // --------------------------------
-//@name �����֐�
+//@name 下請関数
 // --------------------------------
 
 CDcdTextbox	CWndDcdGridEki::getCDcdEkimei()const
 {
 	string strExtent = getCDiagramEditDoc()->getCDedRosenFileData()->getCdDedDispProp().createEkimeiExtentString() ;
-	//strExtent = �H���t�@�C���f�[�^�ɕۑ�����Ă���l�����Ƃɂ��āA
-	//	�쐬�����A�����񕝂̊������ł��B
+	//strExtent = 路線ファイルデータに保存されている値をもとにして、
+	//	作成した、文字列幅の基準文字列です。
 
 	//CdFontProp aCdFontProp( getCDiagramEditDoc()->getCDedRosenFileData()->
 	//	getCdDedDispProp().getJikokuhyouFont() ) ;
@@ -138,7 +138,7 @@ CDcdTextbox	CWndDcdGridEki::getCDcdEkijikokukeisiki()const
 	CdFontProp aCdFontProp(	CConverter_WinGdi().CdFontPropOf( DEFAULT_GUI_FONT ) ) ;
 	return CDcdTextbox( "" ,
 		aCdFontProp ,
-		"���s���s���s" , 1 , 2 , 2 , CdPenProp() , 
+		"京都京都京都" , 1 , 2 , 2 , CdPenProp() , 
 		CConverter_WinGdi().CdBrushPropOf( WHITE_BRUSH ) ) ;
 };
 	
@@ -149,7 +149,7 @@ CDcdTextbox	CWndDcdGridEki::getCDcdEkikibo()const
 	CdFontProp aCdFontProp(	CConverter_WinGdi().CdFontPropOf( DEFAULT_GUI_FONT ) ) ;
 	return CDcdTextbox( "" ,
 		aCdFontProp ,
-		"���s���s���s" , 1 , 2 , 2 , CdPenProp() , 
+		"京都京都京都" , 1 , 2 , 2 , CdPenProp() , 
 		CConverter_WinGdi().CdBrushPropOf( WHITE_BRUSH ) ) ;
 };
 	
@@ -205,15 +205,15 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 
 	// ********************************
 	//	ECreateCmd_NewItem
-	//�@�V�K�A�C�e����ΏۂƂ����R�}���h�𐶐����܂��B
+	//　新規アイテムを対象としたコマンドを生成します。
 	// ********************************
 	if ( eCreateCmd == ECreateCmd_NewItem )
 	{
-		//�r���[��ŕ����I����OFF
+		//ビュー上で複数選択がOFF
 		if ( getCSelect()->getSelectedCellCount() == 0 )
 		{
-			//	�V�K�A�C�e���́A�����I�u�W�F�N�g
-			//	�wIndex��0�̏ꍇ�́A�w�����`�����u��蒅�����v�Ƃ��܂��B
+			//	新規アイテムの、初期オブジェクト
+			//	駅Indexが0の場合は、駅時刻形式を「上り着時刻」とします。
 			CentDedEki aNewEki ;
 			if ( aCdYColSpecOfFocus.getEkiIndex() == 0 )
 			{
@@ -221,11 +221,11 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 			}
 
 
-			//	�r���[��ŕ����I����OFF�E�t�H�[�J�X�Z���������A�C�e����ɂ���ꍇ: 
+			//	ビュー上で複数選択がOFF・フォーカスセルが既存アイテム上にある場合: 
 			//
-			//- m_iIndexDst = �t�H�[�J�X�Z���̃A�C�e��Index�Am_iIndexSize = 0
-			//- m_CentDedEkiCont = �V�K�쐬���̃A�C�e���̊���l
-			//- CaMuiSelect = ���Y�A�C�e����I���B
+			//- m_iIndexDst = フォーカスセルのアイテムIndex、m_iIndexSize = 0
+			//- m_CentDedEkiCont = 新規作成時のアイテムの既定値
+			//- CaMuiSelect = 当該アイテムを選択。
 			if ( aCdYColSpecOfFocus.getColumnType() == CdEkiYColSpec::ColumnType_Eki )
 			{
 				bRv = true ;
@@ -241,10 +241,10 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 				}
 			}
 
-			//�@�r���[��ŕ����I����OFF�E�t�H�[�J�X�Z�����V�K�A�C�e���ʒu�ɂ���ꍇ:
-			//- m_iIndexDst = �����A�C�e��Index+1�Am_iIndexSize = 0
-			//- m_CentDedEkiCont = �V�K�쐬���̃A�C�e���̊���l
-			//- CaMuiSelect = ���Y�A�C�e����I���B
+			//　ビュー上で複数選択がOFF・フォーカスセルが新規アイテム位置にある場合:
+			//- m_iIndexDst = 末尾アイテムIndex+1、m_iIndexSize = 0
+			//- m_CentDedEkiCont = 新規作成時のアイテムの既定値
+			//- CaMuiSelect = 当該アイテムを選択。
 			else if ( aCdYColSpecOfFocus.getColumnType() == CdEkiYColSpec::ColumnType_NewEki )
 			{
 				bRv = true ;
@@ -260,23 +260,23 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 				}
 			}
 		}
-		// �@�r���[��ŕ����I��ON:
-		//	 - NULL��Ԃ��܂�([14/05/18]��:�����I��OFF�̏ꍇ�Ɠ�������)
+		// 　ビュー上で複数選択ON:
+		//	 - NULLを返します([14/05/18]旧:複数選択OFFの場合と同じ動作)
 
 	}
 	// ********************************
 	//	ECreateCmd_Focus
-	//�@�t�H�[�J�X�Z�����1��Ԃ�ΏۂƂ����R�}���h�𐶐����܂��B
+	//　フォーカスセル上の1列車を対象としたコマンドを生成します。
 	// ********************************
 	if ( eCreateCmd == ECreateCmd_Focus )
 	{
-		//�r���[��ŕ����I����OFF
+		//ビュー上で複数選択がOFF
 		if ( getCSelect()->getSelectedCellCount() == 0 )
 		{
-			//�r���[��ŕ����I����OFF�E�t�H�[�J�X�Z���������A�C�e����ɂ���ꍇ: 
-			//- m_iIndexDst = �t�H�[�J�X�Z���̃A�C�e��Index�Am_iIndexSize = 1
-			//- m_CentDedRessyaCont = �t�H�[�J�X�Z����̃A�C�e��1�̃R�s�[
-			//- m_CaMuiSelect = �t�H�[�J�X�Z����̃A�C�e����I���B
+			//ビュー上で複数選択がOFF・フォーカスセルが既存アイテム上にある場合: 
+			//- m_iIndexDst = フォーカスセルのアイテムIndex、m_iIndexSize = 1
+			//- m_CentDedRessyaCont = フォーカスセル上のアイテム1個のコピー
+			//- m_CaMuiSelect = フォーカスセル上のアイテムを選択。
 			if ( aCdYColSpecOfFocus.getColumnType() == CdEkiYColSpec::ColumnType_Eki )
 			{
 				bRv = true ;
@@ -291,24 +291,24 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 				}
 			}
 
-			//�r���[��ŕ����I����OFF�E�t�H�[�J�X�Z�����V�K�A�C�e���ʒu�ɂ���ꍇ: 
-			//- NULL��Ԃ��܂��B
+			//ビュー上で複数選択がOFF・フォーカスセルが新規アイテム位置にある場合: 
+			//- NULLを返します。
 		}
-		//�r���[��ŕ����I��ON
-		// - NULL��Ԃ��܂�([14/05/18]��:�����I��OFF�̏ꍇ�Ɠ�������)
+		//ビュー上で複数選択ON
+		// - NULLを返します([14/05/18]旧:複数選択OFFの場合と同じ動作)
 
 	}
 	// ********************************
 	//	ECreateCmd_Select
-	//�@�����̒P���܂��͕����I������Ă����Ԃ�ΏۂƂ���
-	//	�R�}���h�𐶐����܂��B
+	//　既存の単数または複数選択されている列車を対象とした
+	//	コマンドを生成します。
 	// ********************************
 	if ( eCreateCmd == ECreateCmd_Select )
 	{
-		//�r���[��ŕ����I����OFF�E�t�H�[�J�X�Z���������A�C�e����ɂ���ꍇ: 
-		//- m_iIndexDst = �t�H�[�J�X�Z���̃A�C�e��Index�Am_iIndexSize = 1
-		//- m_CentDedRessyaCont = �t�H�[�J�X�Z���̂���A�C�e��1�̃R�s�[
-		//- CaMuiSelect = ���Y��Ԃ�I���B
+		//ビュー上で複数選択がOFF・フォーカスセルが既存アイテム上にある場合: 
+		//- m_iIndexDst = フォーカスセルのアイテムIndex、m_iIndexSize = 1
+		//- m_CentDedRessyaCont = フォーカスセルのあるアイテム1個のコピー
+		//- CaMuiSelect = 当該列車を選択。
 		if ( getCSelect()->getSelectedCellCount() == 0 
 			&& aCdYColSpecOfFocus.getColumnType() == CdEkiYColSpec::ColumnType_Eki )
 		{
@@ -324,37 +324,37 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 			}
 		}
 
-		//�@�����\�r���[��ŕ����I����OFF�E�t�H�[�J�X�Z�����V�K��Ԉʒu�ɂ���ꍇ: 
-		// - NULL��Ԃ��܂��B
+		//　時刻表ビュー上で複数選択がOFF・フォーカスセルが新規列車位置にある場合: 
+		// - NULLを返します。
 
-		//�@�����\�r���[��ŕ����I��ON
-		// - m_iIndexDst = �I������Ă����Ԃ̐擪index
-		// - m_iIndexSize = �I������Ă����Ԃ̖���index-�擪index+1
-		// - m_CentDedRessyaCont = �I������Ă����Ԃ̐擪index����
-		//  ����index�܂ł̗�Ԃ̃R�s�[
-		// - CaMuiSelect �́A�t�H�[�J�X�Z���ɍ��킹�ė�Ԃ�I���B
+		//　時刻表ビュー上で複数選択ON
+		// - m_iIndexDst = 選択されている列車の先頭index
+		// - m_iIndexSize = 選択されている列車の末尾index-先頭index+1
+		// - m_CentDedRessyaCont = 選択されている列車の先頭indexから
+		//  末尾indexまでの列車のコピー
+		// - CaMuiSelect は、フォーカスセルに合わせて列車を選択。
 		//
-		//(A)�̈ʒu�ŏ������܂��B
+		//(A)の位置で処理します。
 	}
 
 
 	// ********************************
 	//		ECreateCmd_All ,
-	//�@�S��Ԃ�ΏۂƂ����R�}���h�𐶐����܂��B
+	//　全列車を対象としたコマンドを生成します。
 	// ********************************
 	if ( eCreateCmd == ECreateCmd_All )
 	{
-		// �r���[��ŕ����I����OFF�E�t�H�[�J�X�Z���������A�C�e����ɂ���ꍇ: 
+		// ビュー上で複数選択がOFF・フォーカスセルが既存アイテム上にある場合: 
 		//
-		//- m_iIndexDst = 0�Am_iIndexSize = �A�C�e���̐�
-		//- m_CentDedRessyaCont = �S�A�C�e���̃R�s�[
-		//- m_CaMuiSelect �́A�S�A�C�e����I���B
+		//- m_iIndexDst = 0、m_iIndexSize = アイテムの数
+		//- m_CentDedRessyaCont = 全アイテムのコピー
+		//- m_CaMuiSelect は、全アイテムを選択。
 		//
-		// �r���[��ŕ����I����OFF�E�t�H�[�J�X�Z�����V�K�A�C�e���ʒu�ɂ���ꍇ: 
+		// ビュー上で複数選択がOFF・フォーカスセルが新規アイテム位置にある場合: 
 		//
-		//- m_iIndexDst = 0�Am_iIndexSize = �A�C�e���̐�
-		//- m_CentDedRessyaCont = �S�A�C�e���̃R�s�[
-		//- CaMuiSelect �́A�S�A�C�e����I���B
+		//- m_iIndexDst = 0、m_iIndexSize = アイテムの数
+		//- m_CentDedRessyaCont = 全アイテムのコピー
+		//- CaMuiSelect は、全アイテムを選択。
 		if ( getCSelect()->getSelectedCellCount() == 0 
 			&& ( aCdYColSpecOfFocus.getColumnType() == CdEkiYColSpec::ColumnType_Eki 
 			|| aCdYColSpecOfFocus.getColumnType() == CdEkiYColSpec::ColumnType_NewEki ) )
@@ -372,28 +372,28 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 			}
 		}
 
-		// �r���[��ŕ����I��ON
+		// ビュー上で複数選択ON
 		//
-		//- m_iIndexDst = �I������Ă���A�C�e���̐擪index
-		//- m_iIndexSize = �I������Ă���A�C�e���̖���index-�擪index+1
-		//- m_CentDedRessyaCont = �I������Ă���A�C�e���̐擪index����
-		//����index�܂ł̃A�C�e���̃R�s�[
-		//- m_CaMuiSelect �́A�Z���̑I���ɍ��킹�ăA�C�e����I���B
+		//- m_iIndexDst = 選択されているアイテムの先頭index
+		//- m_iIndexSize = 選択されているアイテムの末尾index-先頭index+1
+		//- m_CentDedRessyaCont = 選択されているアイテムの先頭indexから
+		//末尾indexまでのアイテムのコピー
+		//- m_CaMuiSelect は、セルの選択に合わせてアイテムを選択。
 		//
-		//(A)�̈ʒu�ŏ������܂��B
+		//(A)の位置で処理します。
 	}
 
 	// ********************************
-	//	(A)ECreateCmd_Select�EECreateCmd_All ��
-	//�@�����I������Ă����Ԃ�ΏۂƂ���
-	//	�R�}���h�𐶐����܂��B
+	//	(A)ECreateCmd_Select・ECreateCmd_All で
+	//　複数選択されている列車を対象とした
+	//	コマンドを生成します。
 	// ********************************
 	if ( eCreateCmd == ECreateCmd_Select 
 		|| eCreateCmd == ECreateCmd_All )
 	{
 		if ( getCSelect()->getSelectedCellCount() > 0 )
 		{
-			//	�I������Ă���A�C�e����Index���擾
+			//	選択されているアイテムのIndexを取得
 			deque<int> contiEkiIndex ;
 			for ( int iColumnNumber = 0 ; iColumnNumber < getCXDcdGrid()->getYColumnCount() ;iColumnNumber ++ )
 			{
@@ -406,18 +406,18 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 					}
 				}
 			}
-			//contiEkiIndex = ��̕����I�������{����Ă���ꍇ�́A
-			//	�I������Ă���wIndex���i�[����܂��B
-			//	�����łȂ��ꍇ�́A��ł��B
+			//contiEkiIndex = 列の複数選択が実施されている場合は、
+			//	選択されている駅Indexが格納されます。
+			//	そうでない場合は、空です。
 
 			if ( contiEkiIndex.size() > 1 )
 			{
 				bRv = true ;
 				if ( ppCmd != NULL )
 				{
-					//	�R�}���h�I�u�W�F�N�g���ɁA�I������Ă���w�̐擪���疖���܂ł�
-					//	�w���i�[���܂�(�擪�E�����ȊO�ɂ́A�I������Ă��Ȃ��w��
-					//	�܂܂�Ă���ꍇ������܂�)
+					//	コマンドオブジェクト内に、選択されている駅の先頭から末尾までの
+					//	駅を格納します(先頭・末尾以外には、選択されていない駅が
+					//	含まれている場合もあります)
 					pCmd = OuNew<DedRosenFileData::EditCmd::CRfEditCmd_Eki>( 
 						new CRfEditCmd_Eki( 
 							*getCDiagramEditDoc()->getCDedRosenFileData() ,
@@ -425,8 +425,8 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 							contiEkiIndex.back() - contiEkiIndex.front() + 1 ,
 							m_bAdjustByEkijikokukeisiki ) ) ;
 
-					//	�R�}���h�I�u�W�F�N�g��
-					//	m_CentDedRessyaContSrc  ���̗�Ԃ�I�����܂��B
+					//	コマンドオブジェクトの
+					//	m_CentDedRessyaContSrc  内の列車を選択します。
 					pCmd->getCaMuiSelect()->setSelectAll( false ) ;
 					for ( int i = 0 ; i < (int)contiEkiIndex.size() ; i ++ )
 					{
@@ -444,11 +444,11 @@ createCmd( ECreateCmd eCreateCmd , Ou<DedRosenFileData::EditCmd::CRfEditCmd_Eki>
 	return bRv ;
 }
 	// --------------------------------
-	//@name OnUpdate �̉����֐�
+	//@name OnUpdate の下請関数
 	// --------------------------------
 
 /**
-	CentDedEki::EEkijikokukeisiki �ƁA�����񃊃\�[�XID�̑Ή��\
+	CentDedEki::EEkijikokukeisiki と、文字列リソースIDの対応表
 */
 struct {
 	CentDedEki::EEkijikokukeisiki	m_eValue ;
@@ -461,7 +461,7 @@ struct {
 };
 
 /**
-	CentDedEki::EEkikibo �ƁA�����񃊃\�[�XID�̑Ή��\
+	CentDedEki::EEkikibo と、文字列リソースIDの対応表
 */
 struct {
 	CentDedEki::EEkikibo	m_eValue ;
@@ -477,22 +477,22 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 {
 	if ( m_bWaitForActivate )
 	{
-		//	�r���[�̍X�V���X�V����Ă���Ȃ�A�㑱�̏����͍s���܂���
+		//	ビューの更新が更新されているなら、後続の処理は行いません
 		return;
 	}
 	// ****************************************************************
-	//	�r���[�̍X�V���ۗ�����Ă��Ȃ�
+	//	ビューの更新が保留されていない
 	// ****************************************************************
 
 	bool bIsNull = aCentDedEki.getEkimei().empty() ;
 
 	// --------------------------------
-	//	��̃T�C�Y��ݒ�
+	//	列のサイズを設定
 	// --------------------------------
 	{
 		CDcdTargetGetDC	aCDcdTarget( NULL ) ;
 		// --------------------------------
-		//	Y��
+		//	Y列
 		// --------------------------------
 		{
 			CdDcdSizeXy	sizeEkimei ;
@@ -506,22 +506,22 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 		}
 	}
 	// --------------------------------
-	//	�Z���̑�����ݒ�
+	//	セルの属性を設定
 	// --------------------------------
 	{
-		//	�w����� DcDraw �̑�����ݒ�
+		//	駅名列の DcDraw の属性を設定
 		Ou<CDcdTextbox>	pCDcdTextbox = 
 			(getCXDcdGrid()->getCell( 0 , iYColumnNumber )->getIfDcDraw());
 		*pCDcdTextbox = this->getCDcdEkimei() ;
 	}
 	{
-		//	�w����� DcDraw �̑�����ݒ�
+		//	駅名列の DcDraw の属性を設定
 		Ou<CDcdTextbox>	pCDcdTextbox = 
 			(getCXDcdGrid()->getCell( 1 , iYColumnNumber )->getIfDcDraw());
 		*pCDcdTextbox = this->getCDcdEkijikokukeisiki() ;
 	}
 	{
-		//	�w�K��
+		//	駅規模
 		Ou<CDcdTextbox>	pCDcdTextbox = 
 			(getCXDcdGrid()->getCell( 2 , iYColumnNumber )->getIfDcDraw());
 		*pCDcdTextbox = this->getCDcdEkikibo() ;
@@ -529,15 +529,15 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 
 	
 	// --------------------------------
-	//	�Z���̃e�L�X�g��ݒ�
+	//	セルのテキストを設定
 	// --------------------------------
-	//	�w��
+	//	駅名
 	{
 		Ou<CDcdTextbox>(getCXDcdGrid()
 			->getCell( 	0 , iYColumnNumber )->getIfDcDraw())
 				->setText( aCentDedEki.getEkimei() )  ;	
 	}
-	//	�w�����`��
+	//	駅時刻形式
 	{
 		string	strEkijikokukeisiki ;
 		if ( !bIsNull )
@@ -560,7 +560,7 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 			->getCell( 1 , iYColumnNumber )->getIfDcDraw())->
 				setText( strEkijikokukeisiki )  ;	
 	}
-	//	�w�K��
+	//	駅規模
 	{
 		string	strEkikibo ;
 		if ( !bIsNull ){
@@ -582,7 +582,7 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 		
 	}
 	// --------------------------------
-	//	���E��
+	//	境界線
 	// --------------------------------
 	{
 		CdPenProp aCdPenProp = getCdPenPropNormal() ;
@@ -597,13 +597,13 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 	}
 
 	// --------------------------------
-	//	�O���b�h�S�̂��X�V�̈�Ƃ��܂�
+	//	グリッド全体を更新領域とします
 	// --------------------------------
-	//	���E���̑������ϓ������ꍇ�́A
-	//	���E���E����т����艺�̂��ׂẴZ���̍X�V���K�v�ł��B
-	//	����ɑΉ����邽�߁A CWndDcdGridEki �ł́A
-	//	�w�̑����̍X�V�̂��т�
-	//	�O���b�h�S����X�V���܂��B
+	//	境界線の太さが変動した場合は、
+	//	境界線・およびそれより下のすべてのセルの更新が必要です。
+	//	これに対応するため、 CWndDcdGridEki では、
+	//	駅の属性の更新のたびに
+	//	グリッド全域を更新します。
 	InvalidateGrid() ;
 }
 
@@ -614,24 +614,24 @@ void CWndDcdGridEki::OnUpdate_All()
 	if ( GetParent() != pView )
 	{
 		// ****************************************************************
-		//	�r���[���A�N�e�B�u�ł͂Ȃ�
+		//	ビューがアクティブではない
 		// ****************************************************************
 		m_bWaitForActivate = true ;
 	}
 	else
 	{
 		// ****************************************************************
-		//	�r���[���A�N�e�B�u
+		//	ビューがアクティブ
 		// ****************************************************************
 		CWaitCursor	aCWaitCursor ;	
 
 		// --------------------------------
-		//	�r���[�̍X�V���s�����߂� OnUpdate_XXX() ���Ăяo���Ȃ�
-		//	���炩���߈ȉ��̃t���O�� false �ɂ��Ȃ��Ă͂Ȃ�܂���
+		//	ビューの更新を行うために OnUpdate_XXX() を呼び出すなら
+		//	あらかじめ以下のフラグを false にしなくてはなりません
 		m_bWaitForActivate = false ;
 
-		//	�R�}���h�I�u�W�F�N�g���s�ɂ��Z���ړ��ŃZ���I���ɂȂ�Ȃ��悤�ɁA
-		//	�Z���I�����������A�Z���I���@�\���ꎞ�I�ɒ��~���܂��B
+		//	コマンドオブジェクト実行によるセル移動でセル選択にならないように、
+		//	セル選択を解除し、セル選択機能も一時的に中止します。
 		clearSelect() ;
 		CPropStack aPropStack( this ) ;
 		aPropStack
@@ -640,7 +640,7 @@ void CWndDcdGridEki::OnUpdate_All()
 
 
 		// --------------------------------
-		//	�r���[���X�V
+		//	ビューを更新
 		// --------------------------------
 		CDiagramEditDoc* pCDiagramEditDoc = getCDiagramEditDoc() ;
 		const CentDedRosen*	pCentDedRosen = 
@@ -648,11 +648,11 @@ void CWndDcdGridEki::OnUpdate_All()
 		const Mu<const CentDedEki*>* pCentDedEkiContGet = 
 			pCentDedRosen->getCentDedEkiCont()->getMuPtr() ;
 
-		//	Y�񐔂𑝌�������
+		//	Y列数を増減させる
 		getCXDcdGrid()->setYColumnCount( 
 			pCentDedEkiContGet->size() + 2 ) ;
 
-		//	�w����̕���ݒ肷��
+		//	駅名列の幅を設定する
 		{
 			CDcdTargetGetDC	aTarget ;
 			CDcdTextbox aCDcd = this->getCDcdEkimei() ;
@@ -662,7 +662,7 @@ void CWndDcdGridEki::OnUpdate_All()
 				aCdDcdSizeXy.getX() ) ;
 		}
 
-		//	�e�Z���ɁA�f�[�^��ݒ�
+		//	各セルに、データを設定
 		int idxEki ;
 		for ( idxEki = 0 ; idxEki < pCentDedEkiContGet->size() ; 
 				idxEki ++ ){
@@ -675,7 +675,7 @@ void CWndDcdGridEki::OnUpdate_All()
 }
 
 	// --------------------------------
-	//@name ���j���[�R�}���h�̉����֐�
+	//@name メニューコマンドの下請関数
 	// --------------------------------
 int CWndDcdGridEki::OnEditCut_Process( BOOL bQueryEnable )
 {
@@ -685,41 +685,41 @@ int CWndDcdGridEki::OnEditCut_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;}
 	
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !createCmd( CWndDcdGridEki::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu������������܂���B
+			iRv = -1 ;	//	セルの位置が正しくありません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// -------------------------------- 
-		//	�N���b�v�{�[�h�ɓ]��
+		//	クリップボードに転送
 		// --------------------------------
 		getCDiagramEditDoc()->CentDedEki_To_Cliboard( 
 			pCmd->getCaMuiSelect() ) ;
 
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		{
 			pCmd->getCaMuiSelect()->erase( 0 , INT_MAX ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -735,40 +735,40 @@ int CWndDcdGridEki::OnEditCopy_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;}
 	
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !createCmd( CWndDcdGridEki::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu������������܂���B
+			iRv = -1 ;	//	セルの位置が正しくありません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// -------------------------------- 
-		//	�N���b�v�{�[�h�ɓ]��
+		//	クリップボードに転送
 		// --------------------------------
 		getCDiagramEditDoc()->CentDedEki_To_Cliboard( 
 			pCmd->getCaMuiSelect() ) ;
 
 		// -------------------------------- 
-		//	�t�H�[�J�X�Z�����A�I��v�f���ōő�̉wIndex�̎��ʂɈړ�
+		//	フォーカスセルを、選択要素中で最大の駅Indexの次位に移動
 		// --------------------------------
 		{
-			//	�Z���I�����N���A���A
-			//	�t�H�[�J�X�Z���̈ړ��ɂ��Z���I���𖳌������܂��B
+			//	セル選択をクリアし、
+			//	フォーカスセルの移動によるセル選択を無効化します。
 			clearSelect() ;
 			CPropStack	aPropStack( this ) ;
 			aPropStack
 				.CBoxSelect_setIsEnable( false )
 				.CRandomSelect_setIsEnable( false )  ;
 		
-			//	�I��v�f���ōő�̉wIndex �����߂�
+			//	選択要素中で最大の駅Index を求める
 			int iEkiIndexMax = -1 ;
 			{
 				CaMuiSelect<CentDedEki>* pCaMuiSelect = pCmd->getCaMuiSelect() ;
@@ -781,16 +781,16 @@ int CWndDcdGridEki::OnEditCopy_Process( BOOL bQueryEnable )
 					}
 				}
 			}
-			//iEkiIndexMax = �I������Ă����Ԃ̂����A�ő��Index
+			//iEkiIndexMax = 選択されている列車のうち、最大のIndex
 
-			//	�ړ���̃t�H�[�J�X�Z���ʒu������
+			//	移動先のフォーカスセル位置を決定
 			int iYColumnNmber = -1 ;
 			{
 				CdEkiYColSpecCont aCdEkiYColSpecCont = createYColSpecCont() ;
 				iYColumnNmber = aCdEkiYColSpecCont.ColumnNumberFromSpec( 
 					CdEkiYColSpec( CdEkiYColSpec::ColumnType_Eki , iEkiIndexMax ) ) + 1 ;
 			}
-			//	�t�H�[�J�X���ړ�
+			//	フォーカスを移動
 			{
 				CdDcdPosXy posxyFocusCellColumnNumber 
 					= getCFocus()->getFocusCellColumnNumber() ;
@@ -805,7 +805,7 @@ int CWndDcdGridEki::OnEditCopy_Process( BOOL bQueryEnable )
 
 
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -822,47 +822,47 @@ int CWndDcdGridEki::OnEditPaste_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;}
 	
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !createCmd( CWndDcdGridEki::ECreateCmd_NewItem , ppCmd ) )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu������������܂���B
+			iRv = -1 ;	//	セルの位置が正しくありません。
 		}
 	}
 	if ( iRv >= 0 )
 	{
 		if ( !getCDiagramEditDoc()->CentDedEki_IsClipboardFormatAvailable() )
 		{
-			iRv = -2 ;	//	�N���b�v�{�[�h�ɉw�̃f�[�^������܂���
+			iRv = -2 ;	//	クリップボードに駅のデータがありません
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// -------------------------------- 
-		//	�N���b�v�{�[�h����f�[�^���擾
+		//	クリップボードからデータを取得
 		// --------------------------------
 		CentDedEkiCont	aEkiCont ;
 		getCDiagramEditDoc()->CentDedEki_From_Cliboard( &aEkiCont ) ;
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̉w��ҏW
+		//	コマンドオブジェクトの駅を編集
 		// --------------------------------
 		{
-			//	CWndDcdGridEki::ECreateCmd_NewItem �ɂ���Đ������ꂽ
-			//	�V�K�A�C�e���͍폜���܂��B
+			//	CWndDcdGridEki::ECreateCmd_NewItem によって生成された
+			//	新規アイテムは削除します。
 			pCmd->getCaMuiSelect()->erase( 0 , INT_MAX ) ;
 
-			//	�R�}���h�ɃN���b�v�{�[�h����̃A�C�e����ǉ����܂��B
+			//	コマンドにクリップボードからのアイテムを追加します。
 			CaMui<CentDedEki> aCaMui( pCmd->getCaMuiSelect() ) ;
 			aCaMui.insert( &aEkiCont , 0 , INT_MAX , 0 ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
@@ -880,35 +880,35 @@ int CWndDcdGridEki::OnEditClear_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;}
 	
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !createCmd( CWndDcdGridEki::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu������������܂���B
+			iRv = -1 ;	//	セルの位置が正しくありません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		{
 			pCmd->getCaMuiSelect()->erase( 0 , INT_MAX ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -918,39 +918,39 @@ int CWndDcdGridEki::OnEditClear_Process( BOOL bQueryEnable )
 }
 
 	/*	
-		[�ҏW]-[�w��}��]
+		[編集]-[駅を挿入]
 	@return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
+		成功したら0以上、エラーなら負の数です。
 	*/
 int CWndDcdGridEki:: OnEDITEkiInsert_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( execEkiPropDlg( true , TRUE ) < 0 )
 	{
-		iRv = -1 ;	//	�t�H�[�J�X�̈ʒu���s���ł��B
+		iRv = -1 ;	//	フォーカスの位置が不正です。
 	}
 
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		execEkiPropDlg( true , FALSE ) ;
 
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		if ( iRv < 0 )
 		{
 			CString strErrorMessage ;
 			switch( iRv )
 			{
-			case -1 :	//	���݂͎��s�ł��܂���B
+			case -1 :	//	現在は実行できません。
 				break ;
 			default:
 				strErrorMessage.Format( _T( "Error=%d" ) , iRv ) ;
@@ -971,10 +971,10 @@ int CWndDcdGridEki::OnEditEkiInvert_Process( BOOL bQueryEnable )
 	int iRv = 0 ;
 
 	// ****************************************************************
-	//	�R�}���h�̎��s�ۂ̔���
+	//	コマンドの実行可否の判定
 	// ****************************************************************
-	//	�R�}���h�̎��s�̉ۂ𔻒肵�܂��B
-	//	�R�}���h�����s�s�\�Ȃ�A iRv �ɕ��̐���ݒ肵�Ă��������B
+	//	コマンドの実行の可否を判定します。
+	//	コマンドが実行不可能なら、 iRv に負の数を設定してください。
 
 	const CentDedRosen*	pCentDedRosen = getCDiagramEditDoc()->getCDedRosenFileData()->getCentDedRosen() ;
 	const Mu<const CentDedEki*>* pCentDedEkiContGet = pCentDedRosen->getCentDedEkiCont()->getMuPtr() ;
@@ -984,22 +984,22 @@ int CWndDcdGridEki::OnEditEkiInvert_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
-		//	�R�}���h�����s���܂��B
-		//	���ʂ��G���[�Ȃ�AiRv �ɕ��̐���ݒ肵�܂��B
+		//	コマンドを実行します。
+		//	結果がエラーなら、iRv に負の数を設定します。
 
 		CentDedRosen	aRosenNew ;
 		if ( iRv >= 0 )
 		{
-			//	�H�����擾��A�㉺�𔽓]���܂��B
+			//	路線を取得後、上下を反転します。
 			aRosenNew = *pCentDedRosen ;
 			aRosenNew.invert() ;
 
-			//	�X�V�R�}���h�𐶐�
+			//	更新コマンドを生成
 		}
 		// --------------------------------
-		//	�R�}���h�𐶐��E���s
+		//	コマンドを生成・実行
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
@@ -1009,14 +1009,14 @@ int CWndDcdGridEki::OnEditEkiInvert_Process( BOOL bQueryEnable )
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		if ( iRv < 0 )
 		{
 			CString strErrorMessage ;
 			switch( iRv )
 			{
-			case -1 :	//	���݂͎��s�ł��܂���B
+			case -1 :	//	現在は実行できません。
 				break ;
 			default:
 				strErrorMessage.Format( _T( "Error=%d" ) , iRv ) ;
@@ -1033,18 +1033,18 @@ int CWndDcdGridEki::OnEditEkiInvert_Process( BOOL bQueryEnable )
 }
 
 	/*	
-		[�ҏW]-[�w�̃v���p�e�B]
+		[編集]-[駅のプロパティ]
 	*/
 int CWndDcdGridEki:: OnEDITEkiProp_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 
-	//	�t�H�[�J�X�Z�����V�K�A�C�e���ʒu�ɂ���Ƃ��́A
-	//	�u�V�K�A�C�e���̃v���p�e�B���͂��s���A����𖖔��ɑ}������v�Ƃ���
-	//	����ɂȂ�܂��B
+	//	フォーカスセルが新規アイテム位置にあるときは、
+	//	「新規アイテムのプロパティ入力を行い、それを末尾に挿入する」という
+	//	動作になります。
 	bool bInsert = false ;
 	CdEkiYColSpec aYColSpec = getYColSpecOfFocus() ;
 	if ( aYColSpec.getColumnType() == CdEkiYColSpec::ColumnType_NewEki )
@@ -1054,21 +1054,21 @@ int CWndDcdGridEki:: OnEDITEkiProp_Process( BOOL bQueryEnable )
 
 	if ( execEkiPropDlg( bInsert , TRUE ) < 0 )
 	{
-		iRv = -1 ;	//	-1 ;	//	�t�H�[�J�X�Z���̈ʒu���s���ł��B
+		iRv = -1 ;	//	-1 ;	//	フォーカスセルの位置が不正です。
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
-		//	�R�}���h�����s���܂��B
-		//	���ʂ��G���[�Ȃ�AiRv �ɕ��̐���ݒ肵�܂��B
+		//	コマンドを実行します。
+		//	結果がエラーなら、iRv に負の数を設定します。
 
 		execEkiPropDlg( bInsert , FALSE ) ;
 
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		// ****************************************************************
 	}
@@ -1076,7 +1076,7 @@ int CWndDcdGridEki:: OnEDITEkiProp_Process( BOOL bQueryEnable )
 }
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CWndDcdGridEki::CWndDcdGridEki()
 	: m_bAdjustByEkijikokukeisiki( true ) 
@@ -1091,7 +1091,7 @@ CWndDcdGridEki::~CWndDcdGridEki()
 }
 
 	// ********************************
-	//@name CWndDcdGridEki-����
+	//@name CWndDcdGridEki-属性
 	// ********************************
 bool CWndDcdGridEki::getAdjustByEkijikokukeisiki()const 
 {
@@ -1104,7 +1104,7 @@ int CWndDcdGridEki::setAdjustByEkijikokukeisiki( bool value )
 	{
 		m_bAdjustByEkijikokukeisiki = value ;
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDcdGridEkiProp( this ) ;
 		
 		iRv = 1 ;
@@ -1115,19 +1115,19 @@ int CWndDcdGridEki::setAdjustByEkijikokukeisiki( bool value )
 
 
 	// ********************************
-	//@name CEkiView ����̈Ϗ�
+	//@name CEkiView からの委譲
 	// ********************************
 void CWndDcdGridEki::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint) 
 {
 	if ( lHint == LHINT_SUBVIEW_TO_ROOTDOC )
 	{
-		//	�r���[�̓��e���h�L�������g�ɔ��f������w�߂ł��B
-		//	�㑱�̏����͍s���܂���B
+		//	ビューの内容をドキュメントに反映させる指令です。
+		//	後続の処理は行いません。
 		return ;
 	}
 	// --------------------------------
-	//	�����OnUpdate()
-	//	.ini�t�@�C������v���p�e�B��ǂݍ���
+	//	初回のOnUpdate()
+	//	.iniファイルからプロパティを読み込み
 	// --------------------------------
 	if ( !m_bInitialUpdateComplete )
 	{
@@ -1137,7 +1137,7 @@ void CWndDcdGridEki::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 	}
 
 	// --------------------------------
-	//	�X�V�R�}���h���擾
+	//	更新コマンドを取得
 	// --------------------------------
 	Ou<CRfEditCmd> pCmd ;
 	if ( pHint != NULL 
@@ -1147,20 +1147,20 @@ void CWndDcdGridEki::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 			(CRfEditCmdHolder*)pHint ;
 		pCmd = pHolder->getCmd() ; 
 	}
-	//pCmd=�ҏW�R�}���h CRfEditCmd �B
-	//	NULL�Ȃ�A�S�X�V���v������Ă��܂��B
+	//pCmd=編集コマンド CRfEditCmd 。
+	//	NULLなら、全更新が要求されています。
 
 	//pHint= 
-	//	pHint�� CRfEditCmdHolder �I�u�W�F�N�g�Ȃ�A
-	//	�Ή�����ҏW�R�}���h CRfEditCmd ��ێ����Ă��܂��B
-	//	���̏ꍇ�Athis �� CRfEditCmd �̓��e�ɍœK������
-	//	�X�V���s���܂��B
-	//	NULL�Ȃ�A�S�X�V���v������Ă��܂��B
+	//	pHintが CRfEditCmdHolder オブジェクトなら、
+	//	対応する編集コマンド CRfEditCmd を保持しています。
+	//	この場合、this は CRfEditCmd の内容に最適化した
+	//	更新を行います。
+	//	NULLなら、全更新が要求されています。
 
 	if ( m_bWaitForActivate )
 	{
-		//	�S�X�V���ۗ�����Ă���ꍇ�́A
-		//	�R�}���h�𖳎����āA�S�X�V���s���܂��B
+		//	全更新が保留されている場合は、
+		//	コマンドを無視して、全更新を行います。
 		pCmd = Ou<CRfEditCmd>() ;
 	}
 
@@ -1181,25 +1181,25 @@ void CWndDcdGridEki::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 				( pCmd ) 
 		)
 		{
-			//	���̃r���[�́A
-			//		�R�����g�̕ύX
-			//		�_�C���̕ύX
-			//		�_�C���̃v���p�e�B�̕ύX
-			//		��Ԃ̕ύX
-			//		��Ԃ̒��ʉ�
-			//		��Ԏ�ʂ̕ύX
-			//		��Ԏ�ʂ̓���
-			//	�̏ꍇ�́A�X�V���s���܂���B
+			//	このビューは、
+			//		コメントの変更
+			//		ダイヤの変更
+			//		ダイヤのプロパティの変更
+			//		列車の変更
+			//		列車の直通化
+			//		列車種別の変更
+			//		列車種別の入替
+			//	の場合は、更新を行いません。
 			//
 		}
 		else if ( dynamic_castOu<CRfEditCmd_Eki>( pCmd ) )
 		{	
-			//		�w�̕ύX
+			//		駅の変更
 			Ou<CRfEditCmd_Eki>	pCommand 
 				= dynamic_castOu<CRfEditCmd_Eki>( pCmd );
 
-			//	�R�}���h�I�u�W�F�N�g���s�ɂ��Z���ړ��ŃZ���I���ɂȂ�Ȃ��悤�ɁA
-			//	�Z���I�����������A�Z���I���@�\���ꎞ�I�ɒ��~���܂��B
+			//	コマンドオブジェクト実行によるセル移動でセル選択にならないように、
+			//	セル選択を解除し、セル選択機能も一時的に中止します。
 			clearSelect() ;
 			CPropStack aPropStack( this ) ;
 			aPropStack
@@ -1207,7 +1207,7 @@ void CWndDcdGridEki::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 					.CRandomSelect_setIsEnable( false )  ;
 
 			// --------------------------------
-			//	�������̗v�f�̍폜
+			//	減少分の要素の削除
 			// --------------------------------
 			CentDedEkiCont	aCentDedEkiContSrc 
 				= *pCommand->getCentDedEkiContSrc() ;
@@ -1222,7 +1222,7 @@ void CWndDcdGridEki::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 				}
 			}
 			// --------------------------------
-			//	�������̗v�f�̒ǉ�
+			//	増加分の要素の追加
 			// --------------------------------
 			int iOkikaeSize = 0 ;
 			iOkikaeSize = 
@@ -1239,7 +1239,7 @@ void CWndDcdGridEki::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 				}
 			}
 			// --------------------------------
-			//	�v�f�̍X�V
+			//	要素の更新
 			// --------------------------------
 			{					
 				for ( int cnt = 0 ; cnt < aCentDedEkiContSrc.size() ; cnt ++ )
@@ -1256,19 +1256,19 @@ void CWndDcdGridEki::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 		else
 		{
 			//CRfEditCmd_DedRosenFileDataProp
-			//	  �H���t�@�C���̃v���p�e�B�̕ύX�́A
-			//	�t�H���g�̕ω��𔺂����߁A�S�X�V���K�v�ł��B
+			//	  路線ファイルのプロパティの変更は、
+			//	フォントの変化を伴うため、全更新が必要です。
 			//CRfEditCmd_Rosen
 			//CRfEditCmd_RosenFileData
-			//	�w���܂���I�u�W�F�N�g�ł��B���ꂪ�X�V���ꂽ�ꍇ�́A
-			//	�S�X�V���K�v�ł��B
+			//	駅を包含するオブジェクトです。これが更新された場合は、
+			//	全更新が必要です。
 
-			//	�S�v�f���X�V
+			//	全要素を更新
 			OnUpdate_All() ;
 		}
 	}
 	// --------------------------------
-	//	��I��͈͂�ݒ�
+	//	列選択範囲を設定
 	// --------------------------------
 	{
 		CDiagramEditDoc* pCDiagramEditDoc = getCDiagramEditDoc() ;
@@ -1300,7 +1300,7 @@ void CWndDcdGridEki::OnActivateView(BOOL bActivate, CView* pActivateView, CView*
 
 
 	// ********************************
-	//@name CWndDcdGridEki-����
+	//@name CWndDcdGridEki-操作
 	// ********************************
 	
 int CWndDcdGridEki::execEkiPropDlg( bool bInsert , BOOL bQueryEnable ) 
@@ -1311,7 +1311,7 @@ int CWndDcdGridEki::execEkiPropDlg( bool bInsert , BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;};
 
 	// ****************************************************************
-	//	�R�}���h�̎��s�ۂ̔���
+	//	コマンドの実行可否の判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
@@ -1319,7 +1319,7 @@ int CWndDcdGridEki::execEkiPropDlg( bool bInsert , BOOL bQueryEnable )
 		{
 			if ( !createCmd( ECreateCmd_NewItem , ppCmd ) )
 			{
-				iRv = -1 ;	//	�Z���̈ʒu���s���ł��B
+				iRv = -1 ;	//	セルの位置が不正です。
 			}
 		}
 		else
@@ -1334,7 +1334,7 @@ int CWndDcdGridEki::execEkiPropDlg( bool bInsert , BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		CdEkiXColSpec	aXColSpec = getXColSpecOfFocus() ;
 		int iFocus = -1 ;
@@ -1360,29 +1360,29 @@ int CWndDcdGridEki::execEkiPropDlg( bool bInsert , BOOL bQueryEnable )
 		{
 			iRv = 1 ;
 
-			//	[�w�������w�����`���Ő��K��]�̐ݒ���A
-			//	���Ɏ��s����R�}���h�ɔ��f���܂��B
+			//	[駅時刻を駅時刻形式で正規化]の設定を、
+			//	次に実行するコマンドに反映します。
 			pCmd->setAdjustByEkijikokukeisiki( m_bAdjustByEkijikokukeisiki ) ;
 		}
 		// --------------------------------
-		//	�_�C�A���OOK���̏���
+		//	ダイアログOK時の処理
 		// --------------------------------
 		if ( iRv == 1 )
 		{
 			// --------------------------------
-			//	�ҏW�R�}���h�����s
+			//	編集コマンドを実行
 			// --------------------------------
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		if ( iRv < 0 )
 		{
 			CString strErrorMessage ;
 			switch( iRv )
 			{
-			case -1 :	//	���݂͎��s�ł��܂���B
+			case -1 :	//	現在は実行できません。
 				break ;
 			default:
 				strErrorMessage.Format( _T( "Error=%d" ) , iRv ) ;
@@ -1432,22 +1432,22 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 	
 	// --------------------------------
-	//	��̐����w��
+	//	列の数を指定
 	// --------------------------------
 	getCXDcdGrid()->setXColumnCount( 3 ) ;
 	getCXDcdGrid()->setYColumnCount( 2 ) ;
 	getCXDcdGrid()->setYFixColumnCount( 1 ) ;
 
 	// --------------------------------
-	//	��̃T�C�Y��ݒ�
+	//	列のサイズを設定
 	// --------------------------------
 	{
 		CDcdTargetGetDC	aCDcdTarget( NULL ) ;
 		// --------------------------------
-		//	X��
+		//	X列
 		// --------------------------------
 		{
-			//	�w��
+			//	駅名
 			CDcdGridXColumn* pCDcdGridXColumn = getCXDcdGrid()->getXColumn( 0 ) ;
 			CdDcdSizeXy	sizeEkimei ;
 			CDcdTextbox	aCDcdTextbox( getCDcdEkimei() ) ;
@@ -1455,7 +1455,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			pCDcdGridXColumn->setColumnSize( sizeEkimei.getX() ) ;
 		}
 		{
-			//	�w�����`��
+			//	駅時刻形式
 			CDcdGridXColumn* pCDcdGridXColumn = getCXDcdGrid()->getXColumn( 1 ) ;
 			CdDcdSizeXy	sizeEkijikokukeisiki ;
 			CDcdTextbox	aCDcdTextbox( 
@@ -1465,7 +1465,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			pCDcdGridXColumn->setColumnSize( sizeEkijikokukeisiki.getX() ) ;
 		}
 		{
-			//	�w�K��
+			//	駅規模
 			CDcdGridXColumn* pCDcdGridXColumn = getCXDcdGrid()->getXColumn( 2 ) ;
 			CdDcdSizeXy	sizeEkikibo ;
 			CDcdTextbox	aCDcdTextbox( 
@@ -1475,7 +1475,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			pCDcdGridXColumn->setColumnSize( sizeEkikibo.getX() ) ;
 		}
 		// --------------------------------
-		//	Y��
+		//	Y列
 		// --------------------------------
 		{
 			CdDcdSizeXy	sizeEkimei ;
@@ -1488,7 +1488,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		}
 	}
 	// --------------------------------
-	//	�ŏ�s�Ƀe�L�X�g��ݒ�
+	//	最上行にテキストを設定
 	// --------------------------------
 	{
 		CConverter_WinGdi	aConv ;
@@ -1501,7 +1501,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 
 		{
-			//	�w��
+			//	駅名
 			CDcdGridCell* pCDcdGridCell = getCXDcdGrid()->getCell( 0 , 0 ) ;
 
 			Ou<CDcdTextbox>	pCDcdTextbox = 
@@ -1514,7 +1514,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			Ou<CDcdTextbox>(pCDcdGridCell->getIfDcDraw())->setText( (LPCTSTR)aString ) ;
 		}
 		{
-			//	�w�����`��
+			//	駅時刻形式
 			CDcdGridCell* pCDcdGridCell = getCXDcdGrid()->getCell( 1 , 0 ) ;
 
 			Ou<CDcdTextbox>	pCDcdTextbox = 
@@ -1527,7 +1527,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			Ou<CDcdTextbox>(pCDcdGridCell->getIfDcDraw())->setText( (LPCTSTR)aString ) ;
 		}
 		{
-			//	�w�K��
+			//	駅規模
 			CDcdGridCell* pCDcdGridCell = getCXDcdGrid()->getCell( 2 , 0 ) ;
 
 			Ou<CDcdTextbox>	pCDcdTextbox = 
@@ -1541,7 +1541,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		}
 	}
 	// --------------------------------
-	//	�t�H�[�J�X�Z���̏����ʒu��ݒ�
+	//	フォーカスセルの初期位置を設定
 	// --------------------------------
 	getCFocus()->setFocusCell( getCXDcdGrid()->getCell( 0 , 1 ) ) ;	
 	
@@ -1554,12 +1554,12 @@ void CWndDcdGridEki::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 
-	//	�t�H�[�J�X�Z�����V�K�A�C�e���ʒu�ɂ���Ƃ��́A
-	//	�u�V�K�A�C�e���̃v���p�e�B���͂��s���A����𖖔��ɑ}������v�Ƃ���
-	//	����ɂȂ�܂��B
+	//	フォーカスセルが新規アイテム位置にあるときは、
+	//	「新規アイテムのプロパティ入力を行い、それを末尾に挿入する」という
+	//	動作になります。
 	bool bInsert = false ;
 	CdEkiYColSpec aYColSpec = getYColSpecOfFocus() ;
 	if ( aYColSpec.getColumnType() == CdEkiYColSpec::ColumnType_NewEki )
@@ -1570,8 +1570,8 @@ void CWndDcdGridEki::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 	// ****************************************************************
 
 
-	//	�����L�[��������Ă��āA�_�C�A���O�{�b�N�X���J���Ă��Ȃ��ꍇ��
-	//	�_�C�A���O�{�b�N�X���J���܂��B
+	//	文字キーが押されていて、ダイアログボックスが開いていない場合は
+	//	ダイアログボックスを開きます。
 	if ( CKeyinputSenderToModalDlg::AnyLetterOrDigitKeyIsDown() && 
 			m_CKeyinputSenderToModalDlg.startSend() >= 0 )
 	{
@@ -1579,7 +1579,7 @@ void CWndDcdGridEki::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		execEkiPropDlg( bInsert , FALSE ) ;
 		m_CKeyinputSenderToModalDlg.endSend() ;
 	}
-	//	���łɃ_�C�A���O���N�������_�C�A���O�{�b�N�X�Ƀ��b�Z�[�W��]��
+	//	すでにダイアログが起動中→ダイアログボックスにメッセージを転送
 	else	
 	{
 		if ( !m_CKeyinputSenderToModalDlg.OnKeyDown( nChar , nRepCnt , nFlags ) )
@@ -1594,12 +1594,12 @@ void CWndDcdGridEki::OnLButtonDblClk(UINT nFlags, CPoint point)
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 
-	//	�t�H�[�J�X�Z�����V�K�A�C�e���ʒu�ɂ���Ƃ��́A
-	//	�u�V�K�A�C�e���̃v���p�e�B���͂��s���A����𖖔��ɑ}������v�Ƃ���
-	//	����ɂȂ�܂��B
+	//	フォーカスセルが新規アイテム位置にあるときは、
+	//	「新規アイテムのプロパティ入力を行い、それを末尾に挿入する」という
+	//	動作になります。
 	bool bInsert = false ;
 	CdEkiYColSpec aYColSpec = getYColSpecOfFocus() ;
 	if ( aYColSpec.getColumnType() == CdEkiYColSpec::ColumnType_NewEki )
@@ -1608,11 +1608,11 @@ void CWndDcdGridEki::OnLButtonDblClk(UINT nFlags, CPoint point)
 	}
 
 	// ****************************************************************
-	//	�R�}���h�̎��s
+	//	コマンドの実行
 	// ****************************************************************
 	if ( execEkiPropDlg( bInsert , FALSE ) < 0 )
 	{
-		iRv = -1 ;	//	-1 ;	//	�t�H�[�J�X�Z���̈ʒu���s���ł��B
+		iRv = -1 ;	//	-1 ;	//	フォーカスセルの位置が不正です。
 	}
 	// ****************************************************************
 
@@ -1708,11 +1708,11 @@ void CWndDcdGridEki::OnContextMenu(CWnd* pWnd, CPoint point)
 	aMenu.LoadMenu( IDR_MENU_EKIVIEW_CONTEXT ) ;
 	CMenu* pContextMenu = aMenu.GetSubMenu( 0 ) ;
 
-	//	�R���e�L�X�g���j���[���}�E�X�ȊO�ŌĂяo���ꂽ�ꍇ�́A
-	//	�R���e�L�X�g���j���[�̕\���ʒu�́A�t�H�[�J�X�Z���̒����̈ʒu�Ƃ��܂��B
+	//	コンテキストメニューがマウス以外で呼び出された場合は、
+	//	コンテキストメニューの表示位置は、フォーカスセルの中央の位置とします。
 	if ( point.x ==-1 || point.y == -1 )
 	{
-		//	�R���e�L�X�g���j���[���}�E�X�ȊO�ŌĂяo����܂���
+		//	コンテキストメニューがマウス以外で呼び出されました
 		CdDcdPosXy posxyFocusCellColumnNumber = getCFocus()->getFocusCellColumnNumber() ;
 		if ( posxyFocusCellColumnNumber !=  
 				CFocus::ColumnNumberPosXy_NULL() )
@@ -1725,16 +1725,16 @@ void CWndDcdGridEki::OnContextMenu(CWnd* pWnd, CPoint point)
 			ClientToScreen( &point ) ;
 		}
 	}
-	//point = �R���e�L�X�g���j���[�̕\���ʒu�B
-	//	-1�̏ꍇ�́A�R���e�L�X�g���j���[�͕\���ł��܂���B
+	//point = コンテキストメニューの表示位置。
+	//	-1の場合は、コンテキストメニューは表示できません。
 
 	if ( point.x >= 0 &&  point.y >= 0 )
 	{
 		pContextMenu->TrackPopupMenu( 
 			TPM_LEFTALIGN | TPM_RIGHTBUTTON ,
 			point.x , point.y , 
-			AfxGetMainWnd() ) ;	//	this ���w�肷��ƁAApp��Doc��View ��
-								//�R�}���h�`�F�[�������삵�܂���B
+			AfxGetMainWnd() ) ;	//	this を指定すると、App→Doc→View の
+								//コマンドチェーンが動作しません。
 	}
 	else
 	{

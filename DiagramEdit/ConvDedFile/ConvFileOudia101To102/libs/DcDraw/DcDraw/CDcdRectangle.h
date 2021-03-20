@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -80,42 +80,42 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
 * @brief
-* �y�T�v�z
-* 	   DcDraw���f���I�u�W�F�N�g�ł��B�̈�̊O�ӂɘg����`�悵�A
-*	������h��Ԃ��܂��B
+* 【概要】
+* 	   DcDrawモデルオブジェクトです。領域の外辺に枠線を描画し、
+*	内側を塗りつぶします。
 *
-*	  ���̃I�u�W�F�N�g�ɑ΂��� DcDraw() ���Ăяo���ƁA���̗̈�S�̂�
-*	�O�ӓ����ɘg�����w��̑����ŕ`�悵�A���̓����𑮐��Ŏw�肳�ꂽ�F
-*	�i�n�b�`�p�^�[�����j�œh��܂��B
+*	  このオブジェクトに対して DcDraw() を呼び出すと、その領域全体の
+*	外辺内側に枠線を指定の属性で描画し、その内側を属性で指定された色
+*	（ハッチパターンも可）で塗ります。
 */
 class CDcdRectangle : public IfDcDraw
 {
 // ********************************
-///	@name ����
+///	@name 属性
 // ********************************
 ///@{
  private:
 	/**
-	*	�g���̕`��Ɏg�p����y���̑�����ێ����܂��B
+	*	枠線の描画に使用するペンの属性を保持します。
 	*/
 	CdPenProp	m_CdPenProp	;
 
 	/**
-	*	�h��Ԃ��Ɏg�p����u���V�̑�����ێ����܂��B
+	*	塗りつぶしに使用するブラシの属性を保持します。
 	*/
 	CdBrushProp	m_CdBrushProp	;
 	
 ///@}
 	
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 @param aCdPenProp
-		�g���̃y���̑������w�肵�Ă��������B
+		枠線のペンの属性を指定してください。
 	 @param aCdBrushProp
-		�h��Ԃ��Ɏg�p����u���V�̑������w�肵�Ă��������B
+		塗りつぶしに使用するブラシの属性を指定してください。
 	*/
 	CDcdRectangle( 
 		const CdPenProp& aCdPenProp ,
@@ -129,40 +129,40 @@ class CDcdRectangle : public IfDcDraw
 ///@{
  public:
 	/**
-	* 	�`���v�����܂��B
-	* 	���̊֐��́A pIfDcdTarget �ɁA�`����s���܂��B
+	* 	描画を要求します。
+	* 	この関数は、 pIfDcdTarget に、描画を行います。
 	*
-	*	�y�I�[�o���C�h�z
-	*	  �n���ꂽ�̈���A�u���V�œh��Ԃ��܂��B
+	*	【オーバライド】
+	*	  渡された領域を、ブラシで塗りつぶします。
 	* @param pIfDcdTarget  [in]
-	* 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	* 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	* @return
-	* 	�`����s�����ꍇ�͐^�E���̗̈�ւ̕`�悪�ł��Ȃ������ꍇ�͋U�ł��B
+	* 	描画を行った場合は真・この領域への描画ができなかった場合は偽です。
 	*/
 	virtual bool DcDraw( IfDcdTarget* pIfDcdTarget ) ;
 	
 	/**
-	* 	���̃I�u�W�F�N�g���`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	* 	���̑傫���𒲂ׂ邱�Ƃ��ł��܂��B
-	* 	�֐��Ăяo������������ IfDcDraw �I�u�W�F�N�g��`�悷��ꍇ�ɂ́A
-	* 	�֐��Ăяo�����́A���̊֐��ŃA�C�e���̑傫���𒲂ׂāA
-	* 	�K�؂ȃ��C�A�E�g���l���Ă���ADcDraw() �����s���邱�Ƃ��ł��܂��B
+	* 	このオブジェクトが描画するアイテムの大きさが決まっている場合は、
+	* 	その大きさを調べることができます。
+	* 	関数呼び出し元が複数の IfDcDraw オブジェクトを描画する場合には、
+	* 	関数呼び出し元は、この関数でアイテムの大きさを調べて、
+	* 	適切なレイアウトを考えてから、DcDraw() を実行することができます。
 	*
-	*	�y�I�[�o���C�h�z
-	*	  ���̃N���X�ł́A�T�|�[�g���Ă��܂���B
+	*	【オーバライド】
+	*	  このクラスでは、サポートしていません。
 	* @param pIfDcdTarget [in]
-	* 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	* 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	* @param pCdDcdSizeXy [out]
-	* 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	* 	���̊֐��͂��̃A�h���X�ɁA���̃A�C�e���̃T�C�Y��Ԃ��܂��B
-	* 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��Ȃ��ꍇ�́A
-	* 	���̒l�͕s��ł��B
+	* 	このオブジェクトの描画するアイテムの大きさが決まっている場合は、
+	* 	この関数はこのアドレスに、そのアイテムのサイズを返します。
+	* 	このオブジェクトの描画するアイテムの大きさが決まっていない場合は、
+	* 	この値は不定です。
 	* @return
-	* 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��āA
-	* 	���̑傫���� *pCdDcdSizeXy�ɏ������񂾏ꍇ�͐^�ł��B
-	* 	�����łȂ��ꍇ�́A�U�ł��B
+	* 	このオブジェクトの描画するアイテムの大きさが決まっていて、
+	* 	その大きさを *pCdDcdSizeXyに書き込んだ場合は真です。
+	* 	そうでない場合は、偽です。
 	*	@n
-	*	�y�I�[�o���C�h�z  �U��Ԃ��܂��B
+	*	【オーバライド】  偽を返します。
 	*/
 	virtual bool getItemSize( IfDcdTarget* pIfDcdTarget , 
 							CdDcdSizeXy* pCdDcdSizeXy ) ;
@@ -172,7 +172,7 @@ class CDcdRectangle : public IfDcDraw
 // ********************************
  public:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	virtual CdPenProp	getCdPenProp(){	return m_CdPenProp	;	} ;

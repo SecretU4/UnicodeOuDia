@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -84,7 +84,7 @@ using namespace std ;
 //	CConverter_WinGdi
 // ****************************************************************
 	// ********************************
-	//	@name ���W�������֐��Q
+	//	@name 座標を扱う関数群
 	// ********************************
 void CConverter_WinGdi::toCdDcdPosXy( const POINT& aPOINT , CdDcdPosXy* pCdDcdPosXy ) 
 {
@@ -113,7 +113,7 @@ void CConverter_WinGdi::toRECT( const CdDcdZoneXy& aCdDcdZoneXy , RECT* pRECT )
 }
 
 	// ********************************
-	//	@name Color�������֐��Q
+	//	@name Colorを扱う関数群
 	// ********************************
 CdColorProp CConverter_WinGdi::CdColorPropOf( COLORREF value )const
 {
@@ -139,32 +139,32 @@ void CConverter_WinGdi::toLOGFONT( const CdFontProp& aCdFontProp ,
 	memset( pLOGFONT , 0 , sizeof(*pLOGFONT) ) ;
 	
 	// --------------------------------
-	//	�����̑���(pLOGFONT->lfHeight)��ݒ�
+	//	高さの属性(pLOGFONT->lfHeight)を設定
 	// --------------------------------
 	if ( aCdFontProp.getPointTextHeight() > 0 )
 	{
-		//	�t�H���g�̍������|�C���g�P�ʂŎw�肳��Ă���ꍇ
+		//	フォントの高さがポイント単位で指定されている場合
 
 		HDC	hDcReleaseObligatory = NULL ;
 		if ( hDc == NULL ){
 			hDcReleaseObligatory = GetDC( NULL ) ;
 			hDc = hDcReleaseObligatory ;
 		}
-		//hDc = �|�C���g�P�ʂ���f�o�C�X�P�ʂɕϊ����邽�߂�DC�B
-		//	������DC���w�肳��Ă��Ȃ������ꍇ�́A
-		//	�X�N���[��DC�ƂȂ�܂��B
+		//hDc = ポイント単位からデバイス単位に変換するためのDC。
+		//	引数でDCが指定されていなかった場合は、
+		//	スクリーンDCとなります。
 
 		// --------------------------------	
 		int iDp = CDcDeviceUnitSizeY( hDc ).
 						setPointSize( aCdFontProp.getPointTextHeight() ).
 						getDeviceUnitSize() ;
-		//iDp=�|�C���g�P�ʂ̍������A�f�o�C�X�P�ʂɕϊ����܂����B
+		//iDp=ポイント単位の高さを、デバイス単位に変換しました。
 
 		CdDcdSizeXy aSize = CConverter_WinGdi().DPtoLP( CdDcdSizeXy( 0 , iDp ) ,hDc ) ;
-		//aSize.Y =�f�o�C�X�P�ʂ̍������A�_���P�ʂɂ��܂����B
+		//aSize.Y =デバイス単位の高さを、論理単位にしました。
 
 		pLOGFONT->lfHeight = -abs( aSize.getY() ) ;
-		//�e�L�X�g�̍����Ƃ��āA�_���P�ʂ̍������w��B
+		//テキストの高さとして、論理単位の高さを指定。
 
 		// --------------------------------		
 		if ( hDcReleaseObligatory != NULL ){
@@ -182,11 +182,11 @@ void CConverter_WinGdi::toLOGFONT( const CdFontProp& aCdFontProp ,
 	}
 
 	// --------------------------------
-	//	�����ȊO�̑�����ݒ�
+	//	高さ以外の属性を設定
 	// --------------------------------
 //note
-//	lfCharSet = SHIFTJIS_CHARSET �Ƃ��ăt�H���g�𐶐�����ƁA
-//	���������t�H���g�́A���{��̕\���ł���t�H���g�Ɍ��肳��܂��B
+//	lfCharSet = SHIFTJIS_CHARSET としてフォントを生成すると、
+//	生成されるフォントは、日本語の表示できるフォントに限定されます。
 //	pLOGFONT->lfCharSet = SHIFTJIS_CHARSET;
 
 	pLOGFONT->lfCharSet = DEFAULT_CHARSET;
@@ -217,7 +217,7 @@ void CConverter_WinGdi::toLOGFONT( const CdFontProp& aCdFontProp ,
 	{
 		pLOGFONT->lfStrikeOut = TRUE ;
 	}
-	//	�p�x���w��
+	//	角度を指定
 	pLOGFONT->lfEscapement = aCdFontProp.getEscapement() ;
 }
 
@@ -260,14 +260,14 @@ void CConverter_WinGdi::toCdFontProp(
 	if ( iRv >= 0 ){
 		hFont = (HFONT)GetStockObject( fnObject ) ;
 		if ( hFont == NULL ){
-			iRv = -1 ;	//	fnObject�͕s���ł�
+			iRv = -1 ;	//	fnObjectは不正です
 		}
 	} 
 	LOGFONT	aLOGFONT ;
 	if ( iRv >= 0 ){
 		int iResult = GetObject( hFont , sizeof(aLOGFONT) , &aLOGFONT ) ;
 		if ( iResult == 0 ){
-			iRv = -2 ;	//	GetObject�Ɏ��s
+			iRv = -2 ;	//	GetObjectに失敗
 		}
 	}
 	if ( iRv >= 0 ){
@@ -317,18 +317,18 @@ CdDcdSizeXy	CConverter_WinGdi::DrawtextCalcrect(
 	}
 
 	// --------------------------------
-	//	�t�H���g�̐���
+	//	フォントの生成
 	// --------------------------------
 	HFONT	hFont = NULL ;
 	if ( iRv >= 0 ){
 		hFont = aConverter.CreateFont( aCdDrawTextProp.getCdFontProp() , 
 									hDc ) ;
 		if ( hFont == NULL ){
-			iRv = -1 ;	//	�t�H���g�̍쐬�Ɏ��s���܂����B
+			iRv = -1 ;	//	フォントの作成に失敗しました。
 		}
 	}
 	//--------------------------------
-	//	GDI�I�u�W�F�N�g�̑I��
+	//	GDIオブジェクトの選択
 	//--------------------------------
 	bool	bSelectTool = false ;
 	COLORREF	colorrefLTextSid = 0xffffffff;
@@ -348,7 +348,7 @@ CdDcdSizeXy	CConverter_WinGdi::DrawtextCalcrect(
 	
 	if ( iRv >= 0 ){
 		//--------------------------------
-		//	�e�L�X�g�̉����̌v�Z
+		//	テキストの横幅の計算
 		//--------------------------------
 		{
 			tstring	strLs ;
@@ -357,18 +357,18 @@ CdDcdSizeXy	CConverter_WinGdi::DrawtextCalcrect(
 			aFlag.setCalcrect( CdDrawTextFormat2::CALCRECT )
 				.setVertical( CdDrawTextFormat::V_SINGLELINT_TOP )
 				.setEllipses( CdDrawTextFormat::NOELLIPSIS )  ;
-			//aFlag = �w��̃t�H�[�}�b�g��P��s�E
-			//	�ȗ��L���Ȃ��E�T�C�Y�v�Z�ɏC�����܂���
+			//aFlag = 指定のフォーマットを単一行・
+			//	省略記号なし・サイズ計算に修正しました
 
 			RECT	aRect ;
 			memset( &aRect , 0 , sizeof(aRect) ) ;
 			DrawText( hDc , 
 					strLs.c_str() , -1 , &aRect , aFlag ) ;
-				//LRect.right = �e�L�X�g m_strExtent �̕�
+				//LRect.right = テキスト m_strExtent の幅
 			aCdDcdSizeXy.setX( aRect.right - aRect.left ) ;
 		}
 		//--------------------------------
-		//	�e�L�X�g�̍����̌v�Z
+		//	テキストの高さの計算
 		//--------------------------------
 		{
 			tstring	strLs ;
@@ -379,20 +379,20 @@ CdDcdSizeXy	CConverter_WinGdi::DrawtextCalcrect(
 				}
 				strLs += strExtent.c_str() ;
 			}
-				//strLs = m_strExtent���w��̍s���������c�ɕ��ׂ�������
+				//strLs = m_strExtentを指定の行数分だけ縦に並べた文字列
 			
 			CdDrawTextFormat2	aFlag( aCdDrawTextProp.getCdDrawTextFormat() ) ;
 			aFlag.setCalcrect( CdDrawTextFormat2::CALCRECT )
 				.setVertical( CdDrawTextFormat::V_MULTILINE )
 				.setEllipses( CdDrawTextFormat::NOELLIPSIS )  ;
-			//aFlag = �w��̃t�H�[�}�b�g�𕡐��s�E
-			//	�ȗ��L���Ȃ��E�T�C�Y�v�Z�ɏC�����܂���
+			//aFlag = 指定のフォーマットを複数行・
+			//	省略記号なし・サイズ計算に修正しました
 
 			RECT	aRect ;
 			memset( &aRect , 0 , sizeof(aRect) ) ;
 			DrawText( hDc , 
 				strLs.c_str() , -1 , &aRect , aFlag ) ;
-			//LRect.bottom = �e�L�X�g m_strExtent �̍���
+			//LRect.bottom = テキスト m_strExtent の高さ
 			
 			aCdDcdSizeXy.setY( aRect.bottom - aRect.top ) ;
 		}		
@@ -486,14 +486,14 @@ void CConverter_WinGdi::toCdPenProp(
 	if ( iRv >= 0 ){
 		hGdiobj = GetStockObject( fnObject ) ;
 		if ( hGdiobj == NULL ){
-			iRv = -1 ;	//	fnObject�͕s���ł�
+			iRv = -1 ;	//	fnObjectは不正です
 		}
 	} 
 	LOGPEN	aStruct ;
 	if ( iRv >= 0 ){
 		int iResult = GetObject( hGdiobj , sizeof(aStruct) , &aStruct ) ;
 		if ( iResult == 0 ){
-			iRv = -2 ;	//	GetObject�Ɏ��s
+			iRv = -2 ;	//	GetObjectに失敗
 		}
 	}
 	if ( iRv >= 0 ){
@@ -525,7 +525,7 @@ Ou<CGdiHPenHolder> CConverter_WinGdi::createGdiHPenHolder(  const CdPenProp& aCd
 
 
 // ********************************
-///	@name Brush�������֐��Q
+///	@name Brushを扱う関数群
 // ********************************
 const struct
 {
@@ -580,14 +580,14 @@ void CConverter_WinGdi::toCdBrushProp(
 	if ( iRv >= 0 ){
 		hGdiobj = GetStockObject( fnObject ) ;
 		if ( hGdiobj == NULL ){
-			iRv = -1 ;	//	fnObject�͕s���ł�
+			iRv = -1 ;	//	fnObjectは不正です
 		}
 	} 
 	LOGBRUSH	aStruct ;
 	if ( iRv >= 0 ){
 		int iResult = GetObject( hGdiobj , sizeof(aStruct) , &aStruct ) ;
 		if ( iResult == 0 ){
-			iRv = -2 ;	//	GetObject�Ɏ��s
+			iRv = -2 ;	//	GetObjectに失敗
 		}
 	}
 	if ( iRv >= 0 ){
@@ -617,7 +617,7 @@ Ou<CGdiHBrushHolder> CConverter_WinGdi::createGdiHBrushHolder(  const CdBrushPro
 
 
 	// ********************************
-	//@name	�_�����W�ƃf�o�C�X���W�̕ϊ�	
+	//@name	論理座標とデバイス座標の変換	
 	// ********************************
 	///@{
 CdDcdPosXy CConverter_WinGdi::DPtoLP( const CdDcdPosXy& value , HDC hDc )
@@ -689,7 +689,7 @@ CdDcdZoneXy CConverter_WinGdi::LPtoDP( const CdDcdZoneXy& value , HDC hDc )
 
 
 // ****************************************************************
-//	���ʊ֐�
+//	普通関数
 // ****************************************************************
 std::string	DeviceCapsToString( HDC hDc )
 {
@@ -701,25 +701,25 @@ std::string	DeviceCapsToString( HDC hDc )
 		int iValue = GetDeviceCaps( hDc , TECHNOLOGY ) ;
 		strRv = "TECHNOLOGY=" ;
 		switch ( iValue ) {
-		 case DT_PLOTTER :	//�x�N�^�v���b�^ 
+		 case DT_PLOTTER :	//ベクタプロッタ 
 			strRv += "DT_PLOTTER" ;
 			break ;
-		 case DT_RASDISPLAY :	//���X�^�f�B�X�v���C 
+		 case DT_RASDISPLAY :	//ラスタディスプレイ 
 			strRv += "DT_RASDISPLAY" ;
 			break ;
-		 case DT_RASPRINTER :	//���X�^�v�����^ 
+		 case DT_RASPRINTER :	//ラスタプリンタ 
 			strRv += "DT_RASPRINTER" ;
 			break ;
-		 case DT_RASCAMERA :	//���X�^�J���� 
+		 case DT_RASCAMERA :	//ラスタカメラ 
 			strRv += "DT_RASCAMERA" ;
 			break ;
-		 case DT_CHARSTREAM :	//�����X�g���[�� 
+		 case DT_CHARSTREAM :	//文字ストリーム 
 			strRv += "DT_CHARSTREAM" ;
 			break ;
-		 case DT_METAFILE :	//���^�t�@�C�� 
+		 case DT_METAFILE :	//メタファイル 
 			strRv += "DT_METAFILE" ;
 			break ;
-		 case DT_DISPFILE :	//�f�B�X�v���C�t�@�C��
+		 case DT_DISPFILE :	//ディスプレイファイル
 			strRv += "DT_DISPFILE" ;
 			break ;
 		} 

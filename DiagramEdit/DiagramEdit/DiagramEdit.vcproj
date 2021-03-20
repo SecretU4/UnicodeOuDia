@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="shift_jis"?>
+<?xml version="1.0" encoding="utf-8"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
@@ -315,7 +315,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo ConvFileDllとヘルプをsetupプロジェクトディレクトリにコピーします&#x0D;&#x0A;mkdir $(SolutionDir)DiagramEdit_setup\CollectedOnBuild&#x0D;&#x0A;copy /Y $(ProjectDir)..\$(ConfigurationName)\*.dll $(SolutionDir)DiagramEdit_setup\CollectedOnBuild&#x0D;&#x0A;copy /Y $(ProjectDir)..\$(ConfigurationName)\*.chm $(SolutionDir)DiagramEdit_setup\CollectedOnBuild&#x0D;&#x0A;&#x0D;&#x0A;"
+				CommandLine="echo ConvFileDll縺ｨ繝倥Ν繝励ｒsetup繝励Ο繧ｸ繧ｧ繧ｯ繝医ョ繧｣繝ｬ繧ｯ繝医Μ縺ｫ繧ｳ繝斐�ｼ縺励∪縺�&#x0D;&#x0A;mkdir $(SolutionDir)DiagramEdit_setup\CollectedOnBuild&#x0D;&#x0A;copy /Y $(ProjectDir)..\$(ConfigurationName)\*.dll $(SolutionDir)DiagramEdit_setup\CollectedOnBuild&#x0D;&#x0A;copy /Y $(ProjectDir)..\$(ConfigurationName)\*.chm $(SolutionDir)DiagramEdit_setup\CollectedOnBuild&#x0D;&#x0A;&#x0D;&#x0A;"
 			/>
 		</Configuration>
 	</Configurations>

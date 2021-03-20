@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //	$Id: CPropEditUI_Ekijikoku.h 357 2016-08-18 16:59:16Z okm $
@@ -88,49 +88,49 @@ namespace ViewJikokuhyou{
 //	UIDATA_EkiJikoku
 // ********************************
 /**
-	CPropEditUi_Ekijikoku �ŕҏW����v���p�e�B�� UIDATA �\���̂ł��B
+	CPropEditUi_Ekijikoku で編集するプロパティの UIDATA 構造体です。
 */
 struct UIDATA_EkiJikoku
 {
 	/**
-	 �w��
-	 -	 0: �^�s�Ȃ�
-	 -	 1: ���
-	 -	 2: �ʉ�
-	 -	 3: �o�R�Ȃ�
-	 -	-1: �I���Ȃ�
+	 駅扱
+	 -	 0: 運行なし
+	 -	 1: 停車
+	 -	 2: 通過
+	 -	 3: 経由なし
+	 -	-1: 選択なし
 	*/
 	int iEkiatsukai ;
 	
 	/**
-	 ������
+	 着時刻
 	*/
 	string strChakujikoku ;
 	
 	/**
-	 strChakujikoku �̕ҏW�̗L���E�����B
-	 true �Ȃ�L���ł� 
+	 strChakujikoku の編集の有効・無効。
+	 true なら有効です 
 	*/
 	bool bChakujikokuIsEnable ;
 
 	/**
-	 ������
+	 発時刻
 	*/
 	string strHatsujikoku ;
 	
 	/**
-	 strHatsujikoku �̕ҏW�̗L���E�����B
-	 true �Ȃ�L���ł� 
+	 strHatsujikoku の編集の有効・無効。
+	 true なら有効です 
 	*/
 	bool bHatsujikokuIsEnable ;
 
 	/**
-	 �����̌J�グ�E�J�艺����ON/OFF�B
+	 時刻の繰上げ・繰り下げのON/OFF。
 	*/
 	bool bModifyHatsujikoku ;
 
 	UIDATA_EkiJikoku() 
-		: iEkiatsukai( 0 )	//: �^�s�Ȃ�
+		: iEkiatsukai( 0 )	//: 運行なし
 		, bChakujikokuIsEnable( true )
 		, bHatsujikokuIsEnable( true )
 		, bModifyHatsujikoku( true )
@@ -141,55 +141,55 @@ struct UIDATA_EkiJikoku
 
 /**
 @brief
-  ��Ԃ̉w�����̃v���p�e�B�ҏW���s���N���X�ł��B
+  列車の駅時刻のプロパティ編集を行うクラスです。
 
-  ���̃N���X�͒��ۃN���X�ł��B
-  ���̃N���X�́A�g�p����UI��(��FWindows,MFC)�ɂ͈ˑ����܂���B
-�@�N���X���[�U�[�́A���̃N���X���p�����āA
- �w�I�[�o�[���C�g�̕K�v�ȃ��\�b�h2-UI�Ɉˑ����鏈���x�̉��z�֐��ɁA
- UI���Ɉˑ������������������Ă��������B
+  このクラスは抽象クラスです。
+  このクラスは、使用するUI環境(例：Windows,MFC)には依存しません。
+　クラスユーザーは、このクラスを継承して、
+ 『オーバーライトの必要なメソッド2-UIに依存する処理』の仮想関数に、
+ UI環境に依存した処理を実装してください。
 */
 class CPropEditUi_EkiJikoku : public CPropEditUi2<UIDATA_EkiJikoku>
 {
 
 public:
 	// ********************************
-	///@name �G���[���b�Z�[�W
+	///@name エラーメッセージ
 	// ********************************
 	///@{
-	/// �������̓��͂�����������܂���
+	/// 着時刻の入力が正しくありません
 	static const char* const ERRMSG_INVALID_CHAKUJIKOKU ;
 
-	/// �������̓��͂�����������܂���
+	/// 発時刻の入力が正しくありません
 	static const char* const ERRMSG_INVALID_HATSUJIKOKU ;
 	///@}
 
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-	�@Target(�ҏW�Ώۂ̃v���p�e�B��ێ�����ϐ��ւ̃|�C���^)�B 
-	�@�R���X�g���N�^�Ō��܂�܂��B
+	　Target(編集対象のプロパティを保持する変数へのポインタ)。 
+	　コンストラクタで決まります。
 
-	 �@��Ԃ��i�[�����R���e�i�ł��B
+	 　列車を格納したコンテナです。
 	*/
 	Mu<CentDedRessya*>* m_pTarget ;
 	/**
-	 �����̌J�グ�E�J�艺����ON/OFF��ێ�����ϐ��ւ̃|�C���^�B
+	 時刻の繰上げ・繰り下げのON/OFFを保持する変数へのポインタ。
 	*/
 	bool* m_pbModifyHatsujikoku ;
 
 
 private:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-		�ҏW�Ώۂ̉w�����̉wOrder�ł��B
-		�R���X�g���N�^�Ō��܂�܂��B
+		編集対象の駅時刻の駅Orderです。
+		コンストラクタで決まります。
 	*/
 	int m_iEkiOrder ; 
 	///@}
@@ -197,84 +197,84 @@ private:
 
 protected:
 	// ================================
-	/** @name �I�[�o�[���C�g�̕K�v�ȃ��\�b�h1-Target�Ɉˑ����鏈��
-		Target �� UiData �Ƃ̊Ԃ̃f�[�^�����̂��߂̃��\�b�h�ł��B
-		���̃O���[�v�̃��\�b�h�́A Ui �̊��ɂ͈ˑ����܂���B
+	/** @name オーバーライトの必要なメソッド1-Targetに依存する処理
+		Target と UiData との間のデータ交換のためのメソッドです。
+		このグループのメソッドは、 Ui の環境には依存しません。
 	*/
 	// ================================
 	///@{
 	
 	/**
-		UiData ���A�V�KTarget�̃v���p�e�B�̕ҏW�̂��߂�
-		���������܂��B
+		UiData を、新規Targetのプロパティの編集のために
+		初期化します。
 		
-		m_bNewItem �� true �̏ꍇ�ɂ����A CPropEditUi2::StartEdit() 
-		����Ăяo����܂��B
+		m_bNewItem が true の場合にだけ、 CPropEditUi2::StartEdit() 
+		から呼び出されます。
 	
-		�ʏ�A UiData �́AUIDATA�̃f�t�H���g�R���X�g���N�^�ŏ���������܂��B
-		�N���X���[�U�[�́AUiData �ɁA�f�t�H���g�R���X�g���N�^�ƈقȂ�
-		�����l��^�������ꍇ�́A���̃����o�֐����I�[�o�[���C�h���Ă��������B
+		通常、 UiData は、UIDATAのデフォルトコンストラクタで初期化されます。
+		クラスユーザーは、UiData に、デフォルトコンストラクタと異なる
+		初期値を与えたい場合は、このメンバ関数をオーバーライドしてください。
 
 	@param pUiData [out]
-		UiData �̃I�u�W�F�N�g�B
+		UiData のオブジェクト。
 	*/
 	//virtual void InitUiData( UIDATA* pUiData ) ;
 
 	/**
-		UiData �ɁATarget�̑����𔽉f���܂��B
+		UiData に、Targetの属性を反映します。
 		
-		m_bNewItem �� false �̏ꍇ�ɂ����A CPropEditUi2::StartEdit() 
-		����Ăяo����܂��B
+		m_bNewItem が false の場合にだけ、 CPropEditUi2::StartEdit() 
+		から呼び出されます。
 		
-		�N���X���[�U�[�́A���̊֐����I�[�o�[���C�h���āA
-		Target �̓��e��UiData �ɔ��f���鏈�����������Ă��������B
+		クラスユーザーは、この関数をオーバーライドして、
+		Target の内容をUiData に反映する処理を実装してください。
 
 	@param pUiData [out]
-		UiData �̃I�u�W�F�N�g�B
+		UiData のオブジェクト。
 	*/
 	virtual void UiDataFromTarget( UIDATA* pUiData ) ; 
 
 	/**
-		UiData �̓��e�𐳋K�����܂��B
+		UiData の内容を正規化します。
 		
 		CPropEditUi2::StartEdit(),CPropEditUi2::OnUiChanged(),
 		CPropEditUi2::OnUiDataChanged(),CPropEditUi2::EndEdit()
-		����Ăяo����܂��B
+		から呼び出されます。
 		
-		�N���X���[�U�[�́A���̊֐����I�[�o�[���C�h���āA
-		UiData�̃����o�̓��e�𐳋K�����鏈�����������Ă��������B
+		クラスユーザーは、この関数をオーバーライドして、
+		UiDataのメンバの内容を正規化する処理を実装してください。
 		
-		���̊֐��ł́A���͓��e�ɑ΂���G���[���b�Z�[�W�̕\���͂����߂��܂���B
-		�G���[���b�Z�[�W�̕\���́ACheckUiData() �ōs���Ă��������B
+		この関数では、入力内容に対するエラーメッセージの表示はお勧めしません。
+		エラーメッセージの表示は、CheckUiData() で行ってください。
 	
-	���K���̗�
+	正規化の例
 	 --------------------------------
-	-	�e�L�X�g�{�b�N�X�ɑS�p�œ��͂��ꂽ�e�L�X�g���A���p�ɕϊ�����B
-	-	����`�F�b�N�{�b�N�X��ON�̂Ƃ��ɂ̓e�L�X�g�{�b�N�X��L���A
-		OFF�̎��ɂ͖���(�O���[)�ɂ���
+	-	テキストボックスに全角で入力されたテキストを、半角に変換する。
+	-	あるチェックボックスがONのときにはテキストボックスを有効、
+		OFFの時には無効(グレー)にする
 
 	@param pUiData [in,out]
-		UiData �̃I�u�W�F�N�g�B
+		UiData のオブジェクト。
 	@param pUiDataPrev [in]
-		�O��� AdjustUiData() �I����� UiData �̃R�s�[�ł��B
-		���̊֐��ł́A pUiDataPrev �� pUiData �̒l���r���邱�Ƃɂ��A
-		�u���񃆁[�U�[�ɂ���ĕύX���ꂽUiData�����o�[�v�𔻒f���邱�Ƃ�
-		�ł��܂��B
-		���̊֐��� CPropEditUi2::StartEdit() ����Ăяo���ꂽ�ꍇ�́A
-		���̈�����NULL�ƂȂ�܂��B
+		前回の AdjustUiData() 終了後の UiData のコピーです。
+		この関数では、 pUiDataPrev と pUiData の値を比較することにより、
+		「今回ユーザーによって変更されたUiDataメンバー」を判断することが
+		できます。
+		この関数が CPropEditUi2::StartEdit() から呼び出された場合は、
+		この引数はNULLとなります。
 	@param bStartEdit [in]
-		- true: ���̊֐��́A CPropEditUi2::StartEdit() ����Ăяo����Ă��܂��B
-			���̏ꍇ�́ApUiDataPrev �͖����ł��B
-			�֐��ł́A UiData �̂��ׂẴf�[�^�̐��K�����s���Ă��������B
-		- false: ���̊֐��́A CPropEditUi2::StartEdit() �ȊO����
-			�Ăяo����Ă��܂��B
-			pUiData �� pUiDataPrev ���r���邱�Ƃɂ��
-			����ω����� UiData �����o�[�ϐ��𔻒f���邱�Ƃ��o���܂��B
-			���̊֐��ł́AUiData �̂����A����ω������f�[�^�����o�[������
-			���K�����Ă��������B
+		- true: この関数は、 CPropEditUi2::StartEdit() から呼び出されています。
+			この場合は、pUiDataPrev は無効です。
+			関数では、 UiData のすべてのデータの正規化を行ってください。
+		- false: この関数は、 CPropEditUi2::StartEdit() 以外から
+			呼び出されています。
+			pUiData と pUiDataPrev を比較することにより
+			今回変化した UiData メンバー変数を判断することが出来ます。
+			この関数では、UiData のうち、今回変化したデータメンバーだけを
+			正規化してください。
 	
 	
-	���̊֐��̃R�[�f�B���O�̗�
+	この関数のコーディングの例
 	 --------------------------------
 	@code
 	virtual void AdjustUiData( 
@@ -282,9 +282,9 @@ protected:
 		const UIDATA* pUiDataPrev , 
 		bool bStartEdit )
 	{
-		if ( bStartEdit || pUiDataPrev->�����o�[�� != pUiData->�����o�[��)
+		if ( bStartEdit || pUiDataPrev->メンバー名 != pUiData->メンバー名)
 		{
-			// pUiData->�����o�[�� �̐��K�����s���R�[�h�B
+			// pUiData->メンバー名 の正規化を行うコード。
 		}
 	}
 	@endcode
@@ -295,42 +295,42 @@ protected:
 		bool bStartEdit );
 
 	/**
-		UiData �̓��e�����؂��A��肪����΃G���[���b�Z�[�W��\�����܂��B
+		UiData の内容を検証し、問題があればエラーメッセージを表示します。
 		
 		CPropEditUi2::EndEdit()
-		����Ăяo����܂��B
+		から呼び出されます。
 		
-		�N���X���[�U�[�́A���̊֐����I�[�o�[���C�h���āA
-		UiData�̃����o�̓��e�����؂��鏈�����������Ă��������B
-		���͓��e�ɖ�肪����΁AShowError()�ŃG���[���b�Z�[�W��\�����A
-		SetFocus()�ŁA�t�H�[�J�X����̂���UI�ɐݒ肵�Ă��������B
+		クラスユーザーは、この関数をオーバーライドして、
+		UiDataのメンバの内容を検証する処理を実装してください。
+		入力内容に問題があれば、ShowError()でエラーメッセージを表示し、
+		SetFocus()で、フォーカスを問題のあるUIに設定してください。
 		
-		�V�K�I�u�W�F�N�g�ɑ΂���v���p�e�B�̕ҏW�̏ꍇ�́A
-		UiData�̂��ׂẴ����o�[�����؂���K�v������܂��B
-		�܂��A�K�{�̃����o�[���u�����N�ł���ꍇ�́A
-		�G���[���b�Z�[�W��\������ׂ��ł��B
+		新規オブジェクトに対するプロパティの編集の場合は、
+		UiDataのすべてのメンバーを検証する必要があります。
+		また、必須のメンバーがブランクである場合は、
+		エラーメッセージを表示するべきです。
 
-		�����I�u�W�F�N�g�ɑ΂���v���p�e�B�ҏW�̏ꍇ�́A
-		���[�U�[�ɂ���Ēl�̕ύX���ꂽ�����o�[�݂̂����؂��Ă��������B
-		pUiData �� pUiDataStartEdit �Ƃ̊ԂňႢ�̂���f�[�^�����o�[���A
-		���[�U�[�ɂ���Ēl�̕ύX���ꂽ�����o�[�ł��B
+		既存オブジェクトに対するプロパティ編集の場合は、
+		ユーザーによって値の変更されたメンバーのみを検証してください。
+		pUiData と pUiDataStartEdit との間で違いのあるデータメンバーが、
+		ユーザーによって値の変更されたメンバーです。
 		
 	@param bNewItem
-		-true: �V�K�I�u�W�F�N�g�ɑ΂���A�v���p�e�B�̕ҏW
-		-false: �����I�u�W�F�N�g�ɑ΂���A�v���p�e�B�̕ҏW
+		-true: 新規オブジェクトに対する、プロパティの編集
+		-false: 既存オブジェクトに対する、プロパティの編集
 	@param pUiData [in]
-		UiData �̃I�u�W�F�N�g�B
+		UiData のオブジェクト。
 	@param pUiDataStartEdit [in]
-		StartEdit()�I����� UiData �̃R�s�[�ł��B
-		���̊֐��ł́A pUiDataStartEdit �� pUiData �̒l���r���邱�Ƃɂ��A
-		�u���[�U�[�ɂ���ĕύX���ꂽUiData�����o�[�v�𔻒f���邱�Ƃ�
-		�ł��܂��B
+		StartEdit()終了後の UiData のコピーです。
+		この関数では、 pUiDataStartEdit と pUiData の値を比較することにより、
+		「ユーザーによって変更されたUiDataメンバー」を判断することが
+		できます。
 	@return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		0�ȊO��Ԃ����ꍇ�A�߂�l�́ACPropEditUi2::EndEdit() ��
-		�߂�l�ƂȂ�܂��B
+		成功したら0以上、エラーなら負の数です。
+		0以外を返した場合、戻り値は、CPropEditUi2::EndEdit() の
+		戻り値となります。
 		
-	���̊֐��̃R�[�f�B���O�̗�
+	この関数のコーディングの例
 	 --------------------------------
 	@code
 	virtual int CheckUiData( 
@@ -340,14 +340,14 @@ protected:
 	{
 		int iRv = 0 ; 
 		
-		if ( bNewItem || pUiDataStartEdit->�����o�[�� != pUiData->�����o�[��)
+		if ( bNewItem || pUiDataStartEdit->メンバー名 != pUiData->メンバー名)
 		{
-			//	pUiData->�����o�[�� �̌��؂��s���R�[�h�B
+			//	pUiData->メンバー名 の検証を行うコード。
 			
-			if ( pUiData->�����o�[�� �ɃG���[������ )
+			if ( pUiData->メンバー名 にエラーがあり )
 			{
-				ShowError( �G���[�̗��R������������ );
-				SetFocus( offsetof( UIDATA , �����o�[�� ) );
+				ShowError( エラーの理由を示す文字列 );
+				SetFocus( offsetof( UIDATA , メンバー名 ) );
 				iRv = -1 ;
 			}
 		}
@@ -361,46 +361,46 @@ protected:
 		const UIDATA* pUiDataStartEdit ) ;
 	
 	/**
-		UiData �̓��e���ATarget�ɔ��f���܂��B
+		UiData の内容を、Targetに反映します。
 		
 		CPropEditUi2::EndEdit()
-		����Ăяo����܂��B
+		から呼び出されます。
 		
-		�N���X���[�U�[�́A���̊֐����I�[�o�[���C�h���āA
-		UiData�̃����o�̓��e���ATarget �̃v���p�e�B�ɔ��f���鏈����
-		�������Ă��������B
+		クラスユーザーは、この関数をオーバーライドして、
+		UiDataのメンバの内容を、Target のプロパティに反映する処理を
+		実装してください。
 		
-		�V�K�I�u�W�F�N�g�ɑ΂���v���p�e�B�̕ҏW�̏ꍇ�́A
-		UiData�̂��ׂẴ����o�[���ATarget�ɔ��f����K�v������܂��B
+		新規オブジェクトに対するプロパティの編集の場合は、
+		UiDataのすべてのメンバーを、Targetに反映する必要があります。
 
-		�����I�u�W�F�N�g�ɑ΂���v���p�e�B�ҏW�̏ꍇ�́A
-		���[�U�[�ɂ���Ēl�̕ύX���ꂽ�����o�[�݂̂�
-		Target�ɔ��f���Ă��������B
-		pUiData �� pUiDataStartEdit �Ƃ̊ԂňႢ�̂���f�[�^�����o�[���A
-		���[�U�[�ɂ���Ēl�̕ύX���ꂽ�����o�[�ł��B
+		既存オブジェクトに対するプロパティ編集の場合は、
+		ユーザーによって値の変更されたメンバーのみを
+		Targetに反映してください。
+		pUiData と pUiDataStartEdit との間で違いのあるデータメンバーが、
+		ユーザーによって値の変更されたメンバーです。
 		
-		CPropEditUi2 �́A CheckUiData() ������I��������ɂ���
-		UiDataToTarget() ���Ăяo���܂��B
-		�]���܂��āA���̊֐��ł́ACheckUiData() �ł���Ă���悤��
-		�l�̌��؂��s���K�v�͂���܂���B
+		CPropEditUi2 は、 CheckUiData() が正常終了した後にだけ
+		UiDataToTarget() を呼び出します。
+		従いまして、この関数では、CheckUiData() でやっているような
+		値の検証を行う必要はありません。
 		
 	@param bNewItem [in]
-		-true: �V�K�I�u�W�F�N�g�ɑ΂���A�v���p�e�B�̕ҏW
-		-false: �����I�u�W�F�N�g�ɑ΂���A�v���p�e�B�̕ҏW
+		-true: 新規オブジェクトに対する、プロパティの編集
+		-false: 既存オブジェクトに対する、プロパティの編集
 	@param pUiData [in]
-		UiData �̃I�u�W�F�N�g�B
+		UiData のオブジェクト。
 	@param pUiDataStartEdit [in]
-		StartEdit()�I����� UiData �̃R�s�[�ł��B
-		���̊֐��ł́A pUiDataStartEdit �� pUiData �̒l���r���邱�Ƃɂ��A
-		�u���[�U�[�ɂ���ĕύX���ꂽUiData�����o�[�v�𔻒f���邱�Ƃ�
-		�ł��܂��B
+		StartEdit()終了後の UiData のコピーです。
+		この関数では、 pUiDataStartEdit と pUiData の値を比較することにより、
+		「ユーザーによって変更されたUiDataメンバー」を判断することが
+		できます。
 	@return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		0�ȊO��Ԃ����ꍇ�A�߂�l�́ACPropEditUi2::EndEdit() ��
-		�߂�l�ƂȂ�܂��B
+		成功したら0以上、エラーなら負の数です。
+		0以外を返した場合、戻り値は、CPropEditUi2::EndEdit() の
+		戻り値となります。
 		
 		
-	���̊֐��̃R�[�f�B���O�̗�
+	この関数のコーディングの例
 	 --------------------------------
 	@code
 	virtual int UiDataToTarget( 
@@ -410,9 +410,9 @@ protected:
 	{
 		int iRv = 0 ; 
 		
-		if ( bNewItem || pUiDataStartEdit->�����o�[�� != pUiData->�����o�[��)
+		if ( bNewItem || pUiDataStartEdit->メンバー名 != pUiData->メンバー名)
 		{
-			//	pUiData->�����o�[�� ���ATarget �ɔ��f����R�[�h
+			//	pUiData->メンバー名 を、Target に反映するコード
 		}
 		return iRv ;
 	}
@@ -425,72 +425,72 @@ protected:
 	///@}
 protected:
 	// ================================
-	/** @name �I�[�o�[���C�g�̕K�v�ȃ��\�b�h2-UI�Ɉˑ����鏈��
-		UiData �� Ui �Ƃ̊Ԃ̃f�[�^�����̂��߂̃��\�b�h�ł��B
-		���̃O���[�v�̃��\�b�h�́A Ui �̊�(Windows,MFC�Ȃ�)
-		�Ɉˑ����鏈���������������܂��B
+	/** @name オーバーライトの必要なメソッド2-UIに依存する処理
+		UiData と Ui との間のデータ交換のためのメソッドです。
+		このグループのメソッドは、 Ui の環境(Windows,MFCなど)
+		に依存する処理だけを実装します。
 	*/
 	// ================================
 	///@{
 	/**
-		UiData�̓��e��Ui�ɔ��f���܂��B
+		UiDataの内容をUiに反映します。
 		
 		CPropEditUi2::StartEdit(),CPropEditUi2::OnUiChanged(),
 		CPropEditUi2::OnUiDataChanged(),CPropEditUi2::EndEdit()
-		����Ăяo����܂��B
+		から呼び出されます。
 		
-		�N���X���[�U�[�́A���̊֐����I�[�o�[���C�h���āA
-		UiData�̃����o�̓��e��Ui�ɕ\�����鏈�����������Ă��������B
+		クラスユーザーは、この関数をオーバーライドして、
+		UiDataのメンバの内容をUiに表示する処理を実装してください。
 	@param pUiData [in]
-		UiData �̃I�u�W�F�N�g�B
+		UiData のオブジェクト。
 	*/
 	virtual void UiDataToUi( const UIDATA* pUiData )=0 ;
 	
 	
 	/**
-		Ui�̓��͓��e��UiData�ɔ��f���܂��B
+		Uiの入力内容をUiDataに反映します。
 		
 		CPropEditUi2::OnUiChanged(),
 		CPropEditUi2::OnUiDataChanged(),CPropEditUi2::EndEdit()
-		����Ăяo����܂��B
+		から呼び出されます。
 		
-		�N���X���[�U�[�́A���̊֐����I�[�o�[���C�h���āA
-		Ui �ւ̕ύX���e��UiData �ɔ��f���鏈�����������Ă��������B
+		クラスユーザーは、この関数をオーバーライドして、
+		Ui への変更内容をUiData に反映する処理を実装してください。
 	@param pUiData [out]
-		UiData �̃I�u�W�F�N�g�B
+		UiData のオブジェクト。
 	*/
 	virtual void UiDataFromUi( UIDATA* pUiData ) =0 ;
 	
 	/**
-		��ʏ�ɃG���[���b�Z�[�W��\�����܂��B
+		画面上にエラーメッセージを表示します。
 
-		�N���X���[�U�[�́A���̊֐����I�[�o�[���C�h���āA
-		�G���[���b�Z�[�W��\�����鏈�����������Ă��������B
+		クラスユーザーは、この関数をオーバーライドして、
+		エラーメッセージを表示する処理を実装してください。
 		
-		MFC�A�v���P�[�V�����ł́A�ʏ�́A���b�Z�[�W�{�b�N�X��\�����܂��B
+		MFCアプリケーションでは、通常は、メッセージボックスを表示します。
 	@param strErrorReason [in]
-		�G���[�̓��e������������
+		エラーの内容を示す文字列
 	@param strInfo [in]
-        �G���[�̕⏕��������������B�s�v�ł���΁A�󕶎����
-        �w�肵�Ă��������B
+        エラーの補助情報を示す文字列。不要であれば、空文字列を
+        指定してください。
 	*/
 	virtual void ShowError( 
 		const std::string& strErrorReason ,
 		const std::string& strInfo = "" ) =0 ;
 	
 	/**
-		Ui ��̓���̃R���g���[���ɁA�t�H�[�J�X��ݒ肵�܂��B
+		Ui 上の特定のコントロールに、フォーカスを設定します。
 
-		�N���X���[�U�[�́A���̊֐����I�[�o�[���C�h���āA
-		�w�肳�ꂽ�R���g���[���Ƀt�H�[�J�X��ݒ肷�鏈�����������Ă��������B
+		クラスユーザーは、この関数をオーバーライドして、
+		指定されたコントロールにフォーカスを設定する処理を実装してください。
 		
 	@param iOffsetofUiDataMember [in]
-		�t�H�[�J�X��ݒ肷��ҏW���ڂ��w�肵�Ă��������B
-		UiData���̑ΏۂƂȂ�f�[�^�����o�́A�\���̂̐擪�A�h���X�����
-		�I�t�Z�b�g���w�肵�Ă��������B
+		フォーカスを設定する編集項目を指定してください。
+		UiData内の対象となるデータメンバの、構造体の先頭アドレスからの
+		オフセットを指定してください。
 
-	��:�t�H�[�J�X���AUiData�̃����o strNumber ����͂���R���g���[���ɐݒ�
-		����ꍇ�́A�ȉ��̂悤�ɂ��Ă��������B
+	例:フォーカスを、UiDataのメンバ strNumber を入力するコントロールに設定
+		する場合は、以下のようにしてください。
 	@code
 		SetFocus( offsetof(UIDATA,strNumber ) ) ;
 	@endcode
@@ -500,20 +500,20 @@ protected:
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
 	@param bNewItem [in]
-		�ҏW�Ώۂ��w�肵�Ă��������B
-		- true: �V�K�I�u�W�F�N�g�ɑ΂���A�v���p�e�B�̕ҏW
-		- false: �����I�u�W�F�N�g�ɑ΂���A�v���p�e�B�̕ҏW
+		編集対象を指定してください。
+		- true: 新規オブジェクトに対する、プロパティの編集
+		- false: 既存オブジェクトに対する、プロパティの編集
 	@param pTarget [in,out]
-	 �ҏW�ΏہB�R���X�g���N�^�Ō��܂�܂��B
-	 ��Ԃ��i�[�����R���e�i�ł��B
+	 編集対象。コンストラクタで決まります。
+	 列車を格納したコンテナです。
 	@param pbModifyHatsujikoku [in,out]
-	 �����̌J�グ�E�J�艺����ON/OFF��ێ�����ϐ��ւ̃|�C���^�B
+	 時刻の繰上げ・繰り下げのON/OFFを保持する変数へのポインタ。
 	@param iEkiOrder [in]
-		�ҏW�Ώۂ̉w�����̉wOrder�ł��B
+		編集対象の駅時刻の駅Orderです。
 	*/
 	CPropEditUi_EkiJikoku( 
 		bool bNewItem , 

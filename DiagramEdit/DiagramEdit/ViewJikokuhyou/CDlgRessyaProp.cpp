@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// CDlgRessyaProp.cpp : �C���v�������e�[�V���� �t�@�C��
+// CDlgRessyaProp.cpp : インプリメンテーション ファイル
 //
 
 #include "stdafx.h"
@@ -89,7 +89,7 @@ using namespace std ;
 // ================================================================
 
 		// ================================
-		//@name UI�Ƃ̃C���^�[�t�F�[�X
+		//@name UIとのインターフェース
 		// ================================
 void CDlgRessyaProp::CPropEditUiInternal::UiDataToUi( const UIDATA* pUiData ) 
 {
@@ -97,16 +97,16 @@ void CDlgRessyaProp::CPropEditUiInternal::UiDataToUi( const UIDATA* pUiData )
 	CWnd* pFocus = CWnd::GetFocus() ;
 
 	// --------------------------------
-	//	DDX��p�����AUiControl�ւ̐ݒ�
+	//	DDXを用いた、UiControlへの設定
 	// --------------------------------
 	{
 		// --------------------------------
 		pOuter->UpdateData( FALSE ) ;
 	}
 	// --------------------------------
-	//	DDX��p���Ȃ��AUiControl�ւ̐ݒ�
-	//	�����́ADDX�ɂ��l�ݒ�̌��
-	//	�s��Ȃ��Ă͂Ȃ�܂���B
+	//	DDXを用いない、UiControlへの設定
+	//	これらは、DDXによる値設定の後で
+	//	行わなくてはなりません。
 	// --------------------------------
 	//iIsNull
 	{
@@ -181,9 +181,9 @@ void CDlgRessyaProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData )
 			pUiData->iIsNull = 0 ;
 			break ;
 		}
-		//	�`�F�b�N�{�b�N�X�́A���ԏ�Ԃւ̕ύX��F�߂܂���B
-		//	���[�U�[�ɂ���Ē��ԏ�Ԃ֕ύX���ꂽ�ꍇ�́A
-		//	�`�F�b�N�Ȃ���ԂɕύX���܂��B
+		//	チェックボックスは、中間状態への変更を認めません。
+		//	ユーザーによって中間状態へ変更された場合は、
+		//	チェックなし状態に変更します。
 		if ( pUiData->iIsNull == -1 && nCheck == BST_INDETERMINATE )
 		{
 			pUiData->iIsNull = 0 ;
@@ -244,7 +244,7 @@ void CDlgRessyaProp::CPropEditUiInternal::SetFocus( int iOffsetofUiDataMember )
 {
 	int iResult = 0 ; 
 
-	//	NULL��Ԃ̏ꍇ�́A�t�H�[�J�X�ʒu�́w��s�x�Ɉړ����܂�
+	//	NULL列車の場合は、フォーカス位置は『空行』に移動します
 	if ( GetUiData()->iIsNull == 1 )	//	ON
 	{
 		iOffsetofUiDataMember = offsetof(UIDATA , iIsNull ) ;
@@ -292,7 +292,7 @@ void CDlgRessyaProp::CPropEditUiInternal::SetFocus( int iOffsetofUiDataMember )
 	}
 }
 		// ********************************
-		//	�R���X�g���N�^
+		//	コンストラクタ
 		// ********************************
 CDlgRessyaProp::CPropEditUiInternal::CPropEditUiInternal(
 	bool bNewItem , 
@@ -305,9 +305,9 @@ CDlgRessyaProp::CPropEditUiInternal::CPropEditUiInternal(
 
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgRessyaProp �_�C�A���O
+// CDlgRessyaProp ダイアログ
 // --------------------------------
-//@name �����֐�
+//@name 下請関数
 // --------------------------------
 int CDlgRessyaProp::FirstFocusItemArgConvert( int iFocusItem ) 
 {
@@ -315,22 +315,22 @@ int CDlgRessyaProp::FirstFocusItemArgConvert( int iFocusItem )
 
 	switch( iFocusItem )
 	{
-	case 0:	//	��s
+	case 0:	//	空行
 		iFirstFocusItemOffset = offsetof( CPropEditUiInternal::UIDATA , iIsNull ) ;
 		break ;
-	case 1:	//	��Ԕԍ�
+	case 1:	//	列車番号
 		iFirstFocusItemOffset = offsetof( CPropEditUiInternal::UIDATA , strRessyabangou ) ;
 		break ;
-	case 2:	//	��Ԏ��
+	case 2:	//	列車種別
 		iFirstFocusItemOffset = offsetof( CPropEditUiInternal::UIDATA , iRessyasyubetsuIndex ) ;
 		break ;
-	case 3:	//	��Ԗ�
+	case 3:	//	列車名
 		iFirstFocusItemOffset = offsetof( CPropEditUiInternal::UIDATA , strRessyamei ) ;
 		break ;
-	case 4:	//	����
+	case 4:	//	号数
 		iFirstFocusItemOffset = offsetof( CPropEditUiInternal::UIDATA , strGousuu ) ;
 		break ;
-	case 5:	//	���l
+	case 5:	//	備考
 		iFirstFocusItemOffset = offsetof( CPropEditUiInternal::UIDATA , strBikou ) ;
 		break ;
 	}
@@ -342,7 +342,7 @@ int CDlgRessyaProp::FirstFocusItemArgConvert( int iFocusItem )
 //	CDlgRessyaProp
 // ********************************
 	// ********************************
-	//@name ����
+	//@name 属性
 	// ********************************
 
 // ----------------------------------------------------------------
@@ -386,7 +386,7 @@ BEGIN_MESSAGE_MAP(CDlgRessyaProp, CDialog)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgRessyaProp ���b�Z�[�W �n���h��
+// CDlgRessyaProp メッセージ ハンドラ
 
 BOOL CDlgRessyaProp::OnInitDialog() 
 {
@@ -408,10 +408,10 @@ BOOL CDlgRessyaProp::OnInitDialog()
 
 			string	strSyubetsumei = pCentDedRessyasyubetsu->getSyubetsumei() ;
 			
-			// �w��Ԃ̃v���p�e�B�x�_�C�A���O�́w��Ԏ�ʁx��
-			//	�h���b�v�_�E�����X�g�̍��ڂ̐擪10�ɁA
-			//	"0. " �` "9. " �܂ł̐�����ǉ�
-			//	(��:�@"����"��"0. ����" ) 
+			// 『列車のプロパティ』ダイアログの『列車種別』の
+			//	ドロップダウンリストの項目の先頭10個に、
+			//	"0. " 〜 "9. " までの数字を追加
+			//	(例:　"普通"→"0. 普通" ) 
 			if ( idxRessyasyubetsu < 10 )
 			{
 				strSyubetsumei = stringOf( idxRessyasyubetsu ) 
@@ -425,8 +425,8 @@ BOOL CDlgRessyaProp::OnInitDialog()
 
 	m_PropEditUiInternal.StartEdit() ;
 
-	return TRUE;  // �R���g���[���Ƀt�H�[�J�X��ݒ肵�Ȃ��Ƃ��A�߂�l�� TRUE �ƂȂ�܂�
-	              // ��O: OCX �v���p�e�B �y�[�W�̖߂�l�� FALSE �ƂȂ�܂�
+	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
+	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
 
 void CDlgRessyaProp::OnShowWindow(BOOL bShow, UINT nStatus) 
@@ -435,43 +435,43 @@ void CDlgRessyaProp::OnShowWindow(BOOL bShow, UINT nStatus)
 	
 	if ( bShow )
 	{
-		//	�ҏW�J�n���̃t�H�[�J�X�ʒu��ݒ肵�܂��B
-		//	���̏����́A OnInitDialog() �ł͂ł��܂���B
-		//	OnShowWindow() �ŁA�_�C�A���O�{�b�N�X���\�����ꂽ�Ƃ���
-		//	�s���K�v������܂��B
+		//	編集開始時のフォーカス位置を設定します。
+		//	この処理は、 OnInitDialog() ではできません。
+		//	OnShowWindow() で、ダイアログボックスが表示されたときに
+		//	行う必要があります。
 
 		CWnd*	pControl = NULL ;
 
-		//	��Ԃ���s�ȊO
+		//	列車が空行以外
 		if ( m_PropEditUiInternal.GetUiData()->iIsNull != 1 ) 
 		{
 			switch( m_iFocusItem ){
-			 case 0	:	//	��s
+			 case 0	:	//	空行
 				pControl = GetDlgItem( IDC_CHECK_IsNull ) ;
 				break ;
-			 case 1	:	//	��Ԕԍ�
+			 case 1	:	//	列車番号
 				pControl = GetDlgItem( IDC_EDIT_Ressyabangou ) ;
 				break ;
-			 case 2	:	//	��Ԏ��
+			 case 2	:	//	列車種別
 				pControl = GetDlgItem( IDC_COMBO_Ressyasyubetsu ) ;
 				break ;
-			 case 3	:	//	��Ԗ�
+			 case 3	:	//	列車名
 				pControl = GetDlgItem( IDC_EDIT_Ressyamei ) ;
 				break ;
-			 case 4	:	//	����
+			 case 4	:	//	号数
 				pControl = GetDlgItem( IDC_EDIT_Gousuu ) ;
 				break ;
-			 case 5	:	//	���l
+			 case 5	:	//	備考
 				pControl = GetDlgItem( IDC_EDIT_Bikou ) ;
 				break ;
 			}
 		}
 		else
 		{
-				//	��Ԃ�Null��Ԃ̏ꍇ�́A
-				//	�w��s�x�ȊO�̃R���g���[���͂��ׂ�
-				//	�����ɂȂ邽�߁A
-				//	�w��s�x�R���g���[���Ƀt�H�[�J�X�������܂��B
+				//	列車がNull状態の場合は、
+				//	『空行』以外のコントロールはすべて
+				//	無効になるため、
+				//	『空行』コントロールにフォーカスをおきます。
 				pControl = GetDlgItem( IDC_CHECK_IsNull ) ;
 		}
 		if ( pControl != NULL )

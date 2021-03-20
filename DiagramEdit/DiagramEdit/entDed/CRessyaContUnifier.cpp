@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -80,7 +80,7 @@ namespace entDed{
 //	CRessyaContUnifier
 // ****************************************************************
 	// ********************************
-	//@name CRessyaContUnifier-static ����
+	//@name CRessyaContUnifier-static 操作
 	// ********************************
 void CRessyaContUnifier::unify( 
 		Mui<CentDedRessya>* pMuiRessya ,
@@ -90,14 +90,14 @@ void CRessyaContUnifier::unify(
 	CentDedRessya	aRessya = pMuiRessya->get( iRessyaIndex ) ;
 	CentDedRessya	aRessya2 = pMuiRessya->get( iRessyaIndex2 ) ;
 	// ================================	
-	//	�w����������
+	//	駅時刻を結合
 	// ================================	
 	for ( int iEkiOrder = 0 ; iEkiOrder < aRessya.getCentDedEkiJikokuCount() ; iEkiOrder ++ )
 	{
 		CentDedEkiJikoku	aJikoku = aRessya.getCentDedEkiJikoku( iEkiOrder ) ;
 		CentDedEkiJikoku	aJikoku2 = aRessya2.getCentDedEkiJikoku( iEkiOrder ) ;
-		//	iRessyaIndex2 ����ԁE�ʉ߂Ȃ�A�w���̓R�s�[���܂��B
-		//	�w�����́ANULL�ȊO�̏ꍇ�̓R�s�[���܂��B
+		//	iRessyaIndex2 が停車・通過なら、駅扱はコピーします。
+		//	駅時刻は、NULL以外の場合はコピーします。
 		if ( aJikoku2.getEkiatsukai() == CentDedEkiJikoku::Ekiatsukai_Teisya ||
 			aJikoku2.getEkiatsukai() == CentDedEkiJikoku::Ekiatsukai_Tsuuka )
 		{
@@ -115,9 +115,9 @@ void CRessyaContUnifier::unify(
 		}
 	}
 	// ================================	
-	//	�^�s�Ȃ��E�o�R�Ȃ� ���Ĕz�u�B
-	//	�n���w�`�I���w�̉^�s�Ȃ��͌o�R�Ȃ���
-	//	�n���w�ȑO�E�I���w�Ȍ�̌o�R�Ȃ��͉^�s�Ȃ��ɁA�ύX���܂�
+	//	運行なし・経由なし を再配置。
+	//	始発駅〜終着駅の運行なしは経由なしに
+	//	始発駅以前・終着駅以後の経由なしは運行なしに、変更します
 	// ================================	
 	int iRunFirstEkiOrder = aRessya.getRunFirstEkiOrder() ;
 	int iRunLastEkiOrder = aRessya.getRunLastEkiOrder() ;
@@ -125,7 +125,7 @@ void CRessyaContUnifier::unify(
 	{
 		CentDedEkiJikoku aEkiJikoku = aRessya.getCentDedEkiJikoku( iEkiOrder ) ;
 
-		//	�n���w�`�I���w�̉^�s�Ȃ��͌o�R�Ȃ��ɕύX
+		//	始発駅〜終着駅の運行なしは経由なしに変更
 		if ( iRunFirstEkiOrder <= iEkiOrder && 
 			iEkiOrder <= iRunLastEkiOrder )
 		{
@@ -134,7 +134,7 @@ void CRessyaContUnifier::unify(
 				aEkiJikoku.setEkiatsukai( CentDedEkiJikoku::Ekiatsukai_Keiyunasi );
 			}
 		}
-		//	�n���w�ȑO�E�I���w�Ȍ�̌o�R�Ȃ��͉^�s�Ȃ��ɁA�ύX���܂�
+		//	始発駅以前・終着駅以後の経由なしは運行なしに、変更します
 		else 
 		{
 			if ( aEkiJikoku.getEkiatsukai() == CentDedEkiJikoku::Ekiatsukai_Keiyunasi )
@@ -146,15 +146,15 @@ void CRessyaContUnifier::unify(
 		aRessya.setCentDedEkiJikoku( iEkiOrder , aEkiJikoku ) ;
 	}
 	// ================================	
-	//	1�Ԗڂ̗�Ԃɉw������ݒ�
-	//	2�Ԗڂ̗�Ԃ͍폜
+	//	1番目の列車に駅時刻を設定
+	//	2番目の列車は削除
 	// ================================	
 	pMuiRessya->set( aRessya , iRessyaIndex ) ;
 	pMuiRessya->erase( iRessyaIndex2 ) ;
 }
 
 	// ********************************
-	//	�R���X�g���N�^�E�f�X�g���N�^
+	//	コンストラクタ・デストラクタ
 	// ********************************
 CRessyaContUnifier::CRessyaContUnifier()
 {
@@ -164,7 +164,7 @@ CRessyaContUnifier::~CRessyaContUnifier()
 }
 
 	// ********************************
-	//@name ����
+	//@name 操作
 	// ********************************
 void CRessyaContUnifier::unify( 
 		Mui<CentDedRessya>* pMuiRessya ,
@@ -172,9 +172,9 @@ void CRessyaContUnifier::unify(
 {
 	int iRv = 0 ; 
 
-	// ��Ԕԍ��̃L���b�V�����쐬����
-	//	����́ApMuiRessya->get()���x��(���ڂ����́ACentDedRessya�̃R�s�[�R���X�g���N�^���x��)
-	//	���߂ł��B
+	// 列車番号のキャッシュを作成する
+	//	これは、pMuiRessya->get()が遅い(より詳しくは、CentDedRessyaのコピーコンストラクタが遅い)
+	//	ためです。
 	vector<string>	arstrRessyabangou ;
 	arstrRessyabangou.reserve( pMuiRessya->size() ) ;
 	for ( int iRessyaIndex = 0 ; iRessyaIndex < pMuiRessya->size() ; iRessyaIndex ++ )
@@ -182,27 +182,27 @@ void CRessyaContUnifier::unify(
 		arstrRessyabangou.push_back( pMuiRessya->get( iRessyaIndex ).getRessyabangou() ) ;
 	}
 
-	//	��Ԕԍ��̓������̂���{��
+	//	列車番号の同じものを一本化
 	for ( int iRessyaIndex = 0 ; 
 		iRv == 0 && iRessyaIndex < pMuiRessya->size() - 1 ; 
 		iRessyaIndex ++ )
 	{
 		string	strRessyabangou = arstrRessyabangou[iRessyaIndex] ;
 
-		//	��Ԕԍ����󕶎���łȂ��ꍇ�ɂ����A��{�����s���܂�
+		//	列車番号が空文字列でない場合にだけ、一本化を行います
 		if ( strRessyabangou.length() > 0 )
 		{
-			//	��{���Ώۂ̗�Ԃ�����
+			//	一本化対象の列車を検索
 			for ( int iRessyaIndex2 = iRessyaIndex + 1 ;
 				iRessyaIndex2 <  pMuiRessya->size() ;
 				iRessyaIndex2 ++ )
 			{
-				//	��Ԕԍ�������Ȃ�A��{�����s���܂��B
+				//	列車番号が同一なら、一本化を行います。
 				if ( strRessyabangou == arstrRessyabangou[iRessyaIndex2] )
 				{
 					unify( pMuiRessya , iRessyaIndex , iRessyaIndex2 ) ;
 
-					//�L���b�V���̍X�V
+					//キャッシュの更新
 					arstrRessyabangou.erase( arstrRessyabangou.begin() + iRessyaIndex2 ) ;
 
 					iRessyaIndex2 -- ;
@@ -212,7 +212,7 @@ void CRessyaContUnifier::unify(
 
 
 		// ================================
-		//	�����i���\��
+		//	処理進捗表示
 		// ================================
 		if ( pIfProgress != NULL )
 		{
@@ -225,16 +225,16 @@ void CRessyaContUnifier::unify(
 		}
 	}
 	/*
-	//	��Ԕԍ��̓������̂���{��
+	//	列車番号の同じものを一本化
 	for ( int iRessyaIndex = 0 ; 
 		iRv == 0 && iRessyaIndex < pMuiRessya->size() - 1 ; 
 		iRessyaIndex ++ )
 	{
 		CentDedRessya	aRessya = pMuiRessya->get( iRessyaIndex ) ;
-		//TODO:Mu����const CentDedRessya* ���擾����悤�ɕύX
+		//TODO:Muからconst CentDedRessya* を取得するように変更
 		string	strRessyabangou = aRessya.getRessyabangou() ;
 
-		//	��Ԕԍ����󕶎���łȂ��ꍇ�ɂ����A��{�����s���܂�
+		//	列車番号が空文字列でない場合にだけ、一本化を行います
 		if ( strRessyabangou.length() > 0 )
 		{
 			CentDedRessya	aRessya2( aRessya.getCentDedEkiJikokuCount() , 
@@ -242,17 +242,17 @@ void CRessyaContUnifier::unify(
 			
 			int iRessyaIndex2 ;
 			// ================================
-			//	��{���Ώۂ̗�Ԃ�����
+			//	一本化対象の列車を検索
 			// ================================
 			for ( iRessyaIndex2 = iRessyaIndex + 1 ;
 				iRessyaIndex2 <  pMuiRessya->size() ;
 				iRessyaIndex2 ++ )
 			{
 				aRessya2 = pMuiRessya->get( iRessyaIndex2 ) ;
-				//TODO:Mu����const CentDedRessya* ���擾����悤�ɕύX
+				//TODO:Muからconst CentDedRessya* を取得するように変更
 
 				// ================================
-				//	��Ԕԍ�������Ȃ�A��{�����s���܂��B
+				//	列車番号が同一なら、一本化を行います。
 				// ================================
 				if ( strRessyabangou == aRessya2.getRessyabangou() )
 				{
@@ -264,7 +264,7 @@ void CRessyaContUnifier::unify(
 
 
 		// ================================
-		//	�����i���\��
+		//	処理進捗表示
 		// ================================
 		if ( pIfProgress != NULL )
 		{

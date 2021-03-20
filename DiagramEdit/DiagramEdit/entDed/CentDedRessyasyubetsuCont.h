@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -80,7 +80,7 @@ namespace entDed{
 	using namespace OuLib::NsMu;
 
 
-//	�O���Q�Ɛ錾
+//	前方参照宣言
 class CentDedRosen ;
 
 // ****************************************************************
@@ -88,64 +88,64 @@ class CentDedRosen ;
 // ****************************************************************
 /**
 @brief
- �w��Ԏ�ʁx( CentDedRessyasyubetsu ) �I�u�W�F�N�g�̃R���e�i�ł��B
+ 『列車種別』( CentDedRessyasyubetsu ) オブジェクトのコンテナです。
 
-  ���̃N���X���̂́A Mui< CentDedRessyasyubetsu > �C���^�[�t�F�[�X��
-�T�|�[�g���܂��B���̃C���^�[�t�F�[�X�ɂ��A
-CentDedRessyasyubetsu �I�u�W�F�N�g��
-�ǉ��E�폜���邱�Ƃ��ł��܂��B
+  このクラス自体は、 Mui< CentDedRessyasyubetsu > インターフェースを
+サポートします。このインターフェースにより、
+CentDedRessyasyubetsu オブジェクトを
+追加・削除することができます。
 
-  getMuPtr() ���\�b�h�ɂ��A Mu< CentDedRessyasyubetsu* > 
-�C���^�[�t�F�[�X���擾���邱�Ƃ��ł��܂��B
-  ���̃C���^�[�t�F�[�X���g���ƁA�R���e�i���� CentDedRessyasyubetsu 
-�I�u�W�F�N�g�ɒ��ڃA�N�Z�X���邱�Ƃ��ł��܂��B
+  getMuPtr() メソッドにより、 Mu< CentDedRessyasyubetsu* > 
+インターフェースを取得することができます。
+  このインターフェースを使うと、コンテナ内の CentDedRessyasyubetsu 
+オブジェクトに直接アクセスすることができます。
 	
 @attention
-  this �� get() ���\�b�h�́A CentDedRessyasyubetsu �I�u�W�F�N�g��
-�R�s�[��Ԃ��܂��B
-  get() ���\�b�h�ŕԂ��ꂽ�I�u�W�F�N�g�ɑ΂��āA
-CentDedRessyasyubetsu �I�u�W�F�N�g���X�V���郁�\�b�h���Ăяo���Ă��A
-�R���e�i���̗�Ԏ�ʃI�u�W�F�N�g���X�V���邱�Ƃ͂ł��܂���B\n
-�R���e�i���̗�Ԏ�ʃI�u�W�F�N�g�̃��\�b�h���Ăяo���ꍇ�́A
-getMuPtr() �� Mu<CentDedRessyasyubetsu*>* ���擾���Ă���A
-���̃C���^�[�t�F�[�X�o�R�� CentDedRessyasyubetsu* ���擾���A���̃|�C���^��
-���\�b�h���Ăяo���Ă��������B
+  this の get() メソッドは、 CentDedRessyasyubetsu オブジェクトの
+コピーを返します。
+  get() メソッドで返されたオブジェクトに対して、
+CentDedRessyasyubetsu オブジェクトを更新するメソッドを呼び出しても、
+コンテナ内の列車種別オブジェクトを更新することはできません。\n
+コンテナ内の列車種別オブジェクトのメソッドを呼び出す場合は、
+getMuPtr() で Mu<CentDedRessyasyubetsu*>* を取得してから、
+そのインターフェース経由で CentDedRessyasyubetsu* を取得し、そのポインタに
+メソッドを呼び出してください。
 
-����
+制約
  -------------------------------- 
-���H���̈ꕔ�ł���ꍇ�́A�Œ�P�́w��Ԏ�ʁx���K�v�B(����́A�H���̃R���X�g���N�^�Ŏ��{)
+△路線の一部である場合は、最低１つの『列車種別』が必要。(これは、路線のコンストラクタで実施)
 
-���R���e�i���́w��Ԏ�ʁx�́A����1�ȏ�̖��O�������Ȃ��Ă͂Ȃ�Ȃ�
+△コンテナ内の『列車種別』は、長さ1以上の名前を持たなくてはならない
 
-(��)��Ԃ̗�Ԏ�ʃC���f�N�X�́ACentDedRessyasyuebtsu �͈͓̔��łȂ��Ă͂Ȃ�Ȃ�
+(△)列車の列車種別インデクスは、CentDedRessyasyuebtsu の範囲内でなくてはならない
 
-����̃G���[�����E�C��
+操作のエラー検査・修正
  -------------------------------- 
 
 rinji
-����Ԏ�ʂ̒ǉ�(insert):���̃R���e�i���H���̈ꕔ�ł���ꍇ�A���O����̗�Ԏ�ʂ̒ǉ��̓G���[
+△列車種別の追加(insert):このコンテナが路線の一部である場合、名前が空の列車種別の追加はエラー
 
-(��)��Ԏ�ʂ̒ǉ�(insert):�@��Ԃ̗�Ԏ�ʃC���f�N�X�́A�R���e�i�ւ̒ǉ��ɍ��킹�ăV�t�g������B
+(△)列車種別の追加(insert):　列車の列車種別インデクスは、コンテナへの追加に合わせてシフトさせる。
 
-����Ԏ�ʂ̍폜(erase):�@��Ԏ�ʂ�0�ɂȂ�悤�ȍ폜�̓G���[
+○列車種別の削除(erase):　列車種別が0個になるような削除はエラー
 
-(��)��Ԏ�ʂ̍폜(erase):�@��Ԃ̗�Ԏ�ʃC���f�N�X�́A�R���e�i�ւ̒ǉ��ɍ��킹�ăV�t�g������B
-�@��Ԃ̗�Ԏ�ʃC���f�N�X���폜�Ώۂ̏ꍇ�A�C���f�N�X��0�ɂ���
+(△)列車種別の削除(erase):　列車の列車種別インデクスは、コンテナへの追加に合わせてシフトさせる。
+　列車の列車種別インデクスが削除対象の場合、インデクスは0にする
 
-���Ԑ��̏㏑��(set): name����� CentDedRessyasyubetsu���㏑������ƃG���[�B
+○番線の上書き(set): nameが空の CentDedRessyasyubetsuを上書きするとエラー。
 
-���R���e�i�̑��(operator=):�R���e�i���H���̈ꕔ�ł���ꍇ�ŁA�E�ӂ̗v�f����0�̏ꍇ�́A
-�C���f�N�X0�Ԃ̗�Ԏ�ʂ�ǉ����āA��Ԏ�ʂ̐���0�ɂȂ�Ȃ��悤�ɂ���
-
-
-���폜�Ώۂ̗�Ԏ�ʂ̃C���f�N�X������Ԃ̌���(findRessyaOfRessyasyubetsu):
-�폜�Ώۂ̗�Ԏ�ʕ\����Ԏ�ʃC���f�N�X������ԃI�u�W�F�N�g����������
+△コンテナの代入(operator=):コンテナが路線の一部である場合で、右辺の要素数が0の場合は、
+インデクス0番の列車種別を追加して、列車種別の数が0にならないようにする
 
 
-����ɍ����悤�ɑ������C��(adjust)
+△削除対象の列車種別のインデクスを持つ列車の検索(findRessyaOfRessyasyubetsu):
+削除対象の列車種別表す列車種別インデクスを持つ列車オブジェクトを検索する
+
+
+制約に合うように属性を修正(adjust)
  -------------------------------- 
 
-�����ׂĂ�CentDedRessyasyubetsu(��Ԏ��)�ɁAadjust()���Ϗ�����B
+○すべてのCentDedRessyasyubetsu(列車種別)に、adjust()を委譲する。
 
 
 
@@ -155,22 +155,22 @@ class CentDedRessyasyubetsuCont : public CMuiCopiedParent< CentDedRessyasyubetsu
 {
 public:
 	// ********************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ********************************
 	typedef CMuiCopiedParent< CentDedRessyasyubetsu >	super ;
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
-	���R���e�i�̐���(�R���X�g���N�^): �C���f�N�X0�Ԃ̗�Ԏ�ʂ�ݒ肷��B
+	○コンテナの生成(コンストラクタ): インデクス0番の列車種別を設定する。
 	*/
 	CentDedRessyasyubetsuCont() ;
 	
 	/**
-	���R���e�i�̑��(operator=):�R���e�i���H���̈ꕔ�ł���ꍇ�ŁA�E�ӂ̗v�f����0�̏ꍇ�́A
-	�C���f�N�X0�Ԃ̗�Ԏ�ʂ�ǉ����āA��Ԏ�ʂ̐���0�ɂȂ�Ȃ��悤�ɂ���
+	△コンテナの代入(operator=):コンテナが路線の一部である場合で、右辺の要素数が0の場合は、
+	インデクス0番の列車種別を追加して、列車種別の数が0にならないようにする
 	*/
 	CentDedRessyasyubetsuCont& operator=( const CentDedRessyasyubetsuCont& value ) ;
 
@@ -180,146 +180,146 @@ public:
 	// ********************************
 	///@{
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f��ǉ����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素を追加します。
 
 	rinji
-	����Ԏ�ʂ̒ǉ�(insert):���̃R���e�i���H���̈ꕔ�ł���ꍇ�A���O����̗�Ԏ�ʂ̒ǉ��̓G���[
+	△列車種別の追加(insert):このコンテナが路線の一部である場合、名前が空の列車種別の追加はエラー
 
-	(��)��Ԏ�ʂ̒ǉ�(insert):�@��Ԃ̗�Ԏ�ʃC���f�N�X�́A
-	�R���e�i�ւ̒ǉ��ɍ��킹�ăV�t�g������B
+	(△)列車種別の追加(insert):　列車の列車種別インデクスは、
+	コンテナへの追加に合わせてシフトさせる。
 
 
 	 @param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 以下です。
+	 	０は、先頭・size()なら末尾への追加になります。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	*/
 	virtual int insert( const CentDedRessyasyubetsu& element , int iIndex = INT_MAX );
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
-	 	�v�f���폜���܂��B
+	 	コンテナ内の、インデクスで指定された場所の
+	 	要素を削除します。
 
-	����Ԏ�ʂ̍폜(erase):�@��Ԏ�ʂ�0�ɂȂ�悤�ȍ폜�̓G���[
+	△列車種別の削除(erase):　列車種別が0個になるような削除はエラー
 	
-	(��)��Ԏ�ʂ̍폜(erase):�@��Ԃ̗�Ԏ�ʃC���f�N�X�́A
-	�R���e�i�ւ̒ǉ��ɍ��킹�ăV�t�g������B
-	  ��Ԃ̗�Ԏ�ʃC���f�N�X���폜�Ώۂ̏ꍇ�A�C���f�N�X��0�ɂ���
+	(△)列車種別の削除(erase):　列車の列車種別インデクスは、
+	コンテナへの追加に合わせてシフトさせる。
+	  列車の列車種別インデクスが削除対象の場合、インデクスは0にする
 
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 @param iSize [in]
-	 	�폜����v�f�̐����w�肵�Ă��������B
-	 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 	削除する要素の数を指定してください。
+	 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 @attention
-		iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+		iIndex と iSize の両方を INT_MAX にすることはできません。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	*/
 	virtual int erase( int iIndex  , int iSize = 1 ) ;
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f���㏑�����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素を上書きします。
 
-	���Ԑ��̏㏑��(set): name����� CentDedRessyasyubetsu���㏑������ƃG���[�B
+	○番線の上書き(set): nameが空の CentDedRessyasyubetsuを上書きするとエラー。
 		
 	@param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
-		-	-11; //���Ԑ��̏㏑��(set): name����� CentDedRessyasyubetsu���㏑������ƃG���[�B
+	 	0以上は成功、負の数はエラーです
+		-	-11; //○番線の上書き(set): nameが空の CentDedRessyasyubetsuを上書きするとエラー。
 	*/
 	virtual int set( const CentDedRessyasyubetsu& element , int iIndex ) ;
 	///@}
 
  public:
 	// ********************************
-	///@name CentDedRessyasyubetsuCont-�֘A
+	///@name CentDedRessyasyubetsuCont-関連
 	// ********************************
 	///@{
 	/**
 	@return
-		���̃R���e�i�� CentDedRosen �ɕ�܂���Ă���ꍇ�́A
-		CentDedRosen �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedRosen に包含されている場合は、
+		CentDedRosen のアドレス。
+		そうでないならNULL。
 	*/
 	 virtual CentDedRosen* getRosen(){ return NULL ;}
 	/**
 	@return
-		���̃R���e�i�� CentDedRosen �ɕ�܂���Ă���ꍇ�́A
-		CentDedRosen �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedRosen に包含されている場合は、
+		CentDedRosen のアドレス。
+		そうでないならNULL。
 	*/
 	virtual const CentDedRosen* getRosen()const{ return NULL ;}
 	///@}
  public:
 	// ********************************
-	///@name CentDedRessyasyubetsuCont-����
+	///@name CentDedRessyasyubetsuCont-操作
 	// ********************************
 	///@{
 
 	/**
-		set() ���\���ۂ��𔻒f���܂��B
+		set() が可能か否かを判断します。
 
-	���Ԑ��̏㏑��(set): name����� CentDedRessyasyubetsu���㏑������ƃG���[�B
+	○番線の上書き(set): nameが空の CentDedRessyasyubetsuを上書きするとエラー。
 	
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@param iIndex
-		�O����n�܂�C���f�N�X���w�肵�Ă��������B �͈͂͂O�ȏ� size() 
-		�����ł��B �A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B 
+		０から始まるインデクスを指定してください。 範囲は０以上 size() 
+		未満です。 但し、INT_MAX は、末尾を指定したものとみなします。 
 	@return
-		-	0�ȏ�: set() ���\�B
-		-	���̐�: set()�́A���̖߂�l�Ŏ��s���܂��B
-		-	-11; //���Ԑ��̏㏑��(set): name����� CentDedRessyasyubetsu���㏑������ƃG���[�B
+		-	0以上: set() が可能。
+		-	負の数: set()は、この戻り値で失敗します。
+		-	-11; //○番線の上書き(set): nameが空の CentDedRessyasyubetsuを上書きするとエラー。
 	 */
 	virtual int  setable(  const CentDedRessyasyubetsu& element , int iIndex )const ;
 
 	/**
-		element �����̃R���e�i�̎q�ł���ꍇ�́A�C���f�N�X��Ԃ��܂��B
+		element がこのコンテナの子である場合は、インデクスを返します。
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@return
-		element �����̃R���e�i�̎q�ł���ꍇ�́A�C���f�N�X��Ԃ��܂��B
-		�����łȂ��ꍇ�́A -1 �ł��B
+		element がこのコンテナの子である場合は、インデクスを返します。
+		そうでない場合は、 -1 です。
 	*/
 	virtual int  getIndex( const CentDedRessyasyubetsu* element )const ;
 
 	/**
-	  Rosen �ɁA�w�肳�ꂽ�w��Ԏ�ʁx�̗�Ԃ����邩�ۂ��𒲂ׂ܂��B
+	  Rosen に、指定された『列車種別』の列車があるか否かを調べます。
 	@param iRessyasyubetsuIndex [in]
-		�w��Ԏ��Index�x���w�肵�Ă��������B
-		�͈͂́A 0 �ȏ� ��Ԏ�ʂ̐������ł��B
-		INT_MAX �́A�����̗�Ԏ�ʂ��w�肵�����̂Ƃ݂Ȃ��܂��B
+		『列車種別Index』を指定してください。
+		範囲は、 0 以上 列車種別の数未満です。
+		INT_MAX は、末尾の列車種別を指定したものとみなします。
 	 @param piDiaIndex [out]
-		���̊֐��͂��̕ϐ��ɁA�w��Ԏ�ʁx�̗�Ԃ���������
-		�_�C���̃C���f�N�X���������݂܂��B
-		�s�v�Ȃ� NULL �ł����܂��܂���B
+		この関数はこの変数に、『列車種別』の列車が見つかった
+		ダイヤのインデクスを書き込みます。
+		不要なら NULL でもかまいません。
 	@param peRessyahoukou [out]
-		���̊֐��͂��̕ϐ��ɁA�w��Ԏ�ʁx�̗�Ԃ���������
-		�_�C���̗�ԕ������������݂܂��B
-		�s�v�Ȃ� NULL �ł����܂��܂���B
+		この関数はこの変数に、『列車種別』の列車が見つかった
+		ダイヤの列車方向を書き込みます。
+		不要なら NULL でもかまいません。
 	@param piRessyaIndex [out]
-		���̊֐��͂��̕ϐ��ɁA�w��Ԏ�ʁx�̗�Ԃ���������
-		���Index ���������݂܂��B
-		�s�v�Ȃ� NULL �ł����܂��܂���B
+		この関数はこの変数に、『列車種別』の列車が見つかった
+		列車Index を書き込みます。
+		不要なら NULL でもかまいません。
 	@return 
-		-	1; //	�w��̗�Ԏ�ʂ̗�Ԃ����݂��܂��B
-		-	0; //	�w��̗�Ԏ�ʂ̗�Ԃ͑��݂��܂���B
-		-	-1 ;	//	�C���f�N�X���s��
+		-	1; //	指定の列車種別の列車が存在します。
+		-	0; //	指定の列車種別の列車は存在しません。
+		-	-1 ;	//	インデクスが不正
 	 */
 	int isExistRessyaOfRessyasyubetsu( 
 		int iRessyasyubetsuIndex ,

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -81,7 +81,7 @@ namespace Pos{
 //	CconvContentPosToTarget
 // ****************************************************************
 	// --------------------------------
-	//@name ‰º¿ŠÖ”
+	//@name ä¸‹è«‹é–¢æ•°
 	// --------------------------------
 DcdSize CconvContentPosToTarget::TargetPosPerContentToContentSize( 
 	double dTargetPosPerContent , 
@@ -114,95 +114,95 @@ void CconvContentPosToTarget::
 	synchronizeProp( const CdDcdZone* pTargetZone ) 
 {
 	// --------------------------------
-	//	(1)‘®«İ’è‚Ì“¯Šú
+	//	(1)å±æ€§è¨­å®šæ™‚ã®åŒæœŸ
 	// --------------------------------
-	//@TargetZone ‚ğw’è‚·‚é‘€ì‚É‚¨‚¢‚ÄATargetZone.Size‚ª0‚Ìê‡A
-	//	TargetZone ‚ÉNULL‚ªw’è‚³‚ê‚½ê‡‚ÍA
-	//	“¯Šúˆ—‚Ís‚í‚ê‚Ü‚¹‚ñB
+	//ã€€TargetZone ã‚’æŒ‡å®šã™ã‚‹æ“ä½œã«ãŠã„ã¦ã€TargetZone.SizeãŒ0ã®å ´åˆã€
+	//	TargetZone ã«NULLãŒæŒ‡å®šã•ã‚ŒãŸå ´åˆã¯ã€
+	//	åŒæœŸå‡¦ç†ã¯è¡Œã‚ã‚Œã¾ã›ã‚“ã€‚
 	if ( pTargetZone != NULL && 
 		pTargetZone->getSize() != 0 )
 	{
 		if ( m_eSynchronizeState == ESynchronizeState_TargetPosPerContent )
 		{
-			//	m_dTargetPosPerContent ‚ª‘®«İ’è“¯Šú‘Ò‚¿B
+			//	m_dTargetPosPerContent ãŒå±æ€§è¨­å®šåŒæœŸå¾…ã¡ã€‚
 
 			m_dTargetPosPerContent = TargetPosPerContentFromContentSize(
 				m_iContentSize , pTargetZone );
 			
-			//	ƒvƒƒpƒeƒB‚Ì‘®«İ’è“¯Šú‚ğ‰ğœ
+			//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®å±æ€§è¨­å®šåŒæœŸã‚’è§£é™¤
 			m_eSynchronizeState = ESynchronizeState_None ;
 
-			//	ƒvƒƒpƒeƒB‚ÌƒLƒƒƒbƒVƒ…—p‚É‘®«‚ğXV
+			//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥ç”¨ã«å±æ€§ã‚’æ›´æ–°
 			m_iTargetSize_Prev = pTargetZone->getSize() ;
 		}
 		else if ( m_eSynchronizeState == ESynchronizeState_ContentSize )
 		{
-			// m_iContentSize ‚ª‘®«İ’è“¯Šú‘Ò‚¿B
+			// m_iContentSize ãŒå±æ€§è¨­å®šåŒæœŸå¾…ã¡ã€‚
 			m_iContentSize = TargetPosPerContentToContentSize(
 				m_dTargetPosPerContent , pTargetZone ) ;
 
-			//	ƒvƒƒpƒeƒB‚Ì‘®«İ’è“¯Šú‚ğ‰ğœ
+			//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®å±æ€§è¨­å®šåŒæœŸã‚’è§£é™¤
 			m_eSynchronizeState = ESynchronizeState_None ;
 
-			//	ƒvƒƒpƒeƒB‚ÌƒLƒƒƒbƒVƒ…—p‚É‘®«‚ğXV
+			//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥ç”¨ã«å±æ€§ã‚’æ›´æ–°
 			m_iTargetSize_Prev = pTargetZone->getSize() ;
 		}
 	}
 
 
 	// --------------------------------
-	//	(2)‘®«æ“¾‚Ì“¯Šú
+	//	(2)å±æ€§å–å¾—æ™‚ã®åŒæœŸ
 	// --------------------------------
 
 	if ( pTargetZone != NULL )
 	{
 		if ( m_iTargetSize_Prev == pTargetZone->getSize() )	
 		{
-			//	w’è‚³‚ê‚½ TargetZone ‚Ì Size ‚ª‘O‰ñ‚Æ“¯‚¶‚È‚çA	
-			//	‘®«‚Ì“¯Šú SynchronizeProp ‚ğs‚¢‚Ü‚¹‚ñB
-			//	‚±‚ê‚ğAwƒvƒƒpƒeƒB‚ÌƒLƒƒƒbƒVƒ…x
-			//	PropCache ‚ÆŒÄÌ‚µ‚Ü‚·B
+			//	æŒ‡å®šã•ã‚ŒãŸ TargetZone ã® Size ãŒå‰å›ã¨åŒã˜ãªã‚‰ã€	
+			//	å±æ€§ã®åŒæœŸ SynchronizeProp ã‚’è¡Œã„ã¾ã›ã‚“ã€‚
+			//	ã“ã‚Œã‚’ã€ã€ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã€
+			//	PropCache ã¨å‘¼ç§°ã—ã¾ã™ã€‚
 		}
 		else
 		{
 			if ( pTargetZone->getSize() == 0 )
 			{
-				//@ PosAndRate ƒ‚[ƒh‚Å‚Ìw‘®«‚Ì“¯Šúx‚ÌÛ‚ÉA
-				//	TargetZone.Size=0‚ª
-				//	w’è‚³‚ê‚½ê‡‚ÍAContentSize ‚ÍXV‚¹‚¸A
-				//	‘O’l‚ğŒp‘±‚µ‚Ü‚·B 
+				//ã€€ PosAndRate ãƒ¢ãƒ¼ãƒ‰ã§ã®ã€å±æ€§ã®åŒæœŸã€ã®éš›ã«ã€
+				//	TargetZone.Size=0ãŒ
+				//	æŒ‡å®šã•ã‚ŒãŸå ´åˆã¯ã€ContentSize ã¯æ›´æ–°ã›ãšã€
+				//	å‰å€¤ã‚’ç¶™ç¶šã—ã¾ã™ã€‚ 
 			}
 			else
 			{
 				if ( m_eMode == EModePosAndRate )
 				{
-					//	‚±‚ÌƒNƒ‰ƒX‚Ì PosAndRate ƒ‚[ƒh‚Å‚ÍA
-					//	ƒ†[ƒU[‚ªTargetZone‚ğ
-					//	w’è‚·‚é‘€ì‚ğs‚¤‚½‚Ñ‚ÉA‘®« ContentSize ‚ğ
-					//	XV‚µ‚Ü‚·BContentSize ‚ÍA
-					//	TargetZone ‚ÌSize ‚ª•Ï‰»‚·‚é–ˆ‚ÉA’l‚ª•Ï‰»‚µ‚Ü‚·B
+					//	ã“ã®ã‚¯ãƒ©ã‚¹ã® PosAndRate ãƒ¢ãƒ¼ãƒ‰ã§ã¯ã€
+					//	ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒTargetZoneã‚’
+					//	æŒ‡å®šã™ã‚‹æ“ä½œã‚’è¡Œã†ãŸã³ã«ã€å±æ€§ ContentSize ã‚’
+					//	æ›´æ–°ã—ã¾ã™ã€‚ContentSize ã¯ã€
+					//	TargetZone ã®Size ãŒå¤‰åŒ–ã™ã‚‹æ¯ã«ã€å€¤ãŒå¤‰åŒ–ã—ã¾ã™ã€‚
 					m_iContentSize = TargetPosPerContentToContentSize(
 						m_dTargetPosPerContent , pTargetZone ) ;
 				}
 				else
 				{
-					//	Zone ƒ‚[ƒh‚Å‚à“¯—l‚ÉATargetPosPerContent ‚ğw’èA
-					//	æ“¾‚·‚é‚±‚Æ
-					//	‚ª‚Å‚«‚Ü‚·B‚±‚ÌƒNƒ‰ƒX‚Ìƒ†[ƒU[‚ªTargetZone‚ğ
-					//	w’è‚·‚é‘€ì‚ğs‚¤‚½‚ÑA
-					//	TargetPosPerContent‚ğXV‚µ‚Ü‚·B
+					//	Zone ãƒ¢ãƒ¼ãƒ‰ã§ã‚‚åŒæ§˜ã«ã€TargetPosPerContent ã‚’æŒ‡å®šã€
+					//	å–å¾—ã™ã‚‹ã“ã¨
+					//	ãŒã§ãã¾ã™ã€‚ã“ã®ã‚¯ãƒ©ã‚¹ã®ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒTargetZoneã‚’
+					//	æŒ‡å®šã™ã‚‹æ“ä½œã‚’è¡Œã†ãŸã³ã€
+					//	TargetPosPerContentã‚’æ›´æ–°ã—ã¾ã™ã€‚
 					m_dTargetPosPerContent = TargetPosPerContentFromContentSize(
 						m_iContentSize , pTargetZone );
 				}
 			}
-			//	ƒvƒƒpƒeƒB‚ÌƒLƒƒƒbƒVƒ…—p‚É‘®«‚ğXV
+			//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥ç”¨ã«å±æ€§ã‚’æ›´æ–°
 			m_iTargetSize_Prev = pTargetZone->getSize() ;
 		}
 	}
 }
 
 	// ********************************
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	// ********************************
 CconvContentPosToTarget::CconvContentPosToTarget() :
 	m_eMode( EModePosAndRate ) , 
@@ -242,7 +242,7 @@ CconvContentPosToTarget::CconvContentPosToTarget(
 
 
 	// ********************************
-	//@name CconvContentPosToTarget-‘®«
+	//@name CconvContentPosToTarget-å±æ€§
 	// ********************************
 CconvContentPosToTarget::EMode	CconvContentPosToTarget::getMode()const 
 {
@@ -273,13 +273,13 @@ DcdSize	CconvContentPosToTarget::getContentSize()const
 
 
 	// ********************************
-	//@name CconvContentPosToTarget-TargetPosPerContent,ContentSize ‚Ìæ“¾Eİ’è
+	//@name CconvContentPosToTarget-TargetPosPerContent,ContentSize ã®å–å¾—ãƒ»è¨­å®š
 	// ********************************
 
 double CconvContentPosToTarget::getTargetPosPerContent( 
 	const CdDcdZone* pTargetZone ) 
 {
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( pTargetZone ) ;
 
 	return m_dTargetPosPerContent ;
@@ -290,17 +290,17 @@ void CconvContentPosToTarget::setTargetPosPerContent(
 {
 	m_dTargetPosPerContent = value ;
 
-	/// m_iContentSize ‚ª‘®«İ’è“¯Šú‘Ò‚¿B
+	/// m_iContentSize ãŒå±æ€§è¨­å®šåŒæœŸå¾…ã¡ã€‚
 	m_eSynchronizeState = ESynchronizeState_ContentSize ;
 
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( pTargetZone ) ;
 }
 
 DcdSize CconvContentPosToTarget::getContentSize( 
 	const CdDcdZone* pTargetZone ) 
 {
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( pTargetZone ) ;
 
 	return m_iContentSize ;
@@ -311,10 +311,10 @@ void CconvContentPosToTarget::setContentSize(
 {
 	m_iContentSize = value ;
 
-	// m_dTargetPosPerContent ‚ª‘®«İ’è“¯Šú‘Ò‚¿B
+	// m_dTargetPosPerContent ãŒå±æ€§è¨­å®šåŒæœŸå¾…ã¡ã€‚
 	m_eSynchronizeState = ESynchronizeState_TargetPosPerContent ;
 
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( pTargetZone ) ;
 }
 
@@ -326,7 +326,7 @@ void CconvContentPosToTarget::setContentPosAndRate(
 	setContentPos( posContentPos ) ;
 	setTargetPosPerContent( dTargetPosPerContent , pTargetZone ) ;
 
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( pTargetZone ) ;
 }
 
@@ -334,7 +334,7 @@ void CconvContentPosToTarget::setContentPosAndRate(
 CdDcdZone CconvContentPosToTarget::getContentZone( 
 	const CdDcdZone* pTargetZone ) 
 {
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( pTargetZone ) ;
 
 	return CdDcdZone( getContentPos() , getContentSize( pTargetZone ) ) ;
@@ -346,11 +346,11 @@ void CconvContentPosToTarget::setContentZone(
 	setContentPos( zoneContent.getPos() ) ;
 	setContentSize( zoneContent.getSize() , pTargetZone ) ;
 
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( pTargetZone ) ;
 }
 	// ********************************
-	//@name CconvContentPosToTarget-À•W•ÏŠ·
+	//@name CconvContentPosToTarget-åº§æ¨™å¤‰æ›
 	// ********************************
 
 
@@ -359,7 +359,7 @@ DcdPos	CconvContentPosToTarget::ContentPosToTarget(
 {
 	DcdPos posRv =  0 ;
 
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( &aTargetZone ) ;
 
 	if ( m_eMode == EModePosAndRate )
@@ -383,7 +383,7 @@ CdDcdZone CconvContentPosToTarget::ContentZoneToTarget(
 {
 	CdDcdZone	zoneRv  ; 
 
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( &aTargetZone ) ;
 
 	if ( m_eMode == EModePosAndRate )
@@ -407,7 +407,7 @@ DcdPos CconvContentPosToTarget::ContentPosFromTarget(
 {
 	DcdPos posRv =  0 ;
 
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( &aTargetZone ) ;
 
 	if ( m_eMode == EModePosAndRate )
@@ -431,7 +431,7 @@ CdDcdZone CconvContentPosToTarget::ContentZoneFromTarget(
 {
 	CdDcdZone	zoneRv  ; 
 
-	//	ƒvƒƒpƒeƒB‚Ì“¯Šú
+	//	ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®åŒæœŸ
 	synchronizeProp( &aTargetZone ) ;
 
 

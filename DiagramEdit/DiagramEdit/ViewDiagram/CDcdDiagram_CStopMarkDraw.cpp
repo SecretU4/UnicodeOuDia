@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //	CDcdDiagram_CStopMarkDraw.cpp
@@ -75,7 +75,7 @@ Copyright (C) 2006-2017 take-okm
 namespace ViewDiagram{
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CDcdDiagram_CStopMarkDraw::CDcdDiagram_CStopMarkDraw( CDcdDiagram* pCDcdDiagram , 
 			IfDcdTarget* pIfDcdTarget , 
@@ -106,16 +106,16 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 	if ( m_pCDcdDiagram->getStopMarkDraw() != 
 		CDcdDiagram::EStopMarkDraw_DrawOnBriefStop )
 	{
-		//	���݂̃��[�h�ł́A��ԃ}�[�N�̕`����s���܂���B
+		//	現在のモードでは、停車マークの描画を行いません。
 		return ;
 	}
 	if ( iEkiOrder == pCentDedDgrRessyasen->getRessyasenSyuutenEkiOrder() )
 	{
-		//	��Ԑ��I�_�ɂ́A�e�L�X�g�̕`����s���܂���
+		//	列車線終点には、テキストの描画を行いません
 		return ;
 	}
 	// --------------------------------
-	//	���̗�Ԏ�ʂŕ`����s�����ۂ��𔻒�
+	//	この列車種別で描画を行うか否かを判定
 	// --------------------------------
 	CentDedRessyasyubetsu::EStopMarkDrawType	eStopMarkDrawType = 
 		CentDedRessyasyubetsu::EStopMarkDrawType_DrawOnStop ;
@@ -129,11 +129,11 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 			eStopMarkDrawType = pCentDedDgrRessyasyubetsu->getStopMarkDrawType() ;
 		}
 	}
-	//eStopMarkDrawType = ��ԉw�`�惂�[�h
+	//eStopMarkDrawType = 停車駅描画モード
 
 
 	// --------------------------------
-	//	��ԃ}�[�N��`�悷��ʒu���Z�o
+	//	停車マークを描画する位置を算出
 	// --------------------------------
 	int iX_Dcd = 0 ;
 	int iY_Dcd = 0 ;
@@ -146,17 +146,17 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 		if ( iResult < 0 ){
 			return ;
 		}
-		//iX_Dgr,iY_Dgr = ��ԏ���\������w�̔������̍��W
-		//	�P�ʂ́A�w�_�C���O�����G���e�B�e�B���W�n�x
+		//iX_Dgr,iY_Dgr = 列車情報を表示する駅の発時刻の座標
+		//	単位は、『ダイヤグラムエンティティ座標系』
 
 		iX_Dcd = m_pCDcdDiagram->XDgrToDcd( m_pIfDcdTarget , iX_Dgr  ) ;
 		iY_Dcd = m_pCDcdDiagram->YDgrToDcd( m_pIfDcdTarget , iY_Dgr  ) ;
 	}
-	//iX_Dcd,iY_Dcd = ��ԏ���\������w�̔������̍��W
-	//	�P�ʂ́A IfDcdTarget �̍��W�n
+	//iX_Dcd,iY_Dcd = 列車情報を表示する駅の発時刻の座標
+	//	単位は、 IfDcdTarget の座標系
 
 	// --------------------------------
-	//	��Ԏ��Ԃ��Z�o
+	//	停車時間を算出
 	// --------------------------------
 	int iStopSeconds = 0 ;
 	{
@@ -169,9 +169,9 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 	}
 
 	// --------------------------------
-	//	���w���n���w�ł��I���w�ł��Ȃ�
-	//	��Ԏ�ʂ���ԉw�𖾎� AND ���w���Z���Ԓ��(60�b����)
-	//	�ł���΁A��ԃ}�[�N��`��
+	//	当駅が始発駅でも終着駅でもない
+	//	列車種別が停車駅を明示 AND 当駅が短時間停車(60秒未満)
+	//	であれば、停車マークを描画
 	// --------------------------------
 	if ( pCentDedDgrRessya->getSihatsuEki() < iEkiOrder &&
 		iEkiOrder < pCentDedDgrRessya->getSyuuchakuEki() && 
@@ -182,11 +182,11 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 		iStopSeconds < 60 )
 	{
 		//// --------------------------------
-		////	��ԃ}�[�N�̕`��(��)
+		////	停車マークの描画(△)
 		//// --------------------------------
 		//{
 		//	// --------------------------------
-		//	//	�O�p�`�̂R�ӂ��Z�o
+		//	//	三角形の３辺を算出
 		//	// --------------------------------
 		//	CdDcdPosXy	posRessyasen_Pos1_Dcd ;
 		//	CdDcdPosXy	posRessyasen_Pos2_Dcd ;
@@ -204,8 +204,8 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 		//		pCentDedDgrRessyasen->getRessyasenSyuutenEkiOrder() ) 
 		//		) ;
 		//		//posRessyasen_Pos1_Dgr,posRessyasen_Pos2_Dgr = 
-		//		//	�w�_�C���O�����G���e�B�e�B��Ԑ��x�̋N�_�ƏI�_�̍��W
-		//		//	�P�ʂ́A�w�_�C���O�����G���e�B�e�B���W�n�x
+		//		//	『ダイヤグラムエンティティ列車線』の起点と終点の座標
+		//		//	単位は、『ダイヤグラムエンティティ座標系』
 
 		//		posRessyasen_Pos1_Dcd = m_pCDcdDiagram->DgrToDcd( m_pIfDcdTarget , 
 		//		posRessyasen_Pos1_Dgr ) ;
@@ -213,20 +213,20 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 		//		posRessyasen_Pos2_Dgr ) ;
 		//	}
 		//	//posRessyasen_Pos1_Dgr,posRessyasen_Pos2_Dgr = 
-		//	//	�w�_�C���O�����G���e�B�e�B��Ԑ��x�̋N�_�ƏI�_�̍��W
-		//	//	�P�ʂ́A IfDcdTarget �̍��W
+		//	//	『ダイヤグラムエンティティ列車線』の起点と終点の座標
+		//	//	単位は、 IfDcdTarget の座標
 
 
 		//	CdDcdPosXy	posTriangle_Dcd[3] ;
 		//	{
-		//		//	�O�p�`�̑傫���B
-		//		//	�P�ʂ́ADC�̘_�����W�B
-		//		//	���̒l�́A
-		//		//		����������񓙕ӎO�p�`�̒��_�܂ł̒����B
-		//		//		�񓙕ӎO�p�`�̒��
-		//		//	�ɁA�K�p����܂��B
-		//		//	����������񓙕ӎO�p�`�̒�ӂ܂ł̒����́A 
-		//		//	dTriangleSize / 2 �Ƃ��܂��B
+		//		//	三角形の大きさ。
+		//		//	単位は、DCの論理座標。
+		//		//	この値は、
+		//		//		発時刻から二等辺三角形の頂点までの長さ。
+		//		//		二等辺三角形の底辺
+		//		//	に、適用されます。
+		//		//	発時刻から二等辺三角形の底辺までの長さは、 
+		//		//	dTriangleSize / 2 とします。
 		//		const double dTriangleSize = 6 ;
 
 		//		if ( pCentDedDgrRessya->getRessyahoukou() == 
@@ -247,8 +247,8 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 		//			double e_y_len = ( dTriangleSize * cos( dRessyasen_rad ) ) ;
 
 
-		//			//	�O�p�`�̒��_�����߂܂��B
-		//			//	�Ō�� +0.5 �́A�����_�ȉ��̒[�����l�̌ܓ����邽�߂̂��̂ł��B
+		//			//	三角形の頂点を求めます。
+		//			//	最後の +0.5 は、小数点以下の端数を四捨五入するためのものです。
 		//			posTriangle_Dcd[0].setX( (DcdPos)( iX_Dcd + e_x_len                       + 0.5 ) ) ;
 		//			posTriangle_Dcd[0].setY( (DcdPos)( iY_Dcd + e_y_len                       + 0.5 ) ) ;
 		//			posTriangle_Dcd[1].setX( (DcdPos)( iX_Dcd - e_x_len * 0.5 + e_y_len * 0.5 + 0.5 ) ) ;
@@ -272,8 +272,8 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 		//			double e_x_len = ( dTriangleSize * sin( dRessyasen_rad ) ) ;
 		//			double e_y_len = ( dTriangleSize * cos( dRessyasen_rad ) ) ;
 
-		//			//	�O�p�`�̒��_�����߂܂��B
-		//			//	�Ō�� +0.5 �́A�����_�ȉ��̒[�����l�̌ܓ����邽�߂̂��̂ł��B
+		//			//	三角形の頂点を求めます。
+		//			//	最後の +0.5 は、小数点以下の端数を四捨五入するためのものです。
 		//			posTriangle_Dcd[0].setX( (DcdPos)( iX_Dcd + e_x_len                       + 0.5 ) ) ;
 		//			posTriangle_Dcd[0].setY( (DcdPos)( iY_Dcd - e_y_len                       + 0.5 ) ) ;
 		//			posTriangle_Dcd[1].setX( (DcdPos)( iX_Dcd - e_x_len * 0.5 + e_y_len * 0.5 + 0.5 ) ) ;
@@ -282,7 +282,7 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 		//			posTriangle_Dcd[2].setY( (DcdPos)( iY_Dcd + e_y_len * 0.5 - e_x_len * 0.5 + 0.5 ) ) ;
 		//		}
 		//	}
-		//	//posTriangle = �R�p�`�̂R�_
+		//	//posTriangle = ３角形の３点
 		//	// --------------------------------
 		//	CdPenProp	aCdPenProp( 1 , CdColorProp( 0 , 0 , 0 ) , CdPenProp::SOLID ) ;
 		//	HPEN hPen = m_pIfDcdTarget->CreatePen( aCdPenProp ) ;
@@ -302,10 +302,10 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 		//	Polygon( 
 		//		m_pIfDcdTarget->getHdc() , 
 		//		pointTriangle , 
-		//		3 //	�R�p�`
+		//		3 //	３角形
 		//		) ;
 		//	// --------------------------------
-		//	//	GDI�I�u�W�F�N�g�̑I��������
+		//	//	GDIオブジェクトの選択を解除
 		//	if ( hPenPrev != NULL )
 		//	{
 		//		SelectObject( m_pIfDcdTarget->getHdc() , hPenPrev ) ;
@@ -319,7 +319,7 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 		//}
 
 		// --------------------------------
-		//	��ԃ}�[�N�̕`��(��)
+		//	停車マークの描画(○)
 		// --------------------------------
 		{
 			CdPenProp	aCdPenProp( 1 , CdColorProp( 0 , 0 , 0 ) , CdPenProp::SOLID ) ;
@@ -337,7 +337,7 @@ void CDcdDiagram_CStopMarkDraw::onCentDedDgrEkiJikoku(
 				iX_Dcd + 3 , 
 				iY_Dcd + 3 ) ;
 			// --------------------------------
-			//	GDI�I�u�W�F�N�g�̑I��������
+			//	GDIオブジェクトの選択を解除
 			if ( hPenPrev != NULL )
 			{
 				SelectObject( m_pIfDcdTarget->getHdc() , hPenPrev ) ;

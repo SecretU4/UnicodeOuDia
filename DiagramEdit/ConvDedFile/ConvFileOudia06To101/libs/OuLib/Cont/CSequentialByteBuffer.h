@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -80,69 +80,69 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  * @brief
- * �y�T�v�z
- * 	  �L���[�`���Ńo�C�g�f�[�^��ۑ�����A�o�b�t�@����������N���X�ł��B
+ * 【概要】
+ * 	  キュー形式でバイトデータを保存する、バッファを実現するクラスです。
  *
- * �y�g�����z
+ * 【使い方】
  *
- * �P�D  �R���X�g���N�^�ŁA�I�u�W�F�N�g�𐶐����Ă��������B
- * 	  �e���v���[�g�����́A�o�b�t�@�̒P�ʃo�C�g���ł��Bthis�́A
- * 	�f�[�^�����̃o�C�g�����܂邽�тɁA�o�b�t�@���g�����܂��B
+ * １．  コンストラクタで、オブジェクトを生成してください。
+ * 	  テンプレート引数は、バッファの単位バイト数です。thisは、
+ * 	データがこのバイト数溜まるたびに、バッファを拡張します。
  *
- * �Q�D  ����Ȍ�́A�S�����o�֐����g�p�ł��܂��BWrite()�Ńo�b�t�@�ւ�
- * 	�f�[�^���������݁ARead�ł̓o�b�t�@����f�[�^��ǂݍ��ނ��Ƃ��ł��܂��B
- * 	Read() �́A�Ǎ��ɐ��������f�[�^���o�b�t�@�����菜���܂��B
+ * ２．  これ以後は、全メンバ関数が使用できます。Write()でバッファへの
+ * 	データを書き込み、Readではバッファからデータを読み込むことができます。
+ * 	Read() は、読込に成功したデータをバッファから取り除きます。
  */
 template < int iExpandSize = 8192 >
 class CSequentialByteBuffer: public IfSequentialByteBuffer
 {
 // --------------------------------
-//	�����f�[�^
+//	内部データ
 // --------------------------------
  private:
 	/**
-	 *	�o�b�t�@�̒P�ʃo�C�g�����̃f�[�^��
-	 *	�ێ�����\���̂ł��B
-	 *	���̍\���̂̓`�F�C�����`�����܂��B
+	 *	バッファの単位バイト数分のデータを
+	 *	保持する構造体です。
+	 *	この構造体はチェインを形成します。
 	 */
 	struct NODE
 	{
 		/**
-		 *	�o�b�t�@�{�̂ł��B
+		 *	バッファ本体です。
 		 */
 		char		m_abyBuffer[ iExpandSize ] ;
 		
 		/**
-		 * 	m_byBuffer �̂����A�L���ȃf�[�^�����݂���擪�̓Y�����B
+		 * 	m_byBuffer のうち、有効なデータが存在する先頭の添え字。
 		 */
 		int			m_iPos ;
 		/**
-		 * 	m_byBuffer �̂����A
-		 * 	�L���ȃf�[�^�̃o�C�g���B
+		 * 	m_byBuffer のうち、
+		 * 	有効なデータのバイト数。
 		 */
 		int			m_iSize ;
 		
 		/**
-		 * 	���̃m�[�h�ւ̃|�C���^�ł��B
-		 * 	�Ȃ��ꍇ��NULL�ɂȂ�܂��B
+		 * 	次のノードへのポインタです。
+		 * 	ない場合はNULLになります。
 		 */
 		NODE*		m_pNext ;
 	};
 	/**
-	 * 	�擪�̃m�[�h�ւ̃|�C���^�ł�
-	 * 	�m�[�h���P���Ȃ��ꍇ��NULL�ł�
+	 * 	先頭のノードへのポインタです
+	 * 	ノードが１つもない場合はNULLです
 	 */
 	NODE*			m_pnodeFirst ;
 	
 	/**
 	 *
-	 *	�����̃m�[�h�ւ̃|�C���^�ł�
-	 *	�m�[�h���P���Ȃ��ꍇ��NULL�ł�
+	 *	末尾のノードへのポインタです
+	 *	ノードが１つもない場合はNULLです
 	 */
 	NODE*			m_pnodeLast ;
 	
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	CSequentialByteBuffer() : m_pnodeFirst( NULL ) , m_pnodeLast( NULL ) 
@@ -185,14 +185,14 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 // ********************************
  public:
 	/**
-	 * 	�o�b�t�@�Ƀf�[�^���������݂܂��B
+	 * 	バッファにデータを書き込みます。
 	 * @param pData  [in]
-	 * 	�������ރf�[�^�̐擪�A�h���X���w�肵�Ă�������
+	 * 	書き込むデータの先頭アドレスを指定してください
 	 * @param sizeData [in]
-	 * 	�������ރf�[�^�̃T�C�Y���w�肵�Ă��������B
+	 * 	書き込むデータのサイズを指定してください。
 	 * @return
-	 * 	�������݂ɐ��������o�C�g����Ԃ��܂��B
-	 * 	-	-1:	���������m�ۂł��܂���B
+	 * 	書き込みに成功したバイト数を返します。
+	 * 	-	-1:	メモリが確保できません。
 	 */
 	int Write( const char* pData , int sizeData ) 
 	{
@@ -200,12 +200,12 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 		while ( iRv >= 0 && sizeData > 0 ){
 			if ( iRv >= 0 ){
 				if ( m_pnodeLast == NULL ){
-					//	���݃o�b�t�@����̏ꍇ�́A�o�b�t�@��NODE��
-					//	�V���ɍ쐬���A
-					//	�擪�E�����Ƃ��ēo�^���܂��B
+					//	現在バッファが空の場合は、バッファのNODEを
+					//	新たに作成し、
+					//	先頭・末尾として登録します。
 					NODE*	pNode = new NODE ;
 					if ( pNode == NULL ){
-						iRv = -1 ;	//	-1:	���������m�ۂł��܂���B
+						iRv = -1 ;	//	-1:	メモリが確保できません。
 					}	else	{
 						pNode->m_iPos = 0 ;
 						pNode->m_iSize = 0 ;
@@ -217,11 +217,11 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 			if ( iRv >= 0 ){
 				int	iLastPos = m_pnodeLast->m_iPos + m_pnodeLast->m_iSize ;
 				if ( iExpandSize - iLastPos  == 0 ){
-					//	������NODE����̏ꍇ�́A
-					//	�V����NODE���쐬���A�����ɒǉ����܂��B
+					//	末尾のNODEが空の場合は、
+					//	新しいNODEを作成し、末尾に追加します。
 					NODE*	pNode = new NODE ;
 					if ( pNode == NULL ){
-						iRv = -1 ;	//	-1:	���������m�ۂł��܂���B
+						iRv = -1 ;	//	-1:	メモリが確保できません。
 					}	else	{
 						pNode->m_iPos = 0 ;
 						pNode->m_iSize = 0 ;
@@ -233,13 +233,13 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 				
 			}
 			if ( iRv >= 0 ){
-				//	������NODE�Ƀf�[�^����������
+				//	末尾のNODEにデータを書き込み
 				int	iLastPos = m_pnodeLast->m_iPos + m_pnodeLast->m_iSize ;
 				int sizeDataWriteNext = sizeData ;
 				if ( sizeDataWriteNext > iExpandSize - iLastPos ){
 					sizeDataWriteNext = iExpandSize - iLastPos ;
 				}
-				//sizeDataWriteNext =  �����̃m�[�h�ɏ������߂�o�C�g��
+				//sizeDataWriteNext =  末尾のノードに書き込めるバイト数
 				
 				memcpy( &m_pnodeLast->m_abyBuffer[ iLastPos ]
 					, pData , sizeDataWriteNext ) ;
@@ -255,15 +255,15 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 	};
 	
 	/**
-	 * 	�o�b�t�@����f�[�^��ǂݍ��݂܂��B
-	 * 	�ǂݍ��񂾃f�[�^�́A�o�b�t�@�����菜����܂��B
+	 * 	バッファからデータを読み込みます。
+	 * 	読み込んだデータは、バッファから取り除かれます。
 	 * @param pData  [out]
-	 * 	���̊֐��́A���̃A�h���X�ɓǂݍ��񂾃f�[�^���������݂܂��B
-	 * 	�s�v�Ȃ�i�f�[�^�̓ǂݎ̂Ă��s���ꍇ�jNULL��n���Ă����܂��܂���B
+	 * 	この関数は、このアドレスに読み込んだデータを書き込みます。
+	 * 	不要なら（データの読み捨てを行う場合）NULLを渡してもかまいません。
 	 * @param sizeData [in]
-	 * 	�ǂݍ��ލő�o�C�g���ipData�̃o�b�t�@�T�C�Y�j���w�肵�Ă�������
+	 * 	読み込む最大バイト数（pDataのバッファサイズ）を指定してください
 	 * @return
-	 * 	�Ǎ��ɐ��������o�C�g����Ԃ��܂��B
+	 * 	読込に成功したバイト数を返します。
 	 */
 	int Read( char* pData , int sizeData ) 
 	{
@@ -274,14 +274,14 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 				pNode != NULL && iRv >= 0 && sizeData > 0 ;
 				pNode = pNode->m_pNext ){
 			if ( iRv >= 0 ){
-				//	NODE����f�[�^��ǂݍ���
+				//	NODEからデータを読み込み
 				int sizeDataReadNext = sizeData ;
 				if ( sizeDataReadNext > pNode->m_iSize ){
 					sizeDataReadNext = pNode->m_iSize ;
 				}
-				//sizeDataReadNext =  �擪�̂̃m�[�h����ǂݍ��߂�o�C�g��
+				//sizeDataReadNext =  先頭ののノードから読み込めるバイト数
 				
-				//	���[�U�[�o�b�t�@�ɃR�s�[
+				//	ユーザーバッファにコピー
 				if ( pData != NULL ){
 					memcpy( pData  , 
 						&pNode->m_abyBuffer[ pNode->m_iPos ]
@@ -291,14 +291,14 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 				sizeData -= sizeDataReadNext ;
 				iRv += sizeDataReadNext ;
 				
-				//	�ǂݍ��񂾃f�[�^���m�[�h����폜
+				//	読み込んだデータをノードから削除
 				pNode->m_iPos  += sizeDataReadNext ;
 				pNode->m_iSize -= sizeDataReadNext ;
 
 			}
 		}
 		
-		//	��̃m�[�h�͍폜
+		//	空のノードは削除
 		while ( m_pnodeFirst != NULL && m_pnodeFirst->m_iSize == 0 ){
 					NODE*	pNodeToDelete = m_pnodeFirst ;
 					m_pnodeFirst = m_pnodeFirst->m_pNext ;
@@ -312,15 +312,15 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 	}
 	
 	/**
-	 * 	�o�b�t�@�̐擪����f�[�^��ǂݍ��݂܂����A
-	 * 	�ǂݍ��񂾃f�[�^���o�b�t�@�����菜���܂���
+	 * 	バッファの先頭からデータを読み込みますが、
+	 * 	読み込んだデータをバッファから取り除きません
 	 * @param pData  [out]
-	 * 	���̊֐��́A���̃A�h���X�ɓǂݍ��񂾃f�[�^���������݂܂��B
-	 * 	�s�v�Ȃ�NULL��n���Ă����܂��܂���B
+	 * 	この関数は、このアドレスに読み込んだデータを書き込みます。
+	 * 	不要ならNULLを渡してもかまいません。
 	 * @param sizeData [in]
-	 * 	�ǂݍ��ލő�o�C�g���ipData�̃o�b�t�@�T�C�Y�j���w�肵�Ă�������
+	 * 	読み込む最大バイト数（pDataのバッファサイズ）を指定してください
 	 * @return
-	 * 	�Ǎ��ɐ��������o�C�g����Ԃ��܂��B
+	 * 	読込に成功したバイト数を返します。
 	 */
 	int Peek( char* pData , int sizeData )const 
 	{
@@ -331,14 +331,14 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 				pNode != NULL && iRv >= 0 && sizeData > 0 ;
 				pNode = pNode->m_pNext ){
 			if ( iRv >= 0 ){
-				//	NODE����f�[�^��ǂݍ���
+				//	NODEからデータを読み込み
 				int sizeDataReadNext = sizeData ;
 				if ( sizeDataReadNext > pNode->m_iSize ){
 					sizeDataReadNext = pNode->m_iSize ;
 				}
-				//sizeDataReadNext =  �擪�̂̃m�[�h����ǂݍ��߂�o�C�g��
+				//sizeDataReadNext =  先頭ののノードから読み込めるバイト数
 				
-				//	���[�U�[�o�b�t�@�ɃR�s�[
+				//	ユーザーバッファにコピー
 				if ( pData != NULL ){
 					memcpy( pData  , 
 						&pNode->m_abyBuffer[ pNode->m_iPos ]
@@ -355,7 +355,7 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 	
 	/**
 	 * @return
-	 * 	���݃o�b�t�@�ɂ���o�C�g����Ԃ��܂��B
+	 * 	現在バッファにあるバイト数を返します。
 	 */
 	int Size()const 
 	{
@@ -370,11 +370,11 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 	}
 	
 	/**
-	 * 	�o�b�t�@�̃f�[�^��j�����܂��B
+	 * 	バッファのデータを破棄します。
 	 */
 	void Clear() 
 	{
-		//	��̃m�[�h�͍폜
+		//	空のノードは削除
 		while ( m_pnodeFirst != NULL  ){
 					NODE*	pNodeToDelete = m_pnodeFirst ;
 					m_pnodeFirst = m_pnodeFirst->m_pNext ;
@@ -388,7 +388,7 @@ class CSequentialByteBuffer: public IfSequentialByteBuffer
 };
 
 // --------------------------------
-//	�f�t�H���g�̃o�b�t�@�̃V�m�j��
+//	デフォルトのバッファのシノニム
 // --------------------------------
 typedef CSequentialByteBuffer<>	CSequentialByteBuf ;
 

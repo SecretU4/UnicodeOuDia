@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CentDedEkiTrackCont.h 378 2016-11-16 21:10:54Z okm $
@@ -75,54 +75,54 @@ Copyright (C) 2006-2017 take-okm
 
 namespace entDed{
 
-//	�O���Q��
+//	前方参照
 class CentDedEki ;
 class CentDedRosen ;
 
 /**
 @brief
-  �w�́w�Ԑ��x�̃R���e�i�ł��B
+  駅の『番線』のコンテナです。
   
-  ���̃R���e�i�� CentDedEki �̎q�I�u�W�F�N�g�ŁA
-���� CentDedEki �� CentDedRosen �ɕ�܂���Ă���ꍇ�A insert() 
-���\�b�h�́ACentDedRosen::onEkiTrackInsert( iEkiIndex , iEkiTrackIndex ) 
-�ɏ������Ϗ����܂��Berase() �����l�ł��B
+  このコンテナが CentDedEki の子オブジェクトで、
+その CentDedEki が CentDedRosen に包含されている場合、 insert() 
+メソッドは、CentDedRosen::onEkiTrackInsert( iEkiIndex , iEkiTrackIndex ) 
+に処理を委譲します。erase() も同様です。
   
 
-����
+制約
  -------------------------------- 
 
-����Ɂw���{���x�E�w����{���x���P���K�v�B
+○常に『上り本線』・『下り本線』が１つずつ必要。
 
-���w���{���x�E�w����{���x�̒ǉ��E�폜�͋֎~�B
+○『上り本線』・『下り本線』の追加・削除は禁止。
 
-(��)�w���������I�u�W�F�N�g�̔Ԑ��w��q���C���f�N�X�̏ꍇ�A�C���f�N�X�� CentDedEkiTrackCont �͈͓̔��łȂ��Ă͂Ȃ�Ȃ��B
+(△)駅時刻入線オブジェクトの番線指定子がインデクスの場合、インデクスは CentDedEkiTrackCont の範囲内でなくてはならない。
 
 
-����̃G���[�����E�C��
+操作のエラー検査・修正
  -------------------------------- 
 
-���R���e�i�̐���(�R���X�g���N�^): �w���{���x�w����{���x��ݒ肷��B
+○コンテナの生成(コンストラクタ): 『上り本線』『下り本線』を設定する。
 
-���Ԑ��̒ǉ�(insert):�w�{���x�̒ǉ��̓G���[
+○番線の追加(insert):『本線』の追加はエラー
 
-(��)�Ԑ��̒ǉ�(insert):�w���������I�u�W�F�N�g�̔Ԑ��w��q�̎w��������C���f�N�X�̏ꍇ�A�C���f�N�X�́A�R���e�i�ւ̒ǉ��ɍ��킹�ăV�t�g������B
+(△)番線の追加(insert):駅時刻入線オブジェクトの番線指定子の指定方式がインデクスの場合、インデクスは、コンテナへの追加に合わせてシフトさせる。
 
-���Ԑ��̍폜(erase):�w�{���x�̍폜�̓G���[
+○番線の削除(erase):『本線』の削除はエラー
 
-(��)�Ԑ��̍폜(erase):�w���������I�u�W�F�N�g�̔Ԑ��w��q�̎w��������C���f�N�X�̏ꍇ�A�C���f�N�X�́A�R���e�i�ւ̒ǉ��ɍ��킹�ăV�t�g������B
-�@�w���������I�u�W�F�N�g�̔Ԑ��w��q�̎w��������C���f�N�X�ŁA���̃C���f�N�X���폜�Ώۂ̂��̂ł���ꍇ�A�w�{���x�ɕύX����
+(△)番線の削除(erase):駅時刻入線オブジェクトの番線指定子の指定方式がインデクスの場合、インデクスは、コンテナへの追加に合わせてシフトさせる。
+　駅時刻入線オブジェクトの番線指定子の指定方式がインデクスで、そのインデクスが削除対象のものである場合、『本線』に変更する
 
-���Ԑ��̏㏑��(set): �Ԑ���ʂ̈قȂ� CentDedEkiTrack ���㏑������ƃG���[
+○番線の上書き(set): 番線種別の異なる CentDedEkiTrack を上書きするとエラー
 
-���R���e�i�̑��(operator=):insert,erase,set���g�p���āA�{���̒ǉ��֎~�E�폜�֎~�E�㏑���֎~�̐���������
+○コンテナの代入(operator=):insert,erase,setを使用して、本線の追加禁止・削除禁止・上書き禁止の制約を避ける
 
-���폜�Ώۂ̔Ԑ��̃C���f�N�X�����w���������̌���(findRessyaOfEkiTrack):�폜�Ώۂ̔Ԑ���\���Ԑ��C���f�N�X�����w���������I�u�W�F�N�g����������
+△削除対象の番線のインデクスを持つ駅時刻入線の検索(findRessyaOfEkiTrack):削除対象の番線を表す番線インデクスを持つ駅時刻入線オブジェクトを検索する
 
-����ɍ����悤�ɑ������C��(adjust)
+制約に合うように属性を修正(adjust)
  -------------------------------- 
 
-�����ׂĂ�CentDedEkiTrack(�Ԑ�)�ɁAadjust()���Ϗ�����B
+○すべてのCentDedEkiTrack(番線)に、adjust()を委譲する。
 
 
 */
@@ -131,19 +131,19 @@ class CentDedEkiTrackCont : public CMuiCopiedParent<CentDedEkiTrack>
 	typedef  CMuiCopiedParent<CentDedEkiTrack>	super ;
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
-		CentDedEki �ɕ�܂���Ȃ��ACentDedEkiTrackCont �𐶐����܂��B
-		CentDedEkiTrack �́A���{���Ɖ���{���̂Q����Ȃ�܂��B
+		CentDedEki に包含されない、CentDedEkiTrackCont を生成します。
+		CentDedEkiTrack は、上り本線と下り本線の２つからなります。
 
-		���R���e�i�̐���(�R���X�g���N�^): �w���{���x�w����{���x��ݒ肷��B
+		○コンテナの生成(コンストラクタ): 『上り本線』『下り本線』を設定する。
 	*/
 	CentDedEkiTrackCont() ;
 	
 	/** 
 	@todo
-		����́A�ʂ� insert(),erase()�ɕύX���܂��B 
+		代入は、個別の insert(),erase()に変更します。 
 	*/
 	CentDedEkiTrackCont& operator=( const CentDedEkiTrackCont& value );
 
@@ -154,147 +154,147 @@ public:
 	///@{
 
 	/**
-		�Ԑ��I�u�W�F�N�g��ǉ����܂��B
-		�A���A�{����ǉ����邱�Ƃ͂ł��܂���B
+		番線オブジェクトを追加します。
+		但し、本線を追加することはできません。
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@param iIndex
-		0 ����n�܂�C���f�N�X���w�肵�Ă��������B 
-		�͈͂͂O�ȏ� size() �ȉ��ł��B �O�́A�擪�Esize()�Ȃ疖���ւ�
-		�ǉ��ɂȂ�܂��B �A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B 
+		0 から始まるインデクスを指定してください。 
+		範囲は０以上 size() 以下です。 ０は、先頭・size()なら末尾への
+		追加になります。 但し、INT_MAX は、末尾を指定したものとみなします。 
 	@return
-		0�ȏ�͐����A���̐��̓G���[�ł��B
-		-	-1 ;	//	�C���f�N�X���͈͊O�ł��B
-		-	-11 ;	//	�{����ǉ����邱�Ƃ͏o���܂���B
+		0以上は成功、負の数はエラーです。
+		-	-1 ;	//	インデクスが範囲外です。
+		-	-11 ;	//	本線を追加することは出来ません。
 
 	*/
 	virtual int insert( const CentDedEkiTrack& element ,  int iIndex=INT_MAX) ;
 	/**
-	 	�Ԑ��I�u�W�F�N�g���폜���܂��B
+	 	番線オブジェクトを削除します。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 @param iSize [in]
-	 	�폜����v�f�̐����w�肵�Ă��������B
-	 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 	削除する要素の数を指定してください。
+	 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 @attention
-		iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+		iIndex と iSize の両方を INT_MAX にすることはできません。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
-		-	-1 ;	//	�C���f�N�X���͈͊O�ł��B
-		-	-11 ;	//	�{�����폜���邱�Ƃ͏o���܂���B
+	 	0以上は成功、負の数はエラーです
+		-	-1 ;	//	インデクスが範囲外です。
+		-	-11 ;	//	本線を削除することは出来ません。
 	*/
 	virtual int erase( int iIndex  , int iSize = 1 ) ;
 
 	/**
-		�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA �v�f���㏑�����܂��B 
-		�㏑����̗v�f�� CChildItem::m_pParent �ɂ́Athis ��o�^���܂��B
+		コンテナ内の、インデクスで指定された場所に、 要素を上書きします。 
+		上書き後の要素の CChildItem::m_pParent には、this を登録します。
 
-		�Ԑ���ʂ̈قȂ�I�u�W�F�N�g���㏑�����邱�Ƃ͂ł��܂���B		
+		番線種別の異なるオブジェクトを上書きすることはできません。		
 
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@param iIndex
-		�O����n�܂�C���f�N�X���w�肵�Ă��������B �͈͂͂O�ȏ� size() 
-		�����ł��B �A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B 
+		０から始まるインデクスを指定してください。 範囲は０以上 size() 
+		未満です。 但し、INT_MAX は、末尾を指定したものとみなします。 
 	@return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11 ;	//	�Ԑ���ʂ̈قȂ�I�u�W�F�N�g���㏑�����邱�Ƃ͂ł��܂���B
+		成功したら0以上、エラーなら負の数です。
+		-	-11 ;	//	番線種別の異なるオブジェクトを上書きすることはできません。
 	*/
 	virtual int set( const CentDedEkiTrack& element , int iIndex ) ;
 	///@}
 
 public:
 	// ********************************
-	///@name CentDedEkiTrackCont-�֘A
+	///@name CentDedEkiTrackCont-関連
 	// ********************************
 	///@{
 	/**
 	@return
-		���̃R���e�i�� CentDedEki �ɕ�܂���Ă���ꍇ�́A
-		CentDedEki �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedEki に包含されている場合は、
+		CentDedEki のアドレス。
+		そうでないならNULL。
 	*/
 	virtual CentDedEki* getEki(){ return NULL ;}
 	/**
 	@return
-		���̃R���e�i�� CentDedEki �ɕ�܂���Ă���ꍇ�́A
-		CentDedEki �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedEki に包含されている場合は、
+		CentDedEki のアドレス。
+		そうでないならNULL。
 	*/
 	virtual const CentDedEki* getEki()const{ return NULL ;}
 
 	/**
 	@return
-		���̃R���e�i�� CentDedRosen �ɕ�܂���Ă���ꍇ�́A
-		CentDedRosen �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedRosen に包含されている場合は、
+		CentDedRosen のアドレス。
+		そうでないならNULL。
 	*/
 	CentDedRosen* getRosen() ;
 	/**
 	@return
-		���̃R���e�i�� CentDedRosen �ɕ�܂���Ă���ꍇ�́A
-		CentDedRosen �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedRosen に包含されている場合は、
+		CentDedRosen のアドレス。
+		そうでないならNULL。
 	*/
 	const CentDedRosen* getRosen()const ;
 	///@}
 public:
 	// ********************************
-	///@name CentDedEkiTrackCont-����
+	///@name CentDedEkiTrackCont-操作
 	// ********************************
 	///@{
 	/**
-		set() ���\���ۂ��𔻒f���܂��B
+		set() が可能か否かを判断します。
 
-		�Ԑ���ʂ̈قȂ�I�u�W�F�N�g���㏑�����邱�Ƃ͂ł��܂���B		
+		番線種別の異なるオブジェクトを上書きすることはできません。		
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@param iIndex
-		�O����n�܂�C���f�N�X���w�肵�Ă��������B �͈͂͂O�ȏ� size() 
-		�����ł��B �A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B 
+		０から始まるインデクスを指定してください。 範囲は０以上 size() 
+		未満です。 但し、INT_MAX は、末尾を指定したものとみなします。 
 	@return
-		-	0�ȏ�: set() ���\�B
-		-	���̐�: set()�́A���̖߂�l�Ŏ��s���܂��B
-		-	-11 ;	//	�Ԑ���ʂ̈قȂ�I�u�W�F�N�g���㏑�����邱�Ƃ͂ł��܂���B
+		-	0以上: set() が可能。
+		-	負の数: set()は、この戻り値で失敗します。
+		-	-11 ;	//	番線種別の異なるオブジェクトを上書きすることはできません。
 	 */
 	virtual int  setable(  const CentDedEkiTrack& element , int iIndex )const ;
 
 	/**
-		element �����̃R���e�i�̎q�ł���ꍇ�́A�C���f�N�X��Ԃ��܂��B
+		element がこのコンテナの子である場合は、インデクスを返します。
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@return
-		element �����̃R���e�i�̎q�ł���ꍇ�́A�C���f�N�X��Ԃ��܂��B
-		�����łȂ��ꍇ�́A -1 �ł��B
+		element がこのコンテナの子である場合は、インデクスを返します。
+		そうでない場合は、 -1 です。
 	*/
 	virtual int  getIndex( const CentDedEkiTrack* element )const ;
 
 	/**
-		this �̑���������ɔ����Ă���ꍇ�A����ɍ����悤�ɁA������
-		�C�����܂��B
+		this の属性が制約に反している場合、制約に合うように、属性を
+		修正します。
 
-	�����ׂĂ�CentDedEkiTrack(�Ԑ�)�ɁAadjust()���Ϗ�����B
+	○すべてのCentDedEkiTrack(番線)に、adjust()を委譲する。
 
 	*/
 	void adjust() ;
 
 
 	/**
-		���̔Ԑ��C���f�N�X������Ԃ��������܂��B
+		この番線インデクスを持つ列車を検索します。
 
 	@param index 
-		�Ԑ��̃C���f�N�X���w�肵�Ă��������B
+		番線のインデクスを指定してください。
 	@param piDiaIndex [out]
-		���̔Ԑ�������Ԃ�����ꍇ�A�֐��̓_�C��index ���������݂܂��B
+		この番線を持つ列車がある場合、関数はダイヤindex を書き込みます。
 	@param pRessyahoukou [out]
-		���̔Ԑ�������Ԃ�����ꍇ�A�֐��͗�ԕ������������݂܂��B
+		この番線を持つ列車がある場合、関数は列車方向を書き込みます。
 	@param piRessyaIndex [out]
-		���̔Ԑ�������Ԃ�����ꍇ�A�֐��͗�� Index ���������݂܂��B
+		この番線を持つ列車がある場合、関数は列車 Index を書き込みます。
 	@return
-		-	1: ���̔Ԑ�������Ԃ�����܂��B
-		-	0: ���̔Ԑ�������Ԃ�����܂���B
+		-	1: この番線を持つ列車があります。
+		-	0: この番線を持つ列車がありません。
 	*/
 	
 	int findRessyaOfEkiTrack( 

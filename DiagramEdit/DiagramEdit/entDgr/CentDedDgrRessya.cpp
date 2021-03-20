@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -85,22 +85,22 @@ static char THIS_FILE[] = __FILE__;
 
 namespace entDgr{
 
-/** ‚Ì‘®‚ğ•Û‚µ‚Ü‚·B */
+/** æ™‚åˆ»ã®æ›¸å¼ã‚’ä¿æŒã—ã¾ã™ã€‚ */
 const CdDedJikoku::CConv	g_CdDedJikokuConv(
 	true ,		//	NoColon 
-	// ‚ª 00 ‚©‚ç 09 ‚Ìê‡A10‚ÌˆÊ‚Ì "0" ‚ğíœ‚µ‚Ü‚·B
+	// æ™‚ãŒ 00 ã‹ã‚‰ 09 ã®å ´åˆã€10ã®ä½ã® "0" ã‚’å‰Šé™¤ã—ã¾ã™ã€‚
 	CdDedJikoku::CConv::EHour_ZeroToNone ,	
-	CdDedJikoku::CConv::ESecond_NoSecond 	// •b‚ğí‚Éo—Í‚µ‚Ü‚¹‚ñB 
+	CdDedJikoku::CConv::ESecond_NoSecond 	// ç§’ã‚’å¸¸ã«å‡ºåŠ›ã—ã¾ã›ã‚“ã€‚ 
 	) ;
 // ****************************************************************
 //	CentDedDgrRessya
 // ****************************************************************
 	// --------------------------------
-	//@name readCentDedRessya() ‚Ì‰º¿ŠÖ”
+	//@name readCentDedRessya() ã®ä¸‹è«‹é–¢æ•°
 	// --------------------------------
 	/*
-		readCentDedRessya() ‚Ì‰º¿ŠÖ”
-		(01)CentDedDgrRessya‚Ì‘®«‚Ì‚¤‚¿ACentDedRessya ‚Ì‚İ‚ÅŒˆ’è‚·‚é‘®«‚ğİ’è
+		readCentDedRessya() ã®ä¸‹è«‹é–¢æ•°
+		(01)CentDedDgrRessyaã®å±æ€§ã®ã†ã¡ã€CentDedRessya ã®ã¿ã§æ±ºå®šã™ã‚‹å±æ€§ã‚’è¨­å®š
 	*/
 void CentDedDgrRessya::readCentDedRessya_01_readProp( const CentDedRessya* pCentDedRessya ) 
 {
@@ -114,29 +114,29 @@ void CentDedDgrRessya::readCentDedRessya_01_readProp( const CentDedRessya* pCent
 	m_DgrXZone = CdDcdZone() ;
 }
 	/*
-		readCentDedRessya() ‚Ì‰º¿ŠÖ”
-		(02)CentDedDgrEkiJikoku ‚ğ¶¬‚µA CentDedEkiJikoku ‚ÅŒˆ‚Ü‚é‘®«‚ğŒˆ’èB
+		readCentDedRessya() ã®ä¸‹è«‹é–¢æ•°
+		(02)CentDedDgrEkiJikoku ã‚’ç”Ÿæˆã—ã€ CentDedEkiJikoku ã§æ±ºã¾ã‚‹å±æ€§ã‚’æ±ºå®šã€‚
 	*/
 void CentDedDgrRessya::readCentDedRessya_02_CreateCentDedEkiJikoku( 
 		const CentDedRessya* pCentDedRessya ) 
 {
-	//	’¼‘O‚Ì‰w‚Ì‰wB
+	//	ç›´å‰ã®é§…ã®é§…æ™‚åˆ»ã€‚
 	CdDedJikoku	aCdDedJikokuLastStation ;
 
 
-	//	’¼‘O‚Ì‰w‚Ì‰w‚Å‚ÌXÀ•WBaCdDedJikokuLastStation ‚ªNULL‚Ìê‡‚Í
-	//	–³Œø‚Å‚·B
-	//	Å‰‚ÌuNULL‚Å‚È‚¢‰wv‚ğŒ©‚Â‚©‚Á‚½ê‡‚ÍA‚»‚Ì‰w‚©‚ç“±o‚³‚ê‚½
-	//	XÀ•W‚É‚È‚è‚Ü‚·B
-	//	2‰ÓŠ–ÚˆÈ~‚ÌuNULL‚Å‚È‚¢‰wvˆÈ~‚ÍA
-	//	‘O‚Ì‰w‚©‚ç‚ÌŒo‰ßŠÔ‚ğ‰ÁZ‚µ‚Ü‚·B
+	//	ç›´å‰ã®é§…ã®é§…æ™‚åˆ»ã§ã®Xåº§æ¨™ã€‚aCdDedJikokuLastStation ãŒNULLã®å ´åˆã¯
+	//	ç„¡åŠ¹ã§ã™ã€‚
+	//	æœ€åˆã®ã€ŒNULLã§ãªã„é§…æ™‚åˆ»ã€ã‚’è¦‹ã¤ã‹ã£ãŸå ´åˆã¯ã€ãã®é§…æ™‚åˆ»ã‹ã‚‰å°å‡ºã•ã‚ŒãŸ
+	//	Xåº§æ¨™ã«ãªã‚Šã¾ã™ã€‚
+	//	2ç®‡æ‰€ç›®ä»¥é™ã®ã€ŒNULLã§ãªã„é§…æ™‚åˆ»ã€ä»¥é™ã¯ã€
+	//	å‰ã®é§…æ™‚åˆ»ã‹ã‚‰ã®çµŒéæ™‚é–“ã‚’åŠ ç®—ã—ã¾ã™ã€‚
 	//
 	//	iXZahyouLastStation = iXZahyouLastStation 
-	//		+ ( ‚»‚Ì‰w‚Ì‰w - aCdDedJikokuLastStation ) 
+	//		+ ( ãã®é§…ã®é§…æ™‚åˆ» - aCdDedJikokuLastStation ) 
 	//
-	//	‚±‚ê‚É‚æ‚èA24:00‚ğ‚Ü‚½‚ª‚Á‚Ä‘–‚é—ñÔ‚Å‚ÍA
-	//	24:00ˆÈ~‚Ì‰w‚É‘Î‰‚·‚é XÀ•W‚Í 24:00 ‘Š“–(24*60*60=86400) ˆÈã
-	//	‚É‚È‚è‚Ü‚·B
+	//	ã“ã‚Œã«ã‚ˆã‚Šã€24:00ã‚’ã¾ãŸãŒã£ã¦èµ°ã‚‹åˆ—è»Šã§ã¯ã€
+	//	24:00ä»¥é™ã®é§…æ™‚åˆ»ã«å¯¾å¿œã™ã‚‹ Xåº§æ¨™ã¯ 24:00 ç›¸å½“(24*60*60=86400) ä»¥ä¸Š
+	//	ã«ãªã‚Šã¾ã™ã€‚
 	int	iXZahyouLastStation = 0 ;
 
 	for ( int iEkiOrder = 0 ; 
@@ -146,7 +146,7 @@ void CentDedDgrRessya::readCentDedRessya_02_CreateCentDedEkiJikoku(
 		CentDedEkiJikoku aCentDedEkiJikoku 
 			= pCentDedRessya->getCentDedEkiJikoku( iEkiOrder ) ;
 
-		//	‰w‚©‚çAXÀ•W‚ğŒvZ	
+		//	é§…æ™‚åˆ»ã‹ã‚‰ã€Xåº§æ¨™ã‚’è¨ˆç®—	
 		int iDgrXZahyou[2] = { INT_MIN , INT_MIN } ;
 		for ( int iChakuHatsu = 0 ; iChakuHatsu < 2 ; iChakuHatsu ++ )
 		{
@@ -166,16 +166,16 @@ void CentDedDgrRessya::readCentDedRessya_02_CreateCentDedEkiJikoku(
 
 			if ( aCdDedJikoku.isNull() )
 			{
-				//	NULL ‚È‚çAˆ—‚È‚µ
+				//	NULL æ™‚åˆ»ãªã‚‰ã€å‡¦ç†ãªã—
 			}
 			else if ( aCdDedJikokuLastStation.isNull() )
 			{
-				//	1‰ñ–ÚˆÈ~‚ÌA”ñNULL
-				iX = aCdDedJikoku.getTotalSeconds() ;	//	Å‰‚ÌA”ñNULL
+				//	1å›ç›®ä»¥é™ã®ã€éNULLæ™‚åˆ»
+				iX = aCdDedJikoku.getTotalSeconds() ;	//	æœ€åˆã®ã€éNULLæ™‚åˆ»
 			}
 			else
 			{
-				//	2‰ñ–ÚˆÈ~‚ÌA”ñNULL
+				//	2å›ç›®ä»¥é™ã®ã€éNULLæ™‚åˆ»
 				CdDedJikan	aCdDedJikan 
 					= aCdDedJikoku.subJikoku( aCdDedJikokuLastStation ) ;
 				iX = iXZahyouLastStation + aCdDedJikan.getTotalSeconds() ;
@@ -238,7 +238,7 @@ void CentDedDgrRessya::readCentDedRessya_03_updateDgrXZone()
 	{
 		m_DgrXZone.setBeginEndPos( iDgrXMin , iDgrXMax ) ;
 
-		//	iDgrXMin‚ÆiDgrXMax‚ª“¯ˆê‚Ìê‡‚ÍA—áŠO“I‚ÉƒTƒCƒY‚Í1‚Æ‚µ‚Ü‚·
+		//	iDgrXMinã¨iDgrXMaxãŒåŒä¸€ã®å ´åˆã¯ã€ä¾‹å¤–çš„ã«ã‚µã‚¤ã‚ºã¯1ã¨ã—ã¾ã™
 		if ( m_DgrXZone.getSize() == 0 )
 		{
 			m_DgrXZone.setSize( 1 ) ;
@@ -264,13 +264,13 @@ void CentDedDgrRessya::readCentDedRessya_04_updateShouldRessyajouhouDraw(
 
 		if ( isRunBetweenNextEki( iEkiOrder ) )
 		{
-			//	—ñÔü‚Ì‘¶İ‚·‚é‰wŠÔA
+			//	åˆ—è»Šç·šã®å­˜åœ¨ã™ã‚‹é§…é–“ã€
 			CentDedDgrEki::EDiagramRessyajouhouHyouji	
 				eDiagramRessyajouhouHyouji = 
 					aCdDedDgrEki.getDiagramRessyajouhouHyouji() ;
 
-			//	(1)  [‚±‚Ì—ñÔ‚Ì—ñÔî•ñ‚ª‚Ü‚¾1‰ÓŠ‚à•`‰æ‚³‚ê‚Ä‚¢‚È‚¢]
-			//		—ñÔî•ñ•`‰æ‚ªu•\¦‚µ‚È‚¢vˆÈŠO‚Ì‰wŠÔB
+			//	(1)  [ã“ã®åˆ—è»Šã®åˆ—è»Šæƒ…å ±ãŒã¾ã 1ç®‡æ‰€ã‚‚æç”»ã•ã‚Œã¦ã„ãªã„]
+			//		åˆ—è»Šæƒ…å ±æç”»ãŒã€Œè¡¨ç¤ºã—ãªã„ã€ä»¥å¤–ã®é§…é–“ã€‚
 			if ( !bFirstRessyajouhouHyoujiIsSet && 
 				eDiagramRessyajouhouHyouji !=
 				CentDedDgrEki::DiagramRessyajouhouHyouji_Not ) 
@@ -278,7 +278,7 @@ void CentDedDgrRessya::readCentDedRessya_04_updateShouldRessyajouhouDraw(
 				bShouldRessyajouhouDraw = true ;
 			}
 
-			//	(2)  —ñÔî•ñ•`‰æ‚ªuí‚É•\¦v‚Ì‰wŠÔ
+			//	(2)  åˆ—è»Šæƒ…å ±æç”»ãŒã€Œå¸¸ã«è¡¨ç¤ºã€ã®é§…é–“
 			if ( eDiagramRessyajouhouHyouji ==
 				CentDedDgrEki::DiagramRessyajouhouHyouji_Anytime )
 			{
@@ -297,8 +297,8 @@ void CentDedDgrRessya::readCentDedRessya_04_updateShouldRessyajouhouDraw(
 
 	}
 
-	//	1‰ÓŠ‚à—ñÔî•ñ•`‰æˆÊ’u‚ª‚È‚¢ê‡‚ÍA
-	//	Å‰‚Ì—ñÔüˆÊ’u‚É•`‰æ‚µ‚Ü‚·B
+	//	1ç®‡æ‰€ã‚‚åˆ—è»Šæƒ…å ±æç”»ä½ç½®ãŒãªã„å ´åˆã¯ã€
+	//	æœ€åˆã®åˆ—è»Šç·šä½ç½®ã«æç”»ã—ã¾ã™ã€‚
 	for ( int iEkiOrder = 0 ;
 		!bFirstRessyajouhouHyoujiIsSet 
 			&& iEkiOrder < m_MuCentDedDgrEkiJikoku.size() ; 
@@ -314,7 +314,7 @@ void CentDedDgrRessya::readCentDedRessya_04_updateShouldRessyajouhouDraw(
 
 		if ( isRunBetweenNextEki( iEkiOrder ) )
 		{
-			//	—ñÔü‚Ì‘¶İ‚·‚é‰wŠÔA
+			//	åˆ—è»Šç·šã®å­˜åœ¨ã™ã‚‹é§…é–“ã€
 				bShouldRessyajouhouDraw = true ;
 		}
 
@@ -330,7 +330,7 @@ void CentDedDgrRessya::readCentDedRessya_04_updateShouldRessyajouhouDraw(
 }
 
 
-//	(05)Œo—R‚È‚µ‚Ì‘OŒã‚Ì’…”­‚ğ•â‚¤
+//	(05)çµŒç”±ãªã—ã®å‰å¾Œã®ç€ç™ºæ™‚åˆ»ã‚’è£œã†
 void CentDedDgrRessya::readCentDedRessya_05_complementKeiyunasiSide() 
 {
 	for ( int iEkiOrderBefore = 0 ; 
@@ -338,12 +338,12 @@ void CentDedDgrRessya::readCentDedRessya_05_complementKeiyunasiSide()
 		iEkiOrderBefore ++ )
 	{
 		// --------------------------------
-		//	iEkiOrderBefore ˆÈ~‚ÅAˆÈ‰º‚Ì‰w‚Ì•À‚Ñ‚ğ’T‚µ‚Ü‚·B
-		//	(1)‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
-		//	(2)u‰wˆµ={Œo—R‚È‚µ}v‚Ì1ŒÂˆÈã‚Ì•À‚Ñ
-		//	(3)‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
+		//	iEkiOrderBefore ä»¥é™ã§ã€ä»¥ä¸‹ã®é§…æ™‚åˆ»ã®ä¸¦ã³ã‚’æ¢ã—ã¾ã™ã€‚
+		//	(1)é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
+		//	(2)ã€Œé§…æ‰±={çµŒç”±ãªã—}ã€ã®1å€‹ä»¥ä¸Šã®ä¸¦ã³
+		//	(3)é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
 		// --------------------------------
-		//	(1)‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚© ‚Ì‰w‚ğ’T‚·
+		//	(1)é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹ ã®é§…ã‚’æ¢ã™
 		CentDedDgrEkiJikoku	ekijikokuBefore = 
 			m_MuCentDedDgrEkiJikoku.get( iEkiOrderBefore ) ;
 		if ( !(  
@@ -355,7 +355,7 @@ void CentDedDgrRessya::readCentDedRessya_05_complementKeiyunasiSide()
 		{
 			continue ;
 		}
-		//iEkiOrderBefore,ekijikokuBefore = (1)‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
+		//iEkiOrderBefore,ekijikokuBefore = (1)é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
 
 		int iEkiOrderAfter = INT_MIN ;
 		CentDedDgrEkiJikoku	ekijikokuAfter ;
@@ -368,8 +368,8 @@ void CentDedDgrRessya::readCentDedRessya_05_complementKeiyunasiSide()
 			if ( ekijikokuAfter.getEkiatsukai() == 
 					CentDedEkiJikoku::Ekiatsukai_Keiyunasi )
 			{
-				//	(2)u‰wˆµ={Œo—R‚È‚µ}v
-				//		‚Ì•À‚Ñ
+				//	(2)ã€Œé§…æ‰±={çµŒç”±ãªã—}ã€
+				//		ã®ä¸¦ã³
 				continue ;
 			}
 			else if ( ekijikokuBefore.getEkiatsukai() == 
@@ -377,13 +377,13 @@ void CentDedDgrRessya::readCentDedRessya_05_complementKeiyunasiSide()
 			  ekijikokuBefore.getEkiatsukai() == 
 				CentDedEkiJikoku::Ekiatsukai_Tsuuka ) 
 			{
-				//	(3)‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
+				//	(3)é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
 				break ;
 			}
 			else
 			{
-				//	ğŒ‚É‚ ‚Ä‚Í‚Ü‚ç‚È‚¢‰w
-				//(—áF’…‚ ‚è‚Ì‰wE‰^s‚È‚µ‚Ì‰w)
+				//	æ¡ä»¶ã«ã‚ã¦ã¯ã¾ã‚‰ãªã„é§…æ™‚åˆ»
+				//(ä¾‹ï¼šç€æ™‚åˆ»ã‚ã‚Šã®é§…ãƒ»é‹è¡Œãªã—ã®é§…)
 				iEkiOrderAfter = INT_MIN ;
 				break ;
 			}
@@ -391,45 +391,45 @@ void CentDedDgrRessya::readCentDedRessya_05_complementKeiyunasiSide()
 		if ( iEkiOrderAfter == INT_MIN 
 			|| iEkiOrderAfter == m_MuCentDedDgrEkiJikoku.size() )
 		{
-			//	ğŒ‚ğ–‚½‚·‰w‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ
+			//	æ¡ä»¶ã‚’æº€ãŸã™é§…ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“
 			continue ;
 		}
-		//iEkiOrderAfter,ekijikokuAfter = (3)‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
+		//iEkiOrderAfter,ekijikokuAfter = (3)é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
 		if ( iEkiOrderBefore + 1 == iEkiOrderAfter )
 		{
-			//	(2)u‰wˆµ={Œo—R‚È‚µ}v‚ªŠÜ‚Ü‚ê‚Ä‚¢‚Ü‚¹‚ñB
+			//	(2)ã€Œé§…æ‰±={çµŒç”±ãªã—}ã€ãŒå«ã¾ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 			continue ;
 		}
 
-		//- ˜A‘±‚µ‚½Œo—R‚È‚µ‚Ì’¼‘O‚É’…‚ª‚È‚¢ 
-		//		AND Œo—R‚È‚µ‚Ì’¼Œã‚É’…‚ª‚ ‚éê‡
-		//	’¼‘O‚Ì’…‚ğ•â‚¢‚Ü‚·B
+		//- é€£ç¶šã—ãŸçµŒç”±ãªã—ã®ç›´å‰ã«ç€æ™‚åˆ»ãŒãªã„ 
+		//		AND çµŒç”±ãªã—ã®ç›´å¾Œã«ç€æ™‚åˆ»ãŒã‚ã‚‹å ´åˆ
+		//	ç›´å‰ã®ç€æ™‚åˆ»ã‚’è£œã„ã¾ã™ã€‚
 		if ( ekijikokuBefore.getDgrXPosChaku() == INT_MIN && 
 			ekijikokuAfter.getDgrXPosChaku() != INT_MIN )
 		{
 			ekijikokuBefore.setDgrXPosChaku( ekijikokuAfter.getDgrXPosChaku());
 		}
 		
-		//- ˜A‘±‚µ‚½Œo—R‚È‚µ‚Ì’¼‘O‚É”­‚ª‚È‚¢ 
-		//		AND Œo—R‚È‚µ‚Ì’¼Œã‚É”­‚ª‚ ‚éê‡
-		//	’¼‘O‚Ì”­‚ğ•â‚¢‚Ü‚·B
+		//- é€£ç¶šã—ãŸçµŒç”±ãªã—ã®ç›´å‰ã«ç™ºæ™‚åˆ»ãŒãªã„ 
+		//		AND çµŒç”±ãªã—ã®ç›´å¾Œã«ç™ºæ™‚åˆ»ãŒã‚ã‚‹å ´åˆ
+		//	ç›´å‰ã®ç™ºæ™‚åˆ»ã‚’è£œã„ã¾ã™ã€‚
 		if ( ekijikokuBefore.getDgrXPosHatsu() == INT_MIN && 
 			ekijikokuAfter.getDgrXPosHatsu() != INT_MIN )
 		{
 			ekijikokuBefore.setDgrXPosHatsu( ekijikokuAfter.getDgrXPosHatsu() ) ;
 		}
 
-		//- ˜A‘±‚µ‚½Œo—R‚È‚µ‚Ì’¼‘O‚É’…‚ª‚ ‚é 
-		//		AND Œo—R‚È‚µ‚Ì’¼Œã‚É’…‚ª‚È‚¢ê‡‚ÍA
-		//	’¼Œã‚Ì’…‚ğ•â‚¢‚Ü‚·B
+		//- é€£ç¶šã—ãŸçµŒç”±ãªã—ã®ç›´å‰ã«ç€æ™‚åˆ»ãŒã‚ã‚‹ 
+		//		AND çµŒç”±ãªã—ã®ç›´å¾Œã«ç€æ™‚åˆ»ãŒãªã„å ´åˆã¯ã€
+		//	ç›´å¾Œã®ç€æ™‚åˆ»ã‚’è£œã„ã¾ã™ã€‚
 		if ( ekijikokuBefore.getDgrXPosChaku() != INT_MIN && 
 			ekijikokuAfter.getDgrXPosChaku() == INT_MIN )
 		{
 			ekijikokuAfter.setDgrXPosChaku(ekijikokuBefore.getDgrXPosChaku() );
 		}
-		//- ˜A‘±‚µ‚½Œo—R‚È‚µ‚Ì’¼‘O‚É”­‚ª‚ ‚é 
-		//		AND Œo—R‚È‚µ‚Ì’¼Œã‚É”­‚ª‚È‚¢ê‡‚ÍA
-		//	’¼Œã‚Ì”­‚ğ•â‚¢‚Ü‚·B
+		//- é€£ç¶šã—ãŸçµŒç”±ãªã—ã®ç›´å‰ã«ç™ºæ™‚åˆ»ãŒã‚ã‚‹ 
+		//		AND çµŒç”±ãªã—ã®ç›´å¾Œã«ç™ºæ™‚åˆ»ãŒãªã„å ´åˆã¯ã€
+		//	ç›´å¾Œã®ç™ºæ™‚åˆ»ã‚’è£œã„ã¾ã™ã€‚
 		if ( ekijikokuBefore.getDgrXPosHatsu() != INT_MIN && 
 			ekijikokuAfter.getDgrXPosHatsu() == INT_MIN )
 		{
@@ -444,14 +444,14 @@ void CentDedDgrRessya::readCentDedRessya_05_complementKeiyunasiSide()
 			ekijikokuAfter ,
 			iEkiOrderAfter ) ;
 		// --------------------------------
-		//	Ÿ‚ÌŒŸõŠJnˆÊ’u‚ğŒˆ‚ß‚é
+		//	æ¬¡ã®æ¤œç´¢é–‹å§‹ä½ç½®ã‚’æ±ºã‚ã‚‹
 		// --------------------------------
 		{
-			//	(1)‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
-			//	(3)‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
-			//	‚Ì—¼•û‚ªŒ©‚Â‚©‚Á‚½ê‡‚ÍA
-			//	Ÿ‚ÌŒŸõ‚Í (3)‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
-			//	‚©‚çn‚ß‚Ü‚·B
+			//	(1)é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
+			//	(3)é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
+			//	ã®ä¸¡æ–¹ãŒè¦‹ã¤ã‹ã£ãŸå ´åˆã¯ã€
+			//	æ¬¡ã®æ¤œç´¢ã¯ (3)é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
+			//	ã‹ã‚‰å§‹ã‚ã¾ã™ã€‚
 			iEkiOrderBefore = iEkiOrderAfter - 1;
 		}
 	}
@@ -461,21 +461,21 @@ void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_01(
 	const Mu<CentDedDgrEkiCont::CdDedDgrEki>* pMuCdDedDgrEki ) 
 {
 	// --------------------------------
-	//	’·ŠÔ’âÔ‚Ì’…‚ğ•â‚¤
+	//	é•·æ™‚é–“åœè»Šã®ç€æ™‚åˆ»ã‚’è£œã†
 	// --------------------------------
 	for ( int iEkiOrderBefore = 0 ; 
 		iEkiOrderBefore < m_MuCentDedDgrEkiJikoku.size() ; 
 		iEkiOrderBefore ++ )
 	{
 		// --------------------------------
-		//	iEkiOrderBefore ˆÈ~‚ÅAˆÈ‰º‚Ì‰w‚Ì•À‚Ñ‚ğ’T‚µ‚Ü‚·B
-		//	(1)(’…=‚ ‚è or ”­=‚ ‚è) AND ‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
-		//	(2)u’…=‚È‚µA”­=‚È‚µA‰wˆµ={’Ê‰ß,Œo—R‚È‚µ}‚Ì‚¢‚¸‚ê‚©v
-		//		‚Ì0ŒÂˆÈã‚Ì•À‚Ñ
-		//	(3)’…=‚È‚µA”­=‚ ‚è AND —ñÔ‚ÌI’…‰w‚Å‚È‚¢
+		//	iEkiOrderBefore ä»¥é™ã§ã€ä»¥ä¸‹ã®é§…æ™‚åˆ»ã®ä¸¦ã³ã‚’æ¢ã—ã¾ã™ã€‚
+		//	(1)(ç€æ™‚åˆ»=ã‚ã‚Š or ç™ºæ™‚åˆ»=ã‚ã‚Š) AND é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
+		//	(2)ã€Œç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ãªã—ã€é§…æ‰±={é€šé,çµŒç”±ãªã—}ã®ã„ãšã‚Œã‹ã€
+		//		ã®0å€‹ä»¥ä¸Šã®ä¸¦ã³
+		//	(3)ç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ã‚ã‚Š AND åˆ—è»Šã®çµ‚ç€é§…ã§ãªã„
 		// --------------------------------
-		//	(1)(’…=‚ ‚è or ”­=‚ ‚è) AND ‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
-		//	‚Ì‰w‚ğ’T‚·
+		//	(1)(ç€æ™‚åˆ»=ã‚ã‚Š or ç™ºæ™‚åˆ»=ã‚ã‚Š) AND é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
+		//	ã®é§…ã‚’æ¢ã™
 		CentDedDgrEkiJikoku	ekijikokuBefore = 
 			m_MuCentDedDgrEkiJikoku.get( iEkiOrderBefore ) ;
 		if ( !( 
@@ -490,7 +490,7 @@ void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_01(
 			continue ;
 		}
 		//iEkiOrderBefore,ekijikokuBefore = 
-		//	(1)(’…=‚ ‚è or ”­=‚ ‚è) AND ‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
+		//	(1)(ç€æ™‚åˆ»=ã‚ã‚Š or ç™ºæ™‚åˆ»=ã‚ã‚Š) AND é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
 
 		int iEkiOrderAfter = INT_MIN ;
 		CentDedDgrEkiJikoku	ekijikokuAfter ;
@@ -510,21 +510,21 @@ void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_01(
 				  ekijikokuAfter.getEkiatsukai() == 
 					CentDedEkiJikoku::Ekiatsukai_Keiyunasi ) )
 			{
-				//	(2)u’…=‚È‚µA”­=‚È‚µA‰wˆµ={’âÔ,’Ê‰ß,Œo—R‚È‚µ}‚Ì
-				//		‚¢‚¸‚ê‚©v‚Ì0ŒÂˆÈã‚Ì•À‚Ñ
+				//	(2)ã€Œç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ãªã—ã€é§…æ‰±={åœè»Š,é€šé,çµŒç”±ãªã—}ã®
+				//		ã„ãšã‚Œã‹ã€ã®0å€‹ä»¥ä¸Šã®ä¸¦ã³
 				continue ;
 			}
 			else if ( ekijikokuAfter.getDgrXPosChaku() == INT_MIN && 
 				ekijikokuAfter.getDgrXPosHatsu() != INT_MIN &&
 				iEkiOrderAfter < getSyuuchakuEki() )
 			{
-				//	(3)’…=‚È‚µA”­=‚ ‚è AND —ñÔ‚ÌI’…‰w‚Å‚È‚¢
+				//	(3)ç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ã‚ã‚Š AND åˆ—è»Šã®çµ‚ç€é§…ã§ãªã„
 				break ;
 			}
 			else
 			{
-				//	ğŒ‚É‚ ‚Ä‚Í‚Ü‚ç‚È‚¢‰w
-				//(—áF’…‚ ‚è‚Ì‰wE‰^s‚È‚µ‚Ì‰w)
+				//	æ¡ä»¶ã«ã‚ã¦ã¯ã¾ã‚‰ãªã„é§…æ™‚åˆ»
+				//(ä¾‹ï¼šç€æ™‚åˆ»ã‚ã‚Šã®é§…ãƒ»é‹è¡Œãªã—ã®é§…)
 				iEkiOrderAfter = INT_MIN ;
 				break ;
 			}
@@ -532,17 +532,17 @@ void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_01(
 		if ( iEkiOrderAfter == INT_MIN 
 			|| iEkiOrderAfter == m_MuCentDedDgrEkiJikoku.size() )
 		{
-			//	ğŒ‚ğ–‚½‚·‰w‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ
+			//	æ¡ä»¶ã‚’æº€ãŸã™é§…ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“
 			continue ;
 		}
 		//iEkiOrderAfter,ekijikokuAfter = 
-		//	(3)’…=‚È‚µA”­=‚ ‚è AND —ñÔ‚ÌI’…‰w‚Å‚È‚¢
+		//	(3)ç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ã‚ã‚Š AND åˆ—è»Šã®çµ‚ç€é§…ã§ãªã„
 
 		// --------------------------------
-		//	(1)‚Ì”­{‚È‚¯‚ê‚Î’…}+(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”
-		//		ƒ(3)‚Ì”­-60•b‚È‚çA
-		//	(3)‚Ì’…=(1)‚Ì”­+(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”
-		//	‚Æ‚µ‚Ü‚·B
+		//	(1)ã®ç™ºæ™‚åˆ»{ãªã‘ã‚Œã°ç€æ™‚åˆ»}+(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°
+		//		ï¼œ(3)ã®ç™ºæ™‚åˆ»-60ç§’ãªã‚‰ã€
+		//	(3)ã®ç€æ™‚åˆ»=(1)ã®ç™ºæ™‚åˆ»+(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°
+		//	ã¨ã—ã¾ã™ã€‚
 		// --------------------------------
 
 		int iDgrXPos = ekijikokuBefore.getDgrXPosHatsu() ;
@@ -554,52 +554,52 @@ void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_01(
 			pMuCdDedDgrEki ,
 			iEkiOrderBefore ,
 			iEkiOrderAfter ) ; 
-		//iDgrXPos = (1)‚Ì”­(‚È‚¯‚ê‚Î’…)+(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”
+		//iDgrXPos = (1)ã®ç™ºæ™‚åˆ»(ãªã‘ã‚Œã°ç€æ™‚åˆ»)+(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°
 
 		if ( iDgrXPos < ekijikokuAfter.getDgrXPosHatsu() - 60 )
 		{
-			//	(1)‚Ì”­(‚È‚¯‚ê‚Î’…)+(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”
-			//		ƒ(3)‚Ì”­-60•b‚È‚çA
-			//	(3)‚Ì’…=(1)‚Ì”­+(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”
-			//	‚Æ‚µ‚Ü‚·B
+			//	(1)ã®ç™ºæ™‚åˆ»(ãªã‘ã‚Œã°ç€æ™‚åˆ»)+(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°
+			//		ï¼œ(3)ã®ç™ºæ™‚åˆ»-60ç§’ãªã‚‰ã€
+			//	(3)ã®ç€æ™‚åˆ»=(1)ã®ç™ºæ™‚åˆ»+(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°
+			//	ã¨ã—ã¾ã™ã€‚
 			ekijikokuAfter.setDgrXPosChaku( iDgrXPos ) ;
 			m_MuCentDedDgrEkiJikoku.set( ekijikokuAfter ,iEkiOrderAfter ) ;
 		}
 		// --------------------------------
-		//	Ÿ‚ÌŒŸõŠJnˆÊ’u‚ğŒˆ‚ß‚é
+		//	æ¬¡ã®æ¤œç´¢é–‹å§‹ä½ç½®ã‚’æ±ºã‚ã‚‹
 		// --------------------------------
 		{
-			//	(1)(’…=‚ ‚è or ”­=‚ ‚è) AND ‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
-			//	(3)’…=‚È‚µA”­=‚ ‚è
-			//	‚Ì—¼•û‚ªŒ©‚Â‚©‚Á‚½ê‡‚ÍA
-			//	Ÿ‚ÌŒŸõ‚Í (3)’…=‚È‚µA”­=‚ ‚è
-			//	‚©‚çn‚ß‚Ü‚·B
+			//	(1)(ç€æ™‚åˆ»=ã‚ã‚Š or ç™ºæ™‚åˆ»=ã‚ã‚Š) AND é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
+			//	(3)ç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ã‚ã‚Š
+			//	ã®ä¸¡æ–¹ãŒè¦‹ã¤ã‹ã£ãŸå ´åˆã¯ã€
+			//	æ¬¡ã®æ¤œç´¢ã¯ (3)ç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ã‚ã‚Š
+			//	ã‹ã‚‰å§‹ã‚ã¾ã™ã€‚
 			iEkiOrderBefore = iEkiOrderAfter - 1;
 		}
 	}
 }
 
-	//	(06_02)’·ŠÔ’âÔ‚ğ‰ğŒˆ
-	//		(’·ŠÔ’âÔ‚Ì’…=‚ ‚èE”­=‚È‚µ ‚Ì‰w‚ÉA”­‚ğ•â‚¤)
+	//	(06_02)é•·æ™‚é–“åœè»Šã‚’è§£æ±º
+	//		(é•·æ™‚é–“åœè»Šã®ç€æ™‚åˆ»=ã‚ã‚Šãƒ»ç™ºæ™‚åˆ»=ãªã— ã®é§…ã«ã€ç™ºæ™‚åˆ»ã‚’è£œã†)
 void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_02( 
 		const Mu<CentDedDgrEkiCont::CdDedDgrEki>* pMuCdDedDgrEki ) 
 {
 	// --------------------------------
-	//	’·ŠÔ’âÔ‚Ì’…‚ğ•â‚¤
+	//	é•·æ™‚é–“åœè»Šã®ç€æ™‚åˆ»ã‚’è£œã†
 	// --------------------------------
 	for ( int iEkiOrderBefore = 0 ; 
 		iEkiOrderBefore < m_MuCentDedDgrEkiJikoku.size() ; 
 		iEkiOrderBefore ++ )
 	{
 		// --------------------------------
-		//	iEkiOrderBefore ˆÈ~‚ÅAˆÈ‰º‚Ì‰w‚Ì•À‚Ñ‚ğ’T‚µ‚Ü‚·B
-		//	(1)’…=‚ ‚èA”­=‚È‚µ
-		//	(2)u’…=‚È‚µA”­=‚È‚µA‰wˆµ={’Ê‰ß,Œo—R‚È‚µ}‚Ì‚¢‚¸‚ê‚©v
-		//		‚Ì0ŒÂˆÈã‚Ì•À‚Ñ
-		//	(3)’…=‚ ‚èA‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
+		//	iEkiOrderBefore ä»¥é™ã§ã€ä»¥ä¸‹ã®é§…æ™‚åˆ»ã®ä¸¦ã³ã‚’æ¢ã—ã¾ã™ã€‚
+		//	(1)ç€æ™‚åˆ»=ã‚ã‚Šã€ç™ºæ™‚åˆ»=ãªã—
+		//	(2)ã€Œç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ãªã—ã€é§…æ‰±={é€šé,çµŒç”±ãªã—}ã®ã„ãšã‚Œã‹ã€
+		//		ã®0å€‹ä»¥ä¸Šã®ä¸¦ã³
+		//	(3)ç€æ™‚åˆ»=ã‚ã‚Šã€é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
 		// --------------------------------
-		//	(1)’…=‚ ‚èA”­=‚È‚µ
-		//	‚Ì‰w‚ğ’T‚·
+		//	(1)ç€æ™‚åˆ»=ã‚ã‚Šã€ç™ºæ™‚åˆ»=ãªã—
+		//	ã®é§…ã‚’æ¢ã™
 		CentDedDgrEkiJikoku	ekijikokuBefore = 
 			m_MuCentDedDgrEkiJikoku.get( iEkiOrderBefore ) ;
 		if ( !( 
@@ -609,7 +609,7 @@ void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_02(
 		{
 			continue ;
 		}
-		//iEkiOrderBefore,ekijikokuBefore = (1)’…=‚ ‚èA”­=‚È‚µ
+		//iEkiOrderBefore,ekijikokuBefore = (1)ç€æ™‚åˆ»=ã‚ã‚Šã€ç™ºæ™‚åˆ»=ãªã—
 
 		int iEkiOrderAfter = INT_MIN ;
 		CentDedDgrEkiJikoku	ekijikokuAfter ;
@@ -628,9 +628,9 @@ void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_02(
 				  ekijikokuAfter.getEkiatsukai() == 
 					CentDedEkiJikoku::Ekiatsukai_Keiyunasi ) )
 			{
-				//	(2)u’…=‚È‚µA”­=‚È‚µA
-				//		‰wˆµ={’âÔ,’Ê‰ß,Œo—R‚È‚µ}‚Ì‚¢‚¸‚ê‚©v
-				//		‚Ì0ŒÂˆÈã‚Ì•À‚Ñ
+				//	(2)ã€Œç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ãªã—ã€
+				//		é§…æ‰±={åœè»Š,é€šé,çµŒç”±ãªã—}ã®ã„ãšã‚Œã‹ã€
+				//		ã®0å€‹ä»¥ä¸Šã®ä¸¦ã³
 				continue ;
 			}
 			else if ( ekijikokuAfter.getDgrXPosChaku() != INT_MIN && 
@@ -639,13 +639,13 @@ void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_02(
 				  ekijikokuAfter.getEkiatsukai() == 
 					CentDedEkiJikoku::Ekiatsukai_Tsuuka ) )
 			{
-				//	(3)’…=‚ ‚èA‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
+				//	(3)ç€æ™‚åˆ»=ã‚ã‚Šã€é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
 				break ;
 			}
 			else
 			{
-				//	ğŒ‚É‚ ‚Ä‚Í‚Ü‚ç‚È‚¢‰w
-				//(—áF’…‚ ‚è‚Ì‰wE‰^s‚È‚µ‚Ì‰w)
+				//	æ¡ä»¶ã«ã‚ã¦ã¯ã¾ã‚‰ãªã„é§…æ™‚åˆ»
+				//(ä¾‹ï¼šç€æ™‚åˆ»ã‚ã‚Šã®é§…ãƒ»é‹è¡Œãªã—ã®é§…)
 				iEkiOrderAfter = INT_MIN ;
 				break ;
 			}
@@ -653,49 +653,49 @@ void CentDedDgrRessya::readCentDedRessya_06_complementLongStop_02(
 		if ( iEkiOrderAfter == INT_MIN 
 			|| iEkiOrderAfter == m_MuCentDedDgrEkiJikoku.size() )
 		{
-			//	ğŒ‚ğ–‚½‚·‰w‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ
+			//	æ¡ä»¶ã‚’æº€ãŸã™é§…ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“
 			continue ;
 		}
-		//iEkiOrderAfter,ekijikokuAfter = (3)’…=‚ ‚èA
-		//		‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
+		//iEkiOrderAfter,ekijikokuAfter = (3)ç€æ™‚åˆ»=ã‚ã‚Šã€
+		//		é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
 
 		// --------------------------------
-		//	(1)‚Ì’…ƒ(3)‚Ì’…-(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”-60•b‚È‚çA
-		//	(1)‚Ì”­=(3)‚Ì’…-(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”
-		//	‚Æ‚µ‚Ü‚·B
+		//	(1)ã®ç€æ™‚åˆ»ï¼œ(3)ã®ç€æ™‚åˆ»-(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°-60ç§’ãªã‚‰ã€
+		//	(1)ã®ç™ºæ™‚åˆ»=(3)ã®ç€æ™‚åˆ»-(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°
+		//	ã¨ã—ã¾ã™ã€‚
 		// --------------------------------
 		int iDgrXPos = ekijikokuAfter.getDgrXPosChaku() ;
 		iDgrXPos -= calcEkikanSaisyouSec( 
 			pMuCdDedDgrEki ,
 			iEkiOrderBefore ,
 			iEkiOrderAfter ) ; 
-		//iDgrXPos = (3)‚Ì’…-(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”
+		//iDgrXPos = (3)ã®ç€æ™‚åˆ»-(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°
 
 		if ( ekijikokuBefore.getDgrXPosChaku() < iDgrXPos - 60 )
 		{
-			//	(1)‚Ì’…ƒ(3)‚Ì’…-(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”-60•b‚È‚çA
-			//	(1)‚Ì”­=(3)‚Ì’…-(1)`(3)ŠÔ‚Ì‰wŠÔÅ¬Š—v•b”
-			//	‚Æ‚µ‚Ü‚·B
+			//	(1)ã®ç€æ™‚åˆ»ï¼œ(3)ã®ç€æ™‚åˆ»-(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°-60ç§’ãªã‚‰ã€
+			//	(1)ã®ç™ºæ™‚åˆ»=(3)ã®ç€æ™‚åˆ»-(1)ã€œ(3)é–“ã®é§…é–“æœ€å°æ‰€è¦ç§’æ•°
+			//	ã¨ã—ã¾ã™ã€‚
 			ekijikokuBefore.setDgrXPosHatsu( iDgrXPos ) ;
 			m_MuCentDedDgrEkiJikoku.set( ekijikokuBefore ,iEkiOrderBefore ) ;
 		}
 		// --------------------------------
-		//	Ÿ‚ÌŒŸõŠJnˆÊ’u‚ğŒˆ‚ß‚é
+		//	æ¬¡ã®æ¤œç´¢é–‹å§‹ä½ç½®ã‚’æ±ºã‚ã‚‹
 		// --------------------------------
 		{
-			//	(1)”­=‚ ‚èA‰wˆµ={’âÔ,’Ê‰ß}‚Ì‚¢‚¸‚ê‚©
-			//	(3)’…=‚È‚µA”­=‚ ‚è
-			//	‚Ì—¼•û‚ªŒ©‚Â‚©‚Á‚½ê‡‚ÍA
-			//	Ÿ‚ÌŒŸõ‚Í (3)’…=‚È‚µA”­=‚ ‚è
-			//	‚©‚çn‚ß‚Ü‚·B
+			//	(1)ç™ºæ™‚åˆ»=ã‚ã‚Šã€é§…æ‰±={åœè»Š,é€šé}ã®ã„ãšã‚Œã‹
+			//	(3)ç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ã‚ã‚Š
+			//	ã®ä¸¡æ–¹ãŒè¦‹ã¤ã‹ã£ãŸå ´åˆã¯ã€
+			//	æ¬¡ã®æ¤œç´¢ã¯ (3)ç€æ™‚åˆ»=ãªã—ã€ç™ºæ™‚åˆ»=ã‚ã‚Š
+			//	ã‹ã‚‰å§‹ã‚ã¾ã™ã€‚
 			iEkiOrderBefore = iEkiOrderAfter - 1;
 		}
 	}
 }
 
-	//(08)CentDedDgrRessyasen‚ÌƒRƒ“ƒeƒi‚ğ¶¬‚µA
+	//(08)CentDedDgrRessyasenã®ã‚³ãƒ³ãƒ†ãƒŠã‚’ç”Ÿæˆã—ã€
 	//  CentDedDgrEkijikoku::m_iDgrXPosOnRessyasen
-	//‚ğC³
+	//ã‚’ä¿®æ­£
 void CentDedDgrRessya::readCentDedRessya_08_updateRessyasenCont(
 	const Mu<CentDedDgrEkiCont::CdDedDgrEki>* pMuCdDedDgrEki ) 
 {
@@ -707,55 +707,55 @@ void CentDedDgrRessya::readCentDedRessya_08_updateRessyasenCont(
 	int iRessyasenKitenEkiOrder = 0 ;
 	int iResult = 0 ;
 	//(01)
-	//w—ñÔü‹N“_‰wOrderx‚ğ’T‚µ‚Ü‚·B
+	//ã€åˆ—è»Šç·šèµ·ç‚¹é§…Orderã€ã‚’æ¢ã—ã¾ã™ã€‚
 	while ( ( iResult = updateRessyasenCont_01_calcRessyasenKiten( 
 			iRessyasenKitenEkiOrder , 
 			&iRessyasenKitenEkiOrder ) ) >= 0 )
 	{
-		//iRessyasenKitenEkiOrder = w—ñÔü‹N“_‰wOrderx
+		//iRessyasenKitenEkiOrder = ã€åˆ—è»Šç·šèµ·ç‚¹é§…Orderã€
 
 
 		// --------------------------------
 		int iRessyasenSyuutenEkiOrder = INT_MIN ;
 
-		//(02)w—ñÔü‹N“_‰wOrderx‚É‘Î‰‚·‚éw—ñÔüI“_‰wOrderx‚ğŒŸõ‚µ‚Ü‚·B
+		//(02)ã€åˆ—è»Šç·šèµ·ç‚¹é§…Orderã€ã«å¯¾å¿œã™ã‚‹ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã‚’æ¤œç´¢ã—ã¾ã™ã€‚
 		//	
-		//	  (1)@w—ñÔüI“_‰wOrderx‚ÌğŒ‚ÍA
-		//u’…E”­‚Ì—¼•û‚ªw’è‚³‚ê‚Ä‚¢‚év OR
-		//u Ÿ‚Ì‰w‚Ì‰wˆµ‚¢‚ªw‰^s‚È‚µx v OR
-		//uuw‰wOrderx‚ªA‚»‚Ì—ñÔ‚É‚¨‚¯‚é‚ÌI’…‰wv 
-		//	  ‘ÎÛ‰w‚ª‚İ‚Â‚©‚ç‚È‚¯‚ê‚ÎA—ñÔüI“_‰wOrder‚ÌŒˆ’è‚Í¸”s‚Æ‚È‚è‚Ü‚·
-		//  (Œo—R‚È‚µ‚Ì’¼‘O‚ÍA—ñÔü‚ÌI“_‚É‚Í‚È‚è‚Ü‚¹‚ñ
-		//  @(‚±‚Ì“_‚Å‚Ì—ñÔü‹N“_‚ÆI“_‚ÍAŒo—R‚È‚µ‚ğ‚Ü‚½‚®‚±‚Æ‚ª‚ ‚è‚Ü‚·B)
+		//	  (1)ã€€ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã®æ¡ä»¶ã¯ã€
+		//ã€Œç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ä¸¡æ–¹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹ã€ OR
+		//ã€Œ æ¬¡ã®é§…ã®é§…æ‰±ã„ãŒã€é‹è¡Œãªã—ã€ ã€ OR
+		//ã€Œã€Œã€é§…Orderã€ãŒã€ãã®åˆ—è»Šã«ãŠã‘ã‚‹ã®çµ‚ç€é§…ã€ 
+		//	  å¯¾è±¡é§…ãŒã¿ã¤ã‹ã‚‰ãªã‘ã‚Œã°ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã®æ±ºå®šã¯å¤±æ•—ã¨ãªã‚Šã¾ã™
+		//  (çµŒç”±ãªã—ã®ç›´å‰ã¯ã€åˆ—è»Šç·šã®çµ‚ç‚¹ã«ã¯ãªã‚Šã¾ã›ã‚“
+		//  ã€€(ã“ã®æ™‚ç‚¹ã§ã®åˆ—è»Šç·šèµ·ç‚¹ã¨çµ‚ç‚¹ã¯ã€çµŒç”±ãªã—ã‚’ã¾ãŸãã“ã¨ãŒã‚ã‚Šã¾ã™ã€‚)
 		//
-		//	  (2)@‚±‚Ì“_‚ÅAw—ñÔüI“_‰wOrderx‚É’…‚à”­‚à
-		//İ’è‚³‚ê‚Ä‚¢‚È‚¢ê‡‚ÍA
-		//n”­‰w•ûŒü‚ÉŒü‚©‚Á‚ÄA’…E”­‚Ì‚¢‚¸‚ê‚©‚ªw’è‚³‚ê‚Ä‚¢‚é
-		//‰w‚ğŒŸõ‚µ‚Ü‚·B
-		//	  ‚±‚ÌŒ‹‰Êw—ñÔüI“_‰wOrderx‚É‘Š“–‚·‚é‰w‚ª‚È‚¢ê‡‚ÍA
-		//—ñÔüI“_‰wOrder‚ÌŒˆ’è‚Í¸”s‚Æ‚È‚è‚Ü‚·B
+		//	  (2)ã€€ã“ã®æ™‚ç‚¹ã§ã€ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã«ç€æ™‚åˆ»ã‚‚ç™ºæ™‚åˆ»ã‚‚
+		//è¨­å®šã•ã‚Œã¦ã„ãªã„å ´åˆã¯ã€
+		//å§‹ç™ºé§…æ–¹å‘ã«å‘ã‹ã£ã¦ã€ç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ã„ãšã‚Œã‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹
+		//é§…ã‚’æ¤œç´¢ã—ã¾ã™ã€‚
+		//	  ã“ã®çµæœã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã«ç›¸å½“ã™ã‚‹é§…ãŒãªã„å ´åˆã¯ã€
+		//åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã®æ±ºå®šã¯å¤±æ•—ã¨ãªã‚Šã¾ã™ã€‚
 		{
 			int iResult = updateRessyasenCont_02_calcRessyasenSyuuten(
 				iRessyasenKitenEkiOrder , 
 				&iRessyasenSyuutenEkiOrder ) ;
 
 			//iResult = 
-			//	-	0 ;	//	w—ñÔüI“_‰wOrderx‚ª‚İ‚Â‚©‚è‚Ü‚µ‚½B
-			//	-	-1 ;	//	—ñÔüI“_‰w‚ª‚ ‚è‚Ü‚¹‚ñB
-			//				//	‚±‚Ì‹æŠÔ‚ÉŠÖ‚µ‚Ä‚ÍA—ñÔü‚ğì¬‚Å‚«‚Ü‚¹‚ñB
+			//	-	0 ;	//	ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ãŒã¿ã¤ã‹ã‚Šã¾ã—ãŸã€‚
+			//	-	-1 ;	//	åˆ—è»Šç·šçµ‚ç‚¹é§…ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
+			//				//	ã“ã®åŒºé–“ã«é–¢ã—ã¦ã¯ã€åˆ—è»Šç·šã‚’ä½œæˆã§ãã¾ã›ã‚“ã€‚
 			if ( iResult == -1 )
 			{
 				iRessyasenKitenEkiOrder ++ ;
 				continue ;
 			}
-			//iRessyasenSyuutenEkiOrder = w—ñÔüI“_‰wOrderxi•â³‘Oj
+			//iRessyasenSyuutenEkiOrder = ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ï¼ˆè£œæ­£å‰ï¼‰
 		}
 		//(04)
-		//	wƒ_ƒCƒ„ƒOƒ‰ƒ€—ñÔüxƒIƒuƒWƒFƒNƒg“à‚Ì
-		//	w—ñÔü‹N“_‰wOrderx‚Æw—ñÔüI“_‰wOrderx‚ÌŠÔ‚Ì
-		//	“r’†‰w‚ÅA’…E”­‚Ì‚¢‚¸‚ê‚©‚ªw’è‚³‚ê‚Ä‚¢‚éå—v‰w‚ª‚ ‚ê‚ÎA
-		//	‚»‚ê‚ğ
-		//	w—ñÔüI“_‰wOrderx‚Æw—ñÔüI“_x‚É‚µ‚Ü‚·B
+		//	ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šç·šã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå†…ã®
+		//	ã€åˆ—è»Šç·šèµ·ç‚¹é§…Orderã€ã¨ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã®é–“ã®
+		//	é€”ä¸­é§…ã§ã€ç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ã„ãšã‚Œã‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹ä¸»è¦é§…ãŒã‚ã‚Œã°ã€
+		//	ãã‚Œã‚’
+		//	ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã¨ã€åˆ—è»Šç·šçµ‚ç‚¹æ™‚åˆ»ã€ã«ã—ã¾ã™ã€‚
 		updateRessyasenCont_04_adjustRessyasenSyuuten4( 
 			pMuCdDedDgrEki ,
 			iRessyasenKitenEkiOrder ,
@@ -770,32 +770,32 @@ void CentDedDgrRessya::readCentDedRessya_08_updateRessyasenCont(
 			do{
 				bRetryRequested = false ;
 
-				//	w—ñÔü‹N“_x‚Æw—ñÔüI“_x‚ÌŠÔ‚ÉA—ñÔü‚ğ¶¬
+				//	ã€åˆ—è»Šç·šèµ·ç‚¹ã€ã¨ã€åˆ—è»Šç·šçµ‚ç‚¹ã€ã®é–“ã«ã€åˆ—è»Šç·šã‚’ç”Ÿæˆ
 				CentDedDgrRessyasen	aRessyasen(
 					iRessyasenKitenEkiOrder ,iRessyasenSyuutenEkiOrder ) ;
 				m_pCentDedDgrRessyasenCont->insert( aRessyasen ) ;
 
 				//(05)
-				//w—ñÔüƒRƒ“ƒeƒi CentDedDgrRessyasenCont x‚Ì––”ö‚Ì
-				//w—ñÔü CentDedDgrRessyasenx‚Ì“r’†‰w‚Ì’†‚ÅA
-				//—ñÔü‚ÌˆÊ’u(CentDedDgrEkiJikoku::m_iDgrXPosRessyasen)‚Æ
-				//’…E”­
-				//(CentDedDgrEkiJikoku::m_iDgrXPosChaku,m_iDgrXPosHatsu)‚Ì
-				//·‚ª60 •bˆÈã‚ ‚éê‡‚ÍA‚»‚Ì‰w‚ğw—ñÔüI“_‰wOrderx‚Æ
-				//	‚µ‚Ü‚·B
+				//ã€åˆ—è»Šç·šã‚³ãƒ³ãƒ†ãƒŠ CentDedDgrRessyasenCont ã€ã®æœ«å°¾ã®
+				//ã€åˆ—è»Šç·š CentDedDgrRessyasenã€ã®é€”ä¸­é§…ã®ä¸­ã§ã€
+				//åˆ—è»Šç·šã®ä½ç½®(CentDedDgrEkiJikoku::m_iDgrXPosRessyasen)ã¨
+				//ç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»
+				//(CentDedDgrEkiJikoku::m_iDgrXPosChaku,m_iDgrXPosHatsu)ã®
+				//å·®ãŒ60 ç§’ä»¥ä¸Šã‚ã‚‹å ´åˆã¯ã€ãã®é§…ã‚’ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã¨
+				//	ã—ã¾ã™ã€‚
 				{
 					int iResult=updateRessyasenCont_05_adjustRessyasenSyuuten5(
 						&iRessyasenSyuutenEkiOrder ) ;
 					//iResult = 
-					//-	0 ;	//	w—ñÔüI“_‰wOrderx‚Ì•â³‚Ì•K—v‚Í‚ ‚è‚Ü‚¹‚ñ
-					//		//	‚Å‚µ‚½B
-					//-	1 ;	//	w—ñÔüI“_‰wOrderx‚Ì•â³‚ğs‚¢‚Ü‚µ‚½B
+					//-	0 ;	//	ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã®è£œæ­£ã®å¿…è¦ã¯ã‚ã‚Šã¾ã›ã‚“
+					//		//	ã§ã—ãŸã€‚
+					//-	1 ;	//	ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã®è£œæ­£ã‚’è¡Œã„ã¾ã—ãŸã€‚
 					if ( iResult == 1 )
 					{
 						//iRessyasenSyuutenEkiOrder = 
-						//	w—ñÔüI“_‰wOrderx‚ÍC³‚³‚ê‚Ü‚µ‚½B
+						//	ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã¯ä¿®æ­£ã•ã‚Œã¾ã—ãŸã€‚
 
-						//	––”ö‚Ì—ñÔü‚ğíœ
+						//	æœ«å°¾ã®åˆ—è»Šç·šã‚’å‰Šé™¤
 						m_pCentDedDgrRessyasenCont->erase( INT_MAX ) ;
 
 						bRetryRequested = true ;
@@ -805,17 +805,17 @@ void CentDedDgrRessya::readCentDedRessya_08_updateRessyasenCont(
 		}
 
 
-		//(06)	ƒRƒ“ƒeƒi––”ö‚Ì—ñÔü‚ª“r’†‚ÉuŒo—R‚È‚µv‚ğŠÜ‚Şê‡A
-		//	‚»‚Ì—ñÔü‚ğuŒo—R‚È‚µv‚Ü‚Å‚É’Zk‚µ‚Ü‚·B
-		//	(1)uŒo—R‚È‚µv’¼‘O‚Ì‰wE’¼Œã‚Ì‰w‚Ì’…E”­‚ğu—ñÔü‰wv‚É
-		//	’u‚«Š·‚¦‚Ü‚·B
-		//	(2)—ñÔü‚ÍuŒo—R‚È‚µv’¼‘O‚Ü‚Å‚É’Zk‚µ‚Ü‚·B
-		//	(3)—ñÔüI“_‚ğuŒo—R‚È‚µv‚Ì’¼‘O‚Æ‚µ‚Ü‚·B
+		//(06)	ã‚³ãƒ³ãƒ†ãƒŠæœ«å°¾ã®åˆ—è»Šç·šãŒé€”ä¸­ã«ã€ŒçµŒç”±ãªã—ã€ã‚’å«ã‚€å ´åˆã€
+		//	ãã®åˆ—è»Šç·šã‚’ã€ŒçµŒç”±ãªã—ã€ã¾ã§ã«çŸ­ç¸®ã—ã¾ã™ã€‚
+		//	(1)ã€ŒçµŒç”±ãªã—ã€ç›´å‰ã®é§…ãƒ»ç›´å¾Œã®é§…ã®ç€ãƒ»ç™ºæ™‚åˆ»ã‚’ã€Œåˆ—è»Šç·šé§…æ™‚åˆ»ã€ã«
+		//	ç½®ãæ›ãˆã¾ã™ã€‚
+		//	(2)åˆ—è»Šç·šã¯ã€ŒçµŒç”±ãªã—ã€ç›´å‰ã¾ã§ã«çŸ­ç¸®ã—ã¾ã™ã€‚
+		//	(3)åˆ—è»Šç·šçµ‚ç‚¹ã‚’ã€ŒçµŒç”±ãªã—ã€ã®ç›´å‰ã¨ã—ã¾ã™ã€‚
 		{
 			int iResult = updateRessyasenCont_06_reduceToKeiyunasi( 
 						&iRessyasenSyuutenEkiOrder ) ;
 		}
-		//	—ñÔü‹N“_‰w‚ÍA’¼‘O‚ÌI“_‰w‚Æ‚µ‚Ü‚·B
+		//	åˆ—è»Šç·šèµ·ç‚¹é§…ã¯ã€ç›´å‰ã®çµ‚ç‚¹é§…ã¨ã—ã¾ã™ã€‚
 		iRessyasenKitenEkiOrder = iRessyasenSyuutenEkiOrder ;
 
 	}
@@ -825,9 +825,9 @@ int CentDedDgrRessya::updateRessyasenCont_01_calcRessyasenKiten(
 		int iEkiOrder ,
 		int* piRessyasenKitenEkiOrder ) 
 {
-	//	w—ñÔü‹N“_‰wOrderx‚ÌğŒ‚ÍA
-	//	u’…E”­‚Ì‚¢‚¸‚ê‚©‚ªw’è‚³‚ê‚Ä‚¢‚é AND 
-	//	Ÿ‚Ìw‰wOrderx‚Ì‰wˆµ‚ªw’âÔx‚©w’Ê‰ßxv
+	//	ã€åˆ—è»Šç·šèµ·ç‚¹é§…Orderã€ã®æ¡ä»¶ã¯ã€
+	//	ã€Œç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ã„ãšã‚Œã‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹ AND 
+	//	æ¬¡ã®ã€é§…Orderã€ã®é§…æ‰±ãŒã€åœè»Šã€ã‹ã€é€šéã€ã€
 	Mu<CentDedDgrEkiJikoku*>*	pMuCentDedDgrEkiJikoku 
 		= this->getMuCentDedDgrEkiJikoku() ;
 
@@ -849,7 +849,7 @@ int CentDedDgrRessya::updateRessyasenCont_01_calcRessyasenKiten(
 			return ( 0 ) ;
 		} 
 	}	
-	return -1 ;	//	iEkiOrder ˆÈ~‚ÅA—ñÔü‹N“_‰w‚ª‚ ‚è‚Ü‚¹‚ñB
+	return -1 ;	//	iEkiOrder ä»¥é™ã§ã€åˆ—è»Šç·šèµ·ç‚¹é§…ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
 }
 
 int CentDedDgrRessya::updateRessyasenCont_02_calcRessyasenSyuuten( 
@@ -863,13 +863,13 @@ int CentDedDgrRessya::updateRessyasenCont_02_calcRessyasenSyuuten(
 	int iSyuuchakuEki = getSyuuchakuEki()  ;
 	int iRessyasenSyuutenEkiOrder = -1 ;
 
-	//	  (1)@w—ñÔüI“_‰wOrderx‚ÌğŒ‚ÍA
-	//u’…E”­‚Ì—¼•û‚ªw’è‚³‚ê‚Ä‚¢‚év OR
-	//u Ÿ‚Ì‰w‚Ì‰wˆµ‚¢‚ªw‰^s‚È‚µx v OR
-	//uuw‰wOrderx‚ªA‚»‚Ì—ñÔ‚É‚¨‚¯‚é‚ÌI’…‰wv 
-	//	  ‘ÎÛ‰w‚ª‚İ‚Â‚©‚ç‚È‚¯‚ê‚ÎA—ñÔüI“_‰wOrder‚ÌŒˆ’è‚Í¸”s‚Æ‚È‚è‚Ü‚·
-	//  (Œo—R‚È‚µ‚Ì’¼‘O‚ÍA—ñÔü‚ÌI“_‚É‚Í‚È‚è‚Ü‚¹‚ñ
-	//  @(‚±‚Ì“_‚Å‚Ì—ñÔü‹N“_‚ÆI“_‚ÍAŒo—R‚È‚µ‚ğ‚Ü‚½‚®‚±‚Æ‚ª‚ ‚è‚Ü‚·B)
+	//	  (1)ã€€ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã®æ¡ä»¶ã¯ã€
+	//ã€Œç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ä¸¡æ–¹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹ã€ OR
+	//ã€Œ æ¬¡ã®é§…ã®é§…æ‰±ã„ãŒã€é‹è¡Œãªã—ã€ ã€ OR
+	//ã€Œã€Œã€é§…Orderã€ãŒã€ãã®åˆ—è»Šã«ãŠã‘ã‚‹ã®çµ‚ç€é§…ã€ 
+	//	  å¯¾è±¡é§…ãŒã¿ã¤ã‹ã‚‰ãªã‘ã‚Œã°ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã®æ±ºå®šã¯å¤±æ•—ã¨ãªã‚Šã¾ã™
+	//  (çµŒç”±ãªã—ã®ç›´å‰ã¯ã€åˆ—è»Šç·šã®çµ‚ç‚¹ã«ã¯ãªã‚Šã¾ã›ã‚“
+	//  ã€€(ã“ã®æ™‚ç‚¹ã§ã®åˆ—è»Šç·šèµ·ç‚¹ã¨çµ‚ç‚¹ã¯ã€çµŒç”±ãªã—ã‚’ã¾ãŸãã“ã¨ãŒã‚ã‚Šã¾ã™ã€‚)
 
 	if ( iRv >= 0 )
 	{
@@ -886,43 +886,43 @@ int CentDedDgrRessya::updateRessyasenCont_02_calcRessyasenSyuuten(
 				aEkiJikokuNext = 
 					*pMuCentDedDgrEkiJikoku->get( iEkiOrder + 1 ) ;
 			}
-			//aEkijikokuCurr = iEkiOrder ‚Ì‰w
-			//aEkiJikokuNext = iEkiOder ‚ÌŸ‚Ì‰w‚Ì‰wB
-			//	iEkiOrder‚ªI’…‰w‚Ìê‡‚ÍANULL‚Æ‚È‚è‚Ü‚·B
+			//aEkijikokuCurr = iEkiOrder ã®é§…æ™‚åˆ»
+			//aEkiJikokuNext = iEkiOder ã®æ¬¡ã®é§…ã®é§…æ™‚åˆ»ã€‚
+			//	iEkiOrderãŒçµ‚ç€é§…ã®å ´åˆã¯ã€NULLã¨ãªã‚Šã¾ã™ã€‚
 
 
 			int jikokuChaku = aEkiJikokuCurr.getDgrXPosChaku( false ) ;
 			int	jikokuHatsu = aEkiJikokuCurr.getDgrXPosHatsu( false ) ;
 			if ( jikokuChaku != INT_MIN && jikokuHatsu != INT_MIN )
 			{
-				//u’…E”­‚Ì—¼•û‚ªw’è‚³‚ê‚Ä‚¢‚év 
+				//ã€Œç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ä¸¡æ–¹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹ã€ 
 				iRessyasenSyuutenEkiOrder = iEkiOrder ;
 			}
 			else if ( aEkiJikokuNext.getEkiatsukai() == 
 						CentDedEkiJikoku::Ekiatsukai_None ) 
 			{
-				//	uŸ‚Ì‰w‚Ì‰wˆµ‚¢‚ªw‰^s‚È‚µxv  
+				//	ã€Œæ¬¡ã®é§…ã®é§…æ‰±ã„ãŒã€é‹è¡Œãªã—ã€ã€  
 				iRessyasenSyuutenEkiOrder = iEkiOrder ;
 			}
 			else if ( iEkiOrder == iSyuuchakuEki )
 			{
-				//	uuw‰wOrderx‚ªA‚»‚Ì—ñÔ‚É‚¨‚¯‚é‚ÌI’…‰wv 
+				//	ã€Œã€Œã€é§…Orderã€ãŒã€ãã®åˆ—è»Šã«ãŠã‘ã‚‹ã®çµ‚ç€é§…ã€ 
 				iRessyasenSyuutenEkiOrder = iEkiOrder ;
 			}
 		}
 		if ( iRessyasenSyuutenEkiOrder < 0 )
 		{
-			iRv = -1 ;	//	—ñÔüI“_‚ªŒˆ’è‚Å‚«‚Ü‚¹‚ñB(’Êí‚Í”­¶‚µ‚Ü‚¹‚ñ)
+			iRv = -1 ;	//	åˆ—è»Šç·šçµ‚ç‚¹ãŒæ±ºå®šã§ãã¾ã›ã‚“ã€‚(é€šå¸¸ã¯ç™ºç”Ÿã—ã¾ã›ã‚“)
 		}
 	}
-	// iRessyasenSyuutenEkiOrder = ‰¼Œˆ’è‚µ‚½—ñÔüI“_‰wOrder
+	// iRessyasenSyuutenEkiOrder = ä»®æ±ºå®šã—ãŸåˆ—è»Šç·šçµ‚ç‚¹é§…Order
 
-	//	(2)@‚±‚Ì“_‚ÅAw—ñÔüI“_‰wOrderx‚É’…‚à”­‚à
-	//	İ’è‚³‚ê‚Ä‚¢‚È‚¢ê‡‚ÍA
-	//	n”­‰w•ûŒü‚ÉŒü‚©‚Á‚ÄA’…E”­‚Ì‚¢‚¸‚ê‚©‚ªw’è‚³‚ê‚Ä‚¢‚é
-	//	‰w‚ğŒŸõ‚µ‚Ü‚·B
-	//	  ‚±‚ÌŒ‹‰Êw—ñÔüI“_‰wOrderx‚É‘Š“–‚·‚é‰w‚ª‚È‚¢ê‡‚ÍA
-	//	—ñÔüI“_‰wOrder‚ÌŒˆ’è‚Í¸”s‚Æ‚È‚è‚Ü‚·B
+	//	(2)ã€€ã“ã®æ™‚ç‚¹ã§ã€ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã«ç€æ™‚åˆ»ã‚‚ç™ºæ™‚åˆ»ã‚‚
+	//	è¨­å®šã•ã‚Œã¦ã„ãªã„å ´åˆã¯ã€
+	//	å§‹ç™ºé§…æ–¹å‘ã«å‘ã‹ã£ã¦ã€ç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ã„ãšã‚Œã‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹
+	//	é§…ã‚’æ¤œç´¢ã—ã¾ã™ã€‚
+	//	  ã“ã®çµæœã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã«ç›¸å½“ã™ã‚‹é§…ãŒãªã„å ´åˆã¯ã€
+	//	åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã®æ±ºå®šã¯å¤±æ•—ã¨ãªã‚Šã¾ã™ã€‚
 	if ( iRv >= 0 )
 	{
 		for ( ; iRessyasenSyuutenEkiOrder > iRessyasenKitenEkiOrder ; 
@@ -934,16 +934,16 @@ int CentDedDgrRessya::updateRessyasenCont_02_calcRessyasenSyuuten(
 			int	jikokuHatsu = aEkiJikokuCurr.getDgrXPosHatsu( false ) ;
 			if ( jikokuChaku != INT_MIN || jikokuHatsu != INT_MIN )
 			{
-				//u’…E”­‚Ì‚Ç‚¿‚ç‚©‚ªw’è‚³‚ê‚Ä‚¢‚év 
+				//ã€Œç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ã©ã¡ã‚‰ã‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹ã€ 
 				break ;
 			}
 		}
 		if ( iRessyasenSyuutenEkiOrder == iRessyasenKitenEkiOrder )
 		{
-			iRv = -1 ;	//	—ñÔüI“_‚ªŒˆ’è‚Å‚«‚Ü‚¹‚ñB
+			iRv = -1 ;	//	åˆ—è»Šç·šçµ‚ç‚¹ãŒæ±ºå®šã§ãã¾ã›ã‚“ã€‚
 		}
 		//iRessyasenSyuutenEkiOrder = 
-		//	’…E”­‚Ì‚¢‚¸‚ê‚©‚ªw’è‚³‚ê‚½Aw—ñÔüI“_‰wOrderx
+		//	ç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ã„ãšã‚Œã‹ãŒæŒ‡å®šã•ã‚ŒãŸã€ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€
 	}
 	// --------------------------------
 	if ( iRv >= 0 )
@@ -960,7 +960,7 @@ int CentDedDgrRessya::updateRessyasenCont_04_adjustRessyasenSyuuten4(
 {
 	int iRessyasenSyuutenEkiOrder = *piRessyasenSyuutenEkiOrder ;
 	// --------------------------------
-	//	wå—v‰wx‚ğ’T‚µ‚Ü‚·B
+	//	ã€ä¸»è¦é§…ã€ã‚’æ¢ã—ã¾ã™ã€‚
 	// --------------------------------
 	Mu<CentDedDgrEkiJikoku*>*	pMuCentDedDgrEkiJikoku 
 		= this->getMuCentDedDgrEkiJikoku() ;
@@ -977,21 +977,21 @@ int CentDedDgrRessya::updateRessyasenCont_04_adjustRessyasenSyuuten4(
 		if ( jikokuToueki != INT_MIN && 
 			aCdDedDgrEki.getIsSyuyoueki() )
 		{
-			//	w—ñÔü‹N“_‰wOrderx‚Æw—ñÔüI“_‰wOrderx‚ÌŠÔ‚Ì
-			//	“r’†‰w‚ÅA’…E”­‚Ì‚¢‚¸‚ê‚©‚ªw’è‚³‚ê‚Ä‚¢‚éå—v‰w
-			//	‚ª‚ ‚ê‚ÎA‚»‚ê‚ğ
-			//	w—ñÔüI“_‰wOrderx‚Æ‚µ‚Ü‚·B
+			//	ã€åˆ—è»Šç·šèµ·ç‚¹é§…Orderã€ã¨ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã®é–“ã®
+			//	é€”ä¸­é§…ã§ã€ç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã®ã„ãšã‚Œã‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹ä¸»è¦é§…
+			//	ãŒã‚ã‚Œã°ã€ãã‚Œã‚’
+			//	ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã¨ã—ã¾ã™ã€‚
 			*piRessyasenSyuutenEkiOrder = iEkiOrder ;
-			return 	1 ;	//	w—ñÔüI“_‰wOrderx‚Ì•â³‚ğs‚¢‚Ü‚µ‚½B
+			return 	1 ;	//	ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã®è£œæ­£ã‚’è¡Œã„ã¾ã—ãŸã€‚
 		}
 		if ( aCentDedDgrEkiJikoku.getEkiatsukai() == 
 				CentDedEkiJikoku::Ekiatsukai_Tsuuka && 
 			( jikokuToueki != INT_MIN  ) )
 		{
-			//u’Ê‰ß‰w‚ÅA
-			//’…‚©”­‚Ì‚¢‚¸‚ê‚©‚ªw’è‚³‚ê‚Ä‚¢‚év 
+			//ã€Œé€šéé§…ã§ã€
+			//ç€æ™‚åˆ»ã‹ç™ºæ™‚åˆ»ã®ã„ãšã‚Œã‹ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹ã€ 
 			*piRessyasenSyuutenEkiOrder = iEkiOrder ;
-			return 	1 ;	//	w—ñÔüI“_‰wOrderx‚Ì•â³‚ğs‚¢‚Ü‚µ‚½B
+			return 	1 ;	//	ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã®è£œæ­£ã‚’è¡Œã„ã¾ã—ãŸã€‚
 		}
 
 
@@ -1014,17 +1014,17 @@ int CentDedDgrRessya::updateRessyasenCont_05_adjustRessyasenSyuuten5(
 		CentDedDgrEkiJikoku	aEkiJikoku = m_MuCentDedDgrEkiJikoku.get( 
 			iEkiOrder ) ;
 
-		//—ñÔü‚ÌˆÊ’u(CentDedDgrEkiJikoku::m_iDgrXPosRessyasen)‚Æ
-		//’…E”­(CentDedDgrEkiJikoku::m_iDgrXPosChaku,m_iDgrXPosHatsu)‚Ì
-		//·‚ª60 •bˆÈã‚ ‚é
-		//ê‡‚ÍA‚»‚Ì‰w‚ğw—ñÔüI“_‰wOrderx‚Æ‚µ‚Ü‚·B
+		//åˆ—è»Šç·šã®ä½ç½®(CentDedDgrEkiJikoku::m_iDgrXPosRessyasen)ã¨
+		//ç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»(CentDedDgrEkiJikoku::m_iDgrXPosChaku,m_iDgrXPosHatsu)ã®
+		//å·®ãŒ60 ç§’ä»¥ä¸Šã‚ã‚‹
+		//å ´åˆã¯ã€ãã®é§…ã‚’ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã¨ã—ã¾ã™ã€‚
 		int iDgrXPosChakuHatsu = aEkiJikoku.getDgrXPosHatsu( true ) ;
 		int iDgrXPosRessyasen = aEkiJikoku.getDgrXPosRessyasen() ;
 		if ( iDgrXPosChakuHatsu != INT_MIN && 
 			abs( iDgrXPosChakuHatsu - iDgrXPosRessyasen ) >= 60 )
 		{
 			*piRessyasenSyuutenEkiOrder = iEkiOrder ;
-			iRv = 1 ;	//	w—ñÔüI“_‰wOrderx‚Ì•â³‚ğs‚¢‚Ü‚µ‚½B
+			iRv = 1 ;	//	ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã®è£œæ­£ã‚’è¡Œã„ã¾ã—ãŸã€‚
 		}
 	}
 	return iRv ;
@@ -1039,8 +1039,8 @@ int CentDedDgrRessya::updateRessyasenCont_06_reduceToKeiyunasi(
 	CentDedDgrRessyasen aCentDedDgrRessyasen = m_pCentDedDgrRessyasenCont->get(
 		INT_MAX ) ;
 	// --------------------------------
-	//	—ñÔü“à‚ÉŠÜ‚Ü‚ê‚éA
-	//	Œo—R‚È‚µ‚Ìn“_‚ÆI“_‚ğŒŸõ
+	//	åˆ—è»Šç·šå†…ã«å«ã¾ã‚Œã‚‹ã€
+	//	çµŒç”±ãªã—ã®å§‹ç‚¹ã¨çµ‚ç‚¹ã‚’æ¤œç´¢
 	// --------------------------------
 	int iEkiOrderBeforeKeiyunasi = INT_MIN ;
 	int iEkiOrderAfterKeiyunasi = INT_MIN ;
@@ -1069,27 +1069,27 @@ int CentDedDgrRessya::updateRessyasenCont_06_reduceToKeiyunasi(
 			CentDedDgrEkiJikoku	aEkiJikoku = m_MuCentDedDgrEkiJikoku.get( 
 				iEkiOrder ) ;
 
-			//‰wˆµ‚ªwŒo—R‚È‚µx‚ÌI’[’n“_‚ğ’T‚µ‚Ü‚·B
+			//é§…æ‰±ãŒã€çµŒç”±ãªã—ã€ã®çµ‚ç«¯åœ°ç‚¹ã‚’æ¢ã—ã¾ã™ã€‚
 			if ( aEkiJikoku.getEkiatsukai() 
 				!= CentDedEkiJikoku::Ekiatsukai_Keiyunasi )
 			{
 				iEkiOrderAfterKeiyunasi = iEkiOrder ;
 			}
 		}
-		//iEkiOrderAfterKeiyunasi = iEkiOrderBeforeKeiyunasi ˆÈŒã‚ÅÅ‰‚Ì
-		//	u‰wˆµ‚ªwŒo—R‚È‚µxˆÈŠO‚Ì‰wv‚Ì‰wOrderB
-		//	’A‚µA‚±‚ê‚ªu—ñÔüI“_‰wOrder‚Ìê‡v‚ÍAINT_MIN‚Æ‚È‚è‚Ü‚·B
+		//iEkiOrderAfterKeiyunasi = iEkiOrderBeforeKeiyunasi ä»¥å¾Œã§æœ€åˆã®
+		//	ã€Œé§…æ‰±ãŒã€çµŒç”±ãªã—ã€ä»¥å¤–ã®é§…ã€ã®é§…Orderã€‚
+		//	ä½†ã—ã€ã“ã‚ŒãŒã€Œåˆ—è»Šç·šçµ‚ç‚¹é§…Orderã®å ´åˆã€ã¯ã€INT_MINã¨ãªã‚Šã¾ã™ã€‚
 	}
 
-	//iEkiOrderBeforeKeiyunasi = wŒo—R‚È‚µx’¼‘O‚Ì‰wOrder
-	//iEkiOrderAfterKeiyunasi = wŒo—R‚È‚µx’¼Œã‚Ì‰wOrder
-	//	’A‚µAuwŒo—R‚È‚µx’¼Œã‚Ì‰wOrderv‚ª
-	//	u—ñÔüI“_‰wOrder‚Ìê‡v‚ÍAINT_MIN‚Æ‚È‚è‚Ü‚·B
+	//iEkiOrderBeforeKeiyunasi = ã€çµŒç”±ãªã—ã€ç›´å‰ã®é§…Order
+	//iEkiOrderAfterKeiyunasi = ã€çµŒç”±ãªã—ã€ç›´å¾Œã®é§…Order
+	//	ä½†ã—ã€ã€Œã€çµŒç”±ãªã—ã€ç›´å¾Œã®é§…Orderã€ãŒ
+	//	ã€Œåˆ—è»Šç·šçµ‚ç‚¹é§…Orderã®å ´åˆã€ã¯ã€INT_MINã¨ãªã‚Šã¾ã™ã€‚
 
 	if ( iEkiOrderBeforeKeiyunasi != INT_MIN ) 
 	{
-		//	wŒo—R‚È‚µx’¼‘O‚Ì‰wOrder‚Ì
-		//	”­’…‚ğA—ñÔüã‚Ì‚É•ÏX‚µ‚Ü‚·
+		//	ã€çµŒç”±ãªã—ã€ç›´å‰ã®é§…Orderã®
+		//	ç™ºç€æ™‚åˆ»ã‚’ã€åˆ—è»Šç·šä¸Šã®æ™‚åˆ»ã«å¤‰æ›´ã—ã¾ã™
 		CentDedDgrEkiJikoku aCentDedDgrEkiJikoku = 
 			m_MuCentDedDgrEkiJikoku.get( iEkiOrderBeforeKeiyunasi ) ;
 		aCentDedDgrEkiJikoku.setDgrXPosChaku( 
@@ -1101,8 +1101,8 @@ int CentDedDgrRessya::updateRessyasenCont_06_reduceToKeiyunasi(
 
 		if ( iEkiOrderAfterKeiyunasi != INT_MIN )
 		{
-			//	wŒo—R‚È‚µx’¼Œã‚Ì‰wOrder‚Ì
-			//	”­’…‚ğA—ñÔüã‚Ì‚É•ÏX‚µ‚Ü‚·
+			//	ã€çµŒç”±ãªã—ã€ç›´å¾Œã®é§…Orderã®
+			//	ç™ºç€æ™‚åˆ»ã‚’ã€åˆ—è»Šç·šä¸Šã®æ™‚åˆ»ã«å¤‰æ›´ã—ã¾ã™
 			CentDedDgrEkiJikoku aCentDedDgrEkiJikoku = 
 				m_MuCentDedDgrEkiJikoku.get( iEkiOrderAfterKeiyunasi ) ;
 			aCentDedDgrEkiJikoku.setDgrXPosChaku( 
@@ -1113,13 +1113,13 @@ int CentDedDgrRessya::updateRessyasenCont_06_reduceToKeiyunasi(
 				aCentDedDgrEkiJikoku , iEkiOrderAfterKeiyunasi ) ;
 		}
 
-		//	––”ö‚Ì—ñÔü‚ğ’u‚«‚©‚¦‚Ü‚·B
+		//	æœ«å°¾ã®åˆ—è»Šç·šã‚’ç½®ãã‹ãˆã¾ã™ã€‚
 		m_pCentDedDgrRessyasenCont->erase( INT_MAX ) ;
 		aCentDedDgrRessyasen.setSyuuten( iEkiOrderBeforeKeiyunasi ) ;
 		m_pCentDedDgrRessyasenCont->insert( aCentDedDgrRessyasen ) ;
 
-		//‰wˆµ‚ªwŒo—R‚È‚µx‚Ì‰w‚ª‚ ‚éê‡‚ÍA
-		//‚»‚Ì’¼‘O‚ğw—ñÔüI“_‰wOrderx‚Æ‚µ‚Ü‚·B
+		//é§…æ‰±ãŒã€çµŒç”±ãªã—ã€ã®é§…æ™‚åˆ»ãŒã‚ã‚‹å ´åˆã¯ã€
+		//ãã®ç›´å‰ã‚’ã€åˆ—è»Šç·šçµ‚ç‚¹é§…Orderã€ã¨ã—ã¾ã™ã€‚
 		*piRessyasenSyuutenEkiOrder = iEkiOrderBeforeKeiyunasi ;
 
 		iRv = 1 ;
@@ -1128,13 +1128,13 @@ int CentDedDgrRessya::updateRessyasenCont_06_reduceToKeiyunasi(
 }
 
 // --------------------------------
-//@name ‰º¿ŠÖ”
+//@name ä¸‹è«‹é–¢æ•°
 // --------------------------------
 
 
 
 // ********************************
-//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 // ********************************
 CentDedDgrRessya::CentDedDgrRessya( 
 		const CentDedRosen* pCentDedRosen ,
@@ -1210,7 +1210,7 @@ CentDedDgrRessya::~CentDedDgrRessya()
 //	CentDedDgrRessya
 // ********************************
 	// ********************************
-	//@name ‘®«
+	//@name å±æ€§
 	// ********************************
 bool CentDedDgrRessya::getIsNull()const
 {
@@ -1272,7 +1272,7 @@ CdDcdZone	CentDedDgrRessya::getDgrXZone()const
 };
 
 	// ********************************
-	//@name •ïŠÜ
+	//@name åŒ…å«
 	// ********************************
 Mu< CentDedDgrEkiJikoku* >* 
 CentDedDgrRessya::getMuCentDedDgrEkiJikoku() 
@@ -1298,7 +1298,7 @@ const Mu< const CentDedDgrRessyasen* >* CentDedDgrRessya::
 
 
 	// ********************************
-	//@name ‘€ì
+	//@name æ“ä½œ
 	// ********************************
 void CentDedDgrRessya::clear()
 {
@@ -1318,41 +1318,41 @@ int CentDedDgrRessya::readCentDedRessya(
 		const CentDedRessya* pCentDedRessya ) 
 {
 	int iRv = 0 ;
-	//	•ïŠÜ‚·‚éƒIƒuƒWƒFƒNƒg‚ğ‘S‚ÄƒNƒŠƒA‚µANULLó‘Ô‚É‚µ‚Ü‚·
+	//	åŒ…å«ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å…¨ã¦ã‚¯ãƒªã‚¢ã—ã€NULLçŠ¶æ…‹ã«ã—ã¾ã™
 	clear() ;
 
-	//(01)CentDedDgrRessya‚Ì‘®«‚Ì‚¤‚¿ACentDedRessya ‚Ì‚İ‚ÅŒˆ’è‚·‚é‘®«‚ğİ’è
+	//(01)CentDedDgrRessyaã®å±æ€§ã®ã†ã¡ã€CentDedRessya ã®ã¿ã§æ±ºå®šã™ã‚‹å±æ€§ã‚’è¨­å®š
 	readCentDedRessya_01_readProp( pCentDedRessya ) ;
 
-	//(02)CentDedDgrEkiJikoku ‚ğ¶¬‚µA CentDedEkiJikoku ‚ÅŒˆ‚Ü‚é‘®«‚ğŒˆ’èB
+	//(02)CentDedDgrEkiJikoku ã‚’ç”Ÿæˆã—ã€ CentDedEkiJikoku ã§æ±ºã¾ã‚‹å±æ€§ã‚’æ±ºå®šã€‚
 	readCentDedRessya_02_CreateCentDedEkiJikoku( pCentDedRessya ) ;
 
-	//(03)CentDedDgrRessya‚ÌˆÈ‰º‚Ì‘®«‚ğACentDedDgrEkiJikoku‚Ì‘®«‚ğ
-	//	‚à‚Æ‚É¶¬B
+	//(03)CentDedDgrRessyaã®ä»¥ä¸‹ã®å±æ€§ã‚’ã€CentDedDgrEkiJikokuã®å±æ€§ã‚’
+	//	ã‚‚ã¨ã«ç”Ÿæˆã€‚
 	//	CdDcdZone	m_zoneDgrXZahyou
 	readCentDedRessya_03_updateDgrXZone() ;
 
-	//(04)CentDedDgrEkijikoku‚ÌˆÈ‰º‚Ì‘®«‚ğACentDedDgrEki ‚Ì‘®«‚ğ‚à‚Æ‚ÉŒˆ’èB
-	//	m_bShouldRessyajouhouDraw //—ñÔî•ñ‚ğ‚±‚Ì‰w‚ÌêŠ‚É•`‰æ‚·‚é‚È‚ç^‚Å‚·B
+	//(04)CentDedDgrEkijikokuã®ä»¥ä¸‹ã®å±æ€§ã‚’ã€CentDedDgrEki ã®å±æ€§ã‚’ã‚‚ã¨ã«æ±ºå®šã€‚
+	//	m_bShouldRessyajouhouDraw //åˆ—è»Šæƒ…å ±ã‚’ã“ã®é§…ã®å ´æ‰€ã«æç”»ã™ã‚‹ãªã‚‰çœŸã§ã™ã€‚
 	readCentDedRessya_04_updateShouldRessyajouhouDraw(
 		pCentDedDgrDia->getCentDedDgrEkiCont()->getMuPtr( m_eRessyahoukou ) ) ;
 
-	//	(05)Œo—R‚È‚µ‚Ì‘OŒã‚Ì’…”­‚ğ•â‚¤
+	//	(05)çµŒç”±ãªã—ã®å‰å¾Œã®ç€ç™ºæ™‚åˆ»ã‚’è£œã†
 	readCentDedRessya_05_complementKeiyunasiSide() ; 
 
-	//	(06_01)’·ŠÔ’âÔ‚ğ‰ğŒˆ
-	//		(’·ŠÔ’âÔ‚Ì’…=‚È‚µE”­=‚ ‚è ‚Ì‰w‚ÉA’…‚ğ•â‚¤)
+	//	(06_01)é•·æ™‚é–“åœè»Šã‚’è§£æ±º
+	//		(é•·æ™‚é–“åœè»Šã®ç€æ™‚åˆ»=ãªã—ãƒ»ç™ºæ™‚åˆ»=ã‚ã‚Š ã®é§…ã«ã€ç€æ™‚åˆ»ã‚’è£œã†)
 	readCentDedRessya_06_complementLongStop_01( 
 		pCentDedDgrDia->getCentDedDgrEkiCont()->getMuPtr( m_eRessyahoukou ) ) ;
 
-	//	(06_02)’·ŠÔ’âÔ‚ğ‰ğŒˆ
-	//		(’·ŠÔ’âÔ‚Ì’…=‚ ‚èE”­=‚È‚µ ‚Ì‰w‚ÉA”­‚ğ•â‚¤)
+	//	(06_02)é•·æ™‚é–“åœè»Šã‚’è§£æ±º
+	//		(é•·æ™‚é–“åœè»Šã®ç€æ™‚åˆ»=ã‚ã‚Šãƒ»ç™ºæ™‚åˆ»=ãªã— ã®é§…ã«ã€ç™ºæ™‚åˆ»ã‚’è£œã†)
 	readCentDedRessya_06_complementLongStop_02( 
 		pCentDedDgrDia->getCentDedDgrEkiCont()->getMuPtr( m_eRessyahoukou ) ) ;
 
-	//(08)CentDedDgrRessyasen‚ÌƒRƒ“ƒeƒi‚ğ¶¬‚µA
+	//(08)CentDedDgrRessyasenã®ã‚³ãƒ³ãƒ†ãƒŠã‚’ç”Ÿæˆã—ã€
 	//  CentDedDgrEkijikoku::m_iDgrXPosOnRessyasen
-	//‚ğC³
+	//ã‚’ä¿®æ­£
 	readCentDedRessya_08_updateRessyasenCont( 
 		pCentDedDgrDia->getCentDedDgrEkiCont()->getMuPtr( m_eRessyahoukou ) ) ;
 	
@@ -1408,7 +1408,7 @@ bool CentDedDgrRessya::isRunBetweenNextEki( int iEkiOrder )const
 	bool bRv = false ;
 	if ( !( 0 <= iEkiOrder && iEkiOrder < (int)m_MuCentDedDgrEkiJikoku.size() - 1 ) )
 	{
-		bRv = false ;	//	w‰wIndexx‚ª•s³‚Å‚·B
+		bRv = false ;	//	ã€é§…Indexã€ãŒä¸æ­£ã§ã™ã€‚
 	}
 	else
 	{
@@ -1503,32 +1503,32 @@ int CentDedDgrRessya::getDgrXPosOfJikokuOrder(
 	if ( !( pCentDedDgrEkiJikoku->getEkiatsukai() == CentDedEkiJikoku::Ekiatsukai_Teisya || 
 		pCentDedDgrEkiJikoku->getEkiatsukai() == CentDedEkiJikoku::Ekiatsukai_Tsuuka ) )
 	{
-		iRv = -1 ;	//	‚±‚Ì‰w‚ÌÀ•W‚ğæ“¾‚Å‚«‚Ü‚¹‚ñB
+		iRv = -1 ;	//	ã“ã®é§…ã®åº§æ¨™ã‚’å–å¾—ã§ãã¾ã›ã‚“ã€‚
 	}
 	else if ( pCentDedDgrEkiJikoku->getDgrXPosRessyasen() != INT_MIN )
 	{
-		//	‚±‚Ì‰w‚É—ñÔüXÀ•W‚ª‚ ‚é(—ñÔü‚Ì“r’†)‚È‚çA
-		//	‚»‚ÌXÀ•W‚ğÌ—p
+		//	ã“ã®é§…ã«åˆ—è»Šç·šXåº§æ¨™ãŒã‚ã‚‹(åˆ—è»Šç·šã®é€”ä¸­)ãªã‚‰ã€
+		//	ãã®Xåº§æ¨™ã‚’æ¡ç”¨
 		iDgrXPos = pCentDedDgrEkiJikoku->getDgrXPosRessyasen() ;
 	}
 	else if ( aCdDedJikokuOrder.getEkiJikokuItem() == CdDedJikokuOrder::EkiJikokuItem_Chaku)
 	{
-		//	w’è‚Ì‰wOrder‚ª’…
-		//	’…‚ÌÀ•W‚ğæ“¾(‚È‚¯‚ê‚Î”­)
+		//	æŒ‡å®šã®é§…æ™‚åˆ»OrderãŒç€æ™‚åˆ»
+		//	ç€æ™‚åˆ»ã®åº§æ¨™ã‚’å–å¾—(ãªã‘ã‚Œã°ç™º)
 		iDgrXPos = pCentDedDgrEkiJikoku->getDgrXPosChaku( true ) ;
 		if ( iDgrXPos == INT_MIN )
 		{
-			iRv = -1 ;	//	‚±‚Ì‰w‚ÌÀ•W‚ğæ“¾‚Å‚«‚Ü‚¹‚ñB
+			iRv = -1 ;	//	ã“ã®é§…ã®åº§æ¨™ã‚’å–å¾—ã§ãã¾ã›ã‚“ã€‚
 		}
 	}
 	else
 	{
-		//	w’è‚Ì‰wOrder‚ª”­
-		//	”­‚ÌÀ•W‚ğæ“¾(‚È‚¯‚ê‚Î’…)
+		//	æŒ‡å®šã®é§…æ™‚åˆ»OrderãŒç™ºæ™‚åˆ»
+		//	ç™ºæ™‚åˆ»ã®åº§æ¨™ã‚’å–å¾—(ãªã‘ã‚Œã°ç€)
 		iDgrXPos = pCentDedDgrEkiJikoku->getDgrXPosHatsu( true ) ;
 		if ( iDgrXPos == INT_MIN )
 		{
-			iRv = -1 ;	//	‚±‚Ì‰w‚ÌÀ•W‚ğæ“¾‚Å‚«‚Ü‚¹‚ñB
+			iRv = -1 ;	//	ã“ã®é§…ã®åº§æ¨™ã‚’å–å¾—ã§ãã¾ã›ã‚“ã€‚
 		}
 	}
 	// --------------------------------
@@ -1555,7 +1555,7 @@ int CentDedDgrRessya::getDgrXPosOfEkiOrder(
 	}
 	if ( iRv == -1 )
 	{
-		//	‰wOrder‚Ì’…‚ÌÀ•W‚ğæ“¾
+		//	é§…Orderã®ç€æ™‚åˆ»ã®åº§æ¨™ã‚’å–å¾—
 		iRv = this->getDgrXPosOfJikokuOrder( 
 			CdDedJikokuOrder( iEkiOrder , CdDedJikokuOrder::EkiJikokuItem_Chaku ) , 
 			&iDgrXPos ) ;

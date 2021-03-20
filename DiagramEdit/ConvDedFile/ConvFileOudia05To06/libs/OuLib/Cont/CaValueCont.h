@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -77,55 +77,55 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  * @brief
- * �y�T�v�z
- *   �A�_�v�^�N���X�ł��B�l��ێ�����R���e�i 
- *	"IfValueCont< ElementType >" �𑀍�ΏۂƂ��A�R���e�i����
- *	�v�f�ւ̃|�C���^�E�Q�Ƃ�Ԃ� "IfContGet" �C���^�[�t�F�[�X�ɕϊ����܂��B
+ * 【概要】
+ *   アダプタクラスです。値を保持するコンテナ 
+ *	"IfValueCont< ElementType >" を操作対象とし、コンテナ内の
+ *	要素へのポインタ・参照を返す "IfContGet" インターフェースに変換します。
  * 
- * (��  �|�C���^��ێ�����R���e�i�ɂ́A���̃A�_�v�^�͎g���܂���)
+ * (※  ポインタを保持するコンテナには、このアダプタは使えません)
  * 
- *   ���̃A�_�v�^�N���X���g���ƁA�ȉ��̃C���^�[�t�F�[�X���擾����
- *	���Ƃ��ł��܂��B�Ή����郁�\�b�h���Ăяo���Ă��������B
+ *   このアダプタクラスを使うと、以下のインターフェースを取得する
+ *	ことができます。対応するメソッドを呼び出してください。
  *
- * 	- "IfContGet< ElementType* >" �E�E�E getIfContGetPtr()
- * 	- "IfContGet< const ElementType* >" �E�E�E getIfContGetConstPtr() 
- * 	- "IfContGet< ElementType& >" �E�E�E getIfContGetRef()
- * 	- "IfContGet< const ElementType& >" �E�E�E getIfContGetConstRef() 
+ * 	- "IfContGet< ElementType* >" ・・・ getIfContGetPtr()
+ * 	- "IfContGet< const ElementType* >" ・・・ getIfContGetConstPtr() 
+ * 	- "IfContGet< ElementType& >" ・・・ getIfContGetRef()
+ * 	- "IfContGet< const ElementType& >" ・・・ getIfContGetConstRef() 
  * 
  * @param ElementType
- *	����ΏۃI�u�W�F�N�g���i�[���Ă���f�[�^�̌^���w�肵�Ă��������B
- *	����ΏۃI�u�W�F�N�g�́A "IfCont<ElementType*>" �C���^�[�t�F�[�X��
- *	�T�|�[�g���܂��B
- *	���̃f�[�^�^�́A�l�^�łȂ��Ă͂Ȃ�܂���i�|�C���^�E�Q�Ƃ͎g�p�ł��܂���j
+ *	操作対象オブジェクトが格納しているデータの型を指定してください。
+ *	操作対象オブジェクトは、 "IfCont<ElementType*>" インターフェースを
+ *	サポートします。
+ *	このデータ型は、値型でなくてはなりません（ポインタ・参照は使用できません）
  */
 template < class ElementType > class CaValueCont 
 {
 // ********************************
-///@name �֘A
+///@name 関連
 // ********************************
 ///@{
  private:
 	/**
-	 *	����ΏۃI�u�W�F�N�g�ƂȂ�A�R���e�i�ł��B
-	 *	���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-	 *	���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-	 *	�������Ȃ��Ă͂Ȃ�܂���B
+	 *	操作対象オブジェクトとなる、コンテナです。
+	 *	このオブジェクトの破棄の責務は、クラスユーザーにあります。
+	 *	このオブジェクトは、thisとの関連が保たれている間は、
+	 *	生存しなくてはなりません。
 	 */
 	IfValueCont<ElementType>*	m_pAdaptee ;
 ///@}
 
 // ********************************
-///@name ���
+///@name 包含
 // ********************************
 ///@{
  private:
 	// ********************************
-	//	"IfContGet< ElementType* >" �E�E�E getIfContGetPtr()
+	//	"IfContGet< ElementType* >" ・・・ getIfContGetPtr()
 	// ********************************
 	/**
 	 * @brief
-	 *	CaValueCont::getIfContGetPtr() ���\�b�h���Ԃ��C���^�[�t�F�[�X��
-	 *	���������N���X�ł��B
+	 *	CaValueCont::getIfContGetPtr() メソッドが返すインターフェースを
+	 *	実装したクラスです。
 	 */
 	class XIfContGetPtr : public IfContGet< ElementType* >
 	{
@@ -141,12 +141,12 @@ template < class ElementType > class CaValueCont
 	}	m_xIfContGetPtr ;
 	friend class XIfContGetPtr ;
 	// ********************************
-	// 	"IfContGet< const ElementType* >" �E�E�E getIfContGetConstPtr() 
+	// 	"IfContGet< const ElementType* >" ・・・ getIfContGetConstPtr() 
 	// ********************************
 	/**
 	 * @brief
-	 *	CaValueCont::getIfContGetConstPtr() ���\�b�h���Ԃ��C���^�[�t�F�[�X��
-	 *	���������N���X�ł��B
+	 *	CaValueCont::getIfContGetConstPtr() メソッドが返すインターフェースを
+	 *	実装したクラスです。
 	 */
 	class XIfContGetConstPtr : public IfContGet< const ElementType* >
 	{
@@ -163,12 +163,12 @@ template < class ElementType > class CaValueCont
 	friend class XIfContGetConstPtr ;
 
 	// ********************************
-	// 	"IfContGet< ElementType& >" �E�E�E getIfContGetRef()
+	// 	"IfContGet< ElementType& >" ・・・ getIfContGetRef()
 	// ********************************
 	/**
 	 * @brief
-	 *	CaValueCont::getIfContGetRef() ���\�b�h���Ԃ��C���^�[�t�F�[�X��
-	 *	���������N���X�ł��B
+	 *	CaValueCont::getIfContGetRef() メソッドが返すインターフェースを
+	 *	実装したクラスです。
 	 */
 	class XIfContGetRef : public IfContGet< ElementType& >
 	{
@@ -184,12 +184,12 @@ template < class ElementType > class CaValueCont
 	}	m_xIfContGetRef ;
 	friend class XIfContGetRef ;
 	// ********************************
-	// 	"IfContGet< const ElementType& >" �E�E�E getIfContGetConstRef() 
+	// 	"IfContGet< const ElementType& >" ・・・ getIfContGetConstRef() 
 	// ********************************
 	/**
 	 * @brief
-	 *	CaValueCont::getIfContGetConstRef() ���\�b�h���Ԃ��C���^�[�t�F�[�X��
-	 *	���������N���X�ł��B
+	 *	CaValueCont::getIfContGetConstRef() メソッドが返すインターフェースを
+	 *	実装したクラスです。
 	 */
 	class XIfContGetConstRef : public IfContGet< const ElementType& >
 	{
@@ -207,7 +207,7 @@ template < class ElementType > class CaValueCont
 
 ///@}
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	CaValueCont( IfValueCont<ElementType>* pAdaptee ) : 
@@ -221,7 +221,7 @@ template < class ElementType > class CaValueCont
 // ********************************
  public:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	IfValueCont<ElementType>*	getAdaptee(){	return m_pAdaptee ;};
@@ -232,7 +232,7 @@ template < class ElementType > class CaValueCont
 	};
 	///@}
 	// ********************************
-	///@name ���
+	///@name 包含
 	// ********************************
 	///@{
 	IfContGet< ElementType* >* getIfContGetPtr(){

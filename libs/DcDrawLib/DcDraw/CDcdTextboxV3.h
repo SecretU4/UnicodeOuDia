@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -92,71 +92,71 @@ using namespace DcDrawLib::DcDraw;
 // ****************************************************************
 /**
 @brief
-   DcDraw���f���ɂ�����A�`��A���S���Y�������������I�u�W�F�N�g�ł��B
-�@��������c����(���v����270����])�ŕ`�悵�܂��B
+   DcDrawモデルにおける、描画アルゴリズムを実装したオブジェクトです。
+　文字列を縦書き(時計回りに270℃回転)で描画します。
 
-  ���{����c�����œǂ߂�悤�ɕ`�悷��ɂ́A�t�H���g�̑����Ƃ��āA
-  �c�����t�H���g(�^�C�v�t�F�C�X���̐擪�� @ )���w�肷��K�v��
-  ����܂��B
+  日本語を縦書きで読めるように描画するには、フォントの属性として、
+  縦書きフォント(タイプフェイス名の先頭が @ )を指定する必要が
+  あります。
 
-  ���̃N���X�ł́ADcDraw�Ŏw�肳�ꂽ�̈�̊O�ӂ��㉺���E�ɁA
+  このクラスでは、DcDrawで指定された領域の外辺より上下左右に、
 
 	- m_logicalunitFrameWidth 
 	- m_logicalunitFrameHeight 
 
-���̘g�̈���m�ۂ��A���̓����� m_strText �̃e�L�X�g���������݂܂��B
+分の枠領域を確保し、その内側に m_strText のテキストを書き込みます。
 
-  ���̃I�u�W�F�N�g�ɑ΂��� DcDraw() ���Ăяo���ƁA�ȉ��̏������s���܂��B
+  このオブジェクトに対して DcDraw() を呼び出すと、以下の処理を行います。
 
-�P�D  �܂��A�̈�S�̂��A�u���V���� m_CdBrushProp �œh��Ԃ��܂��B
+１．  まず、領域全体を、ブラシ属性 m_CdBrushProp で塗りつぶします。
 
-�Q�D  �̈�̊O�ӓ����ɁA�w��̃y������ m_CdPenProp �Řg����
-�`�悵�܂��B
+２．  領域の外辺内側に、指定のペン属性 m_CdPenProp で枠線を
+描画します。
 
-�R�D  �g�̈�̓����ɁA
-�e�L�X�g m_strText ��`�悵�܂��B
+３．  枠領域の内側に、
+テキスト m_strText を描画します。
   
 <H4>
-�y�e�L�X�g�̔z�u�ɂ��āz
+【テキストの配置について】
 </H4>
-�@���̃N���X�́A���������ォ��E���Ɍ������āA
- �c����(���v����270����])�ŕ`�悵�܂��B
-  �A���A�t�H���g�̑������c�����t�H���g�ŁA�S�p�����̊Ԃɔ��p�����P�E�܂��͂Q������ꍇ�A
-���̔��p�����͉������ŕ`�悵�܂��B
+　このクラスは、文字を左上から右下に向かって、
+ 縦書き(時計回りに270℃回転)で描画します。
+  但し、フォントの属性が縦書きフォントで、全角文字の間に半角数字１つ・または２つがある場合、
+その半角数字は横書きで描画します。
   	
-�i��j
+（例）
 @code
     11
-    ��
+    月
     23
-    ��
+    日
 @endcode
   
 <H4>
-�y���̃N���X�̑����z
+【このクラスの属性】
 </H4>
-  ���̃N���X�̑����ɂ́A���̃N���X�̃����o�ϐ��ȊO�ɁA�ȉ��̂��̂�����܂��B
-  �����̑����́Am_CDcdFillrect , m_CDcdRectangle �̑����Ƃ��Ď�������܂��B
+  このクラスの属性には、このクラスのメンバ変数以外に、以下のものがあります。
+  これらの属性は、m_CDcdFillrect , m_CDcdRectangle の属性として実装されます。
 
 <H5>
 CdBrushProp	m_CdBrushProp ;
 </H5>
-�h��Ԃ��Ɏg�p����u���V�̑����B
+塗りつぶしに使用するブラシの属性。
 
 <H5>
 CdPenProp	m_CdPenProp
 </H5>
-�g����`�悷�邽�߂̃y���̑����B
+枠線を描画するためのペンの属性。
   
 <H4>
-CDcdTextboxV,CDcdTextboxV2�Ƃ̈Ⴂ
+CDcdTextboxV,CDcdTextboxV2との違い
 </H4>
-�@CDcdTextboxV �́A�������t�H���g���c�ɕ��ׂāA�c�����\�����������Ă��܂����B
-  CDcdTextboxV2 �́A�c�����t�H���g���g�p���܂��B���p2���ȉ��̐����́A���
-���������s���܂��B
-�@CDcdTextboxV3 �ł́A�c�����t�H���g�E�������t�H���g�̂ǂ�����g�p���邱�Ƃ�
-�ł��܂��B�c�����t�H���g���w�肵���Ƃ��ɂ́A���p2���ȉ��̐��������������܂��B
-�������t�H���g���w�肵���ꍇ�́A���p2���ȉ��̐����ɑ΂��鉡�����͍s���܂���B
+　CDcdTextboxV は、横書きフォントを縦に並べて、縦書き表示を実現していました。
+  CDcdTextboxV2 は、縦書きフォントを使用します。半角2桁以下の数字は、常に
+横書きを行います。
+　CDcdTextboxV3 では、縦書きフォント・横書きフォントのどちらも使用することが
+できます。縦書きフォントを指定したときには、半角2桁以下の数字を横書きします。
+横書きフォントを指定した場合は、半角2桁以下の数字に対する横書きは行いません。
  */
 class CDcdTextboxV3 : public IfDcDraw
 {
@@ -165,50 +165,50 @@ public:
 	//	CDcdTextboxV3::CStrElementPlace
 	// ****************************************************************
 	/**
-	  	�w������v�f�x�̕`��ʒu��\���\���̂ł��B
+	  	『文字列要素』の描画位置を表す構造体です。
 	 */
 	class CStrElementPlace
 	{
 	private:
 		// ********************************
-		///@name ����
+		///@name 属性
 		// ********************************
 		///@{
 		/**
-		  	�`����s��������v�f�B
+		  	描画を行う文字列要素。
 		 */
 		CVerticalTextElement	m_CStrElement ;
 	
 		/**
-		  	�`��J�n�ʒu�̂x���W����A�e�L�X�g�̍���̂x���W�܂ł̋���
-		  	�i�_���P�ʁj�B
+		  	描画開始位置のＹ座標から、テキストの左上のＹ座標までの距離
+		  	（論理単位）。
 		 */
 		int m_logicalunitYOffset ;	
 	
 		/**
-		  	�`�悷��w�����̍s�ԍ��B�N�_�i��ԉE�j�͂O�B
+		  	描画するＸ方向の行番号。起点（一番右）は０。
 		 */
 		int m_iXLineNumber ;
 
 		/**
-		  	������̂w�����̕��i�_���P�ʁj�B
+		  	文字列のＸ方向の幅（論理単位）。
 		 */
 		int m_iXLineWidth ;
 		///@}
 	public:
 		// ********************************
-		//	�R���X�g���N�^
+		//	コンストラクタ
 		// ********************************
 		/**
 		   @param aCStrElement [in]
-		  	�`����s��������v�f�B
+		  	描画を行う文字列要素。
 		   @param logicalunitYOffset [in]
-		  	�`��J�n�ʒu�̂x���W����A�e�L�X�g�̍���̂x���W�܂ł̋���
-		  	�i�_���P�ʁj�B
+		  	描画開始位置のＹ座標から、テキストの左上のＹ座標までの距離
+		  	（論理単位）。
 		   @param iXLineNumber [in]
-		  	�`�悷��w�����̍s�ԍ��B�N�_�i��ԉE�j�͂O�B
+		  	描画するＸ方向の行番号。起点（一番右）は０。
 		   @param iXLineWidth [in]
-		  	������̂w�����̕��i�_���P�ʁj�B
+		  	文字列のＸ方向の幅（論理単位）。
 		 */
 		CStrElementPlace( 
 			const CVerticalTextElement&	aCStrElement ,
@@ -224,7 +224,7 @@ public:
 			m_iXLineNumber( 0 ){};
 	public:
 		// ********************************
-		///@name CStrElementPlace-����
+		///@name CStrElementPlace-属性
 		// ********************************
 		///@{
 		CVerticalTextElement	getCStrElement()const{ return m_CStrElement ;};
@@ -247,101 +247,101 @@ public:
 	
 private:
 	// ********************************
-	///@name	���
+	///@name	包含
 	// ********************************
 	///@{
 	/**
-	  	�w�i��`�悷��I�u�W�F�N�g�ł��B
+	  	背景を描画するオブジェクトです。
 	  
-	  	���̃I�u�W�F�N�g�̑��� CDcdFillrect::m_CdBrushProp �́A
-	  	���̃N���X�̃����o�֐��o�R�ő���ł��܂��B
+	  	このオブジェクトの属性 CDcdFillrect::m_CdBrushProp は、
+	  	このクラスのメンバ関数経由で操作できます。
 	 */
 	CDcdFillrect		m_CDcdFillrect ;
 	/**
-	  	�g����`�悷��I�u�W�F�N�g�ł��B
+	  	枠線を描画するオブジェクトです。
 	  
-	  	���̃I�u�W�F�N�g�̑��� CDcdRectangle::m_CdPenProp �́A
-	  	���̃N���X�̃����o�֐��o�R�ő���ł��܂��B
+	  	このオブジェクトの属性 CDcdRectangle::m_CdPenProp は、
+	  	このクラスのメンバ関数経由で操作できます。
 	 */
 	CDcdRectangle		m_CDcdRectangle ;
 	
 	///@}
 private:
 	// ********************************
-	/// @name ����
+	/// @name 属性
 	// ********************************
 	///@{
 	/**
-	  	�`�悷�镶����ł��B
+	  	描画する文字列です。
 	 */
 	tstring			m_strText ;
 
 
 	/**
-	  	�e�L�X�g��`�悷��ۂ̃t�H���g��ێ����܂��B
+	  	テキストを描画する際のフォントを保持します。
 	 */
 	CdFontProp	m_CdFontProp ;
 
 	
 	/**
-	  	���̕`�敔�i�ɕ\���ł���AX�����i�������j�̑S�p�ł̕�������ێ����܂��B
-	  	�ڍׂ́A m_iLinesExtentY �̐������Q�Ƃ��Ă��������B
+	  	この描画部品に表示できる、X方向（横方向）の全角での文字数を保持します。
+	  	詳細は、 m_iLinesExtentY の説明を参照してください。
 
-		����l��1�ł��B
+		既定値は1です。
 	 */
 	int	m_iLinesExtentX ;
 
 	/**
-	  	���̕`�敔�i�ɕ\���ł���AY�����i�c�����j�̑S�p�ł̕�������ێ����܂��B
+	  	この描画部品に表示できる、Y方向（縦方向）の全角での文字数を保持します。
 	  
-	  	 getItemSize() �́A �ȉ��̒l��Ԃ��܂��B
-	  	-	X = �t�H���g�̍����~m_LinesExtectX 
-	  	-	Y = �t�H���g�̍����~m_LinesExtectY 
+	  	 getItemSize() は、 以下の値を返します。
+	  	-	X = フォントの高さ×m_LinesExtectX 
+	  	-	Y = フォントの高さ×m_LinesExtectY 
 
-		����l��1�ł��B
+		既定値は1です。
 	*/
 	int	m_iLinesExtentY ;
 
 	/**
-	  	�e�L�X�g��`�悷��ꍇ�̕����F�ł��B
-	  	�f�t�H���g�͍��ł��B
+	  	テキストを描画する場合の文字色です。
+	  	デフォルトは黒です。
 	 */
 	CdColorProp	m_colorrefText ;
 	
 	/**
-	  	�e�L�X�g�̍��E�̘g�̈�̑������A�_���P�ʂŕێ����܂��B
-	  	�����E�E�����ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
+	  	テキストの左右の枠領域の太さを、論理単位で保持します。
+	  	左側・右側それぞれに、このサイズの幅を確保します。
 
-		����l��0�ł��B
+		既定値は0です。
 	 */
 	int	m_logicalunitFrameWidth ;
 
 	/**
-	  	�e�L�X�g�̏㉺�̘g�̈�̑������A�_���P�ʂŕێ����܂��B
-	  	�㑤�E�������ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
+	  	テキストの上下の枠領域の太さを、論理単位で保持します。
+	  	上側・下側それぞれに、このサイズの幅を確保します。
 
-		����l��0�ł��B
+		既定値は0です。
 	*/
 	int	m_logicalunitFrameHeight ;
 	///@}
  protected:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 	/**
-	  	�t�H���g�̑������i�[���� CdFontProp �I�u�W�F�N�g�����ƂɁA
-	  	�c�����p�̃t�H���g�n���h���𐶐����܂��B
+	  	フォントの属性を格納した CdFontProp オブジェクトをもとに、
+	  	縦書き用のフォントハンドルを生成します。
 	  	
-	  	���̊֐��́A�w�肳�ꂽ CdFontProp ��  m_iEscapement
-	  	��ύX���������ŁA�t�H���g�𐶐����܂��B
+	  	この関数は、指定された CdFontProp の  m_iEscapement
+	  	を変更したうえで、フォントを生成します。
 	  	
 	@param pIfDcdTarget [in]
-	  	�`��Ώۂ̃f�o�C�X�R���e�L�X�g���w�肵�Ă��������B
+	  	描画対象のデバイスコンテキストを指定してください。
 	@param aCdFontProp [in]
-	  	�`��Ɏg�p����t�H���g���w�肵�Ă��������B
+	  	描画に使用するフォントを指定してください。
 	@return
-	  	�Ή����� HFONT ��ێ����� Ou<CGdiHFontHolder> ��Ԃ��܂��B
+	  	対応する HFONT を保持する Ou<CGdiHFontHolder> を返します。
 	*/
 	static Ou<CGdiHFontHolder> CreateVFont( 
 		IfDcdTarget* pIfDcdTarget ,
@@ -349,32 +349,32 @@ private:
 
 	
 	/**
-	  	�t�H���g�̑������i�[���� CdFontProp �I�u�W�F�N�g�����ƂɁA
-	  	�������p�̃t�H���g�n���h���𐶐����܂��B
+	  	フォントの属性を格納した CdFontProp オブジェクトをもとに、
+	  	横書き用のフォントハンドルを生成します。
 	  	
-	  	���̊֐��́A�w�肳�ꂽ CdFontProp ��  m_iEscapement
-	  	��ύX���������ŁA�t�H���g�𐶐����܂��B
+	  	この関数は、指定された CdFontProp の  m_iEscapement
+	  	を変更したうえで、フォントを生成します。
 	  	
 	@param pIfDcdTarget [in]
-	  	�`��Ώۂ̃f�o�C�X�R���e�L�X�g���w�肵�Ă��������B
+	  	描画対象のデバイスコンテキストを指定してください。
 	@param aCdFontProp [in]
-	  	�`��Ɏg�p����t�H���g���w�肵�Ă��������B
+	  	描画に使用するフォントを指定してください。
 	@return
-	  	�Ή����� HFONT ��ێ����� Ou<CGdiHFontHolder> ��Ԃ��܂��B
+	  	対応する HFONT を保持する Ou<CGdiHFontHolder> を返します。
 	*/
 	static Ou<CGdiHFontHolder> CreateHFont( 
 		IfDcdTarget* pIfDcdTarget ,
 		const CdFontProp& aCdFontProp )  ;
 	
 	/**
-	  	�c�����̑S�p�����P�̑傫�����v�Z���܂��B
+	  	縦書きの全角文字１つの大きさを計算します。
 	   @param pIfDcdTarget [in]
-	  	�`��Ώۂ̃f�o�C�X�R���e�L�X�g���w�肵�Ă��������B
+	  	描画対象のデバイスコンテキストを指定してください。
 	   @param fontHorizontal [in]
-	  	�`��Ɏg�p����t�H���g���w�肵�Ă��������B
-	  	�����Ŏw�肷��t�H���g�́A�������̂��̂łȂ��Ă͂Ȃ�܂���B
+	  	描画に使用するフォントを指定してください。
+	  	ここで指定するフォントは、横書きのものでなくてはなりません。
 	   @return
-	  	�c�����̑S�p�����P�̑傫����Ԃ��܂��B
+	  	縦書きの全角文字１つの大きさを返します。
 	 */
 	static CdDcdSizeXy calcZenkakuCharExtent(
 		IfDcdTarget* pIfDcdTarget , 
@@ -382,16 +382,16 @@ private:
 	
 	
 	/**
-	  	�c���������񒆂ɉ������e�L�X�g��`�悷�邽�߂� CDcdText �I�u�W�F�N�g��
-	  	�������܂��B
-		���̃I�u�W�F�N�g�́Am_strExtent�� "00" �A m_iLinesExtent ��
-		1 ���ݒ肳��Ă��܂��B���̂��߁AgetExtent() ���Ăяo�����Ƃɂ��A
-		�������e�L�X�g�̕��ƍ������擾�ł��܂��B
+	  	縦書き文字列中に横書きテキストを描画するための CDcdText オブジェクトを
+	  	生成します。
+		このオブジェクトは、m_strExtentに "00" 、 m_iLinesExtent に
+		1 が設定されています。このため、getExtent() を呼び出すことにより、
+		横書きテキストの幅と高さを取得できます。
 	   @param aCdFontProp [in]
-	  	�e�L�X�g��`�悷��ۂ̃t�H���g��ێ����܂��B
-		���̊֐��́AaCdFontProp �� m_iEscapement �𖳎����܂��B
+	  	テキストを描画する際のフォントを保持します。
+		この関数は、aCdFontProp の m_iEscapement を無視します。
 	   @param colorrefText [in]
-	  	�e�L�X�g��`�悷��ꍇ�̕����F�ł��B
+	  	テキストを描画する場合の文字色です。
 
 	 */
 	static CDcdText createCDcdTextH( 
@@ -399,35 +399,35 @@ private:
 		const CdColorProp& colorrefText ) ;
 	
 	/**
-	  	�z��Ɋi�[����Ă���w������v�f�x�̊e�v�f�̕`��ʒu�����߂܂��B
+	  	配列に格納されている『文字列要素』の各要素の描画位置を決めます。
 	  	
-	  	���̊֐��́A�w�肳�ꂽ�����̕`��̈�Ƀe�L�X�g���c�����Ŕz�u�����
-	  	���肵�āA�w������v�f�x���̂ӂ��킵�����W�����肵�܂��B
+	  	この関数は、指定された高さの描画領域にテキストを縦書きで配置すると
+	  	仮定して、『文字列要素』毎のふさわしい座標を決定します。
 	  
-	  	���̊֐������ۂ̕`����s���킯�ł͂���܂���B���̊֐��͍s���̂�
-	  	�`��ʒu�̌��肾���ł��B
+	  	この関数が実際の描画を行うわけではありません。この関数は行うのは
+	  	描画位置の決定だけです。
 	@param pIfDcdTarget [in]
-	  	�`��Ώۂ̃f�o�C�X�R���e�L�X�g���w�肵�Ă��������B
+	  	描画対象のデバイスコンテキストを指定してください。
 	@param aCdFontProp [in]
-	  	�`��Ɏg�p����t�H���g���w�肵�Ă��������B
+	  	描画に使用するフォントを指定してください。
 	@param pCStrElementCont [in]
-	  	�w������v�f�x���i�[�����R���e�i���w�肵�Ă��������B
+	  	『文字列要素』を格納したコンテナを指定してください。
 	@param pCStrElementPlaceCont [out]
-	  	���̊֐��͂��̃R���e�i�̖����ɁA
-	  	�w������v�f�x���Ƃ̕`��ʒu���i�[���� CStrElementPlace 
-	  	�I�u�W�F�N�g��ǉ����܂��B
-	  	���̃R���e�i������܂ŕێ����Ă����v�f�͔j�����܂��B
+	  	この関数はこのコンテナの末尾に、
+	  	『文字列要素』ごとの描画位置を格納した CStrElementPlace 
+	  	オブジェクトを追加します。
+	  	このコンテナがそれまで保持していた要素は破棄します。
 	@return
-	  	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	  	���݂̂Ƃ���A��� 0 �ł��B
+	  	成功したら 0 以上、エラーなら負の数です。
+	  	現在のところ、常に 0 です。
 	   @attention
-	  	pCStrElementCont �Ɋi�[����Ă���v�f�̐��ƁA
-	  	pCStrElementPlaceCont �ɒǉ������v�f�̐��́A�����Ƃ͌���܂���B
-	  	���̊֐���������v�f�̌������s���ꍇ�����邩��ł��B@n
-	  	�i��j pCStrElementCont �� "��"�E"�s"�E"��" �Ƃ���
-	  	�v�f���i�[����Ă����ꍇ�A���̂R���������������s�ɕ`��ł���ꍇ�́A
-	  	���̊֐��́w������v�f�x���������āA��� "���s��" �Ƃ���������v�f��
-	  	���܂��B
+	  	pCStrElementCont に格納されている要素の数と、
+	  	pCStrElementPlaceCont に追加される要素の数は、同じとは限りません。
+	  	この関数が文字列要素の結合を行う場合があるからです。@n
+	  	（例） pCStrElementCont に "京"・"都"・"発" という
+	  	要素が格納されていた場合、この３文字がもし同じ行に描画できる場合は、
+	  	この関数は『文字列要素』を結合して、一つの "京都発" という文字列要素に
+	  	します。
 	 */
 	static int VerticalTextElementToElementPlace( 
 		IfDcdTarget* pIfDcdTarget ,
@@ -436,20 +436,20 @@ private:
 		Mui<CStrElementPlace>* pCStrElementPlaceCont ) ;
 
 	/**
-	 	�z��Ɋi�[����Ă���w������v�f�x�̕`��ʒu�ɂ��������āA
-	 	������� IfDcdTarget �̈���ɕ`�悵�܂��B
+	 	配列に格納されている『文字列要素』の描画位置にしたがって、
+	 	文字列を IfDcdTarget 領域内に描画します。
 	@param pIfDcdTarget [in]
-	 	�`��Ώۂ��w�肵�Ă��������B
-	 	���̊֐��́A���̕`��̈�̍��ォ��A�c�����Ńe�L�X�g��`�悵�܂��B
+	 	描画対象を指定してください。
+	 	この関数は、この描画領域の左上から、縦書きでテキストを描画します。
 	@param aFontProp [in]
-	 	�`��Ɏg�p����t�H���g���w�肵�Ă��������B
-	 	�����Ŏw�肷��t�H���g�́A�������̂��̂łȂ��Ă͂Ȃ�܂���B
+	 	描画に使用するフォントを指定してください。
+	 	ここで指定するフォントは、横書きのものでなくてはなりません。
 	@param colorTextColor [in]
-		�e�L�X�g�̕����̐F���w�肵�Ă��������B
+		テキストの文字の色を指定してください。
 	@param pCStrElementPlaceCont [in]
-	 	�w������v�f�x���Ƃ̕`��̈���i�[�����R���e�i���w�肵�Ă��������B
+	 	『文字列要素』ごとの描画領域を格納したコンテナを指定してください。
 	@return
-	 	�`����s������^�E�����`����s��Ȃ������ꍇ�͋U�ł��B
+	 	描画を行ったら真・何も描画を行わなかった場合は偽です。
 	*/
 	static bool DcDrawElementPlace( 
 		IfDcdTarget* pIfDcdTarget ,
@@ -460,43 +460,43 @@ private:
 	///@}
  public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 
 	/**
 	@param strText [in]
-	 	�`�悷�镶����ł��B
+	 	描画する文字列です。
 	@param aCdFontProp [in]
-	 	�e�L�X�g��`�悷��ۂ̃t�H���g��ێ����܂��B
+	 	テキストを描画する際のフォントを保持します。
 	@param bAlwaysUseVFont [in]
-		�@�c�����t�H���g����Ɏg�p���邩�ۂ����w�肵�܂��B
+		　縦書きフォントを常に使用するか否かを指定します。
 	@param iLinesExtentX [in]
-	 	���̕`�敔�i�ɕ\���ł���AX�����i�������j�̕�������ێ����܂��B
+	 	この描画部品に表示できる、X方向（横方向）の文字数を保持します。
 	@param iLinesExtentY [in]
-		���̕`�敔�i�ɕ\���ł���AY�����i�c�����j�̕�������ێ����܂��B
-		 getItemSize() �́A �ȉ��̒l��Ԃ��܂��B
-		-	X = �t�H���g�̍����~m_LinesExtectX 
-		-	Y = �t�H���g�̍����~m_LinesExtectY 
+		この描画部品に表示できる、Y方向（縦方向）の文字数を保持します。
+		 getItemSize() は、 以下の値を返します。
+		-	X = フォントの高さ×m_LinesExtectX 
+		-	Y = フォントの高さ×m_LinesExtectY 
 	@param colorrefText [in]
-		�e�L�X�g��`�悷��ꍇ�̕����F�ł��B
+		テキストを描画する場合の文字色です。
 	@param logicalunitFrameWidth [in]
-		�e�L�X�g�̍��E�̘g�̈�̑������A�_���P�ʂŎw�肵�Ă��������B
-		�����E�E�����ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
+		テキストの左右の枠領域の太さを、論理単位で指定してください。
+		左側・右側それぞれに、このサイズの幅を確保します。
 	@param logicalunitFrameHeight [in]
-		�e�L�X�g�̏㉺�̘g�̈�̑������A�_���P�ʂŎw�肵�Ă��������B
-		�㑤�E�������ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
-		logicalunitFrameHeight �������ȗ������ꍇ�́A logicalunitFrameWidth 
-		�Ɠ����ł���Ƃ݂Ȃ���܂��B
-		logicalunitFrameHeight �E logicalunitFrameWidth �̗�����
-		�ȗ������ꍇ�́A �O �Ƃ݂Ȃ��܂�
+		テキストの上下の枠領域の太さを、論理単位で指定してください。
+		上側・下側それぞれに、このサイズの幅を確保します。
+		logicalunitFrameHeight だけを省略した場合は、 logicalunitFrameWidth 
+		と同じであるとみなされます。
+		logicalunitFrameHeight ・ logicalunitFrameWidth の両方を
+		省略した場合は、 ０ とみなします
 	@param aCdPenProp [in]
-		�g����`�悷�邽�߂̃y���̑���
+		枠線を描画するためのペンの属性
 	@param aCdBrushProp [in]
-		�h��Ԃ��Ɏg�p����u���V�̑������w�肵�Ă��������B
-		�ȗ�������ANULLBRUSH�Ƃ݂Ȃ��܂��B
+		塗りつぶしに使用するブラシの属性を指定してください。
+		省略したら、NULLBRUSHとみなします。
 	@param eHalfCharInTextV [in]
-		�@�c�����\���̃e�L�X�g�{�b�N�X���ŁA
-		���p������`�悷����@���w�肵�܂��B
+		　縦書き表示のテキストボックス内で、
+		半角文字を描画する方法を指定します。
 	 */
 	CDcdTextboxV3( 
 		const tstring&			strText  ,
@@ -519,42 +519,42 @@ private:
 	// ********************************
 	///@{
 	/**
-	 	�`���v�����܂��B
-	 	���̊֐��́A pIfDcdTarget �ɁA�`����s���܂��B
+	 	描画を要求します。
+	 	この関数は、 pIfDcdTarget に、描画を行います。
 	
-		�y�I�[�o���C�h�z
-		  �n���ꂽ�̈�ɁA m_strText ��`�悵�܂��B
+		【オーバライド】
+		  渡された領域に、 m_strText を描画します。
 	 @param pIfDcdTarget  [in]
-	 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	 @return
-	 	�`����s�����ꍇ�͐^�E���̗̈�ւ̕`�悪�ł��Ȃ������ꍇ�͋U�ł��B
+	 	描画を行った場合は真・この領域への描画ができなかった場合は偽です。
 	*/
 	virtual bool DcDraw( IfDcdTarget* pIfDcdTarget ) ;
 	
 	/**
-	 	���̃I�u�W�F�N�g���`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	 	���̑傫���𒲂ׂ邱�Ƃ��ł��܂��B
-	 	�֐��Ăяo������������ IfDcDraw �I�u�W�F�N�g��`�悷��ꍇ�ɂ́A
-	 	�֐��Ăяo�����́A���̊֐��ŃA�C�e���̑傫���𒲂ׂāA
-	 	�K�؂ȃ��C�A�E�g���l���Ă���ADcDraw() �����s���邱�Ƃ��ł��܂��B
+	 	このオブジェクトが描画するアイテムの大きさが決まっている場合は、
+	 	その大きさを調べることができます。
+	 	関数呼び出し元が複数の IfDcDraw オブジェクトを描画する場合には、
+	 	関数呼び出し元は、この関数でアイテムの大きさを調べて、
+	 	適切なレイアウトを考えてから、DcDraw() を実行することができます。
 	
-		�y�I�[�o���C�h�z
-		m_LinesExtentX m_LinesExtentY �����ƂɌv�Z�����e�L�X�g�̈�̃T�C�Y��
-		m_logicalunitFrameWidth ,m_logicalunitFrameHeight �������āA
-		�̈�̃T�C�Y���v�Z���܂��B
+		【オーバライド】
+		m_LinesExtentX m_LinesExtentY をもとに計算したテキスト領域のサイズに
+		m_logicalunitFrameWidth ,m_logicalunitFrameHeight を加えて、
+		領域のサイズを計算します。
 
  	
 	@param pIfDcdTarget [in]
-	 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	 @param pCdDcdSizeXy [out]
-	 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	 	���̊֐��͂��̃A�h���X�ɁA���̃A�C�e���̃T�C�Y��Ԃ��܂��B
-	 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��Ȃ��ꍇ�́A
-	 	���̒l�͕s��ł��B
+	 	このオブジェクトの描画するアイテムの大きさが決まっている場合は、
+	 	この関数はこのアドレスに、そのアイテムのサイズを返します。
+	 	このオブジェクトの描画するアイテムの大きさが決まっていない場合は、
+	 	この値は不定です。
 	 @return
-	 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��āA
-	 	���̑傫���� *pCDcdSizeXy�ɏ������񂾏ꍇ�͐^�ł��B
-	 	�����łȂ��ꍇ�́A�U�ł��B
+	 	このオブジェクトの描画するアイテムの大きさが決まっていて、
+	 	その大きさを *pCDcdSizeXyに書き込んだ場合は真です。
+	 	そうでない場合は、偽です。
 	*/
 	virtual bool getItemSize( IfDcdTarget* pIfDcdTarget , 
 							CdDcdSizeXy* pCdDcdSizeXy ) ;
@@ -564,7 +564,7 @@ private:
 // ********************************
  public:
 	// ********************************
-	///@name CDcdTextboxV3-����
+	///@name CDcdTextboxV3-属性
 	// ********************************
 	///@{
 	virtual CdBrushProp	getCdBrushProp()

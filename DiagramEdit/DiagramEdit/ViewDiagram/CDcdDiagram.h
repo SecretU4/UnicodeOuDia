@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -87,37 +87,37 @@ namespace ViewDiagram{
 // ****************************************************************
 /**
 	@brief
-	�y�T�v�z
-	�w�_�C���O�����G���e�B�e�B�N���X�Q�x�̑��������ƂɁA IfDcdTarget 
-	�I�u�W�F�N�g�Ɂw�_�C���O�����x��`�悵�܂��B
+	【概要】
+	『ダイヤグラムエンティティクラス群』の属性をもとに、 IfDcdTarget 
+	オブジェクトに『ダイヤグラム』を描画します。
 	
-	���̃N���X�́A�_�C���O�����̃O���t����������`�悵�܂��B�g�O�̎��\���E
-	�w���\���͕`�悵�܂���B
+	このクラスは、ダイヤグラムのグラフ部分だけを描画します。枠外の時表示・
+	駅名表示は描画しません。
 	
-	���̃N���X�̃I�u�W�F�N�g�́A�w�_�C���O�����_�C���x CentDedDgrDia 
-	�I�u�W�F�N�g�Ɗ֘A�������܂��B
+	このクラスのオブジェクトは、『ダイヤグラムダイヤ』 CentDedDgrDia 
+	オブジェクトと関連をもちます。
 	
 	<H4>
-	�y�g�����z
+	【使い方】
 	</H4>
-	  �ʏ�A���̃N���X�̃I�u�W�F�N�g�́A�_�C���O������\������
-	�E�C���h�E����܂��邱�ƂɂȂ�܂��B
+	  通常、このクラスのオブジェクトは、ダイヤグラムを表示する
+	ウインドウが包含することになります。
 
-	�P�D  ���̃N���X�̃I�u�W�F�N�g�𐶐�����O�ɁA
-	 CentDedDgrDia �I�u�W�F�N�g�𐶐����A CentDedDgrDia::readCentDedDia() ��
-	CentDedDia �̓��e��ǂݍ��܂��Ă����ĉ������B
+	１．  このクラスのオブジェクトを生成する前に、
+	 CentDedDgrDia オブジェクトを生成し、 CentDedDgrDia::readCentDedDia() で
+	CentDedDia の内容を読み込ませておいて下さい。
 	
-	�Q�D  ���̃N���X�̃I�u�W�F�N�g�𐶐����Ă��������B�R���X�g���N�^�ł́A
-	�P�D�Ő������� CentDedDgrDia �I�u�W�F�N�g���w�肵�܂��B����ɂ��A
-	���������I�u�W�F�N�g�́A CentDedDgrDia �I�u�W�F�N�g�Ƃ̊֘A���m�����܂�
-	�i setCentDedDgrDia() �ŁA���Ƃ���֘A���m�����邱�Ƃ��ł��܂��B
+	２．  このクラスのオブジェクトを生成してください。コンストラクタでは、
+	１．で生成した CentDedDgrDia オブジェクトを指定します。これにより、
+	生成したオブジェクトは、 CentDedDgrDia オブジェクトとの関連を確立します
+	（ setCentDedDgrDia() で、あとから関連を確立することもできます。
 
-	�R�D  �\���Ɋւ���e�푮�����w�肵�ĉ������B
-	�R���X�g���N�^�� CdDedDispProp �I�u�W�F�N�g�������ɓn�����A
-	readCdDedDispProp() ���g���ƁA�\���Ɋւ��鑮������x�ɐݒ肷�邱�Ƃ�
-	�ł��܂��B
+	３．  表示に関する各種属性を指定して下さい。
+	コンストラクタで CdDedDispProp オブジェクトを引数に渡すか、
+	readCdDedDispProp() を使うと、表示に関する属性を一度に設定することが
+	できます。
 	
-	�S�D  �\���Ɋւ��鑮���̂����ACdDedDispProp �Ɋi�[����Ȃ�����	���w�肵�ĉ������B
+	４．  表示に関する属性のうち、CdDedDispProp に格納されない属性	を指定して下さい。
 
 
 		- CDcdDiagram::m_CconvContentPosToDcdTarget::m_CconvContentPosToTargetXy
@@ -130,53 +130,53 @@ namespace ViewDiagram{
 		- CDcdDiagram::m_bDisplayRessyasenNobori 
 		- CDcdDiagram::m_eStopMarkDraw
 	
-	�T�D  IfDcDraw::DcDraw() ���\�b�h�ŁA�_�C���O������`�悷�邱�Ƃ�
-	�ł��܂��B
+	５．  IfDcDraw::DcDraw() メソッドで、ダイヤグラムを描画することが
+	できます。
 	
  */
 class CDcdDiagram : public IfDcDraw 
 {
 public:
 	// ********************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ********************************
 	// ****************************************************************
 	//	VLINE
 	// ****************************************************************
 	/**
 	 @brief
-		�c�r�̊Ԋu�̐ݒ���e��ێ�����\���̂ł��B
+		縦罫の間隔の設定内容を保持する構造体です。
 	 */
 	struct VLINE
 	{
 		/**
-			�c�r�̊Ԋu�B���̐��́A�_���ƂȂ�܂��B
+			縦罫の間隔。この線は、点線となります。
 		
-			���̒l�́A�P�ʂ́A�w�_�C���O�����G���e�B�e�BX���W�x�A
-			���Ȃ킿�b�ł��B
-			�܂�A���̒l���U�O*�Q�Ȃ�Athis���`�悷��_�C����
-			�u�Q���ڃ_�C���v�ƂȂ�܂��B
-			���̒l�́A60���̖񐔂łȂ��Ă͂Ȃ�܂���B
+			この値は、単位は、『ダイヤグラムエンティティX座標』、
+			すなわち秒です。
+			つまり、この値が６０*２なら、thisが描画するダイヤは
+			「２分目ダイヤ」となります。
+			この値は、60分の約数でなくてはなりません。
 		 */
 		int m_iVlinePitch ;
 		
 		/**
-			�c�r�����A�����̊Ԋu�B
+			縦罫うち、実線の間隔。
 		
-			���̒l�́A�P�ʂ́A�w�_�C���O�����G���e�B�e�BX���W�x�A
-			���Ȃ킿�b�ł��B
-			���̒l�́A60���̖񐔂łȂ��Ă͂Ȃ�܂���B�܂��A
-			m_iVlinePitch �̔{���łȂ��Ă͂Ȃ�܂���B
+			この値は、単位は、『ダイヤグラムエンティティX座標』、
+			すなわち秒です。
+			この値は、60分の約数でなくてはなりません。また、
+			m_iVlinePitch の倍数でなくてはなりません。
 		 */
 		int m_iVlineMiddlePitch ;
 		
 		/**
-			�c�r�̂����A�����̊Ԋu�B
+			縦罫のうち、太線の間隔。
 		
-			���̒l�́A�P�ʂ́A�w�_�C���O�����G���e�B�e�BX���W�x�A
-			���Ȃ킿�b�ł��B
-			���̒l�́A60���̖񐔂łȂ��Ă͂Ȃ�܂���B�܂��A
-			m_iVlinePitch �̔{���łȂ��Ă͂Ȃ�܂���B
+			この値は、単位は、『ダイヤグラムエンティティX座標』、
+			すなわち秒です。
+			この値は、60分の約数でなくてはなりません。また、
+			m_iVlinePitch の倍数でなくてはなりません。
 		 */
 		int m_iVlineBoldPitch ;
 		
@@ -186,34 +186,34 @@ public:
 
 
 	/**
-		�_�C���O�����r���[�ɒ�ԋL����\�����邩�ۂ���
-		�\���񋓂ł��B
+		ダイヤグラムビューに停車記号を表示するか否かを
+		表す列挙です。
 	*/
 	enum EStopMarkDraw
 	{
 		/**
-			��ԉw����=OFF
+			停車駅明示=OFF
 			
-			��ԉw�������s���܂���B
+			停車駅明示を行いません。
 		*/
 		EStopMarkDraw_Nothing ,
 		/**
-			��ԉw����=ON
+			停車駅明示=ON
 
-			�Z���Ԓ�Ԃ̉w�ɁA��ԉw�������L��(��)��`�悵�܂��B
+			短時間停車の駅に、停車駅を示す記号(○)を描画します。
 		*/
 		EStopMarkDraw_DrawOnBriefStop ,
 	};
 	
 public:
 	// ********************************
-	///@name CDcdDiagram-�萔
+	///@name CDcdDiagram-定数
 	// ********************************
 	///@{
 	/** 
 	@return
-		����� �w�_�C���O�������W�x��1�ɑΉ�����A�wDcDraw���W(�_�����W)�x�̐� 
-		��Ԃ��܂��B
+		既定の 『ダイヤグラム座標』の1に対応する、『DcDraw座標(論理座標)』の数 
+		を返します。
 	*/
 	static double DEFAULT_DCD_PER_DGR_X(){	return 0.05 ;}; 
 	/** @see DEFAULT_DCD_PER_DGR_X */
@@ -221,31 +221,31 @@ public:
 	///@}
 private:
 	// ********************************
-	///@name �萔
+	///@name 定数
 	// ********************************
 	///@{
 	/**
-		�c�r�̊Ԋu�̐ݒ�̑I�����B
-		this �́A���̕ϐ��Ɋi�[����Ă���ݒ���e����P��I�����ė��p���܂��B
+		縦罫の間隔の設定の選択肢。
+		this は、この変数に格納されている設定内容から１つを選択して利用します。
 	 */
 	static const VLINE	m_arVline[8] ;
 	///@}
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-		�w�_�C���O�����_�C���x�I�u�W�F�N�g�Ƃ̊֘A�ł��B
+		『ダイヤグラムダイヤ』オブジェクトとの関連です。
 	
-		this �́A���̃I�u�W�F�N�g����_�C���O�����̏����擾���A
-		�`����s���܂��B
+		this は、このオブジェクトからダイヤグラムの情報を取得し、
+		描画を行います。
 	
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́A this �̔j������������܂�
-		�������Ȃ��Ă͂Ȃ�܂���B
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、 this の破棄が完了するまで
+		生存しなくてはなりません。
 	
-		�R���X�g���N�^�Ō��܂�܂��B
+		コンストラクタで決まります。
 	 */
 	CentDedDgrDia*	m_pCentDedDgrDia ;
 	
@@ -253,128 +253,128 @@ private:
 
 private:
 	// ********************************
-	///@name ����-CdDedDispProp ����ǂݍ��݉\
+	///@name 属性-CdDedDispProp から読み込み可能
 	// ********************************
 	///@{
 	/**
-		 �_�C����ʗ�ԃt�H���g�B
-		�K��l�́A	CdFontProp( 9 ,"�l�r �S�V�b�N"  ) �B
+		 ダイヤ画面列車フォント。
+		規定値は、	CdFontProp( 9 ,"ＭＳ ゴシック"  ) 。
 	
-		���̒l�́A 
-		CDedRosenFileData::m_CdDedDispProp �����Ƃ�
-		readCdDedDispProp() �Ō��܂�܂��B
+		この値は、 
+		CDedRosenFileData::m_CdDedDispProp をもとに
+		readCdDedDispProp() で決まります。
 	 */
 	CdFontProp	m_fontpropDiaRessyaFont ;
 
 	/**
-		 �_�C����ʔw�i�F�B
-		�K��l�́A���B
+		 ダイヤ画面背景色。
+		規定値は、白。
 	
 	
-		���̒l�́A 
-		CDedRosenFileData::m_CdDedDispProp �����Ƃ�
-		readCdDedDispProp() �Ō��܂�܂��B
+		この値は、 
+		CDedRosenFileData::m_CdDedDispProp をもとに
+		readCdDedDispProp() で決まります。
 	 */
 	CdColorProp	m_colorDiaHaikeiColor ;
 
 	/**
-		 �_�C����ʏc�����F�B
-		�K��l�́A���B
+		 ダイヤ画面縦横軸色。
+		規定値は、黒。
 	
 	
-		���̒l�́A 
-		CDedRosenFileData::m_CdDedDispProp �����Ƃ�
-		readCdDedDispProp() �Ō��܂�܂��B
+		この値は、 
+		CDedRosenFileData::m_CdDedDispProp をもとに
+		readCdDedDispProp() で決まります。
 	 */
 	CdColorProp	m_colorDiaJikuColor ;
 
 	/**
-		 �_�C����ʗ�Ԕԍ��\��
-		- true ;	//	�_�C����ʂɗ�Ԕԍ���\������
-		- false ;	//	�_�C����ʂɗ�Ԕԍ���\�����Ȃ�
+		 ダイヤ画面列車番号表示
+		- true ;	//	ダイヤ画面に列車番号を表示する
+		- false ;	//	ダイヤ画面に列車番号を表示しない
 	
-		�K��l�́Atrue�B
+		規定値は、true。
 	
 	
-		���̒l�́A 
-		CDedRosenFileData::m_CdDedDispProp �����Ƃ�
-		readCdDedDispProp() �Ō��܂�܂��B
+		この値は、 
+		CDedRosenFileData::m_CdDedDispProp をもとに
+		readCdDedDispProp() で決まります。
 	 */
 	bool	m_bDisplayRessyabangou ;
 	/**
-		 �_�C����ʗ�Ԗ��\��
-		- true ;	//	�_�C����ʂɗ�Ԗ���\������
-		- false ;	//	�_�C����ʂɗ�Ԗ���\�����Ȃ�
+		 ダイヤ画面列車名表示
+		- true ;	//	ダイヤ画面に列車名を表示する
+		- false ;	//	ダイヤ画面に列車名を表示しない
 	
-		�K��l�́Atrue�B
+		規定値は、true。
 	
 	
-		���̒l�́A 
-		CDedRosenFileData::m_CdDedDispProp �����Ƃ�
-		readCdDedDispProp() �Ō��܂�܂��B
+		この値は、 
+		CDedRosenFileData::m_CdDedDispProp をもとに
+		readCdDedDispProp() で決まります。
 	 */
 	bool	m_bDisplayRessyamei ;
 	
 	
 	///@}
 	// ********************************
-	///@name ����-CdDedDispProp �ɂ͂Ȃ�����
+	///@name 属性-CdDedDispProp にはないもの
 	// ********************************
 	///@{
 	/**
-		�w�_�C���O�����G���e�B�e�B���W�x �� ContentPos �A
-		IfDcdTarget �� TargetPos �Ƃ���
-		�o���̍��W�ϊ����s���܂��B
+		『ダイヤグラムエンティティ座標』 を ContentPos 、
+		IfDcdTarget を TargetPos とした
+		双方の座標変換を行います。
 	*/
 	CconvContentPosToDcdTarget m_CconvContentPosToDcdTarget ;
 
 	/**
-		�c�r�̊Ԋu�̃��[�h�B
-		���̒l�́A m_arVline[] �̃C���f�N�X�ƂȂ�܂��B
-		����l�� 1 (�Q���ڃ_�C��)�Ƃ��܂��B
+		縦罫の間隔のモード。
+		この値は、 m_arVline[] のインデクスとなります。
+		既定値は 1 (２分目ダイヤ)とします。
 	
-		���̒l�́A 
-		CDedRosenFileData::m_CdDedDispProp �ɂ͊܂܂�Ă��܂���B
+		この値は、 
+		CDedRosenFileData::m_CdDedDispProp には含まれていません。
 	 */
 	int	m_idxVlineMode ;
 
 	/**
-		�����Ԃ�
-		��Ԑ���\�����邩�ۂ����w�肵�܂��B
-		- true ;	//	��Ԑ���\������
-		- false ;	//	��Ԑ���\�����Ȃ�
+		下り列車の
+		列車線を表示するか否かを指定します。
+		- true ;	//	列車線を表示する
+		- false ;	//	列車線を表示しない
 		
-		����l�� true 
+		既定値は true 
 	
-		���̒l�́A 
-		CDedRosenFileData::m_CdDedDispProp �ɂ͊܂܂�Ă��܂���B
+		この値は、 
+		CDedRosenFileData::m_CdDedDispProp には含まれていません。
 	 */
 	bool m_bDisplayRessyasenKudari ;
 
 	/**
-		����Ԃ�
-		��Ԑ���\�����邩�ۂ����w�肵�܂��B
+		上り列車の
+		列車線を表示するか否かを指定します。
 	 @see m_bDisplayRessyasenKudari
 	 */
 	bool m_bDisplayRessyasenNobori ;
 
 	/**
-		�_�C���O�����r���[�ɒ�ԋL����\�����邩�ۂ���
-		�\���񋓂ł��B
+		ダイヤグラムビューに停車記号を表示するか否かを
+		表す列挙です。
 	*/
 	EStopMarkDraw	m_eStopMarkDraw ;
 	///@}
 protected:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 	/**
-		�����̐��K�����s���܂��B
-		�ΏۂƂȂ�̂́A�ȉ��̑����ł��B
+		属性の正規化を行います。
+		対象となるのは、以下の属性です。
 
-		- m_dwDcdPerDgrX	0.0001�`10
-		- m_dwDcdPerDgrY	0.0001�`10
+		- m_dwDcdPerDgrX	0.0001〜10
+		- m_dwDcdPerDgrY	0.0001〜10
 	*/
 	void adjustProp() ;
 
@@ -382,20 +382,20 @@ protected:
 	///@}	
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	
 	/**
 	 @param pCentDedDgrDia [in]
-		�w�_�C���O�����_�C���x�I�u�W�F�N�g�ł��B
-		\n this �́A���̃I�u�W�F�N�g����_�C���O�����̏����擾���A
-		�`����s���܂��B
-		\n ���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́A this �̔j������������܂�
-		�������Ȃ��Ă͂Ȃ�܂���B
+		『ダイヤグラムダイヤ』オブジェクトです。
+		\n this は、このオブジェクトからダイヤグラムの情報を取得し、
+		描画を行います。
+		\n このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、 this の破棄が完了するまで
+		生存しなくてはなりません。
 	 @param aCdDedDispProp [in]
-		���̃R���X�g���N�^�́A CdDedDispProp �I�u�W�F�N�g�̑�������A
-		�_�C���O�����̊e���̐F��t�H���g�̑��������肵�܂��B
+		このコンストラクタは、 CdDedDispProp オブジェクトの属性から、
+		ダイヤグラムの各部の色やフォントの属性を決定します。
 	 @see setCdDedDispProp() 
 	 */
 	CDcdDiagram( 
@@ -410,38 +410,38 @@ public:
 	// ********************************
 	///@{
 	/**
-	 	�`���v�����܂��B
-	 	���̊֐��́A pIfDcdTarget �ɁA�`����s���܂��B
+	 	描画を要求します。
+	 	この関数は、 pIfDcdTarget に、描画を行います。
 	 @param pIfDcdTarget  [in]
-	 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	 @return
-	 	�`����s�����ꍇ�͐^�E���̗̈�ւ̕`�悪�ł��Ȃ������ꍇ�͋U�ł��B
+	 	描画を行った場合は真・この領域への描画ができなかった場合は偽です。
 	
-		�y�I�[�o���C�h�z
-		�_�C���O�����̕`����s���܂��B
+		【オーバライド】
+		ダイヤグラムの描画を行います。
 	 */
 	virtual bool DcDraw( IfDcdTarget* pIfDcdTarget ) ;
 	
 	/**
-	 	���̃I�u�W�F�N�g���`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	 	���̑傫���𒲂ׂ邱�Ƃ��ł��܂��B
-	 	�֐��Ăяo������������ IfDcDraw �I�u�W�F�N�g��`�悷��ꍇ�ɂ́A
-	 	�֐��Ăяo�����́A���̊֐��ŃA�C�e���̑傫���𒲂ׂāA
-	 	�K�؂ȃ��C�A�E�g���l���Ă���ADcDraw() �����s���邱�Ƃ��ł��܂��B
+	 	このオブジェクトが描画するアイテムの大きさが決まっている場合は、
+	 	その大きさを調べることができます。
+	 	関数呼び出し元が複数の IfDcDraw オブジェクトを描画する場合には、
+	 	関数呼び出し元は、この関数でアイテムの大きさを調べて、
+	 	適切なレイアウトを考えてから、DcDraw() を実行することができます。
 	 @param pIfDcdTarget [in]
-	 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	 @param pCdDcdSizeXy [out]
-	 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	 	���̊֐��͂��̃A�h���X�ɁA���̃A�C�e���̃T�C�Y��Ԃ��܂��B
-	 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��Ȃ��ꍇ�́A
-	 	���̒l�͕s��ł��B
+	 	このオブジェクトの描画するアイテムの大きさが決まっている場合は、
+	 	この関数はこのアドレスに、そのアイテムのサイズを返します。
+	 	このオブジェクトの描画するアイテムの大きさが決まっていない場合は、
+	 	この値は不定です。
 	 @return
-	 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��āA
-	 	���̑傫����pCdDcdSizeXy�ɏ������񂾏ꍇ�͐^�ł��B
-	 	�����łȂ��ꍇ�́A�U�ł��B
+	 	このオブジェクトの描画するアイテムの大きさが決まっていて、
+	 	その大きさをpCdDcdSizeXyに書き込んだ場合は真です。
+	 	そうでない場合は、偽です。
 	
-		�y�I�[�o���C�h�z
-		�T�|�[�g����܂���B�U��Ԃ��܂��B
+		【オーバライド】
+		サポートされません。偽を返します。
 	 */
 	virtual bool getItemSize( IfDcdTarget* pIfDcdTarget , 
 							CdDcdSizeXy* pCdDcdSizeXy ) ;
@@ -449,7 +449,7 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CDcdDiagram-�֘A
+	///@name CDcdDiagram-関連
 	// ********************************
 	///@{
 	CentDedDgrDia*	getCentDedDgrDia() ;
@@ -458,7 +458,7 @@ public:
 
 public:
 	// ********************************
-	///@name CDcdDiagram-����-CdDedDispProp ����ǂݍ��݉\
+	///@name CDcdDiagram-属性-CdDedDispProp から読み込み可能
 	// ********************************
 	///@{
 	CdFontProp	getDiaRessyaFont()const ;
@@ -472,7 +472,7 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CDcdDiagram-����-CdDedDispProp �ɂ͂Ȃ�����
+	///@name CDcdDiagram-属性-CdDedDispProp にはないもの
 	// ********************************
 	///@{
 	bool	getDisplayRessyabangou()const ;
@@ -481,11 +481,11 @@ public:
 	CDcdDiagram& setDisplayRessyamei( bool value ) ;
 	/**
 	@return
-		�_�C���O�����G���e�B�e�B���W��DcDraw���W�ɕϊ�����
-		�I�u�W�F�N�g��Ԃ��܂��B
+		ダイヤグラムエンティティ座標をDcDraw座標に変換する
+		オブジェクトを返します。
 	@note
-		�ȉ��̃��\�b�h�́Am_CconvContentPosToDcdTarget �ɑ΂���
-		���b�p�[�֐��ł��B@n
+		以下のメソッドは、m_CconvContentPosToDcdTarget に対する
+		ラッパー関数です。@n
 		getPosDgr(),setPosDgr(),getDcdPerDgrX(),setDcdPerDgrX(),
 		getDcdPerDgrY(),setDcdPerDgrY(),getZone_Dgr(),setZone_Dgr(),
 		getKeepZoneDgrOnSize(),setKeepZoneDgrOnSize(),
@@ -499,8 +499,8 @@ public:
 
 	/**
 	@return
-		�_�C���O�����G���e�B�e�B���W��DcDraw���W�ɕϊ�����
-		�I�u�W�F�N�g��Ԃ��܂��B
+		ダイヤグラムエンティティ座標をDcDraw座標に変換する
+		オブジェクトを返します。
 	*/
 	const CconvContentPosToDcdTarget* getCconvContentPosToDcdTarget()const
 	{
@@ -509,56 +509,56 @@ public:
 
 	/**
 	@return
-		TargetPos�̍���ɕ`�悳���w�_�C���O�������W�x�B 
+		TargetPosの左上に描画される『ダイヤグラム座標』。 
 	*/
 	CdDcdPosXy	getPosDgr()const ;
 
 	/**
-	TargetPos�̍���ɕ`�悳���w�_�C���O�������W�x���w�肵�܂��B
+	TargetPosの左上に描画される『ダイヤグラム座標』を指定します。
 		
 	@param posPosDgr [in]
-		TargetPos�̍���ɕ`�悳���w�_�C���O�������W�x�B
+		TargetPosの左上に描画される『ダイヤグラム座標』。
 	*/
 	void setPosDgr( CdDcdPosXy posPosDgr );
 
 	/**
-		�w�_�C���O�������W�x��1�ɑΉ�����A
-		�wDcDraw���W(�_�����W)�x�̐����擾���܂��B
+		『ダイヤグラム座標』の1に対応する、
+		『DcDraw座標(論理座標)』の数を取得します。
 	@param pIfDcdTarger [in]
-		�`��Ώۂ��w�肵�Ă��������B
+		描画対象を指定してください。
 	@return 
-		�w�_�C���O�������W�x��1�ɑΉ�����A
-		�wDcDraw���W(�_�����W)�x�̐��B
+		『ダイヤグラム座標』の1に対応する、
+		『DcDraw座標(論理座標)』の数。
 	*/
 	double getDcdPerDgrX( IfDcdTarget* pIfDcdTarget ) ;
 	/**
-		�w�_�C���O�������W�x��1�ɑΉ�����A
-		�wDcDraw���W(�_�����W)�x�̐���ݒ肵�܂��B
+		『ダイヤグラム座標』の1に対応する、
+		『DcDraw座標(論理座標)』の数を設定します。
 	@param pIfDcdTarger [in]
-		�`��Ώۂ��w�肵�Ă��������B
+		描画対象を指定してください。
 	@param dDcdPerDgr [in] 
-		�w�_�C���O�������W�x��1�ɑΉ�����A
-		�wDcDraw���W(�_�����W)�x�̐��B
+		『ダイヤグラム座標』の1に対応する、
+		『DcDraw座標(論理座標)』の数。
 	*/
 	void setDcdPerDgrX(  IfDcdTarget* pIfDcdTarget , double dDcdPerDgr ) ;
 	/**
-		�w�_�C���O�������W�x��1�ɑΉ�����A
-		�wDcDraw���W(�_�����W)�x�̐����擾���܂��B
+		『ダイヤグラム座標』の1に対応する、
+		『DcDraw座標(論理座標)』の数を取得します。
 	@param pIfDcdTarger [in]
-		�`��Ώۂ��w�肵�Ă��������B
+		描画対象を指定してください。
 	@return 
-		�w�_�C���O�������W�x��1�ɑΉ�����A
-		�wDcDraw���W(�_�����W)�x�̐��B
+		『ダイヤグラム座標』の1に対応する、
+		『DcDraw座標(論理座標)』の数。
 	*/
 	double getDcdPerDgrY( IfDcdTarget* pIfDcdTarget ) ;
 	/**
-		�w�_�C���O�������W�x��1�ɑΉ�����A
-		�wDcDraw���W(�_�����W)�x�̐���ݒ肵�܂��B
+		『ダイヤグラム座標』の1に対応する、
+		『DcDraw座標(論理座標)』の数を設定します。
 	@param pIfDcdTarger [in]
-		�`��Ώۂ��w�肵�Ă��������B
+		描画対象を指定してください。
 	@param dDcdPerDgr [in] 
-		�w�_�C���O�������W�x��1�ɑΉ�����A
-		�wDcDraw���W(�_�����W)�x�̐��B
+		『ダイヤグラム座標』の1に対応する、
+		『DcDraw座標(論理座標)』の数。
 	*/
 	void setDcdPerDgrY( IfDcdTarget* pIfDcdTarget , double dDcdPerDgr ) ;
 
@@ -569,27 +569,27 @@ public:
 
 	/**
 		m_bDisplayRessyasenKudari , m_bDisplayRessyasenNobori 
-		�̒l���擾���܂��B
+		の値を取得します。
 	 @param eRessyahoukou [in]
-		��ԕ������w�肵�Ă��������B
-		- Ressyahoukou_Kudari ;	//	������ (m_bDisplayRessyasenKudari)
-		- Ressyahoukou_Nobori ; //	����� (m_bDisplayRessyasenNobori)
+		列車方向を指定してください。
+		- Ressyahoukou_Kudari ;	//	下り列車 (m_bDisplayRessyasenKudari)
+		- Ressyahoukou_Nobori ; //	上り列車 (m_bDisplayRessyasenNobori)
 	 @return 
-		- true ;	//	��Ԑ���\������
-		- false ;	//	��Ԑ���\�����Ȃ�
+		- true ;	//	列車線を表示する
+		- false ;	//	列車線を表示しない
 	 */
 	bool getDisplayRessyasen(  ERessyahoukou eRessyahoukou )const ;
 	
 	/**
 		m_bDisplayRessyasenKudari , m_bDisplayRessyasenNobori 
-		�̒l��ݒ肵�܂��B
+		の値を設定します。
 	 @param eRessyahoukou [in]
-		��ԕ������w�肵�Ă��������B
-		- Ressyahoukou_Kudari ;	//	������ (m_bDisplayRessyasenKudari)
-		- Ressyahoukou_Nobori ; //	����� (m_bDisplayRessyasenNobori)
+		列車方向を指定してください。
+		- Ressyahoukou_Kudari ;	//	下り列車 (m_bDisplayRessyasenKudari)
+		- Ressyahoukou_Nobori ; //	上り列車 (m_bDisplayRessyasenNobori)
 	 @param value [in]
-		- true ;	//	��Ԑ���\������
-		- false ;	//	��Ԑ���\�����Ȃ�
+		- true ;	//	列車線を表示する
+		- false ;	//	列車線を表示しない
 	 */
 	CDcdDiagram& setDisplayRessyasen( ERessyahoukou eRessyahoukou , 
 		bool value ) ;
@@ -601,145 +601,145 @@ public:
 
 	/**
 	 @return
-		�c�r�̊Ԋu�B
+		縦罫の間隔。
 	
-		���̒l�́A�P�ʂ́A�w�_�C���O�����G���e�B�e�BX���W�x�A
-		���Ȃ킿�b�ł��B
-		�܂�A���̒l���U�O*�Q�Ȃ�Athis���`�悷��_�C����
-		�u�Q���ڃ_�C���v�ƂȂ�܂��B
-		m_idxVlineMode ���瓱�o����܂��B
+		この値は、単位は、『ダイヤグラムエンティティX座標』、
+		すなわち秒です。
+		つまり、この値が６０*２なら、thisが描画するダイヤは
+		「２分目ダイヤ」となります。
+		m_idxVlineMode から導出されます。
 	 */
 	int getVlinePitch()const ;
 	
 	/**
 	 @return
-		�c�r�����A�����̊Ԋu�B
+		縦罫うち、実線の間隔。
 	
-		���̒l�́A�P�ʂ́A�w�_�C���O�����G���e�B�e�BX���W�x�A
-		���Ȃ킿�b�ł��B
-		���̒l�́A60���̖񐔂łȂ��Ă͂Ȃ�܂���B�܂��A
-		m_iVlinePitch �̔{���łȂ��Ă͂Ȃ�܂���B
+		この値は、単位は、『ダイヤグラムエンティティX座標』、
+		すなわち秒です。
+		この値は、60分の約数でなくてはなりません。また、
+		m_iVlinePitch の倍数でなくてはなりません。
 	 */
 	int getVlineMiddlePitch()const ; 
 
 	/**
 	 @return
-		�c�r�̂����A�����̊Ԋu�B
+		縦罫のうち、太線の間隔。
 	
-		���̒l�́A�P�ʂ́A�w�_�C���O�����G���e�B�e�BX���W�x�A
-		���Ȃ킿�b�ł��B
-		���̒l�́A60���̖񐔂łȂ��Ă͂Ȃ�܂���B�܂��A
-		m_iVlinePitch �̔{���łȂ��Ă͂Ȃ�܂���B
-		m_idxVlineMode ���瓱�o����܂��B
+		この値は、単位は、『ダイヤグラムエンティティX座標』、
+		すなわち秒です。
+		この値は、60分の約数でなくてはなりません。また、
+		m_iVlinePitch の倍数でなくてはなりません。
+		m_idxVlineMode から導出されます。
 	 */
 	int getVlineBoldPitch()const ;
 	
 	
 	/**
-		���̃N���X���T�|�[�g����A
-		�c�r�̊Ԋu�̐ݒ�̑I�������擾���邱�Ƃ��ł��܂��B
+		このクラスがサポートする、
+		縦罫の間隔の設定の選択肢を取得することができます。
 	 @param pContVLINE [out]
-		���̊֐��͂��̃R���e�i�ɁA�c�r�̊Ԋu�̐ݒ���������݂܂��B
-		�R���e�i������܂ŕێ����Ă����v�f�͔j�����܂��B
-		���̃R���e�i�̃C���f�N�X�́Am_idxVlineMode �ɑΉ����܂��B
-		\n�s�v�ł���� NULL �ł����܂��܂���B
+		この関数はこのコンテナに、縦罫の間隔の設定を書き込みます。
+		コンテナがそれまで保持していた要素は破棄します。
+		このコンテナのインデクスは、m_idxVlineMode に対応します。
+		\n不要であれば NULL でもかまいません。
 	 @return
-		�I�����̐���Ԃ��܂��B	
+		選択肢の数を返します。	
 	 */
 	int getVlineChoices( Mui<VLINE>* pContVLINE )const ;
 
 	///@}
 public:
 	// ********************************
-	///@name CDcdDiagram-����
+	///@name CDcdDiagram-操作
 	// ********************************
 	///@{
 	
 	/**
-		CdDedDispProp �I�u�W�F�N�g�̑�������A 
-		�_�C���O�����̊e���̐F��t�H���g�̑��������肵�܂��B
-		���̃��\�b�h���ݒ肷�郁�\�b�h�́A�ȉ��̂��̂ł��B
+		CdDedDispProp オブジェクトの属性から、 
+		ダイヤグラムの各部の色やフォントの属性を決定します。
+		このメソッドが設定するメソッドは、以下のものです。
 		- CdFontProp	m_fontpropDiaRessyaFont ;
 		- COLORREF	m_colorDiaHaikeiColor ;
 		- COLORREF	m_colorDiaRessyaColor ;
 		- COLORREF	m_colorDiaJikuColor ;
 		
 	 @param value [in]
-		CdDedDispProp �I�u�W�F�N�g���w�肵�ĉ������B
+		CdDedDispProp オブジェクトを指定して下さい。
 	*/	
 	CDcdDiagram& readCdDedDispProp( const CdDedDispProp& value ) ;
 	
 	/**
-		���̃N���X���`����s���̈�̍��W���A
-	 	�w�_�C���O�����G���e�B�e�B���W�n�x�Ŏ擾���܂��B
-		���̒l�́Am_posDgr�Em_dwDcdPerDgrX�Em_dwDcdPerDgrY ����
-		���o����܂��B
+		このクラスが描画を行う領域の座標を、
+	 	『ダイヤグラムエンティティ座標系』で取得します。
+		この値は、m_posDgr・m_dwDcdPerDgrX・m_dwDcdPerDgrY から
+		導出されます。
 	@param pIfDcdTarger [in]
-		�`��Ώۂ��w�肵�Ă��������B
+		描画対象を指定してください。
 	@return 
-		���̃N���X���`����s���̈�̍��W��
-		�w�_�C���O�����G���e�B�e�B���W�n�x�ŕԂ��܂��B
+		このクラスが描画を行う領域の座標を
+		『ダイヤグラムエンティティ座標系』で返します。
 	@attention
-		pIfDcdTarget �ւ̃_�C���O�����\�����s�\�ȏꍇ�A
-		�߂�l��getX().getSize() , getY().getSize() �̂����ꂩ��
-		0�ɂȂ�܂��B
+		pIfDcdTarget へのダイヤグラム表示が不可能な場合、
+		戻り値のgetX().getSize() , getY().getSize() のいずれかが
+		0になります。
 	*/
 	CdDcdZoneXy	getZone_Dgr( IfDcdTarget* pIfDcdTarger ) ;
 
 	/**
-		���̃N���X���`����s���̈�̍��W���A
-	 	�w�_�C���O�����G���e�B�e�B���W�n�x�Őݒ肵�܂��B
-		���̒l�́Am_posDgr�Em_dwDcdPerDgrX�Em_dwDcdPerDgrY ��
-		���Z�̂����Őݒ肳��܂��B
+		このクラスが描画を行う領域の座標を、
+	 	『ダイヤグラムエンティティ座標系』で設定します。
+		この値は、m_posDgr・m_dwDcdPerDgrX・m_dwDcdPerDgrY に
+		換算のうえで設定されます。
 	@param pIfDcdTarger [in]
-		�`��Ώۂ��w�肵�Ă��������B
+		描画対象を指定してください。
 	@param
-		���̃N���X���`����s���̈�̍��W��
-		�w�_�C���O�����G���e�B�e�B���W�n�x�Ŏw�肵�Ă��������B
+		このクラスが描画を行う領域の座標を
+		『ダイヤグラムエンティティ座標系』で指定してください。
 	*/
 	void setZone_Dgr( IfDcdTarget* pIfDcdTarger , const CdDcdZoneXy& value ) ;
 	
 	/**
-		�E�C���h�E�T�C�Y�ύX���̓�����擾���܂��B
+		ウインドウサイズ変更時の動作を取得します。
 	@return 
-		- false:�\���͈͂�ύX(OuDia Ver.1.00.04 ����)
-		- true: �\���͈͂�ύX���Ȃ�(OuDia Ver.1.00.04 �݊�)
+		- false:表示範囲を変更(OuDia Ver.1.00.04 より後)
+		- true: 表示範囲を変更しない(OuDia Ver.1.00.04 互換)
 	*/
 	bool getKeepZoneDgrOnSize()const;
 
 	/**
-		�E�C���h�E�T�C�Y�ύX���̓����ݒ肵�܂��B
+		ウインドウサイズ変更時の動作を設定します。
 	@return 
-		- false:�\���͈͂�ύX(OuDia Ver.1.00.04 ����)
-		- true: �\���͈͂�ύX���Ȃ�(OuDia Ver.1.00.04 �݊�)
+		- false:表示範囲を変更(OuDia Ver.1.00.04 より後)
+		- true: 表示範囲を変更しない(OuDia Ver.1.00.04 互換)
 	*/
 	void setKeepZoneDgrOnSize( bool bRv );
 	
 	/**
-		�w��̍��W�ʒu��ʂ��Ă����Ԑ���T���܂��B
+		指定の座標位置を通っている列車線を探します。
 		
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ��w�肵�ĉ������B
+		描画対象を指定して下さい。
 	 @param aCdDcdPosXy [in]
-		��Ԑ���T�����W���w�肵�ĉ������B
+		列車線を探す座標を指定して下さい。
 	 @param iMerginPixels [in]
-		���̊֐��́A�w��̍��W�Ɨ�Ԑ��Ƃ̋�����
-		���̃s�N�Z�����ȉ��ł���΁A
-		���W�ʒu���Ԑ����ʂ��Ă���Ƃ݂Ȃ��܂��B
-		0 �Ȃ�A��Ԑ������W�ʒu�����S�ɒʂ��Ă���ꍇ�̂�
-		�Y����Ԑ��Ƃ݂Ȃ��܂��B
+		この関数は、指定の座標と列車線との距離が
+		このピクセル数以下であれば、
+		座標位置を列車線が通っているとみなします。
+		0 なら、列車線が座標位置を完全に通っている場合のみ
+		該当列車線とみなします。
 	 @param pERessyahoukou [out]
-		���̊֐��́A��Ԑ������������ꍇ�́A
-		��Ԑ��̕������������݂܂��B
+		この関数は、列車線が見つかった場合は、
+		列車線の方向を書き込みます。
 	 @param piRessyaIdx [out]
-		���̊֐��́A��Ԑ������������ꍇ�́A
-		���Index���������݂܂��B
+		この関数は、列車線が見つかった場合は、
+		列車Indexを書き込みます。
 	 @param piRessyasenIdx [out]
-		���̊֐��́A��Ԑ������������ꍇ�́A
-		��Ԑ�Index���������݂܂��B
+		この関数は、列車線が見つかった場合は、
+		列車線Indexを書き込みます。
 	 @return
-		-	1 ;	//	��Ԑ����݂���܂����B
-		-	0 ;	//	��Ԑ����݂���܂���B
+		-	1 ;	//	列車線がみつかりました。
+		-	0 ;	//	列車線がみつかりません。
 	 */
 	virtual int calcCentDedDgrRessyasenOfPoint( 
 		IfDcdTarget* pIfDcdTarget ,
@@ -750,27 +750,27 @@ public:
 		int *piRessyasenIdx ) ;
 
 	/**
-		�w��̍��W�ʒu�ɑΉ����� �wOrder ��Ԃ��܂��B
+		指定の座標位置に対応する 駅Order を返します。
 		
-		���̊֐��́A�w��̍��W�ʒu posY_Dcd ����A
-		�w��̗�ԕ��� eRessyahoukou �̔��Ε����ɂ���
-		�w�̉wOrder��Ԃ��܂��B
+		この関数は、指定の座標位置 posY_Dcd から、
+		指定の列車方向 eRessyahoukou の反対方向にある
+		駅の駅Orderを返します。
 		
-		(eRessyahoukou �� Ressyahoukou_Kudari �Ȃ� posY_Dcd �̏�A
-		eRessyahoukou �� Ressyahoukou_Nobori �Ȃ� posY_Dcd �̉���
-		�wOrder��Ԃ��܂�)
+		(eRessyahoukou が Ressyahoukou_Kudari なら posY_Dcd の上、
+		eRessyahoukou が Ressyahoukou_Nobori なら posY_Dcd の下の
+		駅Orderを返します)
 		
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ��w�肵�ĉ������B
+		描画対象を指定して下さい。
 	 @param eRessyahoukou [in]
-		��ԕ������w�肵�Ă��������B
+		列車方向を指定してください。
 	 @param posY_Dcd [in]
-		Y���W�̈ʒu���w�肵�Ă��������B
-		���W�n�́A IfDcdTarget ��̂��̂ł��B
+		Y座標の位置を指定してください。
+		座標系は、 IfDcdTarget 上のものです。
 	 @return
-		����������A�wOrder ��Ԃ��܂��B
-		�Ή����� �wOrder ���Ȃ��ꍇ�́A-1 �ł��B
-		posY_Dcd�� �`��Ώۂ͈̔͂ɂȂ��ꍇ�́A -1 �ł��B
+		成功したら、駅Order を返します。
+		対応する 駅Order がない場合は、-1 です。
+		posY_Dcdが 描画対象の範囲にない場合は、 -1 です。
 	 */
 	virtual int calcEkiOrderOfPoint( 
 		IfDcdTarget* pIfDcdTarget ,
@@ -781,182 +781,182 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CDcdDiagram-�_�C���O�������W�ƁAIfDcdTarget ��̍��W��ϊ�
+	///@name CDcdDiagram-ダイヤグラム座標と、IfDcdTarget 上の座標を変換
 	// ********************************
 	///@{
 	/**
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�� X ���W�̈ʒu���A
+		『ダイヤグラムエンティティ座標系』
+		の X 座標の位置を、
 		IfDcdTarget 
-		�̍��W�ɕϊ����܂��B
+		の座標に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual DcdPos XDgrToDcd( IfDcdTarget* pIfDcdTarget , DcdPos posSrc ) ;
 
 	/**
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�� Y ���W�̈ʒu���A
-		IfDcdTarget �̍��W
-		�ɕϊ����܂��B
+		『ダイヤグラムエンティティ座標系』
+		の Y 座標の位置を、
+		IfDcdTarget の座標
+		に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual DcdPos YDgrToDcd( IfDcdTarget* pIfDcdTarget , DcdPos posSrc ) ;
 
 	/**
 		IfDcdTarget 
-		�� X ���W�̈ʒu���A
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�̍��W�ɕϊ����܂��B
+		の X 座標の位置を、
+		『ダイヤグラムエンティティ座標系』
+		の座標に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual DcdPos XDgrFromDcd( IfDcdTarget* pIfDcdTarget , DcdPos posSrc ) ;
 
 	/**
-		IfDcdTarget �̍��W
-		�� Y ���W�̈ʒu���A
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�ɕϊ����܂��B
+		IfDcdTarget の座標
+		の Y 座標の位置を、
+		『ダイヤグラムエンティティ座標系』
+		に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual DcdPos YDgrFromDcd( IfDcdTarget* pIfDcdTarget , DcdPos posSrc ) ;
 
 	/**
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�� X ���W�̗̈���A
+		『ダイヤグラムエンティティ座標系』
+		の X 座標の領域を、
 		IfDcdTarget 
-		�̍��W�ɕϊ����܂��B
+		の座標に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	*/
 	virtual CdDcdZone XDgrToDcd( IfDcdTarget* pIfDcdTarget , 
 		const CdDcdZone& zoneSrc ) ;
 
 	/**
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�� Y ���W�̗̈��
-		IfDcdTarget �̍��W
-		�ɕϊ����܂��B
+		『ダイヤグラムエンティティ座標系』
+		の Y 座標の領域を
+		IfDcdTarget の座標
+		に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual CdDcdZone YDgrToDcd( IfDcdTarget* pIfDcdTarget , 
 		const CdDcdZone& zoneSrc ) ;
 
 	/**
 		IfDcdTarget 
-		�� X ���W�̗̈���A
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�̍��W�ɕϊ����܂��B
+		の X 座標の領域を、
+		『ダイヤグラムエンティティ座標系』
+		の座標に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual CdDcdZone XDgrFromDcd( IfDcdTarget* pIfDcdTarget , 
 		const CdDcdZone& zoneSrc ) ;
 
 	/**
-		IfDcdTarget �̍��W
-		�� Y ���W�̗̈���A
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�ɕϊ����܂��B
+		IfDcdTarget の座標
+		の Y 座標の領域を、
+		『ダイヤグラムエンティティ座標系』
+		に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual CdDcdZone YDgrFromDcd( IfDcdTarget* pIfDcdTarget , 
 		const CdDcdZone& zoneSrc ) ;
 
 	/**
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�̓_��
+		『ダイヤグラムエンティティ座標系』
+		の点を
 		IfDcdTarget 
-		�̍��W�ɕϊ����܂��B
+		の座標に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual CdDcdPosXy DgrToDcd( IfDcdTarget* pIfDcdTarget , 
 		const CdDcdPosXy& posSrc ) ;
 
 	/**
-		IfDcdTarget �̍��W
-		�̓_��
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�ɕϊ����܂��B
+		IfDcdTarget の座標
+		の点を
+		『ダイヤグラムエンティティ座標系』
+		に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param posSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual CdDcdPosXy DgrFromDcd( IfDcdTarget* pIfDcdTarget , 
 		const CdDcdPosXy& posSrc ) ;
 
 
 	/**
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�̋�`�̈���A
+		『ダイヤグラムエンティティ座標系』
+		の矩形領域を、
 		IfDcdTarget 
-		�̍��W�ɕϊ����܂��B
+		の座標に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param zoneSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual CdDcdZoneXy DgrToDcd( IfDcdTarget* pIfDcdTarget , 
 		const CdDcdZoneXy& zoneSrc ) ;
 
 	/**
-		IfDcdTarget �̍��W
-		�̋�`�̈���A
-		�w�_�C���O�����G���e�B�e�B���W�n�x
-		�ɕϊ����܂��B
+		IfDcdTarget の座標
+		の矩形領域を、
+		『ダイヤグラムエンティティ座標系』
+		に変換します。
 	 @param pIfDcdTarget [in]
-		�`��Ώۂ� IfDcdTarget �I�u�W�F�N�g���w�肵�ĉ������B
+		描画対象の IfDcdTarget オブジェクトを指定して下さい。
 	 @param zoneSrc [in]
-		�ϊ��O�̍��W���w�肵�ĉ������B	
+		変換前の座標を指定して下さい。	
 	 @return
-		�ϊ���̍��W��Ԃ��܂��B
+		変換後の座標を返します。
 	 */
 	virtual CdDcdZoneXy DgrFromDcd( IfDcdTarget* pIfDcdTarget , 
 		const CdDcdZoneXy& zoneSrc ) ;

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -87,10 +87,10 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  *	@brief
- *	  DiagramEdit ‚ÌƒGƒ“ƒeƒBƒeƒBƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚Ì‘®«ƒf[ƒ^‚Ì“à—e‚ğA
- *	‘¼‚Ìƒf[ƒ^Œ`®‚É•ÏŠ·‚·‚éŠÖ”‚ğû˜^‚µ‚Ä‚¢‚Ü‚·B
+ *	  DiagramEdit ã®ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å±æ€§ãƒ‡ãƒ¼ã‚¿ã®å†…å®¹ã‚’ã€
+ *	ä»–ã®ãƒ‡ãƒ¼ã‚¿å½¢å¼ã«å¤‰æ›ã™ã‚‹é–¢æ•°ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚
  *
- *	   CdConnectedString2 ƒIƒuƒWƒFƒNƒg‚Æ‚ÌŠÔ‚Ì•ÏŠ·‚ğƒTƒ|[ƒg‚µ‚Ä‚¢‚Ü‚·B
+ *	   CdConnectedString2 ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¨ã®é–“ã®å¤‰æ›ã‚’ã‚µãƒãƒ¼ãƒˆã—ã¦ã„ã¾ã™ã€‚
  *	
  */
 class CconvCentDed_03
@@ -105,39 +105,39 @@ class CconvCentDed_03
 	// ********************************
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚ÉA
-	 *	  CentDedEki ‚Ì‘®«‚ğ’Ç‰Á‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€
+	 *	  CentDedEki ã®å±æ€§ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 	 *	@param aCentDedEki [in]
-	 *	  CentDedEki ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  CentDedEki ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@param pCdConnectedString [in,out]
-	 *	  ‚±‚ÌŠÖ”‚ÍA‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA CdConnectedString2::CdItem ‚ğ
-	 *	’Ç‰Á‚µ‚Ü‚·B
-	 *	  ‚±‚ÌƒIƒuƒWƒFƒNƒg‚ª‚»‚ê‚Ü‚Å•Û‚µ‚Ä‚¢‚½ CdConnectedString2::CdItem ‚Í
-	 *	ˆÛ‚µ‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã€ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€ CdConnectedString2::CdItem ã‚’
+	 *	è¿½åŠ ã—ã¾ã™ã€‚
+	 *	  ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒãã‚Œã¾ã§ä¿æŒã—ã¦ã„ãŸ CdConnectedString2::CdItem ã¯
+	 *	ç¶­æŒã—ã¾ã™ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-11 ;	//	Ekimei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-	 *	-	-22 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
-	 *	-	-32 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-11 ;	//	Ekimei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+	 *	-	-22 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+	 *	-	-32 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedEki_To_CdConnectedString( 
 			const CentDedEki& aCentDedEki , 
 			CdConnectedString2* pCdConnectedString ) ;
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚©‚çA
-	 *	  CentDedEki_To_CdConnectedString() ŠÖ”‚É‚æ‚Á‚Äì¬‚³‚ê‚½
-	 *	ƒAƒCƒeƒ€‚ğ“Ç‚İ‚İA CentDedEki ƒIƒuƒWƒFƒNƒg‚É”½‰f‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰ã€
+	 *	  CentDedEki_To_CdConnectedString() é–¢æ•°ã«ã‚ˆã£ã¦ä½œæˆã•ã‚ŒãŸ
+	 *	ã‚¢ã‚¤ãƒ†ãƒ ã‚’èª­ã¿è¾¼ã¿ã€ CentDedEki ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«åæ˜ ã—ã¾ã™ã€‚
 	 *	
 	 *	@param pCentDedEki [out]
-	 *	  ‚±‚ÌŠÖ”‚Í‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğ”½‰f‚µ‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’åæ˜ ã—ã¾ã™ã€‚
 	 *	@param aCdConnectedString [in]
-	 *	  ‘®«‚ğ•Û‚µ‚Ä‚¢‚é CdConnectedString ƒIƒuƒWƒFƒNƒg‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  å±æ€§ã‚’ä¿æŒã—ã¦ã„ã‚‹ CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-11 ;	//	Ekimei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-	 *	-	-22 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
-	 *	-	-32 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-11 ;	//	Ekimei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+	 *	-	-22 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+	 *	-	-32 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedEki_From_CdConnectedString( 
 			CentDedEki* pCentDedEki ,
@@ -148,58 +148,58 @@ class CconvCentDed_03
 	// ********************************
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚ÉA
-	 *	  CentDedRessyasyubetsu ‚Ì‘®«‚ğ’Ç‰Á‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€
+	 *	  CentDedRessyasyubetsu ã®å±æ€§ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 	 *	@param aCentDedRessyasyubetsu [in]
-	 *	  CentDedRessyasyubetsu ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  CentDedRessyasyubetsu ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@param pCdConnectedString [in,out]
-	 *	  ‚±‚ÌŠÖ”‚ÍA‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA CdConnectedString2::CdItem ‚ğ
-	 *	’Ç‰Á‚µ‚Ü‚·B
-	 *	  ‚±‚ÌƒIƒuƒWƒFƒNƒg‚ª‚»‚ê‚Ü‚Å•Û‚µ‚Ä‚¢‚½ CdConnectedString2::CdItem ‚Í
-	 *	ˆÛ‚µ‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã€ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€ CdConnectedString2::CdItem ã‚’
+	 *	è¿½åŠ ã—ã¾ã™ã€‚
+	 *	  ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒãã‚Œã¾ã§ä¿æŒã—ã¦ã„ãŸ CdConnectedString2::CdItem ã¯
+	 *	ç¶­æŒã—ã¾ã™ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-11 ;	//	Ekimei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-	 *	-	-22 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
-	 *	-	-32 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-11 ;	//	Ekimei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+	 *	-	-22 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+	 *	-	-32 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedRessyasyubetsu_To_CdConnectedString( 
 			const CentDedRessyasyubetsu& aCentDedRessyasyubetsu , 
 			CdConnectedString2* pCdConnectedString ) ;
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚©‚çA
-	 *	  CentDedRessyasyubetsu_To_CdConnectedString() ŠÖ”‚É‚æ‚Á‚Äì¬‚³‚ê‚½
-	 *	ƒAƒCƒeƒ€‚ğ“Ç‚İ‚İA CentDedRessyasyubetsu ƒIƒuƒWƒFƒNƒg‚É”½‰f‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰ã€
+	 *	  CentDedRessyasyubetsu_To_CdConnectedString() é–¢æ•°ã«ã‚ˆã£ã¦ä½œæˆã•ã‚ŒãŸ
+	 *	ã‚¢ã‚¤ãƒ†ãƒ ã‚’èª­ã¿è¾¼ã¿ã€ CentDedRessyasyubetsu ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«åæ˜ ã—ã¾ã™ã€‚
 	 *	
 	 *	@param pCentDedRessyasyubetsu [out]
-	 *	  ‚±‚ÌŠÖ”‚Í‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğ”½‰f‚µ‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’åæ˜ ã—ã¾ã™ã€‚
 	 *	@param aCdConnectedString [in]
-	 *	  ‘®«‚ğ•Û‚µ‚Ä‚¢‚é CdConnectedString ƒIƒuƒWƒFƒNƒg‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  å±æ€§ã‚’ä¿æŒã—ã¦ã„ã‚‹ CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-11 ;	//	Ekimei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-	 *	-	-22 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
-	 *	-	-32 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-11 ;	//	Ekimei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+	 *	-	-22 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
+	 *	-	-32 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedRessyasyubetsu_From_CdConnectedString( 
 			CentDedRessyasyubetsu* pCentDedRessyasyubetsu ,
 			const CdConnectedString2& aCdConnectedString ) ;
 	
 	/**
-	 *	CentDedRessyasyubetsu::ESenStyle ‚Ì’l‚ÆA
-	 *	u‘¾üv‚ğ¦‚· bool ‘®«‚ğ‚à‚Æ‚ÉA
-	 *	CDcdFreeLine::CdLineProp ƒIƒuƒWƒFƒNƒg‚É‘®«‚ğ
-	 *	İ’è‚µ‚Ü‚·B
+	 *	CentDedRessyasyubetsu::ESenStyle ã®å€¤ã¨ã€
+	 *	ã€Œå¤ªç·šã€ã‚’ç¤ºã™ bool å±æ€§ã‚’ã‚‚ã¨ã«ã€
+	 *	CDcdFreeLine::CdLineProp ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«å±æ€§ã‚’
+	 *	è¨­å®šã—ã¾ã™ã€‚
 	 * @param aCOLORREF [in] 
-	 *	ü‚ÌF‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	ç·šã®è‰²ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 * @param eSenStyle [in]
-	 *	ü‚ÌŒ`ó‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	ç·šã®å½¢çŠ¶ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 * @param bIsBold [in]
-	 *	‘¾ü‚È‚ç true , ‚»‚¤‚Å‚È‚¢‚È‚ç false ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	å¤ªç·šãªã‚‰ true , ãã†ã§ãªã„ãªã‚‰ false ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 * @param pCdLineProp [out]
-	 *	‚±‚ÌŠÖ”‚Í‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA
-	 *	‘®«‚ğİ’è‚µ‚Ü‚·B
+	 *	ã“ã®é–¢æ•°ã¯ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€
+	 *	å±æ€§ã‚’è¨­å®šã—ã¾ã™ã€‚
 	 */
 	void CentDedRessyasyubetsu_to_CDcdFreeLineProp(
 		CdColorProp aCOLORREF ,
@@ -213,45 +213,45 @@ class CconvCentDed_03
 	// ********************************
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚ÉA
-	 *	  CentDedRessya ‚Ì‘®«‚ğ’Ç‰Á‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€
+	 *	  CentDedRessya ã®å±æ€§ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 	 *	@param pCentDedRessya [in]
-	 *	  CentDedRessya ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  CentDedRessya ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@param pCdConnectedString [in,out]
-	 *	  ‚±‚ÌŠÖ”‚ÍA‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA CdConnectedString2::CdItem ‚ğ
-	 *	’Ç‰Á‚µ‚Ü‚·B
-	 *	  ‚±‚ÌƒIƒuƒWƒFƒNƒg‚ª‚»‚ê‚Ü‚Å•Û‚µ‚Ä‚¢‚½ CdConnectedString2::CdItem ‚Í
-	 *	ˆÛ‚µ‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã€ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€ CdConnectedString2::CdItem ã‚’
+	 *	è¿½åŠ ã—ã¾ã™ã€‚
+	 *	  ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒãã‚Œã¾ã§ä¿æŒã—ã¦ã„ãŸ CdConnectedString2::CdItem ã¯
+	 *	ç¶­æŒã—ã¾ã™ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-12 ;	//	DiagramEkiatsukai ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-12 ;	//	DiagramEkiatsukai ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedRessya_To_CdConnectedString( 
 			const CentDedRessya* pCentDedRessya , 
 			CdConnectedString2* pCdConnectedString ) ;
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚©‚çA
-	 *	  CentDedRessya_To_CdConnectedString() ŠÖ”‚É‚æ‚Á‚Äì¬‚³‚ê‚½
-	 *	ƒAƒCƒeƒ€‚ğ“Ç‚İ‚İA CentDedRessya ƒIƒuƒWƒFƒNƒg‚É”½‰f‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰ã€
+	 *	  CentDedRessya_To_CdConnectedString() é–¢æ•°ã«ã‚ˆã£ã¦ä½œæˆã•ã‚ŒãŸ
+	 *	ã‚¢ã‚¤ãƒ†ãƒ ã‚’èª­ã¿è¾¼ã¿ã€ CentDedRessya ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«åæ˜ ã—ã¾ã™ã€‚
 	 *	
-	 *	  ‚½‚¾‚µA
+	 *	  ãŸã ã—ã€
 	 *
-	 *		- —ñÔ•ûŒü
-	 *		- ƒIƒuƒWƒFƒNƒg‚ª•ïŠÜ‚·‚é w‰wx ‚Ì”
+	 *		- åˆ—è»Šæ–¹å‘
+	 *		- ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒåŒ…å«ã™ã‚‹ ã€é§…æ™‚åˆ»ã€ ã®æ•°
 	 *
-	 *	‚ÍA•ÏX‚µ‚Ü‚¹‚ñB‚±‚Ì’l‚ÍAŠÖ”ŒÄoŒ³‚É‚æ‚Á‚Äİ’è‚³‚ê‚Ä‚¢‚é
-	 *	•K—v‚ª‚ ‚è‚Ü‚·B
+	 *	ã¯ã€å¤‰æ›´ã—ã¾ã›ã‚“ã€‚ã“ã®å€¤ã¯ã€é–¢æ•°å‘¼å‡ºå…ƒã«ã‚ˆã£ã¦è¨­å®šã•ã‚Œã¦ã„ã‚‹
+	 *	å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
 	 *	@param pCentDedRessya [in,out]
-	 *	  ‚±‚ÌŠÖ”‚Í‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA—ñÔ‚Ì‘®«‚ğ”½‰f‚µ‚Ü‚·B
-	 *	\n ‚½‚¾‚µAƒIƒuƒWƒFƒNƒg‚Ì‘®«w—ñÔ•ûŒüx‚Æ
-	 *	•ïŠÜ‚·‚é w‰wx ‚Ì”‚Í•ÏX‚µ‚Ü‚¹‚ñB
-	 *	‚±‚Ì’l‚ÍAŠÖ”ŒÄoŒ³‚É‚æ‚Á‚Äİ’è‚³‚ê‚Ä‚¢‚é•K—v‚ª‚ ‚è‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€åˆ—è»Šã®å±æ€§ã‚’åæ˜ ã—ã¾ã™ã€‚
+	 *	\n ãŸã ã—ã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å±æ€§ã€åˆ—è»Šæ–¹å‘ã€ã¨
+	 *	åŒ…å«ã™ã‚‹ ã€é§…æ™‚åˆ»ã€ ã®æ•°ã¯å¤‰æ›´ã—ã¾ã›ã‚“ã€‚
+	 *	ã“ã®å€¤ã¯ã€é–¢æ•°å‘¼å‡ºå…ƒã«ã‚ˆã£ã¦è¨­å®šã•ã‚Œã¦ã„ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
 	 *	@param aCdConnectedString [in]
-	 *	  ‘®«‚ğ•Û‚µ‚Ä‚¢‚é CdConnectedString ƒIƒuƒWƒFƒNƒg‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  å±æ€§ã‚’ä¿æŒã—ã¦ã„ã‚‹ CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-12 ;	//	DiagramEkiatsukai ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-12 ;	//	DiagramEkiatsukai ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedRessya_From_CdConnectedString( 
 			CentDedRessya* pCentDedRessya ,
@@ -263,41 +263,41 @@ class CconvCentDed_03
 	// ********************************
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚ÉA
-	 *	  CentDedRessyaCont ‚Ì‘®«‚ğ’Ç‰Á‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€
+	 *	  CentDedRessyaCont ã®å±æ€§ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 	 *	@param pCentDedRessyaCont [in]
-	 *	  CentDedRessya ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  CentDedRessya ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@param pCdConnectedString [in,out]
-	 *	  ‚±‚ÌŠÖ”‚ÍA‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA CdConnectedString2::CdItem ‚ğ
-	 *	’Ç‰Á‚µ‚Ü‚·B
-	 *	  ‚±‚ÌƒIƒuƒWƒFƒNƒg‚ª‚»‚ê‚Ü‚Å•Û‚µ‚Ä‚¢‚½ CdConnectedString2::CdItem ‚Í
-	 *	ˆÛ‚µ‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã€ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€ CdConnectedString2::CdItem ã‚’
+	 *	è¿½åŠ ã—ã¾ã™ã€‚
+	 *	  ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒãã‚Œã¾ã§ä¿æŒã—ã¦ã„ãŸ CdConnectedString2::CdItem ã¯
+	 *	ç¶­æŒã—ã¾ã™ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-12 ;	//	DiagramEkiatsukai ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-12 ;	//	DiagramEkiatsukai ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedRessyaCont_To_CdConnectedString( 
 			const CentDedRessyaCont* pCentDedRessyaCont , 
 			CdConnectedString2* pCdConnectedString ) ;
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚©‚çA
-	 *	  CentDedRessya_To_CdConnectedString() ŠÖ”‚É‚æ‚Á‚Äì¬‚³‚ê‚½
-	 *	ƒAƒCƒeƒ€‚ğ“Ç‚İ‚İA CentDedRessya ƒIƒuƒWƒFƒNƒg‚É”½‰f‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰ã€
+	 *	  CentDedRessya_To_CdConnectedString() é–¢æ•°ã«ã‚ˆã£ã¦ä½œæˆã•ã‚ŒãŸ
+	 *	ã‚¢ã‚¤ãƒ†ãƒ ã‚’èª­ã¿è¾¼ã¿ã€ CentDedRessya ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«åæ˜ ã—ã¾ã™ã€‚
 	 *	
 	 *	@param pCentDedRessya [in,out]
-	 *	  ‚±‚ÌŠÖ”‚Í‚±‚ÌƒRƒ“ƒeƒi‚Ì––”ö‚ÉA
-	 *	aCdConnectedString ƒIƒuƒWƒFƒNƒg‚É•Û‘¶‚³‚ê‚Ä‚¢‚é‘®«‚ÌƒIƒuƒWƒFƒNƒg‚ğ
-	 *	’Ç‰Á‚µ‚Ü‚·B
-	 *	\n ‚½‚¾‚µA’Ç‰Á‚³‚ê‚éƒIƒuƒWƒFƒNƒg‚Ì w‰wx ‚Ì”‚ÍA
-	 *	m_iEkiCount ‚ÉŒˆ‚Ü‚Á‚Ä‚¢‚Ü‚·B aCdConectedString ‚É•Û‘¶‚³‚ê‚Ä‚¢‚é
-	 *	—ñÔ‚ª‚±‚ê‚æ‚è‘½‚¢w‰wx‚ğ•Û‚µ‚Ä‚¢‚½ê‡‚ÍAI’…‰wŠñ‚è‚Ì‚ª
-	 *	ØÌ‚Ä‚Æ‚È‚è‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã“ã®ã‚³ãƒ³ãƒ†ãƒŠã®æœ«å°¾ã«ã€
+	 *	aCdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ä¿å­˜ã•ã‚Œã¦ã„ã‚‹å±æ€§ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’
+	 *	è¿½åŠ ã—ã¾ã™ã€‚
+	 *	\n ãŸã ã—ã€è¿½åŠ ã•ã‚Œã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã® ã€é§…æ™‚åˆ»ã€ ã®æ•°ã¯ã€
+	 *	m_iEkiCount ã«æ±ºã¾ã£ã¦ã„ã¾ã™ã€‚ aCdConectedString ã«ä¿å­˜ã•ã‚Œã¦ã„ã‚‹
+	 *	åˆ—è»ŠãŒã“ã‚Œã‚ˆã‚Šå¤šã„ã€é§…æ™‚åˆ»ã€ã‚’ä¿æŒã—ã¦ã„ãŸå ´åˆã¯ã€çµ‚ç€é§…å¯„ã‚Šã®æ™‚åˆ»ãŒ
+	 *	åˆ‡æ¨ã¦ã¨ãªã‚Šã¾ã™ã€‚
 	 *	@param aCdConnectedString [in]
-	 *	  ‘®«‚ğ•Û‚µ‚Ä‚¢‚é CdConnectedString ƒIƒuƒWƒFƒNƒg‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  å±æ€§ã‚’ä¿æŒã—ã¦ã„ã‚‹ CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-12 ;	//	DiagramEkiatsukai ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-12 ;	//	DiagramEkiatsukai ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedRessyaCont_From_CdConnectedString( 
 			CentDedRessyaCont* pCentDedRessyaCont ,
@@ -309,37 +309,37 @@ class CconvCentDed_03
 	// ********************************
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚ÉA
-	 *	  CentDedDia ‚Ì‘®«‚ğ’Ç‰Á‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€
+	 *	  CentDedDia ã®å±æ€§ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 	 *	@param pCentDedDia [in]
-	 *	  CentDedDia ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  CentDedDia ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@param pCdConnectedString [in,out]
-	 *	  ‚±‚ÌŠÖ”‚ÍA‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA CdConnectedString2::CdItem ‚ğ
-	 *	’Ç‰Á‚µ‚Ü‚·B
-	 *	  ‚±‚ÌƒIƒuƒWƒFƒNƒg‚ª‚»‚ê‚Ü‚Å•Û‚µ‚Ä‚¢‚½ CdConnectedString2::CdItem ‚Í
-	 *	ˆÛ‚µ‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã€ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€ CdConnectedString2::CdItem ã‚’
+	 *	è¿½åŠ ã—ã¾ã™ã€‚
+	 *	  ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒãã‚Œã¾ã§ä¿æŒã—ã¦ã„ãŸ CdConnectedString2::CdItem ã¯
+	 *	ç¶­æŒã—ã¾ã™ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-12 ;	//	DiagramEkiatsukai ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-12 ;	//	DiagramEkiatsukai ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedDia_To_CdConnectedString( 
 			const CentDedDia* pCentDedDia , 
 			CdConnectedString2* pCdConnectedString ) ;
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚©‚çA
-	 *	  CentDedDia_To_CdConnectedString() ŠÖ”‚É‚æ‚Á‚Äì¬‚³‚ê‚½
-	 *	ƒAƒCƒeƒ€‚ğ“Ç‚İ‚İA CentDedDia ƒIƒuƒWƒFƒNƒg‚É”½‰f‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰ã€
+	 *	  CentDedDia_To_CdConnectedString() é–¢æ•°ã«ã‚ˆã£ã¦ä½œæˆã•ã‚ŒãŸ
+	 *	ã‚¢ã‚¤ãƒ†ãƒ ã‚’èª­ã¿è¾¼ã¿ã€ CentDedDia ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«åæ˜ ã—ã¾ã™ã€‚
 	 *	
 	 *	@param pCentDedDia [in,out]
-	 *	  ‚±‚ÌŠÖ”‚Í‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğ”½‰f‚µ‚Ü‚·B
-	 *	  ‚±‚ÌƒIƒuƒWƒFƒNƒg‚É‚ÍA‚ ‚ç‚©‚¶‚ß w‰w‚Ì”xEw—ñÔí•Ê”x
-	 *	‚ªİ’è‚³‚ê‚Ä‚¢‚È‚­‚Ä‚Í‚È‚è‚Ü‚¹‚ñB
+	 *	  ã“ã®é–¢æ•°ã¯ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’åæ˜ ã—ã¾ã™ã€‚
+	 *	  ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã¯ã€ã‚ã‚‰ã‹ã˜ã‚ ã€é§…ã®æ•°ã€ãƒ»ã€åˆ—è»Šç¨®åˆ¥æ•°ã€
+	 *	ãŒè¨­å®šã•ã‚Œã¦ã„ãªãã¦ã¯ãªã‚Šã¾ã›ã‚“ã€‚
 	 *	@param aCdConnectedString [in]
-	 *	  ‘®«‚ğ•Û‚µ‚Ä‚¢‚é CdConnectedString ƒIƒuƒWƒFƒNƒg‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  å±æ€§ã‚’ä¿æŒã—ã¦ã„ã‚‹ CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-12 ;	//	DiagramEkiatsukai ‚Ì’l‚ª•s³‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-12 ;	//	DiagramEkiatsukai ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 	 */
 	int CentDedDia_From_CdConnectedString( 
 			CentDedDia* pCentDedDia ,
@@ -350,36 +350,36 @@ class CconvCentDed_03
 	// ********************************
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚ÉA
-	 *	  CentDedRosen ‚Ì‘®«‚ğ’Ç‰Á‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€
+	 *	  CentDedRosen ã®å±æ€§ã‚’è¿½åŠ ã—ã¾ã™ã€‚
 	 *	@param pCentDedRosen [in]
-	 *	  CentDedRosen ‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  CentDedRosen ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@param pCdConnectedString [in,out]
-	 *	  ‚±‚ÌŠÖ”‚ÍA‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA CdConnectedString2::CdItem ‚ğ
-	 *	’Ç‰Á‚µ‚Ü‚·B
-	 *	  ‚±‚ÌƒIƒuƒWƒFƒNƒg‚ª‚»‚ê‚Ü‚Å•Û‚µ‚Ä‚¢‚½ CdConnectedString2::CdItem ‚Í
-	 *	ˆÛ‚µ‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã€ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€ CdConnectedString2::CdItem ã‚’
+	 *	è¿½åŠ ã—ã¾ã™ã€‚
+	 *	  ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒãã‚Œã¾ã§ä¿æŒã—ã¦ã„ãŸ CdConnectedString2::CdItem ã¯
+	 *	ç¶­æŒã—ã¾ã™ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
 	 */
 	int CentDedRosen_To_CdConnectedString( 
 			const CentDedRosen* pCentDedRosen , 
 			CdConnectedString2* pCdConnectedString ) ;
 	
 	/**
-	 *	  CdConnectedString ƒIƒuƒWƒFƒNƒg‚©‚çA
-	 *	  CentDedRosen_To_CdConnectedString() ŠÖ”‚É‚æ‚Á‚Äì¬‚³‚ê‚½
-	 *	ƒAƒCƒeƒ€‚ğ“Ç‚İ‚İA CentDedRosen ƒIƒuƒWƒFƒNƒg‚É”½‰f‚µ‚Ü‚·B
+	 *	  CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰ã€
+	 *	  CentDedRosen_To_CdConnectedString() é–¢æ•°ã«ã‚ˆã£ã¦ä½œæˆã•ã‚ŒãŸ
+	 *	ã‚¢ã‚¤ãƒ†ãƒ ã‚’èª­ã¿è¾¼ã¿ã€ CentDedRosen ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«åæ˜ ã—ã¾ã™ã€‚
 	 *	
 	 *	@param pCentDedRosen [out]
-	 *	  ‚±‚ÌŠÖ”‚Í‚±‚ÌƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğ”½‰f‚µ‚Ü‚·B
+	 *	  ã“ã®é–¢æ•°ã¯ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’åæ˜ ã—ã¾ã™ã€‚
 	 *	@param aCdConnectedString [in]
-	 *	  ‘®«‚ğ•Û‚µ‚Ä‚¢‚é CdConnectedString ƒIƒuƒWƒFƒNƒg‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	 *	  å±æ€§ã‚’ä¿æŒã—ã¦ã„ã‚‹ CdConnectedString ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	 *	@return
-	 *	  ¬Œ÷‚µ‚½‚ç 0 ˆÈãAƒGƒ‰[‚È‚ç•‰‚Ì”‚Å‚·B
-	 *	-	-2 ;	//	w—ñÔí•Êx‚ÍA­‚È‚­‚Æ‚àˆê‚Â‚Í
-	 *				//	‘¶İ‚µ‚È‚­‚Ä‚Í‚È‚è‚Ü‚¹‚ñB
-	 *	-	-52 ;	//	‹N“_‚Ìİ’è‚ª•s“KØ‚Å‚·B
+	 *	  æˆåŠŸã—ãŸã‚‰ 0 ä»¥ä¸Šã€ã‚¨ãƒ©ãƒ¼ãªã‚‰è² ã®æ•°ã§ã™ã€‚
+	 *	-	-2 ;	//	ã€åˆ—è»Šç¨®åˆ¥ã€ã¯ã€å°‘ãªãã¨ã‚‚ä¸€ã¤ã¯
+	 *				//	å­˜åœ¨ã—ãªãã¦ã¯ãªã‚Šã¾ã›ã‚“ã€‚
+	 *	-	-52 ;	//	èµ·ç‚¹æ™‚åˆ»ã®è¨­å®šãŒä¸é©åˆ‡ã§ã™ã€‚
 	 */
 	int CentDedRosen_From_CdConnectedString( 
 			CentDedRosen* pCentDedRosen ,

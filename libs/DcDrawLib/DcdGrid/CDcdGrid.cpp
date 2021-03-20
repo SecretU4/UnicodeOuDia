@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -88,7 +88,7 @@ namespace DcdGrid{
 //	CDcdGrid
 // ****************************************************************
 // --------------------------------
-//	‰º¿ŠÖ”
+//	ä¸‹è«‹é–¢æ•°
 // --------------------------------
 
 
@@ -110,8 +110,8 @@ int CDcdGrid::getYColumnsSize( IfDcdTarget* pIfDcdTarget ,
 		if ( !( idx == iYColumnNumberSrc && bSrcIsBorder ) )
 		{
 			CDcdGridYColumn*	pCDcdGridYColumn = getYColumn( idx ) ;
-			//	‹N“_‚ªƒ{[ƒ_[‚Éw’è‚³‚ê‚Ä‚¢‚éê‡‚ÍA
-			//	‹N“_‚Ì—ñ‚Ì•‚ÍŠÜ‚ß‚Ü‚¹‚ñB
+			//	èµ·ç‚¹ãŒãƒœãƒ¼ãƒ€ãƒ¼ã«æŒ‡å®šã•ã‚Œã¦ã„ã‚‹å ´åˆã¯ã€
+			//	èµ·ç‚¹ã®åˆ—ã®å¹…ã¯å«ã‚ã¾ã›ã‚“ã€‚
 			iRv += pCDcdGridYColumn->getColumnSize( pIfDcdTarget ) ;
 		}
 		if ( !( idx == iYColumnNumberDst && !bDstIsBorder ) ){
@@ -150,13 +150,13 @@ int CDcdGrid::getXColumnsSize( IfDcdTarget* pIfDcdTarget ,
 		if ( !( idx == iXColumnNumberSrc && bSrcIsBorder ) )
 		{
 			CDcdGridXColumn*	pCDcdGridXColumn = getXColumn( idx ) ;
-			//	‹N“_‚ªƒ{[ƒ_[‚Éw’è‚³‚ê‚Ä‚¢‚éê‡‚ÍA
-			//	‹N“_‚Ì—ñ‚Ì•‚ÍŠÜ‚ß‚Ü‚¹‚ñB
+			//	èµ·ç‚¹ãŒãƒœãƒ¼ãƒ€ãƒ¼ã«æŒ‡å®šã•ã‚Œã¦ã„ã‚‹å ´åˆã¯ã€
+			//	èµ·ç‚¹ã®åˆ—ã®å¹…ã¯å«ã‚ã¾ã›ã‚“ã€‚
 			iRv += pCDcdGridXColumn->getColumnSize( pIfDcdTarget ) ;
 		}
 		if ( !( idx == iXColumnNumberDst && !bDstIsBorder ) ){
-			//	I“_‚ªƒ{[ƒ_[‚Éw’è‚³‚ê‚Ä‚¢‚È‚¢ê‡‚ÍA
-			//	I“_‚Ì—ñ‚Ì•‚ÍŠÜ‚ß‚Ü‚¹‚ñB
+			//	çµ‚ç‚¹ãŒãƒœãƒ¼ãƒ€ãƒ¼ã«æŒ‡å®šã•ã‚Œã¦ã„ãªã„å ´åˆã¯ã€
+			//	çµ‚ç‚¹ã®åˆ—ã®å¹…ã¯å«ã‚ã¾ã›ã‚“ã€‚
 			if ( idx == -1 )
 			{
 				iRv += m_CDcdGridXBorderTop.getColumnBorderSize( pIfDcdTarget ) ;
@@ -183,7 +183,7 @@ int CDcdGrid::insertYColumn_insertColumnCell( int iYColumnNumber )
 			iYColumnNumber = getYColumnCount() ;
 		}
 		if ( !( 0 <= iYColumnNumber && iYColumnNumber <= getYColumnCount() ) ){
-			iRv = -2 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³‚Å‚·	
+			iRv = -2 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£ã§ã™	
 		}
 	}
 	if ( iRv >= 0 )
@@ -196,7 +196,7 @@ int CDcdGrid::insertYColumn_insertColumnCell( int iYColumnNumber )
 			OnCreateYColumn( iYColumnNumber , pCDcdGridYColumn ) ;
 	}
 	if ( iRv >= 0 ){
-		//	CellƒIƒuƒWƒFƒNƒg
+		//	Cellã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 		m_CDcdGridCellCont.insert( 
 			m_CDcdGridCellCont.begin() + iYColumnNumber ,
 			new CDcdGridYColumnCellCont ) ;
@@ -230,7 +230,7 @@ int CDcdGrid::insertXColumn_insertColumnCell( int iXColumnNumber )
 		}
 		if ( !( 0 <= iXColumnNumber && 
 				iXColumnNumber <= getXColumnCount() ) ){
-			iRv = -2 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³‚Å‚·	
+			iRv = -2 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£ã§ã™	
 		}
 	}
 	if ( iRv >= 0 )
@@ -273,7 +273,7 @@ int CDcdGrid::eraseYColumn_eraseColumnCell( int iYColumnNumber )
 		}
 		if ( !( 0 <= iYColumnNumber && 
 				iYColumnNumber < getYColumnCount() ) ){
-			iRv = -2 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³‚Å‚·	
+			iRv = -2 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£ã§ã™	
 		}
 	}
 	if ( iRv >= 0 ){
@@ -328,7 +328,7 @@ int CDcdGrid::eraseXColumn_eraseColumnCell( int iXColumnNumber )
 		}
 		if ( !( 0 <= iXColumnNumber && 
 				iXColumnNumber < getXColumnCount() ) ){
-			iRv = -2 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³‚Å‚·	
+			iRv = -2 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£ã§ã™	
 		}
 	}
 	if ( iRv >= 0 ){
@@ -401,7 +401,7 @@ void CDcdGrid::adjustProp()
 		m_iYFixafterColumnNumber = m_iYFixColumnCount ;
 	}
 	// --------------------------------
-	//	ƒZƒ‹Œ‹‡
+	//	ã‚»ãƒ«çµåˆ
 	//	CDcdGridCell::m_iXAttachCellCount
 	//	CDcdGridCell::m_iYAttachCellCount
 	// --------------------------------
@@ -433,7 +433,7 @@ void CDcdGrid::adjustProp()
 	//	CDcdGridCell::m_pcellAttachTo
 	// --------------------------------
 	{
-		//	ˆê’UAm_pcellAttachTo ‚ÍƒNƒŠƒA‚µ‚Ü‚·B
+		//	ä¸€æ—¦ã€m_pcellAttachTo ã¯ã‚¯ãƒªã‚¢ã—ã¾ã™ã€‚
 		int iYColumnNumber = 0 ;
 		for ( iYColumnNumber = 0 ; 
 				iYColumnNumber < getYColumnCount() ; 
@@ -449,7 +449,7 @@ void CDcdGrid::adjustProp()
 		}
 	}
 	{
-		//	‚ ‚ç‚½‚ß‚ÄAm_pcellAttachTo ‚ğİ’è‚µ‚Ü‚·B
+		//	ã‚ã‚‰ãŸã‚ã¦ã€m_pcellAttachTo ã‚’è¨­å®šã—ã¾ã™ã€‚
 		int iYColumnNumber = 0 ;
 		for ( iYColumnNumber = 0 ; 
 				iYColumnNumber < getYColumnCount() ; 
@@ -522,13 +522,13 @@ bool CDcdGrid::createZoneCache(
 			
 			if ( iXColumnNumber >= 0 ){
 				// --------------------------------
-				//	—ñ
+				//	åˆ—
 				// --------------------------------
 				
 				DcdSize	iSize = pCDcdGridXColumn->getColumnSize( 
 					pIfDcdTarget ) ;
 				// --------------------------------
-				//	iXColumnNumber ‚ªŒÅ’è—ñ
+				//	iXColumnNumber ãŒå›ºå®šåˆ—
 				// --------------------------------
 				if ( iXColumnNumber < m_iXFixColumnCount ){
 					m_zonecontXColumnZoneCache.push_back( 
@@ -539,7 +539,7 @@ bool CDcdGrid::createZoneCache(
 					iPosOverlap += iSize ;
 				}
 				// --------------------------------
-				//	iXColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ
+				//	iXColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—
 				// --------------------------------
 				if ( m_iXFixColumnCount <= iXColumnNumber && 
 						iXColumnNumber < m_iXFixafterColumnNumber ){
@@ -551,7 +551,7 @@ bool CDcdGrid::createZoneCache(
 					iPosOverlap += iSize ;
 				}
 				// --------------------------------
-				//	iXColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+				//	iXColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 				// --------------------------------
 				if ( m_iXFixafterColumnNumber <= iXColumnNumber ){
 					m_zonecontXColumnZoneCache.push_back( 
@@ -565,13 +565,13 @@ bool CDcdGrid::createZoneCache(
 				
 			}
 			// --------------------------------
-			//	˜gü
+			//	æ ç·š
 			// --------------------------------
 			{
 				DcdSize	iSize = pCDcdGridXBorder->getColumnBorderSize( 
 					pIfDcdTarget ) ;
 				// --------------------------------
-				//	iXColumnNumber ‚ªŒÅ’è—ñ
+				//	iXColumnNumber ãŒå›ºå®šåˆ—
 				// --------------------------------
 				if ( iXColumnNumber < m_iXFixColumnCount ){
 					m_zonecontXColumnBorderZoneCache.push_back( 
@@ -580,7 +580,7 @@ bool CDcdGrid::createZoneCache(
 					iPosOverlap += iSize ;
 				}
 				// --------------------------------
-				//	iXColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ
+				//	iXColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—
 				// --------------------------------
 				if ( m_iXFixColumnCount <= iXColumnNumber && 
 						iXColumnNumber < m_iXFixafterColumnNumber ){
@@ -590,7 +590,7 @@ bool CDcdGrid::createZoneCache(
 					iPosOverlap += iSize ;
 				}
 				// --------------------------------
-				//	iXColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+				//	iXColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 				// --------------------------------
 				if ( m_iXFixafterColumnNumber <= iXColumnNumber ){
 					m_zonecontXColumnBorderZoneCache.push_back( 
@@ -619,13 +619,13 @@ bool CDcdGrid::createZoneCache(
 			
 			if ( iYColumnNumber >= 0 ){
 				// --------------------------------
-				//	—ñ
+				//	åˆ—
 				// --------------------------------
 				
 				DcdSize	iSize = pCDcdGridYColumn->getColumnSize( 
 					pIfDcdTarget ) ;
 				// --------------------------------
-				//	iYColumnNumber ‚ªŒÅ’è—ñ
+				//	iYColumnNumber ãŒå›ºå®šåˆ—
 				// --------------------------------
 				if ( iYColumnNumber < m_iYFixColumnCount ){
 					m_zonecontYColumnZoneCache.push_back( 
@@ -636,7 +636,7 @@ bool CDcdGrid::createZoneCache(
 					iPosOverlap += iSize ;
 				}
 				// --------------------------------
-				//	iYColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ
+				//	iYColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—
 				// --------------------------------
 				if ( m_iYFixColumnCount <= iYColumnNumber && 
 						iYColumnNumber < m_iYFixafterColumnNumber ){
@@ -648,7 +648,7 @@ bool CDcdGrid::createZoneCache(
 					iPosOverlap += iSize ;
 				}
 				// --------------------------------
-				//	iYColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+				//	iYColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 				// --------------------------------
 				if ( m_iYFixafterColumnNumber <= iYColumnNumber ){
 					m_zonecontYColumnZoneCache.push_back( 
@@ -662,13 +662,13 @@ bool CDcdGrid::createZoneCache(
 				
 			}
 			// --------------------------------
-			//	˜gü
+			//	æ ç·š
 			// --------------------------------
 			{
 				DcdSize	iSize = pCDcdGridYBorder->getColumnBorderSize( 
 					pIfDcdTarget ) ;
 				// --------------------------------
-				//	iYColumnNumber ‚ªŒÅ’è—ñ
+				//	iYColumnNumber ãŒå›ºå®šåˆ—
 				// --------------------------------
 				if ( iYColumnNumber < m_iYFixColumnCount ){
 					m_zonecontYColumnBorderZoneCache.push_back( 
@@ -677,7 +677,7 @@ bool CDcdGrid::createZoneCache(
 					iPosOverlap += iSize ;
 				}
 				// --------------------------------
-				//	iYColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ
+				//	iYColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—
 				// --------------------------------
 				if ( m_iYFixColumnCount <= iYColumnNumber && 
 						iYColumnNumber < m_iYFixafterColumnNumber ){
@@ -687,7 +687,7 @@ bool CDcdGrid::createZoneCache(
 					iPosOverlap += iSize ;
 				}
 				// --------------------------------
-				//	iYColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+				//	iYColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 				// --------------------------------
 				if ( m_iYFixafterColumnNumber <= iYColumnNumber ){
 					m_zonecontYColumnBorderZoneCache.push_back( 
@@ -711,7 +711,7 @@ void CDcdGrid::destroyZoneCache()
 }
 
 	// --------------------------------
-	//@name	DcDraw‚Ì‰º¿ŠÖ”
+	//@name	DcDrawã®ä¸‹è«‹é–¢æ•°
 	// --------------------------------
 
 
@@ -720,10 +720,10 @@ bool CDcdGrid::IsXBorderOverlappedByAttachedCell( int iXColumnNumber , int iYCol
 	bool bIsOverlappedColumn = false ;
 	{
 		CDcdGridCell* pCellEndSide = getCell( iXColumnNumber + 1 , iYColumnNumber ) ;
-		//	w’è‚³‚ê‚½XŒrü(cü)‚ÌY—ñ‚ÌˆÊ’u‚Ì‰E‚ÌƒZƒ‹‚ªŒ‹‡ƒZƒ‹
+		//	æŒ‡å®šã•ã‚ŒãŸXç½«ç·š(ç¸¦ç·š)ã®Yåˆ—ã®ä½ç½®ã®å³ã®ã‚»ãƒ«ãŒçµåˆã‚»ãƒ«
 		if ( pCellEndSide != NULL && pCellEndSide->getAttachTo() != NULL )
 		{
-			//	Œ‹‡æ‚ÌƒZƒ‹‚ÌXIndex‚ªAŒrü‚æ‚è¶
+			//	çµåˆå…ˆã®ã‚»ãƒ«ã®XIndexãŒã€ç½«ç·šã‚ˆã‚Šå·¦
 			int iAttachToCellXColumnNumber = getXColumnNumberOfCell( pCellEndSide->getAttachTo() ) ;
 			if ( iAttachToCellXColumnNumber < iXColumnNumber + 1 )
 			{
@@ -739,10 +739,10 @@ bool CDcdGrid::IsYBorderOverlappedByAttachedCell( int iXColumnNumber , int iYCol
 	bool bIsOverlappedColumn = false ;
 	{
 		CDcdGridCell* pCellEndSide = getCell( iXColumnNumber , iYColumnNumber + 1 ) ;
-		//	w’è‚³‚ê‚½YŒrü(‰¡ü)‚ÌX—ñ‚ÌˆÊ’u‚Ì‰º‚ÌƒZƒ‹‚ªŒ‹‡ƒZƒ‹
+		//	æŒ‡å®šã•ã‚ŒãŸYç½«ç·š(æ¨ªç·š)ã®Xåˆ—ã®ä½ç½®ã®ä¸‹ã®ã‚»ãƒ«ãŒçµåˆã‚»ãƒ«
 		if ( pCellEndSide != NULL && pCellEndSide->getAttachTo() != NULL )
 		{
-			//	Œ‹‡æ‚ÌƒZƒ‹‚ÌYIndex‚ªAŒrü‚æ‚èã
+			//	çµåˆå…ˆã®ã‚»ãƒ«ã®YIndexãŒã€ç½«ç·šã‚ˆã‚Šä¸Š
 			int iAttachToCellYColumnNumber = getYColumnNumberOfCell( pCellEndSide->getAttachTo() ) ;
 			if ( iAttachToCellYColumnNumber < iYColumnNumber + 1 )
 			{
@@ -763,13 +763,13 @@ bool CDcdGrid::DcDraw_DrawXColumn( bool isYFixColumn , CaDcdTargetClip* pTarget 
 	int iYColumnIndexLoopEnd ;
 
 
-	//	ŒÅ’è—Ìˆæ‚ÌŒrü‚ÌX—ñ”ÍˆÍ
+	//	å›ºå®šé ˜åŸŸã®ç½«ç·šã®Xåˆ—ç¯„å›²
 	if ( isYFixColumn )
 	{
 		iYColumnIndexLoopStart = 0 ;
 		iYColumnIndexLoopEnd = m_iYFixColumnCount ;
 	}
-	//	ƒXƒNƒ[ƒ‹—Ìˆæ‚ÌŒrü‚ÌX—ñ”ÍˆÍ
+	//	ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«é ˜åŸŸã®ç½«ç·šã®Xåˆ—ç¯„å›²
 	else
 	{
 		iYColumnIndexLoopStart = m_iYFixColumnCount ;
@@ -780,16 +780,16 @@ bool CDcdGrid::DcDraw_DrawXColumn( bool isYFixColumn , CaDcdTargetClip* pTarget 
 	int iYColumnIndexBegin = INT_MIN ; 
 	for ( int iYColumnIndex = iYColumnIndexLoopStart ; iYColumnIndex < iYColumnIndexLoopEnd ; iYColumnIndex++ )
 	{
-		//	Œrü‚Ìn“_‚ğŒˆ’èB
-		//	Œrü‚ªŒ‹‡ƒZƒ‹‚Å‚©‚­‚³‚ê‚Ä‚¢‚È‚¯‚ê‚ÎAŒrü‚Ìn“_B
+		//	ç½«ç·šã®å§‹ç‚¹ã‚’æ±ºå®šã€‚
+		//	ç½«ç·šãŒçµåˆã‚»ãƒ«ã§ã‹ãã•ã‚Œã¦ã„ãªã‘ã‚Œã°ã€ç½«ç·šã®å§‹ç‚¹ã€‚
 		if ( iYColumnIndexBegin == INT_MIN 
 			&& !IsXBorderOverlappedByAttachedCell( iXColumnNumber , iYColumnIndex ) )
 		{
 			iYColumnIndexBegin = iYColumnIndex ;
 		}
-		//	Œrü‚ÌI“_
-		//	EiYColumnIndex ‚ª m_iYFixColumnCount-1
-		//	EŸ‚Ì iYColumnIndex ‚ªAŒ‹‡ƒZƒ‹‚Å‰B‚³‚ê‚é
+		//	ç½«ç·šã®çµ‚ç‚¹
+		//	ãƒ»iYColumnIndex ãŒ m_iYFixColumnCount-1
+		//	ãƒ»æ¬¡ã® iYColumnIndex ãŒã€çµåˆã‚»ãƒ«ã§éš ã•ã‚Œã‚‹
 		if ( iYColumnIndexBegin != INT_MIN 
 			&& ( iYColumnIndex == iYColumnIndexLoopEnd - 1 
 				|| IsXBorderOverlappedByAttachedCell( iXColumnNumber , iYColumnIndex + 1 ) ) )
@@ -822,13 +822,13 @@ bool CDcdGrid::DcDraw_DrawYColumn( bool isXFixColumn , CaDcdTargetClip* pTarget 
 	int iXColumnIndexLoopEnd ;
 
 
-	//	ŒÅ’è—Ìˆæ‚ÌŒrü‚ÌX—ñ”ÍˆÍ
+	//	å›ºå®šé ˜åŸŸã®ç½«ç·šã®Xåˆ—ç¯„å›²
 	if ( isXFixColumn )
 	{
 		iXColumnIndexLoopStart = 0 ;
 		iXColumnIndexLoopEnd = m_iXFixColumnCount ;
 	}
-	//	ƒXƒNƒ[ƒ‹—Ìˆæ‚ÌŒrü‚ÌX—ñ”ÍˆÍ
+	//	ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«é ˜åŸŸã®ç½«ç·šã®Xåˆ—ç¯„å›²
 	else
 	{
 		iXColumnIndexLoopStart = m_iXFixColumnCount ;
@@ -839,16 +839,16 @@ bool CDcdGrid::DcDraw_DrawYColumn( bool isXFixColumn , CaDcdTargetClip* pTarget 
 	int iXColumnIndexBegin = INT_MIN ; 
 	for ( int iXColumnIndex = iXColumnIndexLoopStart ; iXColumnIndex < iXColumnIndexLoopEnd ; iXColumnIndex++ )
 	{
-		//	Œrü‚Ìn“_‚ğŒˆ’èB
-		//	Œrü‚ªŒ‹‡ƒZƒ‹‚Å‚©‚­‚³‚ê‚Ä‚¢‚È‚¯‚ê‚ÎAŒrü‚Ìn“_B
+		//	ç½«ç·šã®å§‹ç‚¹ã‚’æ±ºå®šã€‚
+		//	ç½«ç·šãŒçµåˆã‚»ãƒ«ã§ã‹ãã•ã‚Œã¦ã„ãªã‘ã‚Œã°ã€ç½«ç·šã®å§‹ç‚¹ã€‚
 		if ( iXColumnIndexBegin == INT_MIN 
 			&& !IsYBorderOverlappedByAttachedCell( iXColumnIndex , iYColumnNumber ) )
 		{
 			iXColumnIndexBegin = iXColumnIndex ;
 		}
-		//	Œrü‚ÌI“_
-		//	EiXColumnIndex ‚ª m_iXFixColumnCount-1
-		//	EŸ‚Ì iXColumnIndex ‚ªAŒ‹‡ƒZƒ‹‚Å‰B‚³‚ê‚é
+		//	ç½«ç·šã®çµ‚ç‚¹
+		//	ãƒ»iXColumnIndex ãŒ m_iXFixColumnCount-1
+		//	ãƒ»æ¬¡ã® iXColumnIndex ãŒã€çµåˆã‚»ãƒ«ã§éš ã•ã‚Œã‚‹
 		if ( iXColumnIndexBegin != INT_MIN 
 			&& ( iXColumnIndex == iXColumnIndexLoopEnd - 1 
 				|| IsYBorderOverlappedByAttachedCell( iXColumnIndex + 1 , iYColumnNumber ) ) )
@@ -876,7 +876,7 @@ bool CDcdGrid::DcDraw_DrawYColumn( bool isXFixColumn , CaDcdTargetClip* pTarget 
 
 
 // ********************************
-//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 // ********************************
 CDcdGrid::CDcdGrid() 
 {
@@ -907,7 +907,7 @@ CDcdGrid::~CDcdGrid()
 	setXColumnCount( 0 ) ;
 	setYColumnCount( 0 ) ;
 
-	//	ColumnNumber -1 ‚Ì Column ‚ğíœ
+	//	ColumnNumber -1 ã® Column ã‚’å‰Šé™¤
 	while ( m_CDcdGridXColumnCont.size() > 0 ){
 		CDcdGridXColumn*	pCDcdGridXColumn = m_CDcdGridXColumnCont.back() ;
 		
@@ -939,11 +939,11 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 
 	CdDcdSizeXy	aCdDcdSizeXy ;
 	getItemSize( pIfDcdTarget , &aCdDcdSizeXy ) ;
-	//aCdDcdSizeXy = ƒOƒŠƒbƒh‚Ì‘å‚«‚³
+	//aCdDcdSizeXy = ã‚°ãƒªãƒƒãƒ‰ã®å¤§ãã•
 
 
 	// --------------------------------
-	//	ƒZƒ‹
+	//	ã‚»ãƒ«
 	// --------------------------------
 	bool	bIsDisplay = false ;
 	{
@@ -952,16 +952,16 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 			bIsDisplay = true ;
 		}
 	}
-	//bIsDisplay = ^‚È‚çApIfDcdTarget ‚ÍƒfƒBƒXƒvƒŒƒC‚Å‚·B
-	//	ƒfƒBƒXƒvƒŒƒC‚Å‚È‚¢ê‡iƒvƒŠƒ“ƒ^‚Ìê‡j‚ÍA
-	//	ƒNƒŠƒbƒvƒŠ[ƒWƒ‡ƒ“‚ªg‚¦‚È‚¢ê‡‚ª‚ ‚è‚Ü‚·B
+	//bIsDisplay = çœŸãªã‚‰ã€pIfDcdTarget ã¯ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã§ã™ã€‚
+	//	ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã§ãªã„å ´åˆï¼ˆãƒ—ãƒªãƒ³ã‚¿ã®å ´åˆï¼‰ã¯ã€
+	//	ã‚¯ãƒªãƒƒãƒ—ãƒªãƒ¼ã‚¸ãƒ§ãƒ³ãŒä½¿ãˆãªã„å ´åˆãŒã‚ã‚Šã¾ã™ã€‚
 	{
-		//	ƒZƒ‹‚Ì•`‰æ‚ÍA ColumnNumber ‚Ì‘å‚«‚¢•û‚©‚ç¬‚³‚¢•û‚ÉŒü‚©‚Á‚Ä
-		//	s‚¢‚Ü‚·B
-		//	‚±‚ê‚ÍAAttachCell ‚Æ AttachedCell ‚ª
-		//	 FixColumnCount -1 ‚Ì—ñ‚ÌŒrü
-		//	‚ğ‚Ü‚½‚¢‚Å‚¢‚éê‡‚Å‚àA FixColumn ‚ğŒã‚É•`‰æ‚·‚é‚±‚Æ‚É‚æ‚èA
-		//	FixColumn ‚Ì•û‚ğ‰Â‹‚É‚·‚é‚½‚ß‚Å‚·B
+		//	ã‚»ãƒ«ã®æç”»ã¯ã€ ColumnNumber ã®å¤§ãã„æ–¹ã‹ã‚‰å°ã•ã„æ–¹ã«å‘ã‹ã£ã¦
+		//	è¡Œã„ã¾ã™ã€‚
+		//	ã“ã‚Œã¯ã€AttachCell ã¨ AttachedCell ãŒ
+		//	 FixColumnCount -1 ã®åˆ—ã®ç½«ç·š
+		//	ã‚’ã¾ãŸã„ã§ã„ã‚‹å ´åˆã§ã‚‚ã€ FixColumn ã‚’å¾Œã«æç”»ã™ã‚‹ã“ã¨ã«ã‚ˆã‚Šã€
+		//	FixColumn ã®æ–¹ã‚’å¯è¦–ã«ã™ã‚‹ãŸã‚ã§ã™ã€‚
 		int iYColumnNumber ;
 		for ( iYColumnNumber = getYColumnCount() - 1  ; iYColumnNumber >= 0 ;
 				iYColumnNumber -- ){
@@ -973,30 +973,30 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 					iXColumnNumber , iYColumnNumber ) ;
 				if ( !( aCdDcdZoneXy.getX().getSize() > 0 && 
 						aCdDcdZoneXy.getY().getSize() > 0 ) ){
-					//	ƒZƒ‹‚ÌƒTƒCƒY‚ª‚O‚Ìê‡‚ÍA
-					//	Œã‘±‚Ìˆ—‚Ís‚¢‚Ü‚¹‚ñ
+					//	ã‚»ãƒ«ã®ã‚µã‚¤ã‚ºãŒï¼ã®å ´åˆã¯ã€
+					//	å¾Œç¶šã®å‡¦ç†ã¯è¡Œã„ã¾ã›ã‚“
 					continue ;
 				}
 				CaDcdTargetItemPosition	aTarget( 
 						pIfDcdTarget , aCdDcdZoneXy ) ;
 				if ( !aTarget.isDrawable() ){
-					//	ƒZƒ‹‚ÌˆÊ’u‚ª•`‰æ‰Â”\‚È—Ìˆæ‚Å‚È‚¢ê‡‚ÍA
-					//	Œã‘±‚Ìˆ—‚Ís‚¢‚Ü‚¹‚ñ
+					//	ã‚»ãƒ«ã®ä½ç½®ãŒæç”»å¯èƒ½ãªé ˜åŸŸã§ãªã„å ´åˆã¯ã€
+					//	å¾Œç¶šã®å‡¦ç†ã¯è¡Œã„ã¾ã›ã‚“
 					continue ;
 				}
 
 				// --------------------------------
 
-				//	‚±‚ÌƒZƒ‹‚ÍA•`‰æ‰Â”\‚È—Ìˆæ‚É‚©‚©‚Á‚Ä‚¢‚Ü‚·B
+				//	ã“ã®ã‚»ãƒ«ã¯ã€æç”»å¯èƒ½ãªé ˜åŸŸã«ã‹ã‹ã£ã¦ã„ã¾ã™ã€‚
 				CDcdGridCell* pCell = 
 					getCell( iXColumnNumber , iYColumnNumber ) ;
 				if ( pCell->getXAttachCellCount() == 1 && 
 						pCell->getYAttachCellCount() == 1 ){
-					//	‚±‚ÌƒZƒ‹‚ÍA‚Ç‚ÌƒZƒ‹‚É‚àŒ‹‡‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
-					//	“Æ—§ƒZƒ‹‚Å‚·B
+					//	ã“ã®ã‚»ãƒ«ã¯ã€ã©ã®ã‚»ãƒ«ã«ã‚‚çµåˆã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
+					//	ç‹¬ç«‹ã‚»ãƒ«ã§ã™ã€‚
 					bRv |= pCell->getIfDcDraw()->DcDraw( &aTarget ) ;
 				}	else 	{
-					//	‚±‚ÌƒZƒ‹‚ÍA‘¼‚ÌƒZƒ‹‚©‚çŒ‹‡‚³‚ê‚Ä‚¢‚Ü‚·
+					//	ã“ã®ã‚»ãƒ«ã¯ã€ä»–ã®ã‚»ãƒ«ã‹ã‚‰çµåˆã•ã‚Œã¦ã„ã¾ã™
 					CdDcdZoneXy	aCdDcdZoneXyScrolling = 
 						getCellZoneOverlap( pIfDcdTarget ,
 							iXColumnNumber ,
@@ -1005,12 +1005,12 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 						pIfDcdTarget , aCdDcdZoneXyScrolling ) ;
 					if ( aTarget.isDrawable() ){
 						if ( bIsDisplay ){
-							//ClipRgng—p
+							//ClipRgnä½¿ç”¨
 
-							//	‚±‚Ì‹æŠÔ‚ÍAƒfƒBƒXƒvƒŒƒC‚Ìê‡‚É‚Ì‚İ
-							//	’Ês‚µ‚Ü‚·B
-							//	CaDcdTargetClip(ClipRgn)‚ÍA
-							//	ƒvƒŠƒ“ƒ^‚É‚Í–³Œø‚Å‚·B
+							//	ã“ã®åŒºé–“ã¯ã€ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã®å ´åˆã«ã®ã¿
+							//	é€šè¡Œã—ã¾ã™ã€‚
+							//	CaDcdTargetClip(ClipRgn)ã¯ã€
+							//	ãƒ—ãƒªãƒ³ã‚¿ã«ã¯ç„¡åŠ¹ã§ã™ã€‚
 							CaDcdTargetClip	aTargetClip( 
 								&aTargetItemPosition , 
 								aCdDcdZoneXy ) ;
@@ -1018,7 +1018,7 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 							bRv |= pCell->getIfDcDraw()->
 								DcDraw( &aTargetClip ) ;
 						}	else	{
-							//ClipRgn•sg—p
+							//ClipRgnä¸ä½¿ç”¨
 							bRv |= pCell->getIfDcDraw()->
 								DcDraw( &aTargetItemPosition ) ;
 						}
@@ -1029,10 +1029,10 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 	}
 
 	// --------------------------------
-	//	Zone00‚ÌŒrü•`‰æ
+	//	Zone00ã®ç½«ç·šæç”»
 	// --------------------------------
 	{
-		//	ƒNƒŠƒbƒv‚ğİ’è
+		//	ã‚¯ãƒªãƒƒãƒ—ã‚’è¨­å®š
 		CdDcdZoneXy aZoneXyClip ;
 		{
 			CdDcdZone	zoneBorderX0 = getXColumnBorderZone( pIfDcdTarget , -1 ) ;
@@ -1045,27 +1045,27 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 		CaDcdTargetClip	aTargetClip( pIfDcdTarget , aZoneXyClip ) ;
 		aTargetClip.validate() ;
 
-		//	XBorder‚ÌŒrü•`‰æ
+		//	XBorderã®ç½«ç·šæç”»
 		for ( int iXColumnIndex = 0 ; iXColumnIndex < m_iXFixColumnCount && iXColumnIndex < getXColumnCount()  ; iXColumnIndex ++ )
 		{
 			DcDraw_DrawXColumn( true , &aTargetClip , iXColumnIndex ) ;
 		}
 
 
-		//	YBorder‚ÌŒrü•`‰æ
+		//	YBorderã®ç½«ç·šæç”»
 		for ( int iYColumnIndex = 0 ; iYColumnIndex < m_iYFixColumnCount && iYColumnIndex < getYColumnCount()  ; iYColumnIndex ++ )
 		{
 			DcDraw_DrawYColumn( true , &aTargetClip , iYColumnIndex ) ;
 		}
-		//ˆê”ÔŠO‘¤‚ÌŒrü‚ÍAÅŒã‚É•`‰æ‚µ‚Ü‚·
+		//ä¸€ç•ªå¤–å´ã®ç½«ç·šã¯ã€æœ€å¾Œã«æç”»ã—ã¾ã™
 		DcDraw_DrawXColumn( true , &aTargetClip , -1 ) ;
 		DcDraw_DrawYColumn( true , &aTargetClip , -1 ) ;
 	}
 	// --------------------------------
-	//	Zone10‚ÌŒrü•`‰æ
+	//	Zone10ã®ç½«ç·šæç”»
 	// --------------------------------
 	{
-		//	ƒNƒŠƒbƒv‚ğİ’è
+		//	ã‚¯ãƒªãƒƒãƒ—ã‚’è¨­å®š
 		CdDcdZoneXy aZoneXyClip ;
 		{
 			CdDcdZone	zoneBorderX0 = getXColumnZone( pIfDcdTarget , m_iXFixColumnCount ) ;
@@ -1078,26 +1078,26 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 		CaDcdTargetClip	aTargetClip( pIfDcdTarget , aZoneXyClip ) ;
 		aTargetClip.validate() ;
 
-		//	XBorder‚ÌŒrü•`‰æ
+		//	XBorderã®ç½«ç·šæç”»
 		for ( int iXColumnIndex = m_iXFixColumnCount ; iXColumnIndex < getXColumnCount() - 1 ; iXColumnIndex ++ )
 		{
 			DcDraw_DrawXColumn( true , &aTargetClip , iXColumnIndex ) ;
 		}
-		//	YBorder‚ÌŒrü•`‰æ
+		//	YBorderã®ç½«ç·šæç”»
 		for ( int iYColumnIndex = 0 ; iYColumnIndex < m_iYFixColumnCount && iYColumnIndex < getYColumnCount()  ; iYColumnIndex ++ )
 		{
 			DcDraw_DrawYColumn( false , &aTargetClip , iYColumnIndex ) ;
 		}
-		//	ˆê”ÔŠO‘¤‚ÌŒrü‚ÍAÅŒã‚É•`‰æ‚µ‚Ü‚·B
+		//	ä¸€ç•ªå¤–å´ã®ç½«ç·šã¯ã€æœ€å¾Œã«æç”»ã—ã¾ã™ã€‚
 		DcDraw_DrawXColumn( true , &aTargetClip , getXColumnCount() -1 ) ;
 		DcDraw_DrawYColumn( false , &aTargetClip , -1 ) ;
 
 	}
 	// --------------------------------
-	//	Zone01‚ÌŒrü•`‰æ
+	//	Zone01ã®ç½«ç·šæç”»
 	// --------------------------------
 	{
-		//	ƒNƒŠƒbƒv‚ğİ’è
+		//	ã‚¯ãƒªãƒƒãƒ—ã‚’è¨­å®š
 		CdDcdZoneXy aZoneXyClip ;
 		{
 			CdDcdZone	zoneBorderX0 = getXColumnBorderZone( pIfDcdTarget , -1 ) ;
@@ -1110,26 +1110,26 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 		CaDcdTargetClip	aTargetClip( pIfDcdTarget , aZoneXyClip ) ;
 		aTargetClip.validate() ;
 
-		//	XBorder‚ÌŒrü•`‰æ
+		//	XBorderã®ç½«ç·šæç”»
 		for ( int iXColumnIndex = 0 ; iXColumnIndex < m_iXFixColumnCount && iXColumnIndex < getXColumnCount()  ; iXColumnIndex ++ )
 		{
 			DcDraw_DrawXColumn( false , &aTargetClip , iXColumnIndex ) ;
 		}
-		//	YBorder‚ÌŒrü•`‰æ
+		//	YBorderã®ç½«ç·šæç”»
 		for ( int iYColumnIndex = m_iYFixColumnCount ; iYColumnIndex < getYColumnCount() - 1 ; iYColumnIndex ++ )
 		{
 			DcDraw_DrawYColumn( true , &aTargetClip , iYColumnIndex ) ;
 		}
 
-		//	ˆê”ÔŠO‘¤‚ÌŒrü‚ÍAÅŒã‚É•`‰æ‚µ‚Ü‚·B
+		//	ä¸€ç•ªå¤–å´ã®ç½«ç·šã¯ã€æœ€å¾Œã«æç”»ã—ã¾ã™ã€‚
 		DcDraw_DrawXColumn( false , &aTargetClip , -1  ) ;
 		DcDraw_DrawYColumn( true , &aTargetClip , getYColumnCount() -1 ) ;
 	}
 	// --------------------------------
-	//	Zone11‚ÌŒrü•`‰æ
+	//	Zone11ã®ç½«ç·šæç”»
 	// --------------------------------
 	{
-		//	ƒNƒŠƒbƒv‚ğİ’è
+		//	ã‚¯ãƒªãƒƒãƒ—ã‚’è¨­å®š
 		CdDcdZoneXy aZoneXyClip ;
 		{
 			CdDcdZone	zoneBorderX0 = getXColumnZone( pIfDcdTarget , m_iXFixColumnCount ) ;
@@ -1142,17 +1142,17 @@ bool CDcdGrid::DcDraw( IfDcdTarget* pIfDcdTarget )
 		CaDcdTargetClip	aTargetClip( pIfDcdTarget , aZoneXyClip ) ;
 		aTargetClip.validate() ;
 
-		//	XBorder‚ÌŒrü•`‰æ
+		//	XBorderã®ç½«ç·šæç”»
 		for ( int iXColumnIndex = m_iXFixColumnCount ; iXColumnIndex < getXColumnCount() - 1 ; iXColumnIndex ++ )
 		{
 			DcDraw_DrawXColumn( false , &aTargetClip , iXColumnIndex ) ;
 		}
-		//	YBorder‚ÌŒrü•`‰æ
+		//	YBorderã®ç½«ç·šæç”»
 		for ( int iYColumnIndex = m_iYFixColumnCount ; iYColumnIndex < getYColumnCount() - 1 ; iYColumnIndex ++ )
 		{
 			DcDraw_DrawYColumn( false , &aTargetClip , iYColumnIndex ) ;
 		}
-		//	ˆê”ÔŠO‘¤‚ÌŒrü‚ÍAÅŒã‚É•`‰æ‚µ‚Ü‚·B
+		//	ä¸€ç•ªå¤–å´ã®ç½«ç·šã¯ã€æœ€å¾Œã«æç”»ã—ã¾ã™ã€‚
 		DcDraw_DrawXColumn( false , &aTargetClip , getXColumnCount() -1 ) ;
 		DcDraw_DrawYColumn( false , &aTargetClip , getYColumnCount() -1  ) ;
 	}
@@ -1170,7 +1170,7 @@ bool CDcdGrid::getItemSize( IfDcdTarget* pIfDcdTarget ,
 {
 	bool	bRv = false ;
 	// --------------------------------
-	//	NULL•ÛŒ¯
+	//	NULLä¿é™º
 	// --------------------------------
 	CdDcdSizeXy	aCdDcdSizeXy ;
 	if ( pCdDcdSizeXy == NULL ){
@@ -1198,7 +1198,7 @@ bool CDcdGrid::getItemSize( IfDcdTarget* pIfDcdTarget ,
 //	CDcdGrid
 // ********************************
 	// --------------------------------
-	//@name sE—ñEƒZƒ‹‚Ì‰Šú‰»
+	//@name è¡Œãƒ»åˆ—ãƒ»ã‚»ãƒ«ã®åˆæœŸåŒ–
 	// --------------------------------
 void CDcdGrid::OnCreateXColumn( int iXColumnNumber , 
 		CDcdGridXColumn* pCDcdGridXColumn ) 
@@ -1259,7 +1259,7 @@ void CDcdGrid::OnDeleteCell( int iXColumnNumber , int iYColumnNumber ,
 
 
 	// ********************************
-	///	@name Y—ñEX—ñ‚Ì”
+	///	@name Yåˆ—ãƒ»Xåˆ—ã®æ•°
 	// ********************************
 int CDcdGrid::getYColumnCount() 
 {
@@ -1295,7 +1295,7 @@ CDcdGrid& CDcdGrid::setXColumnCount( int ev )
 	return ( *this ) ;
 }
 	// ********************************
-	///	@name Y—ñEX—ñ‚ğ‘}“ü/íœ
+	///	@name Yåˆ—ãƒ»Xåˆ—ã‚’æŒ¿å…¥/å‰Šé™¤
 	// ********************************
 int CDcdGrid::insertYColumn( int iYColumnNumber ) 
 {
@@ -1343,7 +1343,7 @@ int CDcdGrid::eraseXColumn( int iXColumnNumber )
 }
 
 	// ********************************
-	///	@name Y—ñEX—ñEƒZƒ‹ƒIƒuƒWƒFƒNƒg
+	///	@name Yåˆ—ãƒ»Xåˆ—ãƒ»ã‚»ãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	// ********************************
 CDcdGridYColumn* CDcdGrid::getYColumn( int iYColumnNumber )  
 {
@@ -1563,7 +1563,7 @@ int CDcdGrid::getYColumnNumberOfCell(
 	
 
 	// ********************************
-	///	@name Y—ñEX—ñ‚ÌˆÊ’u
+	///	@name Yåˆ—ãƒ»Xåˆ—ã®ä½ç½®
 	// ********************************
 CdDcdZone	CDcdGrid::getYColumnZone( IfDcdTarget* pIfDcdTarget ,
 	int iYColumnNumber ) 
@@ -1573,7 +1573,7 @@ CdDcdZone	CDcdGrid::getYColumnZone( IfDcdTarget* pIfDcdTarget ,
 	}
 
 	// --------------------------------
-	//	ƒLƒƒƒbƒVƒ…‚ª‚ ‚ê‚ÎA‚»‚ê‚ğ•Ô‚µ‚Ü‚·B
+	//	ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒã‚ã‚Œã°ã€ãã‚Œã‚’è¿”ã—ã¾ã™ã€‚
 	// --------------------------------
 	if ( m_zonecontYColumnZoneCache.size() > 0 ){
 		return ( m_zonecontYColumnZoneCache[ iYColumnNumber ] ) ;
@@ -1582,7 +1582,7 @@ CdDcdZone	CDcdGrid::getYColumnZone( IfDcdTarget* pIfDcdTarget ,
 
 	CdDcdZone	aCdDcdZone ;
 	// --------------------------------
-	//	iYColumnNumber ‚ªŒÅ’è—ñ
+	//	iYColumnNumber ãŒå›ºå®šåˆ—
 	// --------------------------------
 	if ( iYColumnNumber < m_iYFixColumnCount ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getY().getPos() ;
@@ -1593,18 +1593,18 @@ CdDcdZone	CDcdGrid::getYColumnZone( IfDcdTarget* pIfDcdTarget ,
 		aCdDcdZone.setPos( iPos ).setSize( iSize ) ;
 	}				
 	// --------------------------------
-	//	iYColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ
+	//	iYColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—
 	// --------------------------------
 	if ( m_iYFixColumnCount <= iYColumnNumber && 
 			iYColumnNumber < m_iYFixafterColumnNumber ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getY().getPos() ;
 		iPos += getYColumnsSize( pIfDcdTarget , 
 			-1 , true , m_iYFixColumnCount - 1 , true ) ;
-		//	ƒTƒCƒY‚Íƒ[ƒ‚Å‚·
+		//	ã‚µã‚¤ã‚ºã¯ã‚¼ãƒ­ã§ã™
 		aCdDcdZone.setPos( iPos ).setSize( 0 ) ;
 	}				
 	// --------------------------------
-	//	iYColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+	//	iYColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 	// --------------------------------
 	if ( m_iYFixafterColumnNumber <= iYColumnNumber ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getY().getPos() ;
@@ -1626,7 +1626,7 @@ CDcdGrid::getXColumnZone( IfDcdTarget* pIfDcdTarget ,int iXColumnNumber )
 	}
 	
 	// --------------------------------
-	//	ƒLƒƒƒbƒVƒ…‚ª‚ ‚ê‚ÎA‚»‚ê‚ğ•Ô‚µ‚Ü‚·B
+	//	ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒã‚ã‚Œã°ã€ãã‚Œã‚’è¿”ã—ã¾ã™ã€‚
 	// --------------------------------
 	if ( m_zonecontXColumnZoneCache.size() > 0 ){
 		return ( m_zonecontXColumnZoneCache[ iXColumnNumber ] ) ;
@@ -1636,7 +1636,7 @@ CDcdGrid::getXColumnZone( IfDcdTarget* pIfDcdTarget ,int iXColumnNumber )
 	
 	CdDcdZone	aCdDcdZone ;
 	// --------------------------------
-	//	iXColumnNumber ‚ªŒÅ’è—ñ
+	//	iXColumnNumber ãŒå›ºå®šåˆ—
 	// --------------------------------
 	if ( iXColumnNumber < m_iXFixColumnCount ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getX().getPos() ;
@@ -1647,18 +1647,18 @@ CDcdGrid::getXColumnZone( IfDcdTarget* pIfDcdTarget ,int iXColumnNumber )
 		aCdDcdZone.setPos( iPos ).setSize( iSize ) ;
 	}				
 	// --------------------------------
-	//	iXColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ
+	//	iXColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—
 	// --------------------------------
 	if ( m_iXFixColumnCount <= iXColumnNumber && 
 			iXColumnNumber < m_iXFixafterColumnNumber ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getX().getPos() ;
 		iPos += getXColumnsSize( pIfDcdTarget , 
 			-1 , true , m_iXFixColumnCount - 1 , true ) ;
-		//	ƒTƒCƒY‚Íƒ[ƒ‚Å‚·
+		//	ã‚µã‚¤ã‚ºã¯ã‚¼ãƒ­ã§ã™
 		aCdDcdZone.setPos( iPos ).setSize( 0 ) ;
 	}				
 	// --------------------------------
-	//	iXColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+	//	iXColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 	// --------------------------------
 	if ( m_iXFixafterColumnNumber <= iXColumnNumber ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getX().getPos() ;
@@ -1680,7 +1680,7 @@ CDcdGrid::getYColumnBorderZone( IfDcdTarget* pIfDcdTarget ,int iYColumnNumber )
 	}
 
 	// --------------------------------
-	//	ƒLƒƒƒbƒVƒ…‚ª‚ ‚ê‚ÎA‚»‚ê‚ğ•Ô‚µ‚Ü‚·B
+	//	ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒã‚ã‚Œã°ã€ãã‚Œã‚’è¿”ã—ã¾ã™ã€‚
 	// --------------------------------
 	if ( m_zonecontYColumnBorderZoneCache.size() > 0 ){
 		return ( m_zonecontYColumnBorderZoneCache[ iYColumnNumber + 1 ] ) ;
@@ -1690,7 +1690,7 @@ CDcdGrid::getYColumnBorderZone( IfDcdTarget* pIfDcdTarget ,int iYColumnNumber )
 	CdDcdZone	aCdDcdZone ;
 
 	// --------------------------------
-	//	iYColumnNumber ‚ªŒÅ’è—ñ
+	//	iYColumnNumber ãŒå›ºå®šåˆ—
 	// --------------------------------
 	if ( iYColumnNumber < m_iYFixColumnCount ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getY().getPos() ;
@@ -1701,18 +1701,18 @@ CDcdGrid::getYColumnBorderZone( IfDcdTarget* pIfDcdTarget ,int iYColumnNumber )
 		aCdDcdZone.setPos( iPos ).setSize( iSize ) ;
 	}				
 	// --------------------------------
-	//	iYColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ
+	//	iYColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—
 	// --------------------------------
 	if ( m_iYFixColumnCount <= iYColumnNumber && 
 			iYColumnNumber < m_iYFixafterColumnNumber ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getY().getPos() ;
 		iPos += getYColumnsSize( pIfDcdTarget , 
 			-1 , true , m_iYFixColumnCount - 1 , true ) ;
-		//	ƒTƒCƒY‚Íƒ[ƒ‚Å‚·
+		//	ã‚µã‚¤ã‚ºã¯ã‚¼ãƒ­ã§ã™
 		aCdDcdZone.setPos( iPos ).setSize( 0 ) ;
 	}				
 	// --------------------------------
-	//	iYColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+	//	iYColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 	// --------------------------------
 	if ( m_iYFixafterColumnNumber <= iYColumnNumber ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getY().getPos() ;
@@ -1734,7 +1734,7 @@ CDcdGrid::getXColumnBorderZone( IfDcdTarget* pIfDcdTarget ,int iXColumnNumber )
 	}
 
 	// --------------------------------
-	//	ƒLƒƒƒbƒVƒ…‚ª‚ ‚ê‚ÎA‚»‚ê‚ğ•Ô‚µ‚Ü‚·B
+	//	ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒã‚ã‚Œã°ã€ãã‚Œã‚’è¿”ã—ã¾ã™ã€‚
 	// --------------------------------
 	if ( m_zonecontXColumnBorderZoneCache.size() > 0 ){
 		return ( m_zonecontXColumnBorderZoneCache[ iXColumnNumber + 1 ] ) ;
@@ -1743,7 +1743,7 @@ CDcdGrid::getXColumnBorderZone( IfDcdTarget* pIfDcdTarget ,int iXColumnNumber )
 	CdDcdZone	aCdDcdZone ;
 
 	// --------------------------------
-	//	iXColumnNumber ‚ªŒÅ’è—ñ
+	//	iXColumnNumber ãŒå›ºå®šåˆ—
 	// --------------------------------
 	if ( iXColumnNumber < m_iXFixColumnCount ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getX().getPos() ;
@@ -1754,18 +1754,18 @@ CDcdGrid::getXColumnBorderZone( IfDcdTarget* pIfDcdTarget ,int iXColumnNumber )
 		aCdDcdZone.setPos( iPos ).setSize( iSize ) ;
 	}				
 	// --------------------------------
-	//	iXColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ
+	//	iXColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—
 	// --------------------------------
 	if ( m_iXFixColumnCount <= iXColumnNumber && 
 			iXColumnNumber < m_iXFixafterColumnNumber ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getX().getPos() ;
 		iPos += getXColumnsSize( pIfDcdTarget , 
 			-1 , true , m_iXFixColumnCount - 1 , true ) ;
-		//	ƒTƒCƒY‚Íƒ[ƒ‚Å‚·
+		//	ã‚µã‚¤ã‚ºã¯ã‚¼ãƒ­ã§ã™
 		aCdDcdZone.setPos( iPos ).setSize( 0 ) ;
 	}				
 	// --------------------------------
-	//	iXColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+	//	iXColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 	// --------------------------------
 	if ( m_iXFixafterColumnNumber <= iXColumnNumber ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getX().getPos() ;
@@ -1794,16 +1794,16 @@ CdDcdZoneXy	CDcdGrid::getCellZone(
 		) ;
 		
 		if ( pcellLefttop->getAttachTo() != NULL ){
-			//	‘¼‚ÌƒZƒ‹‚ÉŒ‹‡‚µ‚Ä‚¢‚éƒZƒ‹
-			//	(0,0)-(0,0)‚ğ•Ô‚µ‚Ü‚·B
+			//	ä»–ã®ã‚»ãƒ«ã«çµåˆã—ã¦ã„ã‚‹ã‚»ãƒ«
+			//	(0,0)-(0,0)ã‚’è¿”ã—ã¾ã™ã€‚
 			1 ;
 		}	else if ( pcellLefttop->getYAttachCellCount() == 1 &&  
 			pcellLefttop->getXAttachCellCount() == 1 ){
-			//	“Æ—§‚µ‚½iŒ‹‡‚³‚ê‚Ä‚¢‚È‚¢AŒ‹‡‚µ‚Ä‚¢‚È‚¢jƒZƒ‹
+			//	ç‹¬ç«‹ã—ãŸï¼ˆçµåˆã•ã‚Œã¦ã„ãªã„ã€çµåˆã—ã¦ã„ãªã„ï¼‰ã‚»ãƒ«
 			zonexyRv = zonexyLefttop ;
 		}	else	{	
 			CDcdGridCell*	pcellRightbottom = NULL ;
-			//	‘¼‚ÌƒZƒ‹‚ÉŒ‹‡‚³‚ê‚Ä‚¢‚éƒZƒ‹
+			//	ä»–ã®ã‚»ãƒ«ã«çµåˆã•ã‚Œã¦ã„ã‚‹ã‚»ãƒ«
 			pcellRightbottom = getCell( 
 				iXColumnNumber + pcellLefttop->getXAttachCellCount() - 1 ,
 				iYColumnNumber + pcellLefttop->getYAttachCellCount() - 1  
@@ -1838,27 +1838,27 @@ int CDcdGrid::getYColumnNumberOfPos(
 	int		iColumnNumber = -2 ;
 	bool	bIsBorder = false ;
 	// --------------------------------
-	//	¶Eã‚Ì”ÍˆÍŠO/¶Eã‚Ì‹«ŠEü
+	//	å·¦ãƒ»ä¸Šã®ç¯„å›²å¤–/å·¦ãƒ»ä¸Šã®å¢ƒç•Œç·š
 	// --------------------------------
 	{
 		CdDcdZone	aCdDcdBorderZone = getYColumnBorderZone( 
 			pIfDcdTarget , -1 ) ;
 		if ( iPos < aCdDcdBorderZone.getPos() ){
-			//	¶Eã‚Ì”ÍˆÍŠO
+			//	å·¦ãƒ»ä¸Šã®ç¯„å›²å¤–
 			iColumnNumber = -1 ;
 			bIsBorder = false ;
 		}	else if ( aCdDcdBorderZone.IsInner( iPos ) ){
-			//	¶Eã‚Ì‹«ŠEü
+			//	å·¦ãƒ»ä¸Šã®å¢ƒç•Œç·š
 			iColumnNumber = -1 ;
 			bIsBorder = true ;
 			
 		}
 	}
-	//iColumnNumber = -1 ‚È‚çA¶Eã‚Ì”ÍˆÍŠO/¶Eã‚Ì‹«ŠEü
-	//	-2 ‚È‚çA—ñ”Ô†‚ª–¢’è‚Å‚·B
+	//iColumnNumber = -1 ãªã‚‰ã€å·¦ãƒ»ä¸Šã®ç¯„å›²å¤–/å·¦ãƒ»ä¸Šã®å¢ƒç•Œç·š
+	//	-2 ãªã‚‰ã€åˆ—ç•ªå·ãŒæœªå®šã§ã™ã€‚
 
 	// --------------------------------
-	//	ƒOƒŠƒbƒh”ÍˆÍ“à
+	//	ã‚°ãƒªãƒƒãƒ‰ç¯„å›²å†…
 	// --------------------------------
 	if ( iColumnNumber == -2 ){
 		for ( iColumnNumber = 0 ; 
@@ -1870,11 +1870,11 @@ int CDcdGrid::getYColumnNumberOfPos(
 				pIfDcdTarget , iColumnNumber ) ;
 
 			if ( aCdDcdZone.IsInner( iPos ) ){
-				//	—ñ‚Ì”ÍˆÍ“à
+				//	åˆ—ã®ç¯„å›²å†…
 				bIsBorder = false ;
 				break ;
 			}	else if ( aCdDcdBorderZone.IsInner( iPos ) ){
-				//	—ñ‚Ì”ÍˆÍ“à
+				//	åˆ—ã®ç¯„å›²å†…
 				bIsBorder = true ;
 				break ;
 			}
@@ -1895,27 +1895,27 @@ int CDcdGrid::getXColumnNumberOfPos(
 	int		iColumnNumber = -2 ;
 	bool	bIsBorder = false ;
 	// --------------------------------
-	//	¶Eã‚Ì”ÍˆÍŠO/¶Eã‚Ì‹«ŠEü
+	//	å·¦ãƒ»ä¸Šã®ç¯„å›²å¤–/å·¦ãƒ»ä¸Šã®å¢ƒç•Œç·š
 	// --------------------------------
 	{
 		CdDcdZone	aCdDcdBorderZone = getXColumnBorderZone( 
 			pIfDcdTarget , -1 ) ;
 		if ( iPos < aCdDcdBorderZone.getPos() ){
-			//	¶Eã‚Ì”ÍˆÍŠO
+			//	å·¦ãƒ»ä¸Šã®ç¯„å›²å¤–
 			iColumnNumber = -1 ;
 			bIsBorder = false ;
 		}	else if ( aCdDcdBorderZone.IsInner( iPos ) ){
-			//	¶Eã‚Ì‹«ŠEü
+			//	å·¦ãƒ»ä¸Šã®å¢ƒç•Œç·š
 			iColumnNumber = -1 ;
 			bIsBorder = true ;
 			
 		}
 	}
-	//iColumnNumber = -1 ‚È‚çA¶Eã‚Ì”ÍˆÍŠO/¶Eã‚Ì‹«ŠEü
-	//	-2 ‚È‚çA—ñ”Ô†‚ª–¢’è‚Å‚·B
+	//iColumnNumber = -1 ãªã‚‰ã€å·¦ãƒ»ä¸Šã®ç¯„å›²å¤–/å·¦ãƒ»ä¸Šã®å¢ƒç•Œç·š
+	//	-2 ãªã‚‰ã€åˆ—ç•ªå·ãŒæœªå®šã§ã™ã€‚
 
 	// --------------------------------
-	//	ƒOƒŠƒbƒh”ÍˆÍ“à
+	//	ã‚°ãƒªãƒƒãƒ‰ç¯„å›²å†…
 	// --------------------------------
 	if ( iColumnNumber == -2 ){
 		for ( iColumnNumber = 0 ; 
@@ -1927,11 +1927,11 @@ int CDcdGrid::getXColumnNumberOfPos(
 				pIfDcdTarget , iColumnNumber ) ;
 
 			if ( aCdDcdZone.IsInner( iPos ) ){
-				//	—ñ‚Ì”ÍˆÍ“à
+				//	åˆ—ã®ç¯„å›²å†…
 				bIsBorder = false ;
 				break ;
 			}	else if ( aCdDcdBorderZone.IsInner( iPos ) ){
-				//	—ñ‚Ì”ÍˆÍ“à
+				//	åˆ—ã®ç¯„å›²å†…
 				bIsBorder = true ;
 				break ;
 			}
@@ -1961,8 +1961,8 @@ CDcdGridCell* CDcdGrid::getCellOfPos(
 		CDcdGridCell*	pCell = getCell( iXColumnNumber , iYColumnNumber ) ;
 		if ( pCell != NULL ){
 			if ( pCell->getAttachTo() != NULL ){
-				//	Attached ƒZƒ‹‚ğw’è‚µ‚½ê‡‚ÍA
-				//	Attach ƒZƒ‹‚É•ÏŠ·
+				//	Attached ã‚»ãƒ«ã‚’æŒ‡å®šã—ãŸå ´åˆã¯ã€
+				//	Attach ã‚»ãƒ«ã«å¤‰æ›
 				pCell = pCell->getAttachTo() ;
 			}
 		}
@@ -1973,7 +1973,7 @@ CDcdGridCell* CDcdGrid::getCellOfPos(
 }
 
 	// ********************************
-	///	@name	ƒXƒNƒ[ƒ‹
+	///	@name	ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«
 	// ********************************
 int	CDcdGrid::getXFixColumnCount() 
 {
@@ -2046,10 +2046,10 @@ int CDcdGrid::calcXFixafterColumnNumberPagemove( IfDcdTarget* pIfDcdTarget ,
 				getXColumnNumberMaxInDcdTarget( pIfDcdTarget ) ;
 			if ( iFixafterColumnNumberNew < 0 )
 			{
-				//	iFixafterColumnNumberNew ‚ª•‰‚Ì”‚È‚Ì‚ÍA
-				//	pIfDcdTarget ‚É‘S‘Ì‚ğ•\¦‚Å‚«‚é—ñ‚ªˆê‚Â‚à
-				//	‚È‚¢ê‡‚Å‚·B
-				//	‚±‚Ìê‡‚ÍA–³ğŒ‚ÉŸ‚Ì—ñ‚Æ‚·‚×‚«‚Å‚·B
+				//	iFixafterColumnNumberNew ãŒè² ã®æ•°ãªã®ã¯ã€
+				//	pIfDcdTarget ã«å…¨ä½“ã‚’è¡¨ç¤ºã§ãã‚‹åˆ—ãŒä¸€ã¤ã‚‚
+				//	ãªã„å ´åˆã§ã™ã€‚
+				//	ã“ã®å ´åˆã¯ã€ç„¡æ¡ä»¶ã«æ¬¡ã®åˆ—ã¨ã™ã¹ãã§ã™ã€‚
 				iFixafterColumnNumberNew = iFixafterColumnNumber   ;
 
 			}	
@@ -2099,10 +2099,10 @@ int CDcdGrid::calcYFixafterColumnNumberPagemove( IfDcdTarget* pIfDcdTarget ,
 				getYColumnNumberMaxInDcdTarget( pIfDcdTarget ) ;
 			if ( iFixafterColumnNumberNew < 0 )
 			{
-				//	iFixafterColumnNumberNew ‚ª•‰‚Ì”‚È‚Ì‚ÍA
-				//	pIfDcdTarget ‚É‘S‘Ì‚ğ•\¦‚Å‚«‚é—ñ‚ªˆê‚Â‚à
-				//	‚È‚¢ê‡‚Å‚·B
-				//	‚±‚Ìê‡‚ÍA–³ğŒ‚ÉŸ‚Ì—ñ‚Æ‚·‚×‚«‚Å‚·B
+				//	iFixafterColumnNumberNew ãŒè² ã®æ•°ãªã®ã¯ã€
+				//	pIfDcdTarget ã«å…¨ä½“ã‚’è¡¨ç¤ºã§ãã‚‹åˆ—ãŒä¸€ã¤ã‚‚
+				//	ãªã„å ´åˆã§ã™ã€‚
+				//	ã“ã®å ´åˆã¯ã€ç„¡æ¡ä»¶ã«æ¬¡ã®åˆ—ã¨ã™ã¹ãã§ã™ã€‚
 				iFixafterColumnNumberNew = iFixafterColumnNumber   ;
 			}	
 			iFixafterColumnNumberNew ++ ;
@@ -2125,7 +2125,7 @@ int CDcdGrid::calcYFixafterColumnNumberPagemove( IfDcdTarget* pIfDcdTarget ,
 
 
 	// ********************************
-	///	@name	ƒZƒ‹‚ÌŒ‹‡
+	///	@name	ã‚»ãƒ«ã®çµåˆ
 	// ********************************
 
 CdDcdZone	CDcdGrid::getYColumnZoneOverlap( 
@@ -2136,7 +2136,7 @@ CdDcdZone	CDcdGrid::getYColumnZoneOverlap(
 	}
 
 	// --------------------------------
-	//	ƒLƒƒƒbƒVƒ…‚ª‚ ‚ê‚ÎA‚»‚ê‚ğ•Ô‚µ‚Ü‚·B
+	//	ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒã‚ã‚Œã°ã€ãã‚Œã‚’è¿”ã—ã¾ã™ã€‚
 	// --------------------------------
 	if ( m_zonecontYColumnZoneOverlapCache.size() > 0 ){
 		return ( m_zonecontYColumnZoneOverlapCache[ iYColumnNumber ] ) ;
@@ -2145,7 +2145,7 @@ CdDcdZone	CDcdGrid::getYColumnZoneOverlap(
 
 	CdDcdZone	aCdDcdZone ;
 	// --------------------------------
-	//	iYColumnNumber ‚ªŒÅ’è—ñ
+	//	iYColumnNumber ãŒå›ºå®šåˆ—
 	// --------------------------------
 	if ( iYColumnNumber < m_iYFixColumnCount ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getY().getPos() ;
@@ -2156,7 +2156,7 @@ CdDcdZone	CDcdGrid::getYColumnZoneOverlap(
 		aCdDcdZone.setPos( iPos ).setSize( iSize ) ;
 	}				
 	// --------------------------------
-	//	iYColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ,ƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+	//	iYColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—,ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 	// --------------------------------
 	if ( m_iYFixColumnCount <= iYColumnNumber  ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getY().getPos() ;
@@ -2179,7 +2179,7 @@ CdDcdZone	CDcdGrid::getXColumnZoneOverlap(
 	}
 
 	// --------------------------------
-	//	ƒLƒƒƒbƒVƒ…‚ª‚ ‚ê‚ÎA‚»‚ê‚ğ•Ô‚µ‚Ü‚·B
+	//	ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒã‚ã‚Œã°ã€ãã‚Œã‚’è¿”ã—ã¾ã™ã€‚
 	// --------------------------------
 	if ( m_zonecontXColumnZoneOverlapCache.size() > 0 ){
 		return ( m_zonecontXColumnZoneOverlapCache[ iXColumnNumber ] ) ;
@@ -2189,7 +2189,7 @@ CdDcdZone	CDcdGrid::getXColumnZoneOverlap(
 
 	CdDcdZone	aCdDcdZone ;
 	// --------------------------------
-	//	iXColumnNumber ‚ªŒÅ’è—ñ
+	//	iXColumnNumber ãŒå›ºå®šåˆ—
 	// --------------------------------
 	if ( iXColumnNumber < m_iXFixColumnCount ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getX().getPos() ;
@@ -2200,7 +2200,7 @@ CdDcdZone	CDcdGrid::getXColumnZoneOverlap(
 		aCdDcdZone.setPos( iPos ).setSize( iSize ) ;
 	}				
 	// --------------------------------
-	//	iXColumnNumber ‚ªƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ,ƒXƒNƒ[ƒ‹ƒAƒEƒg—ñ‚Ì‚ ‚Æ
+	//	iXColumnNumber ãŒã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—,ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¢ã‚¦ãƒˆåˆ—ã®ã‚ã¨
 	// --------------------------------
 	if ( m_iXFixColumnCount <= iXColumnNumber  ){
 		DcdPos	iPos = pIfDcdTarget->getZone().getX().getPos() ;
@@ -2229,15 +2229,15 @@ CdDcdZoneXy	CDcdGrid::getCellZoneOverlap(
 		) ;
 		
 		if ( pcellLefttop->getAttachTo() != NULL ){
-			//	‘¼‚ÌƒZƒ‹‚ÉŒ‹‡‚µ‚Ä‚¢‚éƒZƒ‹
+			//	ä»–ã®ã‚»ãƒ«ã«çµåˆã—ã¦ã„ã‚‹ã‚»ãƒ«
 			1 ;
 		}	else if ( pcellLefttop->getYAttachCellCount() == 1 &&  
 			pcellLefttop->getXAttachCellCount() == 1 ){
-			//	“Æ—§‚µ‚½iŒ‹‡‚³‚ê‚Ä‚¢‚È‚¢AŒ‹‡‚µ‚Ä‚¢‚È‚¢jƒZƒ‹
+			//	ç‹¬ç«‹ã—ãŸï¼ˆçµåˆã•ã‚Œã¦ã„ãªã„ã€çµåˆã—ã¦ã„ãªã„ï¼‰ã‚»ãƒ«
 			zonexyRv = zonexyLefttop ;
 		}	else	{
 			CDcdGridCell*	pcellRightbottom = NULL ;
-			//	‘¼‚ÌƒZƒ‹‚ÉŒ‹‡‚³‚ê‚Ä‚¢‚éƒZƒ‹
+			//	ä»–ã®ã‚»ãƒ«ã«çµåˆã•ã‚Œã¦ã„ã‚‹ã‚»ãƒ«
 			pcellRightbottom = getCell( 
 				iXColumnNumber + 
 					pcellLefttop->getXAttachCellCount() - 1 ,
@@ -2267,7 +2267,7 @@ CdDcdZoneXy	CDcdGrid::getCellZoneOverlap(
 }
 	
 	// ********************************
-	//	@name	‘€ì
+	//	@name	æ“ä½œ
 	// ********************************
 CDcdGridCell* CDcdGrid::calcMovedCell( 
 	CDcdGridCell* pCDcdGridCell ,
@@ -2278,7 +2278,7 @@ CDcdGridCell* CDcdGrid::calcMovedCell(
 	int iYColumnNumber = getYColumnNumberOfCell( pCDcdGridCell ) ;
 
 	// --------------------------------	
-	//	iXColumnNumber ‚ğˆÚ“®
+	//	iXColumnNumber ã‚’ç§»å‹•
 	// --------------------------------	
 	while ( 0 < iXColumnMoveCount ){
 		CDcdGridCell*	pCell = getCell( iXColumnNumber , iYColumnNumber ) ;
@@ -2290,28 +2290,28 @@ CDcdGridCell* CDcdGrid::calcMovedCell(
 		iXColumnNumber = iNewColumnNumber ;
 
 
-		//	bSkipScrolloutColumn ‚ª
-		//	^‚ÅA Cell(iXColumnNumber,iYColumnNumber)‚ª
-		//	 ScrolloutColumn ‚Å‚ ‚é‚È‚çA
-		//	ScrolloutColumn ‚ğ”ò‚Ñ‰z‚¦‚ÄˆÚ“®‚µ‚Ü‚·
-		//	iƒ‹[ƒvƒJƒEƒ“ƒ^ iXColumnMoveCount ‚ğŒ¸‚ç‚µ‚Ü‚¹‚ñjB
+		//	bSkipScrolloutColumn ãŒ
+		//	çœŸã§ã€ Cell(iXColumnNumber,iYColumnNumber)ãŒ
+		//	 ScrolloutColumn ã§ã‚ã‚‹ãªã‚‰ã€
+		//	ScrolloutColumn ã‚’é£›ã³è¶Šãˆã¦ç§»å‹•ã—ã¾ã™
+		//	ï¼ˆãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ã‚¿ iXColumnMoveCount ã‚’æ¸›ã‚‰ã—ã¾ã›ã‚“ï¼‰ã€‚
 		//
-		//	‚½‚¾‚µA Cell(iXColumnNumber,iYColumnNumber) ‚ª
-		//	Œ‹‡ƒZƒ‹‚ÅA
-		//	”íŒ‹‡ƒZƒ‹‚Ìˆê•”‚ª ScrolloutColumn ‚É
-		//	‚È‚Á‚Ä‚¢‚È‚¢ê‡‚ÍA
-		//	‚»‚ÌƒZƒ‹‚Ö‚ÌˆÚ“®‚Í‰Â”\‚Æ‚µ‚Ü‚·B
+		//	ãŸã ã—ã€ Cell(iXColumnNumber,iYColumnNumber) ãŒ
+		//	çµåˆã‚»ãƒ«ã§ã€
+		//	è¢«çµåˆã‚»ãƒ«ã®ä¸€éƒ¨ãŒ ScrolloutColumn ã«
+		//	ãªã£ã¦ã„ãªã„å ´åˆã¯ã€
+		//	ãã®ã‚»ãƒ«ã¸ã®ç§»å‹•ã¯å¯èƒ½ã¨ã—ã¾ã™ã€‚
 		if ( bSkipScrolloutColumn ){
 			if ( getXFixColumnCount() <= iXColumnNumber && 
 					iXColumnNumber < getXFixafterColumnNumber() ){
 				pCell = getCell( iXColumnNumber , iYColumnNumber ) ;
 				if ( iXColumnNumber + pCell->getXAttachCellCount() <=
 						getXFixafterColumnNumber() ){
-					//	Œ‹‡ƒZƒ‹‚Å‚·‚ªAA‘S•”‚Ì”íŒ‹‡ƒZƒ‹‚ª
-					//	 ScrolloutColumn ‚É‚È‚Á‚Ä‚¢‚Ü‚·B
+					//	çµåˆã‚»ãƒ«ã§ã™ãŒã€ã€å…¨éƒ¨ã®è¢«çµåˆã‚»ãƒ«ãŒ
+					//	 ScrolloutColumn ã«ãªã£ã¦ã„ã¾ã™ã€‚
 					//
-					//	ScrolloutColumn ‚ğ”ò‚Ñ‰z‚¦‚ÄˆÚ“®‚µ‚Ü‚·
-					//	iƒ‹[ƒvƒJƒEƒ“ƒ^ iXColumnMoveCount ‚ğŒ¸‚ç‚µ‚Ü‚¹‚ñjB
+					//	ScrolloutColumn ã‚’é£›ã³è¶Šãˆã¦ç§»å‹•ã—ã¾ã™
+					//	ï¼ˆãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ã‚¿ iXColumnMoveCount ã‚’æ¸›ã‚‰ã—ã¾ã›ã‚“ï¼‰ã€‚
 					continue ;
 				}
 			}
@@ -2331,28 +2331,28 @@ CDcdGridCell* CDcdGrid::calcMovedCell(
 		}
 		iXColumnNumber = iXColumnNumber - pCell->getXAttachCellCount() ;
 
-		//	bSkipScrolloutColumn ‚ª
-		//	^‚ÅA Cell(iXColumnNumber,iYColumnNumber)‚ª
-		//	 ScrolloutColumn ‚Å‚ ‚é‚È‚çA
-		//	ScrolloutColumn ‚ğ”ò‚Ñ‰z‚¦‚ÄˆÚ“®‚µ‚Ü‚·
-		//	iƒ‹[ƒvƒJƒEƒ“ƒ^ iXColumnMoveCount ‚ğŒ¸‚ç‚µ‚Ü‚¹‚ñjB
+		//	bSkipScrolloutColumn ãŒ
+		//	çœŸã§ã€ Cell(iXColumnNumber,iYColumnNumber)ãŒ
+		//	 ScrolloutColumn ã§ã‚ã‚‹ãªã‚‰ã€
+		//	ScrolloutColumn ã‚’é£›ã³è¶Šãˆã¦ç§»å‹•ã—ã¾ã™
+		//	ï¼ˆãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ã‚¿ iXColumnMoveCount ã‚’æ¸›ã‚‰ã—ã¾ã›ã‚“ï¼‰ã€‚
 		//
-		//	‚½‚¾‚µA Cell(iXColumnNumber,iYColumnNumber) ‚ª
-		//	Œ‹‡ƒZƒ‹‚ÅA
-		//	”íŒ‹‡ƒZƒ‹‚Ìˆê•”‚ª ScrolloutColumn ‚É
-		//	‚È‚Á‚Ä‚¢‚È‚¢ê‡‚ÍA
-		//	‚»‚ÌƒZƒ‹‚Ö‚ÌˆÚ“®‚Í‰Â”\‚Æ‚µ‚Ü‚·B
+		//	ãŸã ã—ã€ Cell(iXColumnNumber,iYColumnNumber) ãŒ
+		//	çµåˆã‚»ãƒ«ã§ã€
+		//	è¢«çµåˆã‚»ãƒ«ã®ä¸€éƒ¨ãŒ ScrolloutColumn ã«
+		//	ãªã£ã¦ã„ãªã„å ´åˆã¯ã€
+		//	ãã®ã‚»ãƒ«ã¸ã®ç§»å‹•ã¯å¯èƒ½ã¨ã—ã¾ã™ã€‚
 		if ( bSkipScrolloutColumn ){
 			if ( getXFixColumnCount() <= iXColumnNumber && 
 					iXColumnNumber < getXFixafterColumnNumber() ){
 				pCell = getCell( iXColumnNumber , iYColumnNumber ) ;
 				if ( iXColumnNumber + pCell->getXAttachCellCount() <=
 						getXFixafterColumnNumber() ){
-					//	Œ‹‡ƒZƒ‹‚Å‚·‚ªAA‘S•”‚Ì”íŒ‹‡ƒZƒ‹‚ª
-					//	 ScrolloutColumn ‚É‚È‚Á‚Ä‚¢‚Ü‚·B
+					//	çµåˆã‚»ãƒ«ã§ã™ãŒã€ã€å…¨éƒ¨ã®è¢«çµåˆã‚»ãƒ«ãŒ
+					//	 ScrolloutColumn ã«ãªã£ã¦ã„ã¾ã™ã€‚
 					//
-					//	ScrolloutColumn ‚ğ”ò‚Ñ‰z‚¦‚ÄˆÚ“®‚µ‚Ü‚·
-					//	iƒ‹[ƒvƒJƒEƒ“ƒ^ iXColumnMoveCount ‚ğŒ¸‚ç‚µ‚Ü‚¹‚ñjB
+					//	ScrolloutColumn ã‚’é£›ã³è¶Šãˆã¦ç§»å‹•ã—ã¾ã™
+					//	ï¼ˆãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ã‚¿ iXColumnMoveCount ã‚’æ¸›ã‚‰ã—ã¾ã›ã‚“ï¼‰ã€‚
 					continue ;
 				}
 			}
@@ -2361,7 +2361,7 @@ CDcdGridCell* CDcdGrid::calcMovedCell(
 		iXColumnMoveCount ++ ;
 	}
 	// --------------------------------	
-	//	iYColumnNumber ‚ğˆÚ“®
+	//	iYColumnNumber ã‚’ç§»å‹•
 	// --------------------------------	
 
 	while ( 0 < iYColumnMoveCount ){
@@ -2373,28 +2373,28 @@ CDcdGridCell* CDcdGrid::calcMovedCell(
 		}
 		iYColumnNumber = iNewColumnNumber ;
 
-		//	bSkipScrolloutColumn ‚ª
-		//	^‚ÅA Cell(iXColumnNumber,iYColumnNumber)‚ª
-		//	 ScrolloutColumn ‚Å‚ ‚é‚È‚çA
-		//	ScrolloutColumn ‚ğ”ò‚Ñ‰z‚¦‚ÄˆÚ“®‚µ‚Ü‚·
-		//	iƒ‹[ƒvƒJƒEƒ“ƒ^ iYColumnMoveCount ‚ğŒ¸‚ç‚µ‚Ü‚¹‚ñjB
+		//	bSkipScrolloutColumn ãŒ
+		//	çœŸã§ã€ Cell(iXColumnNumber,iYColumnNumber)ãŒ
+		//	 ScrolloutColumn ã§ã‚ã‚‹ãªã‚‰ã€
+		//	ScrolloutColumn ã‚’é£›ã³è¶Šãˆã¦ç§»å‹•ã—ã¾ã™
+		//	ï¼ˆãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ã‚¿ iYColumnMoveCount ã‚’æ¸›ã‚‰ã—ã¾ã›ã‚“ï¼‰ã€‚
 		//
-		//	‚½‚¾‚µA Cell(iXColumnNumber,iYColumnNumber) ‚ª
-		//	Œ‹‡ƒZƒ‹‚ÅA
-		//	”íŒ‹‡ƒZƒ‹‚Ìˆê•”‚ª ScrolloutColumn ‚É
-		//	‚È‚Á‚Ä‚¢‚È‚¢ê‡‚ÍA
-		//	‚»‚ÌƒZƒ‹‚Ö‚ÌˆÚ“®‚Í‰Â”\‚Æ‚µ‚Ü‚·B
+		//	ãŸã ã—ã€ Cell(iXColumnNumber,iYColumnNumber) ãŒ
+		//	çµåˆã‚»ãƒ«ã§ã€
+		//	è¢«çµåˆã‚»ãƒ«ã®ä¸€éƒ¨ãŒ ScrolloutColumn ã«
+		//	ãªã£ã¦ã„ãªã„å ´åˆã¯ã€
+		//	ãã®ã‚»ãƒ«ã¸ã®ç§»å‹•ã¯å¯èƒ½ã¨ã—ã¾ã™ã€‚
 		if ( bSkipScrolloutColumn ){
 			if ( getYFixColumnCount() <= iYColumnNumber && 
 					iYColumnNumber < getYFixafterColumnNumber() ){
 				pCell = getCell( iXColumnNumber , iYColumnNumber ) ;
 				if ( iYColumnNumber + pCell->getYAttachCellCount() <=
 						getYFixafterColumnNumber() ){
-					//	Œ‹‡ƒZƒ‹‚Å‚·‚ªAA‘S•”‚Ì”íŒ‹‡ƒZƒ‹‚ª
-					//	 ScrolloutColumn ‚É‚È‚Á‚Ä‚¢‚Ü‚·B
+					//	çµåˆã‚»ãƒ«ã§ã™ãŒã€ã€å…¨éƒ¨ã®è¢«çµåˆã‚»ãƒ«ãŒ
+					//	 ScrolloutColumn ã«ãªã£ã¦ã„ã¾ã™ã€‚
 					//
-					//	ScrolloutColumn ‚ğ”ò‚Ñ‰z‚¦‚ÄˆÚ“®‚µ‚Ü‚·
-					//	iƒ‹[ƒvƒJƒEƒ“ƒ^ iYColumnMoveCount ‚ğŒ¸‚ç‚µ‚Ü‚¹‚ñjB
+					//	ScrolloutColumn ã‚’é£›ã³è¶Šãˆã¦ç§»å‹•ã—ã¾ã™
+					//	ï¼ˆãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ã‚¿ iYColumnMoveCount ã‚’æ¸›ã‚‰ã—ã¾ã›ã‚“ï¼‰ã€‚
 					continue ;
 				}
 			}
@@ -2413,28 +2413,28 @@ CDcdGridCell* CDcdGrid::calcMovedCell(
 		}	
 		iYColumnNumber = iYColumnNumber - pCell->getYAttachCellCount() ;
 
-		//	bSkipScrolloutColumn ‚ª
-		//	^‚ÅA Cell(iXColumnNumber,iYColumnNumber)‚ª
-		//	 ScrolloutColumn ‚Å‚ ‚é‚È‚çA
-		//	ScrolloutColumn ‚ğ”ò‚Ñ‰z‚¦‚ÄˆÚ“®‚µ‚Ü‚·
-		//	iƒ‹[ƒvƒJƒEƒ“ƒ^ iYColumnMoveCount ‚ğŒ¸‚ç‚µ‚Ü‚¹‚ñjB
+		//	bSkipScrolloutColumn ãŒ
+		//	çœŸã§ã€ Cell(iXColumnNumber,iYColumnNumber)ãŒ
+		//	 ScrolloutColumn ã§ã‚ã‚‹ãªã‚‰ã€
+		//	ScrolloutColumn ã‚’é£›ã³è¶Šãˆã¦ç§»å‹•ã—ã¾ã™
+		//	ï¼ˆãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ã‚¿ iYColumnMoveCount ã‚’æ¸›ã‚‰ã—ã¾ã›ã‚“ï¼‰ã€‚
 		//
-		//	‚½‚¾‚µA Cell(iXColumnNumber,iYColumnNumber) ‚ª
-		//	Œ‹‡ƒZƒ‹‚ÅA
-		//	”íŒ‹‡ƒZƒ‹‚Ìˆê•”‚ª ScrolloutColumn ‚É
-		//	‚È‚Á‚Ä‚¢‚È‚¢ê‡‚ÍA
-		//	‚»‚ÌƒZƒ‹‚Ö‚ÌˆÚ“®‚Í‰Â”\‚Æ‚µ‚Ü‚·B
+		//	ãŸã ã—ã€ Cell(iXColumnNumber,iYColumnNumber) ãŒ
+		//	çµåˆã‚»ãƒ«ã§ã€
+		//	è¢«çµåˆã‚»ãƒ«ã®ä¸€éƒ¨ãŒ ScrolloutColumn ã«
+		//	ãªã£ã¦ã„ãªã„å ´åˆã¯ã€
+		//	ãã®ã‚»ãƒ«ã¸ã®ç§»å‹•ã¯å¯èƒ½ã¨ã—ã¾ã™ã€‚
 		if ( bSkipScrolloutColumn ){
 			if ( getYFixColumnCount() <= iYColumnNumber && 
 					iYColumnNumber < getYFixafterColumnNumber() ){
 				pCell = getCell( iXColumnNumber , iYColumnNumber ) ;
 				if ( iYColumnNumber + pCell->getYAttachCellCount() <=
 						getYFixafterColumnNumber() ){
-					//	Œ‹‡ƒZƒ‹‚Å‚·‚ªAA‘S•”‚Ì”íŒ‹‡ƒZƒ‹‚ª
-					//	 ScrolloutColumn ‚É‚È‚Á‚Ä‚¢‚Ü‚·B
+					//	çµåˆã‚»ãƒ«ã§ã™ãŒã€ã€å…¨éƒ¨ã®è¢«çµåˆã‚»ãƒ«ãŒ
+					//	 ScrolloutColumn ã«ãªã£ã¦ã„ã¾ã™ã€‚
 					//
-					//	ScrolloutColumn ‚ğ”ò‚Ñ‰z‚¦‚ÄˆÚ“®‚µ‚Ü‚·
-					//	iƒ‹[ƒvƒJƒEƒ“ƒ^ iYColumnMoveCount ‚ğŒ¸‚ç‚µ‚Ü‚¹‚ñjB
+					//	ScrolloutColumn ã‚’é£›ã³è¶Šãˆã¦ç§»å‹•ã—ã¾ã™
+					//	ï¼ˆãƒ«ãƒ¼ãƒ—ã‚«ã‚¦ãƒ³ã‚¿ iYColumnMoveCount ã‚’æ¸›ã‚‰ã—ã¾ã›ã‚“ï¼‰ã€‚
 					continue ;
 				}
 			}
@@ -2444,9 +2444,9 @@ CDcdGridCell* CDcdGrid::calcMovedCell(
 	}
 
 	// --------------------------------
-	//	iXColumnNumber,iYColumnNumber ‚ª
-	//	”íŒ‹‡ƒZƒ‹‚Ìê‡‚ÍA
-	//	Œ‹‡ƒZƒ‹‚ğ•Ô‚·
+	//	iXColumnNumber,iYColumnNumber ãŒ
+	//	è¢«çµåˆã‚»ãƒ«ã®å ´åˆã¯ã€
+	//	çµåˆã‚»ãƒ«ã‚’è¿”ã™
 	// --------------------------------
 	CDcdGridCell*	pCell = getCell( iXColumnNumber , iYColumnNumber ) ;
 	{
@@ -2462,15 +2462,15 @@ int CDcdGrid::calcXFixafterColumnNumberMinForColumn(
 		IfDcdTarget* pIfDcdTarget , int iXColumnNumber ) 
 {
 	// --------------------------------
-	//	FixColumnNumber ‚©‚Ç‚¤‚©‚Ì”»’è
+	//	FixColumnNumber ã‹ã©ã†ã‹ã®åˆ¤å®š
 	// --------------------------------
 	if ( !( getXFixColumnCount() <= iXColumnNumber && 
 			iXColumnNumber < getXColumnCount() ) ){
 		return ( -1 ) ;	
-		//	iXColumnNumber ‚ª FixColumn ‚Ìê‡‚ÍAƒGƒ‰[‚ğ¦‚· -1 ‚ğ•Ô‚µ‚Ü‚·B
+		//	iXColumnNumber ãŒ FixColumn ã®å ´åˆã¯ã€ã‚¨ãƒ©ãƒ¼ã‚’ç¤ºã™ -1 ã‚’è¿”ã—ã¾ã™ã€‚
 	}
 	// --------------------------------
-	//	ƒXƒNƒ[ƒ‹‚·‚é—Ìˆæ‚ğ‹‚ß‚é
+	//	ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã™ã‚‹é ˜åŸŸã‚’æ±‚ã‚ã‚‹
 	// --------------------------------
 	DcdSize	sizeScroll ;
 	{
@@ -2482,12 +2482,12 @@ int CDcdGrid::calcXFixafterColumnNumberMinForColumn(
 			sizeScroll = zoneTarget.getX().getSize() - sizeFix ;
 		}
 	}
-	//sizeScroll = ƒEƒCƒ“ƒhƒEã‚ÅAƒXƒNƒ[ƒ‹‚ğs‚¤—Ìˆæ
-	//	iŒÅ’è—ñ•”•ª‚ğœ‚¢‚½—Ìˆæj
+	//sizeScroll = ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ä¸Šã§ã€ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚’è¡Œã†é ˜åŸŸ
+	//	ï¼ˆå›ºå®šåˆ—éƒ¨åˆ†ã‚’é™¤ã„ãŸé ˜åŸŸï¼‰
 	
 	// --------------------------------
 	//	iFixafterColumnNumberMinForColumn 
-	//	‚ğ‹‚ß‚éB
+	//	ã‚’æ±‚ã‚ã‚‹ã€‚
 	// --------------------------------
 	int iFixafterColumnNumberMinForColumn = iXColumnNumber ;
 	
@@ -2513,15 +2513,15 @@ int CDcdGrid::calcYFixafterColumnNumberMinForColumn(
 		IfDcdTarget* pIfDcdTarget , int iYColumnNumber ) 
 {
 	// --------------------------------
-	//	FixColumnNumber ‚©‚Ç‚¤‚©‚Ì”»’è
+	//	FixColumnNumber ã‹ã©ã†ã‹ã®åˆ¤å®š
 	// --------------------------------
 	if ( !( getYFixColumnCount() <= iYColumnNumber && 
 			iYColumnNumber < getYColumnCount() ) ){
 		return ( -1 ) ;	
-		//	iYColumnNumber ‚ª FixColumn ‚Ìê‡‚ÍAƒGƒ‰[‚ğ¦‚· -1 ‚ğ•Ô‚µ‚Ü‚·B
+		//	iYColumnNumber ãŒ FixColumn ã®å ´åˆã¯ã€ã‚¨ãƒ©ãƒ¼ã‚’ç¤ºã™ -1 ã‚’è¿”ã—ã¾ã™ã€‚
 	}
 	// --------------------------------
-	//	ƒXƒNƒ[ƒ‹‚·‚é—Ìˆæ‚ğ‹‚ß‚é
+	//	ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã™ã‚‹é ˜åŸŸã‚’æ±‚ã‚ã‚‹
 	// --------------------------------
 	DcdSize	sizeScroll ;
 	{
@@ -2533,12 +2533,12 @@ int CDcdGrid::calcYFixafterColumnNumberMinForColumn(
 			sizeScroll = zoneTarget.getY().getSize() - sizeFix ;
 		}
 	}
-	//sizeScroll = ƒEƒCƒ“ƒhƒEã‚ÅAƒXƒNƒ[ƒ‹‚ğs‚¤—Ìˆæ
-	//	iŒÅ’è—ñ•”•ª‚ğœ‚¢‚½—Ìˆæj
+	//sizeScroll = ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ä¸Šã§ã€ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚’è¡Œã†é ˜åŸŸ
+	//	ï¼ˆå›ºå®šåˆ—éƒ¨åˆ†ã‚’é™¤ã„ãŸé ˜åŸŸï¼‰
 	
 	// --------------------------------
 	//	iFixafterColumnNumberMinForColumn 
-	//	‚ğ‹‚ß‚éB
+	//	ã‚’æ±‚ã‚ã‚‹ã€‚
 	// --------------------------------
 	int iFixafterColumnNumberMinForColumn = iYColumnNumber ;
 	

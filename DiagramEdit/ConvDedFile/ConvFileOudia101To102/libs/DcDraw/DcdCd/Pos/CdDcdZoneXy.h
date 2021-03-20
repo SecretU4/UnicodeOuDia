@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,53 +81,53 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  @brief
- �y�T�v�z
-	   XY ���W��̋�`�͈͂�\���P���f�[�^�N���X�ł��B
+ 【概要】
+	   XY 座標上の矩形範囲を表す単純データクラスです。
 */
 class CdDcdZoneXy
 {
 private:
 	// ********************************
-	///@name	����
+	///@name	属性
 	// ********************************
 	///@{
-	///	X�͈̔͂ł��B
+	///	Xの範囲です。
 	CdDcdZone	m_zoneX ;
-	///	Y�͈̔͂ł��B
+	///	Yの範囲です。
 	CdDcdZone	m_zoneY ;
 	///@}
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CdDcdZoneXy(){} ;
 	
 	/**
 	 @param tX [in]
-	 	 X ���W�̒l���w�肵�Ă��������B
+	 	 X 座標の値を指定してください。
 	 @param tY [in]
-	 	 Y ���W�̒l���w�肵�Ă��������B
+	 	 Y 座標の値を指定してください。
 	*/
 	CdDcdZoneXy( const CdDcdZone& tX , const CdDcdZone& tY ) : 
 		m_zoneX( tX ) , m_zoneY( tY ) {};
 
 	/**
-	 	�w��̈ʒu����P�͈̔͂�\���I�u�W�F�N�g�𐶐����܂�
+	 	指定の位置から１の範囲を表すオブジェクトを生成します
 	 @param posX [in]
-	 	X���W�̒l���w�肵�Ă��������B
+	 	X座標の値を指定してください。
 	 @param posY [in]
-	 	Y���W�̒l���w�肵�Ă��������B
+	 	Y座標の値を指定してください。
 	*/
 	CdDcdZoneXy( DcdPos posX , DcdPos posY ) : 
 		m_zoneX( posX , 1 ) , m_zoneY( posY , 1 ) {};
 
 	/**
-	 	�N�_�ʒu�ƃT�C�Y���w�肵�āA�I�u�W�F�N�g�𐶐����܂��B
+	 	起点位置とサイズを指定して、オブジェクトを生成します。
 	 @param posXy [in]
-	 	�N�_���w�肵�Ă��������B
+	 	起点を指定してください。
 	 @param sizeXy [in]
-	 	Y���W�̒l���w�肵�Ă��������B
+	 	Y座標の値を指定してください。
 	*/
 	CdDcdZoneXy( const CdDcdPosXy& posXy ,
 				const CdDcdSizeXy& sizeXy ) : 
@@ -135,11 +135,11 @@ public:
 		m_zoneY( posXy.getY() , sizeXy.getY() ) {};
 
 	/**
-	 	�N�_�ʒu����P�͈̔͂�\���I�u�W�F�N�g�𐶐����܂��B
+	 	起点位置から１の範囲を表すオブジェクトを生成します。
 	 @param posXy [in]
-	 	�N�_���w�肵�Ă��������B
+	 	起点を指定してください。
 	 @param sizeXy [in]
-	 	Y���W�̒l���w�肵�Ă��������B
+	 	Y座標の値を指定してください。
 	*/
 	CdDcdZoneXy( const CdDcdPosXy& posXy ) : 
 		m_zoneX( posXy.getX() , 1 ) , 
@@ -147,7 +147,7 @@ public:
 
  public:
 	// ********************************
-	///@name	CdDcdZoneXy-����
+	///@name	CdDcdZoneXy-属性
 	// ********************************
 	///@{
 	CdDcdZone getX()const{	return ( m_zoneX ) ;	};
@@ -158,16 +158,16 @@ public:
 		m_zoneY = ev ;	return ( *this ) ;	};
 	/**
 	 @return
-	 	�N�_�̈ʒu��Ԃ��܂��B
+	 	起点の位置を返します。
 	*/
 	CdDcdPosXy	getPos()const{
 		return ( CdDcdPosXy( m_zoneX.getPos() , m_zoneY.getPos() ) ) ;
 	};
 		
 	/**
-	 	�N�_��ݒ肵�܂��B
+	 	起点を設定します。
 	 @param posXy [in]
-	 	�N�_���w�肵�Ă��������B
+	 	起点を指定してください。
 	*/
 	CdDcdZoneXy&	setPos( const CdDcdPosXy posXy ){
 		m_zoneX.setPos( posXy.getX() ) ;
@@ -177,16 +177,16 @@ public:
 		
 	/**
 	 @return
-	 	�̈�̃T�C�Y��Ԃ��܂��B
+	 	領域のサイズを返します。
 	*/
 	CdDcdSizeXy	getSize()const{
 		return ( CdDcdSizeXy( m_zoneX.getSize() , m_zoneY.getSize() ) ) ;
 	};
 		
 	/**
-	 	�T�C�Y��ݒ肵�܂��B
+	 	サイズを設定します。
 	 @param sizeXy [in]
-	 	�T�C�Y���w�肵�Ă��������B
+	 	サイズを指定してください。
 	*/
 	CdDcdZoneXy&	setSize( const CdDcdSizeXy sizeXy ){
 		m_zoneX.setSize( sizeXy.getX() ) ;
@@ -196,8 +196,8 @@ public:
 		
 	/**
 	 @return
-	   �͈͂̏I�_�ʒu�̎��̈ʒu��Ԃ��܂��B
-	 	���̈ʒu�́A�͈͂ɂ͊܂܂�܂���B
+	   範囲の終点位置の次の位置を返します。
+	 	この位置は、範囲には含まれません。
 	*/
 	CdDcdPosXy	getEndPos()const{
 		return ( CdDcdPosXy( m_zoneX.getEndPos() , m_zoneY.getEndPos() ) ) ;
@@ -206,17 +206,17 @@ public:
 	///@}
 
 	// ********************************
-	///@name	CdDcdZoneXy-����
+	///@name	CdDcdZoneXy-操作
 	// ********************************
 	///@{
 	
 	/**
-	 	  �͈͂̑傫����\���l�̕������A���̐��E�܂��͕��̐��ɕύX���܂��B
-	 	  ���̏ꍇ�ł��A���W�͈͕͂ς��܂���B
-	 	(��) Pos = 1,Size=5�̃I�u�W�F�N�g�ɁA ev=-1 �ł��̃��\�b�h���Ăяo����
-	 	Pos = 5 ,Size=-5 �ɂȂ�܂��B
+	 	  範囲の大きさを表す値の符号を、正の数・または負の数に変更します。
+	 	  この場合でも、座標範囲は変わりません。
+	 	(例) Pos = 1,Size=5のオブジェクトに、 ev=-1 でこのメソッドを呼び出すと
+	 	Pos = 5 ,Size=-5 になります。
 	 @param ev [in]
-	 	�����𐳂̐��ɂ���Ȃ�P�E���̐��ɂ���Ȃ�|�P���w�肵�Ă��������B
+	 	符号を正の数にするなら１・負の数にするなら−１を指定してください。
 	*/
 	CdDcdZoneXy& setSizeSign( int ev = 1 ){
 		m_zoneX.setSizeSign( ev ) ;
@@ -225,11 +225,11 @@ public:
 	};
 	
 	/**
-	 	����CdDcdZoneXy�Ƃ̔�r���s���܂��B
+	 	他のCdDcdZoneXyとの比較を行います。
 	 @param ev [in]
-	 	��r�Ώۂ��w�肵�Ă��������B
+	 	比較対象を指定してください。
 	 @return
-	 	���ׂĂ̑����������ł���ΐ^�ł��B
+	 	すべての属性が同じであれば真です。
 	*/
 	bool IsEqualTo( const CdDcdZoneXy& ev )const{
 		return ( m_zoneX.IsEqualTo( ev.m_zoneX ) 
@@ -237,36 +237,36 @@ public:
 	};
 	
 	/**
-	 	���͈̔͂ƁA�w�肳�ꂽ�ʂ͈̔͂Ƃ̊ԂŁA�������Ă���͈͂�
-	 	���߂܂��B
+	 	この範囲と、指定された別の範囲との間で、交差している範囲を
+	 	求めます。
 	 @param ev [in]
-	 	���������߂�ΏۂɂȂ� CdDcdZone �I�u�W�F�N�g���w�肵�Ă��������B
+	 	交差を求める対象になる CdDcdZone オブジェクトを指定してください。
 	 @return
-	 	���͈̔͂ƁAev �Ƃ��������Ă���̈��Ԃ��܂��B
-		x,y���ꂼ��ɂ��āA�����̈�����߂܂��B
+	 	この範囲と、ev とが交差している領域を返します。
+		x,yそれぞれについて、交差領域を求めます。
 	
-	   - this �� ev �̂����ꂩ�� Size ���O�ł���΁A�N�_��this�Ɠ����A
-	 	  �T�C�Y���O�̃I�u�W�F�N�g��Ԃ��܂��B
-	   - this��ev�̕������قȂ�ꍇ�́Aev�̕��̕����𔽓]���āA
-	 	  �����͈͂����߂܂��B���̏ꍇ�A�߂�l�̕�����
-	 	  this�Ɠ��������ɂȂ�܂��B
-	   - this �� ev �Ɍ������Ă���̈悪�Ȃ��ꍇ�́A�N�_��this�Ɠ����A
-	 	  �T�C�Y���O�̃I�u�W�F�N�g��Ԃ��܂��B
+	   - this か ev のいずれかの Size が０であれば、起点がthisと同じ、
+	 	  サイズが０のオブジェクトを返します。
+	   - thisとevの符号が異なる場合は、evの方の符号を反転して、
+	 	  交差範囲を求めます。この場合、戻り値の符号は
+	 	  thisと同じ方向になります。
+	   - this と ev に交差している領域がない場合は、起点がthisと同じ、
+	 	  サイズが０のオブジェクトを返します。
 	*/
 	CdDcdZoneXy CrossZone( const CdDcdZoneXy& ev )const{
 		return ( CdDcdZoneXy( m_zoneX.CrossZone( ev.getX() ) , 
 							  m_zoneY.CrossZone( ev.getY() ) ) ) ; 
 	};
 	/**
-	  	���͈̔͂ƁA�w�肳�ꂽ�ʂ͈̔͂��܂ށA
-		�ł��������͈͂����߂܂��B
+	  	この範囲と、指定された別の範囲を含む、
+		最も小さい範囲を求めます。
 	 @param ev [in]
-	  	��܂����߂�ΏۂɂȂ� CdDcdZoneXy �I�u�W�F�N�g���w�肵�Ă��������B
+	  	包含を求める対象になる CdDcdZoneXy オブジェクトを指定してください。
 	 @return
-	  	���͈̔͂ƁAev ���܂���̈��Ԃ��܂��B
-	    - this��ev�̕������قȂ�ꍇ�́Aev�̕��̕����𔽓]���āA
-	  	�����͈͂����߂܂��B���̏ꍇ�A�߂�l�̕�����
-	  	this�Ɠ��������ɂȂ�܂��B
+	  	この範囲と、ev を包含する領域を返します。
+	    - thisとevの符号が異なる場合は、evの方の符号を反転して、
+	  	交差範囲を求めます。この場合、戻り値の符号は
+	  	thisと同じ方向になります。
 	*/
 	CdDcdZoneXy ZoneOr( const CdDcdZoneXy& ev )const{
 		return ( CdDcdZoneXy( m_zoneX.ZoneOr( ev.getX() ) , 
@@ -274,11 +274,11 @@ public:
 	};
 	
 	/**
-	 	�w��̈ʒu�����͈̔͂Ɋ܂܂�Ă��邩�ǂ����𔻒f���܂��B
+	 	指定の位置がこの範囲に含まれているかどうかを判断します。
 	 @param ev [in]
-	 	���肷��ʒu���w�肵�Ă��������B
+	 	判定する位置を指定してください。
 	 @return
-	 	�ʒu�����͈̔͂Ɋ܂܂�Ă���ΐ^�ł��B
+	 	位置がこの範囲に含まれていれば真です。
 	*/
 	bool IsInner( const CdDcdPosXy& ev )const{	
 		return ( m_zoneX.IsInner( ev.getX() ) 
@@ -286,11 +286,11 @@ public:
 	};
 	
 	/**
-	 	�w��̋�`�̈悪���͈̔͂Ɋ܂܂�Ă��邩�ǂ����𔻒f���܂��B
+	 	指定の矩形領域がこの範囲に含まれているかどうかを判断します。
 	 @param ev [in]
-	 	���肷��ʒu���w�肵�Ă��������B
+	 	判定する位置を指定してください。
 	 @return
-	 	�ʒu�����͈̔͂Ɋ܂܂�Ă���ΐ^�ł��B
+	 	位置がこの範囲に含まれていれば真です。
 	*/
 	bool IsInner( const CdDcdZoneXy& ev )const{	
 		return ( m_zoneX.IsInner( ev.getX() ) 
@@ -300,7 +300,7 @@ public:
 	///@}
 
 	// ********************************
-	///@name	���Z�q	
+	///@name	演算子	
 	// ********************************
 	///@{
 	bool operator ==( const CdDcdZoneXy& ev )const{	

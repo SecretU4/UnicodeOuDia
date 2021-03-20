@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -76,30 +76,30 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  * @brief
- * �y�T�v�z
- * �Q�̓_�����Ԓ�����ɂ�����A
- *	X���W�ɑΉ�����Y���W�l�̌v�Z�E
- *	Y���W�ɑΉ�����X���W�l�̌v�Z���s���܂��B
+ * 【概要】
+ * ２つの点を結ぶ直線上における、
+ *	X座標に対応するY座標値の計算・
+ *	Y座標に対応するX座標値の計算を行います。
  *
  *	<H4>
- * �y�g�����z
+ * 【使い方】
  *	</H4>
  *
- *	�R���X�g���N�^�����\�b�h�ŁA�������\������Q�̓_ Pos1 , Pos2 ��
- *	�w�肵�Ă��������B
+ *	コンストラクタかメソッドで、直線を構成する２つの点 Pos1 , Pos2 を
+ *	指定してください。
  *
- *	�Ȍ�́AcalcYofX() , calcXofY() �ŁA�v�Z���s�����Ƃ��ł��܂��B
+ *	以後は、calcYofX() , calcXofY() で、計算を行うことができます。
  *
  */
 class CLineFunc
 {
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
 ///@{
  private:
 	/**
-	 *	m_Pos1 �� m_Pos2 �́A�������\������Q�̓_ ��ێ����܂��B
+	 *	m_Pos1 と m_Pos2 は、直線を構成する２つの点 を保持します。
 	 */
 	CdDcdPosXy	m_Pos1 ;
 	/**
@@ -108,12 +108,12 @@ class CLineFunc
 	CdDcdPosXy	m_Pos2 ;
 ///@}
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 * @param aPos1,aPos2 [in]
-	 *	�������\������Q�̓_ ���w�肵�ĉ������B
+	 *	直線を構成する２つの点 を指定して下さい。
 	 */
 	CLineFunc( const CdDcdPosXy& aPos1 , const CdDcdPosXy& aPos2 ) :
 		m_Pos1( aPos1 ) , m_Pos2( aPos2 ){} ;
@@ -127,7 +127,7 @@ class CLineFunc
 // ********************************
  public:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	CdDcdPosXy	getPos1()const{	return m_Pos1 ;};
@@ -138,33 +138,33 @@ class CLineFunc
 		m_Pos2 = value ; return *this ; } ;
 	///@}
 	// ********************************
-	///@name ����
+	///@name 操作
 	// ********************************
 	///@{
 	/**
-	 * �Q�̓_�����Ԓ�����ɂ�����AX���W�ɑΉ�����Y���W�l�����߂܂��B
+	 * ２つの点を結ぶ直線上における、X座標に対応するY座標値を求めます。
 	 * @param iX [in]
-	 *	���߂�Y���W�l�ɑΉ�����X���W�l
+	 *	求めるY座標値に対応するX座標値
 	 * @return
-	 *	Y���W�l��Ԃ��܂��B
+	 *	Y座標値を返します。
 	 *
 	 * @attention
-	 *	m_Pos1.X == m_Pos2.X �̏ꍇ�i�����̏ꍇ�j�́A
-	 *	�߂�l�� m_Pos1.Y �ƂȂ�܂��B
+	 *	m_Pos1.X == m_Pos2.X の場合（垂線の場合）は、
+	 *	戻り値は m_Pos1.Y となります。
 	 */
 	int calcYofX( int iX ) ;
 
 	/**
-	 * �Q�̓_�����Ԓ�����ɂ�����AX���W�ɑΉ�����Y���W�l�����߂܂��B
+	 * ２つの点を結ぶ直線上における、X座標に対応するY座標値を求めます。
 	 * @param posSrc , posDst [in]
-	 *	�������\������Q�̓_�́AXY���W���w�肵�Ă��������B
+	 *	直線を構成する２つの点の、XY座標を指定してください。
 	 * @param iX [in]
-	 *	���߂�Y���W�l�ɑΉ�����X���W�l
+	 *	求めるY座標値に対応するX座標値
 	 * @return
-	 *	Y���W�l��Ԃ��܂��B
+	 *	Y座標値を返します。
 	 * @attention
-	 *	m_Pos1.Y == m_Pos2.Y �̏ꍇ�i�������̏ꍇ�j�́A
-	 *	�߂�l�� m_Pos1.X �ƂȂ�	�܂��B
+	 *	m_Pos1.Y == m_Pos2.Y の場合（水平線の場合）は、
+	 *	戻り値は m_Pos1.X となり	ます。
 	 */
 	int calcXofY( int iY ) ;
 	///@}

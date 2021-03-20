@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -86,14 +86,14 @@ namespace DcdGrid{
 // ****************************************************************
 /**
  @brief
- �y�T�v�z
-	DcdGrid �̃Z���I�u�W�F�N�g�ł��B
+ 【概要】
+	DcdGrid のセルオブジェクトです。
 
-	IfDcDraw �I�u�W�F�N�g�Ɗ֘A������� ���� IfDcDraw �I�u�W�F�N�g���g����
-	�Z���̒��g��`�悵�܂��B
+	IfDcDraw オブジェクトと関連を持ち､ その IfDcDraw オブジェクトを使って
+	セルの中身を描画します。
 
-	CDcdGrid �́A�ʏ�� CDcdTextbox �I�u�W�F�N�g�𐶐����āA
-	this �Ɗ֘A���� IfDcDraw �I�u�W�F�N�g�Ƃ��ēo�^���܂��
+	CDcdGrid は、通常は CDcdTextbox オブジェクトを生成して、
+	this と関連する IfDcDraw オブジェクトとして登録します｡
 
  */
 class CDcdGridCell
@@ -103,93 +103,93 @@ class CDcdGridCell
 	typedef	std::deque< CDcdGridCell* > CDcdGridYColumnCellCont ;
 private:
 	// ********************************
-	/// @name 	CDcdGrid �Ɋ֌W���鑮��/�֘A
+	/// @name 	CDcdGrid に関係する属性/関連
 	// ********************************
 	///@{
 	/**
-		���̃I�u�W�F�N�g��ێ�����O���b�h�I�u�W�F�N�g�ւ̃|�C���^�ł��B
-		�R���X�g���N�^�Ō��܂�܂��B
-		�j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis���������������Ȃ��Ă͂Ȃ�܂���B
+		このオブジェクトを保持するグリッドオブジェクトへのポインタです。
+		コンストラクタで決まります。
+		破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、thisよりも長く生存しなくてはなりません。
 
-		���̊֘A�́A	m_iYAttachCellCount , m_iXAttachCellCount ���ύX���ꂽ����
-		���̂��ׂẴZ���̑������X�V����̂Ɏg���܂��B
+		この関連は、	m_iYAttachCellCount , m_iXAttachCellCount が変更された時に
+		他のすべてのセルの属性を更新するのに使います。
 	*/
 	CDcdGrid*	m_pCDcdGrid ;
 	/**
-		���̃I�u�W�F�N�g���W�񂵂Ă���R���e�i�ł��B
-		���̃R���e�i�ɂ́A����Y��ɂ��� CDcdGridCell �I�u�W�F�N�g���i�[����Ă��܂��B
+		このオブジェクトを集約しているコンテナです。
+		このコンテナには、同じY列にある CDcdGridCell オブジェクトが格納されています。
 
-		���̊֘A�́ACDcdGrid ���AgetColumnNumberOfCell() ���s�����ɎQ�Ƃ��܂��B
-		�R���X�g���N�^�Ō��܂�܂��B
+		この関連は、CDcdGrid が、getColumnNumberOfCell() を行う時に参照します。
+		コンストラクタで決まります。
 	*/
 	CDcdGridYColumnCellCont* m_pCont ;
 
 	/**
-		�ʏ��NULL�ł��B
-		���̃Z���������Z���̈�ԍ���ȊO�Ɉʒu���Ă���ꍇ�́A
-		���̃Z�����������Ă���ł�����ɂ�����̂��w���܂��B
-		���̊֘A�́A CDcdGrid ���ݒ肵�܂��B
+		通常はNULLです。
+		このセルが結合セルの一番左上以外に位置している場合は、
+		このセルが結合している最も左上にあるものを指します。
+		この関連は、 CDcdGrid が設定します。
 	 */
 	CDcdGridCell*	m_pcellAttachTo ;
 
 	///@}
  private:
 	// ********************************
-	/// @name CDcdGridCell �ŗL�̊֘A
+	/// @name CDcdGridCell 固有の関連
 	// ********************************
 	///@{
 	
 	/**
-		this �ɑ΂��錻�݂̕`��I�u�W�F�N�g���w���|�C���^�ł��B
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́A���̊֘A���L���ȊԂ͐������Ȃ��Ă͂Ȃ�܂���B
+		this に対する現在の描画オブジェクトを指すポインタです。
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、この関連が有効な間は生存しなくてはなりません。
 	
-		�ʏ�́A CDcdGrid::OnCreateCell() ���C���X�^���X�𐶐��E�o�^���A
-		 CDcdGrid::OnDeleteCell() ���C���X�^���X��o�^�����E�j�����܂��B
+		通常は、 CDcdGrid::OnCreateCell() がインスタンスを生成・登録し、
+		 CDcdGrid::OnDeleteCell() がインスタンスを登録解除・破棄します。
 		
-		�f�t�H���g��  CDcdGrid::OnCreateCell() �̎����́A
-		CDcdTextbox �C���X�^���X�𐶐��E�o�^���܂��B
-		���̂Ƃ��̑����́A
+		デフォルトの  CDcdGrid::OnCreateCell() の実装は、
+		CDcdTextbox インスタンスを生成・登録します。
+		このときの属性は、
 	
-			- �t�H���g�̓X�g�b�N�I�u�W�F�N�g�� DEFAULT_GUI_FONT 
-			- �e�L�X�g�z�u�� 
+			- フォントはストックオブジェクトの DEFAULT_GUI_FONT 
+			- テキスト配置は 
 				CdDrawTextFormat::H_LEFT | 
 				CdDrawTextFormat::V_SINGLELINT_CENTER
-			- �w�i�F�� ��
-			- �e�L�X�g�̏㉺�E���E�̘g�̈�̑����͘_���P�ʂłP
+			- 背景色は 白
+			- テキストの上下・左右の枠領域の太さは論理単位で１
 	
-		�ƂȂ�܂��B
+		となります。
 	 */
 	Ou<IfDcDraw>			m_pIfDcDraw ;
 	
 	///@}
 private:
 	// ********************************
-	/// @name CDcdGridCell �ŗL�̑���
+	/// @name CDcdGridCell 固有の属性
 	// ********************************
 	///@{
 	/**
-		���̃Z����Y�����Ɍ������Ă���Z���̐��B
+		このセルがY方向に結合しているセルの数。
 	
-		- ���̃Z���������Z���̍���̃Z���̏ꍇ�́A
-		�������Ă���Z����Y�����̐��ł��B
-		- ���̃Z�����P�Ƃ̃Z���̏ꍇ��1�B
-		- ���̃Z���������Z���̍���ȊO�ł���΁A���̒l�͈Ӗ��������܂���B
+		- このセルが結合セルの左上のセルの場合は、
+		結合しているセルのY方向の数です。
+		- このセルが単独のセルの場合は1。
+		- このセルが結合セルの左上以外であれば、この値は意味を持ちません。
 	
-		�����l��1�B���\�b�h�ŕύX�ł��܂��B
+		初期値は1。メソッドで変更できます。
 	 */
 	int	m_iYAttachCellCount ;
 
 	/**
-		���̃Z����X�����Ɍ������Ă���Z���̐��B
+		このセルがX方向に結合しているセルの数。
 	
-		- ���̃Z���������Z���̍���̃Z���̏ꍇ�́A
-		�������Ă���Z����X�����̐��ł��B
-		- ���̃Z�����P�Ƃ̃Z���̏ꍇ��1�B
-		- ���̃Z���������Z���̍���ȊO�ł���΁A���̒l�͈Ӗ��������܂���B
+		- このセルが結合セルの左上のセルの場合は、
+		結合しているセルのX方向の数です。
+		- このセルが単独のセルの場合は1。
+		- このセルが結合セルの左上以外であれば、この値は意味を持ちません。
 	
-		�����l��1�B���\�b�h�ŕύX�ł��܂��B
+		初期値は1。メソッドで変更できます。
 	 */
 	int	m_iXAttachCellCount ;
 
@@ -197,14 +197,14 @@ private:
 	///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 @param [in] pCDcdGrid 
-		���̃I�u�W�F�N�g��ێ�����O���b�h�I�u�W�F�N�g�ւ̃|�C���^�ł��B
+		このオブジェクトを保持するグリッドオブジェクトへのポインタです。
 	 @param [in] pCDcdGridYColumnCellCont 
-		CDcdGrid �ɂ����āA���̃I�u�W�F�N�g���W�񂷂�R���e�i�ւ̃|�C���^�ł��B
+		CDcdGrid において、このオブジェクトを集約するコンテナへのポインタです。
 	 */
 	CDcdGridCell( CDcdGrid*	pCDcdGrid , 
 		CDcdGridYColumnCellCont* pCDcdGridYColumnCellCont  ) ;
@@ -218,29 +218,29 @@ private:
 // ********************************
 public:
 	// ********************************
-	/// @name 	CDcdGrid �Ɋ֌W���鑮��/�֘A
+	/// @name 	CDcdGrid に関係する属性/関連
 	// ********************************
 	///@{
 	CDcdGrid*	getCDcdGrid() ;
 
 
 	/**
-		�ʏ��NULL�ł��B
-		���̃Z���������Z���̈�ԍ���ȊO�Ɉʒu���Ă���ꍇ�́A
-		���̃Z�����������Ă���ł�����ɂ�����̂��w���܂��B
-		���̊֘A�́A CDcdGrid ���ݒ肵�܂��B
+		通常はNULLです。
+		このセルが結合セルの一番左上以外に位置している場合は、
+		このセルが結合している最も左上にあるものを指します。
+		この関連は、 CDcdGrid が設定します。
 	 */
 	virtual CDcdGridCell*	getAttachTo() ;
 
 	///@}
 	// ********************************
-	/// @name 	���/����
+	/// @name 	包含/属性
 	// ********************************
 	///@{
 	///@}
 
 	// ********************************
-	/// @name	CDcdGridCell �ŗL�̊֘A
+	/// @name	CDcdGridCell 固有の関連
 	// ********************************
 	///@{
 	virtual Ou<IfDcDraw> getIfDcDraw() ;
@@ -249,7 +249,7 @@ public:
 
 	///@}
 	// ********************************
-	/// @name CDcdGridCell �ŗL�̑���
+	/// @name CDcdGridCell 固有の属性
 	// ********************************
 	///@{
 
@@ -260,20 +260,20 @@ public:
 	virtual int	getXAttachCellCount() ;
 
 	/**
-		�����Z���̐���ݒ肵�܂��B
-		�����̍���Ɉʒu����Z���ɁA���̒l��ݒ肵�Ă��������B
+		結合セルの数を設定します。
+		結合の左上に位置するセルに、この値を設定してください。
 	
-		�������A�Z���̐����O���b�h�͈̔͂��z���Ă���ꍇ�́A���K����
-		�s���܂��B
+		ただし、セルの数がグリッドの範囲を越えている場合は、正規化を
+		行います。
 	 @param iXAttachCellCount [in]
-		X�����Ɍ�������Z���̐����w�肵�Ă��������B
+		X方向に結合するセルの数を指定してください。
 	 @param iYAttachCellCount [in]
-		Y�����Ɍ�������Z���̐����w�肵�Ă��������B
+		Y方向に結合するセルの数を指定してください。
 	 @return
-		��������΂O�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	0 ;	//	�����Z���̐��ɕύX�͂���܂���B
-		-	1 ;	//	�����Z���̐����ύX����܂����B
-		-	-1 ;	//	�l�͈̔͂��s���ł�
+		成功すれば０以上、エラーなら負の数です。
+		-	0 ;	//	結合セルの数に変更はありません。
+		-	1 ;	//	結合セルの数が変更されました。
+		-	-1 ;	//	値の範囲が不正です
 	 */
 	int	setAttachCellCount( 
 		int iXAttachCellCount , 

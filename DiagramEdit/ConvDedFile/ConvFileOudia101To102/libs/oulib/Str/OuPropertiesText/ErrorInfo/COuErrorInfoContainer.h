@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 // $Id: COuErrorInfoContainer.h 10 2012-08-26 09:48:47Z okm $
@@ -76,28 +76,28 @@ namespace ErrorInfo{
 
 /**
 @brief
-	������ OuErrorInfo ���W�񂷂�R���e�i�ł��B
+	複数の OuErrorInfo を集約するコンテナです。
 	
-	�W�񂵂Ă��� OuErrorInfo �ƁwOuErrorInfoText�x�̊Ԃ̑��ݕϊ��̋@�\�E
-	�wOuPropertiesTextErrorInfo�x �Ƃ̊Ԃ̑��ݕϊ��̋@�\�������܂��B
+	集約している OuErrorInfo と『OuErrorInfoText』の間の相互変換の機能・
+	『OuPropertiesTextErrorInfo』 との間の相互変換の機能を持ちます。
 
 <H4>
-�yOuPropertiesTextErrorInfo�z
+【OuPropertiesTextErrorInfo】
 </H4>
 
-  OuPropertiesTextErrorInfo �́AOuErrorInfo �̓��e��
-  OuPropertiesText ���x�[�X�t�H�[�}�b�g�Ƃ��ĕ\�������f�[�^�`���ł��B
+  OuPropertiesTextErrorInfo は、OuErrorInfo の内容を
+  OuPropertiesText をベースフォーマットとして表現したデータ形式です。
   
-  OuPropertiesTextErrorInfo �́A0�ȏ㕡���� "ErrorInfo" Directory ��
-�W�񂵂܂��B�P�� "ErrorInfo" Directory �łP�̃G���[����\���܂��B
+  OuPropertiesTextErrorInfo は、0個以上複数の "ErrorInfo" Directory を
+集約します。１つの "ErrorInfo" Directory で１つのエラー情報を表します。
 
-  "ErrorInfo" Directory �́A�P�� "Reason" PropertyText �ƁA0�܂���1��
-"Prop" Directory ���W�񂵂܂��B
+  "ErrorInfo" Directory は、１つの "Reason" PropertyText と、0個または1個の
+"Prop" Directory を集約します。
 
-  "Prop" Directory �ɂ́A�G���[����⑫���邽�߂̑����f�[�^���L�q���� OuPropertiesText ���W�񂷂邱�Ƃ��ł��܂��B
+  "Prop" Directory には、エラー情報を補足するための属性データを記述した OuPropertiesText を集約することができます。
   
   
-(��)
+(例)
 @code
 ErrorInfo.
 Reason=Receive Timeout.
@@ -117,21 +117,21 @@ Username=FtpUser
 
 
 <H4>
-�yOuErrorInfoText�z
+【OuErrorInfoText】
 </H4>
-  OuErrorInfo �̓��e��\���e�L�X�g�ł��BUI�ւ̕\����z�肵�Ă��܂��B
+  OuErrorInfo の内容を表すテキストです。UIへの表示を想定しています。
 
- �P�� OuErrorInfo ��1�s�ɏo�͂���܂��B������OuErrorInfo ��
-�W�񂳂�Ă���ꍇ�́A OuErroInfo �̊Ԃ͉��s�ŋ�؂��܂��B
+ １つの OuErrorInfo が1行に出力されます。複数のOuErrorInfo が
+集約されている場合は、 OuErroInfo の間は改行で区切られます。
 
-  OuErrorInfoText �́A�ȉ��̌`���ł��B
+  OuErrorInfoText は、以下の形式です。
 
-  - �s���� "Reason" �B
-  - "Prop" �ɏW�񂳂��PropertyText ������ꍇ�́A"Reason" �̌�� "Prop" �ɏW�񂳂�� PropertyText (0�ȏ㕡��)���^�u��؂�ŕ��т܂��B
-  - ������ OuErrorInfo �̊Ԃ́A���s�ŋ�؂�܂��B
-  - �y���Ӂz"Prop"�ɏW�񂳂�� Directory �́A�wOuErrorInfoText�x�ɂ͊܂܂�܂���B
+  - 行頭に "Reason" 。
+  - "Prop" に集約されるPropertyText がある場合は、"Reason" の後に "Prop" に集約される PropertyText (0個以上複数)がタブ区切りで並びます。
+  - 複数の OuErrorInfo の間は、改行で区切ります。
+  - 【注意】"Prop"に集約される Directory は、『OuErrorInfoText』には含まれません。
 
-(��)
+(例)
 @code
 Receive Timeout.
 File Not Found.	FileName=source.txt
@@ -146,62 +146,62 @@ class COuErrorInfoContainer : public CMup_deque<COuErrorInfo>
 {
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	COuErrorInfoContainer( );
 	// ********************************
-	///@name �W��
+	///@name 集約
 	// ********************************
 	///@{
 	/**
 	@return
-		"ErrorInfo" �f�B���N�g�����W�񂷂�R���e�i�̓��e��
-		�擾�E�ݒ肷�邽�߂̃C���^�[�t�F�[�X�B
+		"ErrorInfo" ディレクトリを集約するコンテナの内容を
+		取得・設定するためのインターフェース。
 	*/
 	Mui<COuErrorInfo>* getCOuErrorInfoCont();
 	const Mui<COuErrorInfo>* getCOuErrorInfoCont()const;
 	///@}
 	// ********************************
-	///@name ����
+	///@name 操作
 	// ********************************
 	///@{
 	/**
 	@return
-		���̃R���e�i�̓��e�� OuPropertiesTextErrorInfo �ɕϊ����A
-		������i�[���� CNodeContainer ��Ԃ��܂��B
+		このコンテナの内容を OuPropertiesTextErrorInfo に変換し、
+		それを格納した CNodeContainer を返します。
 		
 	*/
 	CNodeContainer toOuPropertiesTextErrorInfo()const;
 
 	/**
-		OuPropertiesTextErrorInfo ��ێ����Ă���
-		OuPropertiesText �̓��e���Athis �ɔ��f���܂��B
+		OuPropertiesTextErrorInfo を保持している
+		OuPropertiesText の内容を、this に反映します。
 
-		m_contCOuErrorInfoCont ������܂ŕێ����Ă���
-		�C���X�^���X�͔j�����܂��B
+		m_contCOuErrorInfoCont がそれまで保持していた
+		インスタンスは破棄します。
 	@param pCNodeContainer [in]
-		OuPropertiesTextErrorInfo ��ێ����Ă���
-		OuPropertiesText �̓��e���w�肵�Ă��������B
+		OuPropertiesTextErrorInfo を保持している
+		OuPropertiesText の内容を指定してください。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+		成功したら 0 以上、エラーなら負の数です。
 	*/
 	int fromOuPropertiesTextErrorInfo( 
 		const CNodeContainer* pCNodeContainer );
 
 	/**	
 	@return
-		�wOuErrorInfoText�x�𐶐����ĕԂ��܂��B
+		『OuErrorInfoText』を生成して返します。
 	*/
 	std::string toOuErrorInfoText()const ;
 
 	/**	
-		�wOuErrorInfoText�x�����߂��A���̃N���X�̑����ɔ��f���܂��B
-		���̃N���X������܂ŕێ����Ă����f�[�^�͔j�����܂��B
+		『OuErrorInfoText』を解釈し、このクラスの属性に反映します。
+		このクラスがそれまで保持していたデータは破棄します。
 	@param strOuErrorInfoText [in]
-		�wOuErrorInfoText�x���w�肵�܂����B
+		『OuErrorInfoText』を指定しました。
 	@return 
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	���߂Ɏ��s���܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	解釈に失敗しました。
 	*/
 	int fromOuErrorInfoText( const std::string& strOuErrorInfoText ) ;
 	///@}

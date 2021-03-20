@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// CWndDcdGrid.cpp : �C���v�������e�[�V���� �t�@�C��
+// CWndDcdGrid.cpp : インプリメンテーション ファイル
 //
 
 #include "DcdGrid\WndDcdGrid3\CWndDcdGrid.h"
@@ -88,11 +88,11 @@ namespace WndDcdGrid3{
 /////////////////////////////////////////////////////////////////////////////
 // CWndDcdGrid
 
-///	�u�̈�O�h���b�O�X�N���[���v�̃^�C�}ID
+///	「領域外ドラッグスクロール」のタイマID
 const UINT_PTR OutsideDrag_TIMERID = 1 ;
 
 // --------------------------------
-//@name	�����֐�
+//@name	下請関数
 // --------------------------------
 bool CWndDcdGrid::update() 
 {
@@ -114,9 +114,9 @@ bool CWndDcdGrid::update()
 			bRv |= m_pCRandomSelect->update_adjustProp() ;
 			if ( bRv )
 			{
-				//	CBoxSelect,CRandomSelect �́A CSelect���X�V���܂��B
-				//	���̍X�V�ɑ΂��鐳�K�����s���K�v�����邽�߁A
-				//	�ēx CSelet::update_adjustProp() ���s���Ă��܂��B
+				//	CBoxSelect,CRandomSelect は、 CSelectを更新します。
+				//	この更新に対する正規化を行う必要があるため、
+				//	再度 CSelet::update_adjustProp() を行っています。
 				bRv |= m_pCSelect->update_adjustProp() ;
 				bRv |= m_pCFocus->update_adjustProp() ;
 				bRv |= m_pCDcdGrid->update_adjustProp() ;
@@ -152,7 +152,7 @@ Ou<CPropStack> CWndDcdGrid::createPropStackForScroll()
 }
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CWndDcdGrid::CWndDcdGrid()
 	: m_iOutsideDrag_TimeMs( 100 )
@@ -185,7 +185,7 @@ CWndDcdGrid::~CWndDcdGrid()
 //	CDcdGrid
 // ********************************
 	// --------------------------------
-	//@name �s�E��E�Z���̏�����
+	//@name 行・列・セルの初期化
 	// --------------------------------
 void CWndDcdGrid::OnCreateXColumn( int iXColumnNumber , 
 		CDcdGridXColumn* pCDcdGridXColumn ) 
@@ -193,7 +193,7 @@ void CWndDcdGrid::OnCreateXColumn( int iXColumnNumber ,
 	m_pCDcdGrid->CDcdGrid::OnCreateXColumn( iXColumnNumber , 
 		pCDcdGridXColumn ) ;
 
-	//	CSelect �ɈϏ�
+	//	CSelect に委譲
 	m_pCSelect->OnCreateXColumn( iXColumnNumber ) ;
 }
 	
@@ -203,7 +203,7 @@ void CWndDcdGrid::OnDeleteXColumn( int iXColumnNumber ,
 	m_pCDcdGrid->CDcdGrid::OnDeleteXColumn( iXColumnNumber , 
 		pCDcdGridXColumn ) ;
 
-	//	CSelect �ɈϏ�
+	//	CSelect に委譲
 	m_pCSelect->OnDeleteXColumn( iXColumnNumber ) ;
 }
 
@@ -213,7 +213,7 @@ void CWndDcdGrid::OnCreateYColumn( int iYColumnNumber ,
 	m_pCDcdGrid->CDcdGrid::OnCreateYColumn( iYColumnNumber , 
 		pCDcdGridYColumn ) ;
 
-	//	CSelect �ɈϏ�
+	//	CSelect に委譲
 	m_pCSelect->OnCreateYColumn( iYColumnNumber ) ;
 }
 
@@ -223,7 +223,7 @@ void CWndDcdGrid::OnDeleteYColumn( int iYColumnNumber ,
 	m_pCDcdGrid->CDcdGrid::OnDeleteYColumn( iYColumnNumber , 
 		pCDcdGridYColumn ) ;
 
-	//	CSelect �ɈϏ�
+	//	CSelect に委譲
 	m_pCSelect->OnDeleteYColumn( iYColumnNumber ) ;
 }
 
@@ -244,7 +244,7 @@ void CWndDcdGrid::OnDeleteCell( int iXColumnNumber , int iYColumnNumber ,
 }
 
 	// ********************************
-	//	@name Y��EX��̈ʒu
+	//	@name Y列・X列の位置
 	// ********************************
 CdDcdZone	CWndDcdGrid::getYColumnZone( 
 			int iYColumnNumber ) 
@@ -319,19 +319,19 @@ CdDcdSizeXy CWndDcdGrid::calcIncreaseOnOutsideDrag( const POINT& pos )
 	CRect	rectClient ;
 	GetClientRect( &rectClient ) ; 
 
-	//	�t�H�[�J�X�Z���̗�ԍ�
+	//	フォーカスセルの列番号
 	CdDcdPosXy	posFocusCellColumnNumber = getCFocus()->getFocusCellColumnNumber() ;
 
-	//	X����
+	//	X方向
 	if ( m_pCDcdGrid->getXFixColumnCount() <= posFocusCellColumnNumber.getX() &&
 		posFocusCellColumnNumber.getX() < m_pCDcdGrid->getXColumnCount() )
 	{
-		//	�t�H�[�J�X�Z�����A�X�N���[���\��ɂ���
+		//	フォーカスセルが、スクロール可能列にある
 
-		//	[���ւ̃X�N���[�����\(FixColumnCount < FixafterColumnNumber)
-		//	AND �}�E�X�J�[�\����X���W���AFixColumn���荶 ]
-		//	�^�C�}�ł̉E�X�N���[��
-		if ( m_pCDcdGrid->getXFixColumnCount() < m_pCDcdGrid->getXFixafterColumnNumber() )	//	���ւ̃X�N���[�����\
+		//	[左へのスクロールが可能(FixColumnCount < FixafterColumnNumber)
+		//	AND マウスカーソルのX座標が、FixColumn上より左 ]
+		//	タイマでの右スクロール
+		if ( m_pCDcdGrid->getXFixColumnCount() < m_pCDcdGrid->getXFixafterColumnNumber() )	//	左へのスクロールが可能
 		{
 			int iScrollColumnStartPos = rectClient.left ;
 			if ( m_pCDcdGrid->getXFixColumnCount() > 0 )
@@ -342,17 +342,17 @@ CdDcdSizeXy CWndDcdGrid::calcIncreaseOnOutsideDrag( const POINT& pos )
 					iScrollColumnStartPos = aZone.getEndPos() ;
 				}
 			}
-			//	iScrollColumnStartPos = �X�N���[���\��̍�����X���W
+			//	iScrollColumnStartPos = スクロール可能列の左側のX座標
 			if ( pos.x < iScrollColumnStartPos )
 			{
-				//	���ւ́u�̈�O�h���b�O�X�N���[���v���K�v�ȏ�
+				//	左への「領域外ドラッグスクロール」が必要な状況
 				sizeFixafterColumnNumberIncrease.setX( -1 );
 			}
 		}
-		//	[�E�ւ̃X�N���[�����\( FixafterColumnNumber < ColumnCount - 1 )
-		//	AND �}�E�X�J�[�\����X���W���AGrid�E�܂��̓E�C���h�E�̃N���C�A���g���W���E ]
-		//	�^�C�}�ł̍��X�N���[��
-		if ( m_pCDcdGrid->getXFixafterColumnNumber() < m_pCDcdGrid->getXColumnCount() - 1 )	//	�E�ւ̃X�N���[�����\
+		//	[右へのスクロールが可能( FixafterColumnNumber < ColumnCount - 1 )
+		//	AND マウスカーソルのX座標が、Grid・またはウインドウのクライアント座標より右 ]
+		//	タイマでの左スクロール
+		if ( m_pCDcdGrid->getXFixafterColumnNumber() < m_pCDcdGrid->getXColumnCount() - 1 )	//	右へのスクロールが可能
 		{
 			int iScrollColumnEndPos = rectClient.right ;
 			{
@@ -364,22 +364,22 @@ CdDcdSizeXy CWndDcdGrid::calcIncreaseOnOutsideDrag( const POINT& pos )
 			}
 			if ( iScrollColumnEndPos < pos.x )
 			{
-				//	�E�ւ́u�̈�O�h���b�O�X�N���[���v���K�v�ȏ�
+				//	右への「領域外ドラッグスクロール」が必要な状況
 				sizeFixafterColumnNumberIncrease.setX( +1 );
 			}
 		}
 	}
 
-	//	Y����
+	//	Y方向
 	if ( m_pCDcdGrid->getYFixColumnCount() <= posFocusCellColumnNumber.getY() &&
 		posFocusCellColumnNumber.getY() < m_pCDcdGrid->getYColumnCount() )
 	{
-		//	�t�H�[�J�X�Z�����A�X�N���[���\��ɂ���
+		//	フォーカスセルが、スクロール可能列にある
 
-		//	[��ւ̃X�N���[�����\(FixColumnCount < FixafterColumnNumber)
-		//	AND �}�E�X�J�[�\����Y���W���AFixColumn����� ]
-		//	�^�C�}�ł̉E�X�N���[��
-		if ( m_pCDcdGrid->getYFixColumnCount() < m_pCDcdGrid->getYFixafterColumnNumber() )	//	���ւ̃X�N���[�����\
+		//	[上へのスクロールが可能(FixColumnCount < FixafterColumnNumber)
+		//	AND マウスカーソルのY座標が、FixColumn上より上 ]
+		//	タイマでの右スクロール
+		if ( m_pCDcdGrid->getYFixColumnCount() < m_pCDcdGrid->getYFixafterColumnNumber() )	//	左へのスクロールが可能
 		{
 			int iScrollColumnStartPos = rectClient.top ;
 			if ( m_pCDcdGrid->getYFixColumnCount() > 0 )
@@ -390,17 +390,17 @@ CdDcdSizeXy CWndDcdGrid::calcIncreaseOnOutsideDrag( const POINT& pos )
 					iScrollColumnStartPos = aZone.getEndPos() ;
 				}
 			}
-			//	iScrollColumnStartPos = �X�N���[���\��̏㑤��Y���W
+			//	iScrollColumnStartPos = スクロール可能列の上側のY座標
 			if ( pos.y < iScrollColumnStartPos )
 			{
-				//	��ւ́u�̈�O�h���b�O�X�N���[���v���K�v�ȏ�
+				//	上への「領域外ドラッグスクロール」が必要な状況
 				sizeFixafterColumnNumberIncrease.setY( -1 );
 			}
 		}
-		//	[�E�ւ̃X�N���[�����\( FixafterColumnNumber < ColumnCount - 1 )
-		//	AND �}�E�X�J�[�\����Y���W���AColumn��艺�A�܂��̓E�C���h�E��艺 ]
-		//	�^�C�}�ł̍��X�N���[��
-		if ( m_pCDcdGrid->getYFixafterColumnNumber() < m_pCDcdGrid->getYColumnCount() - 1 )	//	�E�ւ̃X�N���[�����\
+		//	[右へのスクロールが可能( FixafterColumnNumber < ColumnCount - 1 )
+		//	AND マウスカーソルのY座標が、Columnより下、またはウインドウより下 ]
+		//	タイマでの左スクロール
+		if ( m_pCDcdGrid->getYFixafterColumnNumber() < m_pCDcdGrid->getYColumnCount() - 1 )	//	右へのスクロールが可能
 		{
 			int iScrollColumnEndPos = rectClient.bottom ;
 			{
@@ -410,10 +410,10 @@ CdDcdSizeXy CWndDcdGrid::calcIncreaseOnOutsideDrag( const POINT& pos )
 					iScrollColumnEndPos = aZone.getPos() ;
 				}
 			}
-			//	iScrollColumnStartPos = �X�N���[���\��̏㑤��Y���W
+			//	iScrollColumnStartPos = スクロール可能列の上側のY座標
 			if ( iScrollColumnEndPos < pos.y )
 			{
-				//	���ւ́u�̈�O�h���b�O�X�N���[���v���K�v�ȏ�
+				//	下への「領域外ドラッグスクロール」が必要な状況
 				sizeFixafterColumnNumberIncrease.setY( +1 );
 			}
 		}
@@ -422,7 +422,7 @@ CdDcdSizeXy CWndDcdGrid::calcIncreaseOnOutsideDrag( const POINT& pos )
 	return sizeFixafterColumnNumberIncrease ;
 }
 	// ********************************
-	//	@name	�Z���̌���
+	//	@name	セルの結合
 	// ********************************
 CdDcdZone	CWndDcdGrid::getYColumnZoneOverlap( 
 			int iYColumnNumber ) 
@@ -447,14 +447,14 @@ CdDcdZoneXy	CWndDcdGrid::getCellZoneOverlap(
 		&aCDcdTarget  , iXColumnNumber , iYColumnNumber ) ;
 }
 // ********************************
-//	@name	����
+//	@name	操作
 // ********************************
 
 // ********************************
 //	CWndDcdGrid
 // ********************************
 	// --------------------------------
-	//@name	�C�x���g�����̂��߂̉��z�֐�
+	//@name	イベント処理のための仮想関数
 	// --------------------------------
 void CWndDcdGrid::OnSetFocusCell( CDcdGridCell* pcdcdgridcell ) 
 {
@@ -485,11 +485,11 @@ void CWndDcdGrid::OnChangeSelectCell(
 }
 
 	// ********************************
-	//@name �֘A
+	//@name 関連
 	// ********************************
 
 	// ********************************
-	//@name ���
+	//@name 包含
 	// ********************************
 CXDcdGrid*	CWndDcdGrid::getCXDcdGrid() 
 {
@@ -515,7 +515,7 @@ CRandomSelect*	CWndDcdGrid::getCRandomSelect()
 }
 
 	// ********************************
-	//@name	�\�z
+	//@name	構築
 	// ********************************
 BOOL CWndDcdGrid::Create( 
 	const RECT& rect, CWnd* pParentWnd, UINT nID )
@@ -525,7 +525,7 @@ BOOL CWndDcdGrid::Create(
 			, LoadCursor( NULL , IDC_ARROW ) 
 			, (HBRUSH)GetStockObject( WHITE_BRUSH ) 
 			, NULL ) 
-		, "CWndDcdGrid"	//	���̕����񂪕\������邱�Ƃ͂���܂���
+		, "CWndDcdGrid"	//	この文字列が表示されることはありません
 		, WS_CHILD | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 		, rect
 		, pParentWnd
@@ -540,7 +540,7 @@ BOOL CWndDcdGrid::Create( CWnd* pParentWnd, UINT nID )
 			, LoadCursor( NULL , IDC_ARROW ) 
 			, (HBRUSH)GetStockObject( WHITE_BRUSH ) 
 			, NULL ) 
-		, "CWndDcdGrid"	//	���̕����񂪕\������邱�Ƃ͂���܂���
+		, "CWndDcdGrid"	//	この文字列が表示されることはありません
 		, WS_CHILD | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 		, CRect( 0 , 0 , 0 , 0 ) 
 		, pParentWnd
@@ -549,7 +549,7 @@ BOOL CWndDcdGrid::Create( CWnd* pParentWnd, UINT nID )
 }
 
 	// ********************************
-	//@name CWndDcdGrid-����
+	//@name CWndDcdGrid-操作
 	// ********************************
 
 bool CWndDcdGrid::isShiftPressed()
@@ -577,7 +577,7 @@ void CWndDcdGrid::clearSelect()
 }
 
 	// ********************************
-	//@name CWndDcdGrid-�E�C���h�E�X�V
+	//@name CWndDcdGrid-ウインドウ更新
 	// ********************************
 int  CWndDcdGrid::InvalidateXColumnBorder( int iXColumnNumber , 
 	bool bErase ) 
@@ -585,7 +585,7 @@ int  CWndDcdGrid::InvalidateXColumnBorder( int iXColumnNumber ,
 	int iRv = 0 ;
 
 	// --------------------------------
-	//	�ĕ`��̈�����߂�
+	//	再描画領域を求める
 	// --------------------------------
 	CRect	rectClient ;
 	CdDcdZone	zoneClient ;
@@ -593,18 +593,18 @@ int  CWndDcdGrid::InvalidateXColumnBorder( int iXColumnNumber ,
 		GetClientRect( &rectClient ) ;
 		zoneClient.setPos( rectClient.left ).setSize( rectClient.right - rectClient.left ) ;
 	}
-	//rectClient = �N���C�A���g�̈�̋�`
-	//zoneClient = �N���C�A���g�̈�̕�
+	//rectClient = クライアント領域の矩形
+	//zoneClient = クライアント領域の幅
 
 	CdDcdZone	zoneInvalidate ;
 	if ( iRv >= 0 ){
 		CdDcdZone	zoneBorder = getXColumnBorderZone( iXColumnNumber ) ;
 		zoneInvalidate = zoneBorder.CrossZone( zoneClient ) ;
 	}
-	//zoneInvalidate = �N���C�A���g�̈撆�ŁA���E���̈�
+	//zoneInvalidate = クライアント領域中で、境界線領域
 	
 	// --------------------------------
-	//	�ĕ`��
+	//	再描画
 	// --------------------------------
 	if ( iRv >= 0 ){
 		if ( zoneInvalidate.getSize() > 0 ){
@@ -626,7 +626,7 @@ int CWndDcdGrid::InvalidateYColumnBorder( int iYColumnNumber ,
 {
 	int iRv = 0 ;
 	// --------------------------------
-	//	�ĕ`��̈�����߂�
+	//	再描画領域を求める
 	// --------------------------------
 	CRect	rectClient ;
 	CdDcdZone	zoneClient ;
@@ -634,18 +634,18 @@ int CWndDcdGrid::InvalidateYColumnBorder( int iYColumnNumber ,
 		GetClientRect( &rectClient ) ;
 		zoneClient.setPos( rectClient.top ).setSize( rectClient.bottom - rectClient.top ) ;
 	}
-	//rectClient = �N���C�A���g�̈�̋�`
-	//zoneClient = �N���C�A���g�̈�̕�
+	//rectClient = クライアント領域の矩形
+	//zoneClient = クライアント領域の幅
 
 	CdDcdZone	zoneInvalidate ;
 	if ( iRv >= 0 ){
 		CdDcdZone	zoneBorder = getYColumnBorderZone( iYColumnNumber ) ;
 		zoneInvalidate = zoneBorder.CrossZone( zoneClient ) ;
 	}
-	//zoneInvalidate = �N���C�A���g�̈撆�ŁA���E���̈�
+	//zoneInvalidate = クライアント領域中で、境界線領域
 	
 	// --------------------------------
-	//	�ĕ`��
+	//	再描画
 	// --------------------------------
 	if ( iRv >= 0 ){
 		if ( zoneInvalidate.getSize() > 0 ){
@@ -666,7 +666,7 @@ int CWndDcdGrid::InvalidateCell( int iXColumnNumber , int iYColumnNumber ,
 {
 	int iRv = 0 ;
 	// --------------------------------
-	//	�ĕ`��̈�����߂�
+	//	再描画領域を求める
 	// --------------------------------
 	CRect	rectClient ;
 	CdDcdZoneXy	zoneClient ;
@@ -675,18 +675,18 @@ int CWndDcdGrid::InvalidateCell( int iXColumnNumber , int iYColumnNumber ,
 		zoneClient.setX( CdDcdZone( rectClient.left , rectClient.right - rectClient.left ) )
 			.setY( CdDcdZone( rectClient.top , rectClient.bottom - rectClient.top ) ) ;
 	}
-	//rectClient = �N���C�A���g�̈�̋�`
-	//zoneClient = �N���C�A���g�̈�̕�
+	//rectClient = クライアント領域の矩形
+	//zoneClient = クライアント領域の幅
 
 	CdDcdZoneXy	zoneInvalidate ;
 	if ( iRv >= 0 ){
 		CdDcdZoneXy	zoneCell = getCellZone( iXColumnNumber , iYColumnNumber ) ;
 		zoneInvalidate = zoneCell.CrossZone( zoneClient ) ;
 	}
-	//zoneInvalidate = �N���C�A���g�̈撆�ŁA���E���̈�
+	//zoneInvalidate = クライアント領域中で、境界線領域
 	
 	// --------------------------------
-	//	�ĕ`��
+	//	再描画
 	// --------------------------------
 	if ( iRv >= 0 ){
 		if ( zoneInvalidate.getX().getSize() > 0 && 
@@ -715,7 +715,7 @@ int CWndDcdGrid::InvalidateCell( int iXColumnNumber , int iYColumnNumber ,
 	
 	super::Invalidate( bErase ) ;
 
-	//	�S�̂̑������X�V
+	//	全体の属性を更新
 	update() ;
  }
 
@@ -744,15 +744,15 @@ END_MESSAGE_MAP()
 
 
 /////////////////////////////////////////////////////////////////////////////
-// CWndDcdGrid ���b�Z�[�W �n���h��
+// CWndDcdGrid メッセージ ハンドラ
 
 void CWndDcdGrid::OnPaint() 
 {
 	// --------------------------------
-	//	�`��
+	//	描画
 	// --------------------------------
 	{
-		CPaintDC dc(this); // �`��p�̃f�o�C�X �R���e�L�X�g
+		CPaintDC dc(this); // 描画用のデバイス コンテキスト
 		
 		CDcdTargetOnPaint	aCDcdTarget( GetSafeHwnd() , &dc.m_ps ) ;
 		
@@ -770,12 +770,12 @@ void CWndDcdGrid::OnPaint()
 		m_pCDcdGrid->DcDraw( &aCDcdTarget );
 		
 		// --------------------------------	
-		//	�t�H�[�J�X�}�[�N
+		//	フォーカスマーク
 		// --------------------------------	
 		m_pCFocus->OnPaint(  &aCDcdTarget ) ;
 
 		// --------------------------------	
-		//	�I���}�[�N
+		//	選択マーク
 		// --------------------------------	
 		m_pCSelect->OnPaint(  &aCDcdTarget ) ;
 
@@ -812,7 +812,7 @@ void CWndDcdGrid::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 		 case SB_LINELEFT:
 			{
 				{
-					//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+					//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
 					m_pCDcdGrid->setXFixafterColumnNumber( m_pCDcdGrid->getXFixafterColumnNumber() - 1 ) ;
@@ -822,7 +822,7 @@ void CWndDcdGrid::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 		 case SB_LINERIGHT:
 			{
 				{
-					//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+					//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
 					m_pCDcdGrid->setXFixafterColumnNumber( m_pCDcdGrid->getXFixafterColumnNumber() + 1 ) ;
@@ -836,7 +836,7 @@ void CWndDcdGrid::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 					calcXFixafterColumnNumberPagemove( &aCDcdTarget , 
 						iFixafterColumnNumber , false ) ;
 
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -851,7 +851,7 @@ void CWndDcdGrid::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 					calcXFixafterColumnNumberPagemove( &aCDcdTarget , 
 						iFixafterColumnNumber , true ) ;
 
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -861,7 +861,7 @@ void CWndDcdGrid::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 			break ;
 		 case SB_THUMBPOSITION :
 			{
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -871,7 +871,7 @@ void CWndDcdGrid::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 			break ;
 		 case SB_THUMBTRACK :
 			{
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -907,7 +907,7 @@ void CWndDcdGrid::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 		{
 		 case SB_LINEUP:
 			{
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -917,7 +917,7 @@ void CWndDcdGrid::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 			break ; 
 		 case SB_LINEDOWN:
 			{
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -931,7 +931,7 @@ void CWndDcdGrid::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 				int iFixafterColumnNumberNew = m_pCDcdGrid->
 					calcYFixafterColumnNumberPagemove( &aCDcdTarget , 
 						iFixafterColumnNumber , false ) ;
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -945,7 +945,7 @@ void CWndDcdGrid::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 				int iFixafterColumnNumberNew = m_pCDcdGrid->
 					calcYFixafterColumnNumberPagemove( &aCDcdTarget , 
 						iFixafterColumnNumber , true ) ;
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -955,7 +955,7 @@ void CWndDcdGrid::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 			break ;
 		 case SB_THUMBPOSITION :
 			{
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -965,7 +965,7 @@ void CWndDcdGrid::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 			break ;
 		 case SB_THUMBTRACK :
 			{
-				//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+				//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 				{
 					Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -991,30 +991,30 @@ void CWndDcdGrid::OnSize(UINT nType, int cx, int cy)
 	
 	if ( cx == 0 || cy == 0 )
 	{
-		//	���̂Q�̂����̂����ꂩ��0�̏ꍇ�A�����
-		//	Create() �ŃT�C�Y���w�肹���ɃE�C���h�E��
-		//	�����������̂Ǝv���܂��B
-		//	���̏ꍇ�́A���[�U�[�ɂ͉��������Ȃ��킯�ł�����A
-		//	�t�H�[�J�X�Z���̈ʒu�̍œK���Ȃǂ͂����Ȃ�
-		//	�K�v������܂���B
+		//	この２つのうちのいずれかが0の場合、それは
+		//	Create() でサイズを指定せずにウインドウを
+		//	生成したものと思われます。
+		//	この場合は、ユーザーには何も見えないわけですから、
+		//	フォーカスセルの位置の最適化などはおこなう
+		//	必要がありません。
 		//
-		//	�܂��A���̑傫���̂Ƃ��� adjustProp() ��
-		//	�s���ƁA�t�H�[�J�X�ʒu�͖������� (0,0) ��
-		//	�ړ����Ă��܂��܂��B���̂��߁A
-		//	adjustProp() �͂��Ȃ�����
-		//	�悢�ł��傤�B
+		//	また、この大きさのときに adjustProp() を
+		//	行うと、フォーカス位置は無条件に (0,0) に
+		//	移動してしまいます。このため、
+		//	adjustProp() はしない方が
+		//	よいでしょう。
 		return ;
 	}
 	super::OnSize(nType, cx, cy);
 
-	//	�W��C���X�^���X�ɈϏ�
+	//	集約インスタンスに委譲
 	m_pCFocus->OnSize( nType, cx, cy) ;
 	m_pCSelect->OnSize( nType, cx, cy) ;
 	m_pCBoxSelect->OnSize( nType, cx, cy);
 	m_pCRandomSelect->OnSize( nType, cx, cy) ;
 	
 
-	//	�E�C���h�E�T�C�Y�ɂ��������āA�X�N���[���o�[�E�t�H�[�J�X���X�V
+	//	ウインドウサイズにしたがって、スクロールバー・フォーカスを更新
 	{
 		Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -1025,7 +1025,7 @@ void CWndDcdGrid::OnSize(UINT nType, int cx, int cy)
 
 void CWndDcdGrid::OnSetFocus(CWnd* pOldWnd) 
 {
-	//	�W��C���X�^���X�ɈϏ�
+	//	集約インスタンスに委譲
 	m_pCFocus->OnSetFocus( pOldWnd ) ;
 	m_pCSelect->OnSetFocus( pOldWnd ) ;
 	m_pCBoxSelect->OnSetFocus( pOldWnd );
@@ -1036,22 +1036,22 @@ void CWndDcdGrid::OnSetFocus(CWnd* pOldWnd)
 
 void CWndDcdGrid::OnKillFocus(CWnd* pNewWnd) 
 {
-	//(3.1)�E�C���h�E�t�H�[�J�X���������ꍇ�́A�}�E�X�L���v�`��OFF
-	//	�}�E�X�̃L���v�`�����
+	//(3.1)ウインドウフォーカスを失った場合は、マウスキャプチャOFF
+	//	マウスのキャプチャ解放
 	ReleaseCapture() ;
 
-	//	�u�̈�O�h���b�O�X�N���[���v�^�C�}��������܂��B
+	//	「領域外ドラッグスクロール」タイマを解放します。
 	if ( m_bOutsideDrag_TimerOn )
 	{
 		KillTimer( OutsideDrag_TIMERID ) ;
 		m_bOutsideDrag_TimerOn = false ;
 	}
 
-	//	�t�H�[�J�X���������Ƃ��ɂ́A
-	//	���{�^�����������������B
+	//	フォーカスを失ったときには、
+	//	左ボタン押し下げを解除。
 	m_bLButtonIsDown = false ;
 
-	//	�W��C���X�^���X�ɈϏ�
+	//	集約インスタンスに委譲
 	m_pCRandomSelect->OnKillFocus( pNewWnd )  ;
 	m_pCBoxSelect->OnKillFocus( pNewWnd ) ;
 	m_pCSelect->OnKillFocus( pNewWnd ) ;
@@ -1062,27 +1062,27 @@ void CWndDcdGrid::OnKillFocus(CWnd* pNewWnd)
 
 void CWndDcdGrid::OnLButtonDown(UINT nFlags, CPoint point) 
 {
-	//	���{�^����������
+	//	左ボタン押し下げ
 	m_bLButtonIsDown = true ;
 	m_posxyCursorPosOnLButtonDown = CdDcdPosXy( point.x , point.y ) ;
 
-	//(4.1)�}�E�X���{�^����������(LButtonDown)
-	//�@�}�E�X�̃L���v�`��ON
-	//	�t�H�[�J�X���ړ�
-	if ( m_bLButtonIsDown )	//   �}�E�X�̍��{�^����������Ă���ꍇ�ɐݒ肵�܂��B
+	//(4.1)マウス左ボタン押し下げ(LButtonDown)
+	//　マウスのキャプチャON
+	//	フォーカスを移動
+	if ( m_bLButtonIsDown )	//   マウスの左ボタンが押されている場合に設定します。
 	{
-		//	�t�H�[�J�X�Z�����J�[�\���ʒu�Ɉړ�
+		//	フォーカスセルをカーソル位置に移動
 		CDcdGridCell*	pCell = getCellOfPos( CdDcdPosXy( point.x , point.y ) ) ;
 		if ( pCell != NULL )
 		{
-			//	�}�E�X�J�[�\���́A�ǂ����̃Z���̏�ɂ���܂��B
-			//	��������O���b�h�̊O�Ƀ}�E�X���h���b�O���ꂽ�Ƃ��ɁA
-			//	�u�̈�O�h���b�O�X�N���[���v���N�����܂��B
+			//	マウスカーソルは、どこかのセルの上にあります。
+			//	ここからグリッドの外にマウスがドラッグされたときに、
+			//	「領域外ドラッグスクロール」が起動します。
 
-			//�@�E�C���h�E�̃t�H�[�J�X���ړ�
+			//　ウインドウのフォーカスを移動
 			SetFocus() ;
 
-			//�@�t�H�[�J�X�Z�����ړ�
+			//　フォーカスセルを移動
 			{
 				Ou<CPropStack> pPropStack = createPropStackForMovingFocusCell() ;
 
@@ -1090,16 +1090,16 @@ void CWndDcdGrid::OnLButtonDown(UINT nFlags, CPoint point)
 			}
 
 
-			//�@�}�E�X�̃L���v�`��ON
+			//　マウスのキャプチャON
 			SetCapture() ;
 
-			//	�u�̈�O�h���b�O�X�N���[���v�̃^�C�}�[ON
+			//	「領域外ドラッグスクロール」のタイマーON
 			SetTimer( OutsideDrag_TIMERID , m_iOutsideDrag_TimeMs , NULL ) ;
 			m_bOutsideDrag_TimerOn = true ;
 		}
 	}
 
-	//	�W��C���X�^���X�ɈϏ�
+	//	集約インスタンスに委譲
 	//m_pCFocus->OnLButtonDown(nFlags, point) ;
 	//m_pCSelect->OnLButtonDown(nFlags, point) ;
 	//m_pCBoxSelect->OnLButtonDown(nFlags, point) ;
@@ -1109,21 +1109,21 @@ void CWndDcdGrid::OnLButtonDown(UINT nFlags, CPoint point)
 }
 void CWndDcdGrid::OnLButtonUp(UINT nFlags, CPoint point)
 {
-	//((4.2)�}�E�X���{�^�����(LButtonUp)
-	//	�}�E�X�̃L���v�`�����
+	//((4.2)マウス左ボタン解放(LButtonUp)
+	//	マウスのキャプチャ解放
 	ReleaseCapture() ;
 
-	//	�u�̈�O�h���b�O�X�N���[���v�^�C�}��������܂��B
+	//	「領域外ドラッグスクロール」タイマを解放します。
 	if ( m_bOutsideDrag_TimerOn )
 	{
 		KillTimer( OutsideDrag_TIMERID ) ;
 		m_bOutsideDrag_TimerOn = false ;
 	}
 
-	//	���{�^�����������������B
+	//	左ボタン押し下げを解除。
 	m_bLButtonIsDown = false ;
 
-	//	�W��C���X�^���X�ɈϏ�
+	//	集約インスタンスに委譲
 	//m_pCFocus->OnLButtonUp(nFlags, point) ;
 	//m_pCSelect->OnLButtonUp(nFlags, point) ;
 	//m_pCBoxSelect->OnLButtonUp(nFlags, point) ;
@@ -1134,23 +1134,23 @@ void CWndDcdGrid::OnLButtonUp(UINT nFlags, CPoint point)
 
 void CWndDcdGrid::OnMouseMove(UINT nFlags, CPoint point)
 {
-	//(4.1)�}�E�X���{�^����������(LButtonDown)
-	//�@�}�E�X�̃L���v�`��ON
-	//	�J�[�\����Grid���ɂ���΁A
-	//	�t�H�[�J�X�Z�����J�[�\���ʒu�Ɉړ�
-	if ( m_bLButtonIsDown )	//   �}�E�X�̍��{�^����������Ă���ꍇ�ɐݒ肵�܂��B
+	//(4.1)マウス左ボタン押し下げ(LButtonDown)
+	//　マウスのキャプチャON
+	//	カーソルがGrid内にあれば、
+	//	フォーカスセルをカーソル位置に移動
+	if ( m_bLButtonIsDown )	//   マウスの左ボタンが押されている場合に設定します。
 	{
 
-		//	�J�[�\�����u�̈�O�h���b�O�X�N���[���v��
-		//	�K�v�Ȉʒu�ɂ��邩�ۂ��𒲂ׂ܂��B
+		//	カーソルが「領域外ドラッグスクロール」の
+		//	必要な位置にあるか否かを調べます。
 		CdDcdSizeXy	sizeFixafterColumnNumberIncrease = 
 			calcIncreaseOnOutsideDrag( point ) ;
 		if ( sizeFixafterColumnNumberIncrease.getX() != 0 ||
 			sizeFixafterColumnNumberIncrease.getY() != 0 )
 		{
-			//	�u�̈�O�h���b�O�X�N���[���v��
-			//	�K�v�ȏꍇ�́A�t�H�[�J�X�̈ړ��͍s���܂���
-			//	(OnTimer()�ŁA�t�H�[�J�X�̈ړ����s���܂�)
+			//	「領域外ドラッグスクロール」が
+			//	必要な場合は、フォーカスの移動は行いません
+			//	(OnTimer()で、フォーカスの移動を行います)
 		}
 		else
 		{
@@ -1159,15 +1159,15 @@ void CWndDcdGrid::OnMouseMove(UINT nFlags, CPoint point)
 			if ( rectClient.left <= point.x && point.x < rectClient.right && 
 				rectClient.top <= point.y && point.y < rectClient.bottom )
 			{
-				//	�}�E�X���N���C�A���g�̈���Ȃ�A
-				//	�t�H�[�J�X�Z�����J�[�\���ʒu�Ɉړ�
+				//	マウスがクライアント領域内なら、
+				//	フォーカスセルをカーソル位置に移動
 				CDcdGridCell*	pCell = getCellOfPos( CdDcdPosXy( point.x , point.y ) ) ;
 				if ( pCell != NULL )
 				{
-					//�@�t�H�[�J�X�Z�����ړ�
+					//　フォーカスセルを移動
 					{
-						//	�X�N���[���ʒu���X�V���܂��B
-						//	�A���J�[�Z���́A�ێ����܂�
+						//	スクロール位置を更新します。
+						//	アンカーセルは、保持します
 						Ou<CPropStack> pPropStack = createPropStackForMovingFocusCell() ;
 
 						m_pCFocus->setFocusCell( pCell ) ;
@@ -1176,7 +1176,7 @@ void CWndDcdGrid::OnMouseMove(UINT nFlags, CPoint point)
 			}
 		}
 	}
-	//	�W��C���X�^���X�ɈϏ�
+	//	集約インスタンスに委譲
 	//m_pCFocus->OnMouseMove(nFlags, point)) ;
 	//m_pCSelect->OnMouseMove(nFlags, point) ;
 	//m_pCBoxSelect->OnMouseMove(nFlags, point) ;
@@ -1194,7 +1194,7 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		{
 			CDcdGridCell*	pCell = m_pCDcdGrid->calcMovedCell( 
 				m_pCFocus->getFocusCell() , -1 , 0 ) ;
-			//�@�t�H�[�J�X�Z�����ړ�
+			//　フォーカスセルを移動
 			{
 				Ou<CPropStack> pPropStack = createPropStackForMovingFocusCell() ;
 
@@ -1207,7 +1207,7 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		{
 			CDcdGridCell*	pCell = m_pCDcdGrid->calcMovedCell( 
 				m_pCFocus->getFocusCell() , +1 , 0 ) ;
-			//�@�t�H�[�J�X�Z�����ړ�
+			//　フォーカスセルを移動
 			{
 				Ou<CPropStack> pPropStack = createPropStackForMovingFocusCell() ;
 
@@ -1219,7 +1219,7 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		{
 			CDcdGridCell*	pCell = m_pCDcdGrid->calcMovedCell( 
 				m_pCFocus->getFocusCell() , 0 , -1 ) ;
-			//�@�t�H�[�J�X�Z�����ړ�
+			//　フォーカスセルを移動
 			{
 				Ou<CPropStack> pPropStack = createPropStackForMovingFocusCell() ;
 
@@ -1231,7 +1231,7 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		{
 			CDcdGridCell*	pCell = m_pCDcdGrid->calcMovedCell( 
 				m_pCFocus->getFocusCell() , 0 , +1 ) ;
-			//�@�t�H�[�J�X�Z�����ړ�
+			//　フォーカスセルを移動
 			{
 				Ou<CPropStack> pPropStack = createPropStackForMovingFocusCell() ;
 
@@ -1241,8 +1241,8 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		break ;
 	 case VK_PRIOR ://PageUp	
 		{
-			//	VK_SHIFT ��������Ă��܂���B
-			//	Y ������ PageUP�ł�
+			//	VK_SHIFT が押されていません。
+			//	Y 方向の PageUPです
 			int iFixafterColumnNumber = m_pCDcdGrid->getYFixafterColumnNumber() ;
 			int iFixafterColumnNumberNew = m_pCDcdGrid->
 				calcYFixafterColumnNumberPagemove( &aCDcdTarget , 
@@ -1250,7 +1250,7 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 			//setYFixafterColumnNumber( iFixafterColumnNumberNew ) ;
 
-			//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+			//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 			{
 				Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -1261,14 +1261,14 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		break ;
 	 case VK_NEXT :	//PageDown	
 		{
-			//	Y ������ PageDown�ł�
+			//	Y 方向の PageDownです
 			int iFixafterColumnNumber = m_pCDcdGrid->getYFixafterColumnNumber() ;
 			int iFixafterColumnNumberNew = m_pCDcdGrid->
 				calcYFixafterColumnNumberPagemove( &aCDcdTarget , 
 					iFixafterColumnNumber , true ) ;
 			//setYFixafterColumnNumber( iFixafterColumnNumberNew ) ;
 			
-			//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+			//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 			{
 				Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -1278,8 +1278,8 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		break ;
 	 case VK_HOME :
 		{
-			//	VK_SHIFT ��������Ă��܂��B
-			//	X ������ PageUP�ł�
+			//	VK_SHIFT が押されています。
+			//	X 方向の PageUPです
 
 			int iFixafterColumnNumber = m_pCDcdGrid->getXFixafterColumnNumber() ;
 			int iFixafterColumnNumberNew = m_pCDcdGrid->
@@ -1288,7 +1288,7 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 			//setXFixafterColumnNumber( iFixafterColumnNumberNew ) ;
 
-			//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+			//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 			{
 				Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -1298,13 +1298,13 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		break ;
 	 case VK_END :
 		{
-			//	VK_SHIFT ��������Ă��܂��B
-			//	X ������ PageDown�ł�
+			//	VK_SHIFT が押されています。
+			//	X 方向の PageDownです
 			int iFixafterColumnNumber = m_pCDcdGrid->getXFixafterColumnNumber() ;
 			int iFixafterColumnNumberNew = m_pCDcdGrid->
 				calcXFixafterColumnNumberPagemove( &aCDcdTarget , 
 					iFixafterColumnNumber , true ) ;
-			//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+			//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 			{
 				Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
@@ -1315,7 +1315,7 @@ void CWndDcdGrid::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 	 default:
 		{
-			//	�W��C���X�^���X�ɈϏ�
+			//	集約インスタンスに委譲
 			//m_pCFocus->OnKeyDown(nChar, nRepCnt, nFlags) ;
 			//m_pCSelect->OnKeyDown(nChar, nRepCnt, nFlags);
 			//m_pCBoxSelect->OnKeyDown(nChar, nRepCnt, nFlags) ;
@@ -1347,13 +1347,13 @@ BOOL CWndDcdGrid::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt)
 	if ( nFlags == 0 )
 	{
 		int iYMove = zDelta / (-WHEEL_DELTA) ;
-		//iYMove = Y�����Ɉړ����鐔�B
+		//iYMove = Y方向に移動する数。
 
-		//	�X�N���[���̕ύX(PageUp,PageDown,Home,End�L�[���܂�)
+		//	スクロールの変更(PageUp,PageDown,Home,Endキーを含む)
 		{
-			//	�X�N���[���ʒu�ɍ��킹�ăt�H�[�J�X�ʒu���X�V���܂��B
-			//	�A���J�[�Z���́AShift��������Ă�����ێ����܂��B
-			//	Shift��������Ă��Ȃ��ꍇ�͍X�V���܂��B
+			//	スクロール位置に合わせてフォーカス位置を更新します。
+			//	アンカーセルは、Shiftが押されていたら保持します。
+			//	Shiftが押されていない場合は更新します。
 			Ou<CPropStack> pPropStack = createPropStackForScroll() ;
 
 			m_pCDcdGrid->setYFixafterColumnNumber( m_pCDcdGrid->getYFixafterColumnNumber() + iYMove ) ;
@@ -1368,32 +1368,32 @@ BOOL CWndDcdGrid::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt)
 
 void CWndDcdGrid::OnTimer(UINT_PTR nIDEvent)
 {
-	//	�u�̈�O�h���b�O�X�N���[���v
+	//	「領域外ドラッグスクロール」
 	if ( nIDEvent == OutsideDrag_TIMERID )
 	{
 		CPoint	point ;
 		GetCursorPos( &point ) ;
 		ScreenToClient( &point ) ;
 
-		//	�J�[�\�����u�̈�O�h���b�O�X�N���[���v��
-		//	�K�v�Ȉʒu�ɂ��邩�ۂ��𒲂ׂ܂��B
+		//	カーソルが「領域外ドラッグスクロール」の
+		//	必要な位置にあるか否かを調べます。
 		CdDcdSizeXy	sizeFixafterColumnNumberIncrease = 
 			calcIncreaseOnOutsideDrag( point ) ;
 		if ( sizeFixafterColumnNumberIncrease.getX() != 0 ||
 			sizeFixafterColumnNumberIncrease.getY() != 0 )
 		{
-			//	�u�̈�O�h���b�O�X�N���[���v��
-			//	�K�v�ȏꍇ�́A�X�N���[�����s���܂��B
+			//	「領域外ドラッグスクロール」が
+			//	必要な場合は、スクロールを行います。
 
 			// --------------------------------
-			//	�t�H�[�J�X�Z�����ړ���������@
+			//	フォーカスセルを移動させる方法
 			// --------------------------------
 			//memo:
-			//	�^�C�}��FixafterColumnNumber��ω���������@�ł́A
-			//	�t�H�[�J�X�Z�����Ǐ]���Ȃ����߁A
-			//	�s���R�ȓ����ɂȂ�܂��B
-			//	���̂��߁A�^�C�}�Ńt�H�[�J�X�Z����
-			//	�ړ������邱�Ƃɂ��܂����B
+			//	タイマでFixafterColumnNumberを変化させる方法では、
+			//	フォーカスセルが追従しないため、
+			//	不自然な動きになります。
+			//	このため、タイマでフォーカスセルを
+			//	移動させることにしました。
 			CDcdGridCell*	pCell = m_pCFocus->getFocusCell() ;
 			if ( pCell != NULL )
 			{
@@ -1401,11 +1401,11 @@ void CWndDcdGrid::OnTimer(UINT_PTR nIDEvent)
 					sizeFixafterColumnNumberIncrease.getX() , 
 					sizeFixafterColumnNumberIncrease.getY() ) ; 
 
-				//	�t�H�[�J�X�Z���̈ړ�
+				//	フォーカスセルの移動
 				{
-					//	�X�N���[���ʒu���X�V���܂��B
-					//	�A���J�[�Z���́A�ێ����܂�(���̃^�C�}���L���ȏꍇ��
-					//	�h���b�O���̂���)�B
+					//	スクロール位置を更新します。
+					//	アンカーセルは、保持します(このタイマが有効な場合は
+					//	ドラッグ中のため)。
 					Ou<CPropStack> pPropStack = createPropStackForMovingFocusCell() ;
 
 					m_pCFocus->setFocusCell( pCell ) ;
@@ -1421,31 +1421,31 @@ void CWndDcdGrid::OnTimer(UINT_PTR nIDEvent)
 void CWndDcdGrid::OnRButtonDown(UINT nFlags, CPoint point)
 {
 
-	//	�E�@�t�H�[�J�X�Z���ȊO�̃Z�����E�N���b�N�����ꍇ�́A
-	//	�t�H�[�J�X�Z�����N���b�N���ꂽ�Z���Ɉړ�����B
-	//	���̂Ƃ��A�Z���̕����I���͉�������B���̌�A�R���e�L�X�g���j���[��\������
-	//	�E�@�t�H�[�J�X�Z�����E�N���b�N�����ꍇ�E�������̓Z���ȊO�̏ꏊ��
-	//	�E�N���b�N�����ꍇ�́A�Z���̕����I�����ێ�����B���̌�A�R���e�L�X�g���j���[��\������
-	//�y���R�z
-	//	�Z���𕡐��I��������ԂŁA�t�H�[�J�X�Z���ȊO�̃Z�����E�N���b�N����ƁA
-	//	�Z���������I�����ꂽ�܂܁A�R���e�L�X�g���j���[���\������Ă��܂��܂��B
-	//	����́AMicrosoft Excel �Ȃǂ̈�ʓI�ȃ\�t�g�E�G�A�Ƃ͓��삪�قȂ�A�s�ւɊ����܂��B
+	//	・　フォーカスセル以外のセルを右クリックした場合は、
+	//	フォーカスセルをクリックされたセルに移動する。
+	//	このとき、セルの複数選択は解除する。その後、コンテキストメニューを表示する
+	//	・　フォーカスセルを右クリックした場合・もしくはセル以外の場所を
+	//	右クリックした場合は、セルの複数選択を維持する。その後、コンテキストメニューを表示する
+	//【理由】
+	//	セルを複数選択した状態で、フォーカスセル以外のセルを右クリックすると、
+	//	セルが複数選択されたまま、コンテキストメニューが表示されてしまいます。
+	//	これは、Microsoft Excel などの一般的なソフトウエアとは動作が異なり、不便に感じます。
 
-	//	�E�{�^���������ꂽ�Ƃ��́A���̃E�C���h�E�ɖ����I��
-	//	�t�H�[�J�X��ݒ肷��K�v������܂��B
+	//	右ボタンが押されたときは、このウインドウに明示的に
+	//	フォーカスを設定する必要があります。
 	//
-	//�y���R�z
-	//	���̃E�C���h�E���J��������́A���̃E�C���h�E��
-	//	�t�H�[�J�X�������Ă��܂���B
-	//	�܂��A�E�C���h�E�͉E�{�^���������������ł́A
-	//	�t�H�[�J�X�𓾂܂���B
-	//	���̂��߁ACWndDcdGrid2::CFocus::m_bIsFocusmarkShowEvery ��
-	//	false�̏ꍇ�́A�Z�����E�N���b�N�ł��A���̃Z���Ƀt�H�[�J�X�}�[�N���`�悳��܂���B
+	//【理由】
+	//	このウインドウが開いた直後は、このウインドウは
+	//	フォーカスを持っていません。
+	//	また、ウインドウは右ボタン押し下げだけでは、
+	//	フォーカスを得ません。
+	//	このため、CWndDcdGrid2::CFocus::m_bIsFocusmarkShowEvery が
+	//	falseの場合は、セルを右クリックでも、そのセルにフォーカスマークが描画されません。
 	SetFocus() ;
 
 	{
-		//	�}�E�X���N���C�A���g�̈���ŁA�t�H�[�J�X�Z���ȊO�̃Z���ɂ���Ȃ�A
-		//	�t�H�[�J�X�Z�����J�[�\���ʒu�Ɉړ�
+		//	マウスがクライアント領域内で、フォーカスセル以外のセルにあるなら、
+		//	フォーカスセルをカーソル位置に移動
 		CRect rectClient ;
 		GetClientRect( &rectClient ) ;
 		if ( rectClient.left <= point.x && point.x < rectClient.right && 
@@ -1455,14 +1455,14 @@ void CWndDcdGrid::OnRButtonDown(UINT nFlags, CPoint point)
 			CDcdGridCell*	pCellFocus = getCFocus()->getFocusCell() ;
 			if ( pCell != NULL && pCell != pCellFocus )
 			{
-				//	�`����œK��
+				//	描画を最適化
 				Ou<CPropStack> pPropStack = createPropStackForMovingFocusCell() ;
 
-				//�t�H�[�J�X�Z�����J�[�\���ʒu�Ɉړ�
+				//フォーカスセルをカーソル位置に移動
 				m_pCFocus->setFocusCell( pCell ) ;
 				
 
-				//�Z���̑I������������
+				//セルの選択を解除する
 				m_pCBoxSelect->clearSelect() ;
 				m_pCSelect->clearSelect() ;
 			}

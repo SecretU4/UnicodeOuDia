@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -110,7 +110,7 @@ string CdDedJikoku::CConv::encode( const CdDedJikoku& aJikoku )const
 {
 	string	strRv ;
 	if ( !aJikoku.isNull() ){
-		//	��
+		//	時
 		if ( m_eHour == EHour_ZeroToNone )
 		{
 			//char	szLs[16] ;
@@ -132,20 +132,20 @@ string CdDedJikoku::CConv::encode( const CdDedJikoku& aJikoku )const
 			//strRv += szLs ;
 			strRv += strprintf( "%02d" , aJikoku.getHour() );
 		}
-		//	���̂��̃R����
+		//	時のつぎのコロン
 		if ( !m_bNoColon )
 		{
 			strRv += ":" ;
 		}
-		//	��
+		//	分
 		{
 			strRv += strprintf( "%02d" , aJikoku.getMinute()  );
 		}
-		//	�b
+		//	秒
 		if ( m_eSecond == ESecond_Output ||
 			( m_eSecond == ESecond_NotIfZero && aJikoku.getSecond() != 0 ) )
 		{
-			//	���̂��̃R����
+			//	分のつぎのコロン
 			if ( !m_bNoColon )
 			{
 				strRv += ":" ;
@@ -168,7 +168,7 @@ string CdDedJikoku::CConv::encode( const CdDedJikoku& aJikoku )const
 const int iSecondsOfADay = 24 * 60 * 60 ;
 
 // --------------------------------
-//@name �����֐�
+//@name 下請関数
 // --------------------------------
 int CdDedJikoku::adjustTotalSeconds( int iTotalSeconds ) 
 {
@@ -180,7 +180,7 @@ int CdDedJikoku::adjustTotalSeconds( int iTotalSeconds )
 }
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CdDedJikoku::CdDedJikoku() : 
 		m_iTotalSeconds( INT_MIN )
@@ -206,7 +206,7 @@ CdDedJikoku::CdDedJikoku( const string& strTime )
 //	CdDedJikoku
 // ********************************
 	// ********************************
-	//@name ����
+	//@name 属性
 	// ********************************
 CdDedJikoku& CdDedJikoku::setTotalSeconds( int value ) 
 {
@@ -227,7 +227,7 @@ CdDedJikoku& CdDedJikoku::setNull()
 }
 	
 	// ********************************
-	//@name ����
+	//@name 操作
 	// ********************************
 int CdDedJikoku::compare( const CdDedJikoku& value )const 
 {
@@ -295,17 +295,17 @@ int CdDedJikoku::decode( const string& value )
 
 	string	strValue = value ;
 
-	//	�����񂪋󕶎���Ȃ�A�wNull��ԁx�Ƃ��܂��B
+	//	文字列が空文字列なら、『Null状態』とします。
 	if ( value.empty() ){
 		setNull() ;
 		return ( 0 ) ;
 	}
 
-	//	�R�������Ȃ��ꍇ�͒ǉ�
+	//	コロンがない場合は追加
 	{
 		string::size_type pos = strValue.find( ":" ) ;
 		if ( pos == string::npos ){
-			//	�R����������܂���B��������2����؂�ŃR������}�����܂��B
+			//	コロンがありません。末尾から2桁区切りでコロンを挿入します。
 			if ( strValue.size() > 2 ){
 				strValue.insert( strValue.size() - 2 , ":" ) ; 
 			}
@@ -316,17 +316,17 @@ int CdDedJikoku::decode( const string& value )
 	}
 	//strValue = "13:15:45","9:15"
 	
-	//	�b���Ȃ��ꍇ�͒ǉ�
+	//	秒がない場合は追加
 	if ( strValue.size() <= 5 ){
 		strValue += ":00" ;
 	}
 	//strValue = "13:15:45","9:15:00"
 
-	//	����10�̈ʂ��Ȃ��ꍇ�͒ǉ�
+	//	時の10の位がない場合は追加
 	if ( strValue.size() <= 7 ){
 		strValue = string( "0" ) + strValue ;
 	}
-	//	����10�̈ʂ��X�y�[�X�̏ꍇ�́A�X�y�[�X�� "0" �ɕύX
+	//	時の10の位がスペースの場合は、スペースを "0" に変更
 	if ( strValue.size() > 0 && strValue[0] == ' ' ){
 		strValue[0] = '0' ;
 	}
@@ -337,21 +337,21 @@ int CdDedJikoku::decode( const string& value )
 	int iMinute = -1 ;
 	int iSecond = -1 ;
 	if ( strValue.size() == 8 ){
-		//	��
+		//	時
 		{
 			string	strLs = strValue.substr( 0 , 2 ) ;
 			if ( strLs.find_first_not_of( "0123456789" ) == string::npos ){
 				iHour = atoi( strLs.c_str() ) ;
 			}
 		}
-		//	��
+		//	分
 		{
 			string	strLs = strValue.substr( 3 , 2 ) ;
 			if ( strLs.find_first_not_of( "0123456789" ) == string::npos ){
 				iMinute = atoi( strLs.c_str() ) ;
 			}
 		}
-		//	�b
+		//	秒
 		{
 			string	strLs = strValue.substr( 6 , 2 ) ;
 			if ( strLs.find_first_not_of( "0123456789" ) == string::npos ){
@@ -359,7 +359,7 @@ int CdDedJikoku::decode( const string& value )
 			}
 		}
 	}	else	{
-		iRv = -1 ;	//	���ڐ����s�����Ă��܂��B
+		iRv = -1 ;	//	項目数が不足しています。
 		return ( iRv ) ;
 	}
 	
@@ -368,7 +368,7 @@ int CdDedJikoku::decode( const string& value )
 			0 <= iSecond && iSecond < 60 ){
 		setTime( iHour , iMinute , iSecond ) ;
 	}	else	{
-		iRv = -2 ;	//	���E���E�b�̕\�L���s���ł��B
+		iRv = -2 ;	//	時・分・秒の表記が不正です。
 	}
 	
 	return ( iRv ) ;

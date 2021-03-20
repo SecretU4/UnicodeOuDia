@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -86,140 +86,140 @@ namespace DcDrawMfc{
 // ****************************************************************
 /**
  * @brief
- *	�y�T�v�z
- *	  MFC �� DocView ���f���ł́A���/����v���r���[�̕`��̈��񋟂���
- *	�N���X�ł��B����̏ꍇ�E����v���r���[�̏ꍇ�Ƃ��A���̃N���X��
- *	���p���邱�Ƃ��ł��܂��B
+ *	【概要】
+ *	  MFC の DocView モデルでの、印刷/印刷プレビューの描画領域を提供する
+ *	クラスです。印刷の場合・印刷プレビューの場合とも、このクラスを
+ *	利用することができます。
  *	
- *	  MFC��DocView�A�v���P�[�V�����ł́ACView::OnPrint() �̃I�[�o���C�h��
- *	���̃I�u�W�F�N�g�𐶐����邱�Ƃɂ��ADcDraw���f���ɂ��v�����^�ւ�
- *	�`����s�����Ƃ��ł��܂��B
+ *	  MFCのDocViewアプリケーションでは、CView::OnPrint() のオーバライドで
+ *	このオブジェクトを生成することにより、DcDrawモデルによるプリンタへの
+ *	描画を行うことができます。
  *	
- *	  ���̃N���X�̃C���X�^���X�́ACView::OnPrint() �̃I�[�o���C�h�̒���
- *	�������A���̊֐������^�[������܂łɔj�����Ȃ��Ă͂Ȃ�܂���B
- *	�ʏ�́A�����ϐ��Ƃ��ăC���X�^���X�𐶐����Ă��������B
+ *	  このクラスのインスタンスは、CView::OnPrint() のオーバライドの中で
+ *	生成し、その関数がリターンするまでに破棄しなくてはなりません。
+ *	通常は、自動変数としてインスタンスを生成してください。
  *	
  *	<H4>
- *	�y���W�n�ɂ��āz
+ *	【座標系について】
  *	</H4>
  *	
- *	  ���̃N���X�́A����̏��́AOnPrint() �œn����� CDC �� CPrintInfo 
- *	����擾���܂��B�`��̈�i getZone() �Ŏ擾�ł���̈�j�́A
- *	CPrintInfo::m_rectDraw �i�y�[�W�̕`��ł���̈�j�ɓ������Ȃ�܂��B
+ *	  このクラスは、印刷の情報は、OnPrint() で渡される CDC と CPrintInfo 
+ *	から取得します。描画領域（ getZone() で取得できる領域）は、
+ *	CPrintInfo::m_rectDraw （ページの描画できる領域）に等しくなります。
  *	
- *	  �`��̈�̍��W�l�́A����̏ꍇ������v���r���[�̏ꍇ���A
- *	�v�����^�̂P�h�b�g���P�_���P�ʂƂȂ�܂��B
- *	  ����v���r���[�̏ꍇ�AMFC�� OnPrint() ���Ăяo���O�ɁADC�Ƀv�����^��
- *	�s�N�Z���ɍ��킹���}�b�s���O���[�h���ݒ肳��Ă��܂��B
- *	  �܂�A�v�����^�̗p���̍��[����E�[�܂ł̃h�b�g����1000�ł���΁A
- *	����v���r���[��ʂ̗p�������̍��[����E�[�܂ł̘_���P�ʂ�1000��
- *	��������Ă��܂��B
+ *	  描画領域の座標値は、印刷の場合も印刷プレビューの場合も、
+ *	プリンタの１ドット＝１論理単位となります。
+ *	  印刷プレビューの場合、MFCは OnPrint() を呼び出す前に、DCにプリンタの
+ *	ピクセルに合わせたマッピングモードが設定されています。
+ *	  つまり、プリンタの用紙の左端から右端までのドット数が1000であれば、
+ *	印刷プレビュー画面の用紙部分の左端から右端までの論理単位も1000に
+ *	調整されています。
  *	
  *	@see CaDcdTargetZoomDisplay 
- *	  ���̃I�u�W�F�N�g�Ɋ֘A���� CaDcdTargetZoomDisplay �A�_�v�^�N���X��
- *	�I�u�W�F�N�g�𐶐�����ƁA�f�B�X�v���C�Ɠ��l�̍��W�n�ŕ`����s�����Ƃ�
- *	�ł��܂��B
+ *	  このオブジェクトに関連する CaDcdTargetZoomDisplay アダプタクラスの
+ *	オブジェクトを生成すると、ディスプレイと同様の座標系で描画を行うことが
+ *	できます。
  *	
  *	<H4>
- *	�y�g�����z
+ *	【使い方】
  *	</H4>
  *	
- *	�P�D  CView::OnPrint() �̃I�[�o���C�h�ŁA���̃N���X�̃I�u�W�F�N�g��
- *	�������Ă��������B
- *	  ���̃N���X�̃C���X�^���X�́ACView::OnPrint() �̃I�[�o���C�h�̒���
- *	�������A���̊֐������^�[������܂łɔj�����Ȃ��Ă͂Ȃ�܂���B
- *	  �ʏ�́A�����ϐ��Ƃ��ăC���X�^���X�𐶐����Ă��������B
+ *	１．  CView::OnPrint() のオーバライドで、このクラスのオブジェクトを
+ *	生成してください。
+ *	  このクラスのインスタンスは、CView::OnPrint() のオーバライドの中で
+ *	生成し、その関数がリターンするまでに破棄しなくてはなりません。
+ *	  通常は、自動変数としてインスタンスを生成してください。
  *	
- *	�Q�D  ���̃I�u�W�F�N�g�� IfDcDraw �C���^�[�t�F�[�X�ɓn���āA�`���
- *	�s�����Ƃ��ł��܂��B
+ *	２．  このオブジェクトを IfDcDraw インターフェースに渡して、描画を
+ *	行うことができます。
  *	
  */
 class CDcdTargetMfcPrintInfo : public IfDcdTarget 
 {
 // ********************************
-///@name �֘A
+///@name 関連
 // ********************************
 ///@{
  private:
 	/**
-	  	�ΏۂƂȂ� DC �B
-	 	CView::OnPrint() �̃I�[�o���C�h�̈�����n���Ă��������B
+	  	対象となる DC 。
+	 	CView::OnPrint() のオーバライドの引数を渡してください。
 	 
-	 	����̏ꍇ�A
+	 	印刷の場合、
 	  @code
 	    m_pCPrintInfo->m_bPreview = FALSE
-	  	m_pDC->GetSafeHdc() = �v�����^��DC
-	  	m_pDC->m_hAttribDC = �v�����^��DC
+	  	m_pDC->GetSafeHdc() = プリンタのDC
+	  	m_pDC->m_hAttribDC = プリンタのDC
 	  @endcode
-	 	����v���r���[�̏ꍇ�A
+	 	印刷プレビューの場合、
 	 
 	  @code
 	    - m_pCPrintInfo->m_bPreview = TRUE
-	  	- m_pDC->GetSafeHdc() = �v���r���[��ʂ�DC
-	    - m_pDC->m_hAttribDC = �v�����^��DC
+	  	- m_pDC->GetSafeHdc() = プレビュー画面のDC
+	    - m_pDC->m_hAttribDC = プリンタのDC
 	  @endcode
-	 	�ƂȂ�܂��B
+	 	となります。
 	 
-	 	���̃I�u�W�F�N�g�̔j���̐Ӗ��� �N���X���[�U�[�ɂ���܂��B
-	  	���̃I�u�W�F�N�g�́Athis��蒷���������Ȃ��Ă͂Ȃ�܂���B
+	 	このオブジェクトの破棄の責務は クラスユーザーにあります。
+	  	このオブジェクトは、thisより長く生存しなくてはなりません。
 	 */
 	CDC*			m_pCDC ;
 	
 	/**
-	 * 	  MFC ����n���ꂽ  CPrintInfo �ł��B
-	 *	CView::OnPrint() �̃I�[�o���C�h�̈�����n���Ă��������B
+	 * 	  MFC から渡された  CPrintInfo です。
+	 *	CView::OnPrint() のオーバライドの引数を渡してください。
 	 *	
-	 *	  ���̃N���X�́A CPrintInfo �̓��e��ύX���܂���B
+	 *	  このクラスは、 CPrintInfo の内容を変更しません。
 	 *
-	 *	���̃I�u�W�F�N�g�̔j���̐Ӗ��� �N���X���[�U�[�ɂ���܂��B
-	 * 	���̃I�u�W�F�N�g�́Athis��蒷���������Ȃ��Ă͂Ȃ�܂���B
+	 *	このオブジェクトの破棄の責務は クラスユーザーにあります。
+	 * 	このオブジェクトは、thisより長く生存しなくてはなりません。
 	 */
 	const CPrintInfo*	m_pCPrintInfo ;
 	
 ///@}
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
 ///@{
  private:
 	/**
-	 * 	  �`��̕K�v�ȗ̈�̍��W�͈́B
-	 *	  �`��̈�̍��W�l�́A����̏ꍇ������v���r���[�̏ꍇ���A
-	 *	�v�����^�̂P�h�b�g���P�ƂȂ�܂��B
+	 * 	  描画の必要な領域の座標範囲。
+	 *	  描画領域の座標値は、印刷の場合も印刷プレビューの場合も、
+	 *	プリンタの１ドット＝１となります。
 	 *	
-	 *	�R���X�g���N�^�Ō��܂�܂��B
+	 *	コンストラクタで決まります。
 	 */
 	CdDcdZoneXy	m_zonexyZone ;
 	
 	
 ///@}
 // --------------------------------
-///@name	�����f�[�^
+///@name	内部データ
 // --------------------------------
 ///@{
  private:
 	/**
-	 *	GDI�I�u�W�F�N�g�̑����ƁA�n���h���̑Ώƕ\��ێ����܂��B
+	 *	GDIオブジェクトの属性と、ハンドルの対照表を保持します。
 	 */
 	CGdiCache	m_CGdiCache ;
 ///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 * @aram pCDC [in]
-	 * 	�ΏۂƂȂ� DC �B
-	 *	CView::OnPrint() �̃I�[�o���C�h�̈�����n���Ă��������B
-	 *	���̃I�u�W�F�N�g�̔j���̐Ӗ��� �N���X���[�U�[�ɂ���܂��B
-	 * 	���̃I�u�W�F�N�g�́Athis��蒷���������Ȃ��Ă͂Ȃ�܂���B
+	 * 	対象となる DC 。
+	 *	CView::OnPrint() のオーバライドの引数を渡してください。
+	 *	このオブジェクトの破棄の責務は クラスユーザーにあります。
+	 * 	このオブジェクトは、thisより長く生存しなくてはなりません。
 	 * @param pCPrintInfo [in]
-	 * 	  MFC ����n���ꂽ  CPrintInfo �ł��B
-	 *	CView::OnPrint() �̃I�[�o���C�h�̈�����n���Ă��������B
-	 *	  ���̃N���X�́A CPrintInfo �̓��e��ύX���܂���B\n
-	 *	���̃I�u�W�F�N�g�̔j���̐Ӗ��� �N���X���[�U�[�ɂ���܂��B
-	 * 	���̃I�u�W�F�N�g�́Athis��蒷���������Ȃ��Ă͂Ȃ�܂���B
+	 * 	  MFC から渡された  CPrintInfo です。
+	 *	CView::OnPrint() のオーバライドの引数を渡してください。
+	 *	  このクラスは、 CPrintInfo の内容を変更しません。\n
+	 *	このオブジェクトの破棄の責務は クラスユーザーにあります。
+	 * 	このオブジェクトは、thisより長く生存しなくてはなりません。
 	 */
 	CDcdTargetMfcPrintInfo( 
 		CDC*			pCDC ,
@@ -233,62 +233,62 @@ class CDcdTargetMfcPrintInfo : public IfDcdTarget
  public:
 	/**
 	 * @return
-	 * 	�`����s��DC���擾���܂��B
-	 * 	����HDC�̔j���̐Ӗ��́Athis�ɂ���܂��B
+	 * 	描画を行うDCを取得します。
+	 * 	このHDCの破棄の責務は、thisにあります。
 	 *
-	 *	�y�I�[�o���C�h�z
+	 *	【オーバライド】
 	 *
-	 *	����̏ꍇ�A���̊֐����Ԃ��̂� �v�����^��DC�ł��B
-	 *	����v���r���[�̏ꍇ�́A���̊֐����Ԃ��̂́A�v���r���[��ʂ�DC�ł��B
+	 *	印刷の場合、この関数が返すのは プリンタのDCです。
+	 *	印刷プレビューの場合は、この関数が返すのは、プレビュー画面のDCです。
 	 *
-	 *	����v���r���[�̏ꍇ�́A�v�����^��DC�� getPrinterHdc() �Ŏ擾�ł��܂��B
+	 *	印刷プレビューの場合は、プリンタのDCは getPrinterHdc() で取得できます。
 	 */
 	virtual HDC	getHdc() ;
 	
 	/**
 	 * @return
-	 * 	�`��̕K�v�ȗ̈�̍��W�͈͂��擾���邱�Ƃ��ł��܂��B
-	 * 	�P�ʂ́A�_���P�ʂł��B
+	 * 	描画の必要な領域の座標範囲を取得することができます。
+	 * 	単位は、論理単位です。
 	 */
 	virtual CdDcdZoneXy getZone() ;
 	
 	/**
 	 * @return
-	 * 	�`�悪�L���Ȕ͈͂��擾�ł��܂��B
-	 * 	�ʏ�́AgetZone()�Ɠ����̈�ƂȂ�܂��B
+	 * 	描画が有効な範囲を取得できます。
+	 * 	通常は、getZone()と同じ領域となります。
 	 * 
-	 * 	�E�C���h�E��WM_PAINT�ɂ��`��̏ꍇ�A���̊֐����Ԃ��̂́A
-	 * 	�ĕ`�悪�K�v�ȗ̈�ƂȂ�܂��B
-	 * 	���̗̈�𖳎����Ă����܂��܂���B�������A���͈̔͊O�ւ̕`���
-	 * 	�Ӗ�������܂���̂ŁA���͈̔͊O�ւ̕`���}������悤�ɂ���΁A
-	 * 	�`�揈���̌����̉��P�����҂ł��܂��B
+	 * 	ウインドウのWM_PAINTによる描画の場合、この関数が返すのは、
+	 * 	再描画が必要な領域となります。
+	 * 	この領域を無視してもかまいません。ただし、この範囲外への描画は
+	 * 	意味がありませんので、この範囲外への描画を抑制するようにすれば、
+	 * 	描画処理の効率の改善が期待できます。
 	 */
 	virtual CdDcdZoneXy getDrawableZone() ;
 
 	/**
-	 	CdFontProp�I�u�W�F�N�g�̑��������ƂɁA�t�H���g�𐶐����܂�
+	 	CdFontPropオブジェクトの属性をもとに、フォントを生成します
 	 @param aCdFontProp [in]
-	 	�t�H���g�������w�肵�Ă��������B
+	 	フォント属性を指定してください。
 	 @return
-		�t�H���g�̃n���h����ێ����� CGdiHFontHolder ��Ԃ��܂��B
+		フォントのハンドルを保持する CGdiHFontHolder を返します。
 	*/
 	virtual Ou<CGdiHFontHolder>	createGdiHFontHolder(  const CdFontProp& aCdFontProp ) ;
 	
 	/**
-	 	CdPenProp�I�u�W�F�N�g�̑��������ƂɁA�y���𐶐����܂�
+	 	CdPenPropオブジェクトの属性をもとに、ペンを生成します
 	 @param aCdPenProp [in]
-	 	�y���������w�肵�Ă��������B
+	 	ペン属性を指定してください。
 	 @return
-		�y���̃n���h����ێ����� CGdiHPenHolder ��Ԃ��܂��B
+		ペンのハンドルを保持する CGdiHPenHolder を返します。
 	*/
 	virtual  Ou<CGdiHPenHolder>		createGdiHPenHolder(  const CdPenProp& aCdPenProp ) ;
 
 	/**
-	 	CdBrushProp�I�u�W�F�N�g�̑��������ƂɁA�u���V�𐶐����܂�
+	 	CdBrushPropオブジェクトの属性をもとに、ブラシを生成します
 	 @param aCdBrushProp [in]
-	 	�u���V�������w�肵�Ă��������B
+	 	ブラシ属性を指定してください。
 	 @return
-		�u���V�̃n���h����ێ����� CGdiHBrushHolder ��Ԃ��܂��B
+		ブラシのハンドルを保持する CGdiHBrushHolder を返します。
 	*/
 	virtual Ou<CGdiHBrushHolder>	createGdiHBrushHolder(  const CdBrushProp& aCdBrushProp ) ;
 
@@ -299,7 +299,7 @@ class CDcdTargetMfcPrintInfo : public IfDcdTarget
 // ********************************
  public:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	CDC*			getCDC(){	return m_pCDC ;};
@@ -307,35 +307,35 @@ class CDcdTargetMfcPrintInfo : public IfDcdTarget
 
 	/**
 	 * @return
-	 * 	�v�����^��DC���擾���܂��B
-	 * 	����HDC�̔j���̐Ӗ��́Athis�ɂ���܂��B
+	 * 	プリンタのDCを取得します。
+	 * 	このHDCの破棄の責務は、thisにあります。
 	 *
-	 *	����̏ꍇ���A����v���r���[�̏ꍇ���A
-	 *	���̊֐��̓v�����^��DC��Ԃ��܂��B
+	 *	印刷の場合も、印刷プレビューの場合も、
+	 *	この関数はプリンタのDCを返します。
 	 */
 	virtual HDC getPrinterHdc() ;
 	///@}
 	// ********************************
-	///@name ����
+	///@name 操作
 	// ********************************
 	///@{
 	/**
-	 *	�v�����g�v���r���[�Ȃ�^�ł��B
+	 *	プリントプレビューなら真です。
 	 */
 	virtual bool isPreview() ;
 	///@}
 	// ********************************
-	///@name �f�o�b�O�p�֐�
+	///@name デバッグ用関数
 	// ********************************
 	///@{
 	/**
-	 *	CPrintInfo �̓��e���L�q�����Ǖ�������쐬���܂��B
+	 *	CPrintInfo の内容を記述した可読文字列を作成します。
 	 *	
-	 *	���̕�����̗p�r�́A�f�o�b�O�Ɍ����܂��B
+	 *	この文字列の用途は、デバッグに限られます。
 	 * @param pInfo [in]
-	 *	�ΏۂƂȂ� CPrintInfo �I�u�W�F�N�g���w�肵�Ă��������B
+	 *	対象となる CPrintInfo オブジェクトを指定してください。
 	 * @return 
-	 *	CPrintInfo �̓��e���L�q�����Ǖ�����B
+	 *	CPrintInfo の内容を記述した可読文字列。
 	 *	
 	 */
 	static std::string stringOf( CPrintInfo* pInfo ) ;

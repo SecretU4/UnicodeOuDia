@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// CDlgOuJikokuhyouCsvExport.cpp : �C���v�������e�[�V���� �t�@�C��
+// CDlgOuJikokuhyouCsvExport.cpp : インプリメンテーション ファイル
 //
 
 #include "stdafx.h"
@@ -87,7 +87,7 @@ namespace ViewJikokuhyou{
 using namespace std ;
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgOuJikokuhyouCsvExport �_�C�A���O
+// CDlgOuJikokuhyouCsvExport ダイアログ
 
 
 CDlgOuJikokuhyouCsvExport::CDlgOuJikokuhyouCsvExport(
@@ -121,7 +121,7 @@ BEGIN_MESSAGE_MAP(CDlgOuJikokuhyouCsvExport, CDialog)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgOuJikokuhyouCsvExport ���b�Z�[�W �n���h��
+// CDlgOuJikokuhyouCsvExport メッセージ ハンドラ
 
 BOOL CDlgOuJikokuhyouCsvExport::OnInitDialog() 
 {
@@ -136,20 +136,20 @@ BOOL CDlgOuJikokuhyouCsvExport::OnInitDialog()
 		pCentDedDia = m_pCentDedRosen->getCentDedDiaCont()->getMuPtr()->get( m_iDiaIndex ) ;
 		if ( pCentDedDia == NULL )
 		{
-			iRv = -11 ;	//	m_iDiaIndex ���s���ł��B
+			iRv = -11 ;	//	m_iDiaIndex が不正です。
 		}
 	}
 	if 	( iRv >= 0 )
 	{
 		pCentDedRessyaContGet = pCentDedDia->getCentDedRessyaCont( m_eRessyahoukou )->getMuPtr() ;
 	}
-	//pCentDedRessyaContGet = �ΏۂƂȂ��ԃR���e�i
+	//pCentDedRessyaContGet = 対象となる列車コンテナ
 	
 	
 	// --------------------------------
 	
-	return TRUE;  // �R���g���[���Ƀt�H�[�J�X��ݒ肵�Ȃ��Ƃ��A�߂�l�� TRUE �ƂȂ�܂�
-	              // ��O: OCX �v���p�e�B �y�[�W�̖߂�l�� FALSE �ƂȂ�܂�
+	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
+	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
 
 void CDlgOuJikokuhyouCsvExport::OnOK() 
@@ -164,18 +164,18 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 		pCentDedDia = m_pCentDedRosen->getCentDedDiaCont()->getMuPtr()->get( m_iDiaIndex ) ;
 		if ( pCentDedDia == NULL )
 		{
-			iRv = -11 ;	//	m_iDiaIndex ���s���ł��B
+			iRv = -11 ;	//	m_iDiaIndex が不正です。
 		}
 	}
 	if 	( iRv >= 0 )
 	{
 		pCentDedRessyaContGet = pCentDedDia->getCentDedRessyaCont( m_eRessyahoukou )->getMuPtr() ;
 	}
-	//pCentDedRessyaContGet = �ΏۂƂȂ��ԃR���e�i
+	//pCentDedRessyaContGet = 対象となる列車コンテナ
 	
 	
 	// --------------------------------
-	//	���͒l�̎擾
+	//	入力値の取得
 	// --------------------------------
 	int iRessyaIndex = 0 ;
 	int iRessyaCount = 0 ;
@@ -191,7 +191,7 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 			{
 				GetDlgItemText( IDC_TEXT_INPUTERROR , strError ) ;
 				GotoDlgCtrl( GetDlgItem( IDC_EDIT_RESSYAINDEX ) ) ;
-				iRv = -1 ;	//	���̓G���[����
+				iRv = -1 ;	//	入力エラーあり
 			}
 		}
 		else
@@ -211,7 +211,7 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 			{
 				GetDlgItemText( IDC_TEXT_INPUTERROR , strError ) ;
 				GotoDlgCtrl( GetDlgItem( IDC_EDIT_RESSYACOUNT ) ) ;
-				iRv = -1 ;	//	���̓G���[����
+				iRv = -1 ;	//	入力エラーあり
 			}
 		}
 		else
@@ -223,10 +223,10 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 	{
 		iRessyaCount = pCentDedRessyaContGet->size() - iRessyaIndex ;
 	}
-	//iRessyaIndex,iRessyaCount = ��Ԗ{���B
+	//iRessyaIndex,iRessyaCount = 列車本数。
 	
 	// --------------------------------
-	//	�o�̓t�@�C�������͒l�̎擾
+	//	出力ファイル名入力値の取得
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -239,16 +239,16 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 			this );
 		if ( aDlg.DoModal() != IDOK )
 		{
-			iRv = -2 ;	//	Cancel����܂����B
+			iRv = -2 ;	//	Cancelされました。
 		}
 		else
 		{
 			m_strCsvFilename = aDlg.GetPathName() ;
 		}
 	}
-	//m_strCsvFilename = �w�肳�ꂽCSV�t�@�C����
+	//m_strCsvFilename = 指定されたCSVファイル名
 	// --------------------------------
-	//	CSV�t�@�C���̏o��
+	//	CSVファイルの出力
 	// --------------------------------
 	CWaitCursor aCursor ;
 	if ( iRv >= 0 )
@@ -263,19 +263,19 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 			iRessyaCount , 
 			&aCdCsvDocument ) ;
 		//iResult = 
-		//	-1 ; // iDiaIndex ���s���ł��B
-		//	-2 ; // iRessyaIndex ���s���ł��B
-		//	-3 ; // iRessyaCount ���s���ł��B 
+		//	-1 ; // iDiaIndex が不正です。
+		//	-2 ; // iRessyaIndex が不正です。
+		//	-3 ; // iRessyaCount が不正です。 
 		if ( iResult < 0 )
 		{
 			GetDlgItemText( IDC_TEXT_ENCODE_ERROR , strError ) ;
-			//strError="CSV�ւ̕ϊ��Ɏ��s���܂����B"
+			//strError="CSVへの変換に失敗しました。"
 
 			strError.Format( _T( "%s(%d)" ) , CString( strError ), iResult ) ; 
 			iRv = iResult - 10 ;
-			//	-11 ; // iDiaIndex ���s���ł��B
-			//	-12 ; // iRessyaIndex ���s���ł��B
-			//	-13 ; // iRessyaCount ���s���ł��B 
+			//	-11 ; // iDiaIndex が不正です。
+			//	-12 ; // iRessyaIndex が不正です。
+			//	-13 ; // iRessyaCount が不正です。 
 		}
 		else
 		{
@@ -286,16 +286,16 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 			if ( iResult < 0 )
 			{
 				GetDlgItemText( IDC_TEXT_FILE_SAVE_FAILED , strError ) ;
-				//strError="�t�@�C���ւ̕ۑ��Ɏ��s���܂����B"
+				//strError="ファイルへの保存に失敗しました。"
 
-				iRv = -21 ; // �t�@�C���ւ̕ۑ��Ɏ��s���܂����B
+				iRv = -21 ; // ファイルへの保存に失敗しました。
 
 			}
 		}
 	}
 	// --------------------------------
-	//	��Ԃ͈̔͂��w�肵��CSV�փG�N�X�|�[�g
-	//	�����ꍇ�́A���̗�Ԕ͈͂��R���g���[���ɐݒ�
+	//	列車の範囲を指定してCSVへエクスポート
+	//	した場合は、次の列車範囲をコントロールに設定
 	// --------------------------------
 	if ( iRv >= 0 )
 	{

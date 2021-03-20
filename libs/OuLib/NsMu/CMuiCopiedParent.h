@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CMuiCopiedParent.h 369 2016-08-20 13:40:07Z okm $
@@ -81,24 +81,24 @@ namespace NsMu{
 
 /**
 @brief
-�@ElementType�N���X�̃I�u�W�F�N�g��ێ�����R���e�i�ł��B�w�e�q�R���e�i�x�p�^�[���̐e�I�u�W�F�N�g�Ƃ��ċ@�\���܂��B
+　ElementTypeクラスのオブジェクトを保持するコンテナです。『親子コンテナ』パターンの親オブジェクトとして機能します。
 
 @ref parent_child_container
 
-�@�q�I�u�W�F�N�g(�R���e�i���̃A�C�e��)����A�e�I�u�W�F�N�g(���g��ێ����Ă���R���e�i)�ɃA�N�Z�X���邱�Ƃ��ł��܂��B
+　子オブジェクト(コンテナ内のアイテム)から、親オブジェクト(自身を保持しているコンテナ)にアクセスすることができます。
 
-�@���̃N���X�e���v���[�g�́ACMuiCopied ����{�N���X�Ƃ��Ă��܂��B
+　このクラステンプレートは、CMuiCopied を基本クラスとしています。
 
-�@�q�I�u�W�F�N�g���e�I�u�W�F�N�g(this)�ɒǉ����ꂽ�Ƃ��A�e�I�u�W�F�N�g�́A�q�I�u�W�F�N�g�� CChildBase::setParent() ���\�b�h���Ăяo���āA�e�I�u�W�F�N�g(this)�̃A�h���X���q�I�u�W�F�N�g�ɓo�^���܂��B���̂Ƃ��n�����e�I�u�W�F�N�g�̌^�́ACParentBase* �ł��B
-�@�q�I�u�W�F�N�g�́ACChildBase::getParent() �ŁA�e�I�u�W�F�N�g�̃A�h���X���擾�ł��܂��BCChildBase::getParent() ���Ԃ����� CParentBase* �ł��B�q�I�u�W�F�N�g�́A���̃A�h���X���A���ۂ̐e�I�u�W�F�N�g(�R���e�i)�̌^�Ƀ_�E���L���X�g���邱�Ƃɂ��A�e�I�u�W�F�N�g�̃��\�b�h���Ăяo�����Ƃ��ł��܂��B
+　子オブジェクトが親オブジェクト(this)に追加されたとき、親オブジェクトは、子オブジェクトの CChildBase::setParent() メソッドを呼び出して、親オブジェクト(this)のアドレスを子オブジェクトに登録します。このとき渡される親オブジェクトの型は、CParentBase* です。
+　子オブジェクトは、CChildBase::getParent() で、親オブジェクトのアドレスを取得できます。CChildBase::getParent() が返す方は CParentBase* です。子オブジェクトは、このアドレスを、実際の親オブジェクト(コンテナ)の型にダウンキャストすることにより、親オブジェクトのメソッドを呼び出すことができます。
 
-�@
+　
 @param ElementType
-  �i�[����I�u�W�F�N�g�̌^���w�肵�Ă��������B
-�@ElementType�́ACChildBase ���p�������^�łȂ��Ă͂Ȃ�܂���B
+  格納するオブジェクトの型を指定してください。
+　ElementTypeは、CChildBase を継承した型でなくてはなりません。
 @param ContType
-  ElementType* ��ێ�����STL�R���e�i���w�肵�Ă��������B
-  ����ł́Astd::deque �ł����A std::vector ���g�����Ƃ��ł��܂��B
+  ElementType* を保持するSTLコンテナを指定してください。
+  既定では、std::deque ですが、 std::vector を使うこともできます。
 */
 template <
 	class ElementType,
@@ -109,21 +109,21 @@ class CMuiCopiedParent
 {
 public:
 	// ********************************
-	// �R���X�g���N�^
+	// コンストラクタ
 	// ********************************
-	/** �f�t�H���g�R���X�g���N�^ */
+	/** デフォルトコンストラクタ */
 	CMuiCopiedParent(){} ; 
 	
 	/** 
-		�R�s�[�R���X�g���N�^�B
-		value �Ɋi�[����Ă���I�u�W�F�N�g�̃R�s�[���A���g�̎q�A�C�e����
-		���܂��B
-		�S�Ă̎q�A�C�e���ɑ΂��āAsetParent( this ) �����s���܂��B
+		コピーコンストラクタ。
+		value に格納されているオブジェクトのコピーを、自身の子アイテムと
+		します。
+		全ての子アイテムに対して、setParent( this ) を実行します。
 	*/
 	CMuiCopiedParent( const CMuiCopiedParent<ElementType,ContType>& value )
 		: CMuiCopied( value ) 
 	{
-		//	�S�Ă̗v�f�ɑ΂��āAsetParent()���s��
+		//	全ての要素に対して、setParent()を行う
 		for ( int idx = 0 ; idx < value.size() ; idx ++ )
 		{
 			getMuPtr()->get( idx )->setParent( this ) ;
@@ -131,17 +131,17 @@ public:
 	};
 
 	/** 
-		������Z�q�B
-		value �Ɋi�[����Ă���I�u�W�F�N�g�̃R�s�[���A���g�̎q�A�C�e����
-		���܂��B
-		�S�Ă̎q�A�C�e���ɑ΂��āAsetParent( this ) �����s���܂��B
+		代入演算子。
+		value に格納されているオブジェクトのコピーを、自身の子アイテムと
+		します。
+		全ての子アイテムに対して、setParent( this ) を実行します。
 	*/
 	CMuiCopiedParent& operator=( 
 		const CMuiCopiedParent<ElementType,ContType>& value ) 
 	{
 		CMuiCopied::operator=( value ) ; 
 		
-		//	�S�Ă̗v�f�ɑ΂��āAsetParent()���s��
+		//	全ての要素に対して、setParent()を行う
 		for ( int idx = 0 ; idx < value.size() ; idx ++ )
 		{
 			getMuPtr()->get( idx )->setParent( this ) ;
@@ -156,12 +156,12 @@ public:
 	///@{
 
 	/**
-		�R���e�i���̎q�A�C�e���̃R�s�[���擾���܂��B
-		���̊֐����Ԃ��R�s�[�́Athis �̎q�A�C�e���ł͂���܂���B
-		�R�s�[�� CChildItem::m_pParent ��NULL�ł��B
+		コンテナ内の子アイテムのコピーを取得します。
+		この関数が返すコピーは、this の子アイテムではありません。
+		コピーの CChildItem::m_pParent はNULLです。
 	@param iIndex
-		0 ����n�܂�C���f�N�X���w�肵�Ă��������B �͈͂� 0 �ȏ� size() 
-		�����ł��B �A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B 
+		0 から始まるインデクスを指定してください。 範囲は 0 以上 size() 
+		未満です。 但し、INT_MAX は、末尾を指定したものとみなします。 
 	*/
 	virtual ElementType  get (int iIndex) const
 	{
@@ -177,15 +177,15 @@ public:
 	///@{
 
 	/**
-		�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA �v�f�̃R�s�[��
-		�ǉ����܂��B 
-		�ǉ����ꂽ�R�s�[�� CChildItem::m_pParent �ɂ́Athis ��o�^���܂��B
+		コンテナ内の、インデクスで指定された場所に、 要素のコピーを
+		追加します。 
+		追加されたコピーの CChildItem::m_pParent には、this を登録します。
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@param iIndex
-		0 ����n�܂�C���f�N�X���w�肵�Ă��������B 
-		�͈͂͂O�ȏ� size() �ȉ��ł��B �O�́A�擪�Esize()�Ȃ疖���ւ�
-		�ǉ��ɂȂ�܂��B �A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B 
+		0 から始まるインデクスを指定してください。 
+		範囲は０以上 size() 以下です。 ０は、先頭・size()なら末尾への
+		追加になります。 但し、INT_MAX は、末尾を指定したものとみなします。 
 	*/
 	virtual int insert( const ElementType& element ,  int iIndex=INT_MAX) 
 	{
@@ -199,13 +199,13 @@ public:
 		return 0 ; 
 	}
 	/**
-		�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA �v�f���㏑�����܂��B 
-		�㏑����̗v�f�� CChildItem::m_pParent �ɂ́Athis ��o�^���܂��B
+		コンテナ内の、インデクスで指定された場所に、 要素を上書きします。 
+		上書き後の要素の CChildItem::m_pParent には、this を登録します。
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@param iIndex
-		�O����n�܂�C���f�N�X���w�肵�Ă��������B �͈͂͂O�ȏ� size() 
-		�����ł��B �A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B 
+		０から始まるインデクスを指定してください。 範囲は０以上 size() 
+		未満です。 但し、INT_MAX は、末尾を指定したものとみなします。 
 	*/
 	virtual int set( const ElementType& element , int iIndex ) 
 	{

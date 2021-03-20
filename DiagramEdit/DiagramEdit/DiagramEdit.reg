@@ -1,8 +1,8 @@
 REGEDIT
-;   ‚±‚Ì .REG ƒtƒ@ƒCƒ‹‚Í SETUP ƒvƒƒOƒ‰ƒ€‚ÅŽg—p‚³‚ê‚é‰Â”\«‚ª‚ ‚è‚Ü‚·B
-;   SETUP ƒvƒƒOƒ‰ƒ€‚ªŽg—p‚Å‚«‚È‚¢ê‡AˆÈ‰º‚ÌƒGƒ“ƒgƒŠ‚Í CWinApp::RegisterShellFileTypes
-;   ‚¨‚æ‚Ñ COleObjectFactory::UpdateRegistryAll ‚ÌŒÄ‚Ño‚µ‚ÅŽ©“®“I‚É InitInstance ’†‚É
-;   “o˜^‚³‚ê‚Ü‚·B
+;   ã“ã® .REG ãƒ•ã‚¡ã‚¤ãƒ«ã¯ SETUP ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ä½¿ç”¨ã•ã‚Œã‚‹å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™ã€‚
+;   SETUP ãƒ—ãƒ­ã‚°ãƒ©ãƒ ãŒä½¿ç”¨ã§ããªã„å ´åˆã€ä»¥ä¸‹ã®ã‚¨ãƒ³ãƒˆãƒªã¯ CWinApp::RegisterShellFileTypes
+;   ãŠã‚ˆã³ COleObjectFactory::UpdateRegistryAll ã®å‘¼ã³å‡ºã—ã§è‡ªå‹•çš„ã« InitInstance ä¸­ã«
+;   ç™»éŒ²ã•ã‚Œã¾ã™ã€‚
 
 HKEY_CLASSES_ROOT\.ded = DiagramEdit.Document
 HKEY_CLASSES_ROOT\DiagramEdit.Document\shell\open\command = DIAGRAMEDIT.EXE %1
@@ -11,4 +11,4 @@ HKEY_CLASSES_ROOT\DiagramEdit.Document\shell\open\ddeexec\application = DIAGRAME
     ; note: the application is optional
     ;  (it defaults to the app name in "command")
 
-HKEY_CLASSES_ROOT\DiagramEdit.Document = DiagramEdit ƒtƒ@ƒCƒ‹
+HKEY_CLASSES_ROOT\DiagramEdit.Document = DiagramEdit ãƒ•ã‚¡ã‚¤ãƒ«

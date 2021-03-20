@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -86,54 +86,54 @@ class CentDedEkiCont ;
 // ****************************************************************
 /**
 @brief
- DiagramEdit ‚ÌA˜Hü‚Åİ’è‚³‚ê‚Ä‚¢‚éwƒ_ƒCƒ„x‚PŒ‚ğ•\‚µ‚Ü‚·B
+ DiagramEdit ã®ã€è·¯ç·šã§è¨­å®šã•ã‚Œã¦ã„ã‚‹ã€ãƒ€ã‚¤ãƒ¤ã€ï¼‘ä»¶ã‚’è¡¨ã—ã¾ã™ã€‚
 
-‚±‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ÍA’Êí‚Íw˜Hüx ( CentDedRosen ) ‚É•ïŠÜ
-‚³‚ê‚Ü‚·B
+ã“ã®ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã¯ã€é€šå¸¸ã¯ã€è·¯ç·šã€ ( CentDedRosen ) ã«åŒ…å«
+ã•ã‚Œã¾ã™ã€‚
 
-ÀÛ‚É‚ÍA
+å®Ÿéš›ã«ã¯ã€
 
-- w˜Hüx (CentDedRosen) ‚ªwƒ_ƒCƒ„x ( CentDedDia ) ‚ğ
-‚OˆÈã•¡”•ïŠÜ
-- Šewƒ_ƒCƒ„x ( CentDedDia ) ‚ªw—ñÔx (CentDedRessya ) ‚ğ
-‚OˆÈã•¡”•ïŠÜ
+- ã€è·¯ç·šã€ (CentDedRosen) ãŒã€ãƒ€ã‚¤ãƒ¤ã€ ( CentDedDia ) ã‚’
+ï¼ä»¥ä¸Šè¤‡æ•°åŒ…å«
+- å„ã€ãƒ€ã‚¤ãƒ¤ã€ ( CentDedDia ) ãŒã€åˆ—è»Šã€ (CentDedRessya ) ã‚’
+ï¼ä»¥ä¸Šè¤‡æ•°åŒ…å«
 
-‚Æ‚¢‚¤ŠÖŒW‚É‚È‚Á‚Ä‚¢‚Ü‚·B
+ã¨ã„ã†é–¢ä¿‚ã«ãªã£ã¦ã„ã¾ã™ã€‚
 
-  ‚±‚ÌƒNƒ‰ƒX‚ÍAw—ñÔx ( CentDedRessya ) ‚ğA‰º‚èEã‚è‚Ì•Ê‚Å
-•Û‚µ‚Ü‚·B
+  ã“ã®ã‚¯ãƒ©ã‚¹ã¯ã€ã€åˆ—è»Šã€ ( CentDedRessya ) ã‚’ã€ä¸‹ã‚Šãƒ»ä¸Šã‚Šã®åˆ¥ã§
+ä¿æŒã—ã¾ã™ã€‚
 
-@‚±‚ÌƒNƒ‰ƒX‚ÍA‘®«‚Æ‚µ‚Äw‰w‚Ì”xEw—ñÔí•Ê”x‚ğ•Û‚µ‚Ü‚·B
-‚½‚¾‚µA‚±‚ê‚ç‚Í”h¶‘®«‚Æ‚È‚Á‚Ä‚¢‚Ü‚·B
+ã€€ã“ã®ã‚¯ãƒ©ã‚¹ã¯ã€å±æ€§ã¨ã—ã¦ã€é§…ã®æ•°ã€ãƒ»ã€åˆ—è»Šç¨®åˆ¥æ•°ã€ã‚’ä¿æŒã—ã¾ã™ã€‚
+ãŸã ã—ã€ã“ã‚Œã‚‰ã¯æ´¾ç”Ÿå±æ€§ã¨ãªã£ã¦ã„ã¾ã™ã€‚
 
 <h5>int EkiCount</h5>
-‚±‚Ìƒ_ƒCƒ„‚É‘¶İ‚·‚éw‰w‚Ì”x‚Å‚·B
-‚±‚Ì‘®«‚ÍA m_CentDedRessyaCont[]->m_iEkiCount ‚ğ‚à‚Æ‚ÉŒˆ‚Ü‚è‚Ü‚·B
+ã“ã®ãƒ€ã‚¤ãƒ¤ã«å­˜åœ¨ã™ã‚‹ã€é§…ã®æ•°ã€ã§ã™ã€‚
+ã“ã®å±æ€§ã¯ã€ m_CentDedRessyaCont[]->m_iEkiCount ã‚’ã‚‚ã¨ã«æ±ºã¾ã‚Šã¾ã™ã€‚
 
 <h5>int RessyasyubetsuCount</h5>
-w—ñÔí•Ê”xB—ñÔí•Ê‚Ìí—Ş‚Ì”‚Å‚·B
-‚±‚Ì‘®«‚ÍA m_CentDedRessyaCont[]->m_iRessyasyubetsuCount ‚ğ‚à‚Æ‚É
-Œˆ‚Ü‚è‚Ü‚·B
+ã€åˆ—è»Šç¨®åˆ¥æ•°ã€ã€‚åˆ—è»Šç¨®åˆ¥ã®ç¨®é¡ã®æ•°ã§ã™ã€‚
+ã“ã®å±æ€§ã¯ã€ m_CentDedRessyaCont[]->m_iRessyasyubetsuCount ã‚’ã‚‚ã¨ã«
+æ±ºã¾ã‚Šã¾ã™ã€‚
 
-§–ñ
+åˆ¶ç´„
  -------------------------------- 
 
-‘€ì‚ÌƒGƒ‰[ŒŸ¸EC³
+æ“ä½œã®ã‚¨ãƒ©ãƒ¼æ¤œæŸ»ãƒ»ä¿®æ­£
  -------------------------------- 
 
 
-¢ã‘‚«(operator=): ‚±‚ÌƒIƒuƒWƒFƒNƒg‚ªeƒIƒuƒWƒFƒNƒg CentDedDiaCont ‚Ìq‚Å‚ ‚éê‡‚ÅA‘ã“üŒ³‚Ìƒ_ƒCƒ„–¼‚ª‹ó•¶š—ñ‚Å‚ ‚éê‡A‚à‚µ‚­‚Í“¯‚¶–¼‘O‚Ìƒ_ƒCƒ„‚ª CentDedDiaCont ‚É‚ ‚éê‡‚Í—áŠOƒXƒ[B
-@(‘ã“üŒ³‚ªACentDedDiaCont::set()‚É“n‚·‚ÆƒGƒ‰[‚É‚È‚é‚æ‚¤‚ÈƒIƒuƒWƒFƒNƒg‚Å‚ ‚éê‡‚ÍA‘ã“ü‚Í—áŠOƒXƒ[‚Æ‚µ‚Ü‚·)
+â–³ä¸Šæ›¸ã(operator=): ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒè¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ CentDedDiaCont ã®å­ã§ã‚ã‚‹å ´åˆã§ã€ä»£å…¥å…ƒã®ãƒ€ã‚¤ãƒ¤åãŒç©ºæ–‡å­—åˆ—ã§ã‚ã‚‹å ´åˆã€ã‚‚ã—ãã¯åŒã˜åå‰ã®ãƒ€ã‚¤ãƒ¤ãŒ CentDedDiaCont ã«ã‚ã‚‹å ´åˆã¯ä¾‹å¤–ã‚¹ãƒ­ãƒ¼ã€‚
+ã€€(ä»£å…¥å…ƒãŒã€CentDedDiaCont::set()ã«æ¸¡ã™ã¨ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ã‚ˆã†ãªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã§ã‚ã‚‹å ´åˆã¯ã€ä»£å…¥ã¯ä¾‹å¤–ã‚¹ãƒ­ãƒ¼ã¨ã—ã¾ã™)
 
-¢setName:‚±‚ÌƒIƒuƒWƒFƒNƒg‚ªeƒIƒuƒWƒFƒNƒg CentDedDiaCont ‚Ìq‚Å‚ ‚éê‡‚ÅA‘ã“üŒ³‚Ìƒ_ƒCƒ„–¼‚ª‹ó•¶š—ñ‚Å‚ ‚éê‡A‚à‚µ‚­‚Í“¯‚¶–¼‘O‚Ìƒ_ƒCƒ„‚ª CentDedDiaCont ‚É‚ ‚éê‡‚Í—áŠOƒXƒ[‚Æ‚µ‚Ü‚·B
-@(‘®«•ÏXŒã‚ÌƒIƒuƒWƒFƒNƒg‚ªACentDedDiaCont::set()‚É“n‚·‚ÆƒGƒ‰[‚É‚È‚é‚æ‚¤‚ÈƒIƒuƒWƒFƒNƒg‚Å‚ ‚éê‡‚ÍAƒGƒ‰[‚Æ‚µ‚Ü‚·)
+â–³setName:ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒè¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ CentDedDiaCont ã®å­ã§ã‚ã‚‹å ´åˆã§ã€ä»£å…¥å…ƒã®ãƒ€ã‚¤ãƒ¤åãŒç©ºæ–‡å­—åˆ—ã§ã‚ã‚‹å ´åˆã€ã‚‚ã—ãã¯åŒã˜åå‰ã®ãƒ€ã‚¤ãƒ¤ãŒ CentDedDiaCont ã«ã‚ã‚‹å ´åˆã¯ä¾‹å¤–ã‚¹ãƒ­ãƒ¼ã¨ã—ã¾ã™ã€‚
+ã€€(å±æ€§å¤‰æ›´å¾Œã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒã€CentDedDiaCont::set()ã«æ¸¡ã™ã¨ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ã‚ˆã†ãªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã§ã‚ã‚‹å ´åˆã¯ã€ã‚¨ãƒ©ãƒ¼ã¨ã—ã¾ã™)
 
-¢setParent:adjust‚ğÀs‚·‚é
+â–³setParent:adjustã‚’å®Ÿè¡Œã™ã‚‹
 
- §–ñ‚É‡‚¤‚æ‚¤‚É‘®«‚ğC³(adjust)
+ åˆ¶ç´„ã«åˆã†ã‚ˆã†ã«å±æ€§ã‚’ä¿®æ­£(adjust)
  -------------------------------- 
 
-›—ñÔƒRƒ“ƒeƒi(CentDedRessyaCont)‚Éadjust()‚ğˆÏ÷‚µ‚Ü‚·B
+â—‹åˆ—è»Šã‚³ãƒ³ãƒ†ãƒŠ(CentDedRessyaCont)ã«adjust()ã‚’å§”è­²ã—ã¾ã™ã€‚
 
 
 */
@@ -142,26 +142,26 @@ class CentDedDia : public CChildBase
 	typedef CChildBase	super ;
 public:
 	// ****************************************************************
-	//	ƒCƒ“ƒi[ƒ^ƒCƒv
+	//	ã‚¤ãƒ³ãƒŠãƒ¼ã‚¿ã‚¤ãƒ—
 	// ****************************************************************
 	/**
-	@CentDedDia ‚É•ïŠÜ‚³‚ê‚Ä‚¢‚éw—ñÔxƒRƒ“ƒeƒi‚Å‚·B
+	ã€€CentDedDia ã«åŒ…å«ã•ã‚Œã¦ã„ã‚‹ã€åˆ—è»Šã€ã‚³ãƒ³ãƒ†ãƒŠã§ã™ã€‚
 	*/
 	class CXRessyaCont : public CentDedRessyaCont
 	{
 		typedef CentDedRessyaCont super ;
 	 public:
 		// ********************************
-		///@name ŠÖ˜A
+		///@name é–¢é€£
 		// ********************************
 		///@{
 		/**
-			eƒIƒuƒWƒFƒNƒg‚Ö‚Ìƒ|ƒCƒ“ƒ^‚Å‚·BƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÅŒˆ‚Ü‚è‚Ü‚·B
+			è¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¸ã®ãƒã‚¤ãƒ³ã‚¿ã§ã™ã€‚ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§æ±ºã¾ã‚Šã¾ã™ã€‚
 		*/
 		CentDedDia* m_pDia ;
 	public:
 		// ********************************
-		//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+		//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 		// ********************************
 		CXRessyaCont( 
 			CentDedDia* pCentDedDia , 
@@ -192,26 +192,26 @@ public:
 
 	 public:
 		// ********************************
-		///@name CentDedRessyaCont-ŠÖ˜A
+		///@name CentDedRessyaCont-é–¢é€£
 		// ********************************
 		///@{
 		/**
 		@return
-			‚±‚ÌƒRƒ“ƒeƒi‚ª CentDedDia ‚É•ïŠÜ‚³‚ê‚Ä‚¢‚éê‡‚ÍA
-			CentDedDia ‚ÌƒAƒhƒŒƒXB
-			‚»‚¤‚Å‚È‚¢‚È‚çNULLB
+			ã“ã®ã‚³ãƒ³ãƒ†ãƒŠãŒ CentDedDia ã«åŒ…å«ã•ã‚Œã¦ã„ã‚‹å ´åˆã¯ã€
+			CentDedDia ã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã€‚
+			ãã†ã§ãªã„ãªã‚‰NULLã€‚
 		*/
 		virtual CentDedDia* getDia(){ return m_pDia ;}
 		/**
 		@return
-			‚±‚ÌƒRƒ“ƒeƒi‚ª CentDedRessya ‚É•ïŠÜ‚³‚ê‚Ä‚¢‚éê‡‚ÍA
-			CentDedRessya ‚ÌƒAƒhƒŒƒXB
-			‚»‚¤‚Å‚È‚¢‚È‚çNULLB
+			ã“ã®ã‚³ãƒ³ãƒ†ãƒŠãŒ CentDedRessya ã«åŒ…å«ã•ã‚Œã¦ã„ã‚‹å ´åˆã¯ã€
+			CentDedRessya ã®ã‚¢ãƒ‰ãƒ¬ã‚¹ã€‚
+			ãã†ã§ãªã„ãªã‚‰NULLã€‚
 		*/
 		virtual const CentDedDia* getDia()const{ return m_pDia ;}
 	};
 	/**
-		‘ã“ü‰‰Zq‚âAset...() ‚ÅƒXƒ[‚³‚ê‚é—áŠO‚Å‚·B
+		ä»£å…¥æ¼”ç®—å­ã‚„ã€set...() ã§ã‚¹ãƒ­ãƒ¼ã•ã‚Œã‚‹ä¾‹å¤–ã§ã™ã€‚
 	*/
 	class LException
 	{
@@ -221,39 +221,39 @@ public:
 	// ****************************************************************
 private:
 	// ********************************
-	///@name ‘®«
+	///@name å±æ€§
 	// ********************************
 	///@{
 	/**
-	  	ƒ_ƒCƒ„‚Ì–¼Ì‚Å‚·B
+	  	ãƒ€ã‚¤ãƒ¤ã®åç§°ã§ã™ã€‚
 	  
-	  	i—áj "•½“úƒ_ƒCƒ„" ‚È‚Ç
+	  	ï¼ˆä¾‹ï¼‰ "å¹³æ—¥ãƒ€ã‚¤ãƒ¤" ãªã©
 	  
 	   @see CentDedRosen
-	  	 CentDedRosen ‚ÍA‚±‚Ì‘®«‚ğŒÀ’èq‚Æ‚µ‚Äˆµ‚¢‚Ü‚·B
-	  	CentDedRosen ‚É•ïŠÜ‚³‚ê‚é CentDedDia ‚Å‚ÍA
-	  	‚±‚Ì‘®«‚ÍˆêˆÓ‚Å‚È‚­‚Ä‚Í‚È‚è‚Ü‚¹‚ñB
+	  	 CentDedRosen ã¯ã€ã“ã®å±æ€§ã‚’é™å®šå­ã¨ã—ã¦æ‰±ã„ã¾ã™ã€‚
+	  	CentDedRosen ã«åŒ…å«ã•ã‚Œã‚‹ CentDedDia ã§ã¯ã€
+	  	ã“ã®å±æ€§ã¯ä¸€æ„ã§ãªãã¦ã¯ãªã‚Šã¾ã›ã‚“ã€‚
 	 */
 	std::string	m_strName ;
 	///@}
 private:
 	// ********************************
-	///@name •ïŠÜ
+	///@name åŒ…å«
 	// ********************************
 	///@{
 	/**
-		‚±‚Ìwƒ_ƒCƒ„x“à‚Å‰^s‚³‚ê‚Ä‚¢‚é—ñÔ‚Ì
-		w—ñÔx ( CentDedRessya ) ‚ğ•Û‚µ‚Ü‚·B
+		ã“ã®ã€ãƒ€ã‚¤ãƒ¤ã€å†…ã§é‹è¡Œã•ã‚Œã¦ã„ã‚‹åˆ—è»Šã®
+		ã€åˆ—è»Šã€ ( CentDedRessya ) ã‚’ä¿æŒã—ã¾ã™ã€‚
 	
-		‚±‚Ì•Ï”‚ÍA—v‘f” 2 ‚Ì”z—ñ‚Å‚·B
+		ã“ã®å¤‰æ•°ã¯ã€è¦ç´ æ•° 2 ã®é…åˆ—ã§ã™ã€‚
 
-		- [0] ‚Í	‰º‚è ( Ressyahoukou_Kudari ) —ñÔ	
-		- [1] ‚Í	ã‚è ( Ressyahoukou_Nobori ) —ñÔ	
+		- [0] ã¯	ä¸‹ã‚Š ( Ressyahoukou_Kudari ) åˆ—è»Š	
+		- [1] ã¯	ä¸Šã‚Š ( Ressyahoukou_Nobori ) åˆ—è»Š	
 	
-		‚±‚ÌƒRƒ“ƒeƒi“à‚Ì CentDedRessya ƒIƒuƒWƒFƒNƒg‚Ì
-		¶¬E”jŠü‚ÌÓ–±‚Íthis‚É‚ ‚è‚Ü‚·B
+		ã“ã®ã‚³ãƒ³ãƒ†ãƒŠå†…ã® CentDedRessya ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®
+		ç”Ÿæˆãƒ»ç ´æ£„ã®è²¬å‹™ã¯thisã«ã‚ã‚Šã¾ã™ã€‚
 	
-		‰Šúó‘Ô‚Å‚ÍA—v‘f”‚Í 0 ‚Æ‚È‚è‚Ü‚·B
+		åˆæœŸçŠ¶æ…‹ã§ã¯ã€è¦ç´ æ•°ã¯ 0 ã¨ãªã‚Šã¾ã™ã€‚
 	*/
 	CXRessyaCont*	m_CentDedRessyaCont[2] ;
 	
@@ -262,31 +262,31 @@ private:
 
 public:
 	// ********************************
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	// ********************************
 	/**
 	   @param strName [in]
-	  	ƒ_ƒCƒ„‚Ì–¼Ì‚Å‚·B	\n
-	  	i—áj "•½“úƒ_ƒCƒ„" ‚È‚Ç
+	  	ãƒ€ã‚¤ãƒ¤ã®åç§°ã§ã™ã€‚	\n
+	  	ï¼ˆä¾‹ï¼‰ "å¹³æ—¥ãƒ€ã‚¤ãƒ¤" ãªã©
 	*/
 	CentDedDia( const string& strName = "" ) ;
 
 	/**
-	  	‚±‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÍA 
-	  	CentDedDia_From_CdConnectedString() ‚Å
-	  	ƒtƒ@ƒCƒ‹‚Ì“à—e‚ğæ“¾‚·‚é‚Æ‚«‚ÉA
-	  	“Ç‚İæ‚èæ‚Æ‚µ‚Äw’è‚·‚éƒIƒuƒWƒFƒNƒg‚Ì¶¬‚Ég‚¢‚Ü‚·B
+	  	ã“ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã¯ã€ 
+	  	CentDedDia_From_CdConnectedString() ã§
+	  	ãƒ•ã‚¡ã‚¤ãƒ«ã®å†…å®¹ã‚’å–å¾—ã™ã‚‹ã¨ãã«ã€
+	  	èª­ã¿å–ã‚Šå…ˆã¨ã—ã¦æŒ‡å®šã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ç”Ÿæˆã«ä½¿ã„ã¾ã™ã€‚
 	   @param iEkiCount [in]
-	  	ƒ_ƒCƒ„‚ÉŠÜ‚Ü‚ê‚é‰w‚Ì”B
+	  	ãƒ€ã‚¤ãƒ¤ã«å«ã¾ã‚Œã‚‹é§…ã®æ•°ã€‚
 	 */
 	CentDedDia( int iEkiCount ) ;
 
 	/**
 	   @param strName [in]
-	  	ƒ_ƒCƒ„‚Ì–¼Ì‚Å‚·B	\n
-	  	i—áj "•½“úƒ_ƒCƒ„" ‚È‚Ç
+	  	ãƒ€ã‚¤ãƒ¤ã®åç§°ã§ã™ã€‚	\n
+	  	ï¼ˆä¾‹ï¼‰ "å¹³æ—¥ãƒ€ã‚¤ãƒ¤" ãªã©
 	   @param iEkiCount [in]]
-	  	ƒ_ƒCƒ„‚ÉŠÜ‚Ü‚ê‚é‰w‚Ì”B
+	  	ãƒ€ã‚¤ãƒ¤ã«å«ã¾ã‚Œã‚‹é§…ã®æ•°ã€‚
 	 */
 	CentDedDia( 
 		const std::string& strName  ,
@@ -296,14 +296,14 @@ public:
 	CentDedDia( const CentDedDia& value );
 	
 	/**
-	  	‚±‚ÌƒNƒ‰ƒX‚Ö‚Ì‘ã“ü‚ğs‚¢‚Ü‚·‚ªA
-	  	this ‚Ìw‰wx‚Ì” ( m_iEkiCount ) ‚Í•ÏX‚µ‚Ü‚¹‚ñB
+	  	ã“ã®ã‚¯ãƒ©ã‚¹ã¸ã®ä»£å…¥ã‚’è¡Œã„ã¾ã™ãŒã€
+	  	this ã®ã€é§…ã€ã®æ•° ( m_iEkiCount ) ã¯å¤‰æ›´ã—ã¾ã›ã‚“ã€‚
 	  
-		¢ã‘‚«(operator=): ‚±‚ÌƒIƒuƒWƒFƒNƒg‚ªeƒIƒuƒWƒFƒNƒg CentDedDiaCont 
-		‚Ìq‚Å‚ ‚éê‡‚ÅA‘ã“üŒ³‚Ìƒ_ƒCƒ„–¼‚ª‹ó•¶š—ñ‚Å‚ ‚éê‡A
-		‚à‚µ‚­‚Í“¯‚¶–¼‘O‚Ìƒ_ƒCƒ„‚ª CentDedDiaCont ‚É‚ ‚éê‡‚Í—áŠOƒXƒ[B
-		@(‘ã“üŒ³‚ªACentDedDiaCont::set()‚É“n‚·‚ÆƒGƒ‰[‚É‚È‚é‚æ‚¤‚È
-		@ƒIƒuƒWƒFƒNƒg‚Å‚ ‚éê‡‚ÍA‘ã“ü‚Í—áŠOƒXƒ[‚Æ‚µ‚Ü‚·)
+		â–³ä¸Šæ›¸ã(operator=): ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒè¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ CentDedDiaCont 
+		ã®å­ã§ã‚ã‚‹å ´åˆã§ã€ä»£å…¥å…ƒã®ãƒ€ã‚¤ãƒ¤åãŒç©ºæ–‡å­—åˆ—ã§ã‚ã‚‹å ´åˆã€
+		ã‚‚ã—ãã¯åŒã˜åå‰ã®ãƒ€ã‚¤ãƒ¤ãŒ CentDedDiaCont ã«ã‚ã‚‹å ´åˆã¯ä¾‹å¤–ã‚¹ãƒ­ãƒ¼ã€‚
+		ã€€(ä»£å…¥å…ƒãŒã€CentDedDiaCont::set()ã«æ¸¡ã™ã¨ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ã‚ˆã†ãª
+		ã€€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã§ã‚ã‚‹å ´åˆã¯ã€ä»£å…¥ã¯ä¾‹å¤–ã‚¹ãƒ­ãƒ¼ã¨ã—ã¾ã™)
 
 	 */
 	CentDedDia& operator=( const CentDedDia& value );
@@ -312,27 +312,27 @@ public:
 
 public:
 	// ********************************
-	///@name CChildBase-‘€ì
+	///@name CChildBase-æ“ä½œ
 	// ********************************
 	///@{
 	/**
-	@¢setParent:adjust‚ğÀs‚·‚é
+	ã€€â–³setParent:adjustã‚’å®Ÿè¡Œã™ã‚‹
 	*/
 	virtual void setParent( CParentBase* pParent );
 	///@}
 public:
 	// ********************************
-	///@name CentDedDia-‘®«
+	///@name CentDedDia-å±æ€§
 	// ********************************
 	///@{
 	std::string	getName()const{	return m_strName ;};
 	
 	/**
-	¢setName:‚±‚ÌƒIƒuƒWƒFƒNƒg‚ªeƒIƒuƒWƒFƒNƒg CentDedDiaCont ‚Ìq‚Å‚ ‚é
-	ê‡‚ÅA‘ã“üŒ³‚Ìƒ_ƒCƒ„–¼‚ª‹ó•¶š—ñ‚Å‚ ‚éê‡A‚à‚µ‚­‚Í“¯‚¶–¼‘O‚Ìƒ_ƒCƒ„‚ª
-	 CentDedDiaCont ‚É‚ ‚éê‡‚Í—áŠOƒXƒ[‚Æ‚µ‚Ü‚·B
-	@(‘®«•ÏXŒã‚ÌƒIƒuƒWƒFƒNƒg‚ªACentDedDiaCont::set()‚É“n‚·‚ÆƒGƒ‰[‚É
-	@‚È‚é‚æ‚¤‚ÈƒIƒuƒWƒFƒNƒg‚Å‚ ‚éê‡‚ÍAƒGƒ‰[‚Æ‚µ‚Ü‚·)
+	â–³setName:ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒè¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ CentDedDiaCont ã®å­ã§ã‚ã‚‹
+	å ´åˆã§ã€ä»£å…¥å…ƒã®ãƒ€ã‚¤ãƒ¤åãŒç©ºæ–‡å­—åˆ—ã§ã‚ã‚‹å ´åˆã€ã‚‚ã—ãã¯åŒã˜åå‰ã®ãƒ€ã‚¤ãƒ¤ãŒ
+	 CentDedDiaCont ã«ã‚ã‚‹å ´åˆã¯ä¾‹å¤–ã‚¹ãƒ­ãƒ¼ã¨ã—ã¾ã™ã€‚
+	ã€€(å±æ€§å¤‰æ›´å¾Œã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒã€CentDedDiaCont::set()ã«æ¸¡ã™ã¨ã‚¨ãƒ©ãƒ¼ã«
+	ã€€ãªã‚‹ã‚ˆã†ãªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã§ã‚ã‚‹å ´åˆã¯ã€ã‚¨ãƒ©ãƒ¼ã¨ã—ã¾ã™)
 	*/
 	void setName( const std::string& value );
 
@@ -343,14 +343,14 @@ public:
 	};
 	///@}
 	// ********************************
-	///@name CentDedDia-•ïŠÜ
+	///@name CentDedDia-åŒ…å«
 	// ********************************
 	///@{
 	/**
 	   @param eRessyahoukou [in]
-	  	—ñÔ•ûŒü‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
-	  	-	‰º‚è :	Ressyahoukou_Kudari 
-	  	-	ã‚è : 	Ressyahoukou_Nobori 
+	  	åˆ—è»Šæ–¹å‘ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
+	  	-	ä¸‹ã‚Š :	Ressyahoukou_Kudari 
+	  	-	ä¸Šã‚Š : 	Ressyahoukou_Nobori 
 	 */
 	CentDedRessyaCont* getCentDedRessyaCont( 
 			ERessyahoukou eRessyahoukou )
@@ -359,9 +359,9 @@ public:
 	};
 	/**
 	   @param eRessyahoukou [in]
-	  	—ñÔ•ûŒü‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
-	  	-	‰º‚è :	Ressyahoukou_Kudari 
-	  	-	ã‚è : 	Ressyahoukou_Nobori 
+	  	åˆ—è»Šæ–¹å‘ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
+	  	-	ä¸‹ã‚Š :	Ressyahoukou_Kudari 
+	  	-	ä¸Šã‚Š : 	Ressyahoukou_Nobori 
 	 */
 	const CentDedRessyaCont* getCentDedRessyaCont( 
 			ERessyahoukou eRessyahoukou )const
@@ -370,24 +370,24 @@ public:
 	};
 	///@}
 	// ********************************
-	///@name CentDedDia-‘€ì
+	///@name CentDedDia-æ“ä½œ
 	// ********************************
 	///@{
 
 	/**
-		w’è‚Ì‰w Order ‚Ì‰w‚ğA
-		‰wŒ`®En”­EI’…‚É‡‚í‚¹‚Ä•ÏX‚µ‚Ü‚·B
+		æŒ‡å®šã®é§… Order ã®é§…æ™‚åˆ»ã‚’ã€
+		é§…æ™‚åˆ»å½¢å¼ãƒ»å§‹ç™ºãƒ»çµ‚ç€ã«åˆã‚ã›ã¦å¤‰æ›´ã—ã¾ã™ã€‚
 
-		•ÏX“à—e‚ÍA CentDedEkiJikoku::adjustByEkijikokukeisiki 
-		‚Ìà–¾‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+		å¤‰æ›´å†…å®¹ã¯ã€ CentDedEkiJikoku::adjustByEkijikokukeisiki 
+		ã®èª¬æ˜ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
 	@see CentDedEkiJikoku::adjustByEkijikokukeisiki 
 
 	@param pCentDedEkiCont [in]
-		‰wƒRƒ“ƒeƒi‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+		é§…ã‚³ãƒ³ãƒ†ãƒŠã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 	@param iEkiIndex [in]
-		‰wIndex‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
-		INT_MAX ‚ÍA––”ö‚ğw’è‚µ‚½‚±‚Æ‚É‚È‚è‚Ü‚·B
+		é§…Indexã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
+		INT_MAX ã¯ã€æœ«å°¾ã‚’æŒ‡å®šã—ãŸã“ã¨ã«ãªã‚Šã¾ã™ã€‚
 	*/
 	void adjustByEkijikokukeisiki(
 		const CentDedEkiCont* pCentDedEkiCont ,
@@ -395,38 +395,38 @@ public:
 	///@}
 
 	/**
-		this ‚Ì‘®«‚ª§–ñ‚É”½‚µ‚Ä‚¢‚éê‡A§–ñ‚É‡‚¤‚æ‚¤‚ÉA‘®«‚ğ
-		C³‚µ‚Ü‚·B
+		this ã®å±æ€§ãŒåˆ¶ç´„ã«åã—ã¦ã„ã‚‹å ´åˆã€åˆ¶ç´„ã«åˆã†ã‚ˆã†ã«ã€å±æ€§ã‚’
+		ä¿®æ­£ã—ã¾ã™ã€‚
 
-		›—ñÔƒRƒ“ƒeƒi(CentDedRessyaCont)‚Éadjust()‚ğˆÏ÷‚µ‚Ü‚·B
+		â—‹åˆ—è»Šã‚³ãƒ³ãƒ†ãƒŠ(CentDedRessyaCont)ã«adjust()ã‚’å§”è­²ã—ã¾ã™ã€‚
 
 	*/
 	void adjust() ;
 
 public:
 	// ********************************
-	///@name CentDedDia-‰w”E—ñÔí•Ê”‚Ì•ÏX
+	///@name CentDedDia-é§…æ•°ãƒ»åˆ—è»Šç¨®åˆ¥æ•°ã®å¤‰æ›´
 	// ********************************
 	///@{
 
 	/**
-	  	‚±‚ÌƒRƒ“ƒeƒi‚ÉAw’è‚³‚ê‚½w—ñÔí•Êx‚Ì—ñÔ‚ª‚ ‚é‚©”Û‚©‚ğ’²‚×‚Ü‚·B
+	  	ã“ã®ã‚³ãƒ³ãƒ†ãƒŠã«ã€æŒ‡å®šã•ã‚ŒãŸã€åˆ—è»Šç¨®åˆ¥ã€ã®åˆ—è»ŠãŒã‚ã‚‹ã‹å¦ã‹ã‚’èª¿ã¹ã¾ã™ã€‚
 	   @param iRessyasyubetsuIndex [in]
-	  	w—ñÔí•ÊIndexx‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
-	  	”ÍˆÍ‚ÍA 0 ˆÈã —ñÔí•Ê‚Ì”–¢–‚Å‚·B
-	  	INT_MAX ‚ÍA––”ö‚Ì—ñÔí•Ê‚ğw’è‚µ‚½‚à‚Ì‚Æ‚İ‚È‚µ‚Ü‚·B
+	  	ã€åˆ—è»Šç¨®åˆ¥Indexã€ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
+	  	ç¯„å›²ã¯ã€ 0 ä»¥ä¸Š åˆ—è»Šç¨®åˆ¥ã®æ•°æœªæº€ã§ã™ã€‚
+	  	INT_MAX ã¯ã€æœ«å°¾ã®åˆ—è»Šç¨®åˆ¥ã‚’æŒ‡å®šã—ãŸã‚‚ã®ã¨ã¿ãªã—ã¾ã™ã€‚
 	   @param peRessyahoukou [out]
-	  	‚±‚ÌŠÖ”‚Í‚±‚Ì•Ï”‚ÉAw—ñÔí•Êx‚Ì—ñÔ‚ªŒ©‚Â‚©‚Á‚½
-	  	ƒ_ƒCƒ„‚Ì—ñÔ•ûŒü‚ğ‘‚«‚İ‚Ü‚·B
-	  	•s—v‚È‚ç NULL ‚Å‚à‚©‚Ü‚¢‚Ü‚¹‚ñB
+	  	ã“ã®é–¢æ•°ã¯ã“ã®å¤‰æ•°ã«ã€ã€åˆ—è»Šç¨®åˆ¥ã€ã®åˆ—è»ŠãŒè¦‹ã¤ã‹ã£ãŸ
+	  	ãƒ€ã‚¤ãƒ¤ã®åˆ—è»Šæ–¹å‘ã‚’æ›¸ãè¾¼ã¿ã¾ã™ã€‚
+	  	ä¸è¦ãªã‚‰ NULL ã§ã‚‚ã‹ã¾ã„ã¾ã›ã‚“ã€‚
 	   @param piRessyaIndex [out]
-	  	‚±‚ÌŠÖ”‚Í‚±‚Ì•Ï”‚ÉAw—ñÔí•Êx‚Ì—ñÔ‚ªŒ©‚Â‚©‚Á‚½
-	  	—ñÔIndex ‚ğ‘‚«‚İ‚Ü‚·B
-	  	•s—v‚È‚ç NULL ‚Å‚à‚©‚Ü‚¢‚Ü‚¹‚ñB
+	  	ã“ã®é–¢æ•°ã¯ã“ã®å¤‰æ•°ã«ã€ã€åˆ—è»Šç¨®åˆ¥ã€ã®åˆ—è»ŠãŒè¦‹ã¤ã‹ã£ãŸ
+	  	åˆ—è»ŠIndex ã‚’æ›¸ãè¾¼ã¿ã¾ã™ã€‚
+	  	ä¸è¦ãªã‚‰ NULL ã§ã‚‚ã‹ã¾ã„ã¾ã›ã‚“ã€‚
 	   @return 
-	  	-	1; //	w’è‚Ì—ñÔí•Ê‚Ì—ñÔ‚ª‘¶İ‚µ‚Ü‚·B
-	  	-	0; //	w’è‚Ì—ñÔí•Ê‚Ì—ñÔ‚Í‘¶İ‚µ‚Ü‚¹‚ñB
-	  	-	-1 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³
+	  	-	1; //	æŒ‡å®šã®åˆ—è»Šç¨®åˆ¥ã®åˆ—è»ŠãŒå­˜åœ¨ã—ã¾ã™ã€‚
+	  	-	0; //	æŒ‡å®šã®åˆ—è»Šç¨®åˆ¥ã®åˆ—è»Šã¯å­˜åœ¨ã—ã¾ã›ã‚“ã€‚
+	  	-	-1 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£
 	 */
 	int isExistRessyaOfRessyasyubetsu( 
 		int iRessyasyubetsuIndex ,
@@ -436,58 +436,58 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CentDedRosen-qƒIƒuƒWƒFƒNƒg‚Ì‘Œ¸‚Ì’Ê’m
+	///@name CentDedRosen-å­ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¢—æ¸›ã®é€šçŸ¥
 	// ********************************
 	///@{
 	/**
-		m_CentDedEkiCont ‚É CentDedEki ‚ª’Ç‰Á‚³‚ê‚½’¼ŒãA
-		m_CentDedEkiCont ‚©‚çŒÄ‚Ño‚³‚ê‚Ü‚·B
+		m_CentDedEkiCont ã« CentDedEki ãŒè¿½åŠ ã•ã‚ŒãŸç›´å¾Œã€
+		m_CentDedEkiCont ã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã¾ã™ã€‚
 	@param iEkiIndex
-		’Ç‰Á‚³‚ê‚½ CentDedEki ‚ÌƒCƒ“ƒfƒNƒXB
+		è¿½åŠ ã•ã‚ŒãŸ CentDedEki ã®ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ã€‚
 	*/
 	virtual void onEkiInsert( int iEkiIndex );
 
 	/**
-		m_CentDedEkiCont ‚©‚ç CentDedEki ‚ªíœ‚³‚ê‚½’¼ŒãA
-		m_CentDedEkiCont ‚©‚çŒÄ‚Ño‚³‚ê‚Ü‚·B
+		m_CentDedEkiCont ã‹ã‚‰ CentDedEki ãŒå‰Šé™¤ã•ã‚ŒãŸç›´å¾Œã€
+		m_CentDedEkiCont ã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã¾ã™ã€‚
 	@param iEkiIndex
-		íœ‚³‚ê‚½ CentDedEki ‚ÌƒCƒ“ƒfƒNƒXB
+		å‰Šé™¤ã•ã‚ŒãŸ CentDedEki ã®ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ã€‚
 	*/
 	virtual void onEkiErase( int iEkiIndex  );
 
 	/**
-		CentDedEkiTrackCont ‚É CentDedEkiTrack ‚ª’Ç‰Á‚³‚ê‚½’¼ŒãA
-		CentDedEkiTrackCont ‚©‚çŒÄ‚Ño‚³‚ê‚Ü‚·B
+		CentDedEkiTrackCont ã« CentDedEkiTrack ãŒè¿½åŠ ã•ã‚ŒãŸç›´å¾Œã€
+		CentDedEkiTrackCont ã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã¾ã™ã€‚
 	@param iEkiIndex
-		CentDedEkiTrackCont ‚ª’Ç‰Á‚³‚ê‚½ CentDedEki ‚Ì‰wIndexB
+		CentDedEkiTrackCont ãŒè¿½åŠ ã•ã‚ŒãŸ CentDedEki ã®é§…Indexã€‚
 	@param iEkiTrackIndex
-		’Ç‰Á‚³‚ê‚½ CentDedEkiTrack ‚ÌƒCƒ“ƒfƒNƒXB
+		è¿½åŠ ã•ã‚ŒãŸ CentDedEkiTrack ã®ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ã€‚
 	*/
 	virtual void onEkiTrackInsert( int iEkiIndex , int iEkiTrackIndex );
 
 	/**
-		CentDedEkiTrackCont ‚©‚ç CentDedEkiTrack ‚ªíœ‚³‚ê‚½’¼ŒãA
-		CentDedEkiTrackCont ‚©‚çŒÄ‚Ño‚³‚ê‚Ü‚·B
+		CentDedEkiTrackCont ã‹ã‚‰ CentDedEkiTrack ãŒå‰Šé™¤ã•ã‚ŒãŸç›´å¾Œã€
+		CentDedEkiTrackCont ã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã¾ã™ã€‚
 	@param iEkiIndex
-		CentDedEkiTrackCont ‚ªíœ‚³‚ê‚½ CentDedEki ‚Ì‰wIndexB
+		CentDedEkiTrackCont ãŒå‰Šé™¤ã•ã‚ŒãŸ CentDedEki ã®é§…Indexã€‚
 	@param iEkiTrackIndex
-		íœ‚³‚ê‚½ CentDedEkiTrack ‚Ìæ“ª‚ÌƒCƒ“ƒfƒNƒXB
+		å‰Šé™¤ã•ã‚ŒãŸ CentDedEkiTrack ã®å…ˆé ­ã®ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ã€‚
 	*/
 	virtual void onEkiTrackErase( int iEkiIndex , int iEkiTrackIndex );
 
 	/**
-		CentDedRessyasyubetsuCont ‚É CentDedRessyasyubetsu ‚ª’Ç‰Á‚³‚ê‚½’¼ŒãA
-		CentDedRessyasyubetsuCont ‚©‚çŒÄ‚Ño‚³‚ê‚Ü‚·B
+		CentDedRessyasyubetsuCont ã« CentDedRessyasyubetsu ãŒè¿½åŠ ã•ã‚ŒãŸç›´å¾Œã€
+		CentDedRessyasyubetsuCont ã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã¾ã™ã€‚
 	@param iRessyasyubetsuIndex
-		’Ç‰Á‚³‚ê‚½ CentDedRessyasyubetsu  ‚ÌƒCƒ“ƒfƒNƒXB
+		è¿½åŠ ã•ã‚ŒãŸ CentDedRessyasyubetsu  ã®ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ã€‚
 	*/
 	virtual void onRessyasyubetsuInsert( int iRessyasyubetsuIndex );
 
 	/**
-		CentDedRessyasyubetsuCont ‚©‚ç CentDedRessyasyubetsu ‚ªíœ‚³‚ê‚½’¼ŒãA
-		CentDedRessyasyubetsuCont ‚©‚çŒÄ‚Ño‚³‚ê‚Ü‚·B
+		CentDedRessyasyubetsuCont ã‹ã‚‰ CentDedRessyasyubetsu ãŒå‰Šé™¤ã•ã‚ŒãŸç›´å¾Œã€
+		CentDedRessyasyubetsuCont ã‹ã‚‰å‘¼ã³å‡ºã•ã‚Œã¾ã™ã€‚
 	@param iRessyasyubetsuIndex
-		íœ‚³‚ê‚½ CentDedRessyasyubetsu  ‚ÌƒCƒ“ƒfƒNƒXB
+		å‰Šé™¤ã•ã‚ŒãŸ CentDedRessyasyubetsu  ã®ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ã€‚
 	*/
 	virtual void onRessyasyubetsuErase( int iRessyasyubetsuIndex );
 

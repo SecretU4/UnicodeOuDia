@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// CEkiView.cpp : �C���v�������e�[�V���� �t�@�C��
+// CEkiView.cpp : インプリメンテーション ファイル
 //	$Id: CEkiView.cpp 295 2016-06-11 05:14:13Z okm $
 
 #include "stdafx.h"
@@ -91,7 +91,7 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 	// ********************************
-	//@name CEkiView-����
+	//@name CEkiView-操作
 	// ********************************
 namespace ViewEki{
 
@@ -111,7 +111,7 @@ int CEkiView::openCDlgEkiProp( int iEkiIndex )
 	const CentDedEkiCont* pCentDedEkiContGet = 
 		pCentDedRosen->getCentDedEkiCont() ;
 
-	//	iEkiIndex �� Y��ԍ��ɕϊ�
+	//	iEkiIndex を Y列番号に変換
 	CdEkiYColSpecCont	aYColSpecCont( pCentDedEkiContGet ) ;
 	int iYColumnNumber = aYColSpecCont.ColumnNumberFromSpec( 
 		CdEkiYColSpec( CdEkiYColSpec::ColumnType_Eki ,
@@ -119,17 +119,17 @@ int CEkiView::openCDlgEkiProp( int iEkiIndex )
 	) ;
 	if ( iYColumnNumber < 0 )
 	{
-		iRv = -1 ;	//	��ԍ����s���ł��B
+		iRv = -1 ;	//	列番号が不正です。
 	}
 	if ( iRv >= 0 )
 	{
-		//	�t�H�[�J�X�Z�����A�w��̈ʒu�Ɉړ�
+		//	フォーカスセルを、指定の位置に移動
 		CdDcdPosXy posFocusCellColumnNumber 
 			= m_pCWndDcdGrid->getCFocus()->getFocusCellColumnNumber() ;
 		posFocusCellColumnNumber.setY( iYColumnNumber ) ;
 		m_pCWndDcdGrid->getCFocus()->setFocusCellColumnNumber( posFocusCellColumnNumber ) ;
 
-		//	�v���p�e�B�_�C�A���O���N��
+		//	プロパティダイアログを起動
 		m_pCWndDcdGrid->execEkiPropDlg( false , FALSE ) ;
 	}
 	return iRv ;
@@ -158,14 +158,14 @@ BEGIN_MESSAGE_MAP(CEkiView, CView)
 	ON_WM_CREATE()
 	ON_WM_DESTROY()
 	//}}AFX_MSG_MAP
-	// �W������R�}���h
+	// 標準印刷コマンド
 	ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, CView::OnFilePrintPreview)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CEkiView �`��
+// CEkiView 描画
 
 void CEkiView::OnDraw(CDC* pDC)
 {
@@ -177,7 +177,7 @@ void CEkiView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// CEkiView �f�f
+// CEkiView 診断
 
 #ifdef _DEBUG
 void CEkiView::AssertValid() const
@@ -192,7 +192,7 @@ void CEkiView::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 /////////////////////////////////////////////////////////////////////////////
-// CEkiView ���b�Z�[�W �n���h��
+// CEkiView メッセージ ハンドラ
 
 int CEkiView::OnCreate(LPCREATESTRUCT lpCreateStruct) 
 {
@@ -217,8 +217,8 @@ void CEkiView::OnDestroy()
 
 void CEkiView::OnSize(UINT nType, int cx, int cy) 
 {
-	if ( nType == SIZE_MAXIMIZED   //�E�B���h�E�͍ő�\������܂��B
-		|| nType == SIZE_RESTORED  // �E�B���h�E�̓T�C�Y�ύX����܂����ASIZE_MINIMIZED �� SIZE_MAXIMIZED �͓K�p����܂���B
+	if ( nType == SIZE_MAXIMIZED   //ウィンドウは最大表示されます。
+		|| nType == SIZE_RESTORED  // ウィンドウはサイズ変更されますが、SIZE_MINIMIZED と SIZE_MAXIMIZED は適用されません。
 	){
 		m_pCWndDcdGrid->MoveWindow( 0 , 0 , cx , cy , TRUE ) ;
 		return ;
@@ -241,7 +241,7 @@ void CEkiView::OnSetFocus(CWnd* pOldWnd)
 
 BOOL CEkiView::OnPreparePrinting(CPrintInfo* pInfo) 
 {
-	// �f�t�H���g�̈������
+	// デフォルトの印刷準備
 	return DoPreparePrinting(pInfo);
 }
 
@@ -256,7 +256,7 @@ void CEkiView::OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo)
 void CEkiView::OnPrepareDC(CDC* pDC, CPrintInfo* pInfo) 
 {
 	if ( pInfo != NULL ){
-		//	����Ɋւ��鏈��
+		//	印刷に関する処理
 		LogMsg( "CEkiView::OnPrepareDC() " ) ;
 		LogMsg( CDcdTargetMfcPrintInfo::stringOf( pInfo ).c_str() ) ;
 	}	else	{
@@ -278,12 +278,12 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 	LogMsg( CDcdTargetMfcPrintInfo::stringOf( pInfo ).c_str() ) ;
 
 	// --------------------------------
-	//	�`��ʂ��쐬
+	//	描画面を作成
 	// --------------------------------
 	CDcdTargetMfcPrintInfo	aCDcdTargetMfcPrintInfo( pDC, pInfo ) ;
 
 	// --------------------------------
-	//	�]�����������̈���쐬
+	//	余白を除いた領域を作成
 	// --------------------------------
 	CaDcdTargetItemPosition	aTargetInnerMargin( &aCDcdTargetMfcPrintInfo , 
 		CdDcdZoneXy() ) ;
@@ -309,20 +309,20 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 
 	}
 
-	//aTargetInnerMargin = �]���������������`��̈�B
-	//	�P�ʂ̓v�����^�̃s�N�Z���ł��B
+	//aTargetInnerMargin = 余白部分を除いた描画領域。
+	//	単位はプリンタのピクセルです。
 
 	// --------------------------------
-	//	�_�����W��ݒ�
+	//	論理座標を設定
 	// --------------------------------
 	CaDcdTargetZoomDisplay	aCaDcdTargetZoomDisplay( 
 		&aTargetInnerMargin , 
 		aCDcdTargetMfcPrintInfo.getPrinterHdc() ) ;
-	//aCaDcdTargetZoomDisplay = �]���������������`��̈�B
-	//	�P�ʂ́A��ʏ�̂P�s�N�Z�������ɂȂ�܂����B
+	//aCaDcdTargetZoomDisplay = 余白部分を除いた描画領域。
+	//	単位は、画面上の１ピクセル相当になりました。
 
 	// --------------------------------
-	//	�L���v�V�����ƃy�[�W�ԍ��̕��i���쐬
+	//	キャプションとページ番号の部品を作成
 	// --------------------------------
 	Ou<CDcdText>	pdcdCaption ;
 	Ou<CDcdText>	pdcdPage ;
@@ -332,7 +332,7 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 		CJikokuhyouDoc* pCJikokuhyouDoc = (CJikokuhyouDoc*)GetDocument() ;
 
 		string	strText ;
-		//	�H����
+		//	路線名
 		if ( !pCentDedRosen->getName().empty() ){
 			strText += pCentDedRosen->getName() ;
 			strText += " " ;
@@ -354,8 +354,8 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 	}
 
 	// --------------------------------
-	//	�L���v�V�����ƃy�[�W�ԍ��̕��i�E
-	//	�O���b�h�̃��C�A�E�g�����߂�	
+	//	キャプションとページ番号の部品・
+	//	グリッドのレイアウトを決める	
 	// --------------------------------
 	Ou<IfDcdTarget>	pTargetCaption ;
 	Ou<IfDcdTarget>	pTargetGrid ;
@@ -369,16 +369,16 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			CdDcdZone( zoneGrid.getY().getPos() , aSize.getY() ) ) ;
 		zoneGrid.setY( CdDcdZone().setBeginEndPos( 
 			zoneCaption.getY().getEndPos() , zoneGrid.getY().getEndPos() ) ) ;
-		//zoneCaption = �S�̈�̏㕔���A�L���v�V�����p�Ɋ��蓖�ĂĂ��܂��B
-		//zoneGrid = �S�̈悩��A�㕔�̃L���v�V�����̈���������̈�ł��B
+		//zoneCaption = 全領域の上部を、キャプション用に割り当てています。
+		//zoneGrid = 全領域から、上部のキャプション領域を除いた領域です。
 
 		pdcdPage->getItemSize( &aCaDcdTargetZoomDisplay , &aSize ) ;
 		CdDcdZoneXy zonePage( zoneGrid.getX() , 
 			CdDcdZone( zoneGrid.getY().getEndPos() - aSize.getY() , aSize.getY() ) ) ;
 		zoneGrid.setY( CdDcdZone().setBeginEndPos( 
 			zoneCaption.getY().getEndPos() , zonePage.getY().getPos() ) ) ;
-		//zonePage = �S�̈�̉������A�y�[�W�p�Ɋ��蓖�ĂĂ��܂��B
-		//zoneGrid = �㕔�̃L���v�V�����ɑ����āA�����̃y�[�W�̈���������̈�ł��B
+		//zonePage = 全領域の下部を、ページ用に割り当てています。
+		//zoneGrid = 上部のキャプションに続いて、下部のページ領域も除いた領域です。
 
 
 		pTargetCaption = OuNew<CaDcdTargetItemPosition>( 
@@ -389,7 +389,7 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			new CaDcdTargetItemPosition( &aCaDcdTargetZoomDisplay , zonePage ) ) ;
 	}
 	// --------------------------------
-	//	�O���b�h��`��
+	//	グリッドを描画
 	// --------------------------------
 	int iPage = 0 ;
 	{
@@ -399,10 +399,10 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 		aCaDcdGrid_PageSelector.DcDraw() ;
 
 		if ( (int)pInfo->m_nCurPage >= aCaDcdGrid_PageSelector.getPageCount() ){
-			//�ŏI�y�[�W�����������A������[�v���I���܂��B
-			//OnPrint() �� 
+			//最終ページを印刷したら、印刷ループを終わります。
+			//OnPrint() で 
 			//pInfo->SetMaxPage( aCaDcdGrid_PageSelector.getPageCount() ) ;
-			//	�����Ă����ʂ͂���܂���B
+			//	をしても効果はありません。
 
 			pInfo->m_bContinuePrinting = false ;
 		}	else	{
@@ -412,17 +412,17 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 		iPage = aCaDcdGrid_PageSelector.getPage() ;
 	}
 	// --------------------------------
-	//	�L���v�V�����ƃy�[�W�ԍ��̃e�L�X�g���쐬
+	//	キャプションとページ番号のテキストを作成
 	// --------------------------------
 	{
-		//�y�[�W�ԍ�������
+		//ページ番号を決定
 		{
 			string	strPage = stringOf( iPage + 1) ;
 			pdcdPage->setText( strPage ) ;
 		}
 	}
 	// --------------------------------
-	//	�L���v�V�����ƃy�[�W�ԍ���`��
+	//	キャプションとページ番号を描画
 	// --------------------------------
 	{
 			pdcdCaption->DcDraw( pTargetCaption ) ;
@@ -433,13 +433,13 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 
 void CEkiView::OnEndPrinting(CDC* pDC, CPrintInfo* pInfo) 
 {
-	//	����I����ɉ�ʕ\����������������B
+	//	印刷終了後に画面表示が崩れる問題を回避。
 	//
-	//	���̃N���X�́A������̓O���b�h�̃X�N���[���ʒu��
-	//	�ꎞ�I�ɕύX���܂��B
-	//	���̂Ƃ��� m_pCWndDcdGrid �ɍĕ`�悪��������ƁA
-	//	��ʂɂ͈ꎞ�I�Ɉʒu�̕ύX���ꂽ�O���b�h��
-	//	�`�悳��邽�߁A��ʂ�����܂��B
+	//	このクラスは、印刷中はグリッドのスクロール位置を
+	//	一時的に変更します。
+	//	このときに m_pCWndDcdGrid に再描画が発生すると、
+	//	画面には一時的に位置の変更されたグリッドが
+	//	描画されるため、画面が崩れます。
 	m_pCWndDcdGrid->InvalidateGrid() ;
 
 	CView::OnEndPrinting(pDC, pInfo);
@@ -456,7 +456,7 @@ void CEkiView::OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeac
 
 BOOL CEkiView::OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO* pHandlerInfo) 
 {
-	//	�R�}���h�n���h���́A�\�Ȃ� CWndDcdGrid �ɈϏ����܂��B
+	//	コマンドハンドラは、可能なら CWndDcdGrid に委譲します。
 	if ( m_pCWndDcdGrid != NULL && 
 		m_pCWndDcdGrid->OnCmdMsg( nID , nCode , pExtra , pHandlerInfo ) )
 	{

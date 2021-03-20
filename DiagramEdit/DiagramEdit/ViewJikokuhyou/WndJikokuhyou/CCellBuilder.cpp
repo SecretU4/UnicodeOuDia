@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -79,7 +79,7 @@ namespace WndJikokuhyou{
 using DcDraw::CDcdTextboxV3 ;
 
 // --------------------------------
-//@name •`‰æˆ—‚Ég—p‚·‚é ƒeƒLƒXƒg•`‰æ‘®«
+//@name æç”»å‡¦ç†ã«ä½¿ç”¨ã™ã‚‹ ãƒ†ã‚­ã‚¹ãƒˆæç”»å±æ€§
 // --------------------------------
 
 CdDrawTextProp	CCellBuilder::getCdDrawTextPropMenutext()const
@@ -116,14 +116,14 @@ CCellBuilder::getCdDedJikokuConv()const
 {
 	static CdDedJikoku::CConv aConv(
 		true ,		//	NoColon 
-		// ‚ª 00 ‚©‚ç 09 ‚Ìê‡A10‚ÌˆÊ‚Ì "0" ‚ğƒXƒy[ƒX‚É‚µ‚Ü‚·B
+		// æ™‚ãŒ 00 ã‹ã‚‰ 09 ã®å ´åˆã€10ã®ä½ã® "0" ã‚’ã‚¹ãƒšãƒ¼ã‚¹ã«ã—ã¾ã™ã€‚
 		CdDedJikoku::CConv::EHour_ZeroToSpace ,	
-		CdDedJikoku::CConv::ESecond_NoSecond 	// •b‚ğí‚Éo—Í‚µ‚Ü‚¹‚ñB 
+		CdDedJikoku::CConv::ESecond_NoSecond 	// ç§’ã‚’å¸¸ã«å‡ºåŠ›ã—ã¾ã›ã‚“ã€‚ 
 		) ;
 	return aConv ;
 }
 	// --------------------------------
-	//@name •`‰æˆ—‚Ég—p‚·‚é ƒuƒ‰ƒV‘®«
+	//@name æç”»å‡¦ç†ã«ä½¿ç”¨ã™ã‚‹ ãƒ–ãƒ©ã‚·å±æ€§
 	// --------------------------------
 
 CdBrushProp CCellBuilder::getCdBrushPropMenutext()const
@@ -138,15 +138,15 @@ CdBrushProp	CCellBuilder::getCdBrushPropStandard()const
 }
 
 	// --------------------------------
-	//@name •`‰æˆ—‚Ég—p‚·‚é DcDrawƒIƒuƒWƒFƒNƒg‚Ìƒvƒƒgƒ^ƒCƒv
+	//@name æç”»å‡¦ç†ã«ä½¿ç”¨ã™ã‚‹ DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—
 	// --------------------------------
 
 CDcdTextbox CCellBuilder::createCDcdXColumn0()const
 {
 	string strExtent = m_pCDedRosenFileData->
 		getCdDedDispProp().createEkimeiExtentString() ;
-	//strExtent = ˜Hüƒtƒ@ƒCƒ‹ƒf[ƒ^‚É•Û‘¶‚³‚ê‚Ä‚¢‚é’l‚ğ‚à‚Æ‚É‚µ‚ÄA
-	//	ì¬‚µ‚½A•¶š—ñ•‚ÌŠî€•¶š—ñ‚Å‚·B
+	//strExtent = è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿ã«ä¿å­˜ã•ã‚Œã¦ã„ã‚‹å€¤ã‚’ã‚‚ã¨ã«ã—ã¦ã€
+	//	ä½œæˆã—ãŸã€æ–‡å­—åˆ—å¹…ã®åŸºæº–æ–‡å­—åˆ—ã§ã™ã€‚
 
 	CDcdTextbox aCDcd( 
 		"" , 
@@ -164,8 +164,8 @@ CDcdTextboxV3 CCellBuilder::createCDcdXColumn0V()const
 {
 	string strExtent = m_pCDedRosenFileData->
 		getCdDedDispProp().createEkimeiExtentString() ;
-	//strExtent = ˜Hüƒtƒ@ƒCƒ‹ƒf[ƒ^‚É•Û‘¶‚³‚ê‚Ä‚¢‚é’l‚ğ‚à‚Æ‚É‚µ‚ÄA
-	//	ì¬‚µ‚½A•¶š—ñ•‚ÌŠî€•¶š—ñ‚Å‚·B
+	//strExtent = è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿ã«ä¿å­˜ã•ã‚Œã¦ã„ã‚‹å€¤ã‚’ã‚‚ã¨ã«ã—ã¦ã€
+	//	ä½œæˆã—ãŸã€æ–‡å­—åˆ—å¹…ã®åŸºæº–æ–‡å­—åˆ—ã§ã™ã€‚
 
 	CdDedDispProp	aCdDedDispProp = m_pCDedRosenFileData->getCdDedDispProp() ;
 
@@ -188,8 +188,8 @@ CDcdTextbox CCellBuilder::createCDcdEkimei()const
 {
 	string strExtent = m_pCDedRosenFileData->
 		getCdDedDispProp().createEkimeiExtentString() ;
-	//strExtent = ˜Hüƒtƒ@ƒCƒ‹ƒf[ƒ^‚É•Û‘¶‚³‚ê‚Ä‚¢‚é’l‚ğ‚à‚Æ‚É‚µ‚ÄA
-	//	ì¬‚µ‚½A•¶š—ñ•‚ÌŠî€•¶š—ñ‚Å‚·B
+	//strExtent = è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿ã«ä¿å­˜ã•ã‚Œã¦ã„ã‚‹å€¤ã‚’ã‚‚ã¨ã«ã—ã¦ã€
+	//	ä½œæˆã—ãŸã€æ–‡å­—åˆ—å¹…ã®åŸºæº–æ–‡å­—åˆ—ã§ã™ã€‚
 
 	CDcdTextbox aCDcd( 
 		"" , 
@@ -207,8 +207,8 @@ CDcdTextbox CCellBuilder::createCDcdHatsuchaku()const
 {
 	string strExtent = MfcUtil::LoadCString( IDS_WORD_Chaku );
 
-	//strExtent = ˜Hüƒtƒ@ƒCƒ‹ƒf[ƒ^‚É•Û‘¶‚³‚ê‚Ä‚¢‚é’l‚ğ‚à‚Æ‚É‚µ‚ÄA
-	//	ì¬‚µ‚½A•¶š—ñ•‚ÌŠî€•¶š—ñ‚Å‚·B
+	//strExtent = è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ãƒ‡ãƒ¼ã‚¿ã«ä¿å­˜ã•ã‚Œã¦ã„ã‚‹å€¤ã‚’ã‚‚ã¨ã«ã—ã¦ã€
+	//	ä½œæˆã—ãŸã€æ–‡å­—åˆ—å¹…ã®åŸºæº–æ–‡å­—åˆ—ã§ã™ã€‚
 
 
 	CDcdTextbox aCDcd( 
@@ -227,9 +227,9 @@ CDcdTextbox CCellBuilder::createCDcdRessyabangou(
 {
 	CdDedDispProp	aCdDedDispProp = m_pCDedRosenFileData->getCdDedDispProp() ;
 	string strCellExtent( aCdDedDispProp.getJikokuhyouRessyaWidth() , '0' ) ;
-	//strCellExtent = ƒZƒ‹‚Ì‘å‚«‚³‚Ì–ÚˆÀ‚Æ‚È‚é•¶š—ñ‚Å‚·B
-	//	•\—ñÔƒZƒ‹‚Ì•(•¶š”) CdDedDispProp::m_iJikokuhyouRessyaWidth
-	//	‚Ì”‚¾‚¯ '0' ‚ª•À‚ñ‚¾•¶š—ñ‚Å‚·
+	//strCellExtent = ã‚»ãƒ«ã®å¤§ãã•ã®ç›®å®‰ã¨ãªã‚‹æ–‡å­—åˆ—ã§ã™ã€‚
+	//	æ™‚åˆ»è¡¨åˆ—è»Šã‚»ãƒ«ã®å¹…(æ–‡å­—æ•°) CdDedDispProp::m_iJikokuhyouRessyaWidth
+	//	ã®æ•°ã ã‘ '0' ãŒä¸¦ã‚“ã æ–‡å­—åˆ—ã§ã™
 
 	const CentDedRessyasyubetsu* pCentDedRessyasyubetsu
 		= m_pCDedRosenFileData->getCentDedRosen()->getCentDedRessyasyubetsuCont()
@@ -296,7 +296,7 @@ CDcdTextbox CCellBuilder::createCDcdEkijikoku(
 }
 
 	// --------------------------------
-	//@name update() ‚Ì‰º¿ŠÖ”
+	//@name update() ã®ä¸‹è«‹é–¢æ•°
 	// --------------------------------
 void CCellBuilder::update01_updateWithoutRessya(
 		CWndJikokuhyou* pCWndJikokuhyou ) 
@@ -305,17 +305,17 @@ void CCellBuilder::update01_updateWithoutRessya(
 	CDcdTargetGetDC	aCDcdTarget( NULL ) ;
 
 	// ********************************
-	//(1.1)@CWndDcdGrid ‚ÌŠO˜gü‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÆA—ñ•‚ğİ’è
+	//(1.1)ã€€CWndDcdGrid ã®å¤–æ ç·šã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¨ã€åˆ—å¹…ã‚’è¨­å®š
 	// ********************************
 	update01_01_setGridBorder( 
 		pCWndJikokuhyou ) ;
 
 
 	// ********************************
-	//(1.2)@—ñ‚Ì”‚ğİ’è‚µ‚Ü‚·B
-	//	X—ñ”‚ª2–¢–‚È‚ç2‚É‚µ‚Ü‚·B
-	//	Y—ñ”‚ÍACdYColSpecCont ‚Å
-	//	“±o‚³‚ê‚½—ñ”‚Æ‚µ‚Ü‚·B
+	//(1.2)ã€€åˆ—ã®æ•°ã‚’è¨­å®šã—ã¾ã™ã€‚
+	//	Xåˆ—æ•°ãŒ2æœªæº€ãªã‚‰2ã«ã—ã¾ã™ã€‚
+	//	Yåˆ—æ•°ã¯ã€CdYColSpecCont ã§
+	//	å°å‡ºã•ã‚ŒãŸåˆ—æ•°ã¨ã—ã¾ã™ã€‚
 	// ********************************
 	{
 		int iXColumnNumberMax = -1 ;
@@ -338,8 +338,8 @@ void CCellBuilder::update01_updateWithoutRessya(
 	}
  
 	// ********************************
-	//(1.3)@X—ñ(ColumnType_Ekimei) ‚ÌŠeƒZƒ‹‚ÆA‚·‚×‚Ä‚ÌY—ñ‚Ì‚‚³E
-	//	Y—ñ‹«ŠEüEY—ñ‹«ŠEü‚Ì‚‚³İ’è
+	//(1.3)ã€€Xåˆ—(ColumnType_Ekimei) ã®å„ã‚»ãƒ«ã¨ã€ã™ã¹ã¦ã®Yåˆ—ã®é«˜ã•ãƒ»
+	//	Yåˆ—å¢ƒç•Œç·šãƒ»Yåˆ—å¢ƒç•Œç·šã®é«˜ã•è¨­å®š
 	// ********************************
 	{
 		CdXColSpec aCdXColSpec( 
@@ -348,48 +348,48 @@ void CCellBuilder::update01_updateWithoutRessya(
 			m_CdXColSpecCont.ColumnNumberFromSpec( aCdXColSpec ) ;
 
 		// ================================
-		//(1.3.1)@ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ressyabangou) ‚ÆA
-		//	Y—ñ(ColumnType_Ressyabangou)‚Ì‚‚³EY—ñ‹«ŠEüEY—ñ‹«ŠEü‚Ì‚‚³İ’è
+		//(1.3.1)ã€€ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ressyabangou) ã¨ã€
+		//	Yåˆ—(ColumnType_Ressyabangou)ã®é«˜ã•ãƒ»Yåˆ—å¢ƒç•Œç·šãƒ»Yåˆ—å¢ƒç•Œç·šã®é«˜ã•è¨­å®š
 		// ================================
 		update01_03_01_setEkimei_Ressyabangou( 
 			pCWndJikokuhyou ) ;
 
 		// ================================
-		//	(1.3.2)@“¯—l‚ÉAƒZƒ‹(ColumnType_Ekimei, 
-		//	ColumnType_Ressyasyubetsu` ColumnType_Bikou ) ‚ÆA
-		//	Y—ñ(ColumnType_Ressyasyubetsu` ColumnType_Bikou)‚Ì‚‚³E
-		//	Y—ñ‹«ŠEüEY—ñ‹«ŠEü‚Ì‚‚³‚ğİ’èB
+		//	(1.3.2)ã€€åŒæ§˜ã«ã€ã‚»ãƒ«(ColumnType_Ekimei, 
+		//	ColumnType_Ressyasyubetsuã€œ ColumnType_Bikou ) ã¨ã€
+		//	Yåˆ—(ColumnType_Ressyasyubetsuã€œ ColumnType_Bikou)ã®é«˜ã•ãƒ»
+		//	Yåˆ—å¢ƒç•Œç·šãƒ»Yåˆ—å¢ƒç•Œç·šã®é«˜ã•ã‚’è¨­å®šã€‚
 		// ================================
 		// --------------------------------
-		//	(1.3.2.2)ƒZƒ‹(ColumnType_Ekimei, ColumnType_Ressyasyubetsu)
+		//	(1.3.2.2)ã‚»ãƒ«(ColumnType_Ekimei, ColumnType_Ressyasyubetsu)
 		// --------------------------------
 		update01_03_02_02_setEkimei_Ressyasyubetsu( 
 			pCWndJikokuhyou ) ;
 
 		// --------------------------------
-		//	(1.3.2.3)ƒZƒ‹(ColumnType_Ekimei, ColumnType_Ressyamei)
+		//	(1.3.2.3)ã‚»ãƒ«(ColumnType_Ekimei, ColumnType_Ressyamei)
 		// --------------------------------
 		update01_03_02_03_setEkimei_Ressyamei( 
 			pCWndJikokuhyou ) ;
 
 
 		// --------------------------------
-		//	(1.3.2.4)ƒZƒ‹(ColumnType_Ekimei, ColumnType_Gousuu)
+		//	(1.3.2.4)ã‚»ãƒ«(ColumnType_Ekimei, ColumnType_Gousuu)
 		// --------------------------------
 		update01_03_02_04_setEkimei_Gousuu( 
 			pCWndJikokuhyou ) ;
 
 		
 		// --------------------------------
-		//	(1.3.2.5)ƒZƒ‹(ColumnType_Ekimei, ColumnType_Gou)
+		//	(1.3.2.5)ã‚»ãƒ«(ColumnType_Ekimei, ColumnType_Gou)
 		// --------------------------------
 		update01_03_02_05_setEkimei_Gou( 
 			pCWndJikokuhyou ) ;
 
 		
 		// --------------------------------
-		//	ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ekijikoku_Chaku)
-		//	ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ekijikoku_Hatsu)
+		//	ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ekijikoku_Chaku)
+		//	ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ekijikoku_Hatsu)
 		// --------------------------------
 		update01_03_02_06_setEkimei_Chaku( 
 			pCWndJikokuhyou ) ;
@@ -397,14 +397,14 @@ void CCellBuilder::update01_updateWithoutRessya(
 			pCWndJikokuhyou ) ;
 		
 		// --------------------------------
-		//	(1.3.2.8)ƒZƒ‹(ColumnType_Ekimei,ColumnType_Bikou)
+		//	(1.3.2.8)ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Bikou)
 		// --------------------------------
 		update01_03_02_08_setEkimei_Bikou( 
 			pCWndJikokuhyou ) ;
 		
 		// ================================
-		//(1.3.3)@X—ñ(ColumnType_Ekimei ) ‚Ì•‚ğİ’èB
-		//	•‚ÍA‰w–¼—ñ‚Ì DcDraw ƒIƒuƒWƒFƒNƒg‚Ì•‚Æ‚µ‚Ü‚·B
+		//(1.3.3)ã€€Xåˆ—(ColumnType_Ekimei ) ã®å¹…ã‚’è¨­å®šã€‚
+		//	å¹…ã¯ã€é§…ååˆ—ã® DcDraw ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¹…ã¨ã—ã¾ã™ã€‚
 		// ================================
 		CDcdGridXColumn* pCDcdGridXColumn = pCDcdGrid->getXColumn( 
 			iXColumnNumber ) ;
@@ -419,9 +419,9 @@ void CCellBuilder::update01_updateWithoutRessya(
 			}
 		}
 		// ================================
-		//	(1.3.4)@X—ñ(ColumnType_Ekimei ) ‚Ì‹«ŠEü‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚Ì
-		//	‘®«‚ğİ’èB
-		//	(1.3.5)@X—ñ(ColumnType_Ekimei ) ‚Ì‹«ŠEü‚Ì•‚ğİ’èB
+		//	(1.3.4)ã€€Xåˆ—(ColumnType_Ekimei ) ã®å¢ƒç•Œç·šã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®
+		//	å±æ€§ã‚’è¨­å®šã€‚
+		//	(1.3.5)ã€€Xåˆ—(ColumnType_Ekimei ) ã®å¢ƒç•Œç·šã®å¹…ã‚’è¨­å®šã€‚
 		// ================================
 		{
 			CDcdGridXBorder* pCDcdGridXBorder 
@@ -439,7 +439,7 @@ void CCellBuilder::update01_updateWithoutRessya(
 	}
 
 	// ********************************
-	//(1.4)@X—ñ(ColumnType_Chakuhatsu) ‚ÌŠeƒZƒ‹‚ğİ’è
+	//(1.4)ã€€Xåˆ—(ColumnType_Chakuhatsu) ã®å„ã‚»ãƒ«ã‚’è¨­å®š
 	// ********************************
 	{
 		CdXColSpec aCdXColSpec( 
@@ -447,16 +447,16 @@ void CCellBuilder::update01_updateWithoutRessya(
 		int iXColumnNumber = 
 			m_CdXColSpecCont.ColumnNumberFromSpec( aCdXColSpec ) ;
 		// ================================
-		//(1.4.1)@ƒZƒ‹(ColumnType_Chakuhatsu, 
-		//	ColumnType_Ekijikoku_Chaku` ColumnType_Ekijikoku_Hatsu) ‚ğİ’èB
+		//(1.4.1)ã€€ã‚»ãƒ«(ColumnType_Chakuhatsu, 
+		//	ColumnType_Ekijikoku_Chakuã€œ ColumnType_Ekijikoku_Hatsu) ã‚’è¨­å®šã€‚
 		// ================================
 		update01_04_01_06_setChakuhatsu_Chaku( 
 			pCWndJikokuhyou ) ;
 		update01_04_01_07_setChakuhatsu_Hatsu( 
 			pCWndJikokuhyou ) ;
 		// ================================
-		//	(1.4.3)@X—ñ(ColumnType_Chakuhatsu ) ‚Ì•‚ğİ’èB
-		//	•‚ÍA’…”­—ñ‚Ì DcDraw ƒIƒuƒWƒFƒNƒg‚Ì•‚Æ‚µ‚Ü‚·B
+		//	(1.4.3)ã€€Xåˆ—(ColumnType_Chakuhatsu ) ã®å¹…ã‚’è¨­å®šã€‚
+		//	å¹…ã¯ã€ç€ç™ºåˆ—ã® DcDraw ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¹…ã¨ã—ã¾ã™ã€‚
 		// ================================
 		CDcdGridXColumn* pCDcdGridXColumn = pCDcdGrid->getXColumn( 
 			iXColumnNumber ) ;
@@ -473,9 +473,9 @@ void CCellBuilder::update01_updateWithoutRessya(
 		}
 
 		// ================================
-		//	(1.4.4)@X—ñ(ColumnType_Chakuhatsu ) ‚Ì‹«ŠEü‚Ì 
-		//	DcDrawƒIƒuƒWƒFƒNƒg‚Ì‘®«‚ğİ’èB
-		//(1.4.5)@X—ñ(ColumnType_Chakuhatsu ) ‚Ì‹«ŠEü‚Ì•‚ğİ’èB
+		//	(1.4.4)ã€€Xåˆ—(ColumnType_Chakuhatsu ) ã®å¢ƒç•Œç·šã® 
+		//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å±æ€§ã‚’è¨­å®šã€‚
+		//(1.4.5)ã€€Xåˆ—(ColumnType_Chakuhatsu ) ã®å¢ƒç•Œç·šã®å¹…ã‚’è¨­å®šã€‚
 		// ================================
 		{
 			CDcdGridXBorder* pCDcdGridXBorder 
@@ -500,7 +500,7 @@ void CCellBuilder::update01_01_setGridBorder(
 	CDcdTargetGetDC	aCDcdTarget( NULL ) ;
 
 
-	//	¶
+	//	å·¦
 	{
 		CDcdGridXBorder* pCDcdGridXBorder = pCDcdGrid->getCDcdGridXBorderTop() ;
 		Ou<CDcdLine> pCDcdLine = pCDcdGridXBorder->getIfDcDraw();
@@ -512,7 +512,7 @@ void CCellBuilder::update01_01_setGridBorder(
 			pCDcdGridXBorder->setColumnBorderSize( aCdDcdSizeXy.getX() ) ;
 		}
 	}
-	//	‰E
+	//	å³
 	{
 		CDcdGridXBorder* pCDcdGridXBorder 
 			= pCDcdGrid->getCDcdGridXBorderBottom() ;
@@ -525,7 +525,7 @@ void CCellBuilder::update01_01_setGridBorder(
 			pCDcdGridXBorder->setColumnBorderSize( aCdDcdSizeXy.getX() ) ;
 		}
 	}
-	//	ã
+	//	ä¸Š
 	{
 		CDcdGridYBorder* pCDcdGridYBorder = pCDcdGrid->getCDcdGridYBorderTop() ;
 		Ou<CDcdLine> pCDcdLine = pCDcdGridYBorder->getIfDcDraw();
@@ -537,7 +537,7 @@ void CCellBuilder::update01_01_setGridBorder(
 			pCDcdGridYBorder->setColumnBorderSize( aCdDcdSizeXy.getY() ) ;
 		}
 	}
-	//	‰º
+	//	ä¸‹
 	{
 		CDcdGridYBorder* pCDcdGridYBorder 
 			= pCDcdGrid->getCDcdGridYBorderBottom() ;
@@ -578,13 +578,13 @@ void CCellBuilder::update01_03_01_setEkimei_Ressyabangou(
 
 		if ( pCDcdGridCell != 0 )
 		{
-			//(1.3.*.1)@ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ressyabangou) 
-			//	‚ÌŒ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+			//(1.3.*.1)ã€€ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ressyabangou) 
+			//	ã®çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 			pCDcdGridCell->setAttachCellCount( 2 , 1 ) ;
 
-			//	(1.3.*.2)@ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ressyabangou) 
-			//	‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-			//	( CDcdTextbox ‚Æ‚·‚é)B
+			//	(1.3.*.2)ã€€ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ressyabangou) 
+			//	ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+			//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 			{
 				pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 					pCDcdGridCell->getIfDcDraw() ) ;
@@ -595,8 +595,8 @@ void CCellBuilder::update01_03_01_setEkimei_Ressyabangou(
 				}
 			}
 
-			//(1.3.*.3)@ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ressyabangou) 
-			//	DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+			//(1.3.*.3)ã€€ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ressyabangou) 
+			//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 			{
 				*pCDcDrawCell = createCDcdXColumn0() ;
 				pCDcDrawCell->setText( stringOf( 
@@ -609,7 +609,7 @@ void CCellBuilder::update01_03_01_setEkimei_Ressyabangou(
 			iYColumnNumber ) ;
 		if ( pCDcdGridYColumn )
 		{
-			//(1.3.*.4)@Y—ñ(ColumnType_Ressyabangou) ‚ÌƒZƒ‹‚Ì‚‚³‚ğİ’è
+			//(1.3.*.4)ã€€Yåˆ—(ColumnType_Ressyabangou) ã®ã‚»ãƒ«ã®é«˜ã•ã‚’è¨­å®š
 			{
 				CdDcdSizeXy aCdDcdSizeXy ;
 				if ( pCDcDrawCell->getItemSize( 
@@ -618,10 +618,10 @@ void CCellBuilder::update01_03_01_setEkimei_Ressyabangou(
 					pCDcdGridYColumn->setColumnSize( aCdDcdSizeXy.getY() ) ;
 				}
 			}
-			//	@(1.3.*.5)@Y—ñ(ColumnType_Ressyabangou) ‚Ì‹«ŠEü‚Ì
-			//	DcDrawƒIƒuƒWƒFƒNƒg ‚É‘®«‚ğİ’èB
-			//	@(1.3.*.6)@Y—ñColumnType_Ressyabangou) ‚Ì‹«ŠEü‚Ì
-			//	‚‚³‚ğİ’è
+			//	ã€€(1.3.*.5)ã€€Yåˆ—(ColumnType_Ressyabangou) ã®å¢ƒç•Œç·šã®
+			//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã«å±æ€§ã‚’è¨­å®šã€‚
+			//	ã€€(1.3.*.6)ã€€Yåˆ—ColumnType_Ressyabangou) ã®å¢ƒç•Œç·šã®
+			//	é«˜ã•ã‚’è¨­å®š
 			{
 				CDcdGridYBorder* pCDcdGridYBorder 
 					= pCDcdGridYColumn->getCDcdGridYBorder() ;
@@ -668,12 +668,12 @@ void CCellBuilder::update01_03_02_02_setEkimei_Ressyasyubetsu(
 
 		if ( pCDcdGridCell != NULL )
 		{
-			//(1.3.*.1)@Œ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+			//(1.3.*.1)ã€€çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 			pCDcdGridCell->setAttachCellCount( 2 , 1 ) ;
 
-			//	(1.3.*.2)@ƒZƒ‹ 
-			//	‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-			//	( CDcdTextbox ‚Æ‚·‚é)B
+			//	(1.3.*.2)ã€€ã‚»ãƒ« 
+			//	ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+			//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 			{
 				pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 					pCDcdGridCell->getIfDcDraw() ) ;
@@ -683,7 +683,7 @@ void CCellBuilder::update01_03_02_02_setEkimei_Ressyasyubetsu(
 					pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 				}
 			}
-			//(1.3.*.3)@ƒZƒ‹‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+			//(1.3.*.3)ã€€ã‚»ãƒ«ã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 			{
 				*pCDcDrawCell = createCDcdXColumn0() ;
 				pCDcDrawCell->setText( stringOf( 
@@ -695,7 +695,7 @@ void CCellBuilder::update01_03_02_02_setEkimei_Ressyasyubetsu(
 			iYColumnNumber ) ;
 		if ( pCDcdGridYColumn != NULL )
 		{
-			//(1.3.*.4)@Y—ñ ‚ÌƒZƒ‹‚Ì‚‚³‚ğİ’è
+			//(1.3.*.4)ã€€Yåˆ— ã®ã‚»ãƒ«ã®é«˜ã•ã‚’è¨­å®š
 			{
 				CdDcdSizeXy aCdDcdSizeXy ;
 				if ( pCDcDrawCell->getItemSize( 
@@ -703,10 +703,10 @@ void CCellBuilder::update01_03_02_02_setEkimei_Ressyasyubetsu(
 				{
 					pCDcdGridYColumn->setColumnSize( aCdDcdSizeXy.getY() ) ;					}
 			}
-			//	@(1.3.*.5)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	DcDrawƒIƒuƒWƒFƒNƒg ‚É‘®«‚ğİ’èB
-			//	@(1.3.*.6)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	‚‚³‚ğİ’è
+			//	ã€€(1.3.*.5)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã«å±æ€§ã‚’è¨­å®šã€‚
+			//	ã€€(1.3.*.6)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	é«˜ã•ã‚’è¨­å®š
 			{
 				CDcdGridYBorder* pCDcdGridYBorder 
 					= pCDcdGridYColumn->getCDcdGridYBorder() ;
@@ -752,12 +752,12 @@ void CCellBuilder::update01_03_02_03_setEkimei_Ressyamei(
 
 		if ( pCDcdGridCell != NULL )
 		{
-			//(1.3.*.1)@Œ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+			//(1.3.*.1)ã€€çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 			pCDcdGridCell->setAttachCellCount( 2 , 3 ) ;
 
-			//	(1.3.*.2)@ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ressyabangou) 
-			//	‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-			//	( CDcdTextbox ‚Æ‚·‚é)B
+			//	(1.3.*.2)ã€€ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ressyabangou) 
+			//	ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+			//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 			{
 				pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 					pCDcdGridCell->getIfDcDraw() ) ;
@@ -767,8 +767,8 @@ void CCellBuilder::update01_03_02_03_setEkimei_Ressyamei(
 					pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 				}
 			}
-			//(1.3.*.3)@ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ressyabangou) 
-			//	DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+			//(1.3.*.3)ã€€ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ressyabangou) 
+			//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 			{
 				*pCDcDrawCell = createCDcdXColumn0V() ;
 				pCDcDrawCell->setText( stringOf( 
@@ -780,7 +780,7 @@ void CCellBuilder::update01_03_02_03_setEkimei_Ressyamei(
 			iYColumnNumber ) ;
 		if ( pCDcdGridYColumn != NULL )
 		{
-			//(1.3.*.4)@Y—ñ ‚ÌƒZƒ‹‚Ì‚‚³‚ğİ’è
+			//(1.3.*.4)ã€€Yåˆ— ã®ã‚»ãƒ«ã®é«˜ã•ã‚’è¨­å®š
 			{
 				CdDcdSizeXy aCdDcdSizeXy ;
 				if ( pCDcDrawCell->getItemSize( 
@@ -788,10 +788,10 @@ void CCellBuilder::update01_03_02_03_setEkimei_Ressyamei(
 				{
 					pCDcdGridYColumn->setColumnSize( aCdDcdSizeXy.getY() ) ;					}
 			}
-			//	@(1.3.*.5)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	DcDrawƒIƒuƒWƒFƒNƒg ‚É‘®«‚ğİ’èB
-			//	@(1.3.*.6)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	‚‚³‚ğİ’è
+			//	ã€€(1.3.*.5)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã«å±æ€§ã‚’è¨­å®šã€‚
+			//	ã€€(1.3.*.6)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	é«˜ã•ã‚’è¨­å®š
 			{
 				CDcdGridYBorder* pCDcdGridYBorder 
 					= pCDcdGridYColumn->getCDcdGridYBorder() ;
@@ -837,10 +837,10 @@ void CCellBuilder::update01_03_02_04_setEkimei_Gousuu(
 
 		if ( pCDcdGridCell != NULL )
 		{
-			//(1.3.*.1)@Œ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+			//(1.3.*.1)ã€€çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 			pCDcdGridCell->setAttachCellCount( 2 , 1 ) ;
 
-			//	(1.3.*.2)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
+			//	(1.3.*.2)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
 			{
 				pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 					pCDcdGridCell->getIfDcDraw() ) ;
@@ -850,7 +850,7 @@ void CCellBuilder::update01_03_02_04_setEkimei_Gousuu(
 					pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 				}
 			}
-			//(1.3.*.3)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+			//(1.3.*.3)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 			{
 				*pCDcDrawCell = createCDcdXColumn0() ;
 			}
@@ -859,7 +859,7 @@ void CCellBuilder::update01_03_02_04_setEkimei_Gousuu(
 			iYColumnNumber ) ;
 		if ( pCDcdGridYColumn != NULL )
 		{
-			//(1.3.*.4)@Y—ñ ‚ÌƒZƒ‹‚Ì‚‚³‚ğİ’è
+			//(1.3.*.4)ã€€Yåˆ— ã®ã‚»ãƒ«ã®é«˜ã•ã‚’è¨­å®š
 			{
 				CdDcdSizeXy aCdDcdSizeXy ;
 				if ( pCDcDrawCell->getItemSize( 
@@ -867,10 +867,10 @@ void CCellBuilder::update01_03_02_04_setEkimei_Gousuu(
 				{
 					pCDcdGridYColumn->setColumnSize( aCdDcdSizeXy.getY() ) ;					}
 			}
-			//	@(1.3.*.5)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	DcDrawƒIƒuƒWƒFƒNƒg ‚É‘®«‚ğİ’èB
-			//	@(1.3.*.6)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	‚‚³‚ğİ’è
+			//	ã€€(1.3.*.5)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã«å±æ€§ã‚’è¨­å®šã€‚
+			//	ã€€(1.3.*.6)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	é«˜ã•ã‚’è¨­å®š
 			{
 				CDcdGridYBorder* pCDcdGridYBorder 
 					= pCDcdGridYColumn->getCDcdGridYBorder() ;
@@ -916,10 +916,10 @@ void CCellBuilder::update01_03_02_05_setEkimei_Gou(
 
 		if ( pCDcdGridCell != NULL )
 		{
-			//(1.3.*.1)@Œ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+			//(1.3.*.1)ã€€çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 			pCDcdGridCell->setAttachCellCount( 2 , 1 ) ;
 
-			//	(1.3.*.2)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
+			//	(1.3.*.2)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
 			{
 				pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 					pCDcdGridCell->getIfDcDraw() ) ;
@@ -929,7 +929,7 @@ void CCellBuilder::update01_03_02_05_setEkimei_Gou(
 					pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 				}
 			}
-			//(1.3.*.3)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+			//(1.3.*.3)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 			{
 				*pCDcDrawCell = createCDcdXColumn0() ;
 			}
@@ -938,7 +938,7 @@ void CCellBuilder::update01_03_02_05_setEkimei_Gou(
 			iYColumnNumber ) ;
 		if ( pCDcdGridYColumn != NULL )
 		{
-			//(1.3.*.4)@Y—ñ ‚ÌƒZƒ‹‚Ì‚‚³‚ğİ’è
+			//(1.3.*.4)ã€€Yåˆ— ã®ã‚»ãƒ«ã®é«˜ã•ã‚’è¨­å®š
 			{
 				CdDcdSizeXy aCdDcdSizeXy ;
 				if ( pCDcDrawCell->getItemSize( 
@@ -946,10 +946,10 @@ void CCellBuilder::update01_03_02_05_setEkimei_Gou(
 				{
 					pCDcdGridYColumn->setColumnSize( aCdDcdSizeXy.getY() ) ;					}
 			}
-			//	@(1.3.*.5)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	DcDrawƒIƒuƒWƒFƒNƒg ‚É‘®«‚ğİ’èB
-			//	@(1.3.*.6)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	‚‚³‚ğİ’è
+			//	ã€€(1.3.*.5)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã«å±æ€§ã‚’è¨­å®šã€‚
+			//	ã€€(1.3.*.6)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	é«˜ã•ã‚’è¨­å®š
 			{
 				CDcdGridYBorder* pCDcdGridYBorder 
 					= pCDcdGridYColumn->getCDcdGridYBorder() ;
@@ -1003,9 +1003,9 @@ void CCellBuilder::update01_03_02_06_setEkimei_Chaku(
 			Ou<CDcDrawCell> pCDcDrawCell ;
 			if ( pCDcdGridCell != 0 )
 			{
-				//(1.3.*.1)@ƒZƒ‹‚ÌŒ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+				//(1.3.*.1)ã€€ã‚»ãƒ«ã®çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 				
-				//	‚±‚Ì—ñ‚ª’…‚ÅAŸ‚Ì—ñ‚ª”­‚È‚çAŸ‚Ì—ñ‚ğŒ‹‡
+				//	ã“ã®åˆ—ãŒç€ã§ã€æ¬¡ã®åˆ—ãŒç™ºãªã‚‰ã€æ¬¡ã®åˆ—ã‚’çµåˆ
 				CdYColSpec aCdYColSpecNext  
 					= m_CdYColSpecCont.ColumnNumberToSpec( iYColumnNumber + 1 ) ;
 				if ( aCdYColSpec.getColumnType() 
@@ -1022,8 +1022,8 @@ void CCellBuilder::update01_03_02_06_setEkimei_Chaku(
 					pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 				}
 
-				//	(1.3.*.2)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-				//	( CDcdTextbox ‚Æ‚·‚é)B
+				//	(1.3.*.2)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+				//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 				{
 					pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 						pCDcdGridCell->getIfDcDraw() ) ;
@@ -1033,7 +1033,7 @@ void CCellBuilder::update01_03_02_06_setEkimei_Chaku(
 						pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 					}
 				}
-				//(1.3.*.3)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+				//(1.3.*.3)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 				{
 					*pCDcDrawCell = createCDcdEkimei() ;
 					pCDcDrawCell->setText( aCdDedEki.getEkimei() );
@@ -1043,7 +1043,7 @@ void CCellBuilder::update01_03_02_06_setEkimei_Chaku(
 				iYColumnNumber ) ;
 			if ( pCDcdGridYColumn )
 			{
-				//(1.3.*.4)@Y—ñ‚ÌƒZƒ‹‚Ì‚‚³‚ğİ’è
+				//(1.3.*.4)ã€€Yåˆ—ã®ã‚»ãƒ«ã®é«˜ã•ã‚’è¨­å®š
 				{
 					CdDcdSizeXy aCdDcdSizeXy ;
 					if ( pCDcDrawCell->getItemSize( 
@@ -1053,18 +1053,18 @@ void CCellBuilder::update01_03_02_06_setEkimei_Chaku(
 							aCdDcdSizeXy.getY() ) ;
 					}
 				}
-				//	@(1.3.*.5)@Y—ñ(ColumnType_Ressyabangou) ‚Ì‹«ŠEü‚Ì
-				//	DcDrawƒIƒuƒWƒFƒNƒg ‚É‘®«‚ğİ’èB
-				//	@(1.3.*.6)@Y—ñColumnType_Ressyabangou) ‚Ì‹«ŠEü‚Ì
-				//	‚‚³‚ğİ’è
+				//	ã€€(1.3.*.5)ã€€Yåˆ—(ColumnType_Ressyabangou) ã®å¢ƒç•Œç·šã®
+				//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã«å±æ€§ã‚’è¨­å®šã€‚
+				//	ã€€(1.3.*.6)ã€€Yåˆ—ColumnType_Ressyabangou) ã®å¢ƒç•Œç·šã®
+				//	é«˜ã•ã‚’è¨­å®š
 				{
 					CDcdGridYBorder* pCDcdGridYBorder 
 						= pCDcdGridYColumn->getCDcdGridYBorder() ;
 					Ou<CDcdLine> pCDcdLine = 
 						pCDcdGridYBorder->getIfDcDraw() ;
 
-					//	‚±‚Ì‰w‚Ì‰wŒ`®‚ªu’…”­v AND
-					//	‚±‚Ì—ñ‚ª’…‚ÅAŸ‚Ì—ñ‚ª”­‚È‚çA‰º‚ÉŒrü
+					//	ã“ã®é§…ã®é§…æ™‚åˆ»å½¢å¼ãŒã€Œç€ç™ºã€ AND
+					//	ã“ã®åˆ—ãŒç€ã§ã€æ¬¡ã®åˆ—ãŒç™ºãªã‚‰ã€ä¸‹ã«ç½«ç·š
 					CdYColSpec aCdYColSpecNext  
 						= m_CdYColSpecCont.ColumnNumberToSpec( 
 							iYColumnNumber + 1 ) ;
@@ -1080,11 +1080,11 @@ void CCellBuilder::update01_03_02_06_setEkimei_Chaku(
 						pCDcdLine->setCdPenProp( 
 							getCdPenPropNarrowLine() ) ;
 					}
-					//	Ÿ‚Ì—ñ‚ªˆÙ‚È‚é‰w‚Ì—ñB AND
-					//	“–‰w‚Éw‹«ŠEüx‘®«‚ª‚ ‚éB
+					//	æ¬¡ã®åˆ—ãŒç•°ãªã‚‹é§…ã®åˆ—ã€‚ AND
+					//	å½“é§…ã«ã€å¢ƒç•Œç·šã€å±æ€§ãŒã‚ã‚‹ã€‚
 					//
-					//	‚±‚ê‚çğŒ‚ğ–‚½‚·ê‡‚ÍA
-					//	‰ºiŸ‚Ì‰w‚Æ‚ÌŠÔj‚ÉŒrü
+					//	ã“ã‚Œã‚‰æ¡ä»¶ã‚’æº€ãŸã™å ´åˆã¯ã€
+					//	ä¸‹ï¼ˆæ¬¡ã®é§…ã¨ã®é–“ï¼‰ã«ç½«ç·š
 					else if ( aCdYColSpecNext.isEkiJikoku() 
 						&& aCdYColSpec.getEkiOrder() 
 							!= aCdYColSpecNext.getEkiOrder() 
@@ -1093,7 +1093,7 @@ void CCellBuilder::update01_03_02_06_setEkimei_Chaku(
 						pCDcdLine->setCdPenProp( 
 							getCdPenPropNarrowLine() ) ;
 					}
-					//	Ÿ‚Ì—ñ‚ª‰wˆÈŠO‚Ìê‡‚ÍA‘¾ü
+					//	æ¬¡ã®åˆ—ãŒé§…æ™‚åˆ»ä»¥å¤–ã®å ´åˆã¯ã€å¤ªç·š
 					else if ( !aCdYColSpecNext.isEkiJikoku() )
 					{
 						pCDcdLine->setCdPenProp( getCdPenPropBoldLine() ) ;
@@ -1104,7 +1104,7 @@ void CCellBuilder::update01_03_02_06_setEkimei_Chaku(
 					}
 
 					// --------------------------------
-					//	ü‚Ì•‚©‚çA—ñ•‚ğİ’è
+					//	ç·šã®å¹…ã‹ã‚‰ã€åˆ—å¹…ã‚’è¨­å®š
 					CdDcdSizeXy aCdDcdSizeXy ;
 					if ( pCDcdLine->getItemSize( 
 						&aCDcdTarget , &aCdDcdSizeXy ) )
@@ -1153,12 +1153,12 @@ void CCellBuilder::update01_03_02_07_setEkimei_Hatsu(
 			Ou<CDcDrawCell> pCDcDrawCell ;
 			if ( pCDcdGridCell != 0 )
 			{
-				//(1.3.*.1)@ƒZƒ‹‚ÌŒ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+				//(1.3.*.1)ã€€ã‚»ãƒ«ã®çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 				
 				pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 
-				//	(1.3.*.2)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-				//	( CDcdTextbox ‚Æ‚·‚é)B
+				//	(1.3.*.2)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+				//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 				{
 					pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 						pCDcdGridCell->getIfDcDraw() ) ;
@@ -1168,7 +1168,7 @@ void CCellBuilder::update01_03_02_07_setEkimei_Hatsu(
 						pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 					}
 				}
-				//(1.3.*.3)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+				//(1.3.*.3)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 				{
 					*pCDcDrawCell = createCDcdEkimei() ;
 					pCDcDrawCell->setText( aCdDedEki.getEkimei() );
@@ -1179,7 +1179,7 @@ void CCellBuilder::update01_03_02_07_setEkimei_Hatsu(
 				iYColumnNumber ) ;
 			if ( pCDcdGridYColumn )
 			{
-				//(1.3.*.4)@Y—ñ‚ÌƒZƒ‹‚Ì‚‚³‚ğİ’è
+				//(1.3.*.4)ã€€Yåˆ—ã®ã‚»ãƒ«ã®é«˜ã•ã‚’è¨­å®š
 				{
 					CdDcdSizeXy aCdDcdSizeXy ;
 					if ( pCDcDrawCell->getItemSize( 
@@ -1189,10 +1189,10 @@ void CCellBuilder::update01_03_02_07_setEkimei_Hatsu(
 							aCdDcdSizeXy.getY() ) ;
 					}
 				}
-				//	@(1.3.*.5)@Y—ñ(ColumnType_Ressyabangou) ‚Ì‹«ŠEü‚Ì
-				//	DcDrawƒIƒuƒWƒFƒNƒg ‚É‘®«‚ğİ’èB
-				//	@(1.3.*.6)@Y—ñColumnType_Ressyabangou) ‚Ì‹«ŠEü‚Ì
-				//	‚‚³‚ğİ’è
+				//	ã€€(1.3.*.5)ã€€Yåˆ—(ColumnType_Ressyabangou) ã®å¢ƒç•Œç·šã®
+				//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã«å±æ€§ã‚’è¨­å®šã€‚
+				//	ã€€(1.3.*.6)ã€€Yåˆ—ColumnType_Ressyabangou) ã®å¢ƒç•Œç·šã®
+				//	é«˜ã•ã‚’è¨­å®š
 				{
 					CDcdGridYBorder* pCDcdGridYBorder 
 						= pCDcdGridYColumn->getCDcdGridYBorder() ;
@@ -1202,11 +1202,11 @@ void CCellBuilder::update01_03_02_07_setEkimei_Hatsu(
 					CdYColSpec aCdYColSpecNext  
 						= m_CdYColSpecCont.ColumnNumberToSpec( 
 							iYColumnNumber + 1 ) ;
-					//	Ÿ‚Ì—ñ‚ªˆÙ‚È‚é‰w‚Ì—ñB
-					//	“–‰w‚Éw‹«ŠEüx‘®«‚ª‚ ‚éB
+					//	æ¬¡ã®åˆ—ãŒç•°ãªã‚‹é§…ã®åˆ—ã€‚
+					//	å½“é§…ã«ã€å¢ƒç•Œç·šã€å±æ€§ãŒã‚ã‚‹ã€‚
 					//
-					//	‚±‚ê‚çğŒ‚ğ–‚½‚·ê‡‚ÍA
-					//	‰ºiŸ‚Ì‰w‚Æ‚ÌŠÔj‚ÉŒrü
+					//	ã“ã‚Œã‚‰æ¡ä»¶ã‚’æº€ãŸã™å ´åˆã¯ã€
+					//	ä¸‹ï¼ˆæ¬¡ã®é§…ã¨ã®é–“ï¼‰ã«ç½«ç·š
 					if ( aCdYColSpecNext.isEkiJikoku() 
 						&& aCdYColSpec.getEkiOrder() 
 							!= aCdYColSpecNext.getEkiOrder() 
@@ -1215,7 +1215,7 @@ void CCellBuilder::update01_03_02_07_setEkimei_Hatsu(
 						pCDcdLine->setCdPenProp( 
 							getCdPenPropNarrowLine() ) ;
 					}
-					//	Ÿ‚Ì—ñ‚ª‰wˆÈŠO‚Ìê‡‚ÍA‘¾ü
+					//	æ¬¡ã®åˆ—ãŒé§…æ™‚åˆ»ä»¥å¤–ã®å ´åˆã¯ã€å¤ªç·š
 					else if ( !aCdYColSpecNext.isEkiJikoku() )
 					{
 						pCDcdLine->setCdPenProp( getCdPenPropBoldLine() ) ;
@@ -1226,7 +1226,7 @@ void CCellBuilder::update01_03_02_07_setEkimei_Hatsu(
 					}
 
 					// --------------------------------
-					//	ü‚Ì•‚©‚çA—ñ•‚ğİ’è
+					//	ç·šã®å¹…ã‹ã‚‰ã€åˆ—å¹…ã‚’è¨­å®š
 					CdDcdSizeXy aCdDcdSizeXy ;
 					if ( pCDcdLine->getItemSize( 
 						&aCDcdTarget , &aCdDcdSizeXy ) )
@@ -1264,12 +1264,12 @@ void CCellBuilder::update01_03_02_08_setEkimei_Bikou(
 		Ou<CDcDrawCell> pCDcDrawCell ;
 		if ( pCDcdGridCell != NULL )
 		{
-			//(1.3.*.1)@Œ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+			//(1.3.*.1)ã€€çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 			pCDcdGridCell->setAttachCellCount( 2 , 1 ) ;
 
-			//	(1.3.*.2)@ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ressyabangou) 
-			//	‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-			//	( CDcdTextbox ‚Æ‚·‚é)B
+			//	(1.3.*.2)ã€€ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ressyabangou) 
+			//	ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+			//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 			{
 				pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 					pCDcdGridCell->getIfDcDraw() ) ;
@@ -1279,8 +1279,8 @@ void CCellBuilder::update01_03_02_08_setEkimei_Bikou(
 					pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 				}
 			}
-			//(1.3.*.3)@ƒZƒ‹(ColumnType_Ekimei,ColumnType_Ressyabangou) 
-			//	DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+			//(1.3.*.3)ã€€ã‚»ãƒ«(ColumnType_Ekimei,ColumnType_Ressyabangou) 
+			//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 			{
 				*pCDcDrawCell = createCDcdXColumn0V() ;
 				pCDcDrawCell->setLinesExtentX ( getBikouTextExtent().getX() ) ;
@@ -1294,7 +1294,7 @@ void CCellBuilder::update01_03_02_08_setEkimei_Bikou(
 			iYColumnNumber ) ;
 		if ( pCDcdGridYColumn != NULL )
 		{
-			//(1.3.*.4)@Y—ñ ‚ÌƒZƒ‹‚Ì‚‚³‚ğİ’è
+			//(1.3.*.4)ã€€Yåˆ— ã®ã‚»ãƒ«ã®é«˜ã•ã‚’è¨­å®š
 			{
 				CdDcdSizeXy aCdDcdSizeXy ;
 				if ( pCDcDrawCell->getItemSize( 
@@ -1303,10 +1303,10 @@ void CCellBuilder::update01_03_02_08_setEkimei_Bikou(
 					pCDcdGridYColumn->setColumnSize( aCdDcdSizeXy.getY() ) ;
 				}
 			}
-			//	@(1.3.*.5)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	DcDrawƒIƒuƒWƒFƒNƒg ‚É‘®«‚ğİ’èB
-			//	@(1.3.*.6)@Y—ñ ‚Ì‹«ŠEü‚Ì
-			//	‚‚³‚ğİ’è
+			//	ã€€(1.3.*.5)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ ã«å±æ€§ã‚’è¨­å®šã€‚
+			//	ã€€(1.3.*.6)ã€€Yåˆ— ã®å¢ƒç•Œç·šã®
+			//	é«˜ã•ã‚’è¨­å®š
 			{
 				CDcdGridYBorder* pCDcdGridYBorder 
 					= pCDcdGridYColumn->getCDcdGridYBorder() ;
@@ -1359,11 +1359,11 @@ void CCellBuilder::update01_04_01_06_setChakuhatsu_Chaku(
 			Ou<CDcDrawCell> pCDcDrawCell ;
 			if ( pCDcdGridCell != 0 )
 			{
-				//(1.4.1.*.1)@ƒZƒ‹‚ÌŒ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+				//(1.4.1.*.1)ã€€ã‚»ãƒ«ã®çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 				pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 			
-				//	(1.4.1.*.2)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-				//	( CDcdTextbox ‚Æ‚·‚é)B
+				//	(1.4.1.*.2)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+				//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 				{
 					pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 						pCDcdGridCell->getIfDcDraw() ) ;
@@ -1373,7 +1373,7 @@ void CCellBuilder::update01_04_01_06_setChakuhatsu_Chaku(
 						pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 					}
 				}
-				//(1.4.1.*.3)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+				//(1.4.1.*.3)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 				{
 					*pCDcDrawCell = createCDcdHatsuchaku();
 					pCDcDrawCell->setText( stringOf( 
@@ -1419,11 +1419,11 @@ void CCellBuilder::update01_04_01_07_setChakuhatsu_Hatsu(
 			Ou<CDcDrawCell> pCDcDrawCell ;
 			if ( pCDcdGridCell != 0 )
 			{
-				//(1.4.1.*.1)@ƒZƒ‹‚ÌŒ‹‡ƒZƒ‹‚Ì‘®«‚ğİ’èB
+				//(1.4.1.*.1)ã€€ã‚»ãƒ«ã®çµåˆã‚»ãƒ«ã®å±æ€§ã‚’è¨­å®šã€‚
 				pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 			
-				//	(1.4.1.*.2)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-				//	( CDcdTextbox ‚Æ‚·‚é)B
+				//	(1.4.1.*.2)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+				//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 				{
 					pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 						pCDcdGridCell->getIfDcDraw() ) ;
@@ -1433,7 +1433,7 @@ void CCellBuilder::update01_04_01_07_setChakuhatsu_Hatsu(
 						pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 					}
 				}
-				//(1.4.1.*.3)@ƒZƒ‹‚ÌDcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+				//(1.4.1.*.3)ã€€ã‚»ãƒ«ã®DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 				{
 					*pCDcDrawCell = createCDcdHatsuchaku();
 					pCDcDrawCell->setText( stringOf( 
@@ -1455,8 +1455,8 @@ void CCellBuilder::update02_02_updateRessya(
 	CDcdTargetGetDC	aCDcdTarget( NULL ) ;
 
 	// ================================
-	//@(2.2.1)@ƒZƒ‹(ColumnType_Ressya ,
-	//	ColumnType_Ressyabangou) ‚ğİ’è
+	//ã€€(2.2.1)ã€€ã‚»ãƒ«(ColumnType_Ressya ,
+	//	ColumnType_Ressyabangou) ã‚’è¨­å®š
 	// ================================
 	update02_02_01_setRessya_Ressyabangou( 
 		iXColumnNumber , 
@@ -1464,12 +1464,12 @@ void CCellBuilder::update02_02_updateRessya(
 		pCWndJikokuhyou ) ;
 
 	// ================================
-	//@(2.2.2)@“¯—l‚ÉAƒZƒ‹(ColumnType_Ressya, 
-	//	ColumnType_Ressyasyubetsu` ColumnType_Bikou ) ‚ğİ’èB
+	//ã€€(2.2.2)ã€€åŒæ§˜ã«ã€ã‚»ãƒ«(ColumnType_Ressya, 
+	//	ColumnType_Ressyasyubetsuã€œ ColumnType_Bikou ) ã‚’è¨­å®šã€‚
 	// ================================
 
 	// --------------------------------
-	//	(2.2.2.2)ƒZƒ‹(ColumnType_Ressya, ColumnType_Ressyasyubetsu)
+	//	(2.2.2.2)ã‚»ãƒ«(ColumnType_Ressya, ColumnType_Ressyasyubetsu)
 	// --------------------------------
 	update02_02_02_02_setRessya_Ressyasyubetsu( 
 		iXColumnNumber , 
@@ -1477,7 +1477,7 @@ void CCellBuilder::update02_02_updateRessya(
 		pCWndJikokuhyou ) ;
 
 	// --------------------------------
-	//	(2.2.2.3)ƒZƒ‹(ColumnType_Ressya, ColumnType_Ressyamei)
+	//	(2.2.2.3)ã‚»ãƒ«(ColumnType_Ressya, ColumnType_Ressyamei)
 	// --------------------------------
 	update02_02_02_03_setRessya_Ressyamei( 
 		iXColumnNumber , 
@@ -1485,7 +1485,7 @@ void CCellBuilder::update02_02_updateRessya(
 		pCWndJikokuhyou ) ;
 
 	// --------------------------------
-	//	(2.2.2.4)ƒZƒ‹(ColumnType_Ressya, ColumnType_Gousuu)
+	//	(2.2.2.4)ã‚»ãƒ«(ColumnType_Ressya, ColumnType_Gousuu)
 	// --------------------------------
 	update02_02_02_04_setRessya_Gousuu( 
 		iXColumnNumber , 
@@ -1494,7 +1494,7 @@ void CCellBuilder::update02_02_updateRessya(
 
 
 	// --------------------------------
-	//	(2.2.2.5)ƒZƒ‹(ColumnType_Ressya, ColumnType_Gou)
+	//	(2.2.2.5)ã‚»ãƒ«(ColumnType_Ressya, ColumnType_Gou)
 	// --------------------------------
 	update02_02_02_05_setRessya_Gou( 
 		iXColumnNumber , 
@@ -1503,8 +1503,8 @@ void CCellBuilder::update02_02_updateRessya(
 
 
 	// --------------------------------
-	//	(2.2.2.6)ƒZƒ‹(ColumnType_Ressya,ColumnType_Ekijikoku_Chaku)
-	//	(2.2.2.7)ƒZƒ‹(ColumnType_Ressya,ColumnType_Ekijikoku_Hatsu)
+	//	(2.2.2.6)ã‚»ãƒ«(ColumnType_Ressya,ColumnType_Ekijikoku_Chaku)
+	//	(2.2.2.7)ã‚»ãƒ«(ColumnType_Ressya,ColumnType_Ekijikoku_Hatsu)
 	// --------------------------------
 	const Mu<CentDedEkiCont::CdDedEki>* muCdDedEki = 
 		m_pCDedRosenFileData->getCentDedRosen()->getCentDedEkiCont()->getMuPtr(
@@ -1523,7 +1523,7 @@ void CCellBuilder::update02_02_updateRessya(
 			pCWndJikokuhyou ) ;
 	}
 	// --------------------------------
-	//	(2.2.2.8)ƒZƒ‹(ColumnType_Ressya,ColumnType_Bikou)
+	//	(2.2.2.8)ã‚»ãƒ«(ColumnType_Ressya,ColumnType_Bikou)
 	// --------------------------------
 	update02_02_02_08_setRessya_Bikou( 
 		iXColumnNumber , 
@@ -1531,8 +1531,8 @@ void CCellBuilder::update02_02_updateRessya(
 		pCWndJikokuhyou ) ;
 
 	// ================================
-	//@(2.2.3)@X—ñ(ColumnType_Ressya ) ‚Ì•‚ğİ’èB
-	//	•‚ÍA‰w—ñ‚Ì DcDraw ƒIƒuƒWƒFƒNƒg‚Ì•‚Æ‚µ‚Ü‚·B
+	//ã€€(2.2.3)ã€€Xåˆ—(ColumnType_Ressya ) ã®å¹…ã‚’è¨­å®šã€‚
+	//	å¹…ã¯ã€é§…æ™‚åˆ»åˆ—ã® DcDraw ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¹…ã¨ã—ã¾ã™ã€‚
 	// ================================
 	CDcdGridXColumn* pCDcdGridXColumn 
 		= pCDcdGrid->getXColumn( iXColumnNumber ) ;
@@ -1549,9 +1549,9 @@ void CCellBuilder::update02_02_updateRessya(
 	}
 
 	// ================================
-	//@(2.2.4)@X—ñ(ColumnType_Ressya ) ‚Ì‹«ŠEü‚Ì 
-	//	DcDrawƒIƒuƒWƒFƒNƒg‚Ì‘®«‚ğİ’èB
-	//@(2.2.5)@X—ñ(ColumnType_Ressya ) ‚Ì‹«ŠEü‚Ì•‚ğİ’èB
+	//ã€€(2.2.4)ã€€Xåˆ—(ColumnType_Ressya ) ã®å¢ƒç•Œç·šã® 
+	//	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å±æ€§ã‚’è¨­å®šã€‚
+	//ã€€(2.2.5)ã€€Xåˆ—(ColumnType_Ressya ) ã®å¢ƒç•Œç·šã®å¹…ã‚’è¨­å®šã€‚
 	// ================================
 	{
 		CDcdGridXBorder* pCDcdGridXBorder 
@@ -1567,11 +1567,11 @@ void CCellBuilder::update02_02_updateRessya(
 		}
 	}
 	// ================================
-	//	X—ñ‚ğÄ•`‰æ—Ìˆæ‚Æ‚µ‚Ü‚·B
+	//	Xåˆ—ã‚’å†æç”»é ˜åŸŸã¨ã—ã¾ã™ã€‚
 	// ================================
 	{
 		CdDcdZoneXy	aCdDcdZoneXy ;
-		//X—ñ‚Ì”ÍˆÍ
+		//Xåˆ—ã®ç¯„å›²
 		{
 			CdDcdZone	zoneXColumnZone = pCDcdGrid->getXColumnZone( 
 				&aCDcdTarget , 
@@ -1583,7 +1583,7 @@ void CCellBuilder::update02_02_updateRessya(
 			aCdDcdZoneXy.setX( 
 				zoneXColumnZone.ZoneOr( zoneXColumnBorderZone ) ) ;
 		}
-		//Y—ñ‚Ì”ÍˆÍ
+		//Yåˆ—ã®ç¯„å›²
 		{
 			CdDcdZone	zoneYColumnTop = pCDcdGrid->getYColumnZone( 
 				&aCDcdTarget , 
@@ -1617,21 +1617,21 @@ void CCellBuilder::update02_02_01_setRessya_Ressyabangou(
 	// --------------------------------
 	CdDedDispProp	aCdDedDispProp = m_pCDedRosenFileData->getCdDedDispProp() ;
 	string strCellExtent( aCdDedDispProp.getJikokuhyouRessyaWidth() , '0' ) ;
-	//strCellExtent = ƒZƒ‹‚Ì‘å‚«‚³‚Ì–ÚˆÀ‚Æ‚È‚é•¶š—ñ‚Å‚·B
-	//	•\—ñÔƒZƒ‹‚Ì•(•¶š”) CdDedDispProp::m_iJikokuhyouRessyaWidth
-	//	‚Ì”‚¾‚¯ '0' ‚ª•À‚ñ‚¾•¶š—ñ‚Å‚·
+	//strCellExtent = ã‚»ãƒ«ã®å¤§ãã•ã®ç›®å®‰ã¨ãªã‚‹æ–‡å­—åˆ—ã§ã™ã€‚
+	//	æ™‚åˆ»è¡¨åˆ—è»Šã‚»ãƒ«ã®å¹…(æ–‡å­—æ•°) CdDedDispProp::m_iJikokuhyouRessyaWidth
+	//	ã®æ•°ã ã‘ '0' ãŒä¸¦ã‚“ã æ–‡å­—åˆ—ã§ã™
 
 	if ( pCDcdGridCell != 0 )
 	{
 		typedef CDcdTextbox CDcDrawCell ;
 		Ou<CDcDrawCell> pCDcDrawCell ;
 		// --------------------------------
-		//@(2.2.*.1)@ƒZƒ‹(ColumnType_Ressya,ColumnType_Ressyabangou) ‚Ì
-		//	Œ‹‡ƒZƒ‹‚ğİ’è
+		//ã€€(2.2.*.1)ã€€ã‚»ãƒ«(ColumnType_Ressya,ColumnType_Ressyabangou) ã®
+		//	çµåˆã‚»ãƒ«ã‚’è¨­å®š
 		pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 
-		//@(2.2.*.2)@ƒZƒ‹ ‚Ì	DcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-		//	( CDcdTextbox ‚Æ‚·‚é)B
+		//ã€€(2.2.*.2)ã€€ã‚»ãƒ« ã®	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+		//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 		{
 			pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 				pCDcdGridCell->getIfDcDraw() ) ;
@@ -1642,7 +1642,7 @@ void CCellBuilder::update02_02_01_setRessya_Ressyabangou(
 			}
 		}
 
-		//@(2.2.*.3)@ƒZƒ‹‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+		//ã€€(2.2.*.3)ã€€ã‚»ãƒ«ã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 		{
 			int idxRessyasyubetsu 
 					= pCentDedRessya->getRessyasyubetsuIndex() ;
@@ -1678,12 +1678,12 @@ void CCellBuilder::update02_02_02_02_setRessya_Ressyasyubetsu(
 		typedef CDcdTextbox CDcDrawCell ;
 		Ou<CDcDrawCell> pCDcDrawCell ;
 		// --------------------------------
-		//@(2.2.*.1)@ƒZƒ‹(ColumnType_Ressya,ColumnType_Ressyabangou) ‚Ì
-		//	Œ‹‡ƒZƒ‹‚ğİ’è
+		//ã€€(2.2.*.1)ã€€ã‚»ãƒ«(ColumnType_Ressya,ColumnType_Ressyabangou) ã®
+		//	çµåˆã‚»ãƒ«ã‚’è¨­å®š
 		pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 
-		//@(2.2.*.2)@ƒZƒ‹ ‚Ì	DcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-		//	( CDcdTextbox ‚Æ‚·‚é)B
+		//ã€€(2.2.*.2)ã€€ã‚»ãƒ« ã®	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+		//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 		{
 			pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 				pCDcdGridCell->getIfDcDraw() ) ;
@@ -1694,7 +1694,7 @@ void CCellBuilder::update02_02_02_02_setRessya_Ressyasyubetsu(
 			}
 		}
 
-		//@(2.2.*.3)@ƒZƒ‹‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+		//ã€€(2.2.*.3)ã€€ã‚»ãƒ«ã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 		{
 			int idxRessyasyubetsu 
 				= pCentDedRessya->getRessyasyubetsuIndex() ;
@@ -1710,8 +1710,8 @@ void CCellBuilder::update02_02_02_02_setRessya_Ressyasyubetsu(
 						->getMuPtr()->get( 0 ) ;
 				}
 			}
-			//pCentDedRessyasyubetsu = —ñÔí•ÊƒIƒuƒWƒFƒNƒg
-			//	(w’è‚ª‚È‚¢‚È‚çA—ñÔí•Ê[0])
+			//pCentDedRessyasyubetsu = åˆ—è»Šç¨®åˆ¥ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+			//	(æŒ‡å®šãŒãªã„ãªã‚‰ã€åˆ—è»Šç¨®åˆ¥[0])
 
 			string strText ;
 			if ( !pCentDedRessya->isNull() )
@@ -1748,12 +1748,12 @@ void CCellBuilder::update02_02_02_03_setRessya_Ressyamei(
 		typedef CDcdTextboxV3 CDcDrawCell ;
 		Ou<CDcDrawCell> pCDcDrawCell ;
 		// --------------------------------
-		//@(2.2.*.1)@ƒZƒ‹(ColumnType_Ressya,ColumnType_Ressyabangou) ‚Ì
-		//	Œ‹‡ƒZƒ‹‚ğİ’è
+		//ã€€(2.2.*.1)ã€€ã‚»ãƒ«(ColumnType_Ressya,ColumnType_Ressyabangou) ã®
+		//	çµåˆã‚»ãƒ«ã‚’è¨­å®š
 		pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 
-		//@(2.2.*.2)@ƒZƒ‹ ‚Ì	DcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-		//	( CDcdTextbox ‚Æ‚·‚é)B
+		//ã€€(2.2.*.2)ã€€ã‚»ãƒ« ã®	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+		//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 		{
 			pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 				pCDcdGridCell->getIfDcDraw() ) ;
@@ -1763,7 +1763,7 @@ void CCellBuilder::update02_02_02_03_setRessya_Ressyamei(
 				pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 			}
 		}
-		//@(2.2.*.3)@ƒZƒ‹‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+		//ã€€(2.2.*.3)ã€€ã‚»ãƒ«ã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 		{
 			int idxRessyasyubetsu 
 				= pCentDedRessya->getRessyasyubetsuIndex() ;
@@ -1803,12 +1803,12 @@ void CCellBuilder::update02_02_02_04_setRessya_Gousuu(
 		typedef CDcdTextbox CDcDrawCell ;
 		Ou<CDcDrawCell> pCDcDrawCell ;
 		// --------------------------------
-		//@(2.2.*.1)@ƒZƒ‹(ColumnType_Ressya,ColumnType_Ressyabangou) ‚Ì
-		//	Œ‹‡ƒZƒ‹‚ğİ’è
+		//ã€€(2.2.*.1)ã€€ã‚»ãƒ«(ColumnType_Ressya,ColumnType_Ressyabangou) ã®
+		//	çµåˆã‚»ãƒ«ã‚’è¨­å®š
 		pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 
-		//@(2.2.*.2)@ƒZƒ‹ ‚Ì	DcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-		//	( CDcdTextbox ‚Æ‚·‚é)B
+		//ã€€(2.2.*.2)ã€€ã‚»ãƒ« ã®	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+		//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 		{
 			pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 				pCDcdGridCell->getIfDcDraw() ) ;
@@ -1818,7 +1818,7 @@ void CCellBuilder::update02_02_02_04_setRessya_Gousuu(
 				pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 			}
 		}
-		//@(2.2.*.3)@ƒZƒ‹‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+		//ã€€(2.2.*.3)ã€€ã‚»ãƒ«ã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 		{
 			int idxRessyasyubetsu 
 				= pCentDedRessya->getRessyasyubetsuIndex() ;
@@ -1852,11 +1852,11 @@ void CCellBuilder::update02_02_02_05_setRessya_Gou(
 		typedef CDcdTextbox CDcDrawCell ;
 		Ou<CDcDrawCell> pCDcDrawCell ;
 		// --------------------------------
-		//@(2.2.*.1)@ƒZƒ‹‚ÌŒ‹‡ƒZƒ‹‚ğİ’è
+		//ã€€(2.2.*.1)ã€€ã‚»ãƒ«ã®çµåˆã‚»ãƒ«ã‚’è¨­å®š
 		pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 
-		//@(2.2.*.2)@ƒZƒ‹ ‚Ì	DcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-		//	( CDcdTextbox ‚Æ‚·‚é)B
+		//ã€€(2.2.*.2)ã€€ã‚»ãƒ« ã®	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+		//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 		{
 			pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 				pCDcdGridCell->getIfDcDraw() ) ;
@@ -1866,7 +1866,7 @@ void CCellBuilder::update02_02_02_05_setRessya_Gou(
 				pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 			}
 		}
-		//@(2.2.*.3)@ƒZƒ‹‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+		//ã€€(2.2.*.3)ã€€ã‚»ãƒ«ã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 		{
 			int idxRessyasyubetsu 
 				= pCentDedRessya->getRessyasyubetsuIndex() ;
@@ -1912,11 +1912,11 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 			typedef CDcdTextbox CDcDrawCell ;
 			Ou<CDcDrawCell> pCDcDrawCell ;
 			// --------------------------------
-			//@(2.2.*.1)@ƒZƒ‹‚ÌŒ‹‡ƒZƒ‹‚ğİ’è
+			//ã€€(2.2.*.1)ã€€ã‚»ãƒ«ã®çµåˆã‚»ãƒ«ã‚’è¨­å®š
 			pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 
-			//@(2.2.*.2)@ƒZƒ‹ ‚Ì	DcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-			//	( CDcdTextbox ‚Æ‚·‚é)B
+			//ã€€(2.2.*.2)ã€€ã‚»ãƒ« ã®	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+			//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 			{
 				pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 					pCDcdGridCell->getIfDcDraw() ) ;
@@ -1926,23 +1926,23 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 					pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 				}
 			}
-			//@(2.2.*.3)@ƒZƒ‹‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+			//ã€€(2.2.*.3)ã€€ã‚»ãƒ«ã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 			{
 				CentDedEkiCont::CdDedEki aCdDedEki = muCdDedEki->get( iEkiOrder ) ;
 
 				int idxRessyasyubetsu 
 					= pCentDedRessya->getRessyasyubetsuIndex() ;
 				
-				//	å—v‰w‚Å‚ÍA‹ó—“‚Éå—v‰w•\‹L‚ğs‚¢‚Ü‚·B
-				//	‹N“_EI“_E’…”­‰w‚Ì‚¢‚¸‚ê‚©‚Å‚ ‚éê‡A
-				//	‹«ŠEü‚ÉÚ‚µ‚Ä‚¢‚é‰w‚Å‚ ‚éê‡‚Íœ‚«‚Ü‚·B
+				//	ä¸»è¦é§…ã§ã¯ã€ç©ºæ¬„ã«ä¸»è¦é§…è¡¨è¨˜ã‚’è¡Œã„ã¾ã™ã€‚
+				//	èµ·ç‚¹ãƒ»çµ‚ç‚¹ãƒ»ç€ç™ºé§…ã®ã„ãšã‚Œã‹ã§ã‚ã‚‹å ´åˆã€
+				//	å¢ƒç•Œç·šã«æ¥ã—ã¦ã„ã‚‹é§…ã§ã‚ã‚‹å ´åˆã¯é™¤ãã¾ã™ã€‚
 				bool bIsSyuyouEkiHyouki = false ;
 				if ( aCdDedEki.getEkikibo() == CentDedEki::Ekikibo_Syuyou 
 					&&	0 < iEkiOrder 
 					&& iEkiOrder < muCdDedEki->size() - 1 
 					&& 	!aCdDedEki.isHatsuChakuHyouji() )
 				{
-					//	‹«ŠEü‚ÉÚ‚µ‚Ä‚¢‚é‰w‚Å‚ ‚éê‡‚Íœ‚«‚Ü‚·B
+					//	å¢ƒç•Œç·šã«æ¥ã—ã¦ã„ã‚‹é§…ã§ã‚ã‚‹å ´åˆã¯é™¤ãã¾ã™ã€‚
 					CentDedEkiCont::CdDedEki aCentDedEkiTonari ;
 					if ( iEkiOrder > 0 )
 					{
@@ -1955,7 +1955,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 						bIsSyuyouEkiHyouki = true ;
 					}
 				}
-				//bIsSyuyouEkiHyouji = ‹ó—“‚Éå—v‰w•\‹L‚ğs‚¢‚Ü‚·B
+				//bIsSyuyouEkiHyouji = ç©ºæ¬„ã«ä¸»è¦é§…è¡¨è¨˜ã‚’è¡Œã„ã¾ã™ã€‚
 
 				CentDedEkiJikoku	aCentDedEkiJikoku =
 					pCentDedRessya->getCentDedEkiJikoku( iEkiOrder ) ;
@@ -1964,7 +1964,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 
 
 				// --------------------------------
-				//	‰w‚É‡‚í‚¹‚ÄAƒZƒ‹‚É•¶š‚ğ•\¦
+				//	é§…æ™‚åˆ»ã«åˆã‚ã›ã¦ã€ã‚»ãƒ«ã«æ–‡å­—ã‚’è¡¨ç¤º
 				// --------------------------------
 				switch( aCentDedEkiJikoku.getEkiatsukai() )
 				{
@@ -1972,7 +1972,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 					{
 						if ( bIsSyuyouEkiHyouki )
 						{
-							//	å—v‰w‚Å‚Ì•\‹Li’…”­‚Ìê‡‚Íœ‚­j
+							//	ä¸»è¦é§…ã§ã®è¡¨è¨˜ï¼ˆç€ç™ºã®å ´åˆã¯é™¤ãï¼‰
 							//	"----"
 							*pCDcDrawCell = createCDcdRessyabangou( idxRessyasyubetsu );
 							pCDcDrawCell->setText( (LPCTSTR)MfcUtil::LoadCString( 
@@ -1980,8 +1980,8 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 						}
 						else
 						{
-							//	‚»‚Ì‘¼‚Ì‰w‚Å‚Ì•\‹L
-							//	"EE"
+							//	ãã®ä»–ã®é§…ã§ã®è¡¨è¨˜
+							//	"ãƒ»ãƒ»"
 							*pCDcDrawCell = createCDcdRessyabangou(  idxRessyasyubetsu );
 							pCDcDrawCell->setText( (LPCTSTR)MfcUtil::LoadCString( 
 									IDS_WORD_JIKOKUHYOU_UNKOUNASI_IPPAN ) ) ;
@@ -1999,9 +1999,9 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 					{
 						if ( !aCdDedJikoku.isNull() && m_bDisplayTsuukaEkiJikoku )
 						{
-							//	’Ê‰ß‰w‚Ì‰w‚ªİ’è‚³‚ê‚Ä‚¨‚èA
-							//	w’Ê‰ß‰w‚Ì‰w‚ğ•\¦‚·‚éxw’è‚É‚È‚Á‚Ä‚¢‚éê‡‚Í
-							//	‚ğ•\¦
+							//	é€šéé§…ã®é§…æ™‚åˆ»ãŒè¨­å®šã•ã‚Œã¦ãŠã‚Šã€
+							//	ã€é€šéé§…ã®é§…æ™‚åˆ»ã‚’è¡¨ç¤ºã™ã‚‹ã€æŒ‡å®šã«ãªã£ã¦ã„ã‚‹å ´åˆã¯
+							//	æ™‚åˆ»ã‚’è¡¨ç¤º
 							*pCDcDrawCell = createCDcdRessyabangou( idxRessyasyubetsu );
 							string strText = getCdDedJikokuConv().encode( aCdDedJikoku ) ;
 							pCDcDrawCell->setText(strText ) ;
@@ -2013,13 +2013,13 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 							*pCDcDrawCell = createCDcdRessyabangou( 
 								idxRessyasyubetsu );
 							pCDcDrawCell->setText( (LPCSTR)MfcUtil::LoadCString( 
-								IDS_WORD_JIKOKUHYOU_TSUUKA ) );	//" Ú"
+								IDS_WORD_JIKOKUHYOU_TSUUKA ) );	//" ï¾š"
 						}
 					}
 					break ;
 				 case CentDedEkiJikoku::Ekiatsukai_Teisya :
 					{
-						//	’âÔ‰w‚Ì‰w‚ªw’è‚³‚ê‚Ä‚¢‚é
+						//	åœè»Šé§…ã®é§…æ™‚åˆ»ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹
 						if ( !aCdDedJikoku.isNull() )
 						{
 							*pCDcDrawCell = createCDcdEkijikoku( 
@@ -2027,13 +2027,13 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 							string strText = getCdDedJikokuConv().encode( aCdDedJikoku ) ;
 							pCDcDrawCell->setText(strText ) ;
 						}
-						//	’âÔ‰w‚Ì‰w‚ªw’è‚³‚ê‚Ä‚¢‚È‚¢
+						//	åœè»Šé§…ã®é§…æ™‚åˆ»ãŒæŒ‡å®šã•ã‚Œã¦ã„ãªã„
 						else 
 						{
 							*pCDcDrawCell = createCDcdRessyabangou(
 								idxRessyasyubetsu );
 
-							//	[•\ƒrƒ…[ã‚Ì”­‚Ì•\¦—ñ‚ğZo
+							//	[æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ä¸Šã®ç™ºæ™‚åˆ»ã®è¡¨ç¤ºåˆ—ã‚’ç®—å‡º
 							CdYColSpec aCdYColSpec( 
 								CdYColSpec::ColumnType_Ekijikoku_Hatsu , 
 								iEkiOrder ) ;
@@ -2041,15 +2041,15 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 								m_CdYColSpecCont.ColumnNumberFromSpec( aCdYColSpec , false ) ;
 
 
-							//	•\ƒrƒ…[ã”­‚Ì•\¦‚ ‚è AND 
-							//	n”­‰w‚Ìê‡‚Í "EE" •\¦
+							//	æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ä¸Šç™ºæ™‚åˆ»ã®è¡¨ç¤ºã‚ã‚Š AND 
+							//	å§‹ç™ºé§…ã®å ´åˆã¯ "ãƒ»ãƒ»" è¡¨ç¤º
 							if ( iYColumnNumberHatsu >= 0 && 
 								pCentDedRessya->getSihatsuEki() == iEkiOrder )
 							{
 								pCDcDrawCell->setText( (LPCTSTR)MfcUtil::LoadCString( 
 									IDS_WORD_JIKOKUHYOU_UNKOUNASI_IPPAN ) ) ;
 							}
-							//	“r’†EI’…‰w‚Ìê‡E’…‚Ì‚İ•\¦‚Ìê‡‚Í " › " •\¦
+							//	é€”ä¸­ãƒ»çµ‚ç€é§…ã®å ´åˆãƒ»ç€æ™‚åˆ»ã®ã¿è¡¨ç¤ºã®å ´åˆã¯ " â—‹ " è¡¨ç¤º
 							else	
 							{
 								pCDcDrawCell->setText( (LPCTSTR)MfcUtil::LoadCString( 
@@ -2059,12 +2059,12 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 					}
 					break ;
 				}
-				//  ‚PD‚`‰w‚Ìw‰wŒ`®x‚ªw”­’…x
-				//  ‚QD—ñÔ‚e‚ÌA‚`‰w‚Å‚Ì‰wˆµ‚ªw’âÔx‚©w’Ê‰ßx‚Ì‚¢‚¸‚ê‚©
-				//  ‚RD—ñÔ‚e‚ÌA‚`‰w‚Ì’…‚ª‹ó
-				//  ‚SD—ñÔ‚e‚ÌA‚`‰w‚Ì‘O‚Ì‰w‚Å‚Ì‰wˆµ‚ªwŒo—R‚È‚µx
+				//  ï¼‘ï¼ï¼¡é§…ã®ã€é§…æ™‚åˆ»å½¢å¼ã€ãŒã€ç™ºç€ã€
+				//  ï¼’ï¼åˆ—è»Šï¼¦ã®ã€ï¼¡é§…ã§ã®é§…æ‰±ãŒã€åœè»Šã€ã‹ã€é€šéã€ã®ã„ãšã‚Œã‹
+				//  ï¼“ï¼åˆ—è»Šï¼¦ã®ã€ï¼¡é§…ã®ç€æ™‚åˆ»ãŒç©º
+				//  ï¼”ï¼åˆ—è»Šï¼¦ã®ã€ï¼¡é§…ã®å‰ã®é§…ã§ã®é§…æ‰±ãŒã€çµŒç”±ãªã—ã€
 				//
-				//  ‚±‚Ìê‡‚ÍA•\ƒrƒ…[ã‚Å‚ÍA—ñÔ‚e‚Ì‚`‰w‚Å‚Ì’…‚Í " || " •\¦‚Æ‚µ‚Ü‚·B
+				//  ã“ã®å ´åˆã¯ã€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ä¸Šã§ã¯ã€åˆ—è»Šï¼¦ã®ï¼¡é§…ã§ã®ç€æ™‚åˆ»ã¯ " || " è¡¨ç¤ºã¨ã—ã¾ã™ã€‚
 				{
 					CentDedEkiJikoku aCentDedEkijikokuPrev ;
 					if ( 0 <= iEkiOrder - 1 
@@ -2074,7 +2074,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 							pCentDedRessya->getCentDedEkiJikoku(
 								iEkiOrder - 1 ) ;
 					}
-					//aCentDedEkijikokuPrev = ‘O‚Ì‰w‚Ì‰w
+					//aCentDedEkijikokuPrev = å‰ã®é§…ã®é§…æ™‚åˆ»
 
 					if ( aCdDedEki.isHatsuChakuHyouji() && 
 						( aCentDedEkiJikoku.getEkiatsukai() == 
@@ -2123,11 +2123,11 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 			typedef CDcdTextbox CDcDrawCell ;
 			Ou<CDcDrawCell> pCDcDrawCell ;
 			// --------------------------------
-			//@(2.2.*.1)@ƒZƒ‹‚ÌŒ‹‡ƒZƒ‹‚ğİ’è
+			//ã€€(2.2.*.1)ã€€ã‚»ãƒ«ã®çµåˆã‚»ãƒ«ã‚’è¨­å®š
 			pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 
-			//@(2.2.*.2)@ƒZƒ‹ ‚Ì	DcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-			//	( CDcdTextbox ‚Æ‚·‚é)B
+			//ã€€(2.2.*.2)ã€€ã‚»ãƒ« ã®	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+			//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 			{
 				pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 					pCDcdGridCell->getIfDcDraw() ) ;
@@ -2137,21 +2137,21 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 					pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 				}
 			}
-			//@(2.2.*.3)@ƒZƒ‹‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+			//ã€€(2.2.*.3)ã€€ã‚»ãƒ«ã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 			{
 				CentDedEkiCont::CdDedEki aCdDedEki = muCdDedEki->get( iEkiOrder ) ;
 				int idxRessyasyubetsu 
 					= pCentDedRessya->getRessyasyubetsuIndex() ;
-				//	å—v‰w‚Å‚ÍA‹ó—“‚Éå—v‰w•\‹L‚ğs‚¢‚Ü‚·B
-				//	‹N“_EI“_E’…”­‰w‚Ì‚¢‚¸‚ê‚©‚Å‚ ‚éê‡A
-				//	‹«ŠEü‚ÉÚ‚µ‚Ä‚¢‚é‰w‚Å‚ ‚éê‡‚Íœ‚«‚Ü‚·B
+				//	ä¸»è¦é§…ã§ã¯ã€ç©ºæ¬„ã«ä¸»è¦é§…è¡¨è¨˜ã‚’è¡Œã„ã¾ã™ã€‚
+				//	èµ·ç‚¹ãƒ»çµ‚ç‚¹ãƒ»ç€ç™ºé§…ã®ã„ãšã‚Œã‹ã§ã‚ã‚‹å ´åˆã€
+				//	å¢ƒç•Œç·šã«æ¥ã—ã¦ã„ã‚‹é§…ã§ã‚ã‚‹å ´åˆã¯é™¤ãã¾ã™ã€‚
 				bool bIsSyuyouEkiHyouki = false ;
 				if ( aCdDedEki.getEkikibo() == CentDedEki::Ekikibo_Syuyou 
 					&&	0 < iEkiOrder 
 					&& iEkiOrder < muCdDedEki->size() - 1 
 					&& 	!aCdDedEki.isHatsuChakuHyouji() )
 				{
-					//	‹«ŠEü‚ÉÚ‚µ‚Ä‚¢‚é‰w‚Å‚ ‚éê‡‚Íœ‚«‚Ü‚·B
+					//	å¢ƒç•Œç·šã«æ¥ã—ã¦ã„ã‚‹é§…ã§ã‚ã‚‹å ´åˆã¯é™¤ãã¾ã™ã€‚
 					CentDedEkiCont::CdDedEki aCentDedEkiTonari ;
 					if ( iEkiOrder > 0 )
 					{
@@ -2164,7 +2164,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 						bIsSyuyouEkiHyouki = true ;
 					}
 				}
-				//bIsSyuyouEkiHyouji = ‹ó—“‚Éå—v‰w•\‹L‚ğs‚¢‚Ü‚·B
+				//bIsSyuyouEkiHyouji = ç©ºæ¬„ã«ä¸»è¦é§…è¡¨è¨˜ã‚’è¡Œã„ã¾ã™ã€‚
 
 				CentDedEkiJikoku	aCentDedEkiJikoku =
 					pCentDedRessya->getCentDedEkiJikoku( iEkiOrder ) ;
@@ -2172,7 +2172,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 					= aCentDedEkiJikoku.getHatsujikoku() ;
 
 				// --------------------------------
-				//	‰w‚É‡‚í‚¹‚ÄAƒZƒ‹‚É•¶š‚ğ•\¦
+				//	é§…æ™‚åˆ»ã«åˆã‚ã›ã¦ã€ã‚»ãƒ«ã«æ–‡å­—ã‚’è¡¨ç¤º
 				// --------------------------------
 				switch( aCentDedEkiJikoku.getEkiatsukai() )
 				{
@@ -2180,7 +2180,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 					{
 						if ( bIsSyuyouEkiHyouki )
 						{
-							//	å—v‰w‚Å‚Ì•\‹Li’…”­‚Ìê‡‚Íœ‚­j
+							//	ä¸»è¦é§…ã§ã®è¡¨è¨˜ï¼ˆç€ç™ºã®å ´åˆã¯é™¤ãï¼‰
 							//	"----"
 							*pCDcDrawCell = createCDcdRessyabangou(
 								idxRessyasyubetsu );
@@ -2189,8 +2189,8 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 						}
 						else
 						{
-							//	‚»‚Ì‘¼‚Ì‰w‚Å‚Ì•\‹L
-							//	"EE"
+							//	ãã®ä»–ã®é§…ã§ã®è¡¨è¨˜
+							//	"ãƒ»ãƒ»"
 							*pCDcDrawCell = createCDcdRessyabangou( 
 								idxRessyasyubetsu );
 							pCDcDrawCell->setText( (LPCTSTR)MfcUtil::LoadCString( 
@@ -2210,9 +2210,9 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 					{
 						if ( !aCdDedJikoku.isNull() && m_bDisplayTsuukaEkiJikoku )
 						{
-							//	’Ê‰ß‰w‚Ì‰w‚ªİ’è‚³‚ê‚Ä‚¨‚èA
-							//	w’Ê‰ß‰w‚Ì‰w‚ğ•\¦‚·‚éxw’è‚É‚È‚Á‚Ä‚¢‚éê‡‚Í
-							//	‚ğ•\¦
+							//	é€šéé§…ã®é§…æ™‚åˆ»ãŒè¨­å®šã•ã‚Œã¦ãŠã‚Šã€
+							//	ã€é€šéé§…ã®é§…æ™‚åˆ»ã‚’è¡¨ç¤ºã™ã‚‹ã€æŒ‡å®šã«ãªã£ã¦ã„ã‚‹å ´åˆã¯
+							//	æ™‚åˆ»ã‚’è¡¨ç¤º
 							string strText = getCdDedJikokuConv().encode( aCdDedJikoku ) ;
 							pCDcDrawCell->setText(strText ) ;
 							pCDcDrawCell->setCdDrawTextProp( 
@@ -2223,13 +2223,13 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 							*pCDcDrawCell = createCDcdRessyabangou( 
 								idxRessyasyubetsu );
 							pCDcDrawCell->setText( (LPCSTR)MfcUtil::LoadCString( 
-								IDS_WORD_JIKOKUHYOU_TSUUKA ) );	//" Ú"
+								IDS_WORD_JIKOKUHYOU_TSUUKA ) );	//" ï¾š"
 						}
 					}
 					break ;
 				 case CentDedEkiJikoku::Ekiatsukai_Teisya :
 					{
-						//	’âÔ‰w‚Ì‰w‚ªw’è‚³‚ê‚Ä‚¢‚é
+						//	åœè»Šé§…ã®é§…æ™‚åˆ»ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹
 						if ( !aCdDedJikoku.isNull() )
 						{
 							*pCDcDrawCell = createCDcdEkijikoku( 
@@ -2237,28 +2237,28 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 							string strText = getCdDedJikokuConv().encode( aCdDedJikoku ) ;
 							pCDcDrawCell->setText(strText ) ;
 						}
-						//	’âÔ‰w‚Ì‰w‚ªw’è‚³‚ê‚Ä‚¢‚È‚¢
+						//	åœè»Šé§…ã®é§…æ™‚åˆ»ãŒæŒ‡å®šã•ã‚Œã¦ã„ãªã„
 						else 
 						{
 							*pCDcDrawCell = createCDcdRessyabangou( 
 								idxRessyasyubetsu );
 
-							//	[•\ƒrƒ…[ã‚Ì’…‚Ì•\¦—ñ‚ğZo
+							//	[æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ä¸Šã®ç€æ™‚åˆ»ã®è¡¨ç¤ºåˆ—ã‚’ç®—å‡º
 							CdYColSpec aCdYColSpec( 
 								CdYColSpec::ColumnType_Ekijikoku_Chaku , 
 								iEkiOrder ) ;
 							int iYColumnNumberChaku = 
 								m_CdYColSpecCont.ColumnNumberFromSpec( aCdYColSpec , false ) ;
 
-							//	•\ƒrƒ…[ã‚É’…‚Ì•\¦‚ ‚è AND 
-							//	I’…‰w‚Ìê‡‚Í "EE" •\¦
+							//	æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ä¸Šã«ç€æ™‚åˆ»ã®è¡¨ç¤ºã‚ã‚Š AND 
+							//	çµ‚ç€é§…ã®å ´åˆã¯ "ãƒ»ãƒ»" è¡¨ç¤º
 							if ( iYColumnNumberChaku >= 0 && 
 								pCentDedRessya->getSyuuchakuEki() == iEkiOrder )
 							{
 								pCDcDrawCell->setText( (LPCTSTR)MfcUtil::LoadCString( 
 									IDS_WORD_JIKOKUHYOU_UNKOUNASI_IPPAN ) ) ;
 							}
-							//	n”­E“r’†‰w‚Ìê‡E”­‚Ì‚İ•\¦‚Ìê‡‚Í " › " •\¦
+							//	å§‹ç™ºãƒ»é€”ä¸­é§…ã®å ´åˆãƒ»ç™ºæ™‚åˆ»ã®ã¿è¡¨ç¤ºã®å ´åˆã¯ " â—‹ " è¡¨ç¤º
 							else	
 							{
 								pCDcDrawCell->setText( (LPCTSTR)MfcUtil::LoadCString( 
@@ -2268,13 +2268,13 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 					}
 					break ;
 				}
-				//  ‚PD‚`‰w‚Ìw‰wŒ`®x‚ªw”­’…x
-				//  ‚QD—ñÔ‚e‚ÌA‚`‰w‚Å‚Ì‰wˆµ‚ªw’âÔx‚©w’Ê‰ßx‚Ì‚¢‚¸‚ê‚©
-				//  ‚RD—ñÔ‚e‚ÌA‚`‰w‚Ì”­‚ª‹ó
-				//  ‚SD—ñÔ‚e‚ÌA‚`‰w‚ÌŸ‚Ì‰w‚Å‚Ì‰wˆµ‚ªwŒo—R‚È‚µx
+				//  ï¼‘ï¼ï¼¡é§…ã®ã€é§…æ™‚åˆ»å½¢å¼ã€ãŒã€ç™ºç€ã€
+				//  ï¼’ï¼åˆ—è»Šï¼¦ã®ã€ï¼¡é§…ã§ã®é§…æ‰±ãŒã€åœè»Šã€ã‹ã€é€šéã€ã®ã„ãšã‚Œã‹
+				//  ï¼“ï¼åˆ—è»Šï¼¦ã®ã€ï¼¡é§…ã®ç™ºæ™‚åˆ»ãŒç©º
+				//  ï¼”ï¼åˆ—è»Šï¼¦ã®ã€ï¼¡é§…ã®æ¬¡ã®é§…ã§ã®é§…æ‰±ãŒã€çµŒç”±ãªã—ã€
 				//
-				//	  ‚±‚Ìê‡‚ÍA•\ƒrƒ…[ã‚Å‚ÍA—ñÔ‚e‚Ì‚`‰w‚Å‚Ì”­‚Í 
-				//	" || " •\¦‚Æ‚µ‚Ü‚·
+				//	  ã“ã®å ´åˆã¯ã€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ä¸Šã§ã¯ã€åˆ—è»Šï¼¦ã®ï¼¡é§…ã§ã®ç™ºæ™‚åˆ»ã¯ 
+				//	" || " è¡¨ç¤ºã¨ã—ã¾ã™
 				{
 					CentDedEkiJikoku aCentDedEkijikokuNext ;
 					if ( 0 <= iEkiOrder + 1 
@@ -2284,7 +2284,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 							pCentDedRessya->getCentDedEkiJikoku( 
 								iEkiOrder + 1 ) ;
 					}
-					//aCentDedEkijikokuNext = Ÿ‚Ì‰w‚Ì‰w
+					//aCentDedEkijikokuNext = æ¬¡ã®é§…ã®é§…æ™‚åˆ»
 
 					if ( aCdDedEki.isHatsuChakuHyouji() && 
 						( aCentDedEkiJikoku.getEkiatsukai() == 
@@ -2327,12 +2327,12 @@ void CCellBuilder::update02_02_02_08_setRessya_Bikou(
 		typedef CDcdTextboxV3 CDcDrawCell ;
 		Ou<CDcDrawCell> pCDcDrawCell ;
 		// --------------------------------
-		//@(2.2.*.1)@ƒZƒ‹(ColumnType_Ressya,ColumnType_Ressyabangou) ‚Ì
-		//	Œ‹‡ƒZƒ‹‚ğİ’è
+		//ã€€(2.2.*.1)ã€€ã‚»ãƒ«(ColumnType_Ressya,ColumnType_Ressyabangou) ã®
+		//	çµåˆã‚»ãƒ«ã‚’è¨­å®š
 		pCDcdGridCell->setAttachCellCount( 1 , 1 ) ;
 
-		//@(2.2.*.2)@ƒZƒ‹ ‚Ì	DcDrawƒIƒuƒWƒFƒNƒg‚ÌŒ^‚ğİ’è
-		//	( CDcdTextbox ‚Æ‚·‚é)B
+		//ã€€(2.2.*.2)ã€€ã‚»ãƒ« ã®	DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‹ã‚’è¨­å®š
+		//	( CDcdTextbox ã¨ã™ã‚‹)ã€‚
 		{
 			pCDcDrawCell = dynamic_castOu<CDcDrawCell>( 
 				pCDcdGridCell->getIfDcDraw() ) ;
@@ -2342,7 +2342,7 @@ void CCellBuilder::update02_02_02_08_setRessya_Bikou(
 				pCDcdGridCell->setIfDcDraw( pCDcDrawCell ) ;
 			}
 		}
-		//@(2.2.*.3)@ƒZƒ‹‚Ì DcDrawƒIƒuƒWƒFƒNƒg‚ÉA‘®«‚ğİ’èB
+		//ã€€(2.2.*.3)ã€€ã‚»ãƒ«ã® DcDrawã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã€å±æ€§ã‚’è¨­å®šã€‚
 		{
 			int idxRessyasyubetsu 
 				= pCentDedRessya->getRessyasyubetsuIndex() ;
@@ -2357,7 +2357,7 @@ void CCellBuilder::update02_02_02_08_setRessya_Bikou(
 }
 
 	// ********************************
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	// ********************************
 CCellBuilder::CCellBuilder( 
 		const CDedRosenFileData* pCDedRosenFileData ,
@@ -2375,17 +2375,17 @@ CCellBuilder::CCellBuilder(
 }
 
 	// ********************************
-	//@name	CCellBuilder-‘€ì
+	//@name	CCellBuilder-æ“ä½œ
 	// ********************************
 void CCellBuilder::update( 
 		CWndJikokuhyou* pCWndJikokuhyou ) 
 {
 
-	//@(1)@ƒOƒŠƒbƒh‚Ì‚¤‚¿A—ñÔî•ñˆÈŠO‚Ì‚·‚×‚Ä‚Ì•”•ª‚ğİ’è‚µ‚Ü‚·B
+	//ã€€(1)ã€€ã‚°ãƒªãƒƒãƒ‰ã®ã†ã¡ã€åˆ—è»Šæƒ…å ±ä»¥å¤–ã®ã™ã¹ã¦ã®éƒ¨åˆ†ã‚’è¨­å®šã—ã¾ã™ã€‚
 	update01_updateWithoutRessya(
 		pCWndJikokuhyou ) ;
 
-	//@(2)@—ñÔî•ñ‚ğİ’è‚µ‚Ü‚·B
+	//ã€€(2)ã€€åˆ—è»Šæƒ…å ±ã‚’è¨­å®šã—ã¾ã™ã€‚
 	updateAllRessya( 
 		pCWndJikokuhyou ) ;
 	
@@ -2396,12 +2396,12 @@ void CCellBuilder::update(
 void CCellBuilder::updateAllRessya( 
 		CWndJikokuhyou* pCWndJikokuhyou ) 
 {
-	//@(2.1)@X—ñ‚Ì”‚ğİ’è‚µ‚Ü‚·BCdXColSpecCont 
-	//	‚Åw’è‚³‚ê‚½—ñ”‚Æ‚µ‚Ü‚·B
+	//ã€€(2.1)ã€€Xåˆ—ã®æ•°ã‚’è¨­å®šã—ã¾ã™ã€‚CdXColSpecCont 
+	//	ã§æŒ‡å®šã•ã‚ŒãŸåˆ—æ•°ã¨ã—ã¾ã™ã€‚
 	CDcdGrid*	pCDcdGrid = pCWndJikokuhyou->getCXDcdGrid() ;
 	pCDcdGrid->setXColumnCount( m_CdXColSpecCont.size() ) ;
 
-	//@(2.2)@X—ñ(ColumnType_Ressya )‚ÉA—ñÔî•ñ‚ğİ’è
+	//ã€€(2.2)ã€€Xåˆ—(ColumnType_Ressya )ã«ã€åˆ—è»Šæƒ…å ±ã‚’è¨­å®š
 	for ( int iRessyaIndex = 0 ; iRessyaIndex < m_pCentDedRessyaCont->size() ; 
 		iRessyaIndex ++ )
 	{
@@ -2418,8 +2418,8 @@ void CCellBuilder::updateAllRessya(
 		}
 	}
 
-	//@(2.3)@X—ñ(ColumnType_NewRessya )‚ÉA—ñÔî•ñ‚ğİ’èB
-	//	X—ñ(ColumnType_Ressya )‚Æ“¯—lB
+	//ã€€(2.3)ã€€Xåˆ—(ColumnType_NewRessya )ã«ã€åˆ—è»Šæƒ…å ±ã‚’è¨­å®šã€‚
+	//	Xåˆ—(ColumnType_Ressya )ã¨åŒæ§˜ã€‚
 	{
 		int iXColumnNumber = m_CdXColSpecCont.ColumnNumberFromSpec(
 			CdXColSpec( 
@@ -2446,7 +2446,7 @@ void CCellBuilder::replaceRessya(
 	CDcdGrid*	pCDcdGrid = pCWndJikokuhyou->getCXDcdGrid() ;
 
 	// --------------------------------
-	//	Œ¸­•ª‚Ì—v‘f‚Ìíœ
+	//	æ¸›å°‘åˆ†ã®è¦ç´ ã®å‰Šé™¤
 	// --------------------------------
 	int iGensyouSize = iDstDelCount - iInsertCount ;
 	if ( iGensyouSize > 0 )
@@ -2468,7 +2468,7 @@ void CCellBuilder::replaceRessya(
 		}
 	}
 	// --------------------------------
-	//	‘‰Á•ª‚Ì—v‘f‚Ì’Ç‰Á
+	//	å¢—åŠ åˆ†ã®è¦ç´ ã®è¿½åŠ 
 	// --------------------------------
 	int iZoukaSize = iInsertCount - iDstDelCount ;
 	if ( iZoukaSize > 0 )
@@ -2484,7 +2484,7 @@ void CCellBuilder::replaceRessya(
 		}
 	}
 	// --------------------------------
-	//	—v‘f‚ÌXV
+	//	è¦ç´ ã®æ›´æ–°
 	// --------------------------------
 	{					
 		for ( int cnt = 0 ; cnt < iInsertCount ; cnt ++ )
@@ -2501,7 +2501,7 @@ void CCellBuilder::replaceRessya(
 		}
 	}
 	// --------------------------------
-	//	ƒOƒŠƒbƒh‚ÌXV
+	//	ã‚°ãƒªãƒƒãƒ‰ã®æ›´æ–°
 	// --------------------------------
 	CdDcdZone	zoneX ;
 	if ( iInsertCount > 0 )
@@ -2524,7 +2524,7 @@ void CCellBuilder::replaceRessya(
 		CdDcdZone	zoneY1 = pCWndJikokuhyou->getYColumnBorderZone( 0 ) ;
 		CdDcdZone	zoneY2 = pCWndJikokuhyou->getYColumnBorderZone( pCDcdGrid->getYColumnCount() - 1 ) ;
 		zoneY.setBeginEndPos( zoneY1.getPos() , zoneY2.getEndPos() ) ;
-		//zoneRessya = ƒOƒŠƒbƒhã‚Ì—ñÔ‚Ì—Ìˆæ
+		//zoneRessya = ã‚°ãƒªãƒƒãƒ‰ä¸Šã®åˆ—è»Šã®é ˜åŸŸ
 	}
 	CdDcdZoneXy	zonexyInvalidate( zoneX , zoneY ) ;
 	// --------------------------------

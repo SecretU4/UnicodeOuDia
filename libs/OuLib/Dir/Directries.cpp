@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -85,32 +85,32 @@ int findDir( const string& strSearch ,
 						bool bSubdirectrySearch ,
 						IfDirCallback* pIfDirCallback ) 
 {
-	//��F
+	//例：
 	//strSearch="c:\tiny\u*"
-	//	�Ō�̃t�@�C���������́A���C���h�J�[�h�̏ꍇ������܂��B
+	//	最後のファイル名部分は、ワイルドカードの場合もあります。
 
 	int iRv = 0 ;
 
 	CdFilenameStr	fnSearch( strSearch , false ) ;
-	//fnSearch = �����p�X������ł��B
-	//��F"c:\tiny\u*"
+	//fnSearch = 検索パス文字列です。
+	//例："c:\tiny\u*"
 	
-	// 	�@strSearch �̖����� "." ( �J�����g�f�B���N�g�� ) , ".." (�e�f�B���N�g��) ��
-	//	�w�肷�邱�Ƃ͂ł��܂���B���̏ꍇ�́A -1 ��Ԃ��܂��B
+	// 	　strSearch の末尾に "." ( カレントディレクトリ ) , ".." (親ディレクトリ) を
+	//	指定することはできません。この場合は、 -1 を返します。
 	if ( fnSearch.DirCount() >= 1 )
 	{
 		if ( fnSearch.DirAt( fnSearch.DirCount() - 1 ) == "." 
 			|| fnSearch.DirAt( fnSearch.DirCount() - 1 ) == ".." )
 		{
-			iRv = -1 ;	//	�p�����[�^���s���ł�\n
-			//			strSearch �̖����� "."  , ".." ���w�肷�邱�Ƃ͂ł��܂���B
+			iRv = -1 ;	//	パラメータが不正です\n
+			//			strSearch の末尾に "."  , ".." を指定することはできません。
 		}
 	}
 
 
 	// --------------------------------
-	//	�w��̃f�B���N�g������
-	//	�f�B���N�g��������
+	//	指定のディレクトリ内の
+	//	ディレクトリを検索
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -127,9 +127,9 @@ int findDir( const string& strSearch ,
 						CdFilenameStr	fnFind( fnSearch ) ;
 						fnFind.delDirLast().addDirLast( stringOf( strName ) ) ;
 						
-						//fnFind=�݂������f�B���N�g�����ɁA�p�X��
-						//	�t�^���܂����B
-						//��F"c:\tiny\ufo" 
+						//fnFind=みつかったディレクトリ名に、パスを
+						//	付与しました。
+						//例："c:\tiny\ufo" 
 						
 						pIfDirCallback->OnNameFound( fnFind ) ;
 						iRv ++ ;
@@ -140,15 +140,15 @@ int findDir( const string& strSearch ,
 		}
 	}
 	// --------------------------------
-	//	�T�u�f�B���N�g������
-	//	�f�B���N�g��������
+	//	サブディレクトリ内の
+	//	ディレクトリを検索
 	// --------------------------------
 	if ( iRv >= 0 && bSubdirectrySearch )
 	{
 		CdFilenameStr	fnSearchSubdir = fnSearch ;
 		fnSearchSubdir.delDirLast().addDirLast( "*" ) ;
-		//fnSearchSubdir = �T�u�f�B���N�g�����������镶����ł��B
-		//��F"c:\tiny\*"
+		//fnSearchSubdir = サブディレクトリを検索する文字列です。
+		//例："c:\tiny\*"
 		
 		tstring	tstrSearchSubdir = tstringOf( fnSearchSubdir ) ;
 		
@@ -165,10 +165,10 @@ int findDir( const string& strSearch ,
 						fnFind.addDirAt( fnFind.DirCount() - 1 , 
 											stringOf( strName ) ) ;
 					
-						//fnFind=�݂������f�B���N�g�������A�����̂P�O��
-						//	�p�X��
-						//	�t�^���܂����B
-						//��F"c:\tiny\ufo\u*" 
+						//fnFind=みつかったディレクトリ名を、末尾の１つ前の
+						//	パスに
+						//	付与しました。
+						//例："c:\tiny\ufo\u*" 
 						string	strFind = stringOf( fnFind );
 						
 						iRv += findDir( strFind , bSubdirectrySearch , 
@@ -187,20 +187,20 @@ int findFile( const string& strSearch ,
 						bool bSubdirectrySearch ,
 						IfDirCallback* pIfDirCallback ) 
 {
-	//��F
+	//例：
 	//strSearch="c:\tiny\u*"
-	//	�Ō�̃t�@�C���������́A���C���h�J�[�h�̏ꍇ������܂��B
+	//	最後のファイル名部分は、ワイルドカードの場合もあります。
 
 
 	int iRv = 0 ;
 
 	CdFilenameStr	fnSearch( strSearch , true ) ;
-	//fnSearch = �����p�X������ł��B
-	//��F"c:\tiny\u*"
+	//fnSearch = 検索パス文字列です。
+	//例："c:\tiny\u*"
 	
 	// --------------------------------
-	//	�w��̃f�B���N�g������
-	//	�t�@�C��������
+	//	指定のディレクトリ内の
+	//	ファイルを検索
 	// --------------------------------
 	{
 		tstring	tstrSearch = tstringOf( fnSearch ) ;
@@ -216,9 +216,9 @@ int findFile( const string& strSearch ,
 						CdFilenameStr	fnFind( fnSearch ) ;
 						fnFind.setFilename( stringOf( strName ) ) ;
 						
-						//fnFind=�݂������f�B���N�g�����ɁA�p�X��
-						//	�t�^���܂����B
-						//��F"c:\tiny\ufo" 
+						//fnFind=みつかったディレクトリ名に、パスを
+						//	付与しました。
+						//例："c:\tiny\ufo" 
 						
 						pIfDirCallback->OnNameFound( fnFind ) ;
 						iRv ++ ;
@@ -229,14 +229,14 @@ int findFile( const string& strSearch ,
 		}
 	}
 	// --------------------------------
-	//	�T�u�f�B���N�g������
-	//	�f�B���N�g��������
+	//	サブディレクトリ内の
+	//	ディレクトリを検索
 	// --------------------------------
 	if ( bSubdirectrySearch ){
 		CdFilenameStr	fnSearchSubdir( fnSearch ) ;
 		fnSearchSubdir.setIsValidFilename( false ).addDirLast( "*" ) ;
-		//fnSearchSubdir = �T�u�f�B���N�g�����������镶����ł��B
-		//��F"c:\tiny\*"
+		//fnSearchSubdir = サブディレクトリを検索する文字列です。
+		//例："c:\tiny\*"
 		
 		tstring	tstrSearchSubdir = tstringOf( fnSearchSubdir ) ;
 		
@@ -253,10 +253,10 @@ int findFile( const string& strSearch ,
 						CdFilenameStr	fnFind = fnSearch ;
 						fnFind.addDirLast( stringOf( strName ) ) ;
 					
-						//fnFind=�݂������f�B���N�g�������A
-						//	�����̂P�O�̃p�X��
-						//	�t�^���܂����B
-						//��F"c:\tiny\ufo\u*" 
+						//fnFind=みつかったディレクトリ名を、
+						//	末尾の１つ前のパスに
+						//	付与しました。
+						//例："c:\tiny\ufo\u*" 
 						string	strFind = stringOf( fnFind );
 
 						iRv += findFile( 
@@ -273,14 +273,14 @@ int findFile( const string& strSearch ,
 	return ( iRv ) ;
 }
 // ****************************************************************
-//@name �f�B���N�g���쐬
+//@name ディレクトリ作成
 // ****************************************************************
 int mkdirs( const std::string& strDir ) 
 {
 	int iRv = 0 ;
 	CdFilenameStr	aCdFilenameStr( strDir , false ) ;
-	//fnSearch = �����p�X������ł��B
-	//��F"c:\tiny\u*"
+	//fnSearch = 検索パス文字列です。
+	//例："c:\tiny\u*"
 
 	CdFilenameStr	aCdFilenameStrCurr = aCdFilenameStr ;
 	aCdFilenameStrCurr.setDirs( CdFilenameStr::ContstrDir() ) ;
@@ -299,15 +299,15 @@ int mkdirs( const std::string& strDir )
 			&aFinddata ) ;
 		if ( fHandle == -1 )
 		{
-			//	�f�B���N�g����������܂���ł����B
+			//	ディレクトリが見つかりませんでした。
 			int iResult = _mkdir( strDirCurr.c_str() ) ;
 			if ( iResult != 0 )
 			{
-				iRv = -1 ;	//	�f�B���N�g���̍쐬�Ɏ��s���܂����B
+				iRv = -1 ;	//	ディレクトリの作成に失敗しました。
 			}
 			else
 			{
-				iRv = 1 ;	//	�f�B���N�g���̍쐬�ɐ������܂����B
+				iRv = 1 ;	//	ディレクトリの作成に成功しました。
 			}
 			_findclose( fHandle ) ;
 		}
@@ -320,7 +320,7 @@ int mkdirs( const std::string& strDir )
 
 int rmempdir( const std::string& strDir , FILE* pErrorStream ) 
 { 
-	//	�������������Ă���Ԃ�0�ȏ�A�G���[�Ȃ畉�̐��ƂȂ�܂� 
+	//	処理が成功している間は0以上、エラーなら負の数となります 
 	int iRv = 0 ; 
 
 	if ( pErrorStream != NULL )
@@ -329,7 +329,7 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream )
 	}
 
 	// -------------------------------- 
-	//	strDir �̃T�u�f�B���N�g���̍폜�����s 
+	//	strDir のサブディレクトリの削除を試行 
 	// -------------------------------- 
 	if ( iRv >= 0 ) 
 	{ 
@@ -354,7 +354,7 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream )
 					    { 
 							if ( iResult == -1 ) 
 							{ 
-								iRv = -3 ;	//	�T�u�f�B���N�g���̍폜�Ɏ��s���܂����B 
+								iRv = -3 ;	//	サブディレクトリの削除に失敗しました。 
 							} 
 							else 
 							{ 
@@ -365,16 +365,16 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream )
 			   } 
 			   else 
 			   { 
-				    //	���ʂ̃t�@�C����������܂����B 
-				    //	���̃f�B���N�g���͍폜�ł��܂���B 
+				    //	普通のファイルが見つかりました。 
+				    //	このディレクトリは削除できません。 
 					if ( iRv >= 0 ) 
 				    { 
 						if ( pErrorStream != NULL )
 						{
-							fprintf( pErrorStream , "\t���̃f�B���N�g���ɂ̓t�@�C��������܂��B(%s)\n" , 
+							fprintf( pErrorStream , "\tこのディレクトリにはファイルがあります。(%s)\n" , 
 								c_file.name ) ; 
 						}
-						iRv = -2 ;	//	���̃f�B���N�g���ɂ̓t�@�C��������܂��B 
+						iRv = -2 ;	//	このディレクトリにはファイルがあります。 
 					} 
 			   } 
 		   } while( _findnext( hFile, &c_file ) == 0 ); 
@@ -382,7 +382,7 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream )
 	   } 
 	} 
 	// -------------------------------- 
-	//	strDir ����Ȃ�A���̃f�B���N�g���̍폜�����s 
+	//	strDir が空なら、このディレクトリの削除を試行 
 	// -------------------------------- 
 	if ( iRv >= 0 ) 
 	{ 
@@ -390,16 +390,16 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream )
 		{ 
 			if ( pErrorStream != NULL )
 			{
-				fprintf( pErrorStream , "\t�f�B���N�g�� %s �̍폜�Ɏ��s���܂����B\n" , 
+				fprintf( pErrorStream , "\tディレクトリ %s の削除に失敗しました。\n" , 
 					strDir.c_str() ) ; 
 			}
-			iRv = -1 ;	//	strDir�̍폜�Ɏ��s���܂����B 
+			iRv = -1 ;	//	strDirの削除に失敗しました。 
 		} 
 		else 
 		{ 
 			if ( pErrorStream != NULL )
 			{
-				fprintf( pErrorStream , "\t�f�B���N�g�� %s ���폜\n" , 
+				fprintf( pErrorStream , "\tディレクトリ %s を削除\n" , 
 					strDir.c_str()  ) ; 
 			}
 		} 

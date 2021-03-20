@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,32 +81,32 @@ namespace WinDia{
 // ****************************************************************
 /**
  *	@brief
- *	�y�T�v�z
- *	DiagramEdit �̃G���e�B�e�B�N���X�̃I�u�W�F�N�g�̑����f�[�^�̓��e���A
- *	WinDia �t�@�C���ɕϊ�����֐������^���Ă��܂��B
+ *	【概要】
+ *	DiagramEdit のエンティティクラスのオブジェクトの属性データの内容を、
+ *	WinDia ファイルに変換する関数を収録しています。
  *	
  *	<H4>
- *	�y�g�����P�|WinDia�t�@�C���̓ǂݍ��݁z
+ *	【使い方１−WinDiaファイルの読み込み】
  *	</H4>
  *	
- * �P�D  WinDia�t�@�C���̓��e���A�e�L�X�g���[�h�� string ��
- *	�ǂݍ���ł��������B
- *	����́A stringFromFile() ���g���܂��B
+ * １．  WinDiaファイルの内容を、テキストモードで string に
+ *	読み込んでください。
+ *	これは、 stringFromFile() を使います。
  *
- * �Q�D  CDedRosenFileData_From_WinDiaFileString() �֐��ŁA
- *	����������߂��Ă��������B
- *	���̊֐��́A������̓��e�� CentDedRosen �I�u�W�F�N�g�ɔ��f���܂��B
+ * ２．  CDedRosenFileData_From_WinDiaFileString() 関数で、
+ *	文字列を解釈してください。
+ *	この関数は、文字列の内容を CentDedRosen オブジェクトに反映します。
  *	
  *	<H4>
- *	�y�g�����Q�|WinDia�t�@�C���ɕۑ��z
+ *	【使い方２−WinDiaファイルに保存】
  *	</H4>
  *	
- * �P�D  CentDedRosenFileData_To_WinDiaFileString() �֐��ŁA
- *	������𐶐����Ă��������B
+ * １．  CentDedRosenFileData_To_WinDiaFileString() 関数で、
+ *	文字列を生成してください。
  *
- * �Q�D  �P�D�Ő���������������A�e�L�X�g���[�h�Ńt�@�C����
- *	�ۑ����Ă��������B
- *	����́A stringToFile() ���g���܂��B
+ * ２．  １．で生成した文字列を、テキストモードでファイルに
+ *	保存してください。
+ *	これは、 stringToFile() を使います。
  */
 class CconvWinDia
 {
@@ -119,41 +119,41 @@ public:
 	//	CDedRosenFileData
 	// ********************************
 	/**
-	 *	  WinDia �t�@�C���`���̕����� �����߂��A
-	 *	 CDedRosenFileData �I�u�W�F�N�g�ɔ��f���܂��B
+	 *	  WinDia ファイル形式の文字列 を解釈し、
+	 *	 CDedRosenFileData オブジェクトに反映します。
 	 *	
 	 *	@param pCDedRosenFileData [out]
-	 *	  ���̊֐��͂��̃I�u�W�F�N�g�ɁA�����𔽉f���܂��B
+	 *	  この関数はこのオブジェクトに、属性を反映します。
 	 *	@param strWinDiaFileString [in]
-	 *	  WinDia �t�@�C���`���̕����� ���w�肵�Ă�������
-	 *	(���s�����́A "\n" �łȂ��Ă͂Ȃ�܂���B
-	 *	�t�@�C�����e�L�X�g���[�h�œǂݍ��񂾓��e���i�[���Ă�������)�B
+	 *	  WinDia ファイル形式の文字列 を指定してください
+	 *	(改行文字は、 "\n" でなくてはなりません。
+	 *	ファイルをテキストモードで読み込んだ内容を格納してください)。
 	 *	@return
-	 *	  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-21 ;	//	Train00 �̔ԍ������̒l���s�K�؂ł��B
+	 *	  成功したら 0 以上、エラーなら負の数です。
+	 *	-	-21 ;	//	Train00 の番号部分の値が不適切です。
 	 */
 	int CDedRosenFileData_From_WinDiaFileString(
 			CDedRosenFileData* pCDedRosenFileData ,
 			const std::string& strWinDiaFileString ) ;
 
 	/**
-	 *	 CDedRosenFileData �I�u�W�F�N�g�����ƂɁA
-	 *	  WinDia �t�@�C���`���̕����� ���쐬���܂��B
+	 *	 CDedRosenFileData オブジェクトをもとに、
+	 *	  WinDia ファイル形式の文字列 を作成します。
 	 *	
 	 * @param pCDedRosenFileData [in]
-	 *	  CDedRosenFileData ���w�肵�Ă��������B
+	 *	  CDedRosenFileData を指定してください。
 	 * @param idxDia [in]
-	 *	�ۑ�����_�C���̃C���f�N�X���w�肵�ĉ������B
+	 *	保存するダイヤのインデクスを指定して下さい。
 	 * @param pstrWinDiaFileString [out]
-	 *	���̊֐��͂��̃I�u�W�F�N�g��
-	 *	  WinDia �t�@�C���`���̕����� ���������݂܂��B
+	 *	この関数はこのオブジェクトに
+	 *	  WinDia ファイル形式の文字列 を書き込みます。
 	 * @return
-	 *	  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	- 21 ;	//	WinDIA �`���ł́A��Ԏ�ʂ�24��ނ܂łɐ�������Ă��܂��B
-	 *	- 22 ;	//	���̂̒��������p�T�����𒴂����Ԏ�ʂ�����܂��B
-	 *			//	WinDIA �`���ɕۑ����邽�߂ɂ́A���ׂĂ̗�Ԏ�ʗ��̂�
-	 *			//	�S�p�Q�����ȓ��łȂ��Ă͂Ȃ�܂���B
-	 *	- 1 ;	//	idxDia �̎w�肪�s���ł��B
+	 *	  成功したら 0 以上、エラーなら負の数です。
+	 *	- 21 ;	//	WinDIA 形式では、列車種別は24種類までに制限されています。
+	 *	- 22 ;	//	略称の長さが半角５文字を超える列車種別があります。
+	 *			//	WinDIA 形式に保存するためには、すべての列車種別略称は
+	 *			//	全角２文字以内でなくてはなりません。
+	 *	- 1 ;	//	idxDia の指定が不正です。
 	 */
 	int CDedRosenFileData_To_WinDiaFileString( 
 			const CDedRosenFileData* pCDedRosenFileData ,

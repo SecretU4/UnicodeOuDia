@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //	CdDcdFreeLineProp
@@ -77,71 +77,71 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  @brief 
- �y�T�v�z
-   �P���f�[�^�N���X�ł��B
-   CDcdFreeLine �N���X�ɂ����̕`��́A������ێ����܂��B
+ 【概要】
+   単純データクラスです。
+   CDcdFreeLine クラスによる線の描画の、属性を保持します。
  
-   �����Ƃ���
+   属性として
  
- - ����
- - �`��(�����E�j���Ȃ�)
- - �F
+ - 太さ
+ - 形状(実線・破線など)
+ - 色
  
- ��ێ����܂��B
+ を保持します。
  */
 class CdDcdFreeLineProp
 {
 
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
 ///@{
  private:
 	/** 
-		�_���P�ʂő�����\�������ł� �B
+		論理単位で太さを表す属性です 。
 		
-		�f�t�H���g�ł�1�ł��B
+		デフォルトでは1です。
 	
-		0 �Ȃ�A�����`�悵�܂���B
+		0 なら、何も描画しません。
 	 */
 	int			m_iLogicalunitWidth ;
 
 	/**
-		�y���̐F�ł��B
+		ペンの色です。
 	
-		�f�t�H���g�͍��ł�
+		デフォルトは黒です
 	 */
 	CdColorProp	m_colorrefColor ;
 
 	/**
-	   ���̌`��i�_���E�j���Ȃǁj���w�肵�܂��B
+	   線の形状（点線・破線など）を指定します。
 	
-		���̃N���X�ł́A�_���E�j���̎w��́A������ŕ\�����܂��B
-		���̕�����́A "1" �` "9" �܂ł̔��p���������ō\�����܂��B
-		��������̕����͂P�������Ӗ��������A�����珇��
-		�u�P�Ԗڂ̔j���̒����v�E�u�P�Ԗڂ̋󔒂̒����v�E
-		�u�Q�Ԗڂ̔j���̒����v�E�u�Q�Ԗڂ̋󔒂̒����v�̏��ŁA�j����
-		�\���v�f���w�肵�Ă��܂��B
+		このクラスでは、点線・破線の指定は、文字列で表現します。
+		この文字列は、 "1" 〜 "9" までの半角数字だけで構成します。
+		文字列内の文字は１文字ずつ意味を持ち、左から順に
+		「１番目の破線の長さ」・「１番目の空白の長さ」・
+		「２番目の破線の長さ」・「２番目の空白の長さ」の順で、破線の
+		構成要素を指定しています。
 		
-		�󕶎���̏ꍇ�́A������\���܂��B
+		空文字列の場合は、実線を表します。
 		
-		�f�t�H���g�ł͎����ƂȂ�܂��B
+		デフォルトでは実線となります。
 	 */
 	std::string	m_strLinestyle ;
 
 ///@}
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/** 
 	 @param iLogicalunitWidth [in]
-		�_���P�ʂő�����\�������ł� �B
+		論理単位で太さを表す属性です 。
 	 @param colorrefColor [in]
-		�y���̐F�ł��B
-		�f�t�H���g�͍��ł�
+		ペンの色です。
+		デフォルトは黒です
 	 @param aLinestyle [in]
-		�`��B
+		形状。
 	 */
 	CdDcdFreeLineProp( 
 		int			iLogicalunitWidth ,
@@ -153,10 +153,10 @@ class CdDcdFreeLineProp
 
 	/** 
 	 @param iLogicalunitWidth [in]
-		�_���P�ʂő�����\�������ł� �B
+		論理単位で太さを表す属性です 。
 	 @param colorrefColor [in]
-		�y���̐F�ł��B
-		�f�t�H���g�͍��ł�
+		ペンの色です。
+		デフォルトは黒です
 	 */
 	CdDcdFreeLineProp( 
 		int			iLogicalunitWidth ,
@@ -178,7 +178,7 @@ class CdDcdFreeLineProp
 // ********************************
  public:
 	// ********************************
-	///@name CdDcdFreeLineProp::����
+	///@name CdDcdFreeLineProp::属性
 	// ********************************
 	///@{
 	int	getLogicalunitWidth()const
@@ -196,7 +196,7 @@ class CdDcdFreeLineProp
 	
 	
 	/**
-		m_Linestyle ���A�u�����v�̌`��ɐݒ肵�܂��B
+		m_Linestyle を、「実線」の形状に設定します。
 	 */
 	CdDcdFreeLineProp& setSolidLineStyle()
 	{	m_strLinestyle.erase() ;	return *this ;	} ;
@@ -205,17 +205,17 @@ class CdDcdFreeLineProp
 	{	return ( m_strLinestyle.empty() ) ;} ;
 	
 	/**
-		���ׂĂ̑�����������Ԃɂ��܂��B
+		すべての属性を初期状態にします。
 	 */
 	void clear(){	*this = CdDcdFreeLineProp() ; } ;
 	///@}
 
 	/**
-		2�̃I�u�W�F�N�g�̊e���������������ǂ����𔻒肵�܂��B
+		2つのオブジェクトの各属性が等しいかどうかを判定します。
 	 @param value [in]
-		��r�̑ΏۂƂȂ�I�u�W�F�N�g���w�肵�Ă��������B
+		比較の対象となるオブジェクトを指定してください。
 	 @return 
-		value �� *this �Ƃ̊ԂŁA���ׂĂ̑�������������ΐ^�ł��B
+		value と *this との間で、すべての属性が等しければ真です。
 	 */
 	bool isEqualTo( const CdDcdFreeLineProp& value )const
 	{
@@ -225,7 +225,7 @@ class CdDcdFreeLineProp
 			m_strLinestyle == value.m_strLinestyle );
 	};
 	/**
-		isEqualTo() �Ɠ����ł��B
+		isEqualTo() と等価です。
 	 */
 	bool operator==( const CdDcdFreeLineProp& value )const
 	{	return ( isEqualTo( value ) ) ;	};	

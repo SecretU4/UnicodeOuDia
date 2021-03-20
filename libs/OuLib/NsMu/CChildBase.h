@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CChildBase.h 380 2016-11-16 21:21:09Z okm $
@@ -75,71 +75,71 @@ namespace NsMu{
 
 /**
 @brief
-  ���̃N���X�́A�w�e�q�R���e�i�x�p�^�[�� �ɂ�����q�I�u�W�F�N�g�̊�{�N���X�ł��B
+  このクラスは、『親子コンテナ』パターン における子オブジェクトの基本クラスです。
 
 @ref parent_child_container
 
- �w�e�q�R���e�i�x�p�^�[���ɂ�����q�I�u�W�F�N�g�̃N���X�́A���̃N���X���p������K�v������܂��B
- �w�e�q�R���e�i�x�p�^�[�����T�|�[�g���Ă���R���e�i�N���X�Ƃ��āACMuiCopiedParent�ACMuiOuParent ������܂����A�����̃e���v���[�g�p�����[�^ ElementType �Ɏw�肷��N���X�́ACParentBase �N���X���p�����Ă��Ȃ��Ă͂Ȃ�܂���B
+ 『親子コンテナ』パターンにおける子オブジェクトのクラスは、このクラスを継承する必要があります。
+ 『親子コンテナ』パターンをサポートしているコンテナクラスとして、CMuiCopiedParent、CMuiOuParent がありますが、これらのテンプレートパラメータ ElementType に指定するクラスは、CParentBase クラスを継承していなくてはなりません。
 
-�@ m_pParent �́A�����l��NULL�ł��B
-�@this�� �e�I�u�W�F�N�g�ɒǉ����ꂽ�Ƃ��A�e�I�u�W�F�N�g�́A CChildBase::setParent() ���\�b�h���Ăяo���āA�e�I�u�W�F�N�g�̃A�h���X���q�I�u�W�F�N�g��  CChildBase::m_pParent �ɓo�^���܂��B
+　 m_pParent は、初期値はNULLです。
+　thisが 親オブジェクトに追加されたとき、親オブジェクトは、 CChildBase::setParent() メソッドを呼び出して、親オブジェクトのアドレスを子オブジェクトの  CChildBase::m_pParent に登録します。
 
-�@ CChildBase::m_pParent �̌^�́A�́A CParentBase* �ł��B�q�I�u�W�F�N�g�́A CChildBase::m_pParent ���A���ۂ̐e�I�u�W�F�N�g(�R���e�i)�̌^�Ƀ_�E���L���X�g���邱�Ƃɂ��A�e�I�u�W�F�N�g�̃��\�b�h���Ăяo�����Ƃ��ł��܂��B
+　 CChildBase::m_pParent の型は、は、 CParentBase* です。子オブジェクトは、 CChildBase::m_pParent を、実際の親オブジェクト(コンテナ)の型にダウンキャストすることにより、親オブジェクトのメソッドを呼び出すことができます。
 
 @note
-�@ m_pParent ��CMuiCopiedParentBase �^�ł͂Ȃ��A���ۂ̐e�I�u�W�F�N�g�̌^�ɂ���΁A�q�I�u�W�F�N�g�ł̓_�E���L���X�g�����Ȃ��Ă悭�Ȃ�܂��B����́ACChildBase���N���X�e���v���[�g�Ƃ��A�e���v���[�g�p�����[�^�Őe�I�u�W�F�N�g�̌^���w�肷�邱�Ƃɂ������ł������ɂ��v���܂��B@n
-�@�������A�ڂ����l����ƁA���̐݌v�ɂ͖���������܂��B����́A�ȉ��̂悤�ȏz�ˑ��ɂȂ邽�߂ł��B
- - �q�I�u�W�F�N�g�́ACChildBase�Ɉˑ�����( ElementType �́ACChildBase���p������)
- - �e�I�u�W�F�N�g�́A�q�I�u�W�F�N�g�Ɉˑ�����( �e�I�u�W�F�N�g(�R���e�i)�́A�q�I�u�W�F�N�g�̌^���e���v���[�g�����ŗv������)
- - CChildBase�́A�e�I�u�W�F�N�g�Ɉˑ�����(CChaildBase�́A�e�I�u�W�F�N�g�̌^���e���v���[�g�����ŗv������)
+　 m_pParent をCMuiCopiedParentBase 型ではなく、実際の親オブジェクトの型にすれば、子オブジェクトではダウンキャストをしなくてよくなります。これは、CChildBaseをクラステンプレートとし、テンプレートパラメータで親オブジェクトの型を指定することにより実現できそうにも思われます。@n
+　しかし、詳しく考えると、この設計には無理があります。それは、以下のような循環依存になるためです。
+ - 子オブジェクトは、CChildBaseに依存する( ElementType は、CChildBaseを継承する)
+ - 親オブジェクトは、子オブジェクトに依存する( 親オブジェクト(コンテナ)は、子オブジェクトの型をテンプレート引数で要求する)
+ - CChildBaseは、親オブジェクトに依存する(CChaildBaseは、親オブジェクトの型をテンプレート引数で要求する)
 
 */
 class CChildBase
 {
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-		�e�I�u�W�F�N�g(�R���e�i)�ւ̊֘A�ł��B
-		�����l��NULL�ł��B
+		親オブジェクト(コンテナ)への関連です。
+		初期値はNULLです。
 
-		this�� �e�I�u�W�F�N�g�ɒǉ����ꂽ�Ƃ��A�e�I�u�W�F�N�g�́A
-		CChildBase::setParent() ���\�b�h���Ăяo���āA
-		�e�I�u�W�F�N�g�̃A�h���X��o�^���܂��B
+		thisが 親オブジェクトに追加されたとき、親オブジェクトは、
+		CChildBase::setParent() メソッドを呼び出して、
+		親オブジェクトのアドレスを登録します。
 
-		this ���R���e�i����폜���ꂽ�Ƃ��ɂ́A
-		�e�I�u�W�F�N�g�́ANULL��o�^���܂��B
+		this がコンテナから削除されたときには、
+		親オブジェクトは、NULLを登録します。
 	*/
 	CParentBase* m_pParent ;
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
-	/** �f�t�H���g�R���X�g���N�^�Bm_pParent ��NULL�ɏ��������܂� */
+	/** デフォルトコンストラクタ。m_pParent はNULLに初期化します */
 	CChildBase() : m_pParent( NULL ){}
 
 	/**
-		�R�s�[�R���X�g���N�^�ł́A m_pParent �̓R�s�[���܂���B
-		�R���e�i���̎q�A�C�e���̃R�s�[�𐶐������ꍇ�A�R�s�[��
-		�R���e�i���̎q�A�C�e���ł͂Ȃ�����ł��B
+		コピーコンストラクタでは、 m_pParent はコピーしません。
+		コンテナ内の子アイテムのコピーを生成した場合、コピーは
+		コンテナ内の子アイテムではないからです。
 	*/
 	CChildBase( const CChildBase& value ) : m_pParent( NULL ){}
 
 	/**
-		������Z�q�ł́A m_pParent �̓R�s�[���܂���B
+		代入演算子では、 m_pParent はコピーしません。
 
-		�e�I�u�W�F�N�g�����q�I�u�W�F�N�g�ɑ΂��đ�����Z�q��
-		�g�p�����ꍇ�A�q�I�u�W�F�N�g�̒ʏ�̑����͏㏑������܂����A
-		���̏ꍇ�ł��A�u�q�I�u�W�F�N�g�ł���v�Ƃ���������
-		�ς��Ȃ����߂ł��B
+		親オブジェクトを持つ子オブジェクトに対して代入演算子を
+		使用した場合、子オブジェクトの通常の属性は上書きされますが、
+		その場合でも、「子オブジェクトである」という事実は
+		変わらないためです。
 
-		�t�ɁA�e�I�u�W�F�N�g�����q�I�u�W�F�N�g�������Z�q��
-		���ӂɒu���āA�e�������Ȃ��I�u�W�F�N�g�ɑ������R�s�[
-		�����ꍇ�ł��A�E�ӂ̃I�u�W�F�N�g�͐e�������Ȃ��܂܂ł��B
+		逆に、親オブジェクトを持つ子オブジェクトを代入演算子の
+		左辺に置いて、親を持たないオブジェクトに属性をコピー
+		した場合でも、右辺のオブジェクトは親を持たないままです。
 	*/
 	CChildBase& operator=( const CChildBase& value )
 	{
@@ -148,7 +148,7 @@ public:
 
 public:
 	// ********************************
-	///@name CParentBase-����
+	///@name CParentBase-操作
 	// ********************************
 	///@{
 	/** @see m_pParent */

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -77,66 +77,66 @@ Copyright (C) 2006-2017 take-okm
 namespace DcDrawLib{
 namespace DcDraw{
 
-	class CconvContentPosToDcdTarget ;	//	outer�̎Q��
+	class CconvContentPosToDcdTarget ;	//	outerの参照
 
 // ****************************************************************
 //	CaContentPosToDcdTarget_Dim
 // ****************************************************************
 /**
 @brief
-  CaContentPosToDcdTarget_Dim �́A
-  CconvContentPosToDcdTarget �ɏW�񂳂�܂��B
+  CaContentPosToDcdTarget_Dim は、
+  CconvContentPosToDcdTarget に集約されます。
   
-  ���̃N���X�͒��ۃN���X�ł��B
-  IfDcdTarget* �������Ƃ������\�b�h�Ăяo�����A
-  calcCdDcdZone() �֐��� �`��̈�ɕϊ����āA
-  m_pCconvContentPosToTarget �ɈϏ����܂��B
+  このクラスは抽象クラスです。
+  IfDcdTarget* を引数としたメソッド呼び出しを、
+  calcCdDcdZone() 関数で 描画領域に変換して、
+  m_pCconvContentPosToTarget に委譲します。
 */
 class CaContentPosToDcdTarget_Dim
 {
 public:
 	// ********************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ********************************
 	
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	///@}
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**	
-		IfDcdTarget �̉E�E���̗]�T�̈��ێ����܂��B
-		IfDcdTarget �̍��W�n�Ŏw�肵�܂��B
+		IfDcdTarget の右・下の余裕領域を保持します。
+		IfDcdTarget の座標系で指定します。
 	
-		���W�n�ɂ���ẮA�E���̃R���e���c��
-		��ʊO(IfDcdTarget�̗̈�O)�ɂȂ�ꍇ������܂��B
+		座標系によっては、右下のコンテンツが
+		画面外(IfDcdTargetの領域外)になる場合があります。
 		
-		���̒l��1�ȏ�ɂ��邱�Ƃɂ��A�R���e���c��
-		��ʓ��̂��E��ɕ\�������邱�Ƃ��ł��܂��B
+		この値を1以上にすることにより、コンテンツを
+		画面内のやや右上に表示させることができます。
 	*/
 	DcdSize m_sizeDcdMargin ;
 	///@}
 
 protected:
 	// --------------------------------
-	///@name �I�[�o���C�h
+	///@name オーバライド
 	// --------------------------------
 	///@{
 	/**
 	@return 
-		IfDcdTarget �̕`��̈��Ԃ��܂��B
+		IfDcdTarget の描画領域を返します。
 	*/
 	virtual CdDcdZone calcCdDcdZone( IfDcdTarget* pIfDcdTarget ) = 0 ;
 	///@}
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CaContentPosToDcdTarget_Dim(
 		DcdSize sizeDcdMargin );
@@ -145,7 +145,7 @@ public:
 
 public:
 	// ********************************
-	///@name CconvContentPosToTarget-����
+	///@name CconvContentPosToTarget-属性
 	// ********************************
 	///@{
 	CconvContentPosToTarget::EMode	getMode()const ;
@@ -160,61 +160,61 @@ public:
 	
 public:
 	// ********************************
-	///@name CconvContentPosToTarget-TargetPosPerContent,ContentSize �擾�E�ݒ�
+	///@name CconvContentPosToTarget-TargetPosPerContent,ContentSize 取得・設定
 	// ********************************
 	///@{
 	/**
-		�g�嗦���擾���邱�Ƃ��ł��܂��B
+		拡大率を取得することができます。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL�Ȃ�A�����̓������s���܂���B
+		描画対象を指定してください。
+		NULLなら、属性の同期を行いません。
 	@return
-		�g�嗦�B�R���e���g���W�P������́ATargetPos �̐��B
+		拡大率。コンテント座標１あたりの、TargetPos の数。
 
 	*/
 	double getTargetPosPerContent( 
 		IfDcdTarget* pIfDcdTarget ) ;
 
 	/**
-		�g�嗦��ݒ肷�邱�Ƃ��ł��܂��B
+		拡大率を設定することができます。
 	@param value[in]
-		�g�嗦�B�R���e���g���W�P������́ATargetPos �̐��B
+		拡大率。コンテント座標１あたりの、TargetPos の数。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL�Ȃ�A�����̓������s���܂���B
+		描画対象を指定してください。
+		NULLなら、属性の同期を行いません。
 	*/
 	void setTargetPosPerContent( double value , 
 		IfDcdTarget* pIfDcdTarget ) ;
 
 	/**
-		TargetZone�ɕ\������R���e���g�̑傫�����擾���邱�Ƃ��ł��܂��B
+		TargetZoneに表示するコンテントの大きさを取得することができます。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL�Ȃ�A�����̓������s���܂���B
+		描画対象を指定してください。
+		NULLなら、属性の同期を行いません。
 	@return
-		TargetZone�ɕ\������R���e���g�̑傫���B
+		TargetZoneに表示するコンテントの大きさ。
 	*/
 	DcdSize getContentSize( IfDcdTarget* pIfDcdTarget ) ;
 
 	/**
-		TargetZone�ɕ\������R���e���g�̑傫����ݒ肷�邱�Ƃ��ł��܂��B
+		TargetZoneに表示するコンテントの大きさを設定することができます。
 	@param value[in]
-		TargetZone�ɕ\������R���e���g�̑傫���B
+		TargetZoneに表示するコンテントの大きさ。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL�Ȃ�A�����̓������s���܂���B
+		描画対象を指定してください。
+		NULLなら、属性の同期を行いません。
 	*/
 	void setContentSize( DcdSize value , IfDcdTarget* pIfDcdTarget ) ;
 
 	/**
-		TargetZone�ɕ\������R���e���g�̎n�_�Ɗg�嗦��ݒ肷�邱�Ƃ��ł��܂��B
+		TargetZoneに表示するコンテントの始点と拡大率を設定することができます。
 	@param posContentPos [in]
-		TargetPos�̍���ɕ`�悳���Content�́AContentPos���W�B
+		TargetPosの左上に描画されるContentの、ContentPos座標。
 	@param dTargetPosPerContentX [in]
-		�g�嗦�B�R���e���g���W�P������́ATargetPos �̐��B
+		拡大率。コンテント座標１あたりの、TargetPos の数。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL�Ȃ�A�����̓������s���܂���B
+		描画対象を指定してください。
+		NULLなら、属性の同期を行いません。
 	*/
 	void setContentPosAndRate( 
 		DcdPos posContentPos , 
@@ -222,22 +222,22 @@ public:
 		IfDcdTarget* pIfDcdTarget ) ;
 
 	/** 
-		TargetZone�ɕ\������R���e���g�̎n�_�Ƒ傫�����擾���邱�Ƃ��ł��܂��B
+		TargetZoneに表示するコンテントの始点と大きさを取得することができます。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL�Ȃ�A�����̓������s���܂���B
+		描画対象を指定してください。
+		NULLなら、属性の同期を行いません。
 	@return
-		TargetZone�ɕ\������R���e���g�̈ʒu�Ƒ傫���B
+		TargetZoneに表示するコンテントの位置と大きさ。
 	*/
 	CdDcdZone getContentZone( IfDcdTarget* pIfDcdTarget ) ;
 
 	/**
-		TargetZone�ɕ\������R���e���g�̎n�_�Ƒ傫����ݒ肷�邱�Ƃ��ł��܂��B
+		TargetZoneに表示するコンテントの始点と大きさを設定することができます。
 	@param zoneContent[in]
-		TargetZone�ɕ\������R���e���g�̎n�_�Ƒ傫���B
+		TargetZoneに表示するコンテントの始点と大きさ。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL�Ȃ�A�����̓������s���܂���B
+		描画対象を指定してください。
+		NULLなら、属性の同期を行いません。
 	*/
 	void setContentZone( const CdDcdZone& zoneContent , 
 		IfDcdTarget* pIfDcdTarget ) ;
@@ -246,49 +246,49 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CconvContentPosToTarget-���W�ϊ�
+	///@name CconvContentPosToTarget-座標変換
 	// ********************************
 	///@{
 	/**
-		ContentPos ��̍��W���ATargetZone ��̍��W�ɕϊ����܂��B
+		ContentPos 上の座標を、TargetZone 上の座標に変換します。
 	@param posContent [in]
-		�ϊ��Ώۂ̍��W���w�肵�Ă��������B
+		変換対象の座標を指定してください。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL �͎w��ł��܂���B
+		描画対象を指定してください。
+		NULL は指定できません。
 	*/
 	DcdPos	ContentPosToTarget( 
 		DcdPos posContent , IfDcdTarget* pIfDcdTarget ) ;
 
 	/**
-		ContentPos ��̍��W���ATargetZone ��̍��W�ɕϊ����܂��B
+		ContentPos 上の座標を、TargetZone 上の座標に変換します。
 	@param posContent [in]
-		�ϊ��Ώۂ̍��W���w�肵�Ă��������B
+		変換対象の座標を指定してください。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL �͎w��ł��܂���B
+		描画対象を指定してください。
+		NULL は指定できません。
 	*/
 	CdDcdZone	ContentZoneToTarget( 
 		const CdDcdZone& zoneContent , IfDcdTarget* pIfDcdTarget) ;
 
 	/**
-		TargetZone ��̍��W���AContentPos �ɕϊ����܂��B
+		TargetZone 上の座標を、ContentPos に変換します。
 	@param posTarget[in]
-		�ϊ��Ώۂ̍��W���w�肵�Ă��������B
+		変換対象の座標を指定してください。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL �͎w��ł��܂���B
+		描画対象を指定してください。
+		NULL は指定できません。
 	*/
 	DcdPos	ContentPosFromTarget( 
 		DcdPos posTarget , IfDcdTarget* pIfDcdTarget ) ;
 
 	/**
-		TargetZone ��̍��W���AContentPos �ɕϊ����܂��B
+		TargetZone 上の座標を、ContentPos に変換します。
 	@param zoneTarget [in]
-		�ϊ��Ώۂ̍��W���w�肵�Ă��������B
+		変換対象の座標を指定してください。
 	@param pIfDcdTarget[in]
-		�`��Ώۂ��w�肵�Ă��������B
-		NULL �͎w��ł��܂���B
+		描画対象を指定してください。
+		NULL は指定できません。
 	*/
 	CdDcdZone	ContentZoneFromTarget( 
 		const CdDcdZone& zoneTarget , IfDcdTarget* pIfDcdTarget ) ;
@@ -296,7 +296,7 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CconvContentPosToTargetDim-�֘A
+	///@name CconvContentPosToTargetDim-関連
 	// ********************************
 	///@{
 	virtual CconvContentPosToTarget* getCconvContentPosToTarget()=0 ;
@@ -304,7 +304,7 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CaContentPosToDcdTarget_Dim-����
+	///@name CaContentPosToDcdTarget_Dim-属性
 	// ********************************
 	///@{
 	DcdSize getDcdMargin()const ;

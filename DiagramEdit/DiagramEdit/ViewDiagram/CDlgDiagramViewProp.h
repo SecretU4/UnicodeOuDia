@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 #if !defined(AFX_CDLGDIAGRAMVIEWPROP_H__D8AE6377_97CA_40C0_9F4F_20941F78F55F__INCLUDED_)
 #define AFX_CDLGDIAGRAMVIEWPROP_H__D8AE6377_97CA_40C0_9F4F_20941F78F55F__INCLUDED_
@@ -68,67 +68,67 @@ Copyright (C) 2006-2017 take-okm
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
-// CDlgDiagramViewProp.h : �w�b�_�[ �t�@�C��
+// CDlgDiagramViewProp.h : ヘッダー ファイル
 //
 namespace ViewDiagram{
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgDiagramViewProp �_�C�A���O
+// CDlgDiagramViewProp ダイアログ
 /**
  @brief
-	�_�C���O�����r���[�̃v���p�e�B�_�C�A���O�ł��B
+	ダイヤグラムビューのプロパティダイアログです。
  */
 class CDlgDiagramViewProp : public CDialog
 {
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
 ///@{
  private:
 	/**
-		�w�_�C���O�����G���e�B�e�B���W�n�x�͈̔́B
-		�ʏ�́A CentDedDgrDia::getZone() �̒l��
-		�w�肵�ĉ������B
+		『ダイヤグラムエンティティ座標系』の範囲。
+		通常は、 CentDedDgrDia::getZone() の値を
+		指定して下さい。
 		
-		���̒l�́A m_zonexyCWndDiagramZone_Dgr ��
-		���~�b�g�Ƃ��Ďg���܂��Bthis �͂��̒l��ύX���܂���B
+		この値は、 m_zonexyCWndDiagramZone_Dgr の
+		リミットとして使います。this はこの値を変更しません。
 	 */
 	CdDcdZoneXy	m_zonexyCentDedDiaZone_Dgr ;
 
 	/**
-		�����̃G�f�B�b�g�{�b�N�X��L���ɂ��邩�ۂ��������܂��B
-		�R���X�g���N�^�Ō��܂�܂��B
+		横軸のエディットボックスを有効にするか否かを示します。
+		コンストラクタで決まります。
 	*/
 	BOOL m_bEnableYokojiku ;
 
 	/**
-		�c���̃G�f�B�b�g�{�b�N�X��L���ɂ��邩�ۂ��������܂��B
-		�R���X�g���N�^�Ō��܂�܂��B
+		縦軸のエディットボックスを有効にするか否かを示します。
+		コンストラクタで決まります。
 	*/
 	BOOL m_bEnableTatejiku ;
 
 
 	/**
-		�_�C���O�����r���[�̃E�C���h�E�̃N���C�A���g�̈���A
-		�w�_�C���O�����G���e�B�e�B���W�n�x�ŕ\���܂��B
-		�ʏ�́A CWndDiagram::getZone_Dgr() �̒l�ƂȂ�܂��B
+		ダイヤグラムビューのウインドウのクライアント領域を、
+		『ダイヤグラムエンティティ座標系』で表します。
+		通常は、 CWndDiagram::getZone_Dgr() の値となります。
 	
-		�����l�̓R���X�g���N�^�Ō��܂�܂��B
-		���̒l�̓_�C�A���O�J�n���ɁA
-		�_�C�A���O��ɔ��f����܂��B
-		�_�C�A���O�� OK �ŏI���������Ƃ́Athis ��
-		�R���g���[���̓��e�����̒l�ɔ��f���܂��B
+		初期値はコンストラクタで決まります。
+		この値はダイアログ開始時に、
+		ダイアログ上に反映されます。
+		ダイアログが OK で終了したあとは、this は
+		コントロールの内容をこの値に反映します。
 	 */
 	CdDcdZoneXy	m_zonexyCWndDiagramZone_Dgr ;
 
 	/**
-		�c�r�̊Ԋu�̃��[�h�B
+		縦罫の間隔のモード。
 	
-		�����l�̓R���X�g���N�^�Ō��܂�܂��B
-		���̒l�̓_�C�A���O�J�n���ɁA
-		�_�C�A���O��ɔ��f����܂��B
-		�_�C�A���O�� OK �ŏI���������Ƃ́Athis ��
-		�R���g���[���̓��e�����̒l�ɔ��f���܂��B
+		初期値はコンストラクタで決まります。
+		この値はダイアログ開始時に、
+		ダイアログ上に反映されます。
+		ダイアログが OK で終了したあとは、this は
+		コントロールの内容をこの値に反映します。
 	 */
 	int m_idxVlineMode ; 
 ///@}
@@ -138,7 +138,7 @@ class CDlgDiagramViewProp : public CDialog
 // ********************************
  public:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	CdDcdZoneXy	getCentDedDiaZone_Dgr(){
@@ -150,27 +150,27 @@ class CDlgDiagramViewProp : public CDialog
 ///@}
 
 // ----------------------------------------------------------------
-// �R���X�g���N�V����
+// コンストラクション
 public:
 	/**
 	 @param zonexyCentDedDiaZone_Dgr [in]
-		�w�_�C���O�����G���e�B�e�B���W�n�x�͈̔́B
-		�ʏ�́A CentDedDgrDia::getZone() �̒l��
-		�w�肵�ĉ������B
+		『ダイヤグラムエンティティ座標系』の範囲。
+		通常は、 CentDedDgrDia::getZone() の値を
+		指定して下さい。
 	 @param bEnableYokojiku[in]
-		�����̃G�f�B�b�g�{�b�N�X��L���ɂ��邩�ۂ���
-		�w�肵�Ă��������B
+		横軸のエディットボックスを有効にするか否かを
+		指定してください。
 	 @param bEnableTatejiku[in]
-		�c���̃G�f�B�b�g�{�b�N�X��L���ɂ��邩�ۂ��������܂��B
-		�w�肵�Ă��������B
+		縦軸のエディットボックスを有効にするか否かを示します。
+		指定してください。
 	 @param zonexyCWndDiagramZone_Dgr [in]
-		�_�C���O�����r���[�̃E�C���h�E�̃N���C�A���g�̈���A
-		�w�_�C���O�����G���e�B�e�B���W�n�x�ŕ\���܂��B
-		�ʏ�́A CWndDiagram::getZone_Dgr() �̒l�ƂȂ�܂��B
+		ダイヤグラムビューのウインドウのクライアント領域を、
+		『ダイヤグラムエンティティ座標系』で表します。
+		通常は、 CWndDiagram::getZone_Dgr() の値となります。
 	 @param idxVlineMode [in]
-		�c�r�̊Ԋu�̃��[�h�B
+		縦罫の間隔のモード。
 	 @param pParent [in]
-		�e�E�C���h�E���w�肵�ĉ������B
+		親ウインドウを指定して下さい。
 	 */
 	CDlgDiagramViewProp(
 		const CdDcdZoneXy&	zonexyCentDedDiaZone_Dgr ,
@@ -178,10 +178,10 @@ public:
 		BOOL bEnableTatejiku ,
 		const CdDcdZoneXy&	zonexyCWndDiagramZone_Dgr ,
 		int idxVlineMode ,
-		CWnd* pParent = NULL);   // �W���̃R���X�g���N�^
+		CWnd* pParent = NULL);   // 標準のコンストラクタ
 
 
-// �_�C�A���O �f�[�^
+// ダイアログ データ
 	//{{AFX_DATA(CDlgDiagramViewProp)
 	enum { IDD = IDD_DiagramViewProp };
 	CString	m_strEDIT_YokojikuPos;
@@ -192,17 +192,17 @@ public:
 	//}}AFX_DATA
 
 
-// �I�[�o�[���C�h
-	// ClassWizard �͉��z�֐��̃I�[�o�[���C�h�𐶐����܂��B
+// オーバーライド
+	// ClassWizard は仮想関数のオーバーライドを生成します。
 	//{{AFX_VIRTUAL(CDlgDiagramViewProp)
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV �T�|�[�g
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV サポート
 	//}}AFX_VIRTUAL
 
-// �C���v�������e�[�V����
+// インプリメンテーション
 protected:
 
-	// �������ꂽ���b�Z�[�W �}�b�v�֐�
+	// 生成されたメッセージ マップ関数
 	//{{AFX_MSG(CDlgDiagramViewProp)
 	virtual void OnOK();
 	virtual BOOL OnInitDialog();
@@ -211,7 +211,7 @@ protected:
 };
 
 //{{AFX_INSERT_LOCATION}}
-// Microsoft Visual C++ �͑O�s�̒��O�ɒǉ��̐錾��}�����܂��B
+// Microsoft Visual C++ は前行の直前に追加の宣言を挿入します。
 
 } //namespace ViewDiagram
 

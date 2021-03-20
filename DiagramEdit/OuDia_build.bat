@@ -1,36 +1,36 @@
-rem OuDia ƒrƒ‹ƒh
+rem OuDia ãƒ“ãƒ«ãƒ‰
 setlocal
 
 rem ****************************************************************
-rem ƒrƒ‹ƒhŠÂ‹«Ý’è
+rem ãƒ“ãƒ«ãƒ‰ç’°å¢ƒè¨­å®š
 rem ****************************************************************
 
-rem TODO: vcvars32.bat ‚ÌƒpƒX‚ðA‚¨Žg‚¢‚ÌŠÂ‹«‚É‡‚í‚¹‚Ä•ÏX‚µ‚Ä‚­‚¾‚³‚¢B
+rem TODO: vcvars32.bat ã®ãƒ‘ã‚¹ã‚’ã€ãŠä½¿ã„ã®ç’°å¢ƒã«åˆã‚ã›ã¦å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚
 call "%VS90COMNTOOLS%vsvars32"
 
 
 rem  --------------------------------
-rem TODO: ƒrƒ‹ƒh\¬‚ðÝ’è‚µ‚Ä‚­‚¾‚³‚¢B
-rem ’Êí‚Í Release ‚© Release_Static ‚Å‚·
+rem TODO: ãƒ“ãƒ«ãƒ‰æ§‹æˆã‚’è¨­å®šã—ã¦ãã ã•ã„ã€‚
+rem é€šå¸¸ã¯ Release ã‹ Release_Static ã§ã™
 SET CONFIGURATIONNAME=Release_Static
 
 
 rem  --------------------------------
-rem TODO: HTML Help Workshop ‚ÉŠÜ‚Ü‚ê‚é hhc.exe ‚ÌƒpƒX‚ðA
-rem ‚¨Žg‚¢‚ÌŠÂ‹«‚É‡‚í‚¹‚Ä•ÏX‚µ‚Ä‚­‚¾‚³‚¢B
+rem TODO: HTML Help Workshop ã«å«ã¾ã‚Œã‚‹ hhc.exe ã®ãƒ‘ã‚¹ã‚’ã€
+rem ãŠä½¿ã„ã®ç’°å¢ƒã«åˆã‚ã›ã¦å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚
 
 rem SET HHC="C:\Program Files\HTML Help Workshop\hhc"
 SET HHC="D:\Program Files (x86)\HTML Help Workshop\hhc"
 
 
 rem  --------------------------------
-rem TODO: ƒRƒ“ƒo[ƒ^DLL‚Ìƒrƒ‹ƒh‚ðs‚í‚È‚¢ê‡‚ÍA‰º‚Ìs‚Ì rem ‚ðíœ‚µ‚Ä‚­‚¾‚³‚¢B
+rem TODO: ã‚³ãƒ³ãƒãƒ¼ã‚¿DLLã®ãƒ“ãƒ«ãƒ‰ã‚’è¡Œã‚ãªã„å ´åˆã¯ã€ä¸‹ã®è¡Œã® rem ã‚’å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚
 rem set CONVFILEDLL_NOT_BUILD=1
 
 
 rem  --------------------------------
-rem TODO: ƒrƒ‹ƒhŽž‚ÌƒRƒ}ƒ“ƒh‚ðŽw’è‚µ‚Ä‚­‚¾‚³‚¢B’Êí‚Í /build ‚Å‚·‚ªA
-rem ó‹µ‚É‚æ‚Á‚ÄA /rebuild /clean ‚ð‘I‘ð‚Å‚«‚Ü‚·B
+rem TODO: ãƒ“ãƒ«ãƒ‰æ™‚ã®ã‚³ãƒžãƒ³ãƒ‰ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚é€šå¸¸ã¯ /build ã§ã™ãŒã€
+rem çŠ¶æ³ã«ã‚ˆã£ã¦ã€ /rebuild /clean ã‚’é¸æŠžã§ãã¾ã™ã€‚
 
 set COMMAND=/build
 
@@ -39,59 +39,59 @@ set COMMAND=/build
 
 
 rem ****************************************************************
-rem (1)@ƒRƒ“ƒo[ƒ^DLL
+rem (1)ã€€ã‚³ãƒ³ãƒãƒ¼ã‚¿DLL
 rem ****************************************************************
 
 if "%CONVFILEDLL_NOT_BUILD%"=="1" goto CONVFILE_END
 
 pushd ConvDedFile\ConvFileOudia02To03
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ\ConvDedFile\ConvFileOudia02To03
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª\ConvDedFile\ConvFileOudia02To03
 
 devenv ConvFileOudia02To03.sln %COMMAND% "%CONFIGURATIONNAME%" 
 
 popd
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 
 pushd ConvDedFile\ConvFileOudia03To05
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ\ConvDedFile\ConvFileOudia03To05
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª\ConvDedFile\ConvFileOudia03To05
 
 devenv ConvFileOudia03To05.sln %COMMAND% "%CONFIGURATIONNAME%" 
 
 popd
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 pushd ConvDedFile\ConvFileOudia05To06
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ\ConvDedFile\ConvFileOudia05To06
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª\ConvDedFile\ConvFileOudia05To06
 
 devenv ConvFileOudia05To06.sln %COMMAND% "%CONFIGURATIONNAME%" 
 
 popd
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 pushd ConvDedFile\ConvFileOudia06To101
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ\ConvDedFile\ConvFileOudia06To101
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª\ConvDedFile\ConvFileOudia06To101
 
 devenv ConvFileOudia06To101.sln %COMMAND% "%CONFIGURATIONNAME%" 
 
 popd
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 
 
 pushd ConvDedFile\ConvFileOudia101To102
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ\ConvDedFile\ConvFileOudia101To102
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª\ConvDedFile\ConvFileOudia101To102
 
 devenv ConvFileOudia101To102.sln %COMMAND% "%CONFIGURATIONNAME%" 
 
 popd
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 
 :CONVFILE_END
 
 rem  --------------------------------
-rem (2)@ƒ}ƒjƒ…ƒAƒ‹‚Ì .chm
+rem (2)ã€€ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã® .chm
 rem  --------------------------------
 
 pushd manual
@@ -104,41 +104,41 @@ popd
 
 
 rem  --------------------------------
-rem (3)ƒŠƒŠ[ƒX”Åƒ\ƒtƒg
+rem (3)ãƒªãƒªãƒ¼ã‚¹ç‰ˆã‚½ãƒ•ãƒˆ
 rem  --------------------------------
 
 pushd .
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 devenv DiagramEdit.sln %COMMAND% "%CONFIGURATIONNAME%" 
 
 popd
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 rem  --------------------------------
-rem (4)ƒCƒ“ƒXƒg[ƒ‰
+rem (4)ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©
 rem  --------------------------------
 
-rem ƒZƒbƒgƒAƒbƒv‚ÉŠÜ‚ß‚é•K—v‚Ì‚ ‚éƒtƒ@ƒCƒ‹‚Ì‚¤‚¿A
-rem src\DiagramEdit\Release_Static ‚É¶¬‚³‚ê‚Ä‚¢‚éƒtƒ@ƒCƒ‹‚ð
-rem src\DiagramEdit\DiagramEdit_setup\CollectedOnBuild ‚ÉƒRƒs[‚·‚é
+rem ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—ã«å«ã‚ã‚‹å¿…è¦ã®ã‚ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®ã†ã¡ã€
+rem src\DiagramEdit\Release_Static ã«ç”Ÿæˆã•ã‚Œã¦ã„ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã‚’
+rem src\DiagramEdit\DiagramEdit_setup\CollectedOnBuild ã«ã‚³ãƒ”ãƒ¼ã™ã‚‹
 
 pushd DiagramEdit_setup
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ\DiagramEdit_setup
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª\DiagramEdit_setup
 mkdir CollectedOnBuild
 copy /Y ..\%CONFIGURATIONNAME%\*.dll CollectedOnBuild
 copy /Y ..\%CONFIGURATIONNAME%\*.chm CollectedOnBuild
 popd
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 
 
 pushd .
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 devenv DiagramEdit.sln %COMMAND% "%CONFIGURATIONNAME%" /project DiagramEdit_setup
 
 popd
-rem ƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ=‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌƒfƒBƒŒƒNƒgƒŠ
+rem ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª=ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
 

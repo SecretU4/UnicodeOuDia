@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -82,90 +82,90 @@ namespace DcdGrid{
 // ****************************************************************
 /**
    @brief
-   �y�T�v�z
-     CDcdGrid �̃A�_�v�^�ƂȂ�N���X�ł��B
-     MFC �� DocView ���f���ɂ��������^����v���r���[���s���ہA
-     �w��̈���y�[�W�ԍ��ɍ��킹�āACDcdGrid �̑������ꎞ�I��
-   �ύX���܂��B
+   【概要】
+     CDcdGrid のアダプタとなるクラスです。
+     MFC の DocView モデルにおける印刷／印刷プレビューを行う際、
+     指定の印刷ページ番号に合わせて、CDcdGrid の属性を一時的に
+   変更します。
    
-   �y�g�����z
+   【使い方】
    
-   �P�D  ���炩���߁A �������v�����^��DC�^����v���r���[��ʂ�DC
-  	�ɐڑ����� IfDcdTarget �I�u�W�F�N�g�𐶐����Ă��������B
-      CDcdTargetPrinter ���A CDcdTargetMfcPrintInfo �I�u�W�F�N�g��
-  	�������邱�ƂɂȂ�܂��B
+   １．  あらかじめ、 印刷するプリンタのDC／印刷プレビュー画面のDC
+  	に接続する IfDcdTarget オブジェクトを生成してください。
+      CDcdTargetPrinter か、 CDcdTargetMfcPrintInfo オブジェクトを
+  	生成することになります。
    
-   ��   CDcdTargetPrinter �E CDcdTargetMfcPrintPreview �I�u�W�F�N�g��
-   �ΏۂƂ��� CaDcdTargetItemPosition ���쐬���A������w�肷�邱�Ƃ�
-   �ł��܂��B
+   ※   CDcdTargetPrinter ・ CDcdTargetMfcPrintPreview オブジェクトを
+   対象とする CaDcdTargetItemPosition を作成し、それを指定することも
+   できます。
    
-   �Q�D  ���̃N���X�̃I�u�W�F�N�g�𐶐����Ă��������B�R���X�g���N�^�ł́A
-  	������s�� CDcdGrid �I�u�W�F�N�g�ƁA�`���ƂȂ� IfDcdTarget 
-  	�I�u�W�F�N�g���w�肵�Ȃ��Ă͂Ȃ�܂���B
+   ２．  このクラスのオブジェクトを生成してください。コンストラクタでは、
+  	印刷を行う CDcdGrid オブジェクトと、描画先となる IfDcdTarget 
+  	オブジェクトを指定しなくてはなりません。
    
-   ��  ���̃N���X�̃R���X�g���N�^�́A�ΏۂƂȂ� CDcdGrid �� IfDcdTarget 
-   �����Ƃɂ��āA�e�y�[�W���Ƃ� X,Y ��
-    FixafterCOlumnNumber( �X�N���[���ʒu ) ���v�Z���A�����̃R���e�i
-    contiYFixafterColumnNumber �E contiXFixafterColumnNumber �ɕۑ����܂��B
+   ※  このクラスのコンストラクタは、対象となる CDcdGrid と IfDcdTarget 
+   をもとにして、各ページごとの X,Y の
+    FixafterCOlumnNumber( スクロール位置 ) を計算し、内部のコンテナ
+    contiYFixafterColumnNumber ・ contiXFixafterColumnNumber に保存します。
    
-   �R�D  setXPage() , setYPage() �E�܂��� setPage() ��
-  	�y�[�W�ԍ����w�肵�Ă��������B
-  	 this �̓y�[�W�ԍ��ɍ��킹�āA CDcdGrid �� FixafterColumnNumber ��
-  	�ړ����܂��B
+   ３．  setXPage() , setYPage() ・または setPage() で
+  	ページ番号を指定してください。
+  	 this はページ番号に合わせて、 CDcdGrid の FixafterColumnNumber を
+  	移動します。
    
    @attention
-  	MFC �ł̓y�[�W�ԍ��̒l�� 1 �N�_�ŕ\�����Ă��܂����A
-  	���̃N���X�ł̓y�[�W�ԍ��� 0 �N�_�ŕ\�����܂��B
+  	MFC ではページ番号の値は 1 起点で表現していますが、
+  	このクラスではページ番号は 0 起点で表現します。
    
-   �S�D  DcDraw() ���Ăяo���ƁA���̃y�[�W�̕`����s�����Ƃ��ł��܂��B
+   ４．  DcDraw() を呼び出すと、そのページの描画を行うことができます。
    
-   �T�D  �f�X�g���N�^�́A this ���ύX���� CDcdGrid �̑�����߂��܂��B
+   ５．  デストラクタは、 this が変更した CDcdGrid の属性を戻します。
 
-   �U�D�@���̃N���X���g���Ĉ���������Ƃ́A�E�C���h�E�� CDcdGrid ��
-   �ĕ`����s���Ă��������B
+   ６．　このクラスを使って印刷したあとは、ウインドウに CDcdGrid の
+   再描画を行ってください。
 
-	@b�y���R�z@n
-	�@����I����ɃE�C���h�E��̃O���b�h�̕\��������錻�ۂ�
-	 �������邽�߂ł��B@n
-	  ���̃N���X�́A������̓O���b�h�̃X�N���[���ʒu���ꎞ�I�ɕύX���܂��B
-	  ���̂Ƃ��� m_pCWndDcdGrid �ɍĕ`�悪��������ƁA��ʂɂ͈ꎞ�I��
-	�ʒu�̕ύX���ꂽ�O���b�h���`�悳��邽�߁A��ʂ�����܂��B
+	@b【理由】@n
+	　印刷終了後にウインドウ上のグリッドの表示が崩れる現象を
+	 解消するためです。@n
+	  このクラスは、印刷中はグリッドのスクロール位置を一時的に変更します。
+	  このときに m_pCWndDcdGrid に再描画が発生すると、画面には一時的に
+	位置の変更されたグリッドが描画されるため、画面が崩れます。
  */
 class CaDcdGrid_PageSelector
 {
 // ********************************
-///@name �֘A
+///@name 関連
 // ********************************
 ///@{
  private:
 	/**
-	  	������s�� CDcdGrid �I�u�W�F�N�g�ł��B
-	  	���̃I�u�W�F�N�g�̔j���̐Ӗ��̓N���X���[�U�[�ɂ���܂��B
-	  	���̃I�u�W�F�N�g�� this ��蒷���������Ȃ��Ă͂Ȃ�܂���B
-	  	�R���X�g���N�^�Ō��܂�܂��B
+	  	印刷を行う CDcdGrid オブジェクトです。
+	  	このオブジェクトの破棄の責務はクラスユーザーにあります。
+	  	このオブジェクトは this より長く生存しなくてはなりません。
+	  	コンストラクタで決まります。
 	 */
 	CDcdGrid*	m_pCDcdGrid ;
 	
 	/**
-	  	����^����v���r���[��ʂ� IfDcdTarget �I�u�W�F�N�g�B
-	  	���̃I�u�W�F�N�g�̔j���̐Ӗ��̓N���X���[�U�[�ɂ���܂��B
-	  	���̃I�u�W�F�N�g�� this ��蒷���������Ȃ��Ă͂Ȃ�܂���B
-	  	�R���X�g���N�^�Ō��܂�܂��B
+	  	印刷／印刷プレビュー画面の IfDcdTarget オブジェクト。
+	  	このオブジェクトの破棄の責務はクラスユーザーにあります。
+	  	このオブジェクトは this より長く生存しなくてはなりません。
+	  	コンストラクタで決まります。
 	 */
 	 IfDcdTarget* m_pIfDcdTarget ;
 	
 ///@}
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
 ///@{
  private:
 	/**
-	   	�v�����^�̈�����s���ꍇ�́A�y�[�W���� FixafterColumnNumber ��
-	   	�ێ����Ă��܂��B
-	   	  �K�v�ȃy�[�W���́A
+	   	プリンタの印刷を行う場合の、ページ毎の FixafterColumnNumber を
+	   	保持しています。
+	   	  必要なページ数は、
 	   	contiYFixafterColumnNumber.size() *  contiXFixafterColumnNumber.size() 
-	   	�ƂȂ�܂��B
+	   	となります。
 	 */
 	std::deque<int>	m_contiYFixafterColumnNumber ;
 	
@@ -175,35 +175,35 @@ class CaDcdGrid_PageSelector
 	std::deque<int>	m_contiXFixafterColumnNumber ;
 	
 	/**
-	  	X�����̃y�[�W�ԍ��B���̒l�́A 0 �ȏ� getXPageCount() �����ł��B
+	  	X方向のページ番号。この値は、 0 以上 getXPageCount() 未満です。
 	   @attention
-	  	MFC �ł̓y�[�W�ԍ��̒l�� 1 �N�_�ŕ\�����Ă��܂����A
-	  	���̃N���X�ł̓y�[�W�ԍ��� 0 �N�_�ŕ\�����܂��B
+	  	MFC ではページ番号の値は 1 起点で表現していますが、
+	  	このクラスではページ番号は 0 起点で表現します。
 	  	
-	  	�����l�� 0 �ł����A���\�b�h�ŕύX�ł��܂��B
+	  	初期値は 0 ですが、メソッドで変更できます。
 	 */
 	int m_iXPage ;
 	
 	/**
-	  	Y�����̃y�[�W�ԍ��B���̒l�́A 0 �ȏ� getYPageCount() �����ł��B
+	  	Y方向のページ番号。この値は、 0 以上 getYPageCount() 未満です。
 	   @attention
-	  	MFC �ł̓y�[�W�ԍ��̒l�� 1 �N�_�ŕ\�����Ă��܂����A
-	  	���̃N���X�ł̓y�[�W�ԍ��� 0 �N�_�ŕ\�����܂��B
+	  	MFC ではページ番号の値は 1 起点で表現していますが、
+	  	このクラスではページ番号は 0 起点で表現します。
 	  	
-	  	�����l�� 0 �ł����A���\�b�h�ŕύX�ł��܂��B
+	  	初期値は 0 ですが、メソッドで変更できます。
 	 */
 	int m_iYPage ;
 	
 ///@}
 // --------------------------------
-///@name �����f�[�^
+///@name 内部データ
 // --------------------------------
 ///@{
  private:
 	/**
-	  	�R���X�g���N�^�̎��_�ł́A m_pCDcdGrid �� FixafterColumnNumber ��
-	  	�ێ����܂��B
-	  	���̒l�́A�f�X�g���N�^��  m_pCDcdGrid �ɕ��A���܂��B
+	  	コンストラクタの時点での、 m_pCDcdGrid の FixafterColumnNumber を
+	  	保持します。
+	  	この値は、デストラクタで  m_pCDcdGrid に復帰します。
 	 */
 	int m_iYFixafterColumnNumberSid ;
 
@@ -214,20 +214,20 @@ class CaDcdGrid_PageSelector
 	
 ///@}
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	   @param pCDcdGrid [in]
-	  	������s�� CDcdGrid �I�u�W�F�N�g�ł��B
-	  	���̃I�u�W�F�N�g�̔j���̐Ӗ��̓N���X���[�U�[�ɂ���܂��B
-	  	���̃I�u�W�F�N�g�� this ��蒷���������Ȃ��Ă͂Ȃ�܂���B
-	  	�R���X�g���N�^�Ō��܂�܂��B
+	  	印刷を行う CDcdGrid オブジェクトです。
+	  	このオブジェクトの破棄の責務はクラスユーザーにあります。
+	  	このオブジェクトは this より長く生存しなくてはなりません。
+	  	コンストラクタで決まります。
 	   @param pIfDcdTarget [in]
-	  	����^����v���r���[��ʂ� IfDcdTarget �I�u�W�F�N�g�B
-	  	���̃I�u�W�F�N�g�̔j���̐Ӗ��̓N���X���[�U�[�ɂ���܂��B
-	  	���̃I�u�W�F�N�g�� this ��蒷���������Ȃ��Ă͂Ȃ�܂���B
-	  	�R���X�g���N�^�Ō��܂�܂��B
+	  	印刷／印刷プレビュー画面の IfDcdTarget オブジェクト。
+	  	このオブジェクトの破棄の責務はクラスユーザーにあります。
+	  	このオブジェクトは this より長く生存しなくてはなりません。
+	  	コンストラクタで決まります。
 	 */
 	
 	CaDcdGrid_PageSelector( 
@@ -242,7 +242,7 @@ class CaDcdGrid_PageSelector
 // ********************************
  public:
 	// ********************************
-	///@name CaDcdGrid_PageSelector �֘A
+	///@name CaDcdGrid_PageSelector 関連
 	// ********************************
 	///@{
 	virtual CDcdGrid*	getCDcdGrid() ;
@@ -250,7 +250,7 @@ class CaDcdGrid_PageSelector
 	
 	///@}
 	// ********************************
-	///@name CaDcdGrid_PageSelector ����
+	///@name CaDcdGrid_PageSelector 属性
 	// ********************************
 	///@{
 	virtual void getYFixafterColumnNumber( std::deque<int>* pvalue ) ;
@@ -258,101 +258,101 @@ class CaDcdGrid_PageSelector
 
 	/**
 	  @return 
-	  	Grid �̈���ɕK�v�ȃy�[�W�́AX�����̐���Ԃ��܂��B
+	  	Grid の印刷に必要なページの、X方向の数を返します。
 	 */
 	virtual int getXPageCount() ;
 
 	/**
 	   @return 
-	  	Grid �̈���ɕK�v�ȃy�[�W�́AY�����̐���Ԃ��܂��B
+	  	Grid の印刷に必要なページの、Y方向の数を返します。
 	 */
 	virtual int getYPageCount() ;
 
 	virtual int getXPage() ;
 
 	/**
-	  	X�����̃y�[�W�ԍ����ړ����܂��B
-	  	���̊֐��́A�y�[�W�ԍ���
-	   ���킹�āA CDcdGrid �� FixafterColumnNumber ���ړ����܂��B
+	  	X方向のページ番号を移動します。
+	  	この関数は、ページ番号に
+	   合わせて、 CDcdGrid の FixafterColumnNumber を移動します。
 	   @param value [in]
-	  	�y�[�W�ԍ����w�肵�Ă��������B
-	  	���̒l�́A 0 �ȏ� getXPageCount() �����ł��B
-	  	INT_MAX �́A�Ō�̃y�[�W���w�肵�����̂Ƃ݂Ȃ��܂��B
+	  	ページ番号を指定してください。
+	  	この値は、 0 以上 getXPageCount() 未満です。
+	  	INT_MAX は、最後のページを指定したものとみなします。
 	 */
 	virtual CaDcdGrid_PageSelector& setXPage( int value ) ;
 
 	virtual int getYPage() ;
 
 	/**
-	  	X�����̃y�[�W�ԍ����ړ����܂��B
-	  	���̊֐��́A�y�[�W�ԍ���
-	   ���킹�āA CDcdGrid �� FixafterColumnNumber ���ړ����܂��B
+	  	X方向のページ番号を移動します。
+	  	この関数は、ページ番号に
+	   合わせて、 CDcdGrid の FixafterColumnNumber を移動します。
 	   @param value [in]
-	  	�y�[�W�ԍ����w�肵�Ă��������B
-	  	���̒l�́A 0 �ȏ� getYPageCount() �����ł��B
-	  	INT_MAX �́A�Ō�̃y�[�W���w�肵�����̂Ƃ݂Ȃ��܂��B
+	  	ページ番号を指定してください。
+	  	この値は、 0 以上 getYPageCount() 未満です。
+	  	INT_MAX は、最後のページを指定したものとみなします。
 	   @attention
-	  	MFC �ł̓y�[�W�ԍ��̒l�� 1 �N�_�ŕ\�����Ă��܂����A
-	  	���̃N���X�ł̓y�[�W�ԍ��� 0 �N�_�ŕ\�����܂��B
+	  	MFC ではページ番号の値は 1 起点で表現していますが、
+	  	このクラスではページ番号は 0 起点で表現します。
 	 */
 	virtual CaDcdGrid_PageSelector& setYPage( int value ) ;
 
 
 	/**
 	   @return 
-	  	Grid �̈���ɕK�v�ȃy�[�W�̐���Ԃ��܂��B
-	  	���̃y�[�W���́AX �����EY�����̃y�[�W���̐ςł��B
+	  	Grid の印刷に必要なページの数を返します。
+	  	このページ数は、X 方向・Y方向のページ数の積です。
 	 */
 	virtual int getPageCount() ;
 
 	/**
 	   @return
-	  	���ݕ\�����Ă���y�[�W�ԍ��ł��B
-	  	���̃y�[�W�ԍ��́A�w�ώZ�y�[�W�ԍ��x�ł��B
+	  	現在表示しているページ番号です。
+	  	このページ番号は、『積算ページ番号』です。
 	  
 	  	<H4>
-	  	�y�ώZ�y�[�W�ԍ��z
+	  	【積算ページ番号】
 	  	</H4>
-	  	�w�ώZ�y�[�W�ԍ��x�́A����̃y�[�W�̃y�[�W�ԍ����O�Ƃ��A
-	  	�Ȍ�͉������������Ƀy�[�W�ԍ������Z�������̂ł��B
+	  	『積算ページ番号』は、左上のページのページ番号を０とし、
+	  	以後は横書き文書順にページ番号を加算したものです。
 	  
-	  	���Ƃ��΁AX�����̃y�[�W�����R�AY�����̃y�[�W�����S�̃O���b�h�̏ꍇ�A
+	  	たとえば、X方向のページ数が３、Y方向のページ数が４のグリッドの場合、
 	  
-	  	- X�����y�[�W�ԍ�=0,Y�����y�[�W�ԍ�=0 �̐ώZ�y�[�W�ԍ� = 0 
-	  	- X�����y�[�W�ԍ�=1,Y�����y�[�W�ԍ�=0 �̐ώZ�y�[�W�ԍ� = 1 
-	  	- X�����y�[�W�ԍ�=2,Y�����y�[�W�ԍ�=0 �̐ώZ�y�[�W�ԍ� = 2 
-	  	- X�����y�[�W�ԍ�=0,Y�����y�[�W�ԍ�=1 �̐ώZ�y�[�W�ԍ� = 3 
-	  	- X�����y�[�W�ԍ�=1,Y�����y�[�W�ԍ�=1 �̐ώZ�y�[�W�ԍ� = 4 
+	  	- X方向ページ番号=0,Y方向ページ番号=0 の積算ページ番号 = 0 
+	  	- X方向ページ番号=1,Y方向ページ番号=0 の積算ページ番号 = 1 
+	  	- X方向ページ番号=2,Y方向ページ番号=0 の積算ページ番号 = 2 
+	  	- X方向ページ番号=0,Y方向ページ番号=1 の積算ページ番号 = 3 
+	  	- X方向ページ番号=1,Y方向ページ番号=1 の積算ページ番号 = 4 
 	  
-	  	�ƂȂ�܂��B
+	  	となります。
 	  
-	  	�l�͈̔͂́A 0 �ȏ� getPageCont() �����ł��B
+	  	値の範囲は、 0 以上 getPageCont() 未満です。
 	   @attention
-	  	MFC �ł̓y�[�W�ԍ��̒l�� 1 �N�_�ŕ\�����Ă��܂����A
-	  	���̃N���X�ł̓y�[�W�ԍ��� 0 �N�_�ŕ\�����܂��B
+	  	MFC ではページ番号の値は 1 起点で表現していますが、
+	  	このクラスではページ番号は 0 起点で表現します。
 	 */
 	virtual int getPage() ;
 
 
 	/**
-	  	�w�ώZ�y�[�W�ԍ��x���w�肵�܂��B
+	  	『積算ページ番号』を指定します。
 	  	@param iPage [in]
-	  	�w�ώZ�y�[�W�ԍ��x���w�肵�Ă��������B
-	  	�l�͈̔͂́A 0 �ȏ� getPageCont() �����ł��B
-	  	�A���AINT_MAX ���w�肷��ƁA�ŏI�y�[�W���w�肵�����ƂɂȂ�܂��B
+	  	『積算ページ番号』を指定してください。
+	  	値の範囲は、 0 以上 getPageCont() 未満です。
+	  	但し、INT_MAX を指定すると、最終ページを指定したことになります。
 	 */
 	virtual CaDcdGrid_PageSelector& setPage( int value ) ;
 	
 	///@}
 	// ********************************
-	///@name CaDcdGrid_PageSelector ����
+	///@name CaDcdGrid_PageSelector 操作
 	// ********************************
 	///@{
 	/**
-	  	CDcdGrid �́Am_iPage �Ŏw�肳��Ă���y�[�W���A
-	  	IfDcdTarget �ɏo�͂��܂��B
+	  	CDcdGrid の、m_iPage で指定されているページを、
+	  	IfDcdTarget に出力します。
 	   @return
-	  	�`����s�����ꍇ�͐^�E���̗̈�ւ̕`�悪�ł��Ȃ������ꍇ�͋U�ł��B 
+	  	描画を行った場合は真・この領域への描画ができなかった場合は偽です。 
 	 */
 	virtual bool DcDraw() ;
 	///@}

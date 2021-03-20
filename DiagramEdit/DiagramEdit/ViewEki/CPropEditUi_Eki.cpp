@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñŽÔŽž•\‚ð‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ð•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ðAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éðŒ‚Ì‰º‚ÅÄ”Ð•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ðŠè‚Á‚Ä”Ð•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚ÉŽ¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶Ý
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ð‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ðˆê•” Žó‚¯Žæ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µŽó‚¯Žæ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ð
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ð 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼ŽÒ‚ðŠÜ‚ÞŒ‹‡’˜ì•¨‚ð”Ð•z‚·‚é‹–‰Â‚ð—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚ÅŽg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ð‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ð‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«Ý‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ðÝ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOð€‚ð
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸Žãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 // ****************************************************************
 //	$Id: CPropEditUi_Eki.cpp 357 2016-08-18 16:59:16Z okm $
@@ -74,36 +74,36 @@ namespace ViewEki {
 
 
 	// ********************************
-	//@name ƒGƒ‰[ƒƒbƒZ[ƒW
+	//@name ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 	// ********************************
-	/// ‰w–¼‚ª’·‚·‚¬‚Ü‚·
+	/// é§…åãŒé•·ã™ãŽã¾ã™
 const char* const CPropEditUi_Eki::ERRMSG_EKIMEI_TOO_LONG = "Ekimei is too long(Limit is 58 characters)." ;
 	
 
 //	// ================================
-//	//@name ‰º¿ŠÖ”
+//	//@name ä¸‹è«‹é–¢æ•°
 //	// ================================
 //
 //void CPropEditUi_Eki::UiDataFromTarget( 
 //		UIDATA* pUiData , 
 //		const CentDedEki* pTarget ) 
 //{
-//	// ‰w–¼ 
+//	// é§…å 
 //	pUiData->strEkimei = pTarget->getEkimei() ;
 //
-//	// ‰wŽžŒ`Ž® 
+//	// é§…æ™‚åˆ»å½¢å¼ 
 //	pUiData->iEkijikokukeisiki = (int)pTarget->getEkijikokukeisiki() ;
 //	
-//	// ‰w‹K–Í 
+//	// é§…è¦æ¨¡ 
 //	pUiData->iEkikibo = (int)pTarget->getEkikibo() ;
 //
-//	// ‹«ŠEü‚ ‚è 
+//	// å¢ƒç•Œç·šã‚ã‚Š 
 //	pUiData->iKyoukaisen = (int)pTarget->getKyoukaisen() ;
 //
-//	// ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦i‰º‚èj 
+//	// ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸‹ã‚Šï¼‰ 
 //	pUiData->iDiagramRessyajouhouHyoujiKudari = (int)pTarget->getDiagramRessyajouhouHyoujiKudari() ;
 //
-//	// ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦iã‚èj 
+//	// ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸Šã‚Šï¼‰ 
 //	pUiData->iDiagramRessyajouhouHyoujiNobori = (int)pTarget->getDiagramRessyajouhouHyoujiNobori() ;
 //
 //}
@@ -114,14 +114,14 @@ const char* const CPropEditUi_Eki::ERRMSG_EKIMEI_TOO_LONG = "Ekimei is too long(
 //		CentDedEki* pTarget  ) 
 //{
 //	int iRv = 0 ;
-//	// ‰w–¼ 
+//	// é§…å 
 //	if ( iRv >= 0 
 //		&& aUiDataPrev.strEkimei != pUiData->strEkimei )
 //	{
 //		pTarget->setEkimei( pUiData->strEkimei ) ;
 //	}
 //
-//	// ‰wŽžŒ`Ž® 
+//	// é§…æ™‚åˆ»å½¢å¼ 
 //	if ( iRv >= 0 
 //		&& aUiDataPrev.iEkijikokukeisiki 
 //			!= aUiDataModified.iEkijikokukeisiki )
@@ -129,14 +129,14 @@ const char* const CPropEditUi_Eki::ERRMSG_EKIMEI_TOO_LONG = "Ekimei is too long(
 //		pTarget->setEkijikokukeisiki( 
 //			(CentDedEki::EEkijikokukeisiki)aUiDataModified.iEkijikokukeisiki ) ;
 //	}
-//	// ‰w‹K–Í 
+//	// é§…è¦æ¨¡ 
 //	if ( iRv >= 0 
 //		&& aUiDataPrev.iEkikibo != aUiDataModified.iEkikibo )
 //	{
 //		pTarget->setEkikibo( (CentDedEki::EEkikibo)aUiDataModified.iEkikibo ) ;
 //	}
 //
-//	// ‹«ŠEü‚ ‚è 
+//	// å¢ƒç•Œç·šã‚ã‚Š 
 //	if ( iRv >= 0 
 //		&& aUiDataPrev.iKyoukaisen 
 //			!= aUiDataModified.iKyoukaisen )
@@ -144,7 +144,7 @@ const char* const CPropEditUi_Eki::ERRMSG_EKIMEI_TOO_LONG = "Ekimei is too long(
 //		pTarget->setKyoukaisen( aUiDataModified.iKyoukaisen != 0 );
 //	}
 //
-//	// ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦i‰º‚èj 
+//	// ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸‹ã‚Šï¼‰ 
 //	if ( iRv >= 0 
 //		&& aUiDataPrev.iDiagramRessyajouhouHyoujiKudari
 //			!= aUiDataModified.iDiagramRessyajouhouHyoujiKudari )
@@ -153,7 +153,7 @@ const char* const CPropEditUi_Eki::ERRMSG_EKIMEI_TOO_LONG = "Ekimei is too long(
 //			(CentDedEki::EDiagramRessyajouhouHyouji)aUiDataModified.iDiagramRessyajouhouHyoujiKudari ) ;
 //	}
 //
-//	// ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦iã‚èj 
+//	// ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸Šã‚Šï¼‰ 
 //	if ( iRv >= 0 
 //		&& aUiDataPrev.iDiagramRessyajouhouHyoujiNobori 
 //			!= aUiDataModified.iDiagramRessyajouhouHyoujiNobori )
@@ -165,14 +165,14 @@ const char* const CPropEditUi_Eki::ERRMSG_EKIMEI_TOO_LONG = "Ekimei is too long(
 //	return iRv ;
 //}
 	// ================================
-	//	ƒI[ƒo[ƒ‰ƒCƒg‚Ì•K—v‚Èƒƒ\ƒbƒh1-Target‚ÉˆË‘¶‚·‚éˆ—
+	//	ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒˆã®å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰1-Targetã«ä¾å­˜ã™ã‚‹å‡¦ç†
 	// ================================
 void CPropEditUi_Eki::UiDataFromTarget( UIDATA* pUiData ) 
 {
 	for ( int i = 0 ; i < m_pTarget->size() ; i ++ )
 	{
 		const CentDedEki* pTarget = m_pTarget->get( i ) ; 
-		// ‰w–¼ 
+		// é§…å 
 		if ( i == 0 )
 		{
 			pUiData->strEkimei = pTarget->getEkimei() ;
@@ -182,54 +182,54 @@ void CPropEditUi_Eki::UiDataFromTarget( UIDATA* pUiData )
 			pUiData->strEkimei = "" ;
 		}
 
-		// ‰wŽžŒ`Ž® 
+		// é§…æ™‚åˆ»å½¢å¼ 
 		if ( i == 0 )
 		{
 			pUiData->iEkijikokukeisiki = (int)pTarget->getEkijikokukeisiki() ;
 		}
 		else if ( pUiData->iEkijikokukeisiki != (int)pTarget->getEkijikokukeisiki() )
 		{
-			pUiData->iEkijikokukeisiki = -1 ;	//-1 : •s’è
+			pUiData->iEkijikokukeisiki = -1 ;	//-1 : ä¸å®š
 		}
-		// ‰w‹K–Í 
+		// é§…è¦æ¨¡ 
 		if ( i == 0 )
 		{
 			pUiData->iEkikibo = (int)pTarget->getEkikibo() ;
 		}
 		else if ( pUiData->iEkikibo != (int)pTarget->getEkikibo() )
 		{
-			pUiData->iEkikibo = -1 ;	//	•s’è
+			pUiData->iEkikibo = -1 ;	//	ä¸å®š
 		}
-		// ‹«ŠEü‚ ‚è 
+		// å¢ƒç•Œç·šã‚ã‚Š 
 		if ( i == 0 )
 		{
 			pUiData->iKyoukaisen = (int)pTarget->getKyoukaisen() ;
 		}
 		else if ( pUiData->iKyoukaisen != (int)pTarget->getKyoukaisen() )
 		{
-			pUiData->iKyoukaisen = -1 ;	// •s’è
+			pUiData->iKyoukaisen = -1 ;	// ä¸å®š
 		}
-		// ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦i‰º‚èj
+		// ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸‹ã‚Šï¼‰
 		if ( i == 0 )
 		{
 			pUiData->iDiagramRessyajouhouHyoujiKudari = (int)pTarget->getDiagramRessyajouhouHyoujiKudari() ;
 		}
 		else if ( pUiData->iDiagramRessyajouhouHyoujiKudari != (int)pTarget->getDiagramRessyajouhouHyoujiKudari() )
 		{
-			pUiData->iDiagramRessyajouhouHyoujiKudari = -1 ;	//-1: •s’è
+			pUiData->iDiagramRessyajouhouHyoujiKudari = -1 ;	//-1: ä¸å®š
 		}
-		// ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦iã‚èj 
+		// ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸Šã‚Šï¼‰ 
 		if ( i == 0 )
 		{
 			pUiData->iDiagramRessyajouhouHyoujiNobori = (int)pTarget->getDiagramRessyajouhouHyoujiNobori() ;
 		}
 		else if ( pUiData->iDiagramRessyajouhouHyoujiNobori != (int)pTarget->getDiagramRessyajouhouHyoujiNobori() )
 		{
-			pUiData->iDiagramRessyajouhouHyoujiNobori = -1 ;	// •s’è
+			pUiData->iDiagramRessyajouhouHyoujiNobori = -1 ;	// ä¸å®š
 		}
 	}
 
-	// [‰wŽž‚ð‰wŽžŒ`Ž®‚Å³‹K‰»]‚ÌÝ’è
+	// [é§…æ™‚åˆ»ã‚’é§…æ™‚åˆ»å½¢å¼ã§æ­£è¦åŒ–]ã®è¨­å®š
 	pUiData->bAdjustByEkijikokukeisiki = *m_pbAdjustByEkijikokukeisiki ;
 }
 	
@@ -238,44 +238,44 @@ void CPropEditUi_Eki::AdjustUiData(
 		const UIDATA* pUiDataPrev , 
 		bool bStartEdit )
 {
-	/* ‰w–¼ */
+	/* é§…å */
 	if ( bStartEdit || pUiDataPrev->strEkimei != pUiData->strEkimei)
 	{
-		// pUiData->ƒƒ“ƒo[–¼ ‚Ì³‹K‰»‚ðs‚¤ƒR[ƒhB
+		// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®æ­£è¦åŒ–ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 	}
-	/* ‰wŽžŒ`Ž® */
+	/* é§…æ™‚åˆ»å½¢å¼ */
 	if ( bStartEdit || pUiDataPrev->iEkijikokukeisiki != pUiData->iEkijikokukeisiki)
 	{
-		// pUiData->ƒƒ“ƒo[–¼ ‚Ì³‹K‰»‚ðs‚¤ƒR[ƒhB
+		// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®æ­£è¦åŒ–ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 	}
-	/* ‰w‹K–Í */
+	/* é§…è¦æ¨¡ */
 	if ( bStartEdit || pUiDataPrev->iEkikibo != pUiData->iEkikibo)
 	{
-		// pUiData->ƒƒ“ƒo[–¼ ‚Ì³‹K‰»‚ðs‚¤ƒR[ƒhB
+		// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®æ­£è¦åŒ–ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 	}
 
-	/* ‹«ŠEü‚ ‚è */
+	/* å¢ƒç•Œç·šã‚ã‚Š */
 	if ( bStartEdit || pUiDataPrev->iKyoukaisen != pUiData->iKyoukaisen)
 	{
-		// pUiData->ƒƒ“ƒo[–¼ ‚Ì³‹K‰»‚ðs‚¤ƒR[ƒhB
+		// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®æ­£è¦åŒ–ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 	}
 
-	/* ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦i‰º‚èj */
+	/* ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸‹ã‚Šï¼‰ */
 	if ( bStartEdit || pUiDataPrev->iDiagramRessyajouhouHyoujiKudari != pUiData->iDiagramRessyajouhouHyoujiKudari)
 	{
-		// pUiData->ƒƒ“ƒo[–¼ ‚Ì³‹K‰»‚ðs‚¤ƒR[ƒhB
+		// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®æ­£è¦åŒ–ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 	}
 
-	/* ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦iã‚èj */
+	/* ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸Šã‚Šï¼‰ */
 	if ( bStartEdit || pUiDataPrev->iDiagramRessyajouhouHyoujiNobori != pUiData->iDiagramRessyajouhouHyoujiNobori)
 	{
-		// pUiData->ƒƒ“ƒo[–¼ ‚Ì³‹K‰»‚ðs‚¤ƒR[ƒhB
+		// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®æ­£è¦åŒ–ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 	}
 
-	/*	[‰wŽž‚ð‰wŽžŒ`Ž®‚Å³‹K‰»]‚ÌÝ’è‚Å‚·B*/
+	/*	[é§…æ™‚åˆ»ã‚’é§…æ™‚åˆ»å½¢å¼ã§æ­£è¦åŒ–]ã®è¨­å®šã§ã™ã€‚*/
 	if ( bStartEdit || pUiDataPrev->bAdjustByEkijikokukeisiki != pUiData->bAdjustByEkijikokukeisiki)
 	{
-		// pUiData->ƒƒ“ƒo[–¼ ‚Ì³‹K‰»‚ðs‚¤ƒR[ƒhB
+		// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®æ­£è¦åŒ–ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 	}
 
 }
@@ -286,7 +286,7 @@ int CPropEditUi_Eki::CheckUiData(
 		const UIDATA* pUiDataStartEdit ) 
 {
 	int iRv = 0 ; 
-	/* ‰w–¼ */
+	/* é§…å */
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem || pUiDataStartEdit->strEkimei != pUiData->strEkimei)
@@ -295,56 +295,56 @@ int CPropEditUi_Eki::CheckUiData(
 			{
 				ShowError( ERRMSG_EKIMEI_TOO_LONG ) ;
 				SetFocus( offsetof( UIDATA , strEkimei )) ;
-				iRv = -1 ;	//	‰w–¼‚ª’·‚·‚¬‚Ü‚·B
+				iRv = -1 ;	//	é§…åãŒé•·ã™ãŽã¾ã™ã€‚
 			}
 		}
 	}
-	/* ‰wŽžŒ`Ž® */
+	/* é§…æ™‚åˆ»å½¢å¼ */
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem || pUiDataStartEdit->iEkijikokukeisiki != pUiData->iEkijikokukeisiki)
 		{
-			// pUiData->ƒƒ“ƒo[–¼ ‚ÌƒGƒ‰[ƒ`ƒFƒbƒN‚ðs‚¤ƒR[ƒhB
+			// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®ã‚¨ãƒ©ãƒ¼ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 		}
 	}
-	/* ‰w‹K–Í */
+	/* é§…è¦æ¨¡ */
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem || pUiDataStartEdit->iEkikibo != pUiData->iEkikibo)
 		{
-			// pUiData->ƒƒ“ƒo[–¼ ‚ÌƒGƒ‰[ƒ`ƒFƒbƒN‚ðs‚¤ƒR[ƒhB
+			// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®ã‚¨ãƒ©ãƒ¼ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 		}
 	}
-	/* ‹«ŠEü‚ ‚è */
+	/* å¢ƒç•Œç·šã‚ã‚Š */
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem || pUiDataStartEdit->iKyoukaisen != pUiData->iKyoukaisen)
 		{
-			// pUiData->ƒƒ“ƒo[–¼ ‚ÌƒGƒ‰[ƒ`ƒFƒbƒN‚ðs‚¤ƒR[ƒhB
+			// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®ã‚¨ãƒ©ãƒ¼ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 		}
 	}
-	/* ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦i‰º‚èj */
+	/* ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸‹ã‚Šï¼‰ */
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem || pUiDataStartEdit->iDiagramRessyajouhouHyoujiKudari != pUiData->iDiagramRessyajouhouHyoujiKudari)
 		{
-			// pUiData->ƒƒ“ƒo[–¼ ‚ÌƒGƒ‰[ƒ`ƒFƒbƒN‚ðs‚¤ƒR[ƒhB
+			// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®ã‚¨ãƒ©ãƒ¼ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 		}
 	}
-	/* ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦iã‚èj */
+	/* ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸Šã‚Šï¼‰ */
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem || pUiDataStartEdit->iDiagramRessyajouhouHyoujiNobori != pUiData->iDiagramRessyajouhouHyoujiNobori)
 		{
-			// pUiData->ƒƒ“ƒo[–¼ ‚ÌƒGƒ‰[ƒ`ƒFƒbƒN‚ðs‚¤ƒR[ƒhB
+			// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®ã‚¨ãƒ©ãƒ¼ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 		}
 	}
-	/*	[‰wŽž‚ð‰wŽžŒ`Ž®‚Å³‹K‰»]‚ÌÝ’è‚Å‚·B*/
+	/*	[é§…æ™‚åˆ»ã‚’é§…æ™‚åˆ»å½¢å¼ã§æ­£è¦åŒ–]ã®è¨­å®šã§ã™ã€‚*/
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem || pUiDataStartEdit->bAdjustByEkijikokukeisiki != pUiData->bAdjustByEkijikokukeisiki)
 		{
-			// pUiData->ƒƒ“ƒo[–¼ ‚ÌƒGƒ‰[ƒ`ƒFƒbƒN‚ðs‚¤ƒR[ƒhB
+			// pUiData->ãƒ¡ãƒ³ãƒãƒ¼å ã®ã‚¨ãƒ©ãƒ¼ãƒã‚§ãƒƒã‚¯ã‚’è¡Œã†ã‚³ãƒ¼ãƒ‰ã€‚
 		}
 	}
 	return iRv ;
@@ -362,46 +362,46 @@ int CPropEditUi_Eki::UiDataToTarget(
 	for ( int i = 0 ; iRv >= 0 && i < m_pTarget->size() ; i ++ )
 	{
 		CentDedEki* pTarget= m_pTarget->get( i ) ; 
-		/* ‰w–¼ */
+		/* é§…å */
 		if ( bNewItem || pUiDataStartEdit->strEkimei != pUiData->strEkimei)
 		{
 			pTarget->setEkimei( pUiData->strEkimei ) ;
 		}
-		/* ‰wŽžŒ`Ž® */
+		/* é§…æ™‚åˆ»å½¢å¼ */
 		if ( bNewItem || pUiDataStartEdit->iEkijikokukeisiki != pUiData->iEkijikokukeisiki)
 		{
 			pTarget->setEkijikokukeisiki( 
 				(CentDedEki::EEkijikokukeisiki)pUiData->iEkijikokukeisiki ) ;
 		}
-		/* ‰w‹K–Í */
+		/* é§…è¦æ¨¡ */
 		if ( bNewItem || pUiDataStartEdit->iEkikibo != pUiData->iEkikibo)
 		{
 			pTarget->setEkikibo( (CentDedEki::EEkikibo)pUiData->iEkikibo ) ;
 		}
-		/* ‹«ŠEü‚ ‚è */
+		/* å¢ƒç•Œç·šã‚ã‚Š */
 		if ( bNewItem || pUiDataStartEdit->iKyoukaisen != pUiData->iKyoukaisen)
 		{
 			pTarget->setKyoukaisen( pUiData->iKyoukaisen != 0 );
 		}
-		/* ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦i‰º‚èj */
+		/* ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸‹ã‚Šï¼‰ */
 		if ( bNewItem || pUiDataStartEdit->iDiagramRessyajouhouHyoujiKudari != pUiData->iDiagramRessyajouhouHyoujiKudari)
 		{
 			pTarget->setDiagramRessyajouhouHyoujiKudari(
 				(CentDedEki::EDiagramRessyajouhouHyouji)pUiData->iDiagramRessyajouhouHyoujiKudari ) ;
 		}
-		/* ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ•\Ž¦iã‚èj */
+		/* ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±è¡¨ç¤ºï¼ˆä¸Šã‚Šï¼‰ */
 		if ( bNewItem || pUiDataStartEdit->iDiagramRessyajouhouHyoujiNobori != pUiData->iDiagramRessyajouhouHyoujiNobori)
 		{
 			pTarget->setDiagramRessyajouhouHyoujiNobori(
 				(CentDedEki::EDiagramRessyajouhouHyouji)pUiData->iDiagramRessyajouhouHyoujiNobori ) ;
 		}
 	}
-	/*	[‰wŽž‚ð‰wŽžŒ`Ž®‚Å³‹K‰»]‚ÌÝ’è‚Å‚·B*/
+	/*	[é§…æ™‚åˆ»ã‚’é§…æ™‚åˆ»å½¢å¼ã§æ­£è¦åŒ–]ã®è¨­å®šã§ã™ã€‚*/
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem || pUiDataStartEdit->bAdjustByEkijikokukeisiki != pUiData->bAdjustByEkijikokukeisiki)
 		{
-			// [‰wŽž‚ð‰wŽžŒ`Ž®‚Å³‹K‰»]‚ÌÝ’è
+			// [é§…æ™‚åˆ»ã‚’é§…æ™‚åˆ»å½¢å¼ã§æ­£è¦åŒ–]ã®è¨­å®š
 			*m_pbAdjustByEkijikokukeisiki = pUiData->bAdjustByEkijikokukeisiki ;
 		}
 	}
@@ -410,7 +410,7 @@ int CPropEditUi_Eki::UiDataToTarget(
 
 
 	// ********************************
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	// ********************************
 CPropEditUi_Eki::CPropEditUi_Eki( 
 	bool bNewItem , 

@@ -3,25 +3,25 @@
 <>--------------------------------
 dcd0127.lzh
 	>2003
-	>DcDraw‚ÌÄŠJ‚Å‚·B
-	>Ou‚ð‹ìŽg‚µ‚ÄA—D‰ë‚ÈƒIƒuƒWƒFƒNƒgŽwŒü‚ð–ÚŽw‚µ‚Ü‚·B
-	>‚Ü‚¾‚Ü‚¾A“®‚­ƒŒƒxƒ‹‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
+	>DcDrawã®å†é–‹ã§ã™ã€‚
+	>Ouã‚’é§†ä½¿ã—ã¦ã€å„ªé›…ãªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆæŒ‡å‘ã‚’ç›®æŒ‡ã—ã¾ã™ã€‚
+	>ã¾ã ã¾ã ã€å‹•ããƒ¬ãƒ™ãƒ«ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
 dcd0211.lzh
-	>DcDraw‚ÌÄŠJ‚Å‚·B
-	>DcDraw\monolog\DcDrawƒNƒ‰ƒX}_2.mdrw
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>DcDrawã®å†é–‹ã§ã™ã€‚
+	>DcDraw\monolog\DcDrawã‚¯ãƒ©ã‚¹å›³_2.mdrw
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd0222.lzh
-	>ŒÃ‚¢ƒNƒ‰ƒX}‚ðkyuusi‚µ‚Ü‚µ‚½B
+	>å¤ã„ã‚¯ãƒ©ã‚¹å›³ã‚’kyuusiã—ã¾ã—ãŸã€‚
 
 dcd02221.lzh
-	>ƒNƒ‰ƒX}ã‚Åd•¡‚µ‚½ƒNƒ‰ƒX‚ð‡—‰»‚µ‚Ü‚µ‚½B
+	>ã‚¯ãƒ©ã‚¹å›³ä¸Šã§é‡è¤‡ã—ãŸã‚¯ãƒ©ã‚¹ã‚’åˆç†åŒ–ã—ã¾ã—ãŸã€‚
 
 dcd1122.lzh
-	>‚³‚ç‚ÉAkyuusi‚É‚µ‚Ü‚µ‚½B
+	>ã•ã‚‰ã«ã€kyuusiã«ã—ã¾ã—ãŸã€‚
 	>C01_CdDcd\cwndbase
-	>“®ì‚µ‚Ü‚µ‚½B
+	>å‹•ä½œã—ã¾ã—ãŸã€‚
 
 dcd1126.lzh
 	>C02_CdDcd
@@ -29,104 +29,104 @@ dcd1126.lzh
 dcd11261.lzh
 	>Libs\DcDraw\C02_CdDcd\CdDcdJikken
 	>C02_CdDcd
-	>‚ª“®ì‚µ‚Ü‚µ‚½B
+	>ãŒå‹•ä½œã—ã¾ã—ãŸã€‚
 
 dcd1201.lzh
 	>Libs\DcDraw\C02_CdDcd\CdDcdJikken
 	>C02_CdDcd
-	>‚ÉACdDcdSizeXy‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã«ã€CdDcdSizeXyã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd1207.lzh
 	>C01_CdDcLogicalSize\cwndbase\CConverter_WinGdi
 
 dcd1221.lzh
 	>C03_IfDcDraw\cwndbase\
-	>‚ª“®ì‚µ‚Ü‚µ‚½B
+	>ãŒå‹•ä½œã—ã¾ã—ãŸã€‚
 
 dcd12211.lzh
 	>C03_IfDcDraw\cwndbase\
-	>‚ÌDcdType.h‚ðAdoxygen‘Î‰ž‚É‚µ‚Ü‚µ‚½B
+	>ã®DcdType.hã‚’ã€doxygenå¯¾å¿œã«ã—ã¾ã—ãŸã€‚
 
 dcd1223.lzh
 	>C03_IfDcDraw\cwndbase\
-	>CDcdTargetItemPosition‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>CDcdTargetItemPositionã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd1311.lzh
 	>2004
 	>C04_IfDcDraw\cwndbase\
-	>CDcdText,CDcdLine,CDcdFillrect‚ª‚Å‚«‚Ü‚µ‚½B
+	>CDcdText,CDcdLine,CDcdFillrectãŒã§ãã¾ã—ãŸã€‚
 
 dcd13111.lzh
 	>C05_Dcd_BitmapCache\cwndbase
-	>ƒrƒbƒgƒ}ƒbƒv‚ÉƒLƒƒƒbƒVƒ…‚µ‚Ä•\Ž¦‚µ‚Ü‚·B
+	>ãƒ“ãƒƒãƒˆãƒžãƒƒãƒ—ã«ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã—ã¦è¡¨ç¤ºã—ã¾ã™ã€‚
 
 dcd1318.lzh
 	>C01_DcDraw\C06_DcdFillrectText\cwndbase\RES\MFCSTD.RC2
 
 dcd1321.lzh
 	>C01_DcDraw\C06_DcdFillrectText\
-	>CDcLogicalUnitSIzeX‚ÆY‚ð•Êƒtƒ@ƒCƒ‹‚É•ª—£‚µ‚Ü‚µ‚½B
+	>CDcLogicalUnitSIzeXã¨Yã‚’åˆ¥ãƒ•ã‚¡ã‚¤ãƒ«ã«åˆ†é›¢ã—ã¾ã—ãŸã€‚
 
 dcd1330.lzh
 	>C01_DcDraw\C07_DcdFillrectFrameText
 
 dcd1405.lzh
 	>C01_DcDraw\C07_DcdFillRectangleText
-	>‚ª“®ì‚µ‚Ü‚µ‚½B
+	>ãŒå‹•ä½œã—ã¾ã—ãŸã€‚
 
 dcd1408.lzh
 	>C01_DcDraw\C08_CDcdTargetCompatibleBitmap
-	>‚ª“®ì‚µ‚Ü‚µ‚½B
+	>ãŒå‹•ä½œã—ã¾ã—ãŸã€‚
 
 dcd14081.lzh
 	>C01_DcDraw\C08_CDcdTargetCompatibleBitmap
-	>ƒyƒ“‚Ì‘®«‚ð•Ï‰»‚³‚¹‚Ä‚¢‚Ü‚·B
+	>ãƒšãƒ³ã®å±žæ€§ã‚’å¤‰åŒ–ã•ã›ã¦ã„ã¾ã™ã€‚
 
 dcd14082.lzh
 	>C01_DcDraw\
-	>ƒ‰ƒCƒuƒ‰ƒŠŒ`Ž®‚ð“ˆê‚µ‚Ü‚µ‚½B
+	>ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå½¢å¼ã‚’çµ±ä¸€ã—ã¾ã—ãŸã€‚
 
 dcd14083.lzh
 	>DcDraw\
-	>ƒ‰ƒCƒuƒ‰ƒŠ‚Æ‚µ‚Ä‚Ì‘ÌÙ‚ðŒ`¬‚µ‚Ü‚µ‚½B
+	>ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã¨ã—ã¦ã®ä½“è£ã‚’å½¢æˆã—ã¾ã—ãŸã€‚
 
 dcd1411.lzh
-	>DcDraw\sekkei‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>DcDraw\sekkeiã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd14111.lzh
 	>DcdGrid\sekkei\CDcdGrid_class.mdrw
 
 dcd14112.lzh
 	>DcdGrid\C01_DcdCell\
-	>‚ðŠJŽn‚µ‚Ü‚µ‚½B
+	>ã‚’é–‹å§‹ã—ã¾ã—ãŸã€‚
 
 dcd1416.lzh
 	>DcdGrid\C01_DcdCell\
-	>CDcdGridColumn‚ðŠJŽn‚µ‚Ü‚µ‚½B
+	>CDcdGridColumnã‚’é–‹å§‹ã—ã¾ã—ãŸã€‚
 
 dcd1417.lzh
 	>DcdGrid\C01_DcdCell\
-	>CDcdGrid‚ðŠJŽn‚µ‚Ü‚µ‚½B
+	>CDcdGridã‚’é–‹å§‹ã—ã¾ã—ãŸã€‚
 
 dcd1422.lzh
 	>DcdGrid\C01_DcdCell\
-	>CDcdGridì¬’†EƒRƒ“ƒeƒi‘€ì‚ÍƒR[ƒfƒBƒ“ƒOÏ‚ÝB
+	>CDcdGridä½œæˆä¸­ãƒ»ã‚³ãƒ³ãƒ†ãƒŠæ“ä½œã¯ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°æ¸ˆã¿ã€‚
 
 dcd1423.lzh
 	>DcdGrid\C01_DcdCell\
-	>CDcdGrid‚ÌˆÊ’u’²®ŠÖ”‚ðƒR[ƒfƒBƒ“ƒOB
+	>CDcdGridã®ä½ç½®èª¿æ•´é–¢æ•°ã‚’ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã€‚
 
 dcd1424.lzh
 	>DcdGrid\C01_DcdCell\
-	>Grid‚ÌŒrü•`‰æ‚ª“®ì‚µŽn‚ß‚Ü‚µ‚½B
+	>Gridã®ç½«ç·šæç”»ãŒå‹•ä½œã—å§‹ã‚ã¾ã—ãŸã€‚
 
 dcd1425.lzh
 	>DcdGrid\C01_DcdCell\
-	>Grid‚ÌƒZƒ‹•`‰æ‚ª“®ì‚µŽn‚ß‚Ü‚µ‚½B
+	>Gridã®ã‚»ãƒ«æç”»ãŒå‹•ä½œã—å§‹ã‚ã¾ã—ãŸã€‚
 
 dcd1426.lzh
 	>DcdGrid\C01_DcdCell\
-	>Grid‚ÌƒZƒ‹‚Ìíœ‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+	>Gridã®ã‚»ãƒ«ã®å‰Šé™¤ãŒã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 
 dcd1429.lzh
 	>DcdGrid\C01_DcdCell\
@@ -135,103 +135,103 @@ dcd1429.lzh
 	>DcDraw\kyuusi\CDcdFillrectText.h
 	>DcDraw\kyuusi\CDcdRectangleText.cpp
 	>DcDraw\kyuusi\CDcdRectangleText.h
-	>‹xŽ~ˆµ‚¢‚É‚µ‚Ü‚µ‚½B
+	>ä¼‘æ­¢æ‰±ã„ã«ã—ã¾ã—ãŸã€‚
 
 
 dcd14291.lzh
-	>ƒTƒ“ƒvƒ‹‚ðjikkenƒfƒBƒŒƒNƒgƒŠ‚ÉˆÚ‚µ‚Ü‚µ‚½B
+	>ã‚µãƒ³ãƒ—ãƒ«ã‚’jikkenãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ç§»ã—ã¾ã—ãŸã€‚
 
 dcd1501.lzh
 	>DcdGrid\jikken\C02_Scroll\cwndbase
-	>ƒXƒNƒ[ƒ‹‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+	>ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãŒã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 
 dcd1502.lzh
 	>DcdGrid\jikken\C02_Scroll\cwndbase
-	>CDcdGrid‚ÌƒRƒƒ“ƒg‚ð•ÏX‚µ‚Ü‚µ‚½B
+	>CDcdGridã®ã‚³ãƒ¡ãƒ³ãƒˆã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
 
 dcd1510.lzh
 	>DcdGrid\jikken\C03_attach\cwndbase
-	>sE—ñEƒZƒ‹”Ô†‚ðŠeƒIƒuƒWƒFƒNƒg‚Ì‘®«‚É•ÏX‚µ‚Ü‚µ‚½B
+	>è¡Œãƒ»åˆ—ãƒ»ã‚»ãƒ«ç•ªå·ã‚’å„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å±žæ€§ã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
 
 dcd1514.lzh
 	>DcdGrid\jikken\C03_attach\cwndbase
-	>À•WŒvŽZ‚ÌƒR[ƒh‚ð•ÏX‚µ‚Ü‚µ‚½B
+	>åº§æ¨™è¨ˆç®—ã®ã‚³ãƒ¼ãƒ‰ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
 
 dcd15141.lzh
 	>DcdGrid\jikken\C03_attach\cwndbase
-	>ƒZƒ‹‚ÌŒ‹‡iƒNƒŠƒbƒv‚È‚µj‚ª‚Å‚«‚Ü‚µ‚½B
+	>ã‚»ãƒ«ã®çµåˆï¼ˆã‚¯ãƒªãƒƒãƒ—ãªã—ï¼‰ãŒã§ãã¾ã—ãŸã€‚
 
 dcd15142.lzh
-	>IfDcDraw::getInvalidateZone()‚ð
-	>IfDcDraw::getDrawableZone()‚É•ÏX
+	>IfDcDraw::getInvalidateZone()ã‚’
+	>IfDcDraw::getDrawableZone()ã«å¤‰æ›´
 	>
 	>DcdGrid\jikken\C03_attach\cwndbase
 	>CaDcdTargetItemPosition::isDrawable()
-	>‚ðVÝ‚µ‚Ü‚µ‚½B
+	>ã‚’æ–°è¨­ã—ã¾ã—ãŸã€‚
 
 dcd15143.lzh
 	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip.cpp
 	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip.h
-	>‚ðVÝ‚µ‚Ü‚µ‚½B
+	>ã‚’æ–°è¨­ã—ã¾ã—ãŸã€‚
 
 dcd1515.lzh
 	>DcDraw\CaDcdTargetItemPosition
 	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip
 	>
-	>ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø”‚Ì‡˜‚ð•ÏX‚µ‚Ü‚µ‚½B
+	>ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å¼•æ•°ã®é †åºã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
 
 dcd15151.lzh
 	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip
 	>
-	>Œ‹‡ƒZƒ‹‚ª‚Å‚«‚Ü‚µ‚½B
+	>çµåˆã‚»ãƒ«ãŒã§ãã¾ã—ãŸã€‚
 
 dcd1521.lzh
 	>DcdGrid\jikken\C03_attach\cwndbase\CaDcdTargetClip
 	>
-	>ƒRƒƒ“ƒg‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã‚³ãƒ¡ãƒ³ãƒˆã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd1908.lzh
 	>DcdGrid\jikken\C04_rename\cwndbase\
 	>
-	>DcdGrid‚Ìs->Y—ñE—ñ->X—ñ‚É
-	>–¼Ì•ÏX‚µ‚Ü‚µ‚½B
+	>DcdGridã®è¡Œ->Yåˆ—ãƒ»åˆ—->Xåˆ—ã«
+	>åç§°å¤‰æ›´ã—ã¾ã—ãŸã€‚
 
 dcd19081.lzh
 	>DcdGrid\jikken\C04_rename\cwndbase\
 	>
-	>—ñ‚ÌAƒ\[ƒX“‡‰»‚ði‚ß‚Ü‚µ‚½B
+	>åˆ—ã®ã€ã‚½ãƒ¼ã‚¹çµ±åˆåŒ–ã‚’é€²ã‚ã¾ã—ãŸã€‚
 
 dcd1910.lzh
 	>DcdGrid\jikken\C04_rename\cwndbase\
 	>
-	>Œ‹‡ƒZƒ‹‚ÌŽw’è•û–@‚ð•ÏX‚µ‚Ü‚µ‚½B
-	>CDcdGridCell‚Ì‘ã“ü‰‰ŽZŽq‚ð’†Ž~‚µ‚Ü‚µ‚½B
+	>çµåˆã‚»ãƒ«ã®æŒ‡å®šæ–¹æ³•ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
+	>CDcdGridCellã®ä»£å…¥æ¼”ç®—å­ã‚’ä¸­æ­¢ã—ã¾ã—ãŸã€‚
 
 dcd19101.lzh
 	>DcdGrid\jikken\C04_rename\cwndbase\
 	>
-	>‘ã“ü‰‰ŽZŽq‚ÌŽÀ‘•‚ð•ÏX‚µ‚Ü‚µ‚½B
+	>ä»£å…¥æ¼”ç®—å­ã®å®Ÿè£…ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
 
 dcd1917.lzh
-	>DcdGrid\sekkei\CDcdGrid_Še•”‚Ì–¼Ì.txt
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B‚½‚¾‚µA‚Ù‚Æ‚ñ‚Ç‘‚¯‚Ä‚¢‚Ü‚¹‚ñB
+	>DcdGrid\sekkei\CDcdGrid_å„éƒ¨ã®åç§°.txt
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚ãŸã ã—ã€ã»ã¨ã‚“ã©æ›¸ã‘ã¦ã„ã¾ã›ã‚“ã€‚
 	>
-	>DcDraw\CaDcdTargetClip‚ð
-	>DcdGrid‚©‚çˆÚ“®‚µ‚Ü‚µ‚½B
+	>DcDraw\CaDcdTargetClipã‚’
+	>DcdGridã‹ã‚‰ç§»å‹•ã—ã¾ã—ãŸã€‚
 
 dcd19171.lzh
 	>DcdGrid\jikken\C04_rename\cwndbase\
-	>getCell‚È‚Ç‚Ìˆø”‡‚ð
+	>getCellãªã©ã®å¼•æ•°é †ã‚’
 	>getCell(XcolumnNumber,YcolumnNumber)
-	>‚Ì‡‚É•ÏX‚µ‚Ü‚µ‚½B
-	>Cell‚Ì‘ã“ü‚ð”pŽ~‚µ‚Ü‚µ‚½B
+	>ã®é †ã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
+	>Cellã®ä»£å…¥ã‚’å»ƒæ­¢ã—ã¾ã—ãŸã€‚
 	>
 	>DcDraw\doxygen\dcdraw.dxy
 
 dcd1918.lzh
 	>DcdGrid\jikken\C04_rename\cwndbase\
-	>setCellProp->copyCellProp‚É–¼Ì•ÏX
-	>Scrolling->Overlap‚É–¼Ì•ÏX
+	>setCellProp->copyCellPropã«åç§°å¤‰æ›´
+	>Scrolling->Overlapã«åç§°å¤‰æ›´
 
 dcd2230.lzh
 	>DcdGrid\jikken\C04_rename\cwndbase\
@@ -239,78 +239,78 @@ dcd2230.lzh
 	>CdDcdGrid::getYcolumnNumberOfPos()
 	>CdDcdGrid::getXcolumnNumberOfPos()
 	>CdDcdGrid::getCellNumberOfPos()
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd2717.lzh
 	>2005
 	>
 	>DcdGrid\jikken\C05_manycell\
-	>‘å—Ê‚ÌƒZƒ‹‚ð•\Ž¦‚µ‚æ‚¤‚Æ‚µ‚½‚çA’x‚·‚¬‚ÄŽg‚¢•¨‚É‚È‚è‚Ü‚¹‚ñ
+	>å¤§é‡ã®ã‚»ãƒ«ã‚’è¡¨ç¤ºã—ã‚ˆã†ã¨ã—ãŸã‚‰ã€é…ã™ãŽã¦ä½¿ã„ç‰©ã«ãªã‚Šã¾ã›ã‚“
 
 dcd2719.lzh
 	>DcdGrid\jikken\C05_manycell\
-	>CdDcdText::getItemSize()‚ª’x‚¢‚±‚Æ‚ª•ª‚©‚è‚Ü‚µ‚½B
-	>‚µ‚©‚µA‚Ü‚¾‚Ü‚¾’x‚¢
+	>CdDcdText::getItemSize()ãŒé…ã„ã“ã¨ãŒåˆ†ã‹ã‚Šã¾ã—ãŸã€‚
+	>ã—ã‹ã—ã€ã¾ã ã¾ã é…ã„
 	>
 	>CdDcdGrid::getXcolumnsSize()
 	>CdDcdGrid::getYcolumnsSize()
-	>‚ðVÝ‚µ‚Ü‚µ‚½B
+	>ã‚’æ–°è¨­ã—ã¾ã—ãŸã€‚
 
 dcd2720.lzh
 	>DcdGrid\jikken\C05_manycell\
-	>•W€i‚S‚Q‚Oj
-	>ƒtƒHƒ“ƒg‚Ì¶¬‚È‚µi‚R‚R‚Oj
-	>ƒtƒHƒ“ƒg¶¬Eƒuƒ‰ƒV“h‚è‚±‚Þ‚È‚µi‚R‚P‚Oj
-	>ƒtƒHƒ“ƒg¶¬Eƒuƒ‰ƒV“h‚è‚±‚ÝE˜gü•`‰æ‚È‚µi‚R‚O‚Oj
-	>ƒtƒHƒ“ƒg¶¬Eƒuƒ‰ƒV“h‚è‚±‚ÝE˜gü•`‰æEƒNƒŠƒbƒsƒ“ƒO‚È‚µi‚Q‚V‚Oj
+	>æ¨™æº–ï¼ˆï¼”ï¼’ï¼ï¼‰
+	>ãƒ•ã‚©ãƒ³ãƒˆã®ç”Ÿæˆãªã—ï¼ˆï¼“ï¼“ï¼ï¼‰
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»ãƒ–ãƒ©ã‚·å¡—ã‚Šã“ã‚€ãªã—ï¼ˆï¼“ï¼‘ï¼ï¼‰
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»ãƒ–ãƒ©ã‚·å¡—ã‚Šã“ã¿ãƒ»æž ç·šæç”»ãªã—ï¼ˆï¼“ï¼ï¼ï¼‰
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»ãƒ–ãƒ©ã‚·å¡—ã‚Šã“ã¿ãƒ»æž ç·šæç”»ãƒ»ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—ï¼ˆï¼’ï¼—ï¼ï¼‰
 	>
 	>OnPaint
-	>•W€i400j
-	>ƒtƒHƒ“ƒg‚Ì¶¬‚È‚µi310j
-	>ƒtƒHƒ“ƒg¶¬Eƒuƒ‰ƒV“h‚è‚±‚Þ‚È‚µi270j
-	>ƒtƒHƒ“ƒg¶¬Eƒuƒ‰ƒV“h‚è‚±‚ÝE˜gü•`‰æ‚È‚µi270j
-	>ƒtƒHƒ“ƒg¶¬Eƒuƒ‰ƒV“h‚è‚±‚ÝE˜gü•`‰æEƒNƒŠƒbƒsƒ“ƒO‚È‚µi230j
+	>æ¨™æº–ï¼ˆ400ï¼‰
+	>ãƒ•ã‚©ãƒ³ãƒˆã®ç”Ÿæˆãªã—ï¼ˆ310ï¼‰
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»ãƒ–ãƒ©ã‚·å¡—ã‚Šã“ã‚€ãªã—ï¼ˆ270ï¼‰
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»ãƒ–ãƒ©ã‚·å¡—ã‚Šã“ã¿ãƒ»æž ç·šæç”»ãªã—ï¼ˆ270ï¼‰
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»ãƒ–ãƒ©ã‚·å¡—ã‚Šã“ã¿ãƒ»æž ç·šæç”»ãƒ»ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—ï¼ˆ230ï¼‰
 
 dcd27201.lzh
 	>DcdGrid\jikken\C05_manycell\
-	>Œ³‚É–ß‚µ‚Ü‚µ‚½B
+	>å…ƒã«æˆ»ã—ã¾ã—ãŸã€‚
 
 dcd27202.lzh
 	>DcDraw\jikken\C09_CDcdText\cwndbase\
-	>ƒtƒHƒ“ƒg¶¬‚ð–ˆ‰ñs‚í‚È‚¢
-	>ƒNƒŠƒbƒsƒ“ƒO‚È‚µ
-	>MSƒSƒVƒbƒN‚ðŽg—p
-	>‚±‚ê‚É‚æ‚Á‚ÄA‘S‰æ–Ê‚ÉuŽž‚É•`‰æ‚·‚é‚±‚Æ‚ª‚Å‚«‚é‚±‚Æ‚ª•ª‚©‚è‚Ü‚µ‚½B
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆã‚’æ¯Žå›žè¡Œã‚ãªã„
+	>ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—
+	>MSã‚´ã‚·ãƒƒã‚¯ã‚’ä½¿ç”¨
+	>ã“ã‚Œã«ã‚ˆã£ã¦ã€å…¨ç”»é¢ã«çž¬æ™‚ã«æç”»ã™ã‚‹ã“ã¨ãŒã§ãã‚‹ã“ã¨ãŒåˆ†ã‹ã‚Šã¾ã—ãŸã€‚
 
 dcd2721.lzh
 	>DcdGrid\jikken\C05_manycell\
 	>
-	>•W€(410)
-	>ƒtƒHƒ“ƒg¶¬‚È‚µ(310)
-	>ƒtƒHƒ“ƒg¶¬E“h‚è‚±‚Ý‚È‚µ(280)
-	>ƒtƒHƒ“ƒg¶¬EŒrü•`‰æE“h‚è‚±‚Ý‚È‚µ(280)
-	>ƒtƒHƒ“ƒg¶¬EŒrü•`‰æE“h‚è‚±‚ÝEƒNƒŠƒbƒsƒ“ƒO‚È‚µ(240)
-	>ƒtƒHƒ“ƒg¶¬EŒrü•`‰æE“h‚è‚±‚ÝEƒNƒŠƒbƒsƒ“ƒO‚È‚µEMSƒSƒVƒbƒN(50)
-	>Œrü•`‰æE“h‚è‚±‚ÝEƒNƒŠƒbƒsƒ“ƒO‚È‚µEMSƒSƒVƒbƒN(300)
+	>æ¨™æº–(410)
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãªã—(310)
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»å¡—ã‚Šã“ã¿ãªã—(280)
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»ç½«ç·šæç”»ãƒ»å¡—ã‚Šã“ã¿ãªã—(280)
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»ç½«ç·šæç”»ãƒ»å¡—ã‚Šã“ã¿ãƒ»ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—(240)
+	>ãƒ•ã‚©ãƒ³ãƒˆç”Ÿæˆãƒ»ç½«ç·šæç”»ãƒ»å¡—ã‚Šã“ã¿ãƒ»ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—ãƒ»MSã‚´ã‚·ãƒƒã‚¯(50)
+	>ç½«ç·šæç”»ãƒ»å¡—ã‚Šã“ã¿ãƒ»ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—ãƒ»MSã‚´ã‚·ãƒƒã‚¯(300)
 
 dcd27211.lzh
 	>DcDraw\CGdiCache.cpp
 	>DcDraw\CGdiCache.h
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 	>DcdGrid\jikken\C05_manycell\
-	>ƒNƒŠƒbƒsƒ“ƒO‚È‚µEMSƒSƒVƒbƒNEƒtƒHƒ“ƒg‚Ì‚ÝƒLƒƒƒbƒVƒ…(100)
-	>ƒNƒŠƒbƒsƒ“ƒO‚È‚µEMSƒSƒVƒbƒNEƒtƒHƒ“ƒgEƒyƒ“Eƒuƒ‰ƒV‚ÌƒLƒƒƒbƒVƒ…(90)
-	>ƒNƒŠƒbƒsƒ“ƒO‚È‚µEMSƒSƒVƒbƒNEƒtƒHƒ“ƒgEƒyƒ“Eƒuƒ‰ƒV‚ÌƒLƒƒƒbƒVƒ…E“h‚è‚±‚Ý‚È‚µ(70)
-	>ƒNƒŠƒbƒsƒ“ƒO‚È‚µEMSƒSƒVƒbƒNEƒtƒHƒ“ƒgEƒyƒ“Eƒuƒ‰ƒV‚ÌƒLƒƒƒbƒVƒ…E“h‚è‚±‚Ý‚È‚µE˜gü‚È‚µ(60)
+	>ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—ãƒ»MSã‚´ã‚·ãƒƒã‚¯ãƒ»ãƒ•ã‚©ãƒ³ãƒˆã®ã¿ã‚­ãƒ£ãƒƒã‚·ãƒ¥(100)
+	>ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—ãƒ»MSã‚´ã‚·ãƒƒã‚¯ãƒ»ãƒ•ã‚©ãƒ³ãƒˆãƒ»ãƒšãƒ³ãƒ»ãƒ–ãƒ©ã‚·ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥(90)
+	>ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—ãƒ»MSã‚´ã‚·ãƒƒã‚¯ãƒ»ãƒ•ã‚©ãƒ³ãƒˆãƒ»ãƒšãƒ³ãƒ»ãƒ–ãƒ©ã‚·ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ»å¡—ã‚Šã“ã¿ãªã—(70)
+	>ã‚¯ãƒªãƒƒãƒ”ãƒ³ã‚°ãªã—ãƒ»MSã‚´ã‚·ãƒƒã‚¯ãƒ»ãƒ•ã‚©ãƒ³ãƒˆãƒ»ãƒšãƒ³ãƒ»ãƒ–ãƒ©ã‚·ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ»å¡—ã‚Šã“ã¿ãªã—ãƒ»æž ç·šãªã—(60)
 	>
 
 
 
 dcd27212.lzh
 	>DcdGrid\jikken\C05_manycell\
-	>ƒZƒ‹‚ÌŽ‚¿•û‚ð‚QŽŸŒ³”z—ñ‚É•ÏX‚µ‚Ü‚µ‚½B
-	>ŽŸ‚ÍACDcdGrid::adjustProp()‚Ì‰ñ”‚ðŒ¸‚ç‚µA
-	>sE—ñ‚ÌˆÊ’uŒvŽZ‚ðƒLƒƒƒbƒVƒ…‚µ‚Ü‚·B
+	>ã‚»ãƒ«ã®æŒã¡æ–¹ã‚’ï¼’æ¬¡å…ƒé…åˆ—ã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
+	>æ¬¡ã¯ã€CDcdGrid::adjustProp()ã®å›žæ•°ã‚’æ¸›ã‚‰ã—ã€
+	>è¡Œãƒ»åˆ—ã®ä½ç½®è¨ˆç®—ã‚’ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã—ã¾ã™ã€‚
 	>[22:11:21][403]CMainWnd::OnCreate() 0 
 	>[22:11:21][453]CMainWnd::OnCreate() 10 
 	>[22:11:36][825]CMainWnd::OnCreate() 11 
@@ -321,7 +321,7 @@ dcd27212.lzh
 
 dcd2725.lzh
 	>DcdGrid\jikken\C05_manycell\
-	>CDcdGrid::adjustProp()‚Ì‰ñ”‚ðŒ¸‚ç‚µ‚Ü‚µ‚½B
+	>CDcdGrid::adjustProp()ã®å›žæ•°ã‚’æ¸›ã‚‰ã—ã¾ã—ãŸã€‚
 	>
 	>[22:41:46][536]CMainWnd::OnCreate() 0 
 	>[22:41:46][546]CMainWnd::OnCreate() 10 
@@ -335,10 +335,10 @@ dcd2725.lzh
 	>[22:42:43][728]CMainWnd::OnPaint() 
 	>[22:42:46][462]CMainWnd::OnPaint()=
 	>
-	>15‚Æ16‚ÌŠÔ‚ª’·‚¢‚Ì‚ÍA
-	>CDcdGridCell::copyCellProp()‚ÅCDcdGrid::adjustProp()‚ð
-	>s‚¤‚½‚ß‚Å‚·B
-	>‚±‚ê‚ðŒ©’¼‚·‚ÆAˆÈ‰º‚Ì‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+	>15ã¨16ã®é–“ãŒé•·ã„ã®ã¯ã€
+	>CDcdGridCell::copyCellProp()ã§CDcdGrid::adjustProp()ã‚’
+	>è¡Œã†ãŸã‚ã§ã™ã€‚
+	>ã“ã‚Œã‚’è¦‹ç›´ã™ã¨ã€ä»¥ä¸‹ã®ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 	>
 	>[22:55:16][120]CMainWnd::OnCreate() 0 
 	>[22:55:16][130]CMainWnd::OnCreate() 10 
@@ -355,7 +355,7 @@ dcd2725.lzh
 
 dcd27251.lzh
 	>DcdGrid\jikken\C05_manycell\
-	>CDcdDraw::DcDraw()‚ÅAsE—ñ‚ÌˆÊ’uŒvŽZ‚ðƒLƒƒƒbƒVƒ…‚µ‚Ü‚µ‚½B
+	>CDcdDraw::DcDraw()ã§ã€è¡Œãƒ»åˆ—ã®ä½ç½®è¨ˆç®—ã‚’ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã—ã¾ã—ãŸã€‚
 	>
 	>[00:56:44][951]CMainWnd::OnCreate() 0 
 	>[00:56:44][961]CMainWnd::OnCreate() 10 
@@ -371,38 +371,38 @@ dcd27251.lzh
 
 dcd27252.lzh
 	>DcdGrid\jikken\C05_manycell\
-	>VREDRAW|HREDRAW‘®«‚ð‰ðœ‚µ‚Ü‚µ‚½B
+	>VREDRAW|HREDRAWå±žæ€§ã‚’è§£é™¤ã—ã¾ã—ãŸã€‚
 
 dcd27253.lzh
 	>DcdGrid\jikken\C05_manycell\
-	>Ou‚Ì—˜—p‚ð‚â‚ß‚Ü‚µ‚½
+	>Ouã®åˆ©ç”¨ã‚’ã‚„ã‚ã¾ã—ãŸ
 
 dcd2726.lzh
 	>DcdGrid\jikken\C05_manycell\
-	>CDcdGrid‚Ì‰Šú‚Ì—ñ”‚ð‚P‚©‚ç‚O‚É•ÏX‚µ‚Ü‚µ‚½B
+	>CDcdGridã®åˆæœŸã®åˆ—æ•°ã‚’ï¼‘ã‹ã‚‰ï¼ã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
 	>
-	>ŽŸ‚ÍAƒfƒtƒHƒ‹ƒg—ñ‘®«EƒZƒ‹‘®«‚ð“±“ü‚µ‚Ü‚·B
+	>æ¬¡ã¯ã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆåˆ—å±žæ€§ãƒ»ã‚»ãƒ«å±žæ€§ã‚’å°Žå…¥ã—ã¾ã™ã€‚
 
 
 dcd2903.lzh
 	>DcDraw\CdDrawTextFlags
-	>‚ð
+	>ã‚’
 	>DcDraw\CdDrawTextFormat
-	>‚É•ÏX
+	>ã«å¤‰æ›´
 	>
-	>‚»‚Ì‘¼AƒRƒƒ“ƒg‚ðC³‚µ‚Ü‚µ‚½B
+	>ãã®ä»–ã€ã‚³ãƒ¡ãƒ³ãƒˆã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
 
 dcd29031.lzh
 	>DcDraw\CDcdFillRectangleText
-	>ƒRƒƒ“ƒg‚ðC³‚µ‚Ü‚µ‚½B
+	>ã‚³ãƒ¡ãƒ³ãƒˆã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
 
 dcd2908.lzh
-	>DcdGrid\sekkei\CDcdGrid_Še•”‚Ì–¼Ì.txt
-	>ƒ3.2„ƒXƒNƒ[ƒ‹ƒo[
-	>‚Ü‚Å‚ÌŽ·•M‚ðs‚¢‚Ü‚µ‚½B
+	>DcdGrid\sekkei\CDcdGrid_å„éƒ¨ã®åç§°.txt
+	>ï¼œ3.2ï¼žã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼
+	>ã¾ã§ã®åŸ·ç­†ã‚’è¡Œã„ã¾ã—ãŸã€‚
 	>
 	>DcdGrid\C05_manycell
-	>–¼Ì•ÏX‚ðs‚¢‚Ü‚µ‚½B
+	>åç§°å¤‰æ›´ã‚’è¡Œã„ã¾ã—ãŸã€‚
 	>column->Column
 	>FixafterXcolumnNumber->XFixafterColumnNumber ;
 	>FixafterYcolumnNumber->YFixafterColumnNumber ;
@@ -413,152 +413,152 @@ dcd2908.lzh
 
 dcd29081.lzh
 	>DcdGrid\C05_manycell
-	>CellNumber‚ÉŠÖ˜A‚·‚éƒƒ\ƒbƒh‚ð”pŽ~‚µ‚Ü‚µ‚½B
+	>CellNumberã«é–¢é€£ã™ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰ã‚’å»ƒæ­¢ã—ã¾ã—ãŸã€‚
 
 dcd29082.lzh
 	>DcdGrid\C06_separate
 	>
-	>CdDcdGridColumnACdDcdGridCell‚Ì•W€•`‰æƒIƒuƒWƒFƒNƒg‚ð
-	>”pŽ~‚µ‚Ü‚µ‚½B
+	>CdDcdGridColumnã€CdDcdGridCellã®æ¨™æº–æç”»ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’
+	>å»ƒæ­¢ã—ã¾ã—ãŸã€‚
 
 dcd29083.lzh
 	>DcdGrid\sekkei\CDcdGrid_class.mdrw
-	>‚ðC³‚µ‚Ü‚µ‚½B
+	>ã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
 	>DcdGrid\C06_separate
-	>ƒRƒƒ“ƒgƒR[ƒh‚ð®—‚µ‚Ü‚µ‚½B
+	>ã‚³ãƒ¡ãƒ³ãƒˆã‚³ãƒ¼ãƒ‰ã‚’æ•´ç†ã—ã¾ã—ãŸã€‚
 
 dcd2910.lzh
 	>DcdGrid\jikken\C07_CWndDcdGrid\
-	>ƒOƒŠƒbƒhƒEƒCƒ“ƒhƒEƒNƒ‰ƒX‚ðì¬
-	>ŠJŽn
+	>ã‚°ãƒªãƒƒãƒ‰ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚¯ãƒ©ã‚¹ã‚’ä½œæˆ
+	>é–‹å§‹
 	>
 
 dcd2912.lzh
 	>DcdGrid\jikken\C07_CWndDcdGrid\
-	>ƒOƒŠƒbƒhƒEƒCƒ“ƒhƒEƒNƒ‰ƒX‚ª‚Å‚«‚Ü‚µ‚½B
+	>ã‚°ãƒªãƒƒãƒ‰ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚¯ãƒ©ã‚¹ãŒã§ãã¾ã—ãŸã€‚
 	>DcDraw\CDcdTargetGetDC.cpp
 	>DcDraw\CDcdTargetGetDC.h
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	>ƒRƒƒ“ƒg‚ðC³‚µ‚Ü‚µ‚½B
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	>ã‚³ãƒ¡ãƒ³ãƒˆã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
 	>
-	>ŽŸ‚ÍAƒXƒNƒ[ƒ‹ƒo[‚ðì¬‚µ‚Ü‚·B
+	>æ¬¡ã¯ã€ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼ã‚’ä½œæˆã—ã¾ã™ã€‚
 
 dcd2913.lzh
 	>DcdGrid\jikken\C07_CWndDcdGrid\
 	>
-	>ƒXƒNƒ[ƒ‹ƒo[‚ÆƒtƒH[ƒJƒXƒZƒ‹‚ª“®ì‚µ‚Ü‚µ‚½B
+	>ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼ã¨ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ãŒå‹•ä½œã—ã¾ã—ãŸã€‚
 
 dcd29131.lzh
 	>DcdGrid\jikken\C07_CWndDcdGrid\
 	>
-	>ƒRƒƒ“ƒg‰»ƒR[ƒh‚ÆLogMsg()‚ðÈŒ¸‚µ‚Ü‚µ‚½B
+	>ã‚³ãƒ¡ãƒ³ãƒˆåŒ–ã‚³ãƒ¼ãƒ‰ã¨LogMsg()ã‚’çœæ¸›ã—ã¾ã—ãŸã€‚
 
 dcd29132.lzh
 	>DcdGrid\jikken\C07_CWndDcdGrid\
 	>
-	>CWndDcdGrid::updateProp()ECWndDcdGrid::Invalidate()‚ð
-	>’Ç‰Á‚µ‚Ü‚µ‚½B
+	>CWndDcdGrid::updateProp()ãƒ»CWndDcdGrid::Invalidate()ã‚’
+	>è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd29133.lzh
 	>DcdGrid\jikken\C07_CWndDcdGrid\
 	>
-	>CWndDcdGrid::OnSetFocusCell()E
-	>CWndDcdGrid::OnSetXFixafterColumnNumber()E
-	>CWndDcdGrid::OnSetYFixafterColumnNumber()E
-	>‚ð’Ç‰Á‚µAƒRƒƒ“ƒg‰»ƒR[ƒh‚ðíœ‚µ‚Ü‚µ‚½B
+	>CWndDcdGrid::OnSetFocusCell()ãƒ»
+	>CWndDcdGrid::OnSetXFixafterColumnNumber()ãƒ»
+	>CWndDcdGrid::OnSetYFixafterColumnNumber()ãƒ»
+	>ã‚’è¿½åŠ ã—ã€ã‚³ãƒ¡ãƒ³ãƒˆåŒ–ã‚³ãƒ¼ãƒ‰ã‚’å‰Šé™¤ã—ã¾ã—ãŸã€‚
 
 dcd29134.lzh
 	>DcdGrid\jikken\C07_CWndDcdGrid\
-	>doxygen‘Î‰žƒRƒƒ“ƒg‚ð®”õ‚µ‚Ü‚µ‚½B
+	>doxygenå¯¾å¿œã‚³ãƒ¡ãƒ³ãƒˆã‚’æ•´å‚™ã—ã¾ã—ãŸã€‚
 
 dcd2914.lzh
 	>DcdGrid\jikken\C08_Print\
-	>‚ðŠJŽn‚µ‚Ü‚µ‚½B
-	>ƒOƒŠƒbƒh‚Ì•`‰æ‚ª‚Å‚«‚Ü‚µ‚½B
-	>CConverter_WinGdi::toLOGFONT()‚ðC³‚µ‚Ü‚µ‚½iDPtoLPjB
+	>ã‚’é–‹å§‹ã—ã¾ã—ãŸã€‚
+	>ã‚°ãƒªãƒƒãƒ‰ã®æç”»ãŒã§ãã¾ã—ãŸã€‚
+	>CConverter_WinGdi::toLOGFONT()ã‚’ä¿®æ­£ã—ã¾ã—ãŸï¼ˆDPtoLPï¼‰ã€‚
 	>
 	>DcdGrid\jikken\C08_Print\
-	>PM-670C‚ÅA“KØ‚ÈƒTƒCƒY‚ÌƒOƒŠƒbƒh‚Ì•`‰æ‚ª‚Å‚«‚Ü‚µ‚½B
+	>PM-670Cã§ã€é©åˆ‡ãªã‚µã‚¤ã‚ºã®ã‚°ãƒªãƒƒãƒ‰ã®æç”»ãŒã§ãã¾ã—ãŸã€‚
 	>CMainWnd::OnPrint() 
 	>
-	>‚½‚¾‚µAƒNƒŠƒbƒvƒŠ[ƒWƒ‡ƒ“‚ðŽg‚Á‚½ê‡AƒvƒŠƒ“ƒ^‚Ö‚Ì•`‰æ‚ª‚Å‚«‚Ü‚¹‚ñB
+	>ãŸã ã—ã€ã‚¯ãƒªãƒƒãƒ—ãƒªãƒ¼ã‚¸ãƒ§ãƒ³ã‚’ä½¿ã£ãŸå ´åˆã€ãƒ—ãƒªãƒ³ã‚¿ã¸ã®æç”»ãŒã§ãã¾ã›ã‚“ã€‚
 	>CDcdGrid::DcDraw()
-	>‚±‚ê‚ð‰ðŒˆ‚·‚é‚É‚ÍA
-	>‚PDƒfƒBƒXƒvƒŒƒCƒfƒoƒCƒXˆÈŠO‚Å‚ÍAƒNƒŠƒbƒvƒŠ[ƒWƒ‡ƒ“‚ðŽg‚í‚È‚¢
-	>‚QD‘ã‚í‚è‚ÉAƒZƒ‹‚ð—ñ”Ô†‚Ì‘å‚«‚¢•û‚©‚ç‡‚É•`‰æ‚·‚é
-	>‚Æ‚¢‚¤•û–@‚ªl‚¦‚ç‚ê‚Ü‚·B
+	>ã“ã‚Œã‚’è§£æ±ºã™ã‚‹ã«ã¯ã€
+	>ï¼‘ï¼Žãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ãƒ‡ãƒã‚¤ã‚¹ä»¥å¤–ã§ã¯ã€ã‚¯ãƒªãƒƒãƒ—ãƒªãƒ¼ã‚¸ãƒ§ãƒ³ã‚’ä½¿ã‚ãªã„
+	>ï¼’ï¼Žä»£ã‚ã‚Šã«ã€ã‚»ãƒ«ã‚’åˆ—ç•ªå·ã®å¤§ãã„æ–¹ã‹ã‚‰é †ã«æç”»ã™ã‚‹
+	>ã¨ã„ã†æ–¹æ³•ãŒè€ƒãˆã‚‰ã‚Œã¾ã™ã€‚
 	>
-	>‚Æ‚±‚ë‚ÅA‚È‚º‚©‚P‰ñ‚¾‚¯AƒvƒŠƒ“ƒ^‚Ö‚ÌƒNƒŠƒbƒvƒŠ[ƒWƒ‡ƒ“‚ª—LŒø‚É
-	>‚È‚Á‚½‚±‚Æ‚ª‚ ‚è‚Ü‚·B‚±‚ÌŒ´ˆö‚Í‚í‚©‚Á‚Ä‚¢‚Ü‚¹‚ñB
+	>ã¨ã“ã‚ã§ã€ãªãœã‹ï¼‘å›žã ã‘ã€ãƒ—ãƒªãƒ³ã‚¿ã¸ã®ã‚¯ãƒªãƒƒãƒ—ãƒªãƒ¼ã‚¸ãƒ§ãƒ³ãŒæœ‰åŠ¹ã«
+	>ãªã£ãŸã“ã¨ãŒã‚ã‚Šã¾ã™ã€‚ã“ã®åŽŸå› ã¯ã‚ã‹ã£ã¦ã„ã¾ã›ã‚“ã€‚
 
 dcd29142.lzh
 	>DcdGrid\jikken\C08_Print\
 	>
 	>CDcdGrid::DcDraw()
-	>ƒvƒŠƒ“ƒ^iƒfƒBƒXƒvƒŒƒCˆÈŠOj‚Å‚ÍAƒNƒŠƒbƒvƒŠ[ƒWƒ‡ƒ“‚ÌŽg—p‚ð‚â‚ß‚Ü‚µ‚½B
-	>‚±‚ê‚É‚æ‚èAAttachCell‚à³‚µ‚­ƒvƒŠƒ“ƒgƒAƒEƒg‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µt‚½B
+	>ãƒ—ãƒªãƒ³ã‚¿ï¼ˆãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ä»¥å¤–ï¼‰ã§ã¯ã€ã‚¯ãƒªãƒƒãƒ—ãƒªãƒ¼ã‚¸ãƒ§ãƒ³ã®ä½¿ç”¨ã‚’ã‚„ã‚ã¾ã—ãŸã€‚
+	>ã“ã‚Œã«ã‚ˆã‚Šã€AttachCellã‚‚æ­£ã—ããƒ—ãƒªãƒ³ãƒˆã‚¢ã‚¦ãƒˆã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—tãŸã€‚
 
 dcd29143.lzh
 	>DcdGrid\jikken\C08_Print\
-	>CDcdTargetPrinter‚ðì¬‚µ‚Ü‚µ‚½B
-	>CDcdTargetPrinter‚ÆCaDcdTargetItemPosition‚Ì‘g‚Ý‡‚í‚¹‚àA
-	>‚¤‚Ü‚­“®ì‚µ‚Ü‚µ‚½B
+	>CDcdTargetPrinterã‚’ä½œæˆã—ã¾ã—ãŸã€‚
+	>CDcdTargetPrinterã¨CaDcdTargetItemPositionã®çµ„ã¿åˆã‚ã›ã‚‚ã€
+	>ã†ã¾ãå‹•ä½œã—ã¾ã—ãŸã€‚
 
 dcd29144.lzh
 	>DcdGrid\
 	>DcdGrid\WndDcdGrid\
-	>ƒ‰ƒCƒuƒ‰ƒŠ‰»‚ðs‚¢A
+	>ãƒ©ã‚¤ãƒ–ãƒ©ãƒªåŒ–ã‚’è¡Œã„ã€
 	>DcdGrid\doxygen\DcdGrid.dxy
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd29145.lzh
 	>DcdGrid\
 	>DcdGrid\doxygen\DcdGrid.dxy
-	>‚ðC³‚µ‚Ü‚µ‚½B
+	>ã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
 
 dcd2922.lzh
 	>DcdGrid\
-	>CDcdGrid::calcMovedCel()‚ÉAˆø”
-	>bSkipScrolloutColumn‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	>‚±‚Ì’l‚ª^‚È‚çAScrolloutColumn‚ð”ò‚Ñ‰z‚¦‚ÄˆÚ“®‚µ‚Ü‚·B
+	>CDcdGrid::calcMovedCel()ã«ã€å¼•æ•°
+	>bSkipScrolloutColumnã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	>ã“ã®å€¤ãŒçœŸãªã‚‰ã€ScrolloutColumnã‚’é£›ã³è¶Šãˆã¦ç§»å‹•ã—ã¾ã™ã€‚
 
 dcd29221.lzh
 	>DcdGrid\
 	>DcdGrid\jikken\C08_Print\cwndbase\doxygen\cwndbase.dxy
-	>‚ð•ÏX‚µ‚Ü‚µ‚½B
+	>ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
 
 dcd3404.lzh
 	>2005
-	>OuDia‚Å‚Ì‰ü—Ç‚ð”½‰f‚µ‚Ü‚µ‚½B
+	>OuDiaã§ã®æ”¹è‰¯ã‚’åæ˜ ã—ã¾ã—ãŸã€‚
 	>
 	>DcDraw\CConverter_WinGdi
 	>DPtoLP
 	>
 	>DcDraw\CDcDeviceUnitSizeX
 	>DcDraw\CDcDeviceUnitSizeY
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 	>
 	>DcDraw\CdDeviceUnitSize.h
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 	>
 	>DcDraw\CDcdTargetGetDC.h
-	>HWND‚ªNULL‚Ìê‡‚Å‚àiƒvƒŠƒ“ƒ^DC‚È‚Çj—Ìˆæ‚ÌƒTƒCƒY‚ðŽæ“¾‚·‚é‚æ‚¤‚É
-	>•ÏX
+	>HWNDãŒNULLã®å ´åˆã§ã‚‚ï¼ˆãƒ—ãƒªãƒ³ã‚¿DCãªã©ï¼‰é ˜åŸŸã®ã‚µã‚¤ã‚ºã‚’å–å¾—ã™ã‚‹ã‚ˆã†ã«
+	>å¤‰æ›´
 	>
 	>DcdGrid\
-	>DcDraw‚ðOu‚Å•ÛŽ‚·‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
-	>Œ`Ž®‚ÌŒÃ‚¢iOu“±“ü‘OjƒTƒ“ƒvƒ‹‚ðíœ‚µ‚Ü‚µ‚½B
+	>DcDrawã‚’Ouã§ä¿æŒã™ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
+	>å½¢å¼ã®å¤ã„ï¼ˆOuå°Žå…¥å‰ï¼‰ã‚µãƒ³ãƒ—ãƒ«ã‚’å‰Šé™¤ã—ã¾ã—ãŸã€‚
 
 dcd3626.lzh
 	>2005
-	>IfDcdtarget::CreateFont()‚ÌHDCˆø”‚ð”pŽ~‚µ‚Ü‚µ‚½B
-	>kyuusi‚ÌƒR[ƒh‚ð”pŽ~‚µ‚Ü‚µ‚½B
+	>IfDcdtarget::CreateFont()ã®HDCå¼•æ•°ã‚’å»ƒæ­¢ã—ã¾ã—ãŸã€‚
+	>kyuusiã®ã‚³ãƒ¼ãƒ‰ã‚’å»ƒæ­¢ã—ã¾ã—ãŸã€‚
 	>
-	>kyuusiƒR[ƒh‚ÍA
-	>(CDcdGridCe::getCDcdFillRectangleText()‚È‚Ç‚ª‚ ‚Á‚½‚±‚ë‚Ì‚à‚Ì‚Å‚·B
+	>kyuusiã‚³ãƒ¼ãƒ‰ã¯ã€
+	>(CDcdGridCe::getCDcdFillRectangleText()ãªã©ãŒã‚ã£ãŸã“ã‚ã®ã‚‚ã®ã§ã™ã€‚
 
 dcd36261.lzh
-	>ˆÈ‰º‚Ìƒtƒ@ƒCƒ‹‚ðA’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã€è¿½åŠ ã—ã¾ã—ãŸã€‚
 	>DcDraw\jikken\build.bat
 	>develop\libs\DcDraw\DcDraw\CDcdFillRectangleTextV.cpp
 	>develop\libs\DcDraw\DcDraw\CDcdFillRectangleTextV.h
@@ -573,101 +573,101 @@ dcd36261.lzh
 	>develop\libs\DcDraw\DcDrawMfc\DcDrawMfc.dsp
 
 dcd3706.lzh
-	>2006”N
-	>ˆÈ‰º‚Ìƒtƒ@ƒCƒ‹‚ðAíœ‚µ‚Ü‚µ‚½B
+	>2006å¹´
+	>ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã€å‰Šé™¤ã—ã¾ã—ãŸã€‚
 	>DcDraw\jikken\C11_CDcdFillRectangleTextV\cwndbase\CDcdFreeLine.cpp
 	>DcDraw\jikken\C11_CDcdFillRectangleTextV\cwndbase\CDcdFreeLine.h
 	>DcDraw\jikken\C11_CDcdFillRectangleTextV\cwndbase\CLineFunc.cpp
 	>DcDraw\jikken\C11_CDcdFillRectangleTextV\cwndbase\CLineFunc.h
 
 dcd37061.lzh
-	>2006”N
+	>2006å¹´
 	>DcDraw\jikken\C11_CDcdFillRectangleTextV\
-	>c‘‚«ƒtƒHƒ“ƒg‚ðŽg—p‚·‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+	>ç¸¦æ›¸ããƒ•ã‚©ãƒ³ãƒˆã‚’ä½¿ç”¨ã™ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 
 dcd37062.lzh
-	>2006”N
+	>2006å¹´
 	>CDcdFillRectangleTextV
-	>c‘‚«ƒtƒHƒ“ƒg‚ðŽg—p‚·‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+	>ç¸¦æ›¸ããƒ•ã‚©ãƒ³ãƒˆã‚’ä½¿ç”¨ã™ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 
 dcd3707.lzh
 	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
-	>‚ðŠJŽn‚µ‚Ü‚µ‚½B
+	>ã‚’é–‹å§‹ã—ã¾ã—ãŸã€‚
 	>
 	>Dcdraw\
 	>CdFontProp
-	>strFacename()‚ðsetFacename()‚É•ÏX
+	>strFacename()ã‚’setFacename()ã«å¤‰æ›´
 	>CdFontProp
 	>CdDrawTextProp
-	>ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø”–¼‚ð•ÏX
+	>ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å¼•æ•°åã‚’å¤‰æ›´
 
 dcd37071.lzh
 	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
 	>CDcdFillRectangleV2.txt
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd3708.lzh
 	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\StringToMojiretsuyousoJikken\
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd37081.lzh
 	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
-	>•`‰æ‚ÌƒeƒXƒg‚É¬Œ÷‚µ‚Ü‚µ‚½B
+	>æç”»ã®ãƒ†ã‚¹ãƒˆã«æˆåŠŸã—ã¾ã—ãŸã€‚
 
 dcd37082.lzh
 	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
-	>ƒ\[ƒX®—‚ðs‚¢‚Ü‚µ‚½B
+	>ã‚½ãƒ¼ã‚¹æ•´ç†ã‚’è¡Œã„ã¾ã—ãŸã€‚
 
 dcd3712.lzh
 	>DcDraw\jikken\C12_CDcdFillRectangleTextV2\
 	>"03.10.01"
-	>‚Ì‚æ‚¤‚È•¶Žš‚ð‰ñ“]‚µ‚½c‘‚«‚É‚µ‚È‚¢•s‹ï‡‚ª‚ ‚è‚Ü‚µ‚½
-	>(––”ö‚Ì"01"‚¾‚¯‚ð‰¡‘‚«‚É‚µ‚Ä‚µ‚Ü‚Á‚Ä‚¢‚Ü‚µ‚½)
-	>‚±‚ê‚ðC³‚µ‚Ü‚µ‚½B
+	>ã®ã‚ˆã†ãªæ–‡å­—ã‚’å›žè»¢ã—ãŸç¸¦æ›¸ãã«ã—ãªã„ä¸å…·åˆãŒã‚ã‚Šã¾ã—ãŸ
+	>(æœ«å°¾ã®"01"ã ã‘ã‚’æ¨ªæ›¸ãã«ã—ã¦ã—ã¾ã£ã¦ã„ã¾ã—ãŸ)
+	>ã“ã‚Œã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
 
 dcd3713.lzh
 	>DcDraw\CGdiCache.cpp
-	>ƒfƒXƒgƒ‰ƒNƒ^‚ÉASSERT‚ðÝ’è
+	>ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã«ASSERTã‚’è¨­å®š
 	>DcDraw\CDcdFillRectangleTextV2.cpp
 	>DcDraw\CDcdFillRectangleTextV2.h
-	>‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
 dcd3717.lzh
 	>develop\libs\DcDraw\
-	>CDcdFillRectangleTextV2‚Í
-	>"12ŒŽ20“úE1ŒŽ25`27E30E31“úE2ŒŽ15`17E28“ú‰^“]"
-	>‚Ìæ“ª‚Ì12‚ð‰ñ“]c‘‚«‚É‚µ‚Ä‚µ‚Ü‚¤•s‹ï‡i‰¡‘‚«‚ª³j‚ª
-	>‚ ‚è‚Ü‚µ‚½‚ªAC³‚µ‚Ü‚µ‚½B
+	>CDcdFillRectangleTextV2ã¯
+	>"12æœˆ20æ—¥ãƒ»1æœˆ25ã€œ27ãƒ»30ãƒ»31æ—¥ãƒ»2æœˆ15ã€œ17ãƒ»28æ—¥é‹è»¢"
+	>ã®å…ˆé ­ã®12ã‚’å›žè»¢ç¸¦æ›¸ãã«ã—ã¦ã—ã¾ã†ä¸å…·åˆï¼ˆæ¨ªæ›¸ããŒæ­£ï¼‰ãŒ
+	>ã‚ã‚Šã¾ã—ãŸãŒã€ä¿®æ­£ã—ã¾ã—ãŸã€‚
 	>CGdiCache
-	>ƒfƒXƒgƒ‰ƒNƒ^‚Å‚ÌGDIƒIƒuƒWƒFƒNƒg‚ÌŠJ•ú‚ðA
-	>_ASSERT()‚ÅˆÍ‚ñ‚Å‚¢‚½‚½‚ßAReleaseƒo[ƒWƒ‡ƒ“‚ÅGDIƒIƒuƒWƒFƒNƒg‚ð
-	>ŠJ•ú‚Å‚«‚È‚­‚È‚é•s‹ï‡‚ðC³‚µ‚Ü‚µ‚½B
-	>ided13123.lzh‚©‚çj
+	>ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§ã®GDIã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®é–‹æ”¾ã‚’ã€
+	>_ASSERT()ã§å›²ã‚“ã§ã„ãŸãŸã‚ã€Releaseãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§GDIã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’
+	>é–‹æ”¾ã§ããªããªã‚‹ä¸å…·åˆã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
+	>ï¼ˆded13123.lzhã‹ã‚‰ï¼‰
 
 dcd3828.lzh
 	>DcDraw\CdBrushProp.h
 	>DcDraw\CdFontProp.h
 	>DcDraw\CdPenProp.h
-	>!=‰‰ŽZŽq‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	>!=æ¼”ç®—å­ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 	>DcDraw\CDcdFillRectangleTextV2.cpp
-	>LogMsgL‚ÌƒŒƒxƒ‹‚ð3‚É•ÏX‚µ‚Ü‚µ‚½B
+	>LogMsgLã®ãƒ¬ãƒ™ãƒ«ã‚’3ã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
 
 dcd3916.lzh
 	>develop\libs\DcDraw\
-	>CDcdFillRectangleTextV2‚Í
-	>"‚±‚¤‚â"‚Ì"‚±"‚Æ"‚â"‚ð”¼Šp•¶Žš‚Æ”»’è‚µ‚Ä‚µ‚Ü‚¤•s‹ï‡‚ª‚ ‚Á‚½‚Ì‚ð
-	>C³‚µ‚Ü‚µ‚½B
+	>CDcdFillRectangleTextV2ã¯
+	>"ã“ã†ã‚„"ã®"ã“"ã¨"ã‚„"ã‚’åŠè§’æ–‡å­—ã¨åˆ¤å®šã—ã¦ã—ã¾ã†ä¸å…·åˆãŒã‚ã£ãŸã®ã‚’
+	>ä¿®æ­£ã—ã¾ã—ãŸã€‚
 	>
 
 dcd3922.lzh
-	>DiagramEdit‚©‚ç‚ÌŽûŠn
+	>DiagramEditã‹ã‚‰ã®åŽç©«
 	>develop\libs\DcDraw\DcdGrid\CDcdGrid.cpp
 	>CDcdGrid::calcXFixafterColumnNumberPagemove() 
 	>CDcdGrid::calcYFixafterColumnNumberPagemove() 
-	>ƒy[ƒW‚ðŒã•û‚ÉˆÚ“®‚·‚éê‡‚Ìˆ—‚ª³‚µ‚­‚È‚©‚Á‚½
-	>ƒEƒCƒ“ƒhƒE‚ÌƒTƒCƒY‚ª‹·‚­‚Ä(‘S‘Ì‚ð•\Ž¦‰Â”\‚È—ñ‚ªˆê‚Â‚à‚È‚¢ê‡‚Ì
-	>ˆ—‚ª³‚µ‚­‚È‚©‚Á‚½)‚Ì‚ðC³B
+	>ãƒšãƒ¼ã‚¸ã‚’å¾Œæ–¹ã«ç§»å‹•ã™ã‚‹å ´åˆã®å‡¦ç†ãŒæ­£ã—ããªã‹ã£ãŸ
+	>ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã®ã‚µã‚¤ã‚ºãŒç‹­ãã¦(å…¨ä½“ã‚’è¡¨ç¤ºå¯èƒ½ãªåˆ—ãŒä¸€ã¤ã‚‚ãªã„å ´åˆã®
+	>å‡¦ç†ãŒæ­£ã—ããªã‹ã£ãŸ)ã®ã‚’ä¿®æ­£ã€‚
 	>
 	>CDcdFillRectangleTextV2.cpp
-	>V‚µ‚¢OuLib/Cont‚É‘Î‰ž
+	>æ–°ã—ã„OuLib/Contã«å¯¾å¿œ
 	>

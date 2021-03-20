@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -80,106 +80,106 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  * @brief
- *	�y�T�v�z  DiagramEdit �̕\���Ɋ֌W����v���p�e�B��ێ�����
- *	�P���f�[�^�N���X�ł��B
+ *	【概要】  DiagramEdit の表示に関係するプロパティを保持する
+ *	単純データクラスです。
  */
 class CdDedDispProp
 {
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
 ///@{
  private:
 	/**
-	 *	 �����\��ʃt�H���g�B
-	 *	�K��l�́A	CdFontProp( 9 ,"�l�r �S�V�b�N"  ) �B
+	 *	 時刻表画面フォント。
+	 *	規定値は、	CdFontProp( 9 ,"ＭＳ ゴシック"  ) 。
 	 */
 	CdFontProp	m_fontpropJikokuhyouFont ;
 
 	/**
-	 *	 �_�C����ʉw���t�H���g�B
-	 *	�K��l�́A	CdFontProp( 9 ,"�l�r �S�V�b�N"  ) �B
+	 *	 ダイヤ画面駅名フォント。
+	 *	規定値は、	CdFontProp( 9 ,"ＭＳ ゴシック"  ) 。
 	 */
 	CdFontProp	m_fontpropDiaEkimeiFont ;
 
 	/**
-	 *	 �_�C����ʎ����t�H���g�B
-	 *	�K��l�́A	CdFontProp( 9 ,"�l�r �S�V�b�N"  ) �B
+	 *	 ダイヤ画面時刻フォント。
+	 *	規定値は、	CdFontProp( 9 ,"ＭＳ ゴシック"  ) 。
 	 */
 	CdFontProp	m_fontpropDiaJikokuFont ;
 
 	/**
-	 *	 �_�C����ʗ�ԃt�H���g�B
-	 *	�K��l�́A	CdFontProp( 9 ,"�l�r �S�V�b�N"  ) �B
+	 *	 ダイヤ画面列車フォント。
+	 *	規定値は、	CdFontProp( 9 ,"ＭＳ ゴシック"  ) 。
 	 */
 	CdFontProp	m_fontpropDiaRessyaFont ;
 
 	/**
-	 *	 �R�����g�r���[�t�H���g�B
-	 *	�K��l�́A	CdFontProp( 9 ,"�l�r �S�V�b�N"  ) �B
+	 *	 コメントビューフォント。
+	 *	規定値は、	CdFontProp( 9 ,"ＭＳ ゴシック"  ) 。
 	 */
 	CdFontProp	m_fontpropViewComment ;
 
 	/**
-	 *	 �_�C����ʕ����F�B
-	 *	�K��l�́A���B
+	 *	 ダイヤ画面文字色。
+	 *	規定値は、黒。
 	 */
 	CdColorProp	m_colorDiaMojiColor ;
 	/**
-	 *	 �_�C����ʔw�i�F�B
-	 *	�K��l�́A���B
+	 *	 ダイヤ画面背景色。
+	 *	規定値は、白。
 	 */
 	CdColorProp	m_colorDiaHaikeiColor ;
 	/**
-	 *	 �_�C����ʗ�Ԑ��F�B
-	 *	�K��l�́A���B
+	 *	 ダイヤ画面列車線色。
+	 *	規定値は、黒。
 	 */
 	CdColorProp	m_colorDiaRessyaColor ;
 	/**
-	 *	 �_�C����ʏc�����F�B
-	 *	�K��l�́A���B
+	 *	 ダイヤ画面縦横軸色。
+	 *	規定値は、黒。
 	 */
 	CdColorProp	m_colorDiaJikuColor ;
 
 	/**
-	 *	�w�����̕���ێ����܂��B
-	 *	�P�ʂ́A�S�p�ł̕������ł��B
-	 *	�܂�A�w�����̕��́A
+	 *	駅名欄の幅を保持します。
+	 *	単位は、全角での文字数です。
+	 *	つまり、駅名欄の幅は、
 	 *
-	 *		�����̍��� �~ m_iEkimeiLength 
+	 *		文字の高さ × m_iEkimeiLength 
 	 *	
-	 *	�ƂȂ�܂��B
-	 *	�f�t�H���g�l�� 6 �Ƃ��܂��B�ŏ��l�� 1 �ł��B
+	 *	となります。
+	 *	デフォルト値は 6 とします。最小値は 1 です。
 	 */
 	int m_iEkimeiLength ;
 
 	/**
-		�����\�r���[�́A��ԗ��̕���ێ����܂��B
-		�P�ʂ́A���p�ł̕������ł��B
+		時刻表ビューの、列車欄の幅を保持します。
+		単位は、半角での文字数です。
 
-		��ԗ��̕��́A �����̍����~m_iJikokuhyouRessyaWidth / 2 �ƂȂ�܂��B
+		列車欄の幅は、 文字の高さ×m_iJikokuhyouRessyaWidth / 2 となります。
 
-		�K��l�� 5 �Ƃ��܂��B�ŏ��l�� 4,�ő�l��8�ł��B
+		規定値は 5 とします。最小値は 4,最大値は8です。
 	*/
 	int m_iJikokuhyouRessyaWidth ;
 
 	/**
-	 *	 �_�C����ʗ�ԏ��\���ʒu:�w�wOrder�x
-	 *	������( Ressyahoukou_Kudari )�́A
-	 *	��ԏ���\������ʒu���A�w�wOrder�x�Ŏw�肵�܂��B
+	 *	 ダイヤ画面列車情報表示位置:『駅Order』
+	 *	下り列車( Ressyahoukou_Kudari )の、
+	 *	列車情報を表示する位置を、『駅Order』で指定します。
 	 *
-	 *	�A���A���̒l���w�w�x ( CentDedEki ) �̐��ȏ�̏ꍇ�́A
-	 *	( �w�w�x�̐�  - 1 ) ���w�肳��Ă�����̂Ƃ݂Ȃ��܂��B
+	 *	但し、この値が『駅』 ( CentDedEki ) の数以上の場合は、
+	 *	( 『駅』の数  - 1 ) が指定されているものとみなします。
 	 *	
-	 *	�K��l�� 0 �ł��B
+	 *	規定値は 0 です。
 	 *	
 	 * @attention
-	 *	�w�wOrder�x�ɂ��ẮA CentDedRessya ���Q�Ƃ��Ă��������B
+	 *	『駅Order』については、 CentDedRessya を参照してください。
 	 */
 	int m_iDiaRessyajouhouHyoujiEkiOrderKudari ;
 	/**
-	 *	�����( Ressyahoukou_Nobori )�́A
-	 *	��ԏ���\������ʒu���A�w�wOrder�x�Ŏw�肵�܂��B
+	 *	上り列車( Ressyahoukou_Nobori )の、
+	 *	列車情報を表示する位置を、『駅Order』で指定します。
 	 * @see m_iDiaRessyajouhouHyoujiEkiOrderKudari 
 	 */
 	int m_iDiaRessyajouhouHyoujiEkiOrderNobori ;
@@ -187,15 +187,15 @@ class CdDedDispProp
 ///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	CdDedDispProp() :
-		m_fontpropJikokuhyouFont( 9 ,"�l�r �S�V�b�N"  ) ,
-		m_fontpropDiaEkimeiFont( 9 ,"�l�r �S�V�b�N"  ) ,
-		m_fontpropDiaJikokuFont( 9 ,"�l�r �S�V�b�N"  ) ,
-		m_fontpropDiaRessyaFont( 9 ,"�l�r �S�V�b�N"  ) ,
-		m_fontpropViewComment( 9 ,"�l�r �S�V�b�N"  ) ,
+		m_fontpropJikokuhyouFont( 9 ,"ＭＳ ゴシック"  ) ,
+		m_fontpropDiaEkimeiFont( 9 ,"ＭＳ ゴシック"  ) ,
+		m_fontpropDiaJikokuFont( 9 ,"ＭＳ ゴシック"  ) ,
+		m_fontpropDiaRessyaFont( 9 ,"ＭＳ ゴシック"  ) ,
+		m_fontpropViewComment( 9 ,"ＭＳ ゴシック"  ) ,
 		m_colorDiaMojiColor( CdColorProp( 0 , 0 , 0 ) ) ,
 		m_colorDiaHaikeiColor( CdColorProp( 255 , 255 , 255 ) ) ,
 		m_colorDiaRessyaColor( CdColorProp( 0 , 0 , 0 ) ) ,
@@ -211,7 +211,7 @@ class CdDedDispProp
 // ********************************
  public:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	CdFontProp	getJikokuhyouFont()const{
@@ -286,15 +286,15 @@ class CdDedDispProp
 
 	/**
 	 * @return
-	 *	�w���̕����擾���邽�߂̕�������쐬���܂��B
-	 *	���̊֐��́A�S�p������ m_iEkimeiLength �������ׂ�
-	 *	������i���e�͎g��Ȃ��j��Ԃ��܂��B
+	 *	駅名の幅を取得するための文字列を作成します。
+	 *	この関数は、全角文字を m_iEkimeiLength 文字並べた
+	 *	文字列（内容は使わない）を返します。
 	 */
 	string createEkimeiExtentString()const 
 	{
 		string	strRv ;
 		for ( int idx = 0 ; idx < m_iEkimeiLength ; idx ++ ){
-			strRv += "��" ;
+			strRv += "岡" ;
 		}
 		return strRv ;
 	};
@@ -318,9 +318,9 @@ class CdDedDispProp
 	};
 
 	/**
-	 *	���ׂĂ̑������A
-	 *	������ԁi�f�t�H���g�R���X�g���N�^�Ő���������ԁj
-	 *	�ɂ��܂��B
+	 *	すべての属性を、
+	 *	初期状態（デフォルトコンストラクタで生成した状態）
+	 *	にします。
 	 */
 	void clear(){	*this = CdDedDispProp() ; } ;
 	///@}

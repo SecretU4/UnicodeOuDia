@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -77,84 +77,84 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  @brief
- �y�T�v�z
-   �A�_�v�^�N���X�ł��B
-	�|�C���^�^��v�f�ɂ���R���e�i�I�u�W�F�N�g�𑀍�ΏۂƂ��A
-	����Ώۂ� "Mu< PtrType >"  �C���^�[�t�F�[�X���A
-	�l�E�܂��͎Q�ƌ^��v�f�Ƃ��� "Mu< ValueType > 
-	�C���^�[�t�F�[�X�ɕϊ����܂��B
+ 【概要】
+   アダプタクラスです。
+	ポインタ型を要素にするコンテナオブジェクトを操作対象とし、
+	操作対象の "Mu< PtrType >"  インターフェースを、
+	値・または参照型を要素とする "Mu< ValueType > 
+	インターフェースに変換します。
  
-   ���̃N���X�̗p�r�́A��Ɉȉ��̂悤�ȏꍇ�ł�
- �i CBase �́A�R���e�i�Ɋi�[����N���X�̗�ł��j�B
+   このクラスの用途は、主に以下のような場合です
+ （ CBase は、コンテナに格納するクラスの例です）。
  
- ��  �I�u�W�F�N�g�̃|�C���^���i�[����Ă��� �A
-  Mu< CBase* > �C���^�[�t�F�[�X���T�|�[�g�����R���e�i��
- ���̃I�u�W�F�N�g�ɑ��삳����ꍇ�A���̃I�u�W�F�N�g�ɂ�
-  "Mu< CBase >" ��n�������B
+ ◎  オブジェクトのポインタが格納されている 、
+  Mu< CBase* > インターフェースをサポートしたコンテナを
+ 他のオブジェクトに操作させる場合、他のオブジェクトには
+  "Mu< CBase >" を渡したい。
  
 @code
 	CaCont_vector< vector< CBase* > >	aCaCont_vector_ptr ;
 	CaMuPtref< CBase , CBase* > aCaMuPtref( &aCaCont_vector_ptr ) ;
-	//aCaMuPtref = Mu< CBase > ���T�|�[�g���Ă��܂��B
-	//	���̃C���^�[�t�F�[�X�ɂ��AaCaCont_vector_ptr ���ێ����Ă���
-	//	�|�C���^�v�f�̎Q�Ɛ�̒l���Q�Ƃ��邱�Ƃ��ł��܂�
-	//	�i�l�Ȃ̂ŕύX�͕s�j�B
+	//aCaMuPtref = Mu< CBase > をサポートしています。
+	//	このインターフェースにより、aCaCont_vector_ptr が保持している
+	//	ポインタ要素の参照先の値を参照することができます
+	//	（値なので変更は不可）。
 @endcode
  
- ��  �I�u�W�F�N�g�̃|�C���^���i�[����Ă��� �A
-  Mu< CBase* > �C���^�[�t�F�[�X���T�|�[�g�����R���e�i��
- ���̃I�u�W�F�N�g�ɑ��삳����ꍇ�A���̃I�u�W�F�N�g�ɂ�
-  "Mu< const CBase& >" ��n�������B
+ ◎  オブジェクトのポインタが格納されている 、
+  Mu< CBase* > インターフェースをサポートしたコンテナを
+ 他のオブジェクトに操作させる場合、他のオブジェクトには
+  "Mu< const CBase& >" を渡したい。
  
 @code
 	CaCont_vector< vector< CBase* > >	aCaCont_vector_ptr ;
 	CaMuPtref< const CBase& , CBase* > aCaMuPtref( &aCaCont_vector_ptr ) ;
-	//aCaMuPtref = Mu< const CBase& > ���T�|�[�g���Ă��܂��B
-	//	���̃C���^�[�t�F�[�X�ɂ��AaCaCont_vector_ptr ���ێ����Ă���
-	//	�|�C���^�v�f�̃I�u�W�F�N�g��const�Q�Ƃ��擾���邱�Ƃ��ł��܂��B
-	//	�iconst�Ȃ̂ŕύX�͕s�j�B
+	//aCaMuPtref = Mu< const CBase& > をサポートしています。
+	//	このインターフェースにより、aCaCont_vector_ptr が保持している
+	//	ポインタ要素のオブジェクトのconst参照を取得することができます。
+	//	（constなので変更は不可）。
 @endcode
  
  @param ValueType
-	�ϊ���̗v�f�̌^���w�肵�Ă��������B
-	���̌^�́A�l�^�E�������͎Q�ƌ^���w�肵�Ă��������B
-	���̃N���X�́A "Mu< DataType1 >" �C���^�[�t�F�[�X��
-	�T�|�[�g���܂��B
+	変換後の要素の型を指定してください。
+	この型は、値型・もしくは参照型を指定してください。
+	このクラスは、 "Mu< DataType1 >" インターフェースを
+	サポートします。
  @param PtrType
-	����ΏۃI�u�W�F�N�g m_pAdaptee ���i�[���Ă���v�f�̌^��
-	�w�肵�Ă��������B
-	���̌^�́A�|�C���^�^�łȂ��Ă͂Ȃ�܂�B
+	操作対象オブジェクト m_pAdaptee が格納している要素の型を
+	指定してください。
+	この型は、ポインタ型でなくてはなりまん。
  */
 template < class ValueType  , class PtrType > class CaMuPtref : 
 	public Mu< ValueType > 
 {
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-		����ΏۃI�u�W�F�N�g�ƂȂ�A�R���e�i�ł��B
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-		�������Ȃ��Ă͂Ȃ�܂���B
+		操作対象オブジェクトとなる、コンテナです。
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、thisとの関連が保たれている間は、
+		生存しなくてはなりません。
 	 */
 	Mu<PtrType>*	m_pAdaptee ;
 	///@}
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CaMuPtref( Mu<PtrType>* pAdaptee ) : 
 		m_pAdaptee( pAdaptee ){};
 private:
-	///	�R�s�[�͋֎~
+	///	コピーは禁止
 	CaMuPtref( const CaMuPtref& value )
 	{
 		assert( false ) ;
 	}
-	///	�R�s�[�͋֎~
+	///	コピーは禁止
 	CaMuPtref& operator=( const CaMuPtref& value )
 	{
 		assert( false ) ;
@@ -170,19 +170,19 @@ public:
 	///@{
 	/**
 	 @return
-	 	�R���e�i�Ɋi�[����Ă���v�f�̌���Ԃ��܂��B
+	 	コンテナに格納されている要素の個数を返します。
 	*/
 	virtual int	size()const{	return m_pAdaptee->size() ; } ;
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
-	 	�v�f��Ԃ��܂��B
+	 	コンテナ内の、インデクスで指定された場所に格納されている
+	 	要素を返します。
 	 @param idx [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-		INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+		INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	 	インデクスで指定された要素を返します。
 	*/
 	virtual ValueType get( int idx )const 
 	{
@@ -194,7 +194,7 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	Mu<PtrType>*	getAdaptee(){	return m_pAdaptee ;};

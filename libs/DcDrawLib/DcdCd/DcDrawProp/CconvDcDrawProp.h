@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //$Id: CconvDcDrawProp.h 92 2012-09-21 10:56:03Z okm $
@@ -79,13 +79,13 @@ namespace DcDrawProp{
 using namespace OuLib::Str;
 
 /**
-	DcDraw�̒P���f�[�^�̕ϊ��@�\��񋟂��܂��B
+	DcDrawの単純データの変換機能を提供します。
 */
 class CconvDcDrawProp
 {
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CconvDcDrawProp(void);
 	virtual ~CconvDcDrawProp(void);
@@ -96,73 +96,73 @@ public:
 	// ********************************
 	///@{
 	/**
-	  	CdFontProp �̑������A CdConnectedString2 �I�u�W�F�N�g�ɒǉ����܂��B
+	  	CdFontProp の属性を、 CdConnectedString2 オブジェクトに追加します。
 	   @param aCdFontProp [in]
-	  	�ϊ��ΏۂƂȂ� CdFontProp ���w�肵�Ă��������B
+	  	変換対象となる CdFontProp を指定してください。
 	   @param pCdConnectedString2 [in,out]
-	  	  ���̊֐��́A���̃I�u�W�F�N�g�ɁA CdConnectedString2::CdItem ��
-	  	�ǉ����܂��B
-	  	  ���̃I�u�W�F�N�g������܂ŕێ����Ă��� CdConnectedString2::CdItem ��
-	  	�ێ����܂��B
+	  	  この関数は、このオブジェクトに、 CdConnectedString2::CdItem を
+	  	追加します。
+	  	  このオブジェクトがそれまで保持していた CdConnectedString2::CdItem は
+	  	維持します。
 	   @return
-	  	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+	  	成功したら 0 以上、エラーなら負の数です。
 	 */
 	int CdFontProp_to_CdConnnectedString2( 
 		const CdFontProp& aCdFontProp ,
 		CdConnectedString2*	pCdConnectedString );
 
 	/**
-	  	 CdConnectedString2 �I�u�W�F�N�g����A
-	  	 CdFontProp_to_CdConnectedString2() �Œǉ����� CdItem ��ǂݎ��A
-	  	CdFontProp �I�u�W�F�N�g�̑����ɔ��f���܂��B
+	  	 CdConnectedString2 オブジェクトから、
+	  	 CdFontProp_to_CdConnectedString2() で追加した CdItem を読み取り、
+	  	CdFontProp オブジェクトの属性に反映します。
 	   @param pCdFontProp [out]
-	  	���̊֐��͂��̃I�u�W�F�N�g�̑����ɁA������̓��e�𔽉f���܂��B
+	  	この関数はこのオブジェクトの属性に、文字列の内容を反映します。
 	   @param aCdConnectedString [in]
-	  	 CdFontProp_to_CdConnectedString2() �Œǉ����� CdItem ������
-	  	 CdConnectedString2 �I�u�W�F�N�g���w�肵�Ă��������B
+	  	 CdFontProp_to_CdConnectedString2() で追加した CdItem を持つ
+	  	 CdConnectedString2 オブジェクトを指定してください。
 	   @return
-	  	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	  	-	-12 ;	//	PointTextHeight �̒l���s��
-	  	-	-22 ;	//	LogicalunitTextHeight �̒l���s��
-	  	-	-32 ;	//	LogicalunitCellHeight �̒l���s��
-	  	-	-42 ;	//	Facename �̒l���s��
-	  	-	-52 ;	//	Bold �̒l���s��
-	  	-	-62 ;	//	Itaric �̒l���s��
-	  	-	-72 ;	//	Underline �̒l���s��
-	  	-	-82 ;	//	StrikeOut �̒l���s��
-	  	-	-92 ;	//	Escapement �̒l���s��
+	  	成功したら 0 以上、エラーなら負の数です。
+	  	-	-12 ;	//	PointTextHeight の値が不正
+	  	-	-22 ;	//	LogicalunitTextHeight の値が不正
+	  	-	-32 ;	//	LogicalunitCellHeight の値が不正
+	  	-	-42 ;	//	Facename の値が不正
+	  	-	-52 ;	//	Bold の値が不正
+	  	-	-62 ;	//	Itaric の値が不正
+	  	-	-72 ;	//	Underline の値が不正
+	  	-	-82 ;	//	StrikeOut の値が不正
+	  	-	-92 ;	//	Escapement の値が不正
 	 */
 	int CdFontProp_from_CdConnectedString2( CdFontProp* pCdFontProp ,
 		const CdConnectedString2& aCdConnectedString ) ;
 
 
 	/**
-	  	CdFontProp �̑������A������ɕϊ����܂��B
+	  	CdFontProp の属性を、文字列に変換します。
 	   @param aCdFontProp [in]
-	  	�ϊ��ΏۂƂȂ� CdFontProp ���w�肵�Ă��������B
+	  	変換対象となる CdFontProp を指定してください。
 	   @return
-	  	�ϊ����ʂ�Ԃ��܂��B
+	  	変換結果を返します。
 	 */
 	std::string CdFontProp_to_string( const CdFontProp& aCdFontProp );
 
 	/**
-	  	 CdFontProp_to_string() �ō쐬��������������߂��A
-	  	CdFontProp �I�u�W�F�N�g�̑����ɔ��f���܂��B
+	  	 CdFontProp_to_string() で作成した文字列を解釈し、
+	  	CdFontProp オブジェクトの属性に反映します。
 	   @param pCdFontProp [out]
-	  	���̊֐��͂��̃I�u�W�F�N�g�̑����ɁA������̓��e�𔽉f���܂��B
+	  	この関数はこのオブジェクトの属性に、文字列の内容を反映します。
 	   @param aString [in]
-	  	 CdFontProp_to_string() �ō쐬������������w�肵�Ă��������B
+	  	 CdFontProp_to_string() で作成した文字列を指定してください。
 	   @return
-	  	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	  	-	-12 ;	//	PointTextHeight �̒l���s��
-	  	-	-22 ;	//	LogicalunitTextHeight �̒l���s��
-	  	-	-32 ;	//	LogicalunitCellHeight �̒l���s��
-	  	-	-42 ;	//	Facename �̒l���s��
-	  	-	-52 ;	//	Bold �̒l���s��
-	  	-	-62 ;	//	Itaric �̒l���s��
-	  	-	-72 ;	//	Underline �̒l���s��
-	  	-	-82 ;	//	StrikeOut �̒l���s��
-	  	-	-92 ;	//	Escapement �̒l���s��
+	  	成功したら 0 以上、エラーなら負の数です。
+	  	-	-12 ;	//	PointTextHeight の値が不正
+	  	-	-22 ;	//	LogicalunitTextHeight の値が不正
+	  	-	-32 ;	//	LogicalunitCellHeight の値が不正
+	  	-	-42 ;	//	Facename の値が不正
+	  	-	-52 ;	//	Bold の値が不正
+	  	-	-62 ;	//	Itaric の値が不正
+	  	-	-72 ;	//	Underline の値が不正
+	  	-	-82 ;	//	StrikeOut の値が不正
+	  	-	-92 ;	//	Escapement の値が不正
 	 */
 	int CdFontProp_from_string( 
 		CdFontProp* pCdFontProp , 
@@ -173,20 +173,20 @@ public:
 	// ********************************
 	///@{
 	/**
-		aCdColorProp �𕶎���ɕϊ����܂��B
+		aCdColorProp を文字列に変換します。
 	@param aCdColorProp [in]
-		�ϊ����̒l���w�肵�Ă��������B
+		変換元の値を指定してください。
 	@return
-		�ϊ����ʂ�Ԃ��܂��B
+		変換結果を返します。
 	*/
 	std::string CdColorProp_to_string( const CdColorProp& aCdColorProp );
 
 	/**
-		������� aCdColorProp �ɕϊ����܂��B
+		文字列を aCdColorProp に変換します。
 	@param aString [in]
-		�ϊ����̒l���w�肵�Ă��������B
+		変換元の値を指定してください。
 	@return
-		�ϊ����ʂ�Ԃ��܂��B
+		変換結果を返します。
 	 */
 	CdColorProp CdColorProp_from_string( const std::string& aString  );
 	///@}
@@ -195,16 +195,16 @@ public:
 	// ********************************
 	///@{
 	/**
-	  	CdDcdFreeLineProp �̑������A CdConnectedString2 �I�u�W�F�N�g�ɒǉ����܂��B
+	  	CdDcdFreeLineProp の属性を、 CdConnectedString2 オブジェクトに追加します。
 	@param aCdDcdFreeLineProp [in]
-	  	�ϊ��ΏۂƂȂ� CdDcdFreeLineProp ���w�肵�Ă��������B
+	  	変換対象となる CdDcdFreeLineProp を指定してください。
 	@param pCdConnectedString2 [in,out]
-	  	  ���̊֐��́A���̃I�u�W�F�N�g�ɁA CdConnectedString2::CdItem ��
-	  	�ǉ����܂��B
-	  	  ���̃I�u�W�F�N�g������܂ŕێ����Ă��� CdConnectedString2::CdItem ��
-	  	�ێ����܂��B
+	  	  この関数は、このオブジェクトに、 CdConnectedString2::CdItem を
+	  	追加します。
+	  	  このオブジェクトがそれまで保持していた CdConnectedString2::CdItem は
+	  	維持します。
 	@return
-	  	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+	  	成功したら 0 以上、エラーなら負の数です。
 
 	*/
 	int CdDcdFreeLineProp_to_CdConnectedString2( 
@@ -212,29 +212,29 @@ public:
 		CdConnectedString2*	pCdConnectedString ) ;
 
 	/**
-	  	CdDcdFreeLineProp �̑������A������ɕϊ����܂��B
+	  	CdDcdFreeLineProp の属性を、文字列に変換します。
 	@param aCdDcdFreeLineProp [in]
-	  	�ϊ��ΏۂƂȂ� CdFontProp ���w�肵�Ă��������B
+	  	変換対象となる CdFontProp を指定してください。
 	@return
-	  	�ϊ����ʂ�Ԃ��܂��B
-		���s�����ꍇ�͋󕶎���ƂȂ�܂��B
+	  	変換結果を返します。
+		失敗した場合は空文字列となります。
 	*/
 	std::string CdDcdFreeLineProp_to_string( 
 		const CdDcdFreeLineProp& aCdDcdFreeLineProp );
 
 	/**
-	  	CdDcdFreeLineProp_to_CdConnectedString2 �ō쐬����
-		*pCdConnectedString �̓��e���A
-		CdDcdFreeLineProp �I�u�W�F�N�g�ɔ��f���܂��B
+	  	CdDcdFreeLineProp_to_CdConnectedString2 で作成した
+		*pCdConnectedString の内容を、
+		CdDcdFreeLineProp オブジェクトに反映します。
 	@param pCdDcdFreeLineProp [out]
-		���̊֐��͂��̃I�u�W�F�N�g�̑����ɁA������̓��e�𔽉f���܂��B
+		この関数はこのオブジェクトの属性に、文字列の内容を反映します。
 	@param aCdConnectedString [in]
-		 CdDcdFreeLineProp_to_CdConnectedString2() �Œǉ����� CdItem ������
-		 CdConnectedString2 �I�u�W�F�N�g���w�肵�Ă��������B
+		 CdDcdFreeLineProp_to_CdConnectedString2() で追加した CdItem を持つ
+		 CdConnectedString2 オブジェクトを指定してください。
 	@return
-	  	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11 ;	//	LogicalunitWidth �̒l���s���ł�
-		-	-12 ;	//	Color �̒l���s���ł�
+	  	成功したら 0 以上、エラーなら負の数です。
+		-	-11 ;	//	LogicalunitWidth の値が不正です
+		-	-12 ;	//	Color の値が不正です
 
 	*/
 	int CdDcdFreeLineProp_from_CdConnectedString2( 
@@ -242,18 +242,18 @@ public:
 		const CdConnectedString2*	pCdConnectedString ) ;
 
 	/**
-	  	CdDcdFreeLineProp_to_CdConnectedString2 �ō쐬����
-		*pCdConnectedString �̓��e���A
-		CdDcdFreeLineProp �I�u�W�F�N�g�ɔ��f���܂��B
+	  	CdDcdFreeLineProp_to_CdConnectedString2 で作成した
+		*pCdConnectedString の内容を、
+		CdDcdFreeLineProp オブジェクトに反映します。
 	@param pCdDcdFreeLineProp [out]
-		���̊֐��͂��̃I�u�W�F�N�g�̑����ɁA������̓��e�𔽉f���܂��B
+		この関数はこのオブジェクトの属性に、文字列の内容を反映します。
 	@param aString [in]
-		 CdDcdFreeLineProp_to_string() �Ő�������
-		 ��������w�肵�Ă��������B
+		 CdDcdFreeLineProp_to_string() で生成した
+		 文字列を指定してください。
 	@return
-	  	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11 ;	//	LogicalunitWidth �̒l���s���ł�
-		-	-12 ;	//	Color �̒l���s���ł�
+	  	成功したら 0 以上、エラーなら負の数です。
+		-	-11 ;	//	LogicalunitWidth の値が不正です
+		-	-12 ;	//	Color の値が不正です
 	*/
 	int CdDcdFreeLineProp_from_string( 
 		CdDcdFreeLineProp* pCdDcdFreeLineProp ,

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -77,82 +77,82 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
    @brief
-  	  �A�_�v�^�N���X�ł��B
-  	  "Mui<ElementType2>" �C���^�[�t�F�[�X���T�|�[�g����
-  	�R���e�i�ɑ΂��āA ElementType1 �^�̒l��ϊ�������Őݒ�E
-  	�擾���邱�Ƃ��ł��܂��B
+  	  アダプタクラスです。
+  	  "Mui<ElementType2>" インターフェースをサポートする
+  	コンテナに対して、 ElementType1 型の値を変換した上で設定・
+  	取得することができます。
   	
-  	  ���̃N���X�͒��ۃN���X�ł���A "Mui<ElementType1>" 
-  	�C���^�[�t�F�[�X���T�|�[�g���܂��B����ΏۃI�u�W�F�N�g�́A 
-  	"Mui<ElementType2>" �C���^�[�t�F�[�X���T�|�[�g���܂��B
-  	�܂��A�I�[�o���C�h�\�ȉ��z�֐��Ƃ���
-  	 onSet() �E onGet() �E onErase() ������܂��B
+  	  このクラスは抽象クラスであり、 "Mui<ElementType1>" 
+  	インターフェースをサポートします。操作対象オブジェクトは、 
+  	"Mui<ElementType2>" インターフェースをサポートします。
+  	また、オーバライド可能な仮想関数として
+  	 onSet() ・ onGet() ・ onErase() があります。
   	
-  	  ���̃N���X�ɑ΂��� insert() �� set() ���Ăяo���ƁA
-  	���\�b�h�� onSet() ���Ăяo���āA�����ɓn���ꂽ
-  	 ElementType1 �^�̒l�� ElementType2 �Ɍ^�ϊ����Ă���A
-  	����ΏۃR���e�i m_pAdaptee �ɒǉ����܂��B
+  	  このクラスに対して insert() や set() を呼び出すと、
+  	メソッドは onSet() を呼び出して、引数に渡された
+  	 ElementType1 型の値を ElementType2 に型変換してから、
+  	操作対象コンテナ m_pAdaptee に追加します。
   	
-  	  ���l�ɁAget() ���Ăяo���ƁA���\�b�h�͒l�𑀍�ΏۃR���e�i
-  	 m_pAdaptee ����擾������AonGet() �� ElementType2 ����
-  	 ElementType1 �ɕϊ����Ă���Ăяo�����ɕԂ��܂��B
+  	  同様に、get() を呼び出すと、メソッドは値を操作対象コンテナ
+  	 m_pAdaptee から取得した後、onGet() で ElementType2 から
+  	 ElementType1 に変換してから呼び出し元に返します。
   	
-  	  �܂��Aerase() ���Ăяo���ƁA���\�b�h�͍폜����
-  	�v�f�������ɂ��āAonErase() ���Ăяo���܂��B
+  	  また、erase() を呼び出すと、メソッドは削除する
+  	要素を引数にして、onErase() を呼び出します。
   	
-  	   onSet() �� onGet() �́A�K���I�[�o���C�h���āA
-  	ElementType1 �\ ElementType2 �̃f�[�^�ϊ����s��������
-  	�������Ă��������B
-  	   onErase() �́A�ʏ�I�[�o���C�h����K�v�͂���܂���B�A���A
-  	�u onSet() �� m_pAdapett �ɒǉ������v�f�� m_pAdaptee ����
-  	��菜���Ƃ��Ɍ㏈�����K�v�v�Ƃ����ꍇ�ɂ́A onSet() ��
-  	���̌㏈�����������Ă��������B�Ⴆ��
-  	 �uonSet() �ł̓I�u�W�F�N�g�� new �Ő������A�����
-  	 m_pAdaptee  �ɒǉ�����v
-  	�Ƃ����ꍇ�́A
-  	�u onErase() �ŁAnew �Ő��������I�u�W�F�N�g�� delete ����v
-  	���Ƃ��ł��܂��B
+  	   onSet() と onGet() は、必ずオーバライドして、
+  	ElementType1 ― ElementType2 のデータ変換を行う処理を
+  	実装してください。
+  	   onErase() は、通常オーバライドする必要はありません。但し、
+  	「 onSet() で m_pAdapett に追加した要素を m_pAdaptee から
+  	取り除くときに後処理が必要」という場合には、 onSet() に
+  	その後処理を実装してください。例えば
+  	 「onSet() ではオブジェクトを new で生成し、それを
+  	 m_pAdaptee  に追加する」
+  	という場合は、
+  	「 onErase() で、new で生成したオブジェクトを delete する」
+  	ことができます。
   	
   	<H4>
-  	�y�g�����z
+  	【使い方】
   	</H4>
   	
-  	�P�D  ���̃N���X�̔h���N���X���쐬���Ă��������B���̂Ƃ��A
-  	 onSet() �� onGet() ���I�[�o���C�h���āA�^�ϊ��̏���������
-  	���Ă��������B
+  	１．  このクラスの派生クラスを作成してください。このとき、
+  	 onSet() と onGet() をオーバライドして、型変換の処理を実装
+  	してください。
   	
-  	�Q�D  ���炩���߁A����ΏۃI�u�W�F�N�g�𐶐����Ă��������B
+  	２．  あらかじめ、操作対象オブジェクトを生成してください。
   	
-  	�R�D  ���̃N���X�̃I�u�W�F�N�g�𐶐����Ă��������B
-  	�R���X�g���N�^�̈����ɂ́A����ΏۃI�u�W�F�N�g���w�肵��
-  	���������B
-  	
-  	@attention
-  	 <b> ����ΏۃI�u�W�F�N�g�i "Mui<ElementType2>"
-  	 �C���^�[�t�F�[�X���T�|�[�g����R���e�i�I�u�W�F�N�g�j�́A
-  	��łȂ��Ă͂Ȃ�܂���B</b>
-  	
-  	�S�D  ���̂��Ƃ́A���̃N���X�̑S�Ẵ��\�b�h�����p�\�ł��B
+  	３．  このクラスのオブジェクトを生成してください。
+  	コンストラクタの引数には、操作対象オブジェクトを指定して
+  	ください。
   	
   	@attention
-  	 <b>�����Ƃ��āA this �� ����ΏۃI�u�W�F�N�g m_pAdaptee ��
-  	�֘A���L���ȊԂ́A m_pAdaptee �� "Mui<ElementType2>" 
-  	���\�b�h�𒼐ڌĂяo���Ȃ��ł��������B</b>
-  	  ���ɁA onErase() �ŗv�f�ɑ΂���㏈�����s���Ă���ꍇ�́A
-  	 this ���o�R������ m_pAdaptee �ɑ΂��ėv�f�̒ǉ��E�폜��
-  	�s���Ă��܂��ƁA�s���ȓ���ɂȂ�܂��B\n 
-	m_pAdaptee �� "Mu<ElementType2>" ���\�b�h
-  	( size() �E get() )�́A���ڌĂяo���Ă����܂��܂���B
+  	 <b> 操作対象オブジェクト（ "Mui<ElementType2>"
+  	 インターフェースをサポートするコンテナオブジェクト）は、
+  	空でなくてはなりません。</b>
   	
-  	�T�D  this �́A�f�X�g���N�^�ł͂��ׂĂ̗v�f��j�����܂��B
+  	４．  このあとは、このクラスの全てのメソッドが利用可能です。
+  	
+  	@attention
+  	 <b>原則として、 this と 操作対象オブジェクト m_pAdaptee の
+  	関連が有効な間は、 m_pAdaptee の "Mui<ElementType2>" 
+  	メソッドを直接呼び出さないでください。</b>
+  	  特に、 onErase() で要素に対する後処理を行っている場合は、
+  	 this を経由せずに m_pAdaptee に対して要素の追加・削除を
+  	行ってしまうと、不正な動作になります。\n 
+	m_pAdaptee の "Mu<ElementType2>" メソッド
+  	( size() ・ get() )は、直接呼び出してもかまいません。
+  	
+  	５．  this は、デストラクタではすべての要素を破棄します。
   	
   	
   	@param ElementType1
-  	  ���̃N���X�̃��\�b�h�Ŏ擾�E�ݒ肷��v�f�̌^���w�肵��
-  	���������B
+  	  このクラスのメソッドで取得・設定する要素の型を指定して
+  	ください。
   	@param ElementType2
-  	  ����ΏۃI�u�W�F�N�g m_pAdaptee ���i�[���Ă���v�f�̌^��
-  	�w�肵�Ă��������B
+  	  操作対象オブジェクト m_pAdaptee が格納している要素の型を
+  	指定してください。
   	
  */
 template < class ElementType1 , class ElementType2 > class CaMuiFilter :
@@ -160,123 +160,123 @@ template < class ElementType1 , class ElementType2 > class CaMuiFilter :
 {
 public:
 	/**
-	  	ElementType2 �̕ʖ��ł��B
-	  	m_pAdaptee �̗v�f�̌^�ł��B
+	  	ElementType2 の別名です。
+	  	m_pAdaptee の要素の型です。
 	 */
 	typedef ElementType2	adaptee_value_type ;
 
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-	  	����ΏۃI�u�W�F�N�g�ƂȂ�A�R���e�i�ł��B
-	  	���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-	  	���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-	  	�������Ȃ��Ă͂Ȃ�܂���B
+	  	操作対象オブジェクトとなる、コンテナです。
+	  	このオブジェクトの破棄の責務は、クラスユーザーにあります。
+	  	このオブジェクトは、thisとの関連が保たれている間は、
+	  	生存しなくてはなりません。
 	  
-	  	�܂��A���̃R���e�i�́A������Ԃł͋�łȂ��Ă͂Ȃ�܂���B
-	  	���R�́A���̃N���X�̓f�X�g���N�^�ł��ׂĂ̗v�f��j�����邩��ł��B
+	  	また、このコンテナは、初期状態では空でなくてはなりません。
+	  	理由は、このクラスはデストラクタですべての要素を破棄するからです。
 	  
-	  	<b>�����Ƃ��āA this �� ����ΏۃI�u�W�F�N�g m_pAdaptee ��
-	  	�֘A���L���ȊԂ́A
-	  	 m_pAdaptee �� "Mui<ElementType2>" ���\�b�h�𒼐�
-	  	�Ăяo���Ȃ��ł��������B</b>
-	  	  ���ɁA onErase() �ŗv�f�ɑ΂���㏈�����s���Ă���ꍇ�́A
-	  	 this ���o�R������ m_pAdaptee �ɑ΂��ėv�f�̒ǉ��E�폜��
-	  	�s���Ă��܂��ƁA�s���ȓ���ɂȂ�܂��B\n 
-		m_pAdaptee �� "Mu<ElementType2>" ���\�b�h
-	  	( size() �E get() )�́A���ڌĂяo���Ă����܂��܂���B
+	  	<b>原則として、 this と 操作対象オブジェクト m_pAdaptee の
+	  	関連が有効な間は、
+	  	 m_pAdaptee の "Mui<ElementType2>" メソッドを直接
+	  	呼び出さないでください。</b>
+	  	  特に、 onErase() で要素に対する後処理を行っている場合は、
+	  	 this を経由せずに m_pAdaptee に対して要素の追加・削除を
+	  	行ってしまうと、不正な動作になります。\n 
+		m_pAdaptee の "Mu<ElementType2>" メソッド
+	  	( size() ・ get() )は、直接呼び出してもかまいません。
 	 */
 	Mui<ElementType2>*	m_pAdaptee ;
 	///@}
 
 protected:
 	// --------------------------------
-	///@name �I�[�o���C�h�\�ȉ��z�֐�
+	///@name オーバライド可能な仮想関数
 	// --------------------------------
 	///@{
 	/**
-	  	  this �́A����Ώۂ̃R���e�i m_pAdaptee �ɑ΂��ėv�f��ǉ�
-	  	����Ƃ��ɁA���̊֐����Ăяo���āA  ElementType1 �̒l value ���A
-	  	 ElementType2 �ɕϊ����܂��B
+	  	  this は、操作対象のコンテナ m_pAdaptee に対して要素を追加
+	  	するときに、この関数を呼び出して、  ElementType1 の値 value を、
+	  	 ElementType2 に変換します。
 	  
-	  	onSet() �Ăяo���ƁA onErase() �Ăяo���͑΂ɂȂ��Ă��܂��B
-	  	 onSet() �ł���l��Ԃ����ꍇ�A���̗v�f�� m_pAdaptee ����
-	  	��菜�����Ƃ��ɁA�K�� onSet() �ŕԂ����l�������Ƃ���
-	  	 onErase() ���Ăяo����܂��B
+	  	onSet() 呼び出しと、 onErase() 呼び出しは対になっています。
+	  	 onSet() である値を返した場合、その要素が m_pAdaptee から
+	  	取り除かれるときに、必ず onSet() で返した値を引数として
+	  	 onErase() が呼び出されます。
 	  	
 	  	@param value [in] (const ElementType1&)
-	  	  �ϊ�����ׂ��l���w�肵�Ă��������B
+	  	  変換するべき値を指定してください。
 	  	
 	  	@param piResult [out]
-	  	  ���̊֐��́A�l value �̕ϊ��ɐ��������Ƃ��͂��̒l�� 0 �ȏ�A
-	  	���s�����Ƃ��͕��̐��ɂ��܂��B
-	  	\n�֐��I����ɂ��̒l�����̐��ł���ꍇ�A this �͗v�f��
-	  	�R���e�i�Ɋi�[���܂���B���̏ꍇ�Aset() �E insert() ��
-	  	���s�ƂȂ�A *piResult �� set() �E insert() �̖߂�l�ƂȂ�܂��B
+	  	  この関数は、値 value の変換に成功したときはこの値を 0 以上、
+	  	失敗したときは負の数にします。
+	  	\n関数終了後にこの値が負の数である場合、 this は要素を
+	  	コンテナに格納しません。この場合、set() ・ insert() は
+	  	失敗となり、 *piResult が set() ・ insert() の戻り値となります。
 	  	
 	  	@return (ElementType2)
-	  	  value ��ϊ��������ʂ�Ԃ��܂��B�A���A�ϊ��Ɏ��s���A
-	  	 *piResult �����̐��ł���ꍇ�́A���̖߂�l�ɂ͈Ӗ�������܂���B
+	  	  value を変換した結果を返します。但し、変換に失敗し、
+	  	 *piResult が負の数である場合は、この戻り値には意味がありません。
 	  
 	  	
 	  	<H4>
-	  	�y�I�[�o���C�h�z
+	  	【オーバライド】
 	  	</H4>
-	  	  ElementType1 �̒l���A ElementType2 �ɕϊ����鏈��������
-	  	���Ă��������B�ϊ����ʂ̒l�͖߂�l�Ƃ��Ă��������B
+	  	  ElementType1 の値を、 ElementType2 に変換する処理を実装
+	  	してください。変換結果の値は戻り値としてください。
 	  	
-	  	  �ϊ��Ɏ��s�����ꍇ�́A *piResult �ɕ��̐���ݒ肵��
-	  	���������B
-	  	  *piResult �����̏ꍇ�A this �͗v�f���R���e�i�Ɋi�[
-	  	���܂���B���̏ꍇ�Aset() �E insert() �͎��s�ƂȂ�A
-	  	 *piResult �� set() �E insert() �̖߂�l�ƂȂ�܂��B
-	  	  *piResult �����̏ꍇ�A���̊֐��̖߂�l�͕]������܂���̂ŁA
-	  	���ł����܂��܂���B
+	  	  変換に失敗した場合は、 *piResult に負の数を設定して
+	  	ください。
+	  	  *piResult が負の場合、 this は要素をコンテナに格納
+	  	しません。この場合、set() ・ insert() は失敗となり、
+	  	 *piResult が set() ・ insert() の戻り値となります。
+	  	  *piResult が負の場合、この関数の戻り値は評価されませんので、
+	  	何でもかまいません。
 	 */
 	virtual adaptee_value_type onSet( const value_type& value , int* piResult ) = 0 ;
 	
 	/**
-	  	  get() ���\�b�h�́A����Ώۂ̃R���e�i m_pAdaptee ����擾��������
-	  	���̊֐����Ăяo���āA  ElementType2 �̒l value ���A
-	  	 ElementType1 �ɕϊ����܂��B
+	  	  get() メソッドは、操作対象のコンテナ m_pAdaptee から取得したあと
+	  	この関数を呼び出して、  ElementType2 の値 value を、
+	  	 ElementType1 に変換します。
 	  	
 	  	@param value [in] (const ElementType2&)
-	  	  �ϊ�����ׂ��l���w�肵�Ă��������B
+	  	  変換するべき値を指定してください。
 	  	
 	  	@return (ElementType1)
-	  	  value ��ϊ��������ʂ�Ԃ��܂��B
+	  	  value を変換した結果を返します。
 	  	
 	  	<H4>
-	  	�y�I�[�o���C�h�z
+	  	【オーバライド】
 	  	</H4>
-	  	  ElementType2 �̒l���A ElementType1 �ɕϊ����鏈��������
-	  	���Ă��������B�ϊ����ʂ̒l�͖߂�l�Ƃ��Ă��������B
+	  	  ElementType2 の値を、 ElementType1 に変換する処理を実装
+	  	してください。変換結果の値は戻り値としてください。
 	 */
 	virtual value_type onGet( const adaptee_value_type& value )const = 0 ;
 	
 	/**
-	  	  this �́A����Ώۂ̃R���e�i m_pAdaptee ����v�f����菜�����O�ɁA
-	  	���̊֐����Ăяo���܂��B
+	  	  this は、操作対象のコンテナ m_pAdaptee から要素を取り除く直前に、
+	  	この関数を呼び出します。
 	  
 	  
-	  	onSet() �Ăяo���ƁA onErase() �Ăяo���͑΂ɂȂ��Ă��܂��B
-	  	 onSet() �ł���l��Ԃ����ꍇ�A���̗v�f�� m_pAdaptee ����
-	  	��菜�����Ƃ��ɁA�K�� onSet() �ŕԂ����l�������Ƃ���
-	  	 onErase() ���Ăяo����܂��B
+	  	onSet() 呼び出しと、 onErase() 呼び出しは対になっています。
+	  	 onSet() である値を返した場合、その要素が m_pAdaptee から
+	  	取り除かれるときに、必ず onSet() で返した値を引数として
+	  	 onErase() が呼び出されます。
 	  	
 	  	@param value [in] (const ElementType2&)
-	  	  ����Ώۂ̃R���e�i m_pAdaptee �����菜���v�f���w�肵�Ă��������B
+	  	  操作対象のコンテナ m_pAdaptee から取り除く要素を指定してください。
 	  
 	  	<H4>
-	  	�y�I�[�o���C�h�z
+	  	【オーバライド】
 	  	</H4>
-	  	  �����͂���܂���B
-	  	  ����Ώۂ̃R���e�i m_pAdaptee �����菜���v�f�ɑ΂���
-	  	�㏈�����K�v�ȏꍇ�́A���̃����o�֐����I�[�o���C�h���āA
-	  	�㏈�����������Ă��������B
+	  	  処理はありません。
+	  	  操作対象のコンテナ m_pAdaptee から取り除く要素に対して
+	  	後処理が必要な場合は、このメンバ関数をオーバライドして、
+	  	後処理を実装してください。
 	 */
 	virtual void onErase( const adaptee_value_type& value ){} ;
 	///@}
@@ -284,24 +284,24 @@ protected:
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
 	   @param pAdaptee [in]
-	  	����ΏۃI�u�W�F�N�g�ƂȂ�A�R���e�i�ł��B
-	  	���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-	  	���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-	  	�������Ȃ��Ă͂Ȃ�܂���B
+	  	操作対象オブジェクトとなる、コンテナです。
+	  	このオブジェクトの破棄の責務は、クラスユーザーにあります。
+	  	このオブジェクトは、thisとの関連が保たれている間は、
+	  	生存しなくてはなりません。
 	 */
 	CaMuiFilter( Mui<ElementType2>* pAdaptee ) : 
 		m_pAdaptee( pAdaptee ){};
 private:
-	///	�R�s�[�͋֎~
+	///	コピーは禁止
 	CaMuiFilter( const CaMuiFilter& value )
 	{
 		assert( false ) ;
 	}
-	///	�R�s�[�͋֎~
+	///	コピーは禁止
 	CaMuiFilter& operator=( const CaMuiFilter& value )
 	{
 		assert( false ) ;
@@ -310,13 +310,13 @@ private:
 public:
 	/**
 	   @attention
-	  	�f�X�g���N�^�ł́A�R���e�i�̑S�Ă̗v�f��j�����܂��B
+	  	デストラクタでは、コンテナの全ての要素を破棄します。
 	 */
 	virtual ~CaMuiFilter()
 	{
-		//	�f�X�g���N�^�ł́A�h���N���X�� onErase() ���Ăяo����܂���B
-		//	���̂��߁A�����ŗv�f���폜���Ă��A�v�f�ɑ΂���
-		//	onErase() �͌Ăяo���ꂸ�A�Ӗ��͂���܂���B
+		//	デストラクタでは、派生クラスの onErase() が呼び出されません。
+		//	このため、ここで要素を削除しても、要素に対する
+		//	onErase() は呼び出されず、意味はありません。
 		//erase( 0 , INT_MAX ) ;
 	};
 	
@@ -327,24 +327,24 @@ public:
 	///@{
 	/**
 	   @return
-	   	�R���e�i�Ɋi�[����Ă���f�[�^�̌���Ԃ��܂��B
+	   	コンテナに格納されているデータの個数を返します。
 	 */
 	virtual int	size()const{	return m_pAdaptee->size() ; } ;
 	
 	/**
-	   	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
-	   	�v�f��Ԃ��܂��B
+	   	コンテナ内の、インデクスで指定された場所に格納されている
+	   	要素を返します。
 	   @param idx [in]
-	   	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	   	�͈͂͂O�ȏ� size() �����ł��B
-	  	INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	   	０から始まるインデクスを指定してください。
+	   	範囲は０以上 size() 未満です。
+	  	INT_MAX は、末尾を指定したものとみなします。
 	   @return
-	   	�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	   	インデクスで指定された要素を返します。
 	  
 	   <H4>
-	   �y�I�[�o���C�h�z
+	   【オーバライド】
 	   </H4>
-	  	m_pAdaptee ���̗v�f�� onGet() �ŕϊ��������̂�Ԃ��܂��B
+	  	m_pAdaptee 内の要素を onGet() で変換したものを返します。
 	 */
 	virtual ElementType1 get( int idx )const 
 	{
@@ -358,27 +358,27 @@ public:
 	///@{
 	
 	/**
-	   	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	   	�v�f���㏑�����܂��B
+	   	コンテナ内の、インデクスで指定された場所に、
+	   	要素を上書きします。
 	   @param element [in]
-	   	�v�f���w�肵�Ă��������B
+	   	要素を指定してください。
 	   @param iIndex [in]
-	   	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	   	�͈͂͂O�ȏ� size() �����ł��B
-	  	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	   	０から始まるインデクスを指定してください。
+	   	範囲は０以上 size() 未満です。
+	  	但し、INT_MAX は、末尾を指定したものとみなします。
 	   @return
-	   	0�ȏ�͐����A���̐��̓G���[�ł�
-	  	-	-1 ;	//	iIndex ���s���ł��B
+	   	0以上は成功、負の数はエラーです
+	  	-	-1 ;	//	iIndex が不正です。
 	  
 	   <H4>
-	   �y�I�[�o���C�h�z
+	   【オーバライド】
 	   </H4>
-	  	�P�D�V�����v�f�� onSet() �� ElementType2 �ɕϊ����܂��B
+	  	１．新しい要素を onSet() で ElementType2 に変換します。
 	  
-	  	�Q�Dm_pAdaptee ���̊����̗v�f�������ɂ��� onErase() ��
-	  	�Ăяo���Č㏈���������܂��B
+	  	２．m_pAdaptee 内の既存の要素を引数にして onErase() を
+	  	呼び出して後処理をさせます。
 	  
-	  	�R�Dm_pAdaptee ���̗v�f���A�P�D�ŕϊ������l�ɒu�������܂��B
+	  	３．m_pAdaptee 内の要素を、１．で変換した値に置き換えます。
 	 */
 	virtual int set( const ElementType1& element , int iIndex ) 
 	{
@@ -389,7 +389,7 @@ public:
 		}
 		if ( !( 0 <= iIndex && iIndex < m_pAdaptee->size() ) )
 		{
-			return -1 ;	//	iIndex ���s���ł��B
+			return -1 ;	//	iIndex が不正です。
 		}
 		
 		// --------------------------------
@@ -408,23 +408,23 @@ public:
 	};
 
 	/**
-	   	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	   	�v�f��ǉ����܂��B
+	   	コンテナ内の、インデクスで指定された場所に、
+	   	要素を追加します。
 	   @param element [in]
-	   	�v�f���w�肵�Ă��������B
+	   	要素を指定してください。
 	   @param iIndex [in]
-	   	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	   	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	   	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-	  	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	   	０から始まるインデクスを指定してください。
+	   	範囲は０以上 size() 以下です。
+	   	０は、先頭・size()なら末尾への追加になります。
+	  	但し、INT_MAX は、末尾を指定したものとみなします。
 	   @return
-	   	0�ȏ�͐����A���̐��̓G���[�ł�
+	   	0以上は成功、負の数はエラーです
 	  
 	   <H4>
-	   �y�I�[�o���C�h�z
+	   【オーバライド】
 	   </H4>
-	  	�v�f�� onSet() �� ElementType2 �ɕϊ����Ă���A
-	  	m_pAdaptee �ɒǉ����܂��B
+	  	要素を onSet() で ElementType2 に変換してから、
+	  	m_pAdaptee に追加します。
 	 */
 	virtual int insert( const ElementType1& element , int iIndex = INT_MAX ) 
 	{
@@ -434,7 +434,7 @@ public:
 		}
 		if ( !( 0 <= iIndex && iIndex <= m_pAdaptee->size() ) )
 		{
-			return -1 ;	//	iIndex ���s���ł��B
+			return -1 ;	//	iIndex が不正です。
 		}
 		// --------------------------------
 		int iRv = 0 ;
@@ -449,26 +449,26 @@ public:
 	}
 	
 	/**
-	   	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
-	   	�v�f���폜���܂��B
+	   	コンテナ内の、インデクスで指定された場所の
+	   	要素を削除します。
 	   @param iIndex [in]
-	   	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	   	�͈͂͂O�ȏ� size() �����ł��B
-	   	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	   	０から始まるインデクスを指定してください。
+	   	範囲は０以上 size() 未満です。
+	   	但し、INT_MAX は、末尾を指定したものとみなします。
 	   @param iSize [in]
-	   	�폜����v�f�̐����w�肵�Ă��������B
-	   	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	   	削除する要素の数を指定してください。
+	   	但し、INT_MAX は、 iIndex から末尾までを表します。
 	   @attention
-	  	iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+	  	iIndex と iSize の両方を INT_MAX にすることはできません。
 	   @return
-	   	0�ȏ�͐����A���̐��̓G���[�ł�
-	  	-	-1 ;	//	iIndex ���s��
+	   	0以上は成功、負の数はエラーです
+	  	-	-1 ;	//	iIndex が不正
 	  
 	   <H4>
-	   �y�I�[�o���C�h�z
+	   【オーバライド】
 	   </H4>
-	  	�폜����v�f�������ɂ��āAonErase() ���Ăяo���Ă���A
-	  	m_pAdaptee ����v�f���폜���܂��B
+	  	削除する要素を引数にして、onErase() を呼び出してから、
+	  	m_pAdaptee から要素を削除します。
 	 */
 	virtual int erase( int iIndex , int iSize = 1 ) 
 	{
@@ -478,7 +478,7 @@ public:
 		}
 		if ( iIndex == INT_MAX && iSize == INT_MAX )
 		{
-			return -1 ;	//	iIndex ���s��
+			return -1 ;	//	iIndex が不正
 		}
 		if ( iIndex == INT_MAX )
 		{
@@ -490,7 +490,7 @@ public:
 		}
 		if ( !( 0 <= iIndex && iIndex + iSize <= m_pAdaptee->size() ) )
 		{
-			return -1 ;	//	iIndex ���s���ł��B
+			return -1 ;	//	iIndex が不正です。
 		}
 		// --------------------------------
 		for ( int cnt = 0 ; cnt < iSize ; cnt ++ )
@@ -505,15 +505,15 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CaMuiFilter-�֘A
+	///@name CaMuiFilter-関連
 	// ********************************
 	///@{
 	Mui<ElementType2>*	getAdaptee(){	return m_pAdaptee ;};
 	const Mui<ElementType2>*	getAdaptee()const{	return m_pAdaptee ;};
 	/**
-	  	���̃��\�b�h�� m_pAdaptee ��u���������ꍇ�A this �� 
+	  	このメソッドで m_pAdaptee を置き換えた場合、 this は 
 	  	erase( 0 , INT_MAX ) 
-	 	�ŁA�R���e�i���ێ����Ă����v�f��j�����܂��B
+	 	で、コンテナが保持していた要素を破棄します。
 	 */
 	CaMuiFilter<ElementType1,ElementType2>& setAdaptee( 
 			Mui<ElementType2>*	value )

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,93 +81,93 @@ namespace DcDraw{
 
 /**
 @brief
-	�e�L�X�g�����߂��āA�c�������̃e�L�X�g�\��������v�f��\���A�P���f�[�^�N���X�ł��B
+	テキストを解釈して、縦書き時のテキスト構成をする要素を表す、単純データクラスです。
 	
-	CVerticalTextElementBuilder::scan() ���\�b�h�́A���������͂��A
-	��͌��ʂ� CVerticalTextElement �̃R���e�i�Ƃ��č\�����܂��B
+	CVerticalTextElementBuilder::scan() メソッドは、文字列を解析し、
+	解析結果を CVerticalTextElement のコンテナとして構成します。
 */
 class CVerticalTextElementBuilder
 {
 protected:
 	// ================================
-	///@name �����֐�
+	///@name 下請関数
 	// ================================
 	///@{
 	/**
-		��������(�S�p�E���p)���ۂ��𔻒f���܂��B
+		文字が空白(全角・半角)か否かを判断します。
 	@param aStr [in]
-		���f���s���������w�肵�Ă��������B
+		判断を行う文字を指定してください。
 	@return
-		- true: aStr �� ��(�S�p�E���p)�ł��B
+		- true: aStr は 空白(全角・半角)です。
 	*/
 	static bool isSpace( const string& aStr );
 
 	/**
-		��������Ǔ_��( , . �A�B)���ۂ��𔻒f���܂��B
+		文字が句読点類( , . 、。)か否かを判断します。
 	@param aStr [in]
-		���f���s���������w�肵�Ă��������B
+		判断を行う文字を指定してください。
 	@return
-		- true: aStr �� ��Ǔ_�ł��B
+		- true: aStr は 句読点です。
 	*/
 	static bool isDelimiter( const string& aStr );
 	///@}
 public:
 	// ********************************
-	///@name CVerticalTextElementBuilder-����
+	///@name CVerticalTextElementBuilder-操作
 	// ********************************
 	///@{
 	/**
-	  	����������߂��āA�w������v�f�x�̏W�����쐬���A�R���e�i�ɒǉ����܂��B
+	  	文字列を解釈して、『文字列要素』の集合を作成し、コンテナに追加します。
 	@param aStr [in]
-	  	���߂��镶������w�肵�Ă��������B
+	  	解釈する文字列を指定してください。
 	@param pCStrElementCont [out]
-	  	���̊֐��͂��̃R���e�i�̖����ɁA aStr �����߂���������v�f��
-	  	�ǉ����܂��B	
-	  	���̃R���e�i������܂ŕێ����Ă����v�f�͔j�����܂��B
+	  	この関数はこのコンテナの末尾に、 aStr を解釈した文字列要素を
+	  	追加します。	
+	  	このコンテナがそれまで保持していた要素は破棄します。
 	@param bTwoDegiLateral [in]
-		- true: 2�����̔��p�������A [H_HANKAKU] �Ƃ��܂��B
-		- false: 2�����̔��p�������A[V_HANKAKU] �Ƃ��܂��B
+		- true: 2文字の半角数字を、 [H_HANKAKU] とします。
+		- false: 2文字の半角数字を、[V_HANKAKU] とします。
 	  
 	  
-	  	�i�P�j�@��������w������v�f�x�ɕ���
+	  	（１）　文字列を『文字列要素』に分割
 	  	
-	  	�@��������A���s�s�\�ȍ\���v�f�ɕ������܂��B���̕����ł́A
-	  	����ȍ~���́u���s�s�\�ȍ\���v�f�v�ЂƂ��w������v�f�x�ƌĂт܂��B
+	  	　文字列を、改行不可能な構成要素に分割します。この文書では、
+	  	これ以降この「改行不可能な構成要素」ひとつを『文字列要素』と呼びます。
 	  	
-	  	�@�w������v�f�x�́A�ȉ��̂R�̎�ނɋ敪����܂��B
+	  	　『文字列要素』は、以下の３つの種類に区分されます。
 	  	
-	  		- [V_ZENKAKU]  �c�����t�H���g���g���ĕ`�悷��A�A�������S�p����
-	  		- [V_HANKAKU]  �c�����t�H���g���g���ĕ`�悷��A�A���������p����
-	  		- [H_HANKAKU]  �������t�H���g���g���ĕ`�悷��A�P�E�Q�����̔��p����
-	  			�i���̑O��ɔ��p�������Ȃ����Ɓj
+	  		- [V_ZENKAKU]  縦書きフォントを使って描画する、連続した全角文字
+	  		- [V_HANKAKU]  縦書きフォントを使って描画する、連続した半角文字
+	  		- [H_HANKAKU]  横書きフォントを使って描画する、１・２文字の半角数字
+	  			（この前後に半角文字がないこと）
 	  	
 	  	
-	  	�@�i��jbTwoDegiLateral=true �̏ꍇ
-	  		������ "���s��12�^28�`1�^5�́A900���ɕύX" �́A
-	  		�ȉ��́w������v�f�x�ɕ������܂��B
-	  		- "��"	[V_ZENKAKU]
-	  		- "�s"	[V_ZENKAKU]
-	  		- "��"	[V_ZENKAKU]
+	  	　（例）bTwoDegiLateral=true の場合
+	  		文字列 "京都発12／28〜1／5は、900発に変更" は、
+	  		以下の『文字列要素』に分割します。
+	  		- "京"	[V_ZENKAKU]
+	  		- "都"	[V_ZENKAKU]
+	  		- "発"	[V_ZENKAKU]
 	  		- "12" 		[H_HANKAKU]
-	  		- "�^" 		[V_ZENKAKU]
+	  		- "／" 		[V_ZENKAKU]
 	  		- "28" 		[H_HANKAKU]
-	  		- "�`"		[V_ZENKAKU]
+	  		- "〜"		[V_ZENKAKU]
 	  		- "1"			[H_HANKAKU]
-	  		- "�^"		[V_ZENKAKU]
+	  		- "／"		[V_ZENKAKU]
 	  		- "5" 		[H_HANKAKU]
-	  		- "�́A"		[V_ZENKAKU]
+	  		- "は、"		[V_ZENKAKU]
 	  		- "900"		[V_HANKAKU]
-	  		- "��"	[V_ZENKAKU]
-	  		- "��"	[V_ZENKAKU]
-	  		- "��"	[V_ZENKAKU]
-	  		- "�X"	[V_ZENKAKU]
+	  		- "発"	[V_ZENKAKU]
+	  		- "に"	[V_ZENKAKU]
+	  		- "変"	[V_ZENKAKU]
+	  		- "更"	[V_ZENKAKU]
 	  	
-	  	�@��Ǔ_�̑O�ł͉��s���Ȃ��ق����]�܂����ł��B���̂��߁A��Ǔ_��
-	  	�O�̕����́w������v�f�x�̈ꕔ�Ƃ��܂��B
-	  	�@�A���������p�p�����̓r���ł͉��s���Ȃ��ق����]�܂����ł��B���̂��߁A
-	  	�A���������p�p�����́A��́w������v�f�x�Ɋi�[������̂Ƃ��܂��B
-	  	�������A�󔒂�L���ނ��o�������ꍇ�́A�����Łw������v�f�x��
-	  	�I�����̂Ƃ��܂��B
+	  	　句読点の前では改行しないほうが望ましいです。このため、句読点は
+	  	前の文字の『文字列要素』の一部とします。
+	  	　連続した半角英数字の途中では改行しないほうが望ましいです。このため、
+	  	連続した半角英数字は、一つの『文字列要素』に格納するものとします。
+	  	ただし、空白や記号類が出現した場合は、そこで『文字列要素』は
+	  	終わるものとします。
 	 */
 	static void scan( 
 		const std::string& aStr , 

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //	CconvDcDrawProp.cpp
@@ -90,7 +90,7 @@ const char nameEscapement[] = "Escapement" ;
 
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CconvDcDrawProp::CconvDcDrawProp(void)
 {
@@ -212,7 +212,7 @@ int CconvDcDrawProp::CdFontProp_from_CdConnectedString2(
 			int iValue = atoi( strValue.c_str() ) ;
 			if ( !( 0 <= iValue ) )
 			{
-				iRv = -12 ;	//	PointTextHeight �̒l���s��
+				iRv = -12 ;	//	PointTextHeight の値が不正
 			}
 			else if ( 0 < iValue )
 			{
@@ -230,7 +230,7 @@ int CconvDcDrawProp::CdFontProp_from_CdConnectedString2(
 			int iValue = atoi( strValue.c_str() ) ;
 			if ( !( 0 <= iValue ) )
 			{
-				iRv = -22 ;	//	LogicalunitTextHeight �̒l���s��
+				iRv = -22 ;	//	LogicalunitTextHeight の値が不正
 			}
 			else if ( 0 < iValue )
 			{
@@ -248,7 +248,7 @@ int CconvDcDrawProp::CdFontProp_from_CdConnectedString2(
 			int iValue = atoi( strValue.c_str() ) ;
 			if ( !( 0 <= iValue ) )
 			{
-				iRv = -32 ;	//	LogicalunitCellHeight �̒l���s��
+				iRv = -32 ;	//	LogicalunitCellHeight の値が不正
 			}
 			else if ( 0 < iValue )
 			{
@@ -263,7 +263,7 @@ int CconvDcDrawProp::CdFontProp_from_CdConnectedString2(
 			nameFacename ) ;
 		if ( strValue.length() == 0 )
 		{
-			iRv = -42 ;	//	Facename �̒l���s��
+			iRv = -42 ;	//	Facename の値が不正
 		}
 		else
 		{
@@ -279,7 +279,7 @@ int CconvDcDrawProp::CdFontProp_from_CdConnectedString2(
 			int iValue = atoi( strValue.c_str() ) ;
 			if ( !( 0 <=  iValue && iValue <= 1 ) )
 			{
-				iRv = -52 ;	//	Bold �̒l���s��
+				iRv = -52 ;	//	Bold の値が不正
 			}
 			else
 			{
@@ -297,7 +297,7 @@ int CconvDcDrawProp::CdFontProp_from_CdConnectedString2(
 			int iValue = atoi( strValue.c_str() ) ;
 			if ( !( 0 <=  iValue && iValue <= 1 ) )
 			{
-				iRv = -62 ;	//	Itaric �̒l���s��
+				iRv = -62 ;	//	Itaric の値が不正
 			}
 			else
 			{
@@ -315,7 +315,7 @@ int CconvDcDrawProp::CdFontProp_from_CdConnectedString2(
 			int iValue = atoi( strValue.c_str() ) ;
 			if ( !( 0 <=  iValue && iValue <= 1 ) )
 			{
-				iRv = -72 ;	//	Underline �̒l���s��
+				iRv = -72 ;	//	Underline の値が不正
 			}
 			else
 			{
@@ -333,7 +333,7 @@ int CconvDcDrawProp::CdFontProp_from_CdConnectedString2(
 			int iValue = atoi( strValue.c_str() ) ;
 			if ( !( 0 <=  iValue && iValue <= 1 ) )
 			{
-				iRv = -82 ;	//	StrikeOut �̒l���s��
+				iRv = -82 ;	//	StrikeOut の値が不正
 			}
 			else
 			{
@@ -351,7 +351,7 @@ int CconvDcDrawProp::CdFontProp_from_CdConnectedString2(
 			int iValue = atoi( strValue.c_str() ) ;
 			if ( !( 0 <= iValue ) )
 			{
-				iRv = -92 ;	//	Escapement �̒l���s��
+				iRv = -92 ;	//	Escapement の値が不正
 			}
 			else if ( 0 < iValue )
 			{
@@ -498,14 +498,14 @@ int CconvDcDrawProp::CdDcdFreeLineProp_from_CdConnectedString2(
 		{
 			if ( strValue.length() <= 0 )
 			{
-				iRv = -11 ;	//	LogicalunitWidth �̒l���s���ł�
+				iRv = -11 ;	//	LogicalunitWidth の値が不正です
 			}
 			else
 			{
 				iValue = intOf( strValue ) ;
 				if ( iValue < 0 )
 				{
-					iRv = -11 ;	//	LogicalunitWidth �̒l���s���ł�
+					iRv = -11 ;	//	LogicalunitWidth の値が不正です
 				}
 			}
 		}
@@ -523,7 +523,7 @@ int CconvDcDrawProp::CdDcdFreeLineProp_from_CdConnectedString2(
 		{
 			if ( strValue.length() <= 0 )
 			{
-				iRv = -12 ;	//	Color �̒l���s���ł�
+				iRv = -12 ;	//	Color の値が不正です
 			}
 			else
 			{
@@ -566,8 +566,8 @@ int CconvDcDrawProp::CdDcdFreeLineProp_from_string(
 			&CdConnectedString2( aString ) ) ;
 	}
 	//iRv = 
-	//	-	-11 ;	//	LogicalunitWidth �̒l���s���ł�
-	//	-	-12 ;	//	Color �̒l���s���ł�
+	//	-	-11 ;	//	LogicalunitWidth の値が不正です
+	//	-	-12 ;	//	Color の値が不正です
 	// --------------------------------
 	if ( iRv >= 0 )
 	{

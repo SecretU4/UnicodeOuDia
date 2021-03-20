@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 // $Id: CdYColSpecCont.cpp 261 2016-01-23 03:59:53Z okm $
@@ -72,7 +72,7 @@ Copyright (C) 2006-2017 take-okm
 namespace ViewJikokuhyou{ namespace JikokuhyouColSpec{
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CdYColSpecCont::CdYColSpecCont( 
 	const CentDedEkiCont* pCentDedEkiCont , 
@@ -93,11 +93,11 @@ CdYColSpecCont::CdYColSpecCont( )
 }
 
 	// ********************************
-	//@name CdYColSpec-�֘A
+	//@name CdYColSpec-関連
 	// ********************************
 
 	// ********************************
-	//@name ����
+	//@name 属性
 	// ********************************
 ERessyahoukou	CdYColSpecCont::getRessyahoukou()const 
 {
@@ -118,7 +118,7 @@ int CdYColSpecCont::getColumnNumber_Ekijikoku_end()const
 }
 
 	// ********************************
-	//@name CdYColSpec-����
+	//@name CdYColSpec-操作
 	// ********************************
 void CdYColSpecCont::scan( 
 		const CentDedEkiCont* pCentDedEkiCont ,
@@ -126,33 +126,33 @@ void CdYColSpecCont::scan(
 		bool bDisplayAllJikoku ) 
 {
 	// --------------------------------
-	//	�����f�[�^�̍폜
+	//	既存データの削除
 	// --------------------------------
 	clear() ;
 
 	// --------------------------------
-	//	�w��ԍ�-�\�����e�x�̑Ή��\���\�z
+	//	『列番号-表示内容』の対応表を構築
 	// --------------------------------
-	//	��Ԕԍ�
+	//	列車番号
 	m_contColumnSpec.insert( 
 		CdYColSpec( CdYColSpec::ColumnType_Ressyabangou ) ) ;
-	//	��Ԏ�� 
+	//	列車種別 
 	m_contColumnSpec.insert( 
 		CdYColSpec( CdYColSpec::ColumnType_Ressyasyubetsu ) ) ;
-	//	��Ԗ�
+	//	列車名
 	m_contColumnSpec.insert( 
 		CdYColSpec( CdYColSpec::ColumnType_Ressyamei ) ) ;
-	//	���� 
+	//	号数 
 	m_contColumnSpec.insert( 
 		CdYColSpec( CdYColSpec::ColumnType_Gousuu ) ) ;
-	//	�u���v�\�� 
+	//	「号」表示 
 	m_contColumnSpec.insert( 
 		CdYColSpec( CdYColSpec::ColumnType_Gou ) ) ;
 
-	//	�w�����̐擪��̗�ԍ��B
+	//	駅時刻の先頭列の列番号。
 	m_iColumnNumber_Ekijikoku_begin = m_contColumnSpec.size()  ;
 
-	//	�w����
+	//	駅時刻
 	{
 		const Mu<CentDedEkiCont::CdDedEki>* muEki = 
 			pCentDedEkiCont->getMuPtr( eRessyahoukou ) ;
@@ -162,13 +162,13 @@ void CdYColSpecCont::scan(
 		{
 			CentDedEkiCont::CdDedEki	aEki = muEki->get( iEkiOrder ) ;
 
-			//	�������\������ �܂���[�S������\��] ���[�h�Ȃ�A���������ǉ�
+			//	着時刻表示あり または[全時刻を表示] モードなら、着時刻列を追加
 			if ( aEki.getChakujikokuHyouji() || bDisplayAllJikoku )
 			{
 				m_contColumnSpec.insert( 
 					CdYColSpec( CdYColSpec::ColumnType_Ekijikoku_Chaku , iEkiOrder ) ) ;
 			}
-			//	�������\������ �܂���[�S������\��] ���[�h�Ȃ�A���������ǉ�
+			//	発時刻表示あり または[全時刻を表示] モードなら、発時刻列を追加
 			if ( aEki.getHatsujikokuHyouji() || bDisplayAllJikoku )
 			{
 				m_contColumnSpec.insert( 
@@ -176,9 +176,9 @@ void CdYColSpecCont::scan(
 			}
 		}
 	}
-	/* 		�w������� �I�[(�̎�) �� ��ԍ��B*/
+	/* 		駅時刻列の 終端(の次) の 列番号。*/
 	m_iColumnNumber_Ekijikoku_end = m_contColumnSpec.size()  ;
-	/**	���l */
+	/**	備考 */
 	m_contColumnSpec.insert( 
 		CdYColSpec( CdYColSpec::ColumnType_Bikou ) ) ;
 }
@@ -211,7 +211,7 @@ int CdYColSpecCont::ColumnNumberFromSpec(
 {
 	int iRv = -1 ;
 	// --------------------------------
-	//	�\�����e�̈�v����������
+	//	表示内容の一致する列を検索
 	// --------------------------------
 	for ( int iColumnNumber = 0 ; 
 		iRv == -1 && iColumnNumber < m_contColumnSpec.size() ; 
@@ -223,13 +223,13 @@ int CdYColSpecCont::ColumnNumberFromSpec(
 		}
 	}
 	// --------------------------------
-	//	�Ή�����\�����ڂ���\���ł���ꍇ�A����̗�ԍ���Ԃ��܂��B
+	//	対応する表示項目が非表示である場合、代わりの列番号を返します。
 	// --------------------------------
 	if ( iRv == -1 && bResolveSameStation )
 	{
-		//- aCdYColumnSpec ���AColumnType_Ressyabangou(��Ԕԍ�)�`ColumnType_Gou(�u���v�\��) 
-		//�܂łȂ�AColumnType_Ressyabangou�`ColumnType_Gou �̂����̂����ꂩ����������
-		//�ŏ��̗�ԍ���Ԃ��܂��B
+		//- aCdYColumnSpec が、ColumnType_Ressyabangou(列車番号)〜ColumnType_Gou(「号」表示) 
+		//までなら、ColumnType_Ressyabangou〜ColumnType_Gou のうちのいずれかが見つかった
+		//最初の列番号を返します。
 		if ( aCdYColumnSpec.isRessyaProp() )
 		{
 			for ( int iColumnNumber = 0 ; 
@@ -242,12 +242,12 @@ int CdYColSpecCont::ColumnNumberFromSpec(
 				}
 			}
 		}
-		//- aCdYColumnSpec ��	ColumnType_Ekijikoku_Chaku(������)�Ȃ�΁A
-		//�����wOrder�� ColumnType_Ekijikoku_Hatsu(������)��Ԃ��܂��B���̗����\���Ȃ�A
-		//�wOrder��aCdYColumnSpec �����ŁAColumnType_Ekijikoku_Chaku �� 
-		//ColumnType_Ekijikoku_Hatsu �̗�̂����A��ԑ傫����ԍ���Ԃ��܂��B
-		//- aCdYColumnSpec ��	ColumnType_Ekijikoku_Hatsu(������)�̏ꍇ���A
-		//ColumnType_Ekijikoku_Chaku �̏ꍇ�Ɠ��l�ł��B
+		//- aCdYColumnSpec が	ColumnType_Ekijikoku_Chaku(着時刻)ならば、
+		//同じ駅Orderの ColumnType_Ekijikoku_Hatsu(発時刻)を返します。その列も非表示なら、
+		//駅OrderがaCdYColumnSpec 未満で、ColumnType_Ekijikoku_Chaku か 
+		//ColumnType_Ekijikoku_Hatsu の列のうち、一番大きい列番号を返します。
+		//- aCdYColumnSpec が	ColumnType_Ekijikoku_Hatsu(発時刻)の場合も、
+		//ColumnType_Ekijikoku_Chaku の場合と同様です。
 		else if ( aCdYColumnSpec.isEkiJikoku() )
 		{
 			for ( int iColumnNumber = m_contColumnSpec.size() - 1 ;

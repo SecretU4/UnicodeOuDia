@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -74,17 +74,17 @@ Copyright (C) 2006-2017 take-okm
 #include "str/strToInt.h"
 #include "str/stringSplit.h"
 
-/** ”z—ñ a ‚Ì—v‘f”‚ğ•Ô‚µ‚Ü‚·B */
+/** é…åˆ— a ã®è¦ç´ æ•°ã‚’è¿”ã—ã¾ã™ã€‚ */
 #define arrayof(a) (sizeof(a)/sizeof(a[0]))
 
 // ********************************
 
 /**
-	aCdColorProp ‚ğ•¶š—ñ‚É•ÏŠ·‚µ‚Ü‚·B
+	aCdColorProp ã‚’æ–‡å­—åˆ—ã«å¤‰æ›ã—ã¾ã™ã€‚
 @param aCdColorProp [in]
-	•ÏŠ·Œ³‚Ì’l‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	å¤‰æ›å…ƒã®å€¤ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 @return
-	•ÏŠ·Œ‹‰Ê‚ğ•Ô‚µ‚Ü‚·B
+	å¤‰æ›çµæœã‚’è¿”ã—ã¾ã™ã€‚
 */
 static string CdColorProp_to_string( const CdColorProp& aCdColorProp )
 {
@@ -101,11 +101,11 @@ static string CdColorProp_to_string( const CdColorProp& aCdColorProp )
 
 
 /**
-	•¶š—ñ‚ğ aCdColorProp ‚É•ÏŠ·‚µ‚Ü‚·B
+	æ–‡å­—åˆ—ã‚’ aCdColorProp ã«å¤‰æ›ã—ã¾ã™ã€‚
 @param aString [in]
-	•ÏŠ·Œ³‚Ì’l‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢B
+	å¤‰æ›å…ƒã®å€¤ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚
 @return
-	•ÏŠ·Œ‹‰Ê‚ğ•Ô‚µ‚Ü‚·B
+	å¤‰æ›çµæœã‚’è¿”ã—ã¾ã™ã€‚
  */
 static CdColorProp CdColorProp_from_string( const string& aString  )
 {
@@ -156,7 +156,7 @@ int CconvCentDed_03::CentDedEki_To_CdConnectedString(
 	//1.Ekimei
 	if ( iRv >= 0 ){
 		if ( aCentDedEki.getEkimei().empty() ){
-			iRv = -11 ;	//	Ekimei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
+			iRv = -11 ;	//	Ekimei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 		}	else	{
 			pCdConnectedString->setItem( nameEkimei , 
 				aCentDedEki.getEkimei() ) ;
@@ -174,7 +174,7 @@ int CconvCentDed_03::CentDedEki_To_CdConnectedString(
 			} 
 		}
 		if ( idx == arrayof( arEkijikokukeisiki_name )  ){
-			iRv = -22 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
+			iRv = -22 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		}	else	{
 			pCdConnectedString->setItem( nameEkijikokukeisiki , 
 				arEkijikokukeisiki_name[idx].name ) ;
@@ -193,7 +193,7 @@ int CconvCentDed_03::CentDedEki_To_CdConnectedString(
 			} 
 		}
 		if ( idx == arrayof( arEkijikokukeisiki_name )  ){
-			iRv = -32 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
+			iRv = -32 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		}	else	{
 			pCdConnectedString->setItem( nameEkikibo , 
 				arEkikibo_name[idx].name ) ;
@@ -221,7 +221,7 @@ int CconvCentDed_03::CentDedEki_From_CdConnectedString(
 	if ( iRv >= 0 ){
 		string strValue = aCdConnectedString.getValue( nameEkimei ) ;
 		if ( strValue.empty() ){
-			iRv = -11 ;	//	Ekimei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
+			iRv = -11 ;	//	Ekimei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 		}	else	{
 			aCentDedEki.setEkimei( strValue ) ;
 		}
@@ -240,7 +240,7 @@ int CconvCentDed_03::CentDedEki_From_CdConnectedString(
 			} 
 		}
 		if ( idx == arrayof(arEkijikokukeisiki_name) ){
-			iRv = -22 ;	//	Ekijikokukeisiki ‚Ì’l‚ª•s³‚Å‚·B
+			iRv = -22 ;	//	Ekijikokukeisiki ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		}	else	{
 			aCentDedEki.setEkijikokukeisiki( 
 				arEkijikokukeisiki_name[idx].value ) ;
@@ -260,7 +260,7 @@ int CconvCentDed_03::CentDedEki_From_CdConnectedString(
 			} 
 		}
 		if ( idx == arrayof(arEkikibo_name) ){
-			iRv = -32 ;	//	Ekikibo ‚Ì’l‚ª•s³‚Å‚·B
+			iRv = -32 ;	//	Ekikibo ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		}	else	{
 			aCentDedEki.setEkikibo( arEkikibo_name[idx].value ) ;
 		}
@@ -311,7 +311,7 @@ int CconvCentDed_03::CentDedRessyasyubetsu_To_CdConnectedString(
 	//1.Syubetsumei
 	if ( iRv >= 0 ){
 		if ( aCentDedRessyasyubetsu.getSyubetsumei().empty() ){
-			iRv = -11 ;	//	Syubetsumei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
+			iRv = -11 ;	//	Syubetsumei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 		}	else	{
 			pCdConnectedString->setItem( nameSyubetsumei , 
 				aCentDedRessyasyubetsu.getSyubetsumei() ) ;
@@ -352,7 +352,7 @@ int CconvCentDed_03::CentDedRessyasyubetsu_To_CdConnectedString(
 			aCentDedRessyasyubetsu.getDiagramSenStyle() != 
 				arESenStyle_name[idx].value ; idx ++ ){};
 		if ( idx == arrayof(arESenStyle_name) ){
-			iRv = -52 ;	//	DiagramSenStyle ‚Ì’l‚ª•s³‚Å‚·B
+			iRv = -52 ;	//	DiagramSenStyle ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		}	else	{
 			pCdConnectedString->setItem( nameDiagramSenStyle , 
 				arESenStyle_name[idx].name ) ;
@@ -384,7 +384,7 @@ int CconvCentDed_03::CentDedRessyasyubetsu_From_CdConnectedString(
 	if ( iRv >= 0 ){
 		string	strValue = aCdConnectedString.getValue( nameSyubetsumei ) ;
 		if ( strValue.empty() ){
-			iRv = -11 ;	//	Syubetsumei ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
+			iRv = -11 ;	//	Syubetsumei ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 		}	else	{
 			aCentDedRessyasyubetsu.setSyubetsumei( strValue ) ;
 		}
@@ -425,7 +425,7 @@ int CconvCentDed_03::CentDedRessyasyubetsu_From_CdConnectedString(
 			idx < arrayof(arESenStyle_name) && 
 			strValue != arESenStyle_name[idx].name ; idx ++ ){};
 		if ( idx == arrayof(arESenStyle_name) ){
-			iRv = -52 ;	//	DiagramSenStyle ‚Ì’l‚ª•s³‚Å‚·B
+			iRv = -52 ;	//	DiagramSenStyle ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		}	else	{
 			aCentDedRessyasyubetsu.setDiagramSenStyle( 
 				arESenStyle_name[idx].value ) ;
@@ -456,19 +456,19 @@ void CconvCentDed_03::CentDedRessyasyubetsu_to_CDcdFreeLineProp(
 {
 		pCdLineProp->setColor( aCOLORREF ) ;
 		switch( eSenStyle ){
-		 // Àü 
+		 // å®Ÿç·š 
 		 case CentDedRessyasyubetsu::SenStyle_Jissen :
 			pCdLineProp->setLinestyle( LINESTYLE_SOLID ) ;
 			break ;
-		 // ”jü
+		 // ç ´ç·š
 		 case CentDedRessyasyubetsu::SenStyle_Hasen :
 			pCdLineProp->setLinestyle( LINESTYLE_DASH ) ;
 			break ;
-		 // “_ü
+		 // ç‚¹ç·š
 		 case CentDedRessyasyubetsu::SenStyle_Tensen :
 			pCdLineProp->setLinestyle( LINESTYLE_DOT ) ;
 			break ;
-		 // ˆê“_½ü
+		 // ä¸€ç‚¹é–ç·š
 		 case CentDedRessyasyubetsu::SenStyle_Ittensasen :
 			pCdLineProp->setLinestyle( LINESTYLE_DASH_DOT ) ;
 			break ;
@@ -522,7 +522,7 @@ int CconvCentDed_03::CentDedRessya_To_CdConnectedString(
 				pCentDedRessya->getRessyahoukou() != 
 					arERessyahoukou_name[idx].value ; idx ++ ){};
 			if ( idx == arrayof(arERessyahoukou_name) ){
-				iRv = -12 ;	//	Ressyahoukou ‚Ì’l‚ª•s³‚Å‚·B
+				iRv = -12 ;	//	Ressyahoukou ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 			}	else	{
 				pCdConnectedString->setItem( nameRessyahoukou , 
 					arERessyahoukou_name[idx].name ) ;
@@ -551,19 +551,19 @@ int CconvCentDed_03::CentDedRessya_To_CdConnectedString(
 				string	strEkiatsukai ;
 				string strChaku ;
 				string strHatsu ;
-				//	‰wˆµ
+				//	é§…æ‰±
 				if ( aCentDedEkiJikoku.getEkiatsukai() != CentDedEkiJikoku::Ekiatsukai_None ){
 					strEkiatsukai = OuLib::stringOf( 
 						(int)aCentDedEkiJikoku.getEkiatsukai() ) ;
 				}
-				//	’…
+				//	ç€æ™‚åˆ»
 				if ( !aCentDedEkiJikoku.getChakujikoku().isNull() ){
 					strChaku = aCentDedEkiJikoku.getChakujikoku().encode(
 						CdDedJikoku::Format_NoColon |
 						CdDedJikoku::Format_HourZeroToNone |
 						CdDedJikoku::Format_NoSecond ) ;
 				}
-				//	”­
+				//	ç™ºæ™‚åˆ»
 				if ( !aCentDedEkiJikoku.getHatsujikoku().isNull() ){
 					strHatsu = aCentDedEkiJikoku.getHatsujikoku().encode(
 						CdDedJikoku::Format_NoColon |
@@ -637,7 +637,7 @@ int CconvCentDed_03::CentDedRessya_From_CdConnectedString(
 					strValue != 
 						arERessyahoukou_name[idx].name ; idx ++ ){};
 				if ( idx == arrayof(arERessyahoukou_name) ){
-					iRv = -12 ;	//	Ressyahoukou ‚Ì’l‚ª•s³‚Å‚·B
+					iRv = -12 ;	//	Ressyahoukou ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 				}	else	{
 					//pCentDedRessya->setRessyahoukou( 
 					//	arERessyahoukou_name[idx].value ) ;
@@ -646,9 +646,9 @@ int CconvCentDed_03::CentDedRessya_From_CdConnectedString(
 			}
 		}
 	}
-	//bIsNull = ‚±‚Ì—ñÔ‚ÉŠÖ‚·‚é‹Lq‚ª‚È‚¢ê‡‚ÍAM‚Å‚·B
-	//eRessyahoukou = 1.Ressyahoukou‚Ì’lB
-	//	’A‚µAbIsNull ‚ª^‚Ìê‡‚ÍA‚±‚Ì’l‚Í–³Œø‚Å‚·B
+	//bIsNull = ã“ã®åˆ—è»Šã«é–¢ã™ã‚‹è¨˜è¿°ãŒãªã„å ´åˆã¯ã€ä¿¡ã§ã™ã€‚
+	//eRessyahoukou = 1.Ressyahoukouã®å€¤ã€‚
+	//	ä½†ã—ã€bIsNull ãŒçœŸã®å ´åˆã¯ã€ã“ã®å€¤ã¯ç„¡åŠ¹ã§ã™ã€‚
 	
 	if ( !bIsNull ){
 		int iRessyasyubetsuIndex = -1 ; 
@@ -660,8 +660,8 @@ int CconvCentDed_03::CentDedRessya_From_CdConnectedString(
 			pCentDedRessya->setRessyasyubetsuIndex( iValue ) ;
 		}
 		
-		//iRessyasyubetsuIndex = 2.RessyasyubetsuIndex‚Ì’lB
-		//	’A‚µAbIsNull ‚ª^‚Ìê‡‚ÍA‚±‚Ì’l‚Í–³Œø‚Å‚·B
+		//iRessyasyubetsuIndex = 2.RessyasyubetsuIndexã®å€¤ã€‚
+		//	ä½†ã—ã€bIsNull ãŒçœŸã®å ´åˆã¯ã€ã“ã®å€¤ã¯ç„¡åŠ¹ã§ã™ã€‚
 
 		//3.EkiJikoku3
 		if ( iRv >= 0 ){
@@ -697,9 +697,9 @@ int CconvCentDed_03::CentDedRessya_From_CdConnectedString(
 					}	else	{
 						strEkiatsukai = strEkijikoku ;
 					}
-					//strEkiatsukai = ‰wˆµE‹ó•¶š—ñ‚Íw‰^s‚È‚µxB"1"`"3" ;
-					//strChaku = ’…
-					//strHatsu = ”­
+					//strEkiatsukai = é§…æ‰±ãƒ»ç©ºæ–‡å­—åˆ—ã¯ã€é‹è¡Œãªã—ã€ã€‚"1"ã€œ"3" ;
+					//strChaku = ç€æ™‚åˆ»
+					//strHatsu = ç™ºæ™‚åˆ»
 					
 					int iEkiatsukai = 0 ;
 					if ( !strEkiatsukai.empty() ){
@@ -792,7 +792,7 @@ int CconvCentDed_03::CentDedRessyaCont_From_CdConnectedString(
 			string( nameRessyaCont ) + "[]" ) ;
 		iRessyaCount = atoi( strValue.c_str() ) ;
 		if ( iRessyaCount < 0 ){
-			iRv = -32 ;	//	Ressya[][] ‚Ì’l‚ª•s³‚Å‚·B
+			iRv = -32 ;	//	Ressya[][] ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 
@@ -888,7 +888,7 @@ int CconvCentDed_03::CentDedDia_From_CdConnectedString(
 	if ( iRv >= 0 ){
 		string	strValue = aCdConnectedString.getValue( nameDiaName ) ;
 		if ( strValue.length() == 0 ){
-			iRv = -11 ;	//	DiaName ‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
+			iRv = -11 ;	//	DiaName ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 		}	else	{
 			strDiaName = strValue ;
 			pCentDedDia->setName( strDiaName ) ;
@@ -900,7 +900,7 @@ int CconvCentDed_03::CentDedDia_From_CdConnectedString(
 		string	strValue = aCdConnectedString.getValue( nameEkiCount ) ;
 		int iValue = atoi( strValue.c_str() ) ;
 		if ( iValue < 0 ){
-			iRv = -22 ;	//	EkiCount ‚Ì’l‚ª•s³‚Å‚·B
+			iRv = -22 ;	//	EkiCount ã®å€¤ãŒä¸æ­£ã§ã™ã€‚
 		}	else	{
 			iEkiCount = iValue ;
 		}
@@ -951,8 +951,8 @@ const char nameComment[] = "Comment" ;
 #include "str/CStrCharSizeMb.h"
 
 /**
- *	ƒeƒLƒXƒg’†‚Ì‰üs•¶š‚ğ "\\n" ‚É•ÏŠ·‚µ‚Ü‚·B
- *	ƒeƒLƒXƒg’†‚Ì"\\" ‚ÍA"\\\\" ‚É•ÏŠ·‚µ‚Ü‚·B
+ *	ãƒ†ã‚­ã‚¹ãƒˆä¸­ã®æ”¹è¡Œæ–‡å­—ã‚’ "\\n" ã«å¤‰æ›ã—ã¾ã™ã€‚
+ *	ãƒ†ã‚­ã‚¹ãƒˆä¸­ã®"\\" ã¯ã€"\\\\" ã«å¤‰æ›ã—ã¾ã™ã€‚
  */
 static string escapeLf( const string& value )
 {
@@ -982,7 +982,7 @@ static string escapeLf( const string& value )
 	return ( strRv ) ;
 }
 /**
- *	escapeLf ‚Æ‹t‚Ì•ÏŠ·‚ğs‚¢‚Ü‚·Bl
+ *	escapeLf ã¨é€†ã®å¤‰æ›ã‚’è¡Œã„ã¾ã™ã€‚l
  */
 static string unescapeLf( const string& value )
 {
@@ -1165,8 +1165,8 @@ int CconvCentDed_03::CentDedRosen_From_CdConnectedString(
 			string strValue = aCdConnectedString.getValue( string( nameRessyasyubetsu ) + "[]" ) ;
 			iRessyasyubetsuCount = atoi( strValue.c_str() ) ;
 			if ( iRessyasyubetsuCount < 1 ){
-				iRv = -2 ;	//	w—ñÔí•Êx‚ÍA­‚È‚­‚Æ‚àˆê‚Â‚Í
-							//	‘¶İ‚µ‚È‚­‚Ä‚Í‚È‚è‚Ü‚¹‚ñB
+				iRv = -2 ;	//	ã€åˆ—è»Šç¨®åˆ¥ã€ã¯ã€å°‘ãªãã¨ã‚‚ä¸€ã¤ã¯
+							//	å­˜åœ¨ã—ãªãã¦ã¯ãªã‚Šã¾ã›ã‚“ã€‚
 			}
 		}
 		
@@ -1219,7 +1219,7 @@ int CconvCentDed_03::CentDedRosen_From_CdConnectedString(
 		CdDedJikoku	aCdDedJikoku ;
 		if ( !strValue.empty() ){
 			if ( aCdDedJikoku.decode( strValue ) < 0 ){
-				iRv = -52 ;	//	‹N“_‚Ìİ’è‚ª•s“KØ‚Å‚·B
+				iRv = -52 ;	//	èµ·ç‚¹æ™‚åˆ»ã®è¨­å®šãŒä¸é©åˆ‡ã§ã™ã€‚
 			}
 		}
 		if ( iRv >= 0 ){

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 //****************************************************************
@@ -81,218 +81,218 @@ namespace DcDraw{
 // ****************************************************************
 /**
  @brief
- �y�T�v�z
- 	Win32 �� DrawText() API�� ���� uFormat �����ɕt�^����鑮���ł��B
+ 【概要】
+ 	Win32 の DrawText() APIの 引数 uFormat 引数に付与される属性です。
 	
-	���̃N���X�̃I�u�W�F�N�g�́A UINT �ɃL���X�g���邱�Ƃɂ��A
-	���� DrawText() �ɓn�����Ƃ��ł��܂��B
+	このクラスのオブジェクトは、 UINT にキャストすることにより、
+	直接 DrawText() に渡すことができます。
 */
 class CdWinGdi_DrawText_Format
 {
 // ********************************
-//	�C���i�[�^�C�v
+//	インナータイプ
 // ********************************
  public:
-	/**	�������̃e�L�X�g�z�u���w�肷��񋓂ł�	*/
+	/**	横方向のテキスト配置を指定する列挙です	*/
 	enum EHolizontal
 	{
-		/**	���� (����l)	*/
+		/**	左寄せ (既定値)	*/
 		H_LEFT ,				//	DT_LEFT , 
-		/**	������	*/
+		/**	中央寄せ	*/
 		H_CENTER ,				//	DT_CENTER , 
-		/**	�E��	*/
+		/**	右寄せ	*/
 		H_RIGHT ,				//	DT_RIGHT
 	};
 	
-	/**	�c�����̃e�L�X�g�z�u���w�肷��񋓂ł��B	*/
+	/**	縦方向のテキスト配置を指定する列挙です。	*/
 	enum EVertical
 	{
-		/**	�P��s�ŁA���	*/
+		/**	単一行で、上寄せ	*/
 		V_SINGLELINE_TOP ,		//	DT_SINGLELINE | DT_TOP
 		
-		/**	�P��s�ŁA���� (����l)	*/
+		/**	単一行で、中寄せ (既定値)	*/
 		V_SINGLELINE_CENTER ,	//	DT_SINGLELINE | DT_VCENTER
 		
-		/**	�P��s�ŁA����	*/
+		/**	単一行で、下寄せ	*/
 		V_SINGLELINE_BOTTOM ,	//	DT_SINGLELINE | DT_BOTTOM
 		
-		/**	�����s				*/
+		/**	複数行				*/
 		V_MULTILINE ,			//	0
 
-		/**	�����s�ŁA�܂�Ԃ��͒P��̓r���ł��s���܂�	*/
+		/**	複数行で、折り返しは単語の途中でも行われます	*/
 		V_MULTILINE_WORDBREAK ,	//	DT_WORDBREAK
 		
 		/**	
-			�����s�ŁA�܂�Ԃ��͒P��̓r���ł��s���܂�
-			�� DBCS�i�_�u���o�C�g�����Z�b�g�̕�����j�ŉ��s�����̂�
-			���܂��B���̂��߁A���s�K���� SBCS ������Ɠ����ɂȂ�܂��B
+			複数行で、折り返しは単語の途中でも行われます
+			が DBCS（ダブルバイト文字セットの文字列）で改行されるのを
+			ぎます。このため、改行規則は SBCS 文字列と同じになります。
 		*/
 		V_NOFULLWIDTHCHARBREAK,	//	DT_WORDBREAK | DT_NOFULLWIDTHCHARBREAK
 		
 	};
 	
-	/**	�N���b�s���O�̗L��	*/
+	/**	クリッピングの有無	*/
 	enum EClipping
 	{
-		/**	�N���b�s���O���s���܂��B (����l)	*/
+		/**	クリッピングを行います。 (既定値)	*/
 		C_CLIP , 				//	0
-		/**	�N���b�s���O�����܂���B�`�悪���������Ȃ�܂��B	*/
+		/**	クリッピングをしません。描画が多少速くなります。	*/
 		C_NOCLIP ,				//	DT_NOCLIP
 	};
 	
-	/**	�G�f�B�b�g�R���g���[������	*/
+	/**	エディットコントロール属性	*/
 	enum EEditControl
 	{
-		/**	�G�f�B�b�g�R���g���[�������Ȃ� (����l)	*/
+		/**	エディットコントロール属性なし (既定値)	*/
 		NOEDITCONTROL ,			//	0
 		/**
-		  	�G�f�B�b�g�R���g���[������
-		  	�����s�G�f�B�b�g�R���g���[�����������Ɠ��������ŕ`�悵�܂��B
-		  	���ɁA���ϕ��������G�f�B�b�g�R���g���[���Ɠ������@�Ōv�Z����A
-		  	�����I�Ɍ����Ă���Ō�̍s�͕\������܂���B
+		  	エディットコントロール属性
+		  	複数行エディットコントロールがもつ特性と同じ特性で描画します。
+		  	特に、平均文字幅がエディットコントロールと同じ方法で計算され、
+		  	部分的に見えている最後の行は表示されません。
 		 */
 		EDITCONTROL ,			//	DT_EDITCONTROL
 	};
 	
-	/**	�ȗ�����	*/
+	/**	省略属性	*/
 	enum EEllipses
 	{
-		/**	�ȗ��Ȃ� (����l)	*/
+		/**	省略なし (既定値)	*/
 		NOELLIPSIS ,			//	0
 		/**
-		  	������̍Ō�̕����������`�̈�ɔ[�܂�؂�Ȃ��ꍇ�A
-		  	�͂ݏo���������؂����A�����ɏȗ������i...�j���ǉ�����܂��B
-		  	������̍Ō�ł͂Ȃ��ꏊ�ɂ���P�ꂪ�����`�̈悩��͂ݏo���ꍇ�́A
-		  	�ȗ��L���Ȃ��Ő؂����܂��B 
+		  	文字列の最後の部分が長方形領域に納まり切らない場合、
+		  	はみ出す部分が切り取られ、末尾に省略符号（...）が追加されます。
+		  	文字列の最後ではない場所にある単語が長方形領域からはみ出す場合は、
+		  	省略記号なしで切り取られます。 
 		 */
 		END_ELLIPSIS ,			//	DT_END_ELLIPSIS
 		/**
-		  	�w�肵�������`�̈�Ɏ��܂�悤�ɁA�K�v�ɉ����ăe�L�X�g�̓r����
-		  	�ȗ����� (...) �ɒu�������܂��B�~�L���i\�j���܂܂�Ă���
-		  	�e�L�X�g�̏ꍇ�A�Ō�̉~�L���̌��̃e�L�X�g���\�Ȍ���ێ�
-		  	����܂��B 
+		  	指定した長方形領域に収まるように、必要に応じてテキストの途中を
+		  	省略符号 (...) に置き換えます。円記号（\）が含まれている
+		  	テキストの場合、最後の円記号の後ろのテキストが可能な限り保持
+		  	されます。 
 		 */
 		PATH_ELLIPSIS ,			//	DT_PATH_ELLIPSIS
 		/**
-		  	�����`�̈���ɔ[�܂�Ȃ�����������ꍇ�A�����؂����������ŁA
-		  	�K���ȗ��L���i...�j��ǉ����܂��B 
+		  	長方形領域内に納まらない部分がある場合、それを切り取ったうえで、
+		  	必ず省略記号（...）を追加します。 
 		 */
 		WORD_ELLIPSIS ,			//	DT_WORD_ELLIPSIS
 	};
 	
 	
-	/**	�O�����f�B���O�������Ƃ��Ċ܂߂�	*/
+	/**	外部レディングを高さとして含める	*/
 	enum EExternalLeading
 	{
-		/**	�ݒ�Ȃ� (����l) */
+		/**	設定なし (既定値) */
 		NOEXTERNALLEADING ,		//	0
 		/**
-	  	�s�̍����ɁA�O�����f�B���O�̍����i�e�L�X�g�̍s�ԂƂ��ēK�؂ȍ����j
-	  	�����Z���܂��B�ʏ�A�O�����f�B���O�̓e�L�X�g�s�̍�����
-	  	�������܂���B
+	  	行の高さに、外部レディングの高さ（テキストの行間として適切な高さ）
+	  	を加算します。通常、外部レディングはテキスト行の高さに
+	  	加えられません。
 		 */
 		EXTERNALLEADING ,		//	DT_EXTERNALLEADING
 	};
 	
-	/**	������/�E����	*/
+	/**	左書き/右書き	*/
 	enum EReading
 	{
-		/**	������ (����l)	*/
+		/**	左書き (既定値)	*/
 		R_LEFT			 ,		//	0
-		/**	�E����	*/
+		/**	右書き	*/
 		R_RIGHT ,					//	DT_RTLREADING
 	};
 	
-	/**	�����L��	*/
+	/**	下線記号	*/
 	enum EPrefix
 	{
-		/**	�ʏ폈��	*/
+		/**	通常処理	*/
 		NORMAL_PREFIX ,			//	0
 		/**
-	  	�v���t�B�b�N�X�����̏������s��Ȃ��悤�ɂ��܂��B (����l)
+	  	プリフィックス文字の処理を行わないようにします。 (既定値)
 		
-		�ʏ�́A
-	  	�j�[���j�b�N�v���t�B�N�X�����́u&�v�́A���̎��ɂ��镶���ɉ����i_�j
-	  	��t���ĕ\������Ƃ̖��߂ł���Ɖ��߂���A�j�[���j�b�N
-	  	�v���t�B�b�N�X�����́u&&�v�́A1 �́u&�v��\������Ƃ̖��߂�
-	  	����Ɖ��߂���܂��BDT_NOPREFIX ���w�肷��ƁA���̏������s���Ȃ�
-	  	�Ȃ�܂��B
+		通常は、
+	  	ニーモニックプレフィクス文字の「&」は、その次にくる文字に下線（_）
+	  	を付けて表示せよとの命令であると解釈され、ニーモニック
+	  	プレフィックス文字の「&&」は、1 つの「&」を表示せよとの命令で
+	  	あると解釈されます。DT_NOPREFIX を指定すると、この処理が行われなく
+	  	なります。
 		 */
 		NOPREFIX ,				//	DT_NOPREFIX 
 		/**
-	  	�e�L�X�g�ɖ��ߍ��܂�Ă���v���t�B�b�N�X�Ƃ��ẴA���p�T���h�i&�j
-	  	�𖳎����܂��B���ɑ��������ɉ������{����Ȃ��Ȃ�܂��B�������A
-	  	���̑��̃j�[���j�b�N�v���t�B�b�N�X�����́A�ʏ�ǂ��菈������܂��B
+	  	テキストに埋め込まれているプレフィックスとしてのアンパサンド（&）
+	  	を無視します。後ろに続く文字に下線が施されなくなります。ただし、
+	  	その他のニーモニックプレフィックス文字は、通常どおり処理されます。
 		 */
 		HIDEPREFIX , 			//	DT_HIDEPREFIX 
 		/**
-	  	�A���p�T���h�v���t�B�b�N�X�����i&�j�̌��̕���������ʒu��
-	  	����������`�悵�܂��B��������̂��̑��̕����͈�ؕ`�悵�܂���B
+	  	アンパサンドプレフィックス文字（&）の後ろの文字がくる位置の
+	  	下線だけを描画します。文字列内のその他の文字は一切描画しません。
 		 */
 		PREFIXONLY , 			//	DT_PREFIXONLY 
 	};
 
-	/**	�e�L�X�g�̃T�C�Y�v�Z(�`��ɂ͊֌W����܂���)	*/
+	/**	テキストのサイズ計算(描画には関係ありません)	*/
 	enum ECalcrect
 	{
 		/**	
-		 	���ۂ̕`����s���܂��B (����l)	
+		 	実際の描画を行います。 (既定値)	
 		 */
 		NOCALCRECT , 			//	0
 		/**	
-		 	�e�L�X�g�T�C�Y���v�Z���܂��B�`��͍s���܂���B	
+		 	テキストサイズを計算します。描画は行いません。	
 		 */
 		CALCRECT ,				//	DT_CALCRECT
 		/**
-		  	�e�L�X�g�T�C�Y���v�Z���܂��B�`��͍s���܂���B	
-		  	�e�L�X�g�̕\���T�C�Y���v�Z����ۂɃV�X�e���t�H���g���g�p���܂��B
+		  	テキストサイズを計算します。描画は行いません。	
+		  	テキストの表示サイズを計算する際にシステムフォントを使用します。
 		 */
 		CALCRECT_INTERNAL ,		//	DT_CALCRECT | DT_INTERNAL
 	};
-	/**	�ȗ��e�L�X�g�ɂ���Ď��ۂɕ`�悳�ꂽ��������擾(�`��ɂ͊֌W����܂���)	*/
+	/**	省略テキストによって実際に描画された文字列を取得(描画には関係ありません)	*/
 	enum EModifystring
 	{
 		/**	
-		���ۂɕ`�悳�ꂽ������̎擾���s���܂���B(����l)
+		実際に描画された文字列の取得を行いません。(既定値)
 		 */
 		NOMODIFYSTEING ,		//	0
 		/**	
-	 	lpString �p�����[�^���w���o�b�t�@�ɁA
-		���ۂɕ\�����ꂽ��������i�[���܂��B
-		DT_END_ELLIPSIS �t���O�܂��� 
-		DT_PATH_ELLIPSIS �t���O���w�肵���Ƃ��ɂ����Ӗ��������܂���B
+	 	lpString パラメータが指すバッファに、
+		実際に表示された文字列を格納します。
+		DT_END_ELLIPSIS フラグまたは 
+		DT_PATH_ELLIPSIS フラグを指定したときにしか意味を持ちません。
 		 */
 		MODIFYSTRING ,			//	DT_MODIFYSTRING
 	};
 	
 
 // ********************************
-///@name	����
+///@name	属性
 // ********************************
 ///@{
  private:
 	/**
-		Win32 �� DrawText() API�� uFormat �����ɕt�^����鑮���ł��B
+		Win32 の DrawText() APIの uFormat 引数に付与される属性です。
 	 */
 	UINT	m_uiDrawTextFormat ;
 ///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	  @param uiForamt [in]
-	  	Win32 �� DrawText() API�� uFormat �����ɕt�^����鑮���ł��B
+	  	Win32 の DrawText() APIの uFormat 引数に付与される属性です。
 	 */
 	CdWinGdi_DrawText_Format( UINT uiFormat ) ;
 	/**
-	 	�e������ݒ肷��R���X�g���N�^�ł��B
+	 	各属性を設定するコンストラクタです。
 	  @param iTabstop [in]
-	  	TabStop�l�́A�ȉ��̂悤�ɉ��߂��܂��B
-	  	-	0: �^�u�̓W�J���s���܂���B	
-	  	-	1�ȏ�:�^�u�����w�肵�܂��B	
-	  	-	-1:�f�t�H���g�̃^�u���Ń^�u��W�J���܂��B	
+	  	TabStop値は、以下のように解釈します。
+	  	-	0: タブの展開を行いません。	
+	  	-	1以上:タブ幅を指定します。	
+	  	-	-1:デフォルトのタブ幅でタブを展開します。	
 	 */
 	CdWinGdi_DrawText_Format( 
 		EHolizontal eHolizontal = H_LEFT ,
@@ -324,21 +324,21 @@ class CdWinGdi_DrawText_Format
 	
 	/**
 	 @return 
-	 	TabStop�l��Ԃ��܂��B
+	 	TabStop値を返します。
 	
-	 	TabStop�l�́A�ȉ��̂悤�ɉ��߂��܂��B
-	 	-	0: �^�u�̓W�J���s���܂���B	
-	 	-	1�ȏ�:�^�u�����w�肵�܂��B	
-	 	-	-1:�f�t�H���g�̃^�u���Ń^�u��W�J���܂��B	
+	 	TabStop値は、以下のように解釈します。
+	 	-	0: タブの展開を行いません。	
+	 	-	1以上:タブ幅を指定します。	
+	 	-	-1:デフォルトのタブ幅でタブを展開します。	
 	*/
 	int getTabStop()const ;
 	/**
-	 	TabStop�l��ݒ肵�܂��B
+	 	TabStop値を設定します。
 	 @param ev [in]
-	 	TabStop�l�́A�ȉ��̂悤�ɉ��߂��܂��B
-	 	-	0: �^�u�̓W�J���s���܂���B	
-	 	-	1�ȏ�:�^�u�����w�肵�܂��B	
-	 	-	-1:�f�t�H���g�̃^�u���Ń^�u��W�J���܂��B	
+	 	TabStop値は、以下のように解釈します。
+	 	-	0: タブの展開を行いません。	
+	 	-	1以上:タブ幅を指定します。	
+	 	-	-1:デフォルトのタブ幅でタブを展開します。	
 	*/
 	CdWinGdi_DrawText_Format& setTabStop( int ev );
 	
@@ -356,19 +356,19 @@ class CdWinGdi_DrawText_Format
 	
 	/**
 	@return
-	 	Win32 �� DrawText() API�� ���� uFormat �����ɕt�^�����l��
-	 	�Ԃ��܂��B
+	 	Win32 の DrawText() APIの 引数 uFormat 引数に付与される値を
+	 	返します。
 	*/
 	UINT getFormat()const ;
 
 	CdWinGdi_DrawText_Format& setFormat( UINT uiFormat ) ;
 	
 	/**
-	 	getDrawTextFormat() �Ɠ����ł��B
+	 	getDrawTextFormat() と等価です。
 	 */
 	operator UINT()const{	return getFormat() ; } ;
 	/**
-	 	setDrawTextFormat() �Ɠ����ł��B
+	 	setDrawTextFormat() と等価です。
 	 */
 	CdWinGdi_DrawText_Format& operator=( UINT uiFormat ){
 		return ( setFormat( uiFormat ) ) ; } ;

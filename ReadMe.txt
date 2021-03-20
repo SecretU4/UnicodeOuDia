@@ -2,22 +2,22 @@
 	OuDia ver 1.02.05 Source Code
 =================================================
 
-@‚±‚ÌƒA[ƒJƒCƒu‚ÍAOuDia ‚Ìƒ\[ƒXƒR[ƒh‚Å‚·B
+ã€€ã“ã®ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ã¯ã€OuDia ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã§ã™ã€‚
 
-ƒ1„OuDia‚É‚Â‚¢‚Ä
+ï¼œ1ï¼žOuDiaã«ã¤ã„ã¦
 
-@OuDia ‚ÌŠT—vE“®ìŠÂ‹« ‚É‚Â‚«‚Ü‚µ‚Ä‚ÍAˆÈ‰º‚Ìƒ}ƒjƒ…ƒAƒ‹‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+ã€€OuDia ã®æ¦‚è¦ãƒ»å‹•ä½œç’°å¢ƒ ã«ã¤ãã¾ã—ã¦ã¯ã€ä»¥ä¸‹ã®ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
 	DiagramEdit\manual\oudia_manual\index.html
 
 
-ƒ2„ƒrƒ‹ƒh•û–@
+ï¼œ2ï¼žãƒ“ãƒ«ãƒ‰æ–¹æ³•
 
-  OuDia ƒrƒ‹ƒh•û–@‚ÍADiagrmaEdit\OuDia_build.txt ‚ð‚²——‚­‚¾‚³‚¢B
+  OuDia ãƒ“ãƒ«ãƒ‰æ–¹æ³•ã¯ã€DiagrmaEdit\OuDia_build.txt ã‚’ã”è¦§ãã ã•ã„ã€‚
 
 
 
-ƒ3„—˜—p‹–‘ø’m
+ï¼œ3ï¼žåˆ©ç”¨è¨±è«¾å‘ŠçŸ¥
 
 /*
 	OuDia - Win32 Application Software to draw a "Train Service Planning
@@ -38,35 +38,35 @@ more details.
 You should have received a copy of the GNU General Public License along with
  this program. If not, see <http://www.gnu.org/licenses/>.
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñŽÔŽž•\‚ð‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ð•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ðAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éðŒ‚Ì‰º‚ÅÄ”Ð•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ðŠè‚Á‚Ä”Ð•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚ÉŽ¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶Ý
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ð‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ðˆê•” Žó‚¯Žæ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µŽó‚¯Žæ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ð
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 */
 
 
 
-Žg—p‹–‘ø‘‚ÍAˆÈ‰º‚Ìƒtƒ@ƒCƒ‹‚ð‚²——‚­‚¾‚³‚¢B
+â—Žä½¿ç”¨è¨±è«¾æ›¸ã¯ã€ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-@GNU General Public License(GNU ˆê”ÊŒöO—˜—p‹–‘ø‘) @gpl-3.0.txt
-@GNU General Public License(GNU ˆê”ÊŒöO—˜—p‹–‘ø‘)“ú–{Œê–ó @gpl-3.0.ja.txt
-@GNU Free Documentation License(GNU ƒtƒŠ[•¶‘—˜—p‹–‘øŒ_–ñ‘) @fdl-1.3.txt
-@GNU Free Documentation License(GNU ƒtƒŠ[•¶‘—˜—p‹–‘øŒ_–ñ‘)“ú–{Œê–ó@fdl-1.2.ja.txt
+ã€€GNU General Public License(GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸) ã€€gpl-3.0.txt
+ã€€GNU General Public License(GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸)æ—¥æœ¬èªžè¨³ ã€€gpl-3.0.ja.txt
+ã€€GNU Free Documentation License(GNU ãƒ•ãƒªãƒ¼æ–‡æ›¸åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸) ã€€fdl-1.3.txt
+ã€€GNU Free Documentation License(GNU ãƒ•ãƒªãƒ¼æ–‡æ›¸åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸)æ—¥æœ¬èªžè¨³ã€€fdl-1.2.ja.txt
 
 

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,48 +81,48 @@ namespace entDed{
 // ****************************************************************
 /**
 @brief
-�y�T�v�z
-	CentDedRessyaDia ���̗�Ԃ̃\�[�g�������s���N���X�B
+【概要】
+	CentDedRessyaDia 内の列車のソート処理を行うクラス。
 	
-	���̃N���X�͒��ۃN���X�ł��B
-	�h���N���X�ŃI�[�o���C�h���s���A�\�[�g�A���S���Y������������K�v������܂��B
+	このクラスは抽象クラスです。
+	派生クラスでオーバライドを行い、ソートアルゴリズムを実装する必要があります。
 	
-�y�I�[�o���C�h�z
+【オーバライド】
 
-	1.  sortRessyaIndex() �̃I�[�o���C�h���s���Ă��������B
-	�@���̊֐��ł́A��ԃC���f�N�X��ێ�����R���e�i�̃\�[�g���s���Ă��������B
-	�@(��ԃC���f�N�X�R���e�i�Ɋi�[���ꂽ�\�[�g���ʂɏ]����
-	 ��� CentDedRessya �̃\�[�g���s���̂́A sortRessyaIndex() �̌Ăяo�����ł��� sort() ��
-	 �Ӗ��ł��B)
-	 (��ԃI�u�W�F�N�g CentDedRessya �ł͂Ȃ��A��ԃC���f�N�X int ���\�[�g����
-	 �d�l�ɂȂ��Ă���̂́A�p�t�H�[�}���X����̂��߂ł��BCentDedRessya �̃R�s�[�ɂ�
-	 ���Ԃ������邽�߂ł��B)
+	1.  sortRessyaIndex() のオーバライドを行ってください。
+	　この関数では、列車インデクスを保持するコンテナのソートを行ってください。
+	　(列車インデクスコンテナに格納されたソート結果に従って
+	 列車 CentDedRessya のソートを行うのは、 sortRessyaIndex() の呼び出し元である sort() の
+	 責務です。)
+	 (列車オブジェクト CentDedRessya ではなく、列車インデクス int をソートする
+	 仕様になっているのは、パフォーマンス向上のためです。CentDedRessya のコピーには
+	 時間がかかるためです。)
 	
-�y�g�����z
+【使い方】
 	
-	1.  �R���X�g���N�^�ŃI�u�W�F�N�g�𐶐����Ă��������B
+	1.  コンストラクタでオブジェクトを生成してください。
 	
-	2.�@sort() ���\�b�h���Ăяo���ƁAthis�́A�w�肳�ꂽ��ԃR���e�i�̂��ׂĂ̗�Ԃ��\�[�g���܂��B
+	2.　sort() メソッドを呼び出すと、thisは、指定された列車コンテナのすべての列車をソートします。
 */
 class CDedRessyaSoater
 {
 protected:
 	// --------------------------------
-	///@name sort �̉����֐�(template�p�^�[��)
+	///@name sort の下請関数(templateパターン)
 	// --------------------------------
 	///@{
 	/**
-		�\�[�g���s�����Index��ێ������R���e�i�ɁA
-		�A�Ԃ̗��Index���i�[���܂��B
+		ソートを行う列車Indexを保持したコンテナに、
+		連番の列車Indexを格納します。
 	@param iRessyaIndex [in]
-		�擪�̗��Index���w�肵�Ă��������B
+		先頭の列車Indexを指定してください。
 	@param iRessyaCount [in]
-		��Ԃ̐����w�肵�Ă��������B
+		列車の数を指定してください。
 	@param muRessyaIndexOrder [out]
-		���̊֐��͂��̃R���e�i�ɁA
-		iRessyaIndex �` iRessyaIndex + iRessyaCount - 1 ��
-		������A�ԂŊi�[���܂��B
-		���̃R���e�i������܂ŕێ����Ă����f�[�^�͔j������܂��B
+		この関数はこのコンテナに、
+		iRessyaIndex 〜 iRessyaIndex + iRessyaCount - 1 の
+		整数を連番で格納します。
+		このコンテナがそれまで保持していたデータは破棄されます。
 
 	*/
 	static void makeRessyaIndex( 
@@ -131,29 +131,29 @@ protected:
 
 
 	/**
-		�w�肳�ꂽ���Index���\�[�g���܂��B
+		指定された列車Indexをソートします。
 	@param pRessyaCont [in]
-		�\�[�g�Ώۂ̗�Ԃ�ێ�������Ԃ̃R���e�i���w�肵�Ă��������B
+		ソート対象の列車を保持した列車のコンテナを指定してください。
 	@param muRessyaIndexOrder [in,out]
-		�\�[�g���s�����Index��ێ������R���e�i���w�肵�Ă��������B
-		(��F���Index0�`4���\�[�g�������ꍇ�́A
-		{0,1,2,3,4} ��5�̗v�f�����R���e�i���w�肵�Ă��������B
-		���̊֐��͂��̔z����A�w����Order���̑������Index���Ƀ\�[�g���܂��B
+		ソートを行う列車Indexを保持したコンテナを指定してください。
+		(例：列車Index0〜4をソートしたい場合は、
+		{0,1,2,3,4} の5つの要素を持つコンテナを指定してください。
+		この関数はこの配列を、駅時刻Order順の早い列車Index順にソートします。
 	@param pIfProgress [in]
-		�i����Ԃ̒ʒm���󂯂����ꍇ�́A�i����Ԓʒm���󂯎��
-		�C���X�^���X�ւ̃|�C���^���w�肵�Ă��������B
-		NULL�Ȃ�A���̊֐��͐i����Ԃ̒ʒm���s���܂���B
+		進捗状態の通知を受けたい場合は、進捗状態通知を受け取る
+		インスタンスへのポインタを指定してください。
+		NULLなら、この関数は進捗状態の通知を行いません。
 	@note 
-		���̊֐��œ����\�[�g���ʂ�
-		sortRessyaByRessyaIndexOrder() �ɓn�����Ƃɂ��A
-		��ԃR���e�i���\�[�g���邱�Ƃ��ł��܂��B
+		この関数で得たソート結果を
+		sortRessyaByRessyaIndexOrder() に渡すことにより、
+		列車コンテナをソートすることができます。
 
-	�y�I�[�o���C�h�z
-	�@�h���N���X�ł́A���̊֐����I�[�o���C�h���āA
-	 ��ԃC���f�N�X��ێ�����R���e�i�̃\�[�g���s���Ă��������B
-	�@(��ԃC���f�N�X�R���e�i�Ɋi�[���ꂽ�\�[�g���ʂɏ]����
-	 ��� CentDedRessya �̃\�[�g���s���̂́A sortRessyaIndex() �̌Ăяo�����ł��� sort() ��
-	 �Ӗ��ł��B)
+	【オーバライド】
+	　派生クラスでは、この関数をオーバライドして、
+	 列車インデクスを保持するコンテナのソートを行ってください。
+	　(列車インデクスコンテナに格納されたソート結果に従って
+	 列車 CentDedRessya のソートを行うのは、 sortRessyaIndex() の呼び出し元である sort() の
+	 責務です。)
 	*/
 	virtual void sortRessyaIndex( 
 		const CentDedRessyaCont* pRessyaCont , 
@@ -162,15 +162,15 @@ protected:
 
 
 	/**
-		��� index (int)��ێ������R���e�i�ɏ]���āA
-		��ԃR���e�i�̗�Ԃ̕��я����A
-		����ւ��܂��B
+		列車 index (int)を保持したコンテナに従って、
+		列車コンテナの列車の並び順を、
+		入れ替えます。
 	@param muRessyaIndexOrder [in]
-		���Index��ێ������R���e�i���w�肵�Ă��������B
+		列車Indexを保持したコンテナを指定してください。
 	@param pRessyaCont [in,out]
-		���בւ��̑ΏۂƂȂ��ԃR���e�i���w�肵�Ă��������B
-		���̊֐��͂��̔z����AmuRessyaIndexOrder �̏���
-		���בւ��܂��B
+		並べ替えの対象となる列車コンテナを指定してください。
+		この関数はこの配列を、muRessyaIndexOrder の順に
+		並べ替えます。
 	*/
 	static void sortRessyaByRessyaIndexOrder( 
 		const Mu<int>* muRessyaIndexOrder,
@@ -179,23 +179,23 @@ protected:
 
 public:
 	// ********************************
-	//	�R���X�g���N�^�E�f�X�g���N�^
+	//	コンストラクタ・デストラクタ
 	// ********************************
 	virtual ~CDedRessyaSoater(){} ;
 
 public:
 	// ********************************
-	///@name ����
+	///@name 操作
 	// ********************************
 	///@{
 	/**
-		�w�肳�ꂽ��ԃR���e�i���̗�Ԃ��A�����Ŏw�肳�ꂽ�����Ń\�[�g���܂��B
+		指定された列車コンテナ内の列車を、属性で指定された条件でソートします。
 	@param pRessyaCont [in,out]
-		���בւ��̑ΏۂƂȂ��ԃR���e�i���w�肵�Ă��������B
+		並べ替えの対象となる列車コンテナを指定してください。
 	@param pIfProgress [in]
-		�i����Ԃ̒ʒm���󂯂����ꍇ�́A�i����Ԓʒm���󂯎��
-		�C���X�^���X�ւ̃|�C���^���w�肵�Ă��������B
-		NULL�Ȃ�A���̊֐��͐i����Ԃ̒ʒm���s���܂���B
+		進捗状態の通知を受けたい場合は、進捗状態通知を受け取る
+		インスタンスへのポインタを指定してください。
+		NULLなら、この関数は進捗状態の通知を行いません。
 	*/
 	virtual void sort( 
 		CentDedRessyaCont* pRessyaCont ,

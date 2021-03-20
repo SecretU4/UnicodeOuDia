@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 // $Id: CConvFile_Oudia03To05.cpp 10 2012-08-26 09:48:47Z okm $
@@ -102,16 +102,16 @@ int CConvFile_Oudia03To05::LeftToRight(
 	if ( iRv >= 0 )
 	{
 		int iResult = isLeftFormat( pLeftFormat ) ;
-		//	-	-1 ;	//	FileType ������������܂���B
-		//	-	-101 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+		//	-	-1 ;	//	FileType が正しくありません。
+		//	-	-101 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 		if ( iResult < 0 )
 		{
 			switch( iResult )
 			{
-			case -1 :	//	FileType ������������܂���B
+			case -1 :	//	FileType が正しくありません。
 				strErrorInfoString = "FileType Mismatch." ;
 				break ;
-			case -101 :	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+			case -101 :	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 				strErrorInfoString = "Invalid Subitem Data." ;
 				break ;
 			}
@@ -133,7 +133,7 @@ int CConvFile_Oudia03To05::LeftToRight(
 		strLeftFormat = OuLib::stringOf( binLeftFormat ) ;
 		strLeftFormat = OuLib::strLfOf( strLeftFormat ) ;
 	}
-	//strLeftFormat = LeftFile �̓��e
+	//strLeftFormat = LeftFile の内容
 
 	CDedRosenFileData aCDedRosenFileData ;
 	if ( iRv >= 0 )
@@ -142,24 +142,24 @@ int CConvFile_Oudia03To05::LeftToRight(
 		int iResult = aConv.CDedRosenFileData_from_string(
 			&aCDedRosenFileData , 
 			strLeftFormat ) ;
-		//	-	-1 ;	//	FileType ������������܂���B
-		//	-	-11 ;	//	Rosen �̓��e���s��
-		//	-	-21 ;	//	DispProp �̓��e���s��
-		//	-	-101 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+		//	-	-1 ;	//	FileType が正しくありません。
+		//	-	-11 ;	//	Rosen の内容が不正
+		//	-	-21 ;	//	DispProp の内容が不正
+		//	-	-101 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 		if ( iResult < 0 )
 		{
 			switch( iResult )
 			{
-			case -1 :	//	FileType ������������܂���B
+			case -1 :	//	FileType が正しくありません。
 				strErrorInfoString = "FileType Mismatch." ;
 				break ;
-			case -11 :	//	Rosen �̓��e���s��
+			case -11 :	//	Rosen の内容が不正
 				strErrorInfoString = "Invalid Rosen Data." ;
 				break ;
-			case -21 :	//	DispProp �̓��e���s��
+			case -21 :	//	DispProp の内容が不正
 				strErrorInfoString = "Invalid DispProp Data." ;
 				break ;
-			case -101 :	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+			case -101 :	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 				strErrorInfoString = "Invalid Subitem Data." ;
 				break ;
 			}
@@ -167,17 +167,17 @@ int CConvFile_Oudia03To05::LeftToRight(
 		}
 
 	}
-	//aCDedRosenFileData = �H���t�@�C����ǂݍ��ނ��Ƃ��ł��܂����B
+	//aCDedRosenFileData = 路線ファイルを読み込むことができました。
 
-	//aCDedRosenFileData�@�ɏW�񂳂�Ă����Ԏ�ʂɂ́A
-	//	��ʖ� CentDedRessyasyubetsu::m_strSyubetsumei ��
-	//	�󕶎���̂��̂��������Ă���\��������܂�
-	//	(CconvCDedRosenFileData_03 �̃o�O)�B
-	//	�������A����� CconvCDedRosenFileData(Ver.5)�ł�
-	//	�G���[�ɂȂ��Ă��܂��܂��E
-	//	���̂��߁AaCDedRosenFileData ��
-	//	��Ԏ�ʖ����󕶎���̂��̂�����΁A
-	//	���̗�Ԏ�ʖ���ݒ肵�܂��B
+	//aCDedRosenFileData　に集約されている列車種別には、
+	//	種別名 CentDedRessyasyubetsu::m_strSyubetsumei が
+	//	空文字列のものが混ざっている可能性があります
+	//	(CconvCDedRosenFileData_03 のバグ)。
+	//	しかし、これは CconvCDedRosenFileData(Ver.5)では
+	//	エラーになってしまいます・
+	//	このため、aCDedRosenFileData の
+	//	列車種別名が空文字列のものがあれば、
+	//	仮の列車種別名を設定します。
 	if ( iRv >= 0 )
 	{
 		CentDedRosen* pCentDedRosen = aCDedRosenFileData.getCentDedRosen() ;
@@ -208,46 +208,46 @@ int CConvFile_Oudia03To05::LeftToRight(
 		int iResult = aConv.CDedRosenFileData_to_string( 
 			aCDedRosenFileData ,
 			&strRightFormat ) ;
-		//	-	-11 ;	//	Ekimei ���w�肳��Ă��܂���B
-		//	-	-22 ;	//	Ekijikokukeisiki �̒l���s���ł��B
-		//	-	-32 ;	//	Ekikibo �̒l���s���ł��B
-		//	-	-111 ;	//	Syubetsumei ���w�肳��Ă��܂���B
-		//	-	-152 ;	//	DiagramSenStyle �̒l���s���ł��B
-		//	-	-212 ;	//	DiagramEkiatsukai �̒l���s���ł��B
+		//	-	-11 ;	//	Ekimei が指定されていません。
+		//	-	-22 ;	//	Ekijikokukeisiki の値が不正です。
+		//	-	-32 ;	//	Ekikibo の値が不正です。
+		//	-	-111 ;	//	Syubetsumei が指定されていません。
+		//	-	-152 ;	//	DiagramSenStyle の値が不正です。
+		//	-	-212 ;	//	DiagramEkiatsukai の値が不正です。
 		if ( iResult < 0 )
 		{
 			switch( iResult )
 			{
-			case -11 :	//	Ekimei ���w�肳��Ă��܂���B
+			case -11 :	//	Ekimei が指定されていません。
 				strErrorInfoString = "Ekimei is not valid." ;
 				break ;
-			case -22 :	//	Ekijikokukeisiki �̒l���s���ł��B
+			case -22 :	//	Ekijikokukeisiki の値が不正です。
 				strErrorInfoString = "Ekijikokukeisiki is not valid." ;
 				break ;
-			case -32 :	//	Ekikibo �̒l���s���ł��B
+			case -32 :	//	Ekikibo の値が不正です。
 				strErrorInfoString = "Ekikibo is not valid." ;
 				break ;
-			case -111 :	//	Syubetsumei ���w�肳��Ă��܂���B
+			case -111 :	//	Syubetsumei が指定されていません。
 				strErrorInfoString = "Syubetsumei is not valid." ;
 				break ;
-			case -152 :	//	DiagramSenStyle �̒l���s���ł��B
+			case -152 :	//	DiagramSenStyle の値が不正です。
 				strErrorInfoString = "DiagramSenStyle is not valid." ;
 				break ;
-			case -212 :	//	DiagramEkiatsukai �̒l���s���ł��B
+			case -212 :	//	DiagramEkiatsukai の値が不正です。
 				strErrorInfoString = "DiagramEkiatsukai is not valid." ;
 				break ;
 			}
-			//	-	-211 ;	//	Ekimei ���w�肳��Ă��܂���B
-			//	-	-222 ;	//	Ekijikokukeisiki �̒l���s���ł��B
-			//	-	-232 ;	//	Ekikibo �̒l���s���ł��B
-			//	-	-311 ;	//	Syubetsumei ���w�肳��Ă��܂���B
-			//	-	-352 ;	//	DiagramSenStyle �̒l���s���ł��B
-			//	-	-412 ;	//	DiagramEkiatsukai �̒l���s���ł��B
+			//	-	-211 ;	//	Ekimei が指定されていません。
+			//	-	-222 ;	//	Ekijikokukeisiki の値が不正です。
+			//	-	-232 ;	//	Ekikibo の値が不正です。
+			//	-	-311 ;	//	Syubetsumei が指定されていません。
+			//	-	-352 ;	//	DiagramSenStyle の値が不正です。
+			//	-	-412 ;	//	DiagramEkiatsukai の値が不正です。
 			iRv = iResult - 200 ;
 		}
 	}
 
-	//FileTypeAppComment�𖖔��ɒǉ�
+	//FileTypeAppCommentを末尾に追加
 	if ( iRv >= 0 )
 	{
 		strRightFormat += "\n" ;
@@ -256,7 +256,7 @@ int CConvFile_Oudia03To05::LeftToRight(
 			valueFileTypeAppComment ) ;
 	}
 
-	//strRightFormat = RightFile �̓��e
+	//strRightFormat = RightFile の内容
 	vector<char> binRightFormat ;
 	if ( iRv >= 0 )
 	{
@@ -307,9 +307,9 @@ int CConvFile_Oudia03To05::isLeftFormat(
 		CconvCDedRosenFileData_03	aConv ;
 		int iResult = aConv.isEncodeAbleFormat( 
 			strLeftFormat ) ;
-		//	-	0 ;	//	���߉\�ł��B
-		//	-	-1 ;	//	FileType ������������܂���B
-		//	-	-101 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+		//	-	0 ;	//	解釈可能です。
+		//	-	-1 ;	//	FileType が正しくありません。
+		//	-	-101 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 		if ( iResult < 0 )
 		{
 			iRv = iResult ;
@@ -328,13 +328,13 @@ int CConvFile_Oudia03To05::RightToLeft(
 		IfByteBuffer* pLeftFormat , 
 		IfByteBuffer* pErrorInfoString ) 
 {
-	return -2 ;	//	���̃��\�b�h�̓T�|�[�g����Ă��܂���B
+	return -2 ;	//	このメソッドはサポートされていません。
 }
 
 int CConvFile_Oudia03To05::isRightFormat( 
 		const IfByteBuffer* pRightFormat ) 
 {
-	return -2 ;	//	���̃��\�b�h�̓T�|�[�g����Ă��܂���B
+	return -2 ;	//	このメソッドはサポートされていません。
 };
 
 

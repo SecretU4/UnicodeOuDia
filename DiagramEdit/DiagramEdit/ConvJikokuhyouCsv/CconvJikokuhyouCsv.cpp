@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 // ****************************************************************
 // $Id: CconvJikokuhyouCsv.cpp 378 2016-11-16 21:10:54Z okm $
@@ -80,12 +80,12 @@ using ViewJikokuhyou::JikokuhyouColSpec::CdYColSpecCont;
 using ViewJikokuhyou::JikokuhyouColSpec::CdYColSpec;
 
 /**
-	FileType‚Ì –¼‘O
+	FileTypeã® åå‰
 */
 const char* const nameFileType = "FileType" ;
 
 /**
-	FileType ‚Ì’l
+	FileType ã®å€¤
 */
 const char* const nameFileTypeValue = "OuDia.JikokuhyouCsv.1" ;
 
@@ -97,16 +97,16 @@ const int CSVROWINDEX_Gou = 8 ;
 const int CSVROWINDEX_Ekijikoku0 = 9 ;
 const int CSVCOLUMNINDEX_Ressya0 = 2 ;
 
-/** ‚Ì‘®‚ğ•Û‚µ‚Ü‚·B */
+/** æ™‚åˆ»ã®æ›¸å¼ã‚’ä¿æŒã—ã¾ã™ã€‚ */
 const CdDedJikoku::CConv	g_CdDedJikokuConv(
 	true ,		//	NoColon 
-	// ‚ª 00 ‚©‚ç 09 ‚Ìê‡A10‚ÌˆÊ‚Ì "0" ‚ğíœ‚µ‚Ü‚·B
+	// æ™‚ãŒ 00 ã‹ã‚‰ 09 ã®å ´åˆã€10ã®ä½ã® "0" ã‚’å‰Šé™¤ã—ã¾ã™ã€‚
 	CdDedJikoku::CConv::EHour_ZeroToNone ,	
-	CdDedJikoku::CConv::ESecond_NoSecond 	// •b‚ğí‚Éo—Í‚µ‚Ü‚¹‚ñB 
+	CdDedJikoku::CConv::ESecond_NoSecond 	// ç§’ã‚’å¸¸ã«å‡ºåŠ›ã—ã¾ã›ã‚“ã€‚ 
 	) ;
 
 	// --------------------------------
-	//@name	‰wƒZƒ‹‚Ì•¶š—ñ‚Ì‰ğß
+	//@name	é§…æ™‚åˆ»ã‚»ãƒ«ã®æ–‡å­—åˆ—ã®è§£é‡ˆ
 	// --------------------------------
 string CconvJikokuhyouCsv::encode_Ekijikoku( 
 		CentDedEkiJikoku::EEkiatsukai eEkiatsukai , 
@@ -161,38 +161,38 @@ int  CconvJikokuhyouCsv::decode_Ekijikoku(
 
 	if ( strEkijikoku == "" )
 	{
-		//	‰^s‚È‚µ
+		//	é‹è¡Œãªã—
 	}
 	else if ( strEkijikoku == m_nameTsuuka )
 	{
-		//	’Ê‰ß
+		//	é€šé
 		eEkiatsukai = CentDedEkiJikoku::Ekiatsukai_Tsuuka ;
 	}
 	else if ( strEkijikoku == m_nameKeiyunasi )
 	{
-		//	Œo—R‚È‚µ
+		//	çµŒç”±ãªã—
 		eEkiatsukai = CentDedEkiJikoku::Ekiatsukai_Keiyunasi ;
 	}
 	else if ( strEkijikoku.size() >= 1 
 		&& strEkijikoku[ strEkijikoku.size() - 1 ] == '?' )
 	{
-		//	’Ê‰ß‚ ‚è
+		//	é€šéæ™‚åˆ»ã‚ã‚Š
 		eEkiatsukai = CentDedEkiJikoku::Ekiatsukai_Tsuuka ;
 		int iResult = aCdDedJikoku.decode( 
 			strEkijikoku.substr( 0 , strEkijikoku.size() - 1 ) ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -1 ;	//	‚Ì‰ğß‚É¸”s‚µ‚Ü‚µ‚½B
+			iRv = -1 ;	//	æ™‚åˆ»ã®è§£é‡ˆã«å¤±æ•—ã—ã¾ã—ãŸã€‚
 		}
 	}
 	else 
 	{
-		//	’âÔE
+		//	åœè»Šãƒ»æ™‚åˆ»
 		eEkiatsukai = CentDedEkiJikoku::Ekiatsukai_Teisya ;
 		int iResult = aCdDedJikoku.decode( strEkijikoku ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -1 ;	//	‚Ì‰ğß‚É¸”s‚µ‚Ü‚µ‚½B
+			iRv = -1 ;	//	æ™‚åˆ»ã®è§£é‡ˆã«å¤±æ•—ã—ã¾ã—ãŸã€‚
 		}
 	}
 	// --------------------------------
@@ -208,7 +208,7 @@ int  CconvJikokuhyouCsv::decode_Ekijikoku(
 }
 
 	// --------------------------------
-	//@name encode() ‚Ì‰º¿ŠÖ”	
+	//@name encode() ã®ä¸‹è«‹é–¢æ•°	
 	// --------------------------------
 void CconvJikokuhyouCsv::encode_createContJikokuOrderOfJjikokuhyouIndex( 
 		const CentDedEkiCont* pCentDedEkiCont ,
@@ -251,7 +251,7 @@ int CconvJikokuhyouCsv::encode_AddRessya(
 	{
 		if ( pCentDedRessya->isNull() )
 		{
-			iRv = -1 ;	//	pCentDedRessya ‚Í Null ‚Å‚·B
+			iRv = -1 ;	//	pCentDedRessya ã¯ Null ã§ã™ã€‚
 		}
 	}
 	// --------------------------------
@@ -261,9 +261,9 @@ int CconvJikokuhyouCsv::encode_AddRessya(
 		pCentDedRessyasyubetsu 	= pCentDedRessyasyubetsuContGet
 			->get( pCentDedRessya->getRessyasyubetsuIndex() ) ;
 	}
-	//pCentDedRessysyubetsu = —ñÔí•ÊƒIƒuƒWƒFƒNƒg
+	//pCentDedRessysyubetsu = åˆ—è»Šç¨®åˆ¥ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 
-	//ƒ2.5„5s–Ú <—ñÔ”Ô†>
+	//ï¼œ2.5ï¼5è¡Œç›® <åˆ—è»Šç•ªå·>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( CSVROWINDEX_Ressyabangou ) ;
@@ -271,7 +271,7 @@ int CconvJikokuhyouCsv::encode_AddRessya(
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Ressyabangou ) ;
 	}
 
-	//ƒ2.6„6s–Ú <—ñÔí•Ê>
+	//ï¼œ2.6ï¼6è¡Œç›® <åˆ—è»Šç¨®åˆ¥>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get(CSVROWINDEX_Ressyasyubetsu ) ;
@@ -279,7 +279,7 @@ int CconvJikokuhyouCsv::encode_AddRessya(
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Ressyasyubetsu ) ;
 	}
 
-	//ƒ2.7„7s–Ú <—ñÔ–¼>
+	//ï¼œ2.7ï¼7è¡Œç›® <åˆ—è»Šå>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( CSVROWINDEX_Ressyamei ) ;
@@ -287,14 +287,14 @@ int CconvJikokuhyouCsv::encode_AddRessya(
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Ressyamei ) ;
 	}
 
-	//ƒ2.8„8s–Ú <†”>
+	//ï¼œ2.8ï¼8è¡Œç›® <å·æ•°>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( CSVROWINDEX_Gousuu ) ;
 		aRow.getCellCont()->insert( CdCsvCell( pCentDedRessya->getGousuu() ) ) ;
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Gousuu ) ;
 	}
-	//ƒ2.9„9s–Ú <†•\¦>
+	//ï¼œ2.9ï¼9è¡Œç›® <å·è¡¨ç¤º>
 	if ( iRv >= 0 )
 	{
 		string	strValue ;
@@ -307,11 +307,11 @@ int CconvJikokuhyouCsv::encode_AddRessya(
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Gou ) ;
 	}
 
-	//ƒ2.10„10s–Ú` ‰w
+	//ï¼œ2.10ï¼10è¡Œç›®ã€œ é§…æ™‚åˆ»
 	
 	//contiJikokuOrderOfJikokuhyouIndex = 
-	//	 contiJikokuOrderOfJjikokuhyouIndex[<•\Index>]=<Order> ‚Ì–@‘¥‚ğ‚¿‚Ü‚·B
-	//	—v‘f‚Ì”‚ÍA•\‚Ì—ñ”‚Å‚·B
+	//	 contiJikokuOrderOfJjikokuhyouIndex[<æ™‚åˆ»è¡¨Index>]=<æ™‚åˆ»Order> ã®æ³•å‰‡ã‚’æŒã¡ã¾ã™ã€‚
+	//	è¦ç´ ã®æ•°ã¯ã€æ™‚åˆ»è¡¨ã®åˆ—æ•°ã§ã™ã€‚
 
 	if ( iRv >= 0 )
 	{
@@ -344,7 +344,7 @@ int CconvJikokuhyouCsv::encode_AddRessya(
 			string	strValue = encode_Ekijikoku( 
 				aCentDedEkiJikoku.getEkiatsukai() , 
 				aCdDedJikoku ) ;
-			//strValue = ‰w‚ğ•¶š—ñ‰»‚µ‚Ü‚µ‚½(’Ê‰ß‹L†‚È‚Ç‚Ìê‡‚à‚ ‚è‚Ü‚·)
+			//strValue = é§…æ™‚åˆ»ã‚’æ–‡å­—åˆ—åŒ–ã—ã¾ã—ãŸ(é€šéè¨˜å·ãªã©ã®å ´åˆã‚‚ã‚ã‚Šã¾ã™)
 
 
 			CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( 
@@ -354,7 +354,7 @@ int CconvJikokuhyouCsv::encode_AddRessya(
 
 		}
 	}
-	//ƒ2.11„[—ñ1="”õl" AND —ñ2=""]‚Ì—ñ@”õl—ñ
+	//ï¼œ2.11ï¼[åˆ—1="å‚™è€ƒ" AND åˆ—2=""]ã®åˆ—ã€€å‚™è€ƒåˆ—
 	if ( iRv >= 0 )
 	{
 			CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( 
@@ -373,7 +373,7 @@ int CconvJikokuhyouCsv::encode_AddRessyaNull(
 	int iRv = 0 ;
 	// --------------------------------
 
-	//ƒ2.5„5s–Ú <—ñÔ”Ô†>
+	//ï¼œ2.5ï¼5è¡Œç›® <åˆ—è»Šç•ªå·>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( CSVROWINDEX_Ressyabangou ) ;
@@ -381,7 +381,7 @@ int CconvJikokuhyouCsv::encode_AddRessyaNull(
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Ressyabangou ) ;
 	}
 
-	//ƒ2.6„6s–Ú <—ñÔí•Ê>
+	//ï¼œ2.6ï¼6è¡Œç›® <åˆ—è»Šç¨®åˆ¥>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get(CSVROWINDEX_Ressyasyubetsu ) ;
@@ -389,7 +389,7 @@ int CconvJikokuhyouCsv::encode_AddRessyaNull(
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Ressyasyubetsu ) ;
 	}
 
-	//ƒ2.7„7s–Ú <—ñÔ–¼>
+	//ï¼œ2.7ï¼7è¡Œç›® <åˆ—è»Šå>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( CSVROWINDEX_Ressyamei ) ;
@@ -397,14 +397,14 @@ int CconvJikokuhyouCsv::encode_AddRessyaNull(
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Ressyamei ) ;
 	}
 
-	//ƒ2.8„8s–Ú <†”>
+	//ï¼œ2.8ï¼8è¡Œç›® <å·æ•°>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( CSVROWINDEX_Gousuu ) ;
 		aRow.getCellCont()->insert( CdCsvCell() ) ;
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Gousuu ) ;
 	}
-	//ƒ2.9„9s–Ú <†•\¦>
+	//ï¼œ2.9ï¼9è¡Œç›® <å·è¡¨ç¤º>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( CSVROWINDEX_Gou ) ;
@@ -412,11 +412,11 @@ int CconvJikokuhyouCsv::encode_AddRessyaNull(
 		pCdCsvDocument->getRowCont()->set( aRow , CSVROWINDEX_Gou ) ;
 	}
 
-	//ƒ2.10„10s–Ú` ‰w
+	//ï¼œ2.10ï¼10è¡Œç›®ã€œ é§…æ™‚åˆ»
 	
 	//contiJikokuOrderOfJikokuhyouIndex = 
-	//	 contiJikokuOrderOfJjikokuhyouIndex[<•\Index>]=<Order> ‚Ì–@‘¥‚ğ‚¿‚Ü‚·B
-	//	—v‘f‚Ì”‚ÍA•\‚Ì—ñ”‚Å‚·B
+	//	 contiJikokuOrderOfJjikokuhyouIndex[<æ™‚åˆ»è¡¨Index>]=<æ™‚åˆ»Order> ã®æ³•å‰‡ã‚’æŒã¡ã¾ã™ã€‚
+	//	è¦ç´ ã®æ•°ã¯ã€æ™‚åˆ»è¡¨ã®åˆ—æ•°ã§ã™ã€‚
 
 	if ( iRv >= 0 )
 	{
@@ -430,7 +430,7 @@ int CconvJikokuhyouCsv::encode_AddRessyaNull(
 
 		}
 	}
-	//ƒ2.11„[—ñ1="”õl" AND —ñ2=""]‚Ì—ñ@”õl—ñ
+	//ï¼œ2.11ï¼[åˆ—1="å‚™è€ƒ" AND åˆ—2=""]ã®åˆ—ã€€å‚™è€ƒåˆ—
 	if ( iRv >= 0 )
 	{
 			CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( 
@@ -444,7 +444,7 @@ int CconvJikokuhyouCsv::encode_AddRessyaNull(
 
 
 	// --------------------------------
-	//@name decode() ‚Ì‰º¿ŠÖ”	
+	//@name decode() ã®ä¸‹è«‹é–¢æ•°	
 	// --------------------------------
 int CconvJikokuhyouCsv::decode_createContJikokuOrderOfJjikokuhyouIndex( 
 		const CentDedEkiCont* pCentDedEkiCont ,
@@ -476,7 +476,7 @@ int CconvJikokuhyouCsv::decode_createContJikokuOrderOfJjikokuhyouIndex(
 			if ( strEkimei == m_nameBikou && 
 				strChakuHatsu.empty() )
 			{
-				//”õls‚ª‚İ‚Â‚©‚è‚Ü‚µ‚½B
+				//å‚™è€ƒè¡ŒãŒã¿ã¤ã‹ã‚Šã¾ã—ãŸã€‚
 				break ;
 			}
 			
@@ -500,11 +500,11 @@ int CconvJikokuhyouCsv::decode_createContJikokuOrderOfJjikokuhyouIndex(
 			if ( !bIsJikokuOrderFound )
 			{
 				/**
-					‰w–¼‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
+					é§…åãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
 				@param EkiMei
-					‰w–¼
+					é§…å
 				@param Chakuhatsu
-					’…”­
+					ç€ç™º
 				*/
 				const char* const ERRREASON_EkimeiNotFound = "Ekimei is Not Found." ;
 				const char* const ERRREASON_PROP_Ekimei = "Ekimei" ;
@@ -516,7 +516,7 @@ int CconvJikokuhyouCsv::decode_createContJikokuOrderOfJjikokuhyouIndex(
 					ERRREASON_PROP_Ekimei , strEkimei.c_str() ) ;
 				strErrorInfoString += strprintf( "\t%s=%s" , 
 					ERRREASON_PROP_Chakuhatsu , strChakuHatsu.c_str()  ) ;
-				iRv = -1 ;	//	‰w–¼‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
+				iRv = -1 ;	//	é§…åãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
 			}
 		}
 	}
@@ -540,10 +540,10 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 	int iRv = 0 ;
 	string	strErrorInfoString ;
 	// --------------------------------
-	//	—ñÔí•ÊIndex‚ğŒˆ’è
+	//	åˆ—è»Šç¨®åˆ¥Indexã‚’æ±ºå®š
 	// --------------------------------
 	// --------------------------------
-	//ƒ2.5„5s–Ú <—ñÔ”Ô†>
+	//ï¼œ2.5ï¼5è¡Œç›® <åˆ—è»Šç•ªå·>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()
@@ -552,7 +552,7 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 		pCentDedRessya->setRessyabangou( aCell.getData() ) ;
 	}
 	
-	//ƒ2.6„6s–Ú <—ñÔí•Ê>
+	//ï¼œ2.6ï¼6è¡Œç›® <åˆ—è»Šç¨®åˆ¥>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get(CSVROWINDEX_Ressyasyubetsu ) ;
@@ -579,19 +579,19 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 			if ( iRessyasyubetsuIndex == -1 )
 			{
 				/**
-					—ñÔí•Ê‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
+					åˆ—è»Šç¨®åˆ¥ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
 				@param Ressyasyubetsu
-					—ñÔí•Ê
+					åˆ—è»Šç¨®åˆ¥
 				*/
 				const char* const ERRREASON_RessyasyubetsuNotFound = "Ressyasyubetsu is Not Found." ;
 				const char* const ERRREASON_PROP_Ressyasyubetsu = "Ressyasyubetsu" ;
 				strErrorInfoString = ERRREASON_RessyasyubetsuNotFound ; 
 				strErrorInfoString += strprintf( "\t%s=%s" , 
 					ERRREASON_PROP_Ressyasyubetsu , strValue.c_str() ) ;
-				iRv = -1 ;	//	—ñÔí•Ê‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
+				iRv = -1 ;	//	åˆ—è»Šç¨®åˆ¥ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
 			}
 		}
-		//iRessyasyubetsuIndex = —ñÔí•ÊIndex ;
+		//iRessyasyubetsuIndex = åˆ—è»Šç¨®åˆ¥Index ;
 		if ( iRv >= 0 )
 		{
 			pCentDedRessya->setRessyasyubetsuIndex( iRessyasyubetsuIndex ) ;
@@ -599,7 +599,7 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 
 	}
 
-	//ƒ2.7„7s–Ú <—ñÔ–¼>
+	//ï¼œ2.7ï¼7è¡Œç›® <åˆ—è»Šå>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( 
@@ -609,7 +609,7 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 		pCentDedRessya->setRessyamei( strValue  ) ;
 	}
 
-	//ƒ2.8„8s–Ú <†”>
+	//ï¼œ2.8ï¼8è¡Œç›® <å·æ•°>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( 
@@ -618,11 +618,11 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 		string strValue = aCell.getData() ;
 		pCentDedRessya->setGousuu( strValue  ) ;
 	}
-	//ƒ2.10„10s–Ú` ‰w
+	//ï¼œ2.10ï¼10è¡Œç›®ã€œ é§…æ™‚åˆ»
 	
 	//contiJikokuOrderOfJikokuhyouIndex = 
-	//	 contiJikokuOrderOfJjikokuhyouIndex[<•\Index>]=<Order> ‚Ì–@‘¥‚ğ‚¿‚Ü‚·B
-	//	—v‘f‚Ì”‚ÍA•\‚Ì—ñ”‚Å‚·B
+	//	 contiJikokuOrderOfJjikokuhyouIndex[<æ™‚åˆ»è¡¨Index>]=<æ™‚åˆ»Order> ã®æ³•å‰‡ã‚’æŒã¡ã¾ã™ã€‚
+	//	è¦ç´ ã®æ•°ã¯ã€æ™‚åˆ»è¡¨ã®åˆ—æ•°ã§ã™ã€‚
 
 	if ( iRv >= 0 )
 	{
@@ -657,9 +657,9 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 			if ( iResult < 0 )
 			{
 				/**
-					‚ğ‰ğß‚Å‚«‚Ü‚¹‚ñB
+					æ™‚åˆ»ã‚’è§£é‡ˆã§ãã¾ã›ã‚“ã€‚
 				@param Jikoku
-					
+					æ™‚åˆ»
 				*/
 				const char* const ERRREASON_Illegal_Jikoku_Format = "Illegal Jikoku format." ;
 				const char* const ERRREASON_PROP_Jikoku = "Jikoku" ;
@@ -667,7 +667,7 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 				strErrorInfoString += strprintf( "\t%s=%s" , 
 					ERRREASON_PROP_Jikoku , strValue.c_str() ) ;
 				
-				iRv = -21 ;	//	‚ğ‰ğß‚Å‚«‚Ü‚¹‚ñB
+				iRv = -21 ;	//	æ™‚åˆ»ã‚’è§£é‡ˆã§ãã¾ã›ã‚“ã€‚
 			}
 			else
 			{
@@ -678,7 +678,7 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 				}
 				else
 				{
-					//	”­‚ÍA‰wˆµ‚Ì•ÏX‚ğs‚¢‚Ü‚¹‚ñB
+					//	ç™ºæ™‚åˆ»ã¯ã€é§…æ‰±ã®å¤‰æ›´ã‚’è¡Œã„ã¾ã›ã‚“ã€‚
 					if ( aCentDedEkiJikoku.getEkiatsukai() == 
 						CentDedEkiJikoku::Ekiatsukai_None )
 					{
@@ -694,7 +694,7 @@ int CconvJikokuhyouCsv::decode_readRessyaColumn(
 			}
 		}
 	}
-	//ƒ2.11„[—ñ1="”õl" AND —ñ2=""]‚Ì—ñ@”õl—ñ
+	//ï¼œ2.11ï¼[åˆ—1="å‚™è€ƒ" AND åˆ—2=""]ã®åˆ—ã€€å‚™è€ƒåˆ—
 	if ( iRv >= 0 &&  
 			CSVROWINDEX_Ekijikoku0 + (int)contiJikokuOrderOfJikokuhyouIndex.size() 
 				< (int)pCdCsvDocument->getRowCont()->size() )
@@ -726,9 +726,9 @@ int CconvJikokuhyouCsv::decode_isNullRessyaColumn(
 	int iRv = 1 ;
 	string	strErrorInfoString ;
 	// --------------------------------
-	//	—ñÔí•ÊIndex‚ğŒˆ’è
+	//	åˆ—è»Šç¨®åˆ¥Indexã‚’æ±ºå®š
 	// --------------------------------
-	//ƒ2.5„5s–Ú <—ñÔ”Ô†>
+	//ï¼œ2.5ï¼5è¡Œç›® <åˆ—è»Šç•ªå·>
 	if ( iRv == 1 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()
@@ -737,11 +737,11 @@ int CconvJikokuhyouCsv::decode_isNullRessyaColumn(
 		string strValue = aCell.getData() ;
 		if ( !strValue.empty() )
 		{
-			iRv = 0 ;	//	‚±‚Ì—ñ‚ÍNull—ñÔ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
+			iRv = 0 ;	//	ã“ã®åˆ—ã¯Nullåˆ—è»Šã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
 	
-	//ƒ2.6„6s–Ú <—ñÔí•Ê>
+	//ï¼œ2.6ï¼6è¡Œç›® <åˆ—è»Šç¨®åˆ¥>
 	if ( iRv == 1 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get(CSVROWINDEX_Ressyasyubetsu ) ;
@@ -749,11 +749,11 @@ int CconvJikokuhyouCsv::decode_isNullRessyaColumn(
 		string strValue = aCell.getData() ;
 		if ( !strValue.empty() )
 		{
-			iRv = 0 ;	//	‚±‚Ì—ñ‚ÍNull—ñÔ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
+			iRv = 0 ;	//	ã“ã®åˆ—ã¯Nullåˆ—è»Šã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
 
-	//ƒ2.7„7s–Ú <—ñÔ–¼>
+	//ï¼œ2.7ï¼7è¡Œç›® <åˆ—è»Šå>
 	if ( iRv == 1 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( 
@@ -762,11 +762,11 @@ int CconvJikokuhyouCsv::decode_isNullRessyaColumn(
 		string strValue = aCell.getData() ;
 		if ( !strValue.empty() )
 		{
-			iRv = 0 ;	//	‚±‚Ì—ñ‚ÍNull—ñÔ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
+			iRv = 0 ;	//	ã“ã®åˆ—ã¯Nullåˆ—è»Šã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
 
-	//ƒ2.8„8s–Ú <†”>
+	//ï¼œ2.8ï¼8è¡Œç›® <å·æ•°>
 	if ( iRv == 1 )
 	{
 		CdCsvRow	aRow = pCdCsvDocument->getRowCont()->get( 
@@ -775,14 +775,14 @@ int CconvJikokuhyouCsv::decode_isNullRessyaColumn(
 		string strValue = aCell.getData() ;
 		if ( !strValue.empty() )
 		{
-			iRv = 0 ;	//	‚±‚Ì—ñ‚ÍNull—ñÔ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
+			iRv = 0 ;	//	ã“ã®åˆ—ã¯Nullåˆ—è»Šã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
-	//ƒ2.10„10s–Ú` ‰w
+	//ï¼œ2.10ï¼10è¡Œç›®ã€œ é§…æ™‚åˆ»
 	
 	//contiJikokuOrderOfJikokuhyouIndex = 
-	//	 contiJikokuOrderOfJjikokuhyouIndex[<•\Index>]=<Order> ‚Ì–@‘¥‚ğ‚¿‚Ü‚·B
-	//	—v‘f‚Ì”‚ÍA•\‚Ì—ñ”‚Å‚·B
+	//	 contiJikokuOrderOfJjikokuhyouIndex[<æ™‚åˆ»è¡¨Index>]=<æ™‚åˆ»Order> ã®æ³•å‰‡ã‚’æŒã¡ã¾ã™ã€‚
+	//	è¦ç´ ã®æ•°ã¯ã€æ™‚åˆ»è¡¨ã®åˆ—æ•°ã§ã™ã€‚
 
 	if ( iRv == 1 )
 	{
@@ -806,11 +806,11 @@ int CconvJikokuhyouCsv::decode_isNullRessyaColumn(
 			string strValue = aCell.getData() ;
 			if ( !strValue.empty() )
 			{
-				iRv = 0 ;	//	‚±‚Ì—ñ‚ÍNull—ñÔ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
+				iRv = 0 ;	//	ã“ã®åˆ—ã¯Nullåˆ—è»Šã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 			}
 		}
 	}
-	//ƒ2.11„[—ñ1="”õl" AND —ñ2=""]‚Ì—ñ@”õl—ñ
+	//ï¼œ2.11ï¼[åˆ—1="å‚™è€ƒ" AND åˆ—2=""]ã®åˆ—ã€€å‚™è€ƒåˆ—
 	if ( iRv == 1 && (int)pCdCsvDocument->getRowCont()->size() >
 			CSVROWINDEX_Ekijikoku0 + (int)contiJikokuOrderOfJikokuhyouIndex.size() )
 	{
@@ -820,7 +820,7 @@ int CconvJikokuhyouCsv::decode_isNullRessyaColumn(
 		string strValue = aCell.getData() ;
 		if ( !strValue.empty() )
 		{
-			iRv = 0 ;	//	‚±‚Ì—ñ‚ÍNull—ñÔ‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
+			iRv = 0 ;	//	ã“ã®åˆ—ã¯Nullåˆ—è»Šã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
 	// --------------------------------
@@ -833,7 +833,7 @@ int CconvJikokuhyouCsv::decode_isNullRessyaColumn(
 
 
 	// ********************************
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	// ********************************
 CconvJikokuhyouCsv::CconvJikokuhyouCsv(
 		const std::string& nameKudari ,
@@ -883,7 +883,7 @@ int CconvJikokuhyouCsv::encode(
 	const Mu<const CentDedRessya*>* pCentDedRessyaCont = NULL ;
 
 	// --------------------------------
-	//	ƒIƒuƒWƒFƒNƒgCdCsvDocument ‚ğƒNƒŠƒA
+	//	ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆCdCsvDocument ã‚’ã‚¯ãƒªã‚¢
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -894,20 +894,20 @@ int CconvJikokuhyouCsv::encode(
 		pCentDedDia = aCentDedRosen.getCentDedDiaCont()->getMuPtr()->get( iDiaIndex ) ;
 		if ( pCentDedDia == NULL )
 		{
-			iRv = -1 ;	//	iDiaIndex ‚ª•s³‚Å‚·B
+			iRv = -1 ;	//	iDiaIndex ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 )
 	{
 		pCentDedRessyaCont = pCentDedDia->getCentDedRessyaCont( eRessyahoukou )->getMuPtr() ;
 	}
-	//pCentDedRessyaCont = —ñÔ‚ÌƒRƒ“ƒeƒi
+	//pCentDedRessyaCont = åˆ—è»Šã®ã‚³ãƒ³ãƒ†ãƒŠ
 	if ( iRv >= 0 )
 	{
 		if ( !( 0 <= iRessyaIndex && iRessyaIndex < pCentDedRessyaCont->size() ) 
 			&& iRessyaIndex != 0 )
 		{
-			iRv = -2 ;	//	iRessyaIndex ‚ª•s³‚Å‚·B
+			iRv = -2 ;	//	iRessyaIndex ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 )
@@ -919,12 +919,12 @@ int CconvJikokuhyouCsv::encode(
 		if ( !( 0 <= iRessyaIndex + iRessyaCount && 
 			iRessyaIndex + iRessyaCount <= pCentDedRessyaCont->size() ) )
 		{
-			iRv = -3 ;	//	iRessyaCount ‚ª•s³‚Å‚·B
+			iRv = -3 ;	//	iRessyaCount ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 
 	// --------------------------------
-	//	CdCsvDocument ‚ğƒNƒŠƒA
+	//	CdCsvDocument ã‚’ã‚¯ãƒªã‚¢
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -932,9 +932,9 @@ int CconvJikokuhyouCsv::encode(
 	}
 
 	// --------------------------------
-	//	ƒwƒbƒ_—ñ
+	//	ãƒ˜ãƒƒãƒ€åˆ—
 	// --------------------------------
-	//	1s–Ú FileTypes
+	//	1è¡Œç›® FileTypeè¡Œ
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow ;
@@ -942,14 +942,14 @@ int CconvJikokuhyouCsv::encode(
 		aRow.getCellCont()->insert( CdCsvCell( nameFileTypeValue ) ) ;
 		pCdCsvDocument->getRowCont()->insert( aRow ) ;
 	}	
-	//	2s–Ú DiaNames
+	//	2è¡Œç›® DiaNameè¡Œ
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow ;
 		aRow.getCellCont()->insert( CdCsvCell( pCentDedDia->getName() ) ) ;
 		pCdCsvDocument->getRowCont()->insert( aRow ) ;
 	}	
-	//ƒ2.3„ 3s–Ú <‰º‚è,ã‚è>
+	//ï¼œ2.3ï¼ 3è¡Œç›® <ä¸‹ã‚Š,ä¸Šã‚Š>
 	if ( iRv >= 0 )
 	{
 		string strValue ;
@@ -966,7 +966,7 @@ int CconvJikokuhyouCsv::encode(
 		aRow.getCellCont()->insert( CdCsvCell( strValue ) ) ;
 		pCdCsvDocument->getRowCont()->insert( aRow ) ;
 	}
-	//ƒ2.4„4s–Ú 
+	//ï¼œ2.4ï¼4è¡Œç›® 
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow ;
@@ -974,9 +974,9 @@ int CconvJikokuhyouCsv::encode(
 	}
 
 	// --------------------------------
-	//	•\•”•ª‚Ì¶‘¤2—ñ
+	//	æ™‚åˆ»è¡¨éƒ¨åˆ†ã®å·¦å´2åˆ—
 	// --------------------------------
-	//ƒ2.5„5s–Ú <—ñÔ”Ô†>
+	//ï¼œ2.5ï¼5è¡Œç›® <åˆ—è»Šç•ªå·>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow ;
@@ -985,7 +985,7 @@ int CconvJikokuhyouCsv::encode(
 		pCdCsvDocument->getRowCont()->insert( aRow ) ;
 	}
 
-	//ƒ2.6„6s–Ú <—ñÔí•Ê>
+	//ï¼œ2.6ï¼6è¡Œç›® <åˆ—è»Šç¨®åˆ¥>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow ;
@@ -994,7 +994,7 @@ int CconvJikokuhyouCsv::encode(
 		pCdCsvDocument->getRowCont()->insert( aRow ) ;
 	}
 
-	//ƒ2.7„7s–Ú <—ñÔ–¼>
+	//ï¼œ2.7ï¼7è¡Œç›® <åˆ—è»Šå>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow ;
@@ -1003,7 +1003,7 @@ int CconvJikokuhyouCsv::encode(
 		pCdCsvDocument->getRowCont()->insert( aRow ) ;
 	}
 
-	//ƒ2.8„8s–Ú <†”>
+	//ï¼œ2.8ï¼8è¡Œç›® <å·æ•°>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow ;
@@ -1011,7 +1011,7 @@ int CconvJikokuhyouCsv::encode(
 		aRow.getCellCont()->insert( CdCsvCell( ) ) ;
 		pCdCsvDocument->getRowCont()->insert( aRow ) ;
 	}
-	//ƒ2.9„9s–Ú <†•\¦>
+	//ï¼œ2.9ï¼9è¡Œç›® <å·è¡¨ç¤º>
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow ;
@@ -1020,9 +1020,9 @@ int CconvJikokuhyouCsv::encode(
 		pCdCsvDocument->getRowCont()->insert( aRow ) ;
 	}
 
-	//ƒ2.10„10s–Ú` ‰w
+	//ï¼œ2.10ï¼10è¡Œç›®ã€œ é§…æ™‚åˆ»
 	
-	//	‚±‚ÌƒRƒ“ƒeƒi‚ÍA  contiJikokuOrderOfJjikokuhyouIndex[<•\Index>]=<Order>
+	//	ã“ã®ã‚³ãƒ³ãƒ†ãƒŠã¯ã€  contiJikokuOrderOfJjikokuhyouIndex[<æ™‚åˆ»è¡¨Index>]=<æ™‚åˆ»Order>
 	deque<CdDedJikokuOrder>	contiJikokuOrderOfJikokuhyouIndex ;
 	if ( iRv >= 0 )
 	{
@@ -1032,8 +1032,8 @@ int CconvJikokuhyouCsv::encode(
 			&contiJikokuOrderOfJikokuhyouIndex ) ;
 	}
 	//contiJikokuOrderOfJikokuhyouIndex = 
-	//	 contiJikokuOrderOfJjikokuhyouIndex[<•\Index>]=<Order> ‚Ì–@‘¥‚ğ‚¿‚Ü‚·B
-	//	—v‘f‚Ì”‚ÍA•\‚Ì—ñ”‚Å‚·B
+	//	 contiJikokuOrderOfJjikokuhyouIndex[<æ™‚åˆ»è¡¨Index>]=<æ™‚åˆ»Order> ã®æ³•å‰‡ã‚’æŒã¡ã¾ã™ã€‚
+	//	è¦ç´ ã®æ•°ã¯ã€æ™‚åˆ»è¡¨ã®åˆ—æ•°ã§ã™ã€‚
 
 	if ( iRv >= 0 )
 	{
@@ -1067,7 +1067,7 @@ int CconvJikokuhyouCsv::encode(
 			pCdCsvDocument->getRowCont()->insert( aRow ) ;
 		}
 	}
-	//ƒ2.11„[—ñ1="”õl" AND —ñ2=""]‚Ì—ñ@”õl—ñ
+	//ï¼œ2.11ï¼[åˆ—1="å‚™è€ƒ" AND åˆ—2=""]ã®åˆ—ã€€å‚™è€ƒåˆ—
 	if ( iRv >= 0 )
 	{
 		CdCsvRow	aRow ;
@@ -1076,7 +1076,7 @@ int CconvJikokuhyouCsv::encode(
 		pCdCsvDocument->getRowCont()->insert( aRow ) ;
 	}
 	// --------------------------------
-	//	—ñÔ‚ğo—Í(•\•”•ª‚Ì3—ñ–ÚˆÈ~)
+	//	åˆ—è»Šã‚’å‡ºåŠ›(æ™‚åˆ»è¡¨éƒ¨åˆ†ã®3åˆ—ç›®ä»¥é™)
 	// --------------------------------
 	for ( int idxRessya = iRessyaIndex ; 
 		iRv >= 0 && idxRessya < iRessyaIndex + iRessyaCount ; 
@@ -1131,7 +1131,7 @@ int CconvJikokuhyouCsv::decode(
 		pCentDedDia= pCentDedRosen->getCentDedDiaCont()->getMuPtr()->get( iDiaIndex ) ;
 		if ( pCentDedDia == NULL )
 		{
-			iRv = -21  ;	//	iDiaIndex ‚ª•s³‚Å‚·B
+			iRv = -21  ;	//	iDiaIndex ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 )
@@ -1149,11 +1149,11 @@ int CconvJikokuhyouCsv::decode(
 		}
 		if ( !( 0 <= iRessyaIndex && iRessyaIndex <= pCentDedRessyaCont->size() ) )
 		{
-			iRv = -22  ;	//	iRessyaIndex ‚ª•s³‚Å‚·B
+			iRv = -22  ;	//	iRessyaIndex ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	// --------------------------------
-	//	CSV‚Ì—ñ”‚ğÅ“K‰»‚µ‚Ü‚·B
+	//	CSVã®åˆ—æ•°ã‚’æœ€é©åŒ–ã—ã¾ã™ã€‚
 	// --------------------------------
 	int iColumnCount = 0 ;
 	if ( iRv >= 0 )
@@ -1162,10 +1162,10 @@ int CconvJikokuhyouCsv::decode(
 		if ( aCdCsvDocument.getRowCont()->size() < CSVROWINDEX_Ekijikoku0 )
 		{
 			/*
-				s‚ª­‚È‚·‚¬‚Ü‚·B
+				è¡ŒãŒå°‘ãªã™ãã¾ã™ã€‚
 
 			@param RowCount
-				s”
+				è¡Œæ•°
 			*/
 			const char* const ERRREASON_TooFewRows = "Too Few Rows." ;
 			const char* const ERRREASON_PROP_RowCount = "RowCount=" ;
@@ -1174,7 +1174,7 @@ int CconvJikokuhyouCsv::decode(
 			strErrorInfoString = strprintf( "%s\t%s=%d" , 
 				ERRREASON_TooFewRows , 
 				ERRREASON_PROP_RowCount , aCdCsvDocument.getRowCont()->size() ) ;
-			iRv = -1 ;	//	s‚ª­‚È‚·‚¬‚Ü‚·B
+			iRv = -1 ;	//	è¡ŒãŒå°‘ãªã™ãã¾ã™ã€‚
 		}
 		else 
 		{
@@ -1182,21 +1182,21 @@ int CconvJikokuhyouCsv::decode(
 			if ( iColumnCount < 2 )
 			{
 				/*
-					—ñ‚ª­‚È‚·‚¬‚Ü‚·B
+					åˆ—ãŒå°‘ãªã™ãã¾ã™ã€‚
 				@param ColumnCount
-					—ñ”
+					åˆ—æ•°
 				*/
 				const char* const ERRREASON_TooFewColumns = "Too Few Columns." ;
 				const char* const ERRREASON_PROP_ColumnCount = "ColumnCount=" ;
 				strErrorInfoString = strprintf( "%s\t%s=%d" , 
 					ERRREASON_TooFewColumns , 
 					ERRREASON_PROP_ColumnCount , aCdCsvDocument.getRowCont()->get( 0 ).getCellCont()->size() ) ;
-				iRv = -2 ;	//	—ñ‚ª­‚È‚·‚¬‚Ü‚·B
+				iRv = -2 ;	//	åˆ—ãŒå°‘ãªã™ãã¾ã™ã€‚
 			}
 		}
 	}
 	// --------------------------------
-	//	FileType ‚ğŒŸØ
+	//	FileType ã‚’æ¤œè¨¼
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -1205,9 +1205,9 @@ int CconvJikokuhyouCsv::decode(
 		CdCsvCell	aCell1 = aRow.getCellCont()->get( 1 ) ;
 
 		/**
-			ƒtƒ@ƒCƒ‹Œ`®‚ª”F¯‚Å‚«‚Ü‚¹‚ñB
+			ãƒ•ã‚¡ã‚¤ãƒ«å½¢å¼ãŒèªè­˜ã§ãã¾ã›ã‚“ã€‚
 		@param FileType
-				ƒtƒ@ƒCƒ‹Œ`®
+				ãƒ•ã‚¡ã‚¤ãƒ«å½¢å¼
 		*/
 		const char* const ERRREASON_FileTypeMismatch = "File Type Mismatch." ;
 		const char* const ERRREASON_PROP_FileType = "FileType=" ;
@@ -1216,21 +1216,21 @@ int CconvJikokuhyouCsv::decode(
 		{
 			strErrorInfoString = strprintf( "%s" , 
 				ERRREASON_FileTypeMismatch ) ;
-			iRv = -3 ;	//	ƒtƒ@ƒCƒ‹Œ`®‚ª”F¯‚Å‚«‚Ü‚¹‚ñ
+			iRv = -3 ;	//	ãƒ•ã‚¡ã‚¤ãƒ«å½¢å¼ãŒèªè­˜ã§ãã¾ã›ã‚“
 		}
 		else if ( aCell1.getData() != nameFileTypeValue )
 		{
 			strErrorInfoString = strprintf( "%s\t%s=%s" , 
 				ERRREASON_FileTypeMismatch , 
 				ERRREASON_PROP_FileType , aCell1.getData().c_str() ) ;
-			iRv = -4 ;	//	ƒtƒ@ƒCƒ‹Œ`®‚ª”F¯‚Å‚«‚Ü‚¹‚ñ
+			iRv = -4 ;	//	ãƒ•ã‚¡ã‚¤ãƒ«å½¢å¼ãŒèªè­˜ã§ãã¾ã›ã‚“
 		}
 	}
 	
 	// --------------------------------
-	//	—ñ‚Æ‰w–¼‚Ì‘ÎÆƒe[ƒuƒ‹‚ğì¬
+	//	æ™‚åˆ»åˆ—ã¨é§…åã®å¯¾ç…§ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆ
 	// --------------------------------
-	//	‚±‚ÌƒRƒ“ƒeƒi‚ÍA  contiJikokuOrderOfJjikokuhyouIndex[<•\Index>]=<Order>
+	//	ã“ã®ã‚³ãƒ³ãƒ†ãƒŠã¯ã€  contiJikokuOrderOfJjikokuhyouIndex[<æ™‚åˆ»è¡¨Index>]=<æ™‚åˆ»Order>
 	deque<int>	contiJikokuOrderOfJikokuhyouIndex ;
 	if ( iRv >= 0 )
 	{
@@ -1241,16 +1241,16 @@ int CconvJikokuhyouCsv::decode(
 			&contiJikokuOrderOfJikokuhyouIndex ,
 			&strErrorInfoString ) ;
 		//iResult = 
-		//	-	-1 ;	//	‰w–¼‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
+		//	-	-1 ;	//	é§…åãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
 		if ( iResult < 0 )
 		{
 
-			iRv = -11  ;	//	‰w–¼‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB
+			iRv = -11  ;	//	é§…åãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚
 		}
 	}
 
 	// --------------------------------
-	//	—ñÔ‚ğo—Í(•\•”•ª‚Ì3—ñ–ÚˆÈ~)
+	//	åˆ—è»Šã‚’å‡ºåŠ›(æ™‚åˆ»è¡¨éƒ¨åˆ†ã®3åˆ—ç›®ä»¥é™)
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -1274,7 +1274,7 @@ int CconvJikokuhyouCsv::decode(
 				}
 				else if ( iResult == 1 )
 				{
-					//	Null—ñÔ
+					//	Nullåˆ—è»Š
 					aCentDedRessya.clear() ;
 				}
 				else

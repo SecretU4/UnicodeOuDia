@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// CDlgEkiProp.cpp : �C���v�������e�[�V���� �t�@�C��
+// CDlgEkiProp.cpp : インプリメンテーション ファイル
 //
 
 #include "stdafx.h"
@@ -84,21 +84,21 @@ namespace ViewEki{
 //	CDlgEkiProp::CPropEditUiInternal
 // ================================================================
 	// ================================
-	//@name CPropEditUi - UiData - UiControl �Ԃ̃f�[�^�]��
+	//@name CPropEditUi - UiData - UiControl 間のデータ転送
 	// ================================
 void CDlgEkiProp::CPropEditUiInternal::UiDataToUi( const UIDATA* pUiData ) 
 {
 	CDlgEkiProp* pOuter = (CDlgEkiProp*)( (char*)this - offsetof( CDlgEkiProp , m_PropEditUiInternal ) ) ;
 
 	// --------------------------------
-	//	DDX��p�����AUiControl�ւ̐ݒ�
+	//	DDXを用いた、UiControlへの設定
 	// --------------------------------
 	{
-		// �w�����`��
+		// 駅時刻形式
 		{
 			pOuter->m_iRADIO_Jikokukeisiki = pUiData->iEkijikokukeisiki ;
 		}
-		// �w�K�� 
+		// 駅規模 
 		{
 			pOuter->m_iRADIO_Ekikibo = pUiData->iEkikibo ;
 		}
@@ -106,44 +106,44 @@ void CDlgEkiProp::CPropEditUiInternal::UiDataToUi( const UIDATA* pUiData )
 		pOuter->UpdateData( FALSE ) ;
 	}
 	// --------------------------------
-	//	DDX��p���Ȃ��AUiControl�ւ̐ݒ�
-	//	�����́ADDX�ɂ��l�ݒ�̌��
-	//	�s��Ȃ��Ă͂Ȃ�܂���B
+	//	DDXを用いない、UiControlへの設定
+	//	これらは、DDXによる値設定の後で
+	//	行わなくてはなりません。
 	// --------------------------------
-	// �w�� 
+	// 駅名 
 	{
 		CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Ekimei ) ;
 		pEdit->SetWindowText( pUiData->strEkimei.c_str() ) ;
 		pEdit->SetSel( 0 , -1 ) ;
 	}	
-	// ���E������ 
+	// 境界線あり 
 	{
 		CButton* pButton = (CButton*)pOuter->GetDlgItem( IDC_CHECK_Kyoukaisen ) ;
 		int nCheck = BST_INDETERMINATE ;
 		switch( pUiData->iKyoukaisen )
 		{
-		case 1: // ���E������
+		case 1: // 境界線あり
 			nCheck = BST_CHECKED ;
 			break ;
-		case 0: //�Ȃ�
+		case 0: //なし
 			nCheck = BST_UNCHECKED ;
 			break ;
 		}
 		pButton->SetCheck( nCheck ) ;
 	}
 
-	//�_�C���O������ԏ��\���i����j
+	//ダイヤグラム列車情報表示（下り）
 	{
 		CComboBox* pComboBox = (CComboBox*)pOuter->GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiKudari ) ;
 		pComboBox->SetCurSel( pUiData->iDiagramRessyajouhouHyoujiKudari ) ;
 	}
-	// �_�C���O������ԏ��\���i���j 
+	// ダイヤグラム列車情報表示（上り） 
 	{
 		CComboBox* pComboBox = (CComboBox*)pOuter->GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiNobori ) ;
 		pComboBox->SetCurSel( pUiData->iDiagramRessyajouhouHyoujiNobori ) ;
 	}
 
-	//[�w�������w�����`���Ő��K��]�̐ݒ�ł��B
+	//[駅時刻を駅時刻形式で正規化]の設定です。
 	{
 		CButton* pButton = (CButton*)pOuter->GetDlgItem( IDC_CHECK_AdjustByEkijikokukeisiki ) ;
 		int nCheck = ( pUiData->bAdjustByEkijikokukeisiki ? BST_CHECKED : BST_UNCHECKED );
@@ -157,37 +157,37 @@ void CDlgEkiProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData )
 	int iRv = 0 ;
 	
 	// --------------------------------
-	//	DDX��p�����AUiControl�ւ̐ݒ�
+	//	DDXを用いた、UiControlへの設定
 	// --------------------------------
 	if ( !pOuter->UpdateData( TRUE ) )
 	{
-		iRv = -1 ;	//	UpdateData �ŃG���[���������܂����B
+		iRv = -1 ;	//	UpdateData でエラーが発生しました。
 	}
 
 	if ( iRv >= 0 )
 	{
-		// �w�����`��
+		// 駅時刻形式
 		{
 			pUiData->iEkijikokukeisiki = pOuter->m_iRADIO_Jikokukeisiki ;
 		}
-		// �w�K�� 
+		// 駅規模 
 		{
 			pUiData->iEkikibo = pOuter->m_iRADIO_Ekikibo ;
 		}
 	}
 	// --------------------------------
-	//	DDX��p���Ȃ��AUiControl�ւ̐ݒ�
-	//	�����́ADDX�ɂ��l�ݒ�̌��
-	//	�s��Ȃ��Ă͂Ȃ�܂���B
+	//	DDXを用いない、UiControlへの設定
+	//	これらは、DDXによる値設定の後で
+	//	行わなくてはなりません。
 	// --------------------------------
-	// �w�� 
+	// 駅名 
 	{
 		CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Ekimei ) ;
 		CString aString ;
 		pEdit->GetWindowText( aString ) ;
 		pUiData->strEkimei = (LPCTSTR)aString ;
 	}
-	// ���E������ 
+	// 境界線あり 
 	{
 		CButton* pButton = (CButton*)pOuter->GetDlgItem( IDC_CHECK_Kyoukaisen ) ;
 		int nCheck = pButton->GetCheck() ;
@@ -201,16 +201,16 @@ void CDlgEkiProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData )
 			break ;
 		}
 
-		//	�`�F�b�N�{�b�N�X�́A���ԏ�Ԃւ̕ύX��F�߂܂���B
-		//	���[�U�[�ɂ���Ē��ԏ�Ԃ֕ύX���ꂽ�ꍇ�́A
-		//	�`�F�b�N�Ȃ���ԂɕύX���܂��B
+		//	チェックボックスは、中間状態への変更を認めません。
+		//	ユーザーによって中間状態へ変更された場合は、
+		//	チェックなし状態に変更します。
 		if ( pUiData->iKyoukaisen != -1 && nCheck == BST_INDETERMINATE )
 		{
 			pUiData->iKyoukaisen = 0 ;
 		}
 	}
 
-	//�_�C���O������ԏ��\���i����j
+	//ダイヤグラム列車情報表示（下り）
 	{
 		CComboBox* pComboBox = (CComboBox*)pOuter->GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiKudari ) ;
 		int iSel = pComboBox->GetCurSel(  ) ;
@@ -219,7 +219,7 @@ void CDlgEkiProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData )
 			pUiData->iDiagramRessyajouhouHyoujiKudari = iSel ;
 		}
 	}
-	// �_�C���O������ԏ��\���i���j 
+	// ダイヤグラム列車情報表示（上り） 
 	{
 		CComboBox* pComboBox = (CComboBox*)pOuter->GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiNobori ) ;
 		int iSel = pComboBox->GetCurSel(  ) ;
@@ -229,7 +229,7 @@ void CDlgEkiProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData )
 		}
 	}
 
-	//[�w�������w�����`���Ő��K��]�̐ݒ�ł��B
+	//[駅時刻を駅時刻形式で正規化]の設定です。
 	{
 		CButton* pButton = (CButton*)pOuter->GetDlgItem( IDC_CHECK_AdjustByEkijikokukeisiki ) ;
 		int nCheck =  pButton->GetCheck() ; 
@@ -266,14 +266,14 @@ void CDlgEkiProp::CPropEditUiInternal::SetFocus( int iOffsetofUiDataMember )
 	CDlgEkiProp* pOuter = (CDlgEkiProp*)( (char*)this - offsetof( CDlgEkiProp , m_PropEditUiInternal ) ) ;
 	CWnd* pControl = NULL ;
 	
-	// �w�����`��
+	// 駅時刻形式
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , iEkijikokukeisiki ) )
 		{
 			pControl = pOuter->GetDlgItem( IDC_RADIO_Jikokukeisiki ) ;
 		}
 	}
-	// �w�K�� 
+	// 駅規模 
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , iEkikibo ) )
 		{
@@ -281,14 +281,14 @@ void CDlgEkiProp::CPropEditUiInternal::SetFocus( int iOffsetofUiDataMember )
 		}
 	}
 	// --------------------------------
-	// �w�� 
+	// 駅名 
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , strEkimei ) )
 		{
 			pControl = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Ekimei ) ;
 		}
 	}	
-	// ���E������ 
+	// 境界線あり 
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , iKyoukaisen ) )
 		{
@@ -296,14 +296,14 @@ void CDlgEkiProp::CPropEditUiInternal::SetFocus( int iOffsetofUiDataMember )
 		}
 	}
 
-	//�_�C���O������ԏ��\���i����j
+	//ダイヤグラム列車情報表示（下り）
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , iDiagramRessyajouhouHyoujiKudari ) )
 		{
 			pControl = (CComboBox*)pOuter->GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiKudari ) ;
 		}
 	}
-	// �_�C���O������ԏ��\���i���j 
+	// ダイヤグラム列車情報表示（上り） 
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , iDiagramRessyajouhouHyoujiNobori ) )
 		{
@@ -311,7 +311,7 @@ void CDlgEkiProp::CPropEditUiInternal::SetFocus( int iOffsetofUiDataMember )
 		}
 	}
 
-	//[�w�������w�����`���Ő��K��]�̐ݒ�ł��B
+	//[駅時刻を駅時刻形式で正規化]の設定です。
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , bAdjustByEkijikokukeisiki ) )
 		{
@@ -326,7 +326,7 @@ void CDlgEkiProp::CPropEditUiInternal::SetFocus( int iOffsetofUiDataMember )
 }	
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CDlgEkiProp::CPropEditUiInternal::CPropEditUiInternal(
 	bool bNewItem , 
@@ -337,14 +337,14 @@ CDlgEkiProp::CPropEditUiInternal::CPropEditUiInternal(
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgEkiProp �_�C�A���O
+// CDlgEkiProp ダイアログ
 
 	// --------------------------------
-	//@name �����֐�
+	//@name 下請関数
 	// --------------------------------
 
 	// ********************************
-	//@name ����
+	//@name 属性
 	// ********************************
 // ----------------------------------------------------------------
 //	MFC
@@ -395,18 +395,18 @@ BEGIN_MESSAGE_MAP(CDlgEkiProp, CDialog)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgEkiProp ���b�Z�[�W �n���h��
+// CDlgEkiProp メッセージ ハンドラ
 
 BOOL CDlgEkiProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
 
-	//	�ҏW���J�n
+	//	編集を開始
 	m_PropEditUiInternal.StartEdit() ;
 	
 	// --------------------------------
-	return TRUE;  // �R���g���[���Ƀt�H�[�J�X��ݒ肵�Ȃ��Ƃ��A�߂�l�� TRUE �ƂȂ�܂�
-	              // ��O: OCX �v���p�e�B �y�[�W�̖߂�l�� FALSE �ƂȂ�܂�
+	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
+	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
 
 void CDlgEkiProp::OnOK() 
@@ -428,9 +428,9 @@ void CDlgEkiProp::OnShowWindow(BOOL bShow, UINT nStatus)
 	if ( bShow )
 	{
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
-		//�w��
+		//駅名
 		if ( m_iFocusItem == 0 ){
 			CEdit*	pControl = (CEdit*)GetDlgItem( IDC_EDIT_Ekimei );
 			GotoDlgCtrl( pControl ) ;
@@ -438,7 +438,7 @@ void CDlgEkiProp::OnShowWindow(BOOL bShow, UINT nStatus)
 				m_pCKeyinputSenderToModalDlg->registerCtrl( pControl->GetSafeHwnd() ) ;
 			}
 		}
-		//�w�����`��
+		//駅時刻形式
 		if ( m_iFocusItem == 1 ){
 			CWnd*	pControl = GetDlgItem( IDC_RADIO_Jikokukeisiki );
 			GotoDlgCtrl( pControl ) ;
@@ -446,7 +446,7 @@ void CDlgEkiProp::OnShowWindow(BOOL bShow, UINT nStatus)
 				m_pCKeyinputSenderToModalDlg->registerCtrl( pControl->GetSafeHwnd() ) ;
 			}
 		}
-		//�w�K��
+		//駅規模
 		if ( m_iFocusItem == 2 ){
 			CWnd*	pControl = GetDlgItem( IDC_RADIO_Ekikibo );
 			GotoDlgCtrl( pControl ) ;

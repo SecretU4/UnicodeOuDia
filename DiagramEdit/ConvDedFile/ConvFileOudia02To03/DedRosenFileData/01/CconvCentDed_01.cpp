@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,7 +81,7 @@ static char THIS_FILE[] = __FILE__;
 #include "str/strToInt.h"
 #include "str/stringSplit.h"
 
-/** �z�� a �̗v�f����Ԃ��܂��B */
+/** 配列 a の要素数を返します。 */
 #define arrayof(a) (sizeof(a)/sizeof(a[0]))
 
 // ********************************
@@ -120,7 +120,7 @@ int CconvCentDed_01::CentDedEki_To_CdConnectedString(
 	//1.Ekimei
 	if ( iRv >= 0 ){
 		if ( aCentDedEki.getEkimei().empty() ){
-			iRv = -11 ;	//	Ekimei ���w�肳��Ă��܂���B
+			iRv = -11 ;	//	Ekimei が指定されていません。
 		}	else	{
 			pCdConnectedString->setItem( nameEkimei , 
 				aCentDedEki.getEkimei() ) ;
@@ -138,7 +138,7 @@ int CconvCentDed_01::CentDedEki_To_CdConnectedString(
 			} 
 		}
 		if ( idx == arrayof( arEkijikokukeisiki_name )  ){
-			iRv = -22 ;	//	Ekijikokukeisiki �̒l���s���ł��B
+			iRv = -22 ;	//	Ekijikokukeisiki の値が不正です。
 		}	else	{
 			pCdConnectedString->setItem( nameEkijikokukeisiki , 
 				arEkijikokukeisiki_name[idx].name ) ;
@@ -157,7 +157,7 @@ int CconvCentDed_01::CentDedEki_To_CdConnectedString(
 			} 
 		}
 		if ( idx == arrayof( arEkijikokukeisiki_name )  ){
-			iRv = -32 ;	//	Ekikibo �̒l���s���ł��B
+			iRv = -32 ;	//	Ekikibo の値が不正です。
 		}	else	{
 			pCdConnectedString->setItem( nameEkikibo , 
 				arEkikibo_name[idx].name ) ;
@@ -180,7 +180,7 @@ int CconvCentDed_01::CentDedEki_From_CdConnectedString(
 	if ( iRv >= 0 ){
 		string strValue = aCdConnectedString.getValue( nameEkimei ) ;
 		if ( strValue.empty() ){
-			iRv = -11 ;	//	Ekimei ���w�肳��Ă��܂���B
+			iRv = -11 ;	//	Ekimei が指定されていません。
 		}	else	{
 			aCentDedEki.setEkimei( strValue ) ;
 		}
@@ -199,7 +199,7 @@ int CconvCentDed_01::CentDedEki_From_CdConnectedString(
 			} 
 		}
 		if ( idx == arrayof(arEkijikokukeisiki_name) ){
-			iRv = -22 ;	//	Ekijikokukeisiki �̒l���s���ł��B
+			iRv = -22 ;	//	Ekijikokukeisiki の値が不正です。
 		}	else	{
 			aCentDedEki.setEkijikokukeisiki( 
 				arEkijikokukeisiki_name[idx].value ) ;
@@ -219,7 +219,7 @@ int CconvCentDed_01::CentDedEki_From_CdConnectedString(
 			} 
 		}
 		if ( idx == arrayof(arEkikibo_name) ){
-			iRv = -32 ;	//	Ekikibo �̒l���s���ł��B
+			iRv = -32 ;	//	Ekikibo の値が不正です。
 		}	else	{
 			aCentDedEki.setEkikibo( arEkikibo_name[idx].value ) ;
 		}
@@ -265,7 +265,7 @@ int CconvCentDed_01::CentDedRessyasyubetsu_To_CdConnectedString(
 	//1.Syubetsumei
 	if ( iRv >= 0 ){
 		if ( aCentDedRessyasyubetsu.getSyubetsumei().empty() ){
-			iRv = -11 ;	//	Syubetsumei ���w�肳��Ă��܂���B
+			iRv = -11 ;	//	Syubetsumei が指定されていません。
 		}	else	{
 			pCdConnectedString->setItem( nameSyubetsumei , 
 				aCentDedRessyasyubetsu.getSyubetsumei() ) ;
@@ -309,7 +309,7 @@ int CconvCentDed_01::CentDedRessyasyubetsu_To_CdConnectedString(
 			aCentDedRessyasyubetsu.getDiagramSenStyle() != 
 				arESenStyle_name[idx].value ; idx ++ ){};
 		if ( idx == arrayof(arESenStyle_name) ){
-			iRv = -52 ;	//	DiagramSenStyle �̒l���s���ł��B
+			iRv = -52 ;	//	DiagramSenStyle の値が不正です。
 		}	else	{
 			pCdConnectedString->setItem( nameDiagramSenStyle , 
 				arESenStyle_name[idx].name ) ;
@@ -341,7 +341,7 @@ int CconvCentDed_01::CentDedRessyasyubetsu_From_CdConnectedString(
 	if ( iRv >= 0 ){
 		string	strValue = aCdConnectedString.getValue( nameSyubetsumei ) ;
 		if ( strValue.empty() ){
-			iRv = -11 ;	//	Syubetsumei ���w�肳��Ă��܂���B
+			iRv = -11 ;	//	Syubetsumei が指定されていません。
 		}	else	{
 			aCentDedRessyasyubetsu.setSyubetsumei( strValue ) ;
 		}
@@ -381,7 +381,7 @@ int CconvCentDed_01::CentDedRessyasyubetsu_From_CdConnectedString(
 			idx < arrayof(arESenStyle_name) && 
 			strValue != arESenStyle_name[idx].name ; idx ++ ){};
 		if ( idx == arrayof(arESenStyle_name) ){
-			iRv = -52 ;	//	DiagramSenStyle �̒l���s���ł��B
+			iRv = -52 ;	//	DiagramSenStyle の値が不正です。
 		}	else	{
 			aCentDedRessyasyubetsu.setDiagramSenStyle( 
 				arESenStyle_name[idx].value ) ;
@@ -412,19 +412,19 @@ void CconvCentDed_01::CentDedRessyasyubetsu_to_CDcdFreeLineProp(
 {
 		pCdLineProp->setColor( aCOLORREF ) ;
 		switch( eSenStyle ){
-		 // ���� 
+		 // 実線 
 		 case CentDedRessyasyubetsu::SenStyle_Jissen :
 			pCdLineProp->setLinestyle( LINESTYLE_SOLID ) ;
 			break ;
-		 // �j��
+		 // 破線
 		 case CentDedRessyasyubetsu::SenStyle_Hasen :
 			pCdLineProp->setLinestyle( LINESTYLE_DASH ) ;
 			break ;
-		 // �_��
+		 // 点線
 		 case CentDedRessyasyubetsu::SenStyle_Tensen :
 			pCdLineProp->setLinestyle( LINESTYLE_DOT ) ;
 			break ;
-		 // ��_����
+		 // 一点鎖線
 		 case CentDedRessyasyubetsu::SenStyle_Ittensasen :
 			pCdLineProp->setLinestyle( LINESTYLE_DASH_DOT ) ;
 			break ;
@@ -465,7 +465,7 @@ int CconvCentDed_01::CentDedEkiJikoku_To_CdConnectedString(
 			aCentDedEkiJikoku.getEkiatsukai() != 
 				arEEkiatsukai_name[idx].value ; idx ++ ){};
 		if ( idx == arrayof(arEEkiatsukai_name) ){
-			iRv = -12 ;	//	DiagramEkiatsukai �̒l���s���ł��B
+			iRv = -12 ;	//	DiagramEkiatsukai の値が不正です。
 		}	else	{
 			pCdConnectedString->setItem( nameEkiatsukai , 
 				arEEkiatsukai_name[idx].name ) ;
@@ -475,7 +475,7 @@ int CconvCentDed_01::CentDedEkiJikoku_To_CdConnectedString(
 	//2.Chakujikoku
 	if ( iRv >= 0 ){
 		string	strValue = aCentDedEkiJikoku.getChakujikoku().encode() ;
-		if ( !strValue.empty() ){	//Null��Ԃ̎����̍��ڂ́A�o�͂��܂���
+		if ( !strValue.empty() ){	//Null状態の時刻の項目は、出力しません
 			pCdConnectedString->setItem( nameChakujikoku , strValue ) ;
 		}
 	}
@@ -483,7 +483,7 @@ int CconvCentDed_01::CentDedEkiJikoku_To_CdConnectedString(
 	//3.Hatsujikoku
 	if ( iRv >= 0 ){
 		string	strValue = aCentDedEkiJikoku.getHatsujikoku().encode() ;
-		if ( !strValue.empty() ){	//Null��Ԃ̎����̍��ڂ́A�o�͂��܂���
+		if ( !strValue.empty() ){	//Null状態の時刻の項目は、出力しません
 			pCdConnectedString->setItem( nameHatsujikoku , strValue ) ;
 		}
 	}
@@ -508,7 +508,7 @@ int CconvCentDed_01::CentDedEkiJikoku_From_CdConnectedString(
 			strValue != 
 				arEEkiatsukai_name[idx].name ; idx ++ ){};
 		if ( idx == arrayof(arEEkiatsukai_name) ){
-			iRv = -12 ;	//	DiagramEkiatsukai �̒l���s���ł��B
+			iRv = -12 ;	//	DiagramEkiatsukai の値が不正です。
 		}	else	{
 			aCentDedEkiJikoku.setEkiatsukai( 
 				arEEkiatsukai_name[idx].value ) ;
@@ -588,7 +588,7 @@ int CconvCentDed_01::CentDedRessya_To_CdConnectedString(
 				pCentDedRessya->getRessyahoukou() != 
 					arERessyahoukou_name[idx].value ; idx ++ ){};
 			if ( idx == arrayof(arERessyahoukou_name) ){
-				iRv = -12 ;	//	Ressyahoukou �̒l���s���ł��B
+				iRv = -12 ;	//	Ressyahoukou の値が不正です。
 			}	else	{
 				pCdConnectedString->setItem( nameRessyahoukou , 
 					arERessyahoukou_name[idx].name ) ;
@@ -616,17 +616,17 @@ int CconvCentDed_01::CentDedRessya_To_CdConnectedString(
 				CentDedEkiJikoku	aCentDedEkiJikoku = 
 					pCentDedRessya->getCentDedEkiJikoku( iEkiOrder ) ;
 				
-				//	�w��
+				//	駅扱
 				strEkijikoku += OuLib::stringOf( 
 					(int)aCentDedEkiJikoku.getEkiatsukai() ) ;
 				strEkijikoku += "/" ;
-				//	������
+				//	着時刻
 				strEkijikoku += aCentDedEkiJikoku.getChakujikoku().encode(
 					CdDedJikoku::Format_NoColon |
 					CdDedJikoku::Format_HourZeroToNone |
 					CdDedJikoku::Format_NoSecond ) ;
 				strEkijikoku += "/" ;
-				//	������
+				//	発時刻
 				strEkijikoku += aCentDedEkiJikoku.getHatsujikoku().encode(
 					CdDedJikoku::Format_NoColon |
 					CdDedJikoku::Format_HourZeroToNone |
@@ -689,7 +689,7 @@ int CconvCentDed_01::CentDedRessya_From_CdConnectedString(
 				strValue != 
 					arERessyahoukou_name[idx].name ; idx ++ ){};
 			if ( idx == arrayof(arERessyahoukou_name) ){
-				iRv = -12 ;	//	Ressyahoukou �̒l���s���ł��B
+				iRv = -12 ;	//	Ressyahoukou の値が不正です。
 			}
 		}
 
@@ -753,7 +753,7 @@ int CconvCentDed_01::CentDedRessya_From_CdConnectedString(
 					"[" + OuLib::stringOf( iEkiOrder ) + "]." ,
 					 &connectedstrEkijikoku ) ; 
 
-				//EKiatsukai_None�̍s���o�͂��Ȃ��悤�ɕύX
+				//EKiatsukai_Noneの行を出力しないように変更
 				if ( connectedstrEkijikoku.size() > 0 ){
 
 					CentDedEkiJikoku	aCentDedEkiJikoku ;
@@ -841,7 +841,7 @@ int CconvCentDed_01::CentDedRessyaCont_From_CdConnectedString(
 			string( nameRessyaCont ) + "[]" ) ;
 		iRessyaCount = atoi( strValue.c_str() ) ;
 		if ( iRessyaCount < 0 ){
-			iRv = -32 ;	//	Ressya[][] �̒l���s���ł��B
+			iRv = -32 ;	//	Ressya[][] の値が不正です。
 		}
 	}
 
@@ -937,7 +937,7 @@ int CconvCentDed_01::CentDedDia_From_CdConnectedString(
 	if ( iRv >= 0 ){
 		string	strValue = aCdConnectedString.getValue( nameDiaName ) ;
 		if ( strValue.length() == 0 ){
-			iRv = -11 ;	//	DiaName ���w�肳��Ă��܂���B
+			iRv = -11 ;	//	DiaName が指定されていません。
 		}	else	{
 			strDiaName = strValue ;
 			pCentDedDia->setName( strDiaName ) ;
@@ -949,7 +949,7 @@ int CconvCentDed_01::CentDedDia_From_CdConnectedString(
 		string	strValue = aCdConnectedString.getValue( nameEkiCount ) ;
 		int iValue = atoi( strValue.c_str() ) ;
 		if ( iValue < 0 ){
-			iRv = -22 ;	//	EkiCount �̒l���s���ł��B
+			iRv = -22 ;	//	EkiCount の値が不正です。
 		}	else	{
 			iEkiCount = iValue ;
 		}
@@ -1140,8 +1140,8 @@ int CconvCentDed_01::CentDedRosen_From_CdConnectedString(
 			string strValue = aCdConnectedString.getValue( string( nameRessyasyubetsu ) + "[]" ) ;
 			iRessyasyubetsuCount = atoi( strValue.c_str() ) ;
 			if ( iRessyasyubetsuCount < 1 ){
-				iRv = -2 ;	//	�w��Ԏ�ʁx�́A���Ȃ��Ƃ����
-							//	���݂��Ȃ��Ă͂Ȃ�܂���B
+				iRv = -2 ;	//	『列車種別』は、少なくとも一つは
+							//	存在しなくてはなりません。
 			}
 		}
 		
@@ -1193,7 +1193,7 @@ int CconvCentDed_01::CentDedRosen_From_CdConnectedString(
 		CdDedJikoku	aCdDedJikoku ;
 		if ( !strValue.empty() ){
 			if ( aCdDedJikoku.decode( strValue ) < 0 ){
-				iRv = -52 ;	//	�N�_�����̐ݒ肪�s�K�؂ł��B
+				iRv = -52 ;	//	起点時刻の設定が不適切です。
 			}
 		}
 		if ( iRv >= 0 ){

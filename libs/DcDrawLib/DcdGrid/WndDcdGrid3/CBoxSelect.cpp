@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -88,27 +88,27 @@ namespace DcdGrid{
 namespace WndDcdGrid3{
 
 	// --------------------------------
-	///@name update_adjustProp �����֐�
+	///@name update_adjustProp 下請関数
 	// --------------------------------
 bool CBoxSelect::update_adjustProp_updateColumnNumberSelect() 
 {
 	bool bRv = false ;
 
-	//	�ύX�Ώۂ̒l�̃L���b�V��
+	//	変更対象の値のキャッシュ
 	CdDcdZoneXy	zonexyColumnNumberSelectNew = m_ColumnNumberSelect ;
-	//	�ύX�Ώۂ̒l�̃L���b�V��
+	//	変更対象の値のキャッシュ
 	CdDcdPosXy posxyColumnNumberAnchorCellNew = m_ColumnNumberAnchorCell ;
-	//	�����l��false�B
-	//	���ׂẴZ���̑I����Ԃ���������K�v������Ɣ��f���ꂽ���_�� true �B
+	//	初期値はfalse。
+	//	すべてのセルの選択状態を解除する必要があると判断された時点で true 。
 	bool bClearSelectRequired = false ;
 
 	CdDcdPosXy	aColumnNumberFocus = 
 		m_pCWndDcdGrid->getCFocus()->getFocusCellColumnNumber() ;
-	//aColumnNumberFocus = �t�H�[�J�X�Z���̗�ԍ�
+	//aColumnNumberFocus = フォーカスセルの列番号
 
 	// ----------------------------------------------------------------
-	//	�A���J�[�Z���̐��K��(�A���J�[�Z�����O���b�h�͈̔͊O�Ȃ�A
-	//	NULL �ɏC��
+	//	アンカーセルの正規化(アンカーセルがグリッドの範囲外なら、
+	//	NULL に修正
 	// ----------------------------------------------------------------
 	if ( posxyColumnNumberAnchorCellNew != ColumnNumberPosXy_NULL() )
 	{
@@ -123,50 +123,50 @@ bool CBoxSelect::update_adjustProp_updateColumnNumberSelect()
 	}
 
 	// ----------------------------------------------------------------
-	//	�t�H�[�J�X�Z���̈ړ��ɏ]����
-	//	m_ColumnNumberSelect,m_ColumnNumberAnchorCell ���X�V���܂��B
+	//	フォーカスセルの移動に従って
+	//	m_ColumnNumberSelect,m_ColumnNumberAnchorCell を更新します。
 	// ----------------------------------------------------------------
 
 	CSelect*	pCSelect = m_pCWndDcdGrid->getCSelect() ;
 	CdDcdZoneXy	zonexyColumnNumberSelectLimit = 
 		pCSelect->getColumnNumberSelectLimitRegularized() ;
-	//zonexyColumnNumberSelectLimit = �I���\�ȃZ���̗�ԍ��͈̔́B
+	//zonexyColumnNumberSelectLimit = 選択可能なセルの列番号の範囲。
 
 
 	// --------------------------------
-	//��Shift�������ꂽ��ԂŁA�h���b�O�ȊO�ɂ��t�H�[�J�X�ړ�
-	//	  ��BoxSelect �A���J�[�Z���͍X�V�����ɁA
-	//		�A���J�[�Z���ƃt�H�[�J�X�Z���̊Ԃ�I��̈�Ƃ���B
-	//���h���b�O�ɂ��t�H�[�J�X�ړ�(MouseMove,�^�C�}�X�N���[��)
-	//	  ��BoxSelect�@�A���J�[�Z���͍X�V�����ɁA
-	//		�A���J�[�Z���ƃt�H�[�J�X�Z���̊Ԃ�I��̈�Ƃ���B
+	//□Shiftが押された状態で、ドラッグ以外によるフォーカス移動
+	//	  →BoxSelect アンカーセルは更新せずに、
+	//		アンカーセルとフォーカスセルの間を選択領域とする。
+	//□ドラッグによるフォーカス移動(MouseMove,タイマスクロール)
+	//	  →BoxSelect　アンカーセルは更新せずに、
+	//		アンカーセルとフォーカスセルの間を選択領域とする。
 	// --------------------------------
 	if ( aColumnNumberFocus != CFocus::ColumnNumberPosXy_NULL() && 
 		zonexyColumnNumberSelectLimit.IsInner( aColumnNumberFocus ) &&
 		posxyColumnNumberAnchorCellNew != ColumnNumberPosXy_NULL() )
-	{	//	�t�H�[�J�X�Z����NULL�ȊO�őI���\�̈�B
-		//	�A���J�[�Z����NULL�ȊO�B
+	{	//	フォーカスセルがNULL以外で選択可能領域。
+		//	アンカーセルがNULL以外。
 		bool bBoxSelecting = false ;
 		if ( m_pCWndDcdGrid->isShiftPressed() && 
 			!m_pCWndDcdGrid->isDragging() && 
 			m_ColumnNumberFocus_Old != aColumnNumberFocus ) 
-		{	//��Shift�������ꂽ��ԂŁA�h���b�O�ȊO�ɂ��t�H�[�J�X�ړ�
-			//	  ��BoxSelect �A���J�[�Z���͍X�V�����ɁA
-			//		�A���J�[�Z���ƃt�H�[�J�X�Z���̊Ԃ�I��̈�Ƃ���B
+		{	//□Shiftが押された状態で、ドラッグ以外によるフォーカス移動
+			//	  →BoxSelect アンカーセルは更新せずに、
+			//		アンカーセルとフォーカスセルの間を選択領域とする。
 			bBoxSelecting = true ;
 		}
 		else if ( m_pCWndDcdGrid->isDragging() && 
 			m_ColumnNumberFocus_Old != aColumnNumberFocus ) 
-		{	//���h���b�O�ɂ��t�H�[�J�X�ړ�(MouseMove,�^�C�}�X�N���[��)
-			//	  ��BoxSelect�@�A���J�[�Z���͍X�V�����ɁA
-			//		�A���J�[�Z���ƃt�H�[�J�X�Z���̊Ԃ�I��̈�Ƃ���B
+		{	//□ドラッグによるフォーカス移動(MouseMove,タイマスクロール)
+			//	  →BoxSelect　アンカーセルは更新せずに、
+			//		アンカーセルとフォーカスセルの間を選択領域とする。
 			bBoxSelecting = true ;
 		}
 		if ( bBoxSelecting )
 		{
 
-			//		�A���J�[�Z���ƃt�H�[�J�X�Z���̊Ԃ�I��̈�Ƃ���B
-			//  �@��[FocusCell�� m_ColumnNumberSelectLimit�͈͓̔�]
+			//		アンカーセルとフォーカスセルの間を選択領域とする。
+			//  　○[FocusCellが m_ColumnNumberSelectLimitの範囲内]
 
 			//X
 			{
@@ -180,88 +180,88 @@ bool CBoxSelect::update_adjustProp_updateColumnNumberSelect()
 				int iPosMax = max( aColumnNumberFocus.getY() , posxyColumnNumberAnchorCellNew.getY() ) ;
 				zonexyColumnNumberSelectNew.setY( CdDcdZone( iPosMin , iPosMax - iPosMin + 1 ) ) ;
 			}
-			//bRv�̍X�V�́A���̊֐��̖����ōs���܂��B
+			//bRvの更新は、この関数の末尾で行います。
 		}
 	}
 	
 	// --------------------------------
-	//��Ctrl��Shift��������Ȃ���ԂŁA�h���b�O(MouseMove,�^�C�}�X�N���[��)�ȊO�ɂ��t�H�[�J�X�ړ�
-	//�@��BoxSelect �A���J�[�Z���͍X�V�BBoxSelect�̈��NULL�B
-	//              ���ׂẴZ���̑I����Ԃ�����
+	//□CtrlもShiftも押されない状態で、ドラッグ(MouseMove,タイマスクロール)以外によるフォーカス移動
+	//　→BoxSelect アンカーセルは更新。BoxSelect領域はNULL。
+	//              すべてのセルの選択状態を解除
 	// --------------------------------
 	if ( m_ColumnNumberFocus_Old != aColumnNumberFocus )
 	{
-		//	CRandomSelect::update_adjustProp_updateColumnNumberSelect()��
-		//	CBoxSelect::update_adjustProp_updateColumnNumberSelect() ��
-		//	���l�̏���������܂��B
+		//	CRandomSelect::update_adjustProp_updateColumnNumberSelect()と
+		//	CBoxSelect::update_adjustProp_updateColumnNumberSelect() に
+		//	同様の条件があります。
 		if ( !m_pCWndDcdGrid->isCtrlPressed() && 
 			!m_pCWndDcdGrid->isShiftPressed() && 
 			!m_pCWndDcdGrid->isDragging() && 
 			m_ColumnNumberFocus_Old != aColumnNumberFocus ) 
 		{
-			//��Ctrl��Shift��������Ȃ���ԂŁA
-			//�h���b�O(MouseMove,�^�C�}�X�N���[��)�ȊO�ɂ��t�H�[�J�X�ړ�
+			//□CtrlもShiftも押されない状態で、
+			//ドラッグ(MouseMove,タイマスクロール)以外によるフォーカス移動
 
-			//�A���J�[�Z���͍X�V�BBoxSelect�̈��NULL�B
+			//アンカーセルは更新。BoxSelect領域はNULL。
 			posxyColumnNumberAnchorCellNew = aColumnNumberFocus ;
 			zonexyColumnNumberSelectNew =  ColumnNumberZoneXy_NULL();
 
-			// ���ׂẴZ���̑I����Ԃ�����
+			// すべてのセルの選択状態を解除
 			bClearSelectRequired = true ;
 
-			//bRv�̍X�V�́A���̊֐��̖����ōs���܂��B
+			//bRvの更新は、この関数の末尾で行います。
 		}
 	}
 	// --------------------------------
-	//��Ctrl��ON�AShift��OFF�ŁA�h���b�O�ȊO�ɂ��t�H�[�J�X�ړ�
-	//�@��BoxSelect �A���J�[�Z���͍X�V�BBoxSelect�̈�͂��̂܂܁B
+	//□CtrlはON、ShiftはOFFで、ドラッグ以外によるフォーカス移動
+	//　→BoxSelect アンカーセルは更新。BoxSelect領域はそのまま。
 	// --------------------------------
 	if ( aColumnNumberFocus != CFocus::ColumnNumberPosXy_NULL() && 
 		zonexyColumnNumberSelectLimit.IsInner( aColumnNumberFocus ) )
-	{	//	�t�H�[�J�X�Z����NULL�ȊO�őI���\�̈�B
-		//	�A���J�[�Z����NULL�ȊO�B
+	{	//	フォーカスセルがNULL以外で選択可能領域。
+		//	アンカーセルがNULL以外。
 
 		if ( m_pCWndDcdGrid->isCtrlPressed() && 
 			!m_pCWndDcdGrid->isShiftPressed() && 
 			!m_pCWndDcdGrid->isDragging() && 
 			m_ColumnNumberFocus_Old != aColumnNumberFocus ) 
-		{	//��Ctrl��Shift��������Ȃ���ԂŁA
-			//�h���b�O(MouseMove,�^�C�}�X�N���[��)�ȊO�ɂ��t�H�[�J�X�ړ�
+		{	//□CtrlもShiftも押されない状態で、
+			//ドラッグ(MouseMove,タイマスクロール)以外によるフォーカス移動
 
-			//�A���J�[�Z���͍X�V�BBoxSelect�̈�͂��̂܂܁B
+			//アンカーセルは更新。BoxSelect領域はそのまま。
 			posxyColumnNumberAnchorCellNew = aColumnNumberFocus ;
 		}
 	}
 
 	// ----------------------------------------------------------------
-	//	posxyColumnNumberAnchorCellNew�Em_ColumnNumberSelect �𐳋K�����܂��B
+	//	posxyColumnNumberAnchorCellNew・m_ColumnNumberSelect を正規化します。
 	// ----------------------------------------------------------------
 	// --------------------------------
-	//	�I���Z�����A�����ŕ␳
+	//	選択セルを、制限で補正
 	// --------------------------------
 
 
-	//	�I���Z���́A�I���\�����͈͓��ɂ���B
-	//��[m_ColumnNumberSelect!=NULL]
-	//�@��m_ColumnNumberSelect �́A m_ColumnNumberSelectLimit �͈͓̔��ɂ���B
-	//�@��[SelectMode=SelectMode_XColumn]
+	//	選択セルは、選択可能制限範囲内にする。
+	//○[m_ColumnNumberSelect!=NULL]
+	//　○m_ColumnNumberSelect は、 m_ColumnNumberSelectLimit の範囲内にする。
+	//　○[SelectMode=SelectMode_XColumn]
 	//     m_ColumnNumberSelect.Y = m_ColumnNumberSelectLimit.Y
-	//�@��[SelectMode=SelectMode_YColumn]
+	//　○[SelectMode=SelectMode_YColumn]
 	//     m_ColumnNumberSelect.X = m_ColumnNumberSelectLimit.X
 	if ( zonexyColumnNumberSelectNew != ColumnNumberZoneXy_NULL() ) 
 	{
-		//�@��m_ColumnNumberSelect �́A m_ColumnNumberSelectLimit �͈͓̔��ɂ���B
+		//　○m_ColumnNumberSelect は、 m_ColumnNumberSelectLimit の範囲内にする。
 		zonexyColumnNumberSelectNew = 
 			zonexyColumnNumberSelectLimit.CrossZone( zonexyColumnNumberSelectNew ) ;
 
 
-		//�@��[SelectMode=SelectMode_XColumn]
+		//　○[SelectMode=SelectMode_XColumn]
 		//     m_ColumnNumberSelect.Y = m_ColumnNumberSelectLimit.Y
 		if ( pCSelect->getSelectMode() == CSelect::SelectMode_XColumn )
 		{
 			zonexyColumnNumberSelectNew.setY( zonexyColumnNumberSelectLimit.getY() ) ;
 		}
-		//�@��[SelectMode=SelectMode_YColumn]
+		//　○[SelectMode=SelectMode_YColumn]
 		//     m_ColumnNumberSelect.X = m_ColumnNumberSelectLimit.X
 		if ( pCSelect->getSelectMode() == CSelect::SelectMode_YColumn )
 		{
@@ -270,7 +270,7 @@ bool CBoxSelect::update_adjustProp_updateColumnNumberSelect()
 
 	}
 	// ----------------------------------------------------------------
-	//	�����̍X�V
+	//	属性の更新
 	// ----------------------------------------------------------------
 	if ( m_ColumnNumberSelect != zonexyColumnNumberSelectNew )
 	{
@@ -282,12 +282,12 @@ bool CBoxSelect::update_adjustProp_updateColumnNumberSelect()
 		m_ColumnNumberAnchorCell = posxyColumnNumberAnchorCellNew ;
 		bRv = true ;
 	}
-	if ( bClearSelectRequired ){	// ���ׂẴZ���̑I����Ԃ�����
+	if ( bClearSelectRequired ){	// すべてのセルの選択状態を解除
 		m_pCWndDcdGrid->getCSelect()->clearSelect() ;
 		bRv = true ;
 	}
 	// --------------------------------
-	//	�O��l�̍X�V
+	//	前回値の更新
 	// --------------------------------
 	m_ColumnNumberFocus_Old = aColumnNumberFocus ;
 	// --------------------------------
@@ -313,8 +313,8 @@ bool CBoxSelect::update_adjustProp_updateCSelectCell()
 		Ou<CPropStack> pPropStack = createPropStackForSelectChange() ;
 
 		// --------------------------------
-		//	�Z���̑I���󋵂̕ω���
-		//	CSelectCell �ɔ��f���܂�
+		//	セルの選択状況の変化を
+		//	CSelectCell に反映します
 		// --------------------------------
 		for ( int iYColumnNumber = 0 ; 
 			iYColumnNumber < pCXDcdGrid->getYColumnCount() ; 
@@ -354,25 +354,25 @@ Ou<CPropStack> CBoxSelect::createPropStackForSelectChange()
 
 
 	// --------------------------------
-	//@name CWndDcdGrid ����̈Ϗ�
+	//@name CWndDcdGrid からの委譲
 	// --------------------------------
 bool CBoxSelect::update_adjustProp() 
 {
 	bool	bRv = false ;
 	if ( m_bIsEnable )
 	{
-		//	�t�H�[�J�X�Z���̈ړ��ɏ]���āA
-		//	m_ColumnNumberAnchorCell , m_ColumnNumberSelect ���X�V���܂��B
+		//	フォーカスセルの移動に従って、
+		//	m_ColumnNumberAnchorCell , m_ColumnNumberSelect を更新します。
 		//	
-		//	m_ColumnNumberAnchorCell�Em_ColumnNumberSelect �𐳋K�����܂��B
+		//	m_ColumnNumberAnchorCell・m_ColumnNumberSelect を正規化します。
 		bRv |= update_adjustProp_updateColumnNumberSelect() ;
 
-		//	�I���Z���̏�Ԃ��ACSelectCell �ɔ��f����
+		//	選択セルの状態を、CSelectCell に反映する
 		bRv |= update_adjustProp_updateCSelectCell() ;
 	}
 	else
 	{
-		//	�Z���I�����N���A����
+		//	セル選択をクリアする
 		m_ColumnNumberAnchorCell = ColumnNumberPosXy_NULL() ;
 		m_ColumnNumberSelect = ColumnNumberZoneXy_NULL() ;
 	}
@@ -381,7 +381,7 @@ bool CBoxSelect::update_adjustProp()
 }
 bool CBoxSelect::update_updateScreen() 
 {
-	//	���̃N���X�ł͏����͂���܂���(�ĕ`��́ACSelect �ɂčs���܂�)
+	//	このクラスでは処理はありません(再描画は、CSelect にて行われます)
 	m_ColumnNumberSelect_Old = m_ColumnNumberSelect ;
 	return false ;
 }
@@ -389,30 +389,30 @@ bool CBoxSelect::update_updateScreen()
 
 bool CBoxSelect::OnPaint( IfDcdTarget* pIfDcdTarget ) 
 {
-	//	���̃N���X�ł͏����͂���܂���(�ĕ`��́ACSelect �ɂčs���܂�)
+	//	このクラスでは処理はありません(再描画は、CSelect にて行われます)
 	return false ;
 }
 
 void CBoxSelect::InvalidateGrid( ) 
 {
-	//	���̃N���X�ł͏����͂���܂���(�ĕ`��́ACSelect �ɂčs���܂�)
+	//	このクラスでは処理はありません(再描画は、CSelect にて行われます)
 }
 void CBoxSelect::OnSize(UINT nType, int cx, int cy)
 {
-	//	���̃N���X�ł́A�����͂���܂���B
+	//	このクラスでは、処理はありません。
 }
 void CBoxSelect::OnSetFocus(CWnd* pOldWnd)
 {
-	//	���̃N���X�ł́A�����͂���܂���B
+	//	このクラスでは、処理はありません。
 }
 
 void CBoxSelect::OnKillFocus(CWnd* pNewWnd)
 {
-	//	���̃N���X�ł́A�����͂���܂���B
+	//	このクラスでは、処理はありません。
 }
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CBoxSelect::CBoxSelect( CWndDcdGrid* pCWndDcdGrid ) 
 	: m_pCWndDcdGrid( pCWndDcdGrid ) 
@@ -429,7 +429,7 @@ CBoxSelect::~CBoxSelect()
 {
 }
 	// ********************************
-	//@name CSelect �֘A
+	//@name CSelect 関連
 	// ********************************
 CWndDcdGrid* CBoxSelect::getCWndDcdGrid() 
 {
@@ -437,7 +437,7 @@ CWndDcdGrid* CBoxSelect::getCWndDcdGrid()
 }
 
 	// ********************************
-	//@name CSelect ����
+	//@name CSelect 属性
 	// ********************************
 bool CBoxSelect::getIsEnable()
 {
@@ -462,10 +462,10 @@ void CBoxSelect::setColumnNumberSelect( const CdDcdZoneXy& value )
 }
 
 	// ********************************
-	//@name CSelect �W��
+	//@name CSelect 集約
 	// ********************************
 	// ********************************
-	//@name CSelect ����
+	//@name CSelect 操作
 	// ********************************
 void CBoxSelect::clearSelect() 
 {

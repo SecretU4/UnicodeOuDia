@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -111,7 +111,7 @@ bool CDcdText::DcDraw( IfDcdTarget* pIfDcdTarget )
 	bool	bRv = false ;
 	
 	// --------------------------------
-	//	�t�H���g�̐���
+	//	フォントの生成
 	// --------------------------------
 
 	HFONT	hFont = NULL ;
@@ -120,7 +120,7 @@ bool CDcdText::DcDraw( IfDcdTarget* pIfDcdTarget )
 		hFont = pIfDcdTarget->CreateFont( m_CdDrawTextProp.getCdFontProp() ) ;
 
 		if ( hFont == NULL ){
-			iRv = -1 ;	//	�t�H���g�̍쐬�Ɏ��s���܂����B	\n
+			iRv = -1 ;	//	フォントの作成に失敗しました。	\n
 		}
 	}
 	// --------------------------------
@@ -178,17 +178,17 @@ bool CDcdText::getItemSize( IfDcdTarget* pIfDcdTarget ,
 	int		iRv = 0 ;
 	bool	bRv = false ;
 	// --------------------------------
-	//	�t�H���g�̐���
+	//	フォントの生成
 	// --------------------------------
 	HFONT	hFont = NULL ;
 	if ( iRv >= 0 ){
 		hFont = pIfDcdTarget->CreateFont( m_CdDrawTextProp.getCdFontProp() ) ;
 		if ( hFont == NULL ){
-			iRv = -1 ;	//	�t�H���g�̍쐬�Ɏ��s���܂����B	\n
+			iRv = -1 ;	//	フォントの作成に失敗しました。	\n
 		}
 	}
 	//--------------------------------
-	//	GDI�I�u�W�F�N�g�̑I��
+	//	GDIオブジェクトの選択
 	//--------------------------------
 	bool	bSelectTool = false ;
 	COLORREF	colorrefLTextSid = 0xffffffff;
@@ -216,11 +216,11 @@ bool CDcdText::getItemSize( IfDcdTarget* pIfDcdTarget ,
 			strExtent = m_strText ;
 		}
 	}
-	//strExtent = �e�L�X�g�̕��̌v�Z�̊�ƂȂ镶����B
+	//strExtent = テキストの幅の計算の基準となる文字列。
 
 	if ( iRv >= 0 ){
 		//--------------------------------
-		//	�e�L�X�g�̉����̌v�Z
+		//	テキストの横幅の計算
 		//--------------------------------
 		{
 			tstring	strLs ;
@@ -229,18 +229,18 @@ bool CDcdText::getItemSize( IfDcdTarget* pIfDcdTarget ,
 			aFlag.setCalcrect( CdDrawTextFormat2::CALCRECT )
 				.setVertical( CdDrawTextFormat::V_SINGLELINT_TOP )
 				.setEllipses( CdDrawTextFormat::NOELLIPSIS )  ;
-			//aFlag = �w��̃t�H�[�}�b�g��P��s�E
-			//	�ȗ��L���Ȃ��E�T�C�Y�v�Z�ɏC�����܂���
+			//aFlag = 指定のフォーマットを単一行・
+			//	省略記号なし・サイズ計算に修正しました
 
 			RECT	aRect ;
 			memset( &aRect , 0 , sizeof(aRect) ) ;
 			DrawText(  pIfDcdTarget->getHdc() , 
 					strLs.c_str() , -1 , &aRect , aFlag ) ;
-				//LRect.right = �e�L�X�g m_strExtent �̕�
+				//LRect.right = テキスト m_strExtent の幅
 			pCdDcdSizeXy->setX( aRect.right - aRect.left ) ;
 		}
 		//--------------------------------
-		//	�e�L�X�g�̍����̌v�Z
+		//	テキストの高さの計算
 		//--------------------------------
 		{
 			tstring	strLs ;
@@ -251,20 +251,20 @@ bool CDcdText::getItemSize( IfDcdTarget* pIfDcdTarget ,
 				}
 				strLs += strExtent.c_str() ;
 			}
-				//strLs = m_strExtent���w��̍s���������c�ɕ��ׂ�������
+				//strLs = m_strExtentを指定の行数分だけ縦に並べた文字列
 			
 			CdDrawTextFormat2	aFlag( m_CdDrawTextProp.getCdDrawTextFormat() ) ;
 			aFlag.setCalcrect( CdDrawTextFormat2::CALCRECT )
 				.setVertical( CdDrawTextFormat::V_MULTILINE )
 				.setEllipses( CdDrawTextFormat::NOELLIPSIS )  ;
-			//aFlag = �w��̃t�H�[�}�b�g�𕡐��s�E
-			//	�ȗ��L���Ȃ��E�T�C�Y�v�Z�ɏC�����܂���
+			//aFlag = 指定のフォーマットを複数行・
+			//	省略記号なし・サイズ計算に修正しました
 
 			RECT	aRect ;
 			memset( &aRect , 0 , sizeof(aRect) ) ;
 			DrawText( pIfDcdTarget->getHdc() , 
 				strLs.c_str() , -1 , &aRect , aFlag ) ;
-			//LRect.bottom = �e�L�X�g m_strExtent �̍���
+			//LRect.bottom = テキスト m_strExtent の高さ
 			
 			pCdDcdSizeXy->setY( aRect.bottom - aRect.top ) ;
 		}		

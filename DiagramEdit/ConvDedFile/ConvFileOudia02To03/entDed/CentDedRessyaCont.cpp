@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -85,7 +85,7 @@ static char THIS_FILE[] = __FILE__;
 //	CentDedRessyaCont
 // ****************************************************************
 // --------------------------------
-//@name CaContFilter-ƒI[ƒoƒ‰ƒCƒh‰Â”\‚È‰¼‘zŠÖ”
+//@name CaContFilter-ã‚ªãƒ¼ãƒãƒ©ã‚¤ãƒ‰å¯èƒ½ãªä»®æƒ³é–¢æ•°
 // --------------------------------
 CentDedRessyaCont::adaptee_value_type 
 CentDedRessyaCont::onSet( const value_type& value , int* piResult ) 
@@ -93,7 +93,7 @@ CentDedRessyaCont::onSet( const value_type& value , int* piResult )
 	CentDedRessya* pCentDedRessya = new CentDedRessya( m_iEkiCount , m_eRessyahoukou ) ;
 	*pCentDedRessya = value ;
 
-	//	‘}“ü‚³‚ê‚é—ñÔ‚Ìí•ÊIndex‚ª‹K’èˆÈã‚È‚çA‚O‚É•ÏX
+	//	æŒ¿å…¥ã•ã‚Œã‚‹åˆ—è»Šã®ç¨®åˆ¥IndexãŒè¦å®šä»¥ä¸Šãªã‚‰ã€ï¼ã«å¤‰æ›´
 	if ( pCentDedRessya->getRessyasyubetsuIndex() >= m_iRessyasyubetsuCount ){
 		pCentDedRessya->setRessyasyubetsuIndex( m_iRessyasyubetsuCount - 1 ) ;
 	}
@@ -112,7 +112,7 @@ void CentDedRessyaCont::onErase( const adaptee_value_type& value )
 
 
 // ********************************
-//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 // ********************************
 CentDedRessyaCont::CentDedRessyaCont( 
 		int iEkiCount ,
@@ -132,7 +132,7 @@ CentDedRessyaCont::CentDedRessyaCont( const CentDedRessyaCont& value )
 	, m_eRessyahoukou( value.m_eRessyahoukou ) 
 	, m_iRessyasyubetsuCount( value.m_iRessyasyubetsuCount ) 
 {
-	//	value ‚Ì—ñÔ‚ğAthis‚ÉƒRƒs[‚µ‚Ä‚¢‚Ü‚·B
+	//	value ã®åˆ—è»Šã‚’ã€thisã«ã‚³ãƒ”ãƒ¼ã—ã¦ã„ã¾ã™ã€‚
 	CaCont< CentDedRessya >	aCaCont_this( this ) ;
 	aCaCont_this.insert( &value ) ;
 
@@ -140,9 +140,9 @@ CentDedRessyaCont::CentDedRessyaCont( const CentDedRessyaCont& value )
 	
 CentDedRessyaCont& CentDedRessyaCont::operator=( const CentDedRessyaCont& value )
 {
-	//	•Û‚µ‚Ä‚¢‚é—ñÔ‚ğA‚·‚×‚Ä”jŠü‚µ‚Ü‚·B
+	//	ä¿æŒã—ã¦ã„ã‚‹åˆ—è»Šã‚’ã€ã™ã¹ã¦ç ´æ£„ã—ã¾ã™ã€‚
 	erase( 0 , INT_MAX ) ;
-	//	value ‚Ì—ñÔ‚ğAthis‚ÉƒRƒs[‚µ‚Ä‚¢‚Ü‚·B
+	//	value ã®åˆ—è»Šã‚’ã€thisã«ã‚³ãƒ”ãƒ¼ã—ã¦ã„ã¾ã™ã€‚
 	CaCont< CentDedRessya >	aCaCont_this( this ) ;
 	aCaCont_this.insert( &value ) ;
 
@@ -157,7 +157,7 @@ CentDedRessyaCont::~CentDedRessyaCont()
 	setAdaptee( NULL ) ;
 	delete pAdaptee ;
 /*
-	//	w—ñÔxƒIƒuƒWƒFƒNƒg‚ğíœ‚µ‚Ü‚·B
+	//	ã€åˆ—è»Šã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å‰Šé™¤ã—ã¾ã™ã€‚
 	{
 		while ( m_CentDedRessyaCont.size() > 0 ){
 			CentDedRessya*	pCentDedRessya = m_CentDedRessyaCont.back() ;
@@ -197,8 +197,8 @@ int CentDedRessyaCont::EkiOrderOfEkiIndex( int iEkiIndex )
 
 
 // --------------------------------
-//@name CentDedRessya “à‚Ì 
-//	CentDedEkiJikoku ‚ğ‘Œ¸
+//@name CentDedRessya å†…ã® 
+//	CentDedEkiJikoku ã‚’å¢—æ¸›
 // --------------------------------
 int CentDedRessyaCont::onSetCentDedEki( const IfContGet<CentDedEkiCont::CdDedEki>* pCentDedEkiCont , int iEkiOrder ) 
 {
@@ -215,7 +215,7 @@ int CentDedRessyaCont::onSetCentDedEki( const IfContGet<CentDedEkiCont::CdDedEki
 			iRv = pCentDedRessya->onSetCentDedEki( 
 					pCentDedEkiCont , 
 					iEkiOrder ) ;
-				//-1 ; // ƒCƒ“ƒfƒNƒX‚ª•s³‚Å‚·B 
+				//-1 ; // ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£ã§ã™ã€‚ 
 		}
 	}
 	return ( iRv ) ;
@@ -237,7 +237,7 @@ int CentDedRessyaCont::insertCentDedEkiJikoku(	int iEkiOrder )
 			iRv = pCentDedRessya->insertCentDedEkiJikoku( 
 					CentDedEkiJikoku() , 
 					iEkiOrder ) ;
-				//-1 ; // ƒCƒ“ƒfƒNƒX‚ª•s³‚Å‚·B 
+				//-1 ; // ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£ã§ã™ã€‚ 
 		}
 	}
 	return ( iRv ) ;
@@ -256,7 +256,7 @@ int CentDedRessyaCont::eraseCentDedEkiJikoku( int iEkiOrder )
 				idxRessya ++ ){
 			CentDedRessya*	pCentDedRessya = pIfContGet->get( idxRessya ) ;
 			iRv = pCentDedRessya->eraseCentDedEkiJikoku( iEkiOrder ) ;
-			//-1 ; // ƒCƒ“ƒfƒNƒX‚ª•s³‚Å‚·B 
+			//-1 ; // ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£ã§ã™ã€‚ 
 		}
 	}
 	return ( iRv ) ;
@@ -270,7 +270,7 @@ int CentDedRessyaCont::insertRessyasyubetsuIndex( int iRessyasyubetsuIndex )
 		}
 		if ( !( 0 <= iRessyasyubetsuIndex && 
 				iRessyasyubetsuIndex <= m_iRessyasyubetsuCount ) ){
-			iRv = -1 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³
+			iRv = -1 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£
 		}
 	}
 	// --------------------------------
@@ -305,13 +305,13 @@ int CentDedRessyaCont::eraseRessyasyubetsuIndex( int iRessyasyubetsuIndex )
 		}
 		if ( !( 0 <= iRessyasyubetsuIndex && 
 				iRessyasyubetsuIndex < m_iRessyasyubetsuCount ) ){
-			iRv = -1 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³
+			iRv = -1 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£
 		}
 	}
 	if ( iRv >= 0 ){
 		if ( isExistRessyaOfRessyasyubetsu( 
 			iRessyasyubetsuIndex , NULL ) > 0 ){
-			iRv = -3 ;	//	w—ñÔí•Êx‚ª iRessyasyubtsuIndex ‚Ì—ñÔ‚ª‘¶İ‚µ‚Ü‚·B
+			iRv = -3 ;	//	ã€åˆ—è»Šç¨®åˆ¥ã€ãŒ iRessyasyubtsuIndex ã®åˆ—è»ŠãŒå­˜åœ¨ã—ã¾ã™ã€‚
 		}
 	}
 	// --------------------------------
@@ -352,7 +352,7 @@ int CentDedRessyaCont::isExistRessyaOfRessyasyubetsu(
 		}
 		if ( !( 0 <= iRessyasyubetsuIndex && 
 				iRessyasyubetsuIndex < m_iRessyasyubetsuCount ) ){
-			iRv = -1 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³
+			iRv = -1 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£
 		}
 	}
 	
@@ -372,7 +372,7 @@ int CentDedRessyaCont::isExistRessyaOfRessyasyubetsu(
 					// --------------------------------
 					if ( iRessyasyubetsuIndexCurr == iRessyasyubetsuIndex ){
 						iRessyaIndexFound = iRessyaIndex ;
-						iRv = 1 ;	//	w’è‚Ì—ñÔí•Ê‚Ì—ñÔ‚ª‘¶İ‚µ‚Ü‚·B
+						iRv = 1 ;	//	æŒ‡å®šã®åˆ—è»Šç¨®åˆ¥ã®åˆ—è»ŠãŒå­˜åœ¨ã—ã¾ã™ã€‚
 					}
 				}
 	}

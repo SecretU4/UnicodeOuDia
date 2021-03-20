@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -84,27 +84,27 @@ namespace DcdGrid{
 // ****************************************************************
 /**
  @brief
- �y�T�v�z
-	DcdGrid ��X��I�u�W�F�N�g�ł��B
-	IfDcDraw �I�u�W�F�N�g�Ɗ֘A������� ���� IfDcDraw �I�u�W�F�N�g���g����
-	X��̉E���̋��E����`�悵�܂��B
+ 【概要】
+	DcdGrid のX列オブジェクトです。
+	IfDcDraw オブジェクトと関連を持ち､ その IfDcDraw オブジェクトを使って
+	X列の右側の境界線を描画します。
 
-	CDcdGrid �́A�ʏ�� CDcdLine �I�u�W�F�N�g�𐶐����āA
-	this �Ɗ֘A���� IfDcDraw �I�u�W�F�N�g�Ƃ��ēo�^���܂��
+	CDcdGrid は、通常は CDcdLine オブジェクトを生成して、
+	this と関連する IfDcDraw オブジェクトとして登録します｡
  */
 class CDcdGridXColumn
 {
 	friend class CDcdGrid ;
 private:
 	// ********************************
-	/// @name 	CDcdGrid �Ɋ֌W���鑮��/�֘A
+	/// @name 	CDcdGrid に関係する属性/関連
 	// ********************************
 	///@{
 	/**
-		���̃I�u�W�F�N�g��ێ�����O���b�h�I�u�W�F�N�g�ւ̃|�C���^�ł��B
-		�R���X�g���N�^�Ō��܂�܂��B
-		�j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis���������������Ȃ��Ă͂Ȃ�܂���B
+		このオブジェクトを保持するグリッドオブジェクトへのポインタです。
+		コンストラクタで決まります。
+		破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、thisよりも長く生存しなくてはなりません。
 	*/
 	CDcdGrid*	m_pCDcdGrid ;
 
@@ -112,41 +112,41 @@ private:
 
 private:
 	// ********************************
-	///	@name �W��
+	///	@name 集約
 	// ********************************
 	///@{
 	/**
-		X��̉E���̋��E���Ɋւ��鑮����ێ����܂��B
+		X列の右側の境界線に関する属性を保持します。
 	*/
 	CDcdGridXBorder	m_CDcdGridXBorder ;
 	///@}
 private:
 	// ********************************
-	///	@name CDcdGridXColumn �ŗL�̑���
+	///	@name CDcdGridXColumn 固有の属性
 	// ********************************
 	///@{
 
 	/**
-		�_���T�C�Y�ŁA��̃T�C�Y��ێ����܂��B
-		�������A m_bAutoColumnSize ���^�Ȃ�A���̒l�͖����ł��B
-		�f�t�H���g�ł͂P�ł��B
+		論理サイズで、列のサイズを保持します。
+		ただし、 m_bAutoColumnSize が真なら、この値は無効です。
+		デフォルトでは１です。
 	 */
 	DcdSize	m_iColumnSize ;
 	
 	/**
-		�^�Ȃ�AY��ԍ��O�̃Z���� IfDcDraw �I�u�W�F�N�g�� getItemSize() ���Ԃ�
-		�T�C�Y�����ƂɁA��̃T�C�Y�����肵�܂��B
-		�f�t�H���g�ł͐^�ł��B
+		真なら、Y列番号０のセルの IfDcDraw オブジェクトの getItemSize() が返す
+		サイズをもとに、列のサイズを決定します。
+		デフォルトでは真です。
 	 @attention
-		�������A���̒l���^�̏ꍇ�A�`��͒x���Ȃ�܂�
-		(���ɁACDcdTextbox::getItemSize() ��
-		���Ԃ������邹���ł��j�B@n
-		�Ƃ��ɁA��̐��������ꍇ�͂��Ȃ�x���Ȃ邱�Ƃ�
-		����܂��̂ŁA
-		��̐��������ꍇ�́A 
-		CDcdGridXColumn ��
-		m_bAutoColumnSize ���U�ɂ��������ŁA
-		m_iColumnSize �ɖ����I�ɒl��ݒ肷�邱�Ƃ������߂��܂��B
+		ただし、この値が真の場合、描画は遅くなります
+		(特に、CDcdTextbox::getItemSize() に
+		時間がかかるせいです）。@n
+		とくに、列の数が多い場合はかなり遅くなることが
+		ありますので、
+		列の数が多い場合は、 
+		CDcdGridXColumn の
+		m_bAutoColumnSize を偽にしたうえで、
+		m_iColumnSize に明示的に値を設定することをお勧めします。
 	 */
 	bool	m_bAutoColumnSize ;
 	
@@ -155,12 +155,12 @@ private:
 
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 public:
 	/**
 	 @param [in] pCDcdGrid 
-		���̃I�u�W�F�N�g��ێ�����O���b�h�I�u�W�F�N�g�ւ̃|�C���^�ł��B
+		このオブジェクトを保持するグリッドオブジェクトへのポインタです。
 	 */
 	CDcdGridXColumn( CDcdGrid*	pCDcdGrid ) ;
 	
@@ -173,13 +173,13 @@ private:
 // ****************************************************************
 public:
 	// ********************************
-	/// @name	�֘A
+	/// @name	関連
 	// ********************************
 	///@{
 	///@}
 
 	// ********************************
-	/// @name	�W��
+	/// @name	集約
 	// ********************************
 	///@{
 	CDcdGridXBorder*	getCDcdGridXBorder(){
@@ -187,7 +187,7 @@ public:
 	///@}
 
 	// ********************************
-	/// @name	����
+	/// @name	属性
 	// ********************************
 	///@{
 	CDcdGridXColumn& setColumnSize( DcdSize ev ){
@@ -203,16 +203,16 @@ public:
 	///@}
 	
 	// ********************************
-	/// @name	����
+	/// @name	操作
 	// ********************************
 	///@{
 	
 	/**
-		�_���T�C�Y�ŁA��̃T�C�Y��Ԃ��܂��B
+		論理サイズで、列のサイズを返します。
 	 @param pIfDcdTarget [in]
-		�`��ΏۂƂȂ�^�[�Q�b�g���w�肵�Ă��������B
+		描画対象となるターゲットを指定してください。
 	 @return
-		X��̃T�C�Y��Ԃ��܂��B
+		X列のサイズを返します。
 	 */
 	virtual DcdSize	getColumnSize( IfDcdTarget* pIfDcdTarget ) ;
 	

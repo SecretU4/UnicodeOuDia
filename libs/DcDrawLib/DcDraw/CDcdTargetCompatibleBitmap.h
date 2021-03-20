@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -82,87 +82,87 @@ namespace DcDraw{
 // ****************************************************************
 /**
  * @brief
- * �y�T�v�z
- *	�`����DC�ƌ݊����̂���r�b�g�}�b�v��`��̈�Ƃ����N���X�ł��B
+ * 【概要】
+ *	描画先のDCと互換性のあるビットマップを描画領域としたクラスです。
  *
- * �y�g�����z
+ * 【使い方】
  *
- * �P�D  �R���X�g���N�^�ŃI�u�W�F�N�g���쐬��AresetSize()�Ńr�b�g�}�b�v��
- *	�傫�����w�肵�Ă��������Bthis�͂��̑傫���̃r�b�g�}�b�v���쐬���܂��B
- *	  �܂��A�����ɕ`���Ɍ݊����̂��郁����DC���쐬���A�r�b�g�}�b�v��
- *	�I�������܂��B
+ * １．  コンストラクタでオブジェクトを作成後、resetSize()でビットマップの
+ *	大きさを指定してください。thisはその大きさのビットマップを作成します。
+ *	  また、同時に描画先に互換性のあるメモリDCも作成し、ビットマップを
+ *	選択させます。
  *
- * �Q�D  getHdc()�ł́A���̃r�b�g�}�b�v��I��������Ԃ�DC���擾���邱�Ƃ�
- *	�ł��܂��B���̂��߁AgetHdc()�Ŏ擾���ꂽDC�ɕ`�悷�邱�Ƃɂ��A
- *	�r�b�g�}�b�v�ւ̕`�悪�ł��܂��B
+ * ２．  getHdc()では、このビットマップを選択した状態のDCを取得することが
+ *	できます。このため、getHdc()で取得されたDCに描画することにより、
+ *	ビットマップへの描画ができます。
  *
- * �R�D  �r�b�g�}�b�v�̓��e���E�C���h�E�ɕ`�悷�邽�߂ɂ́A getHdc() �Ŏ擾����
- *	������DC�ƁA�E�C���h�E��DC ���g���āABitBlt()���s���Ă��������B
+ * ３．  ビットマップの内容をウインドウに描画するためには、 getHdc() で取得した
+ *	メモリDCと、ウインドウのDC を使って、BitBlt()を行ってください。
  */
 class CDcdTargetCompatibleBitmap : public IfDcdTarget
 {
 // ********************************
-///@name	����
+///@name	属性
 // ********************************
 ///@{
  private:
 	/**
-	 *	���݂̃r�b�g�}�b�v�̃T�C�Y�ł��B
-	 *	�R���X�g���N�^�Ō��܂�܂����A�ύX���ł��܂��B
-	 *	�f�t�H���g�́A(0,0)�ƂȂ�܂��B
+	 *	現在のビットマップのサイズです。
+	 *	コンストラクタで決まりますが、変更もできます。
+	 *	デフォルトは、(0,0)となります。
 	 */
 	CdDcdSizeXy	m_CdDcdSizeXy ;
 
 	
 	/**
-	 *	GDI�I�u�W�F�N�g�̑����ƁA�n���h���̑Ώƕ\��ێ����܂��B
+	 *	GDIオブジェクトの属性と、ハンドルの対照表を保持します。
 	 */
 	CGdiCache	m_CGdiCache ;
 ///@}
 // --------------------------------
-///@name	�����f�[�^
+///@name	内部データ
 // --------------------------------
 ///@{
  private:
 	/**
-	 *	�r�b�g�}�b�v�ւ̏o�͂�����DC�ł��B
-	 *	����DC�́A�r�b�g�}�b�v�̏o�͐�f�o�C�X��\��DC��
-	 *	�݊����̂���DC�ƂȂ�܂��B
-	 *	�����Ȃ��R���X�g���N�^���AresetSize() �Ō��܂�܂��B
-	 *	�������AresetSize()��X,Y�̂����ꂩ��0�Ɏw�肳�ꂽ
-	 *	�ꍇ�́ANULL�ƂȂ�܂��B
+	 *	ビットマップへの出力を扱うDCです。
+	 *	このDCは、ビットマップの出力先デバイスを表すDCと
+	 *	互換性のあるDCとなります。
+	 *	引数なしコンストラクタか、resetSize() で決まります。
+	 *	ただし、resetSize()でX,Yのいずれかに0に指定された
+	 *	場合は、NULLとなります。
 	 */
 	HDC		m_hDc ;
 
 	/**
-	 *	�r�b�g�}�b�v�ւ̏o�͂�����DC�ł��B
-	 *	����DC�́A�r�b�g�}�b�v�̏o�͐�f�o�C�X��\��DC��
-	 *	�݊����̂���DC�ƂȂ�܂��B
-	 *	�����Ȃ��R���X�g���N�^���AresetSize() �Ō��܂�܂��B
-	 *	�������AresetSize()��X,Y�̂����ꂩ��0�Ɏw�肳�ꂽ
-	 *	�ꍇ�́ANULL�ƂȂ�܂��B
+	 *	ビットマップへの出力を扱うDCです。
+	 *	このDCは、ビットマップの出力先デバイスを表すDCと
+	 *	互換性のあるDCとなります。
+	 *	引数なしコンストラクタか、resetSize() で決まります。
+	 *	ただし、resetSize()でX,Yのいずれかに0に指定された
+	 *	場合は、NULLとなります。
 	 */
 	HBITMAP		m_hBitmap ;
 
 	/**
-	 *	m_hDc ��m_hBitmap��I�����Ă���Ԃ́A
-	 *	m_hDc ������܂őI�����Ă����r�b�g�}�b�v��ێ����܂��B
-	 *	�����łȂ��ꍇ��NULL�ƂȂ�܂��B
+	 *	m_hDc がm_hBitmapを選択している間は、
+	 *	m_hDc がそれまで選択していたビットマップを保持します。
+	 *	そうでない場合はNULLとなります。
 	 */
 	HBITMAP		m_hBitmapSid ;
 ///@}
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 * @param aCdDcdSizeXy [in]
-	 *	�r�b�g�}�b�v�̃T�C�Y���w�肵�Ă��������B
+	 *	ビットマップのサイズを指定してください。
 	 * @param hDC [in]
-	 *	�r�b�g�}�b�v�̏o�͐��DC���w�肵�Ă��������B@n
-	 *	NULL�Ȃ�A�X�N���[���ƌ݊����̂���DC���w�肵�����ƂɂȂ�܂��B
-	 *	�E�C���h�E��BitBlt()���邽�߂̃r�b�g�}�b�v��
-	 *	�쐬����̂ł���΁A���̒l��NULL�ł����܂��܂���B
+	 *	ビットマップの出力先のDCを指定してください。@n
+	 *	NULLなら、スクリーンと互換性のあるDCを指定したことになります。
+	 *	ウインドウへBitBlt()するためのビットマップを
+	 *	作成するのであれば、この値はNULLでもかまいません。
 	 */
 	CDcdTargetCompatibleBitmap( const CdDcdSizeXy& aCdDcdSizeXy 
 								, HDC hDC = NULL ) ;
@@ -178,64 +178,64 @@ class CDcdTargetCompatibleBitmap : public IfDcdTarget
 	///@{
 	/**
 	 * @return
-	 * 	�`����s��DC���擾���܂��B
-	 * 	����HDC�̔j���̐Ӗ��́Athis�ɂ���܂��B
+	 * 	描画を行うDCを取得します。
+	 * 	このHDCの破棄の責務は、thisにあります。
 	 *
-	 * [�I�[�o���C�h]
-	 *	m_hDc ��Ԃ��܂��B
+	 * [オーバライド]
+	 *	m_hDc を返します。
 	 */
 	virtual HDC	getHdc() ;
 	
 	/**
 	 * @return
-	 * 	�`��̕K�v�ȗ̈�̍��W�͈͂��擾���邱�Ƃ��ł��܂��B
-	 * 	�P�ʂ́A�_���P�ʂł��B
+	 * 	描画の必要な領域の座標範囲を取得することができます。
+	 * 	単位は、論理単位です。
 	 *
-	 * [�I�[�o���C�h]
-	 *	���_��0,0�A�T�C�Y�̓r�b�g�}�b�v�̗̈��Ԃ��܂��B
+	 * [オーバライド]
+	 *	原点は0,0、サイズはビットマップの領域を返します。
 	 */
 	virtual CdDcdZoneXy getZone() ;
 	
 	/**
 	 * @return
-	 * 	�`�悪�L���Ȕ͈͂��擾�ł��܂��B
-	 * 	�ʏ�́AgetZone()�Ɠ����̈�ƂȂ�܂��B
+	 * 	描画が有効な範囲を取得できます。
+	 * 	通常は、getZone()と同じ領域となります。
 	 * 
-	 * 	�E�C���h�E��WM_PAINT�ɂ��`��̏ꍇ�A���̊֐����Ԃ��̂́A
-	 * 	�ĕ`�悪�K�v�ȗ̈�ƂȂ�܂��B
-	 * 	���̗̈�𖳎����Ă����܂��܂���B�������A���͈̔͊O�ւ̕`���
-	 * 	�Ӗ�������܂���̂ŁA���͈̔͊O�ւ̕`���}������悤�ɂ���΁A
-	 * 	�`�揈���̌����̉��P�����҂ł��܂��B
+	 * 	ウインドウのWM_PAINTによる描画の場合、この関数が返すのは、
+	 * 	再描画が必要な領域となります。
+	 * 	この領域を無視してもかまいません。ただし、この範囲外への描画は
+	 * 	意味がありませんので、この範囲外への描画を抑制するようにすれば、
+	 * 	描画処理の効率の改善が期待できます。
 	 *
-	 * [�I�[�o���C�h]
-	 *	���_��0,0�A�T�C�Y�̓r�b�g�}�b�v�̗̈��Ԃ��܂��B
+	 * [オーバライド]
+	 *	原点は0,0、サイズはビットマップの領域を返します。
 	 */
 	virtual CdDcdZoneXy getDrawableZone() ;
 
 	/**
-	 	CdFontProp�I�u�W�F�N�g�̑��������ƂɁA�t�H���g�𐶐����܂�
+	 	CdFontPropオブジェクトの属性をもとに、フォントを生成します
 	 @param aCdFontProp [in]
-	 	�t�H���g�������w�肵�Ă��������B
+	 	フォント属性を指定してください。
 	 @return
-		�t�H���g�̃n���h����ێ����� CGdiHFontHolder ��Ԃ��܂��B
+		フォントのハンドルを保持する CGdiHFontHolder を返します。
 	*/
 	virtual Ou<CGdiHFontHolder>	createGdiHFontHolder(  const CdFontProp& aCdFontProp ) ;
 	
 	/**
-	 	CdPenProp�I�u�W�F�N�g�̑��������ƂɁA�y���𐶐����܂�
+	 	CdPenPropオブジェクトの属性をもとに、ペンを生成します
 	 @param aCdPenProp [in]
-	 	�y���������w�肵�Ă��������B
+	 	ペン属性を指定してください。
 	 @return
-		�y���̃n���h����ێ����� CGdiHPenHolder ��Ԃ��܂��B
+		ペンのハンドルを保持する CGdiHPenHolder を返します。
 	*/
 	virtual  Ou<CGdiHPenHolder>		createGdiHPenHolder(  const CdPenProp& aCdPenProp ) ;
 
 	/**
-	 	CdBrushProp�I�u�W�F�N�g�̑��������ƂɁA�u���V�𐶐����܂�
+	 	CdBrushPropオブジェクトの属性をもとに、ブラシを生成します
 	 @param aCdBrushProp [in]
-	 	�u���V�������w�肵�Ă��������B
+	 	ブラシ属性を指定してください。
 	 @return
-		�u���V�̃n���h����ێ����� CGdiHBrushHolder ��Ԃ��܂��B
+		ブラシのハンドルを保持する CGdiHBrushHolder を返します。
 	*/
 	virtual Ou<CGdiHBrushHolder>	createGdiHBrushHolder(  const CdBrushProp& aCdBrushProp ) ;
 
@@ -248,24 +248,24 @@ class CDcdTargetCompatibleBitmap : public IfDcdTarget
  public:
 	/**
 	 * @return 
-	 *	���݂̃r�b�g�}�b�v�̃T�C�Y��Ԃ��܂��B
+	 *	現在のビットマップのサイズを返します。
 	 */
 	virtual CdDcdSizeXy getSize() ;
 	
 	/**
-	 *	�r�b�g�}�b�v�̃T�C�Y��ݒ肵�܂��B
-	 *	�����̃r�b�g�}�b�v�̓��e��j�����܂��B
+	 *	ビットマップのサイズを設定します。
+	 *	既存のビットマップの内容を破棄します。
 	 * @param aCdDcdSizeXy [in]
-	 *	�V�����r�b�g�}�b�v�̃T�C�Y���w�肵�Ă��������B
+	 *	新しいビットマップのサイズを指定してください。
 	 * @param hDC [in]
-	 *	�r�b�g�}�b�v�̏o�͐��DC���w�肵�Ă��������B@n
-	 *	NULL�Ȃ�A�X�N���[���ƌ݊����̂���DC���w�肵�����ƂɂȂ�܂��B
-	 *	�E�C���h�E��BitBlt()���邽�߂̃r�b�g�}�b�v��
-	 *	�쐬����̂ł���΁A���̒l��NULL�ł����܂��܂���B
+	 *	ビットマップの出力先のDCを指定してください。@n
+	 *	NULLなら、スクリーンと互換性のあるDCを指定したことになります。
+	 *	ウインドウへBitBlt()するためのビットマップを
+	 *	作成するのであれば、この値はNULLでもかまいません。
 	 * @return
-	 *	����������0�ȏ㤎��s�����畉�̐��ł��B
-	 *	-	-1 ;	//	DC�̍쐬�Ɏ��s���܂���
-	 *	-	-2 ;	//	BITMAP�̍쐬�Ɏ��s���܂���
+	 *	成功したら0以上､失敗したら負の数です。
+	 *	-	-1 ;	//	DCの作成に失敗しました
+	 *	-	-2 ;	//	BITMAPの作成に失敗しました
 	 */
 	virtual int resetSize( const CdDcdSizeXy& aCdDcdSizeXy , HDC hDc = NULL ) ;
 ///@}

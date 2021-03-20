@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -84,48 +84,48 @@ using namespace std ;
 // ****************************************************************
 /**
 * @brief
-* �y�T�v�z
-* 	   DcDraw���f���ɂ�����A�e�L�X�g�̕`����s���A�C�e���ł��B
+* 【概要】
+* 	   DcDrawモデルにおける、テキストの描画を行うアイテムです。
 *
-*	  ���̃I�u�W�F�N�g�ɑ΂��� DcDraw() ���Ăяo���ƁA�w�肳�ꂽ�̈��
-*	���� m_strText �̃e�L�X�g���������݂܂��B
+*	  このオブジェクトに対して DcDraw() を呼び出すと、指定された領域に
+*	属性 m_strText のテキストを書き込みます。
 */
 class CDcdText : public IfDcDraw
 {
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
 ///@{
  private:
 	/**
-	*	�`�悷�镶����ł��B
-	*	�f�t�H���g�ł͋󕶎���ł��B
+	*	描画する文字列です。
+	*	デフォルトでは空文字列です。
 	*/
 	tstring			m_strText ;
 	
 	/**
-	*	�e�L�X�g��`�悷��ۂ̑�����ێ����܂��B
-	*	�f�t�H���g�ł́ADEFAULT_GUI_FONT ��P��s�ŕ`�悵�܂��B
+	*	テキストを描画する際の属性を保持します。
+	*	デフォルトでは、DEFAULT_GUI_FONT を単一行で描画します。
 	*/
 	CdDrawTextProp	m_CdDrawTextProp ;
 	
 	/**
-	*	���̕`�敔�i�̑傫���̖ڈ��ƂȂ�
-	*	������ł��B
-	*	getItemSize() �́A���̕������\���ł��镝��Ԃ��܂��B
-	*	getItemSize() ���g��Ȃ��̂ł���΁A���̑����͎g���܂���B
+	*	この描画部品の大きさの目安となる
+	*	文字列です。
+	*	getItemSize() は、この文字列を表示できる幅を返します。
+	*	getItemSize() を使わないのであれば、この属性は使いません。
 	*
-	*	�f�t�H���g�͋󕶎���ł��B���̏ꍇ�AgetItemSize() �́A
-	*	m_strText ��`�悷��̂ɕK�v�ȃT�C�Y��Ԃ��܂��B
+	*	デフォルトは空文字列です。この場合、getItemSize() は、
+	*	m_strText を描画するのに必要なサイズを返します。
 	*/
 	tstring			m_strExtent ;
 	
 	/**
-	*	���̕`�敔�i�̑傫���̍s���ł�
-	*	getItemSize() �́A���̍s����\���ł��鍂����Ԃ��܂��B
-	*	getItemSize() ���g��Ȃ��̂ł���΁A���̑����͎g���܂���B
+	*	この描画部品の大きさの行数です
+	*	getItemSize() は、この行数を表示できる高さを返します。
+	*	getItemSize() を使わないのであれば、この属性は使いません。
 	*
-	*	�f�t�H���g�͂P�ł��B
+	*	デフォルトは１です。
 	*/
 	int				m_iLinesExtent ;
 	
@@ -133,24 +133,24 @@ class CDcdText : public IfDcDraw
 
 	
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	* @param strText [in]
-	*	�`�悷�镶����ł��B
+	*	描画する文字列です。
 	* @param aCdDrawTextProp [in]
-	*	�e�L�X�g��`�悷��ۂ̑�����ێ����܂��B
-	*	�f�t�H���g�ł́ADEFAULT_GUI_FONT ��P��s�ŕ`�悵�܂��B
+	*	テキストを描画する際の属性を保持します。
+	*	デフォルトでは、DEFAULT_GUI_FONT を単一行で描画します。
 	* @param strExtent [in]
-	*	���̕`�敔�i�̑傫���̖ڈ��ƂȂ�
-	*	������ł�
-	*	�f�t�H���g�͋󕶎���ł��B���̏ꍇ�AgetItemSize() �́A
-	*	strText ��`�悷��̂ɕK�v�ȃT�C�Y��Ԃ��܂��B
+	*	この描画部品の大きさの目安となる
+	*	文字列です
+	*	デフォルトは空文字列です。この場合、getItemSize() は、
+	*	strText を描画するのに必要なサイズを返します。
 	* @param iLinesExtent [in]
-	*	���̕`�敔�i�̑傫���̍s���ł�
-	*	getItemSize() �́A���̍s����\���ł��鍂����Ԃ��܂��B
-	*	�f�t�H���g�͂P�ł��B
+	*	この描画部品の大きさの行数です
+	*	getItemSize() は、この行数を表示できる高さを返します。
+	*	デフォルトは１です。
 	*/
 	CDcdText( 
 		const tstring&			strText,
@@ -169,38 +169,38 @@ class CDcdText : public IfDcDraw
 ///@{
  public:
 	/**
-	* 	�`���v�����܂��B
-	* 	���̊֐��́A pIfDcdTarget �ɁA�`����s���܂��B
+	* 	描画を要求します。
+	* 	この関数は、 pIfDcdTarget に、描画を行います。
 	*
-	*	�y�I�[�o���C�h�z
-	*	  �n���ꂽ�̈�ɁA m_strText ��`�悵�܂��B
+	*	【オーバライド】
+	*	  渡された領域に、 m_strText を描画します。
 	* @param pIfDcdTarget  [in]
-	* 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	* 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	* @return
-	* 	�`����s�����ꍇ�͐^�E���̗̈�ւ̕`�悪�ł��Ȃ������ꍇ�͋U�ł��B
+	* 	描画を行った場合は真・この領域への描画ができなかった場合は偽です。
 	*/
 	virtual bool DcDraw( IfDcdTarget* pIfDcdTarget ) ;
 	
 	/**
-	* 	���̃I�u�W�F�N�g���`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	* 	���̑傫���𒲂ׂ邱�Ƃ��ł��܂��B
-	* 	�֐��Ăяo������������ IfDcDraw �I�u�W�F�N�g��`�悷��ꍇ�ɂ́A
-	* 	�֐��Ăяo�����́A���̊֐��ŃA�C�e���̑傫���𒲂ׂāA
-	* 	�K�؂ȃ��C�A�E�g���l���Ă���ADcDraw() �����s���邱�Ƃ��ł��܂��B
+	* 	このオブジェクトが描画するアイテムの大きさが決まっている場合は、
+	* 	その大きさを調べることができます。
+	* 	関数呼び出し元が複数の IfDcDraw オブジェクトを描画する場合には、
+	* 	関数呼び出し元は、この関数でアイテムの大きさを調べて、
+	* 	適切なレイアウトを考えてから、DcDraw() を実行することができます。
 	*
-	*	�y�I�[�o���C�h�z
-	*	  m_strExtent �� m_lineExtent �����ƂɁA�̈�̃T�C�Y���v�Z���܂��B
+	*	【オーバライド】
+	*	  m_strExtent と m_lineExtent をもとに、領域のサイズを計算します。
 	* @param pIfDcdTarget [in]
-	* 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	* 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	* @param pCdDcdSizeXy [out]
-	* 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	* 	���̊֐��͂��̃A�h���X�ɁA���̃A�C�e���̃T�C�Y��Ԃ��܂��B
-	* 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��Ȃ��ꍇ�́A
-	* 	���̒l�͕s��ł��B
+	* 	このオブジェクトの描画するアイテムの大きさが決まっている場合は、
+	* 	この関数はこのアドレスに、そのアイテムのサイズを返します。
+	* 	このオブジェクトの描画するアイテムの大きさが決まっていない場合は、
+	* 	この値は不定です。
 	* @return
-	* 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��āA
-	* 	���̑傫���� *pCdDcdSizeXy�ɏ������񂾏ꍇ�͐^�ł��B
-	* 	�����łȂ��ꍇ�́A�U�ł��B
+	* 	このオブジェクトの描画するアイテムの大きさが決まっていて、
+	* 	その大きさを *pCdDcdSizeXyに書き込んだ場合は真です。
+	* 	そうでない場合は、偽です。
 	*/
 	virtual bool getItemSize( IfDcdTarget* pIfDcdTarget , 
 							CdDcdSizeXy* pCdDcdSizeXy ) ;
@@ -210,7 +210,7 @@ class CDcdText : public IfDcDraw
 // ********************************
  public:
 	// ********************************
-	///	@name ����
+	///	@name 属性
 	// ********************************
 	///@{
 	virtual tstring			getText(){	return m_strText ;	} ;

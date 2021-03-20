@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// CWndDiagram.cpp : �C���v�������e�[�V���� �t�@�C��
+// CWndDiagram.cpp : インプリメンテーション ファイル
 //
 
 #include "stdafx.h"
@@ -94,7 +94,7 @@ using namespace DcDrawLib::WinUtil;
 //	CWndDiagram
 // ********************************
 // --------------------------------
-//@name �����֐�
+//@name 下請関数
 // --------------------------------
 bool CWndDiagram::update_adjustProp() 
 {
@@ -109,7 +109,7 @@ bool CWndDiagram::update_adjustProp()
 		aTarget.getZone().getY().getSize() ) ;
 
 	// --------------------------------		
-	//	m_pCDcdDiagram->m_CconvContentPosToDcdTarget �̒l�𐳋K��
+	//	m_pCDcdDiagram->m_CconvContentPosToDcdTarget の値を正規化
 	// --------------------------------		
 	{
 		CdDcdZoneXy zoneDgrInDcd ;
@@ -118,10 +118,10 @@ bool CWndDiagram::update_adjustProp()
 			zoneDgr = m_pCDcdDiagram->getCentDedDgrDia()->getZone();
 		}
 		zoneDgrInDcd = m_pCDcdDiagram->getZone_Dgr( &aTarget ) ;
-		//zoneDgr = �_�C���O�����̍��W�͈̔�
-		//	(X����=(0,24����),Y����=(0,�I�_�̃_�C���O�������W)
-		//zoneDgrInDcd = �E�C���h�E�ɕ\������Ă���͈͂�
-		//	�_�C���O�������W
+		//zoneDgr = ダイヤグラムの座標の範囲
+		//	(X方向=(0,24時間),Y方向=(0,終点のダイヤグラム座標)
+		//zoneDgrInDcd = ウインドウに表示されている範囲の
+		//	ダイヤグラム座標
 
 		LogMsg( "\t zoneDgr=X(%d,%d)Y(%d,%d)"  , 
 			zoneDgr.getX().getPos() , 
@@ -137,7 +137,7 @@ bool CWndDiagram::update_adjustProp()
 
 
 		// --------------------------------		
-		//	X���W
+		//	X座標
 		// --------------------------------		
 		{
 
@@ -146,10 +146,10 @@ bool CWndDiagram::update_adjustProp()
 				zoneDgrInDcd.getX().getPos() ,
 				zoneDgrInDcd.getX().getSize() ) ;
 
-			//	�R���e���c�̉E(��)�[���A
-			//	�^�[�Q�b�g��DcDraw�̉E(��)�[������(��)��
-			//	����Ă��āA�E(��)�ɋ󂫂�����ꍇ�́A
-			//	��U�R���e���c���E(��)�Ɋ񂹂܂��B
+			//	コンテンツの右(下)端が、
+			//	ターゲットのDcDrawの右(下)端よりも左(上)に
+			//	寄っていて、右(下)に空きがある場合は、
+			//	一旦コンテンツを右(下)に寄せます。
 			if ( zoneDgrInDcd.getX().getEndPos() 
 					> zoneDgr.getX().getEndPos() ){
 				CdDcdZone	aCdDcdZone = zoneDgrInDcd.getX() ;
@@ -158,10 +158,10 @@ bool CWndDiagram::update_adjustProp()
 				zoneDgrInDcd.setX( aCdDcdZone ) ;
 			}
 
-			//	�R���e���c��Pos(��(��)�̒[)��
-			//	�^�[�Q�b�g��DcDraw��Pos(��(��))�����E(��)��
-			//	����Ă��āA��(��)�ɋ󂫂�����ꍇ�́A
-			//	�R���e���c����(��)�Ɋ񂹂܂��B
+			//	コンテンツのPos(左(上)の端)が
+			//	ターゲットのDcDrawのPos(左(上))よりも右(下)に
+			//	寄っていて、左(上)に空きがある場合は、
+			//	コンテンツを左(上)に寄せます。
 			if ( zoneDgrInDcd.getX().getPos() < zoneDgr.getX().getPos() ){
 				CdDcdZone	aCdDcdZone = zoneDgrInDcd.getX() ;
 				aCdDcdZone.setPos( zoneDgr.getX().getPos() ) ;
@@ -169,13 +169,13 @@ bool CWndDiagram::update_adjustProp()
 			}
 		}
 		// --------------------------------		
-		//	Y���W
+		//	Y座標
 		// --------------------------------		
 		{
-			//	�R���e���c�̉E(��)�[���A
-			//	�^�[�Q�b�g��DcDraw�̉E(��)�[������(��)��
-			//	����Ă��āA�E(��)�ɋ󂫂�����ꍇ�́A
-			//	��U�R���e���c���E(��)�Ɋ񂹂܂��B
+			//	コンテンツの右(下)端が、
+			//	ターゲットのDcDrawの右(下)端よりも左(上)に
+			//	寄っていて、右(下)に空きがある場合は、
+			//	一旦コンテンツを右(下)に寄せます。
 			if ( zoneDgrInDcd.getY().getEndPos() 
 					> zoneDgr.getY().getEndPos() ){
 				CdDcdZone	aCdDcdZone = zoneDgrInDcd.getY() ;
@@ -184,10 +184,10 @@ bool CWndDiagram::update_adjustProp()
 				zoneDgrInDcd.setY( aCdDcdZone ) ;
 			}
 
-			//	�R���e���c��Pos(��(��)�̒[)��
-			//	�^�[�Q�b�g��DcDraw��Pos(��(��))�����E(��)��
-			//	����Ă��āA��(��)�ɋ󂫂�����ꍇ�́A
-			//	�R���e���c����(��)�Ɋ񂹂܂��B
+			//	コンテンツのPos(左(上)の端)が
+			//	ターゲットのDcDrawのPos(左(上))よりも右(下)に
+			//	寄っていて、左(上)に空きがある場合は、
+			//	コンテンツを左(上)に寄せます。
 			if ( zoneDgrInDcd.getY().getPos() < zoneDgr.getY().getPos() ){
 				CdDcdZone	aCdDcdZone = zoneDgrInDcd.getY() ;
 				aCdDcdZone.setPos( zoneDgr.getY().getPos() ) ;
@@ -224,25 +224,25 @@ void CWndDiagram::update_updateScreen()
 
 		zoneDgrInDcd = m_pCDcdDiagram->getZone_Dgr( &aTarget ) ;
 	}
-	//zoneDgr=�_�C���O�������W�̑S�͈̔�
-	//zoneDgrInDcd = IfDcdTarget�ɕ`�悷��_�C���O�������W�͈�
+	//zoneDgr=ダイヤグラム座標の全体範囲
+	//zoneDgrInDcd = IfDcdTargetに描画するダイヤグラム座標範囲
 
 	CdDcdZoneXy	zoneDiagramZoneDcd = calcDiagramZoneDcd() ;
-	//zoneDiagramZoneDcd = �E�C���h�E��Ń_�C���O�������`�悳���̈�
+	//zoneDiagramZoneDcd = ウインドウ上でダイヤグラムが描画される領域
 
 	// --------------------------------		
-	//	�E�C���h�E�X�N���[��
+	//	ウインドウスクロール
 	// --------------------------------	
-	//���@���݂�zoneDgrInDcd(IfDcdTarget�ɕ`�悷��_�C���O�������W�͈�)��
-	//	Pos(�n�_�ʒu)�ƁA
-	//	�O��(���ݕ\����)��zoneDgrInDcd��Pos(�n�_�ʒu)���r���A
-	//	���̍������ƂɃE�C���h�E�̃X�N���[�����s���܂��B
-	//���w�O��(���ݕ\����)��zoneDgrInDcd��Pos(�n�_�ʒu)�x��
-	//	�X�N���[���o�[�̈ʒu����擾���܂��B
+	//※　現在のzoneDgrInDcd(IfDcdTargetに描画するダイヤグラム座標範囲)の
+	//	Pos(始点位置)と、
+	//	前回(現在表示中)のzoneDgrInDcdのPos(始点位置)を比較し、
+	//	その差をもとにウインドウのスクロールを行います。
+	//※『前回(現在表示中)のzoneDgrInDcdのPos(始点位置)』は
+	//	スクロールバーの位置から取得します。
 	{
 
 		// --------------------------------		
-		//	X�����E�C���h�E�X�N���[���s�N�Z�����̌v�Z
+		//	X方向ウインドウスクロールピクセル数の計算
 		// --------------------------------
 		int iXAmount = 0 ;
 		if ( m_CdScrollbarPropX.getPos() != 
@@ -255,7 +255,7 @@ void CWndDiagram::update_updateScreen()
 			iXAmount = iXPos_DcdPrev - iXPos_DcdNew ;
 		}
 		// --------------------------------		
-		//	Y�����E�C���h�E�X�N���[���s�N�Z�����̌v�Z
+		//	Y方向ウインドウスクロールピクセル数の計算
 		// --------------------------------
 		int iYAmount = 0 ;
 		if ( m_CdScrollbarPropY.getPos() != 
@@ -269,26 +269,26 @@ void CWndDiagram::update_updateScreen()
 		}
 
 		// --------------------------------		
-		//	�X�N���[��
+		//	スクロール
 		// --------------------------------
 		if ( iXAmount != 0 || iYAmount != 0 )
 		{
 			CConverter_WinGdi	aConverter_WinGdi ;
-			//	�_�C���O�����̈�̃X�N���[��
+			//	ダイヤグラム領域のスクロール
 			{
 				CdDcdZoneXy	zoneDcdDiagram = 
 					m_pCDcdDiagram->calcDiagramZoneDcd( &aTarget ) ; 
 				RECT	aRect = aConverter_WinGdi.RECTOf( zoneDcdDiagram );
 				ScrollWindow( iXAmount , iYAmount , NULL , &aRect ) ;
 			}
-			//	�w���̈�̏c�X�N���[��
+			//	駅名領域の縦スクロール
 			{
 				CdDcdZoneXy	zoneDcdEkimei = 
 					m_pCDcdDiagram->calcEkimeiZoneDcd( &aTarget ) ; 
 				RECT	aRect = aConverter_WinGdi.RECTOf( zoneDcdEkimei );
 				ScrollWindow( 0 , iYAmount , NULL , &aRect ) ;
 			}
-			//	�����̈�̉��X�N���[��
+			//	時刻領域の横スクロール
 			{
 				CdDcdZoneXy	zoneDcdJikoku = 
 					m_pCDcdDiagram->calcJikokuZoneDcd( &aTarget ) ; 
@@ -300,17 +300,17 @@ void CWndDiagram::update_updateScreen()
 
 
 	// --------------------------------		
-	//	�X�N���[���o�[�����̕ύX
+	//	スクロールバー属性の変更
 	// --------------------------------	
 	{
 		// --------------------------------		
-		//	X�����̃X�N���[���o�[�����̕ύX
+		//	X方向のスクロールバー属性の変更
 		// --------------------------------	
 		CdScrollbarProp	aCdScrollbarPropX_New 
 			= m_CdScrollbarPropX  ;
 		if ( zoneDiagramZoneDcd.getX().getSize() > 0 )	
 		{
-			//	�_�C���O�����\���̈悪�E�C���h�E��
+			//	ダイヤグラム表示領域がウインドウ内
 			aCdScrollbarPropX_New.setDisableNoScroll( false ) ;
 			aCdScrollbarPropX_New.set(
 					zoneDgr.getX().getPos() , 
@@ -320,35 +320,35 @@ void CWndDiagram::update_updateScreen()
 		}
 		else
 		{
-			//	�_�C���O�����\���̈悪�E�C���h�E��ɂȂ��ꍇ��
-			//	�X�N���[���o�[�͔�\���ɂ͂����ɖ����ɂ��܂��B
+			//	ダイヤグラム表示領域がウインドウ上にない場合は
+			//	スクロールバーは非表示にはせずに無効にします。
 			//
-			//�y���R�z�X�N���[���o�[���_�ł����Ԃ�����邽�߂ł��B
-			//�ymemo�z�_�C���O�����r���[�ŁA�X�N���[���o�[���_�ł��錻��
-			//	�ȉ��̓��삪�����ł��B
-			//(1)�@�N���C�A���g�̈�̃T�C�Y��������
-			//�@���_�C���O�����\���̈悪�A�N���C�A���g�̈���ɂȂ�
-			//�@���X�N���[���o�[�͔�\��
-			//(2)�@���[�U�[���N���C�A���g�̈�̃T�C�Y���A�_�C���O����
-			//	�\���̈悪�����\������邭�炢�ɑ傫������
-			//�@���_�C���O�����\���̈悪�N���C�A���g�̈�ɂȂ�
-			//�@���X�N���[���o�[���\�������
-			//(3)�X�N���[���o�[���\�����ꂽ���Ƃɂ��ACWndDiagram��
-			//	�N���C�A���g�̈悪�������Ȃ�B
-			//�@���_�C���O�����\���̈悪�A�N���C�A���g�̈�O�ɂȂ�
-			//	(�X�N���[���o�[�ɉB���)
-			//�@���X�N���[���o�[����\���ɂȂ�
-			//(4)�X�N���[���o�[����\���ɂȂ������Ƃɂ��ACWndDiagram��
-			//	�N���C�A���g�̈悪�傫���Ȃ�
-			//�@���_�C���O�����\���̈悪�N���C�A���g�̈�ɂȂ�
-			//�@���X�N���[���o�[���\�������
-			//(5)�@(3)�`(4)�̌J��Ԃ��ŁA�X�N���[���o�[���_�ł����悤�ɂȂ�B
+			//【理由】スクロールバーが点滅する状態を避けるためです。
+			//【memo】ダイヤグラムビューで、スクロールバーが点滅する現象
+			//	以下の動作が原因です。
+			//(1)　クライアント領域のサイズが小さい
+			//　→ダイヤグラム表示領域が、クライアント領域内にない
+			//　→スクロールバーは非表示
+			//(2)　ユーザーがクライアント領域のサイズを、ダイヤグラム
+			//	表示領域が少し表示されるくらいに大きくする
+			//　→ダイヤグラム表示領域がクライアント領域になる
+			//　→スクロールバーが表示される
+			//(3)スクロールバーが表示されたことにより、CWndDiagramの
+			//	クライアント領域が小さくなる。
+			//　→ダイヤグラム表示領域が、クライアント領域外になる
+			//	(スクロールバーに隠れる)
+			//　→スクロールバーが非表示になる
+			//(4)スクロールバーが非表示になったことにより、CWndDiagramの
+			//	クライアント領域が大きくなる
+			//　→ダイヤグラム表示領域がクライアント領域になる
+			//　→スクロールバーが表示される
+			//(5)　(3)〜(4)の繰り返しで、スクロールバーが点滅したようになる。
 			//
-			//  ���������邽�߂ɁA�ȉ��̂悤�ɂ��܂��B
+			//  これを避けるために、以下のようにします。
 			//
-			//  CWndDiagram �́A�_�C���O�����\���̈悪
-			//	�N���C�A���g�̈���ɂȂ��Ƃ��́A�X�N���[���o�[��
-			//	�\�������܂܂Ŗ����ɂ���B
+			//  CWndDiagram は、ダイヤグラム表示領域が
+			//	クライアント領域内にないときは、スクロールバーは
+			//	表示したままで無効にする。
 			aCdScrollbarPropX_New.setDisableNoScroll( true ) ;
 			aCdScrollbarPropX_New.setNull() ;
 
@@ -359,29 +359,29 @@ void CWndDiagram::update_updateScreen()
 			SCROLLINFO	aScrollinfo = 
 				CconvWinUser::SCROLLINFOof( m_CdScrollbarPropX ) ;
 
-			//	SIF_DISABLENOSCROLL ���g���ăX�N���[���o�[�𖳌��ɂ���ꍇ�́A
+			//	SIF_DISABLENOSCROLL を使ってスクロールバーを無効にする場合は、
 			//
 			//	EnableScrollBar( (SB_HORZ or SB_VERT), ESB_ENABLE_BOTH ) ;
 			//
-			//	���Ăяo���Ă���A
+			//	を呼び出してから、
 			//
-			//	SetScrollInfo()���Ăяo���Ă��������B
+			//	SetScrollInfo()を呼び出してください。
 			//	
-			//	EnableScrollBar() ���Ăяo���Ȃ��ƁA
-			//	�����ɂȂ����X�N���[���o�[��
-			//	�X�N���[���o�[���K�v�ɂȂ����Ƃ��ɂ��L���ɂȂ�܂���B
+			//	EnableScrollBar() を呼び出さないと、
+			//	無効になったスクロールバーは
+			//	スクロールバーが必要になったときにも有効になりません。
 			EnableScrollBar( SB_HORZ ,  ESB_ENABLE_BOTH ) ;
 			SetScrollInfo( SB_HORZ , &aScrollinfo ) ;
 		}
 
 		// --------------------------------		
-		//	Y�����̃X�N���[���o�[�����̕ύX
+		//	Y方向のスクロールバー属性の変更
 		// --------------------------------	
 		CdScrollbarProp	aCdScrollbarPropY_New 
 			= m_CdScrollbarPropY  ;
 		if ( zoneDiagramZoneDcd.getY().getSize() > 0 )	
 		{
-			//	�_�C���O�����\���̈悪�E�C���h�E��
+			//	ダイヤグラム表示領域がウインドウ内
 			aCdScrollbarPropY_New.setDisableNoScroll( false ) ;
 			aCdScrollbarPropY_New.set(
 					zoneDgr.getY().getPos() , 
@@ -391,10 +391,10 @@ void CWndDiagram::update_updateScreen()
 		}
 		else
 		{
-			//	�_�C���O�����\���̈悪�E�C���h�E��ɂȂ��ꍇ��
-			//	�X�N���[���o�[�͔�\���ɂ͂����ɖ����ɂ��܂��B
+			//	ダイヤグラム表示領域がウインドウ上にない場合は
+			//	スクロールバーは非表示にはせずに無効にします。
 			//
-			//�y���R�z�X�N���[���o�[���_�ł����Ԃ�����邽�߂ł��B
+			//【理由】スクロールバーが点滅する状態を避けるためです。
 			aCdScrollbarPropY_New.setDisableNoScroll( true ) ;
 			aCdScrollbarPropY_New.setNull() ;
 		}
@@ -409,7 +409,7 @@ void CWndDiagram::update_updateScreen()
 	}
 }
 	// --------------------------------
-	//@name MFC���b�Z�[�W�n���h���̉����֐�
+	//@name MFCメッセージハンドラの下請関数
 	// --------------------------------
 int CWndDiagram::OnLButtonDblClk_openJikokuhyouView( CPoint point) 
 {
@@ -429,12 +429,12 @@ int CWndDiagram::OnLButtonDblClk_openJikokuhyouView( CPoint point)
 			&iRessyasenIdx ) ;
 		if ( iResult != 1 )
 		{
-			iRv = -1 ;	//	point ����Ԑ���ɂ���܂���B
+			iRv = -1 ;	//	point が列車線上にありません。
 		}
 	}
-	//eRessyahoukou = point ��ʂ��Ԑ��̕��� 
-	//iRessyaIdx = point ��ʂ��Ԃ̗��Index
-	//iRessyasenIdx = point �̈ʒu�̗�Ԑ�Index
+	//eRessyahoukou = point を通る列車線の方向 
+	//iRessyaIdx = point を通る列車の列車Index
+	//iRessyasenIdx = point の位置の列車線Index
 
 	const CentDedDia* pCentDedDia = NULL ;
 	int iEkiOrder = -1 ;
@@ -445,15 +445,15 @@ int CWndDiagram::OnLButtonDblClk_openJikokuhyouView( CPoint point)
 		iEkiOrder = m_pCDcdDiagram->calcEkiOrderOfPoint( 
 			&aTarget , eRessyahoukou , point.y ) ;
 
-		//iEkiOrder = point �̈ʒu�̒��O�̉wOrder
+		//iEkiOrder = point の位置の直前の駅Order
 		iDiaIndex = getCDiagramEditDoc()->
 			getCDedRosenFileData()->getCentDedRosen()->getCentDedDiaCont()
 				->findCentDedDiaByName( 
 					m_pCDcdDiagram->getCentDedDgrDia()->getName() ) ;
 		if ( iDiaIndex < 0 )
 		{
-			iRv = -2 ;	//	�_�C���O�����r���[�ɑΉ����� 
-						//	CentDedDia ��������܂���B
+			iRv = -2 ;	//	ダイヤグラムビューに対応する 
+						//	CentDedDia が見つかりません。
 		}
 		else
 		{
@@ -462,8 +462,8 @@ int CWndDiagram::OnLButtonDblClk_openJikokuhyouView( CPoint point)
 					->getMuPtr()->get( iDiaIndex ) ; 
 		}
 	}
-	//pCentDedDia = �H���_�C���I�u�W�F�N�g
-	//iEkiOrder = �ړ���̉wOrder
+	//pCentDedDia = 路線ダイヤオブジェクト
+	//iEkiOrder = 移動先の駅Order
 
 	CJikokuhyouView* pCJikokuhyouView = NULL ;
 	if ( iRv >= 0 )
@@ -475,23 +475,23 @@ int CWndDiagram::OnLButtonDblClk_openJikokuhyouView( CPoint point)
 				&pCJikokuhyouView) ; 
 		if ( pCJikokuhyouView == NULL )
 		{
-			iRv = -3 ;	//	�����\�r���[���J���̂Ɏ��s���܂����B
+			iRv = -3 ;	//	時刻表ビューを開くのに失敗しました。
 		}
-		//pCJikokuhyouDoc = �����\�h�L�������g
-		//pCJikokuhyouView = �����\�r���[
+		//pCJikokuhyouDoc = 時刻表ドキュメント
+		//pCJikokuhyouView = 時刻表ビュー
 	}
 
 	if ( iRv >= 0 )
 	{
 		//attention
-		//	���̍s�͕s�v�ł��iopenCJikokuhyouDoc() �ŃA�N�e�B�u�ɂȂ�j���A
-		//	�����Assert()�Ɏ��s���܂��B
+		//	この行は不要です（openCJikokuhyouDoc() でアクティブになる）し、
+		//	あるとAssert()に失敗します。
 		//
 		//	CMainFrame* pCMainFrame = (CMainFrame*)AfxGetMainWnd() ;
 		//	pCMainFrame->SetActiveView( pCJikokuhyouView ) ;
 	
 		pCJikokuhyouView->setFocusToRessyaIndex( iRessyaIdx , iEkiOrder ) ;
-		iRv = 1 ;	//	�����\�r���[�ֈړ����܂���
+		iRv = 1 ;	//	時刻表ビューへ移動しました
 	}
 
 	return iRv ;
@@ -504,17 +504,17 @@ int CWndDiagram::OnLButtonDblClk_openDlgEkiProp( CPoint point)
 	CDcdTargetGetDC	aTarget( GetSafeHwnd() ) ;
 	CdDcdPosXy	posMouse( point.x , point.y ) ;
 
-	//	point ���w���̈�ɂ��邱�Ƃ��m�F
+	//	point が駅名領域にあることを確認
 	if ( iRv >= 0 )
 	{
 		CdDcdZoneXy	zonexyEkimeiZone = 
 			m_pCDcdDiagram->calcEkimeiZoneDcd( &aTarget ) ;
 		if ( !zonexyEkimeiZone.IsInner( posMouse ) )
 		{
-			iRv = -1 ;	//	point ���w���̈�ɂ���܂���B
+			iRv = -1 ;	//	point が駅名領域にありません。
 		}
 	}
-	//	point �ɑΉ�����wIndex���擾
+	//	point に対応する駅Indexを取得
 	int iEkiIndex = -1 ;
 	if ( iRv >= 0 )
 	{
@@ -522,10 +522,10 @@ int CWndDiagram::OnLButtonDblClk_openDlgEkiProp( CPoint point)
 			&aTarget , posMouse.getY() ) ;
 		if ( iEkiIndex < 0 )
 		{
-			iRv = -2 ;	//	point �ɑΉ�����w��������܂���B
+			iRv = -2 ;	//	point に対応する駅が見つかりません。
 		}
 	}
-	//	�wView���J��
+	//	駅Viewを開く
 	CEkiView* pCEkiView = NULL ;
 	if ( iRv >= 0 )
 	{
@@ -533,10 +533,10 @@ int CWndDiagram::OnLButtonDblClk_openDlgEkiProp( CPoint point)
 			&pCEkiView ) ;
 		if ( pCEkiView == NULL )
 		{
-			iRv = -3 ;	//	�w�r���[���J���̂Ɏ��s���܂����B
+			iRv = -3 ;	//	駅ビューを開くのに失敗しました。
 		}
 	}
-	//	�w�̃v���p�e�B�_�C�A���O���J��
+	//	駅のプロパティダイアログを開く
 	if ( iRv >= 0 )
 	{
 		pCEkiView->openCDlgEkiProp( iEkiIndex ) ;
@@ -547,7 +547,7 @@ int CWndDiagram::OnLButtonDblClk_openDlgEkiProp( CPoint point)
 
 
 	// ********************************
-	//@name	CDcdDiagrem-�֘A
+	//@name	CDcdDiagrem-関連
 	// ********************************
 CentDedDgrDia* CWndDiagram::getCentDedDgrDia() 
 {
@@ -565,7 +565,7 @@ CWndDiagram& CWndDiagram::setCentDedDgrDia( CentDedDgrDia* value )
 	return *this ;
 }
 	// ********************************
-	//@name CDcdDiagram-����-CdDedDispProp �ɂ͂Ȃ�����
+	//@name CDcdDiagram-属性-CdDedDispProp にはないもの
 	// ********************************
 bool CWndDiagram::getDisplayRessyabangou()const 
 {
@@ -581,7 +581,7 @@ int CWndDiagram::setDisplayRessyabangou( bool value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 
 
@@ -603,7 +603,7 @@ int CWndDiagram::setDisplayRessyamei( bool value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 
 		iRv = 1 ;
@@ -625,7 +625,7 @@ int CWndDiagram::setPosDgr( CdDcdPosXy value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 		
 
@@ -649,7 +649,7 @@ int CWndDiagram::setDcdPerDgrX( double value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 		
 
@@ -675,7 +675,7 @@ int CWndDiagram::setDcdPerDgrY( double value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 		
 
@@ -700,7 +700,7 @@ int CWndDiagram::setVlineMode( int value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 
 
@@ -724,7 +724,7 @@ int CWndDiagram::setDisplayRessyasen( ERessyahoukou eRessyahoukou ,
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 
 		iRv = 1 ;
@@ -748,7 +748,7 @@ int CWndDiagram::setStopMarkDraw( CDcdDiagram::EStopMarkDraw	value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 
 		iRv = 1 ;
@@ -765,7 +765,7 @@ int CWndDiagram::getVlineChoices( Mui<CDcdDiagram::VLINE>* pContVLINE )
 
 
 	// ********************************
-	//@name	CDcdDiagrem-����
+	//@name	CDcdDiagrem-操作
 	// ********************************
 int CWndDiagram::readCdDedDispProp( const CdDedDispProp& value ) 
 {
@@ -793,7 +793,7 @@ int CWndDiagram::setZone_Dgr( const CdDcdZoneXy& value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 
 		iRv = 1 ;
@@ -816,7 +816,7 @@ int CWndDiagram::setKeepZoneDgrOnSize( bool value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 
 		iRv = 1 ;
@@ -825,7 +825,7 @@ int CWndDiagram::setKeepZoneDgrOnSize( bool value )
 };
 
 	// ********************************
-	//@name	CDcdDiagrem2-����
+	//@name	CDcdDiagrem2-属性
 	// ********************************
 
 bool CWndDiagram::getHideIppanekiEkimei()const 
@@ -842,7 +842,7 @@ int CWndDiagram::setHideIppanekiEkimei( bool value )
 		update_updateScreen() ;
 		Invalidate() ;	
 
-		//	.ini �t�@�C���ɕۑ�
+		//	.ini ファイルに保存
 		getCDiagramEditApp()->writeCWndDiagramViewProp( this ) ;
 
 		iRv = 1 ;
@@ -851,7 +851,7 @@ int CWndDiagram::setHideIppanekiEkimei( bool value )
 }
 
 	// ********************************
-	//@name	CDcdDiagrem2-����
+	//@name	CDcdDiagrem2-操作
 	// ********************************
 CdDcdZoneXy CWndDiagram::calcDiagramZoneDcd()const 
 {
@@ -864,11 +864,11 @@ CdDcdZoneXy CWndDiagram::calcDiagramZoneDcd()const
 
 
 	// ********************************
-	//@name	CWndDiagram-����
+	//@name	CWndDiagram-属性
 	// ********************************
 
 	// ********************************
-	//@name	CWndDiagram-���
+	//@name	CWndDiagram-包含
 	// ********************************
 CDcdDiagram2* CWndDiagram::getCDcdDiagram() 
 {
@@ -876,7 +876,7 @@ CDcdDiagram2* CWndDiagram::getCDcdDiagram()
 }
 
 	// ********************************
-	//@name	CWndDiagram-�\�z
+	//@name	CWndDiagram-構築
 	// ********************************
 BOOL CWndDiagram::Create( const RECT& rect, CWnd* pParentWnd, UINT nID )
 {
@@ -885,7 +885,7 @@ BOOL CWndDiagram::Create( const RECT& rect, CWnd* pParentWnd, UINT nID )
 			, LoadCursor( NULL , IDC_ARROW ) 
 			, (HBRUSH)GetStockObject( WHITE_BRUSH ) 
 			, NULL ) 
-		, "CWndDiagram"	//	���̕����񂪕\������邱�Ƃ͂���܂���
+		, "CWndDiagram"	//	この文字列が表示されることはありません
 		, WS_CHILD | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 		, rect
 		, pParentWnd
@@ -900,7 +900,7 @@ BOOL CWndDiagram::Create( CWnd* pParentWnd, UINT nID )
 			, LoadCursor( NULL , IDC_ARROW ) 
 			, (HBRUSH)GetStockObject( WHITE_BRUSH ) 
 			, NULL ) 
-		, "CWndDiagram"	//	���̕����񂪕\������邱�Ƃ͂���܂���
+		, "CWndDiagram"	//	この文字列が表示されることはありません
 		, WS_CHILD | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 		, CRect( 0 , 0 , 0 , 0 ) 
 		, pParentWnd
@@ -908,16 +908,16 @@ BOOL CWndDiagram::Create( CWnd* pParentWnd, UINT nID )
 		, NULL ) ;
 }
 	// ********************************
-	//@name	CWndDiagram-����
+	//@name	CWndDiagram-操作
 	// ********************************
 
 void CWndDiagram::onUpdateCentDedDgrDia() 
 {
 	if ( !m_bReadCWndDiagramDefault )
 	{
-		//	�ŏ��Ƀ_�C���O������\������Ƃ��ɂ́A
-		//	.ini �t�@�C������A�X�N���[���ʒu��
-		//	�r���̐ݒ��ǂݍ���
+		//	最初にダイヤグラムを表示するときには、
+		//	.ini ファイルから、スクロール位置と
+		//	罫線の設定を読み込み
 		getCDiagramEditApp()->readCWndDiagramViewProp( this ) ;
 
 		m_bReadCWndDiagramDefault = true ;
@@ -966,7 +966,7 @@ END_MESSAGE_MAP()
 
 
 /////////////////////////////////////////////////////////////////////////////
-// CWndDiagram ���b�Z�[�W �n���h��
+// CWndDiagram メッセージ ハンドラ
 
 int CWndDiagram::OnCreate(LPCREATESTRUCT lpCreateStruct) 
 {
@@ -991,7 +991,7 @@ void CWndDiagram::OnDestroy()
 
 void CWndDiagram::OnPaint() 
 {
-	CPaintDC dc(this); // �`��p�̃f�o�C�X �R���e�L�X�g
+	CPaintDC dc(this); // 描画用のデバイス コンテキスト
 	CDcdTargetOnPaint	aTarget( GetSafeHwnd() , &dc.m_ps ) ;
 	
 	if ( m_pCDcdDiagram != NULL ){
@@ -1005,34 +1005,34 @@ void CWndDiagram::OnSize(UINT nType, int cx, int cy)
 
 	CDcdTargetGetDC	aTarget( GetSafeHwnd() ) ;
 
-	//memo: CWndDiagram::OnSize()�ł́ASIZE_RESTORED�ȊO�͔������Ȃ�
-	//���̃E�C���h�E�ł́A 
-	//SIZE_RESTORED�ȊO(SIZE_MAXIMIZED,SIZE_MINIMIZED�Ȃ�)
-	//�͔������܂���B
-	//�y���R�z
-	//���̃E�C���h�E�͎q�E�C���h�E�ł��B�ʒu��T�C�Y�́A
-	//�e�E�C���h�E�ł���CDcdDiagramView�ɂ����
-	//���䂳��Ă��܂��B
-	//�e�E�C���h�E�́A���̎q�E�C���h�E�ɑ΂���
-	//�ŏ����E�ő剻���s���܂���B
+	//memo: CWndDiagram::OnSize()では、SIZE_RESTORED以外は発生しない
+	//このウインドウでは、 
+	//SIZE_RESTORED以外(SIZE_MAXIMIZED,SIZE_MINIMIZEDなど)
+	//は発生しません。
+	//【理由】
+	//このウインドウは子ウインドウです。位置やサイズは、
+	//親ウインドウであるCDcdDiagramViewによって
+	//制御されています。
+	//親ウインドウは、この子ウインドウに対して
+	//最小化・最大化を行いません。
 
-	if ( ( nType == SIZE_MAXIMIZED      //	�E�B���h�E�͍ő�\������Ă��܂�
-	    || nType == SIZE_RESTORED )     //	�E�B���h�E�̓T�C�Y�ύX�����
-	    								//	���܂����A
-		                                //	�T�C�Y�ύX�̎�ނ� SIZE_MINIMIZED 
-		                                //	�ł� SIZE_MAXIMIZED 
-										//	�ł�����܂���B
+	if ( ( nType == SIZE_MAXIMIZED      //	ウィンドウは最大表示されています
+	    || nType == SIZE_RESTORED )     //	ウィンドウはサイズ変更されて
+	    								//	いますが、
+		                                //	サイズ変更の種類は SIZE_MINIMIZED 
+		                                //	でも SIZE_MAXIMIZED 
+										//	でもありません。
 		&& cx > 0 && cy > 0 )
 	{
-		//	�E�C���h�E���T�C�Y1�ȏ�ŕ\������Ă���ꍇ�B
-		//	(�E�C���h�E���ŏ����̏ꍇ�E
-		//	�܂��̓T�C�Y��0�ɂȂ����ꍇ�́A�������s���܂���B)
+		//	ウインドウがサイズ1以上で表示されている場合。
+		//	(ウインドウが最小化の場合・
+		//	またはサイズが0になった場合は、処理を行いません。)
 
 		CdDcdSizeXy	sizeClientSize ; 
 
-		////memo: CWndDiagram::OnSize()�ł� IsWindowVisible() �̌��ʁB
-		////	�u�\������Ă���v�̔���ɁA���̃R�[�h��
-		////	���ʂ�����܂���(��F����\���E�E�C���h�E�̍ő剻�Ȃ�)
+		////memo: CWndDiagram::OnSize()での IsWindowVisible() の効果。
+		////	「表示されている」の判定に、このコードは
+		////	効果がありません(例：初回表示・ウインドウの最大化など)
 		//if ( !IsWindowVisible() )
 		//{
 		//	LogMsg( "\tNOT_VISIBLE" ) ;
@@ -1056,23 +1056,23 @@ void CWndDiagram::OnSize(UINT nType, int cx, int cy)
 				LogMsg( "\tsizeClientSize NOT AVAILABLE" ) ;
 			}
 		}
-		//sizeClientSize = �N���C�A���g�̈�T�C�Y�B
-		//	�������A�_�C���O�����r���[�̈�̃T�C�Y�� 
-		//	x,y �̂����ꂩ����	0�Ȃ�A����������0�ł��B
-		//�y���R�z�_�C���O�����r���[�̈�̃T�C�Y��0�̏ꍇ�́A
-		//	getZone_Dgr() �����������삵�Ȃ����߂ł��B
+		//sizeClientSize = クライアント領域サイズ。
+		//	ただし、ダイヤグラムビュー領域のサイズの 
+		//	x,y のいずれかがが	0なら、無効を示す0です。
+		//【理由】ダイヤグラムビュー領域のサイズが0の場合は、
+		//	getZone_Dgr() が正しく動作しないためです。
 
 		{
 			update_adjustProp() ;
 
-			//�X�N���[���o�[�̓���͈͂��A�V�����E�C���h�E�T�C�Y�ɍ��킹�܂��B
+			//スクロールバーの動作範囲を、新しいウインドウサイズに合わせます。
 			update_updateScreen() ;
 
-			//memo: CWndDiagram::OnSize() �ł́AInvalidate()�̕K�v��
-			//	�E�C���h�E�T�C�Y�ύX���ɁA
-			//	�\���̑傫��(�_�C���O�������W1�������DcDraw���W)��
-			//	�ύX���Ȃ��̂Ȃ�A
-			//	Invalidate() ( �E�C���h�E�̑S�ʍĕ`�� )�͕K�v����܂���B
+			//memo: CWndDiagram::OnSize() での、Invalidate()の必要性
+			//	ウインドウサイズ変更時に、
+			//	表示の大きさ(ダイヤグラム座標1あたりのDcDraw座標)を
+			//	変更しないのなら、
+			//	Invalidate() ( ウインドウの全面再描画 )は必要ありません。
 		}
 
 	}
@@ -1087,9 +1087,9 @@ void CWndDiagram::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 	CDcdTargetGetDC	aTarget( GetSafeHwnd() ) ;
 
 	CdDcdZoneXy	zoneDiagramZoneDcd = m_pCDcdDiagram->calcDiagramZoneDcd( &aTarget ) ;
-	//zoneDiagramZoneDcd = �E�C���h�E��ŁA�_�C���O�������\�������̈�
+	//zoneDiagramZoneDcd = ウインドウ上で、ダイヤグラムが表示される領域
 
-	//	X�����ł́A�_�C���O���������̓_�C���O�����r���[�ɕ\������܂���B
+	//	X方向では、ダイヤグラム部分はダイヤグラムビューに表示されません。
 	if ( zoneDiagramZoneDcd.getX().getSize() <= 0 )
 	{
 		return ;
@@ -1103,42 +1103,42 @@ void CWndDiagram::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 
 
 		switch( nSBCode ){
-		 case SB_LEFT :	//   ���[�փX�N���[���B
+		 case SB_LEFT :	//   左端へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCentDedDgrDia.getPos() ) ;
 			}
 			break ;
-		 case SB_RIGHT :	//   �E�[�փX�N���[���B
+		 case SB_RIGHT :	//   右端へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCentDedDgrDia.getEndPos() - 
 					zoneCDcdDiagram.getSize() ) ;
 			}
 			break ;
-		 case SB_LINELEFT :		//   ���փX�N���[���B
+		 case SB_LINELEFT :		//   左へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() - 
 					m_pCDcdDiagram->getVlinePitch() ) ;
 			}
 			break ;
-		 case SB_LINERIGHT :	//   �E�փX�N���[���B
+		 case SB_LINERIGHT :	//   右へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() + 
 					m_pCDcdDiagram->getVlinePitch() ) ;
 			}
 			break ;
-		 case SB_PAGELEFT :	// 1 �y�[�W���փX�N���[���B
+		 case SB_PAGELEFT :	// 1 ページ左へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() - 
 					zoneCDcdDiagram.getSize() ) ;
 			}
 			break ;
-		 case SB_PAGERIGHT :	//   1 �y�[�W�E�փX�N���[���B
+		 case SB_PAGERIGHT :	//   1 ページ右へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() + 
 					zoneCDcdDiagram.getSize() ) ;
 			}
 			break ;
-		 case SB_THUMBPOSITION :	//  ��Έʒu�փX�N���[���B���݈ʒu�͈��� nPos �Ŏw�肳��܂��B
+		 case SB_THUMBPOSITION :	//  絶対位置へスクロール。現在位置は引数 nPos で指定されます。
 			{
 				SCROLLINFO	aSCROLLINFO ;
 				memset( &aSCROLLINFO , 0 , sizeof(aSCROLLINFO) ) ;
@@ -1148,7 +1148,7 @@ void CWndDiagram::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 				zoneCDcdDiagram.setPos( iPos ) ;
 			}
 			break ;
-		 case SB_THUMBTRACK :	//   �X�N���[�� �{�b�N�X���w��ʒu�փh���b�O���܂��B���݈ʒu�͈��� nPos �Ŏw�肳��܂�
+		 case SB_THUMBTRACK :	//   スクロール ボックスを指定位置へドラッグします。現在位置は引数 nPos で指定されます
 			{
 				SCROLLINFO	aSCROLLINFO ;
 				memset( &aSCROLLINFO , 0 , sizeof(aSCROLLINFO) ) ;
@@ -1159,18 +1159,18 @@ void CWndDiagram::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 			}
 			break ;
 
-		 case SB_ENDSCROLL :	//   �X�N���[���I���B
+		 case SB_ENDSCROLL :	//   スクロール終了。
 			break ;
 		}
 		if ( zoneCDcdDiagramPrev != zoneCDcdDiagram )
 		{
-			//memo: CWndDiagram �X�N���[������ setZone_Dgr()�Ăяo��
-			//	update_updateScreen() �ɂ��E�C���h�E���X�N���[������A
-			//	�X�N���[���Ŗ����ɂȂ�̈�ɑ΂��Ă����ĕ`�悪�ł���悤��
-			//	�Ȃ�܂����B
-			//	����ɂ��AInvalidate() ���Ăяo���K�v�͂Ȃ��Ȃ�܂����B
-			//	CWndDiagram::setZone_Dgr() �͓����� Invalidate() 
-			//	���Ăяo�����߁A���̌Ăяo���͔����邱�Ƃɂ��܂����B
+			//memo: CWndDiagram スクロール時の setZone_Dgr()呼び出し
+			//	update_updateScreen() によりウインドウがスクロールされ、
+			//	スクロールで無効になる領域に対してだけ再描画ができるように
+			//	なりました。
+			//	これにより、Invalidate() を呼び出す必要はなくなりました。
+			//	CWndDiagram::setZone_Dgr() は内部で Invalidate() 
+			//	を呼び出すため、この呼び出しは避けることにしました。
 
 			//setZone_Dgr( 
 			//	CdDcdZoneXy( zoneCDcdDiagram , getZone_Dgr().getY() ) ) ;
@@ -1191,9 +1191,9 @@ void CWndDiagram::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 	CDcdTargetGetDC	aTarget( GetSafeHwnd() ) ;
 
 	CdDcdZoneXy	zoneDiagramZoneDcd = m_pCDcdDiagram->calcDiagramZoneDcd( &aTarget ) ;
-	//zoneDiagramZoneDcd = �E�C���h�E��ŁA�_�C���O�������\�������̈�
+	//zoneDiagramZoneDcd = ウインドウ上で、ダイヤグラムが表示される領域
 
-	//	Y�����ł́A�_�C���O���������̓_�C���O�����r���[�ɕ\������܂���B
+	//	Y方向では、ダイヤグラム部分はダイヤグラムビューに表示されません。
 	if ( zoneDiagramZoneDcd.getY().getSize() <= 0 )
 	{
 		return ;
@@ -1207,42 +1207,42 @@ void CWndDiagram::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 
 
 		switch( nSBCode ){
-		 case SB_TOP :	// ��ԏ�܂ŃX�N���[���B 
+		 case SB_TOP :	// 一番上までスクロール。 
 			{
 				zoneCDcdDiagram.setPos( zoneCentDedDgrDia.getPos() ) ;
 			}
 			break ;
-		 case SB_BOTTOM :	//  ��ԉ��܂ŃX�N���[���B
+		 case SB_BOTTOM :	//  一番下までスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCentDedDgrDia.getEndPos() - 
 					zoneCDcdDiagram.getSize() ) ;
 			}
 			break ;
-		 case SB_LINEUP :	//  1 �s��փX�N���[���B
+		 case SB_LINEUP :	//  1 行上へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() - 
 					m_pCDcdDiagram->getVlinePitch() ) ;
 			}
 			break ;
-		 case SB_LINEDOWN : // 1 �s���փX�N���[���B
+		 case SB_LINEDOWN : // 1 行下へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() + 
 					m_pCDcdDiagram->getVlinePitch() ) ;
 			}
 			break ;
-		 case SB_PAGEUP :	//  1 �y�[�W��փX�N���[���B
+		 case SB_PAGEUP :	//  1 ページ上へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() - 
 					zoneCDcdDiagram.getSize() ) ;
 			}
 			break ;
-		 case SB_PAGEDOWN :	//  1 �y�[�W���փX�N���[���B
+		 case SB_PAGEDOWN :	//  1 ページ下へスクロール。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() + 
 					zoneCDcdDiagram.getSize() ) ;
 			}
 			break ;
-		 case SB_THUMBPOSITION :	//  ��Έʒu�փX�N���[���B���݈ʒu�͈��� nPos �Ŏw�肳��܂��B
+		 case SB_THUMBPOSITION :	//  絶対位置へスクロール。現在位置は引数 nPos で指定されます。
 			{
 				SCROLLINFO	aSCROLLINFO ;
 				memset( &aSCROLLINFO , 0 , sizeof(aSCROLLINFO) ) ;
@@ -1252,7 +1252,7 @@ void CWndDiagram::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 				zoneCDcdDiagram.setPos( iPos ) ;
 			}
 			break ;
-		 case SB_THUMBTRACK :	//   �X�N���[�� �{�b�N�X���w��ʒu�փh���b�O���܂��B���݈ʒu�͈��� nPos �Ŏw�肳��܂�
+		 case SB_THUMBTRACK :	//   スクロール ボックスを指定位置へドラッグします。現在位置は引数 nPos で指定されます
 			{
 				SCROLLINFO	aSCROLLINFO ;
 				memset( &aSCROLLINFO , 0 , sizeof(aSCROLLINFO) ) ;
@@ -1263,18 +1263,18 @@ void CWndDiagram::OnVScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 			}
 			break ;
 
-		 case SB_ENDSCROLL :	//   �X�N���[���I���B
+		 case SB_ENDSCROLL :	//   スクロール終了。
 			break ;
 		}
 		if ( zoneCDcdDiagramPrev != zoneCDcdDiagram )
 		{
-			//memo: CWndDiagram �X�N���[������ setZone_Dgr()�Ăяo��
-			//	update_updateScreen() �ɂ��E�C���h�E���X�N���[������A
-			//	�X�N���[���Ŗ����ɂȂ�̈�ɑ΂��Ă����ĕ`�悪�ł���悤��
-			//	�Ȃ�܂����B
-			//	����ɂ��AInvalidate() ���Ăяo���K�v�͂Ȃ��Ȃ�܂����B
-			//	CWndDiagram::setZone_Dgr() �͓����� Invalidate() ��
-			//	�Ăяo�����߁A���̌Ăяo���͔����邱�Ƃɂ��܂����B
+			//memo: CWndDiagram スクロール時の setZone_Dgr()呼び出し
+			//	update_updateScreen() によりウインドウがスクロールされ、
+			//	スクロールで無効になる領域に対してだけ再描画ができるように
+			//	なりました。
+			//	これにより、Invalidate() を呼び出す必要はなくなりました。
+			//	CWndDiagram::setZone_Dgr() は内部で Invalidate() を
+			//	呼び出すため、この呼び出しは避けることにしました。
 
 			//setZone_Dgr( 
 			//	 CdDcdZoneXy( getZone_Dgr().getX() , zoneCDcdDiagram ) ) ;
@@ -1299,53 +1299,53 @@ void CWndDiagram::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 
 	// --------------------------------
-	//	���������̃L�[�{�[�h�ɂ��X�N���[�����ʂ�
-	//	�\���͈͂��v�Z
+	//	水平方向のキーボードによるスクロール結果の
+	//	表示範囲を計算
 	// --------------------------------
 	{
 		CdDcdZone	zoneCentDedDgrDia = m_pCDcdDiagram->getCentDedDgrDia()->getZone().getX()  ;
 		CdDcdZone	zoneCDcdDiagram = m_pCDcdDiagram->getZone_Dgr( &aTarget ).getX() ;
 		CdDcdZone	zoneCDcdDiagramPrev = zoneCDcdDiagram ;
-		//zoneCDcdDiagram=���݂̕\���͈�
+		//zoneCDcdDiagram=現在の表示範囲
 
 		switch( nChar ){
-		 case VK_LEFT :		//WM_HSCROLL SB_LINELEFT �Ɠ����ł�
+		 case VK_LEFT :		//WM_HSCROLL SB_LINELEFT と等価です
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() - 
 						m_pCDcdDiagram->getVlinePitch() ) ;
 			}
 			break ;
-		 case VK_RIGHT :	//WM_HSCROLL SB_LINERIGHT �Ɠ����ł�
+		 case VK_RIGHT :	//WM_HSCROLL SB_LINERIGHT と等価です
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() + 
 						m_pCDcdDiagram->getVlinePitch() ) ;
 			}
 			break ;
-		 case VK_HOME :	//WM_HSCROLL SB_PAGELEFT �Ɠ����ł��B
+		 case VK_HOME :	//WM_HSCROLL SB_PAGELEFT と等価です。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() - 
 						zoneCDcdDiagram.getSize() ) ;
 			}
 			break ;
-		 case VK_END ://WM_HSCROLL SB_PAGERIGHT �Ɠ����ł��B
+		 case VK_END ://WM_HSCROLL SB_PAGERIGHT と等価です。
 			{
 				zoneCDcdDiagram.setPos( zoneCDcdDiagram.getPos() + 
 						zoneCDcdDiagram.getSize() ) ;
 			}
 			break ;
 		}
-		//	�\���͈͕ύX�v��������΁A
-		//	CDcdDiagram2�ɓ��e�𔽉f���A
-		//	�E�C���h�E���X�N���[��
+		//	表示範囲変更要求があれば、
+		//	CDcdDiagram2に内容を反映し、
+		//	ウインドウをスクロール
 		if ( zoneCDcdDiagramPrev != zoneCDcdDiagram )
 		{
-			//memo: CWndDiagram �X�N���[������ setZone_Dgr()�Ăяo��
-			//	update_updateScreen() �ɂ��E�C���h�E���X�N���[������A
-			//	�X�N���[���Ŗ����ɂȂ�̈�ɑ΂��Ă����ĕ`�悪�ł���悤��
-			//	�Ȃ�܂����B
-			//	����ɂ��AInvalidate() ���Ăяo���K�v�͂Ȃ��Ȃ�܂����B
-			//	CWndDiagram::setZone_Dgr() �͓����� Invalidate() ��
-			//	�Ăяo�����߁A���̌Ăяo���͔����邱�Ƃɂ��܂����B
+			//memo: CWndDiagram スクロール時の setZone_Dgr()呼び出し
+			//	update_updateScreen() によりウインドウがスクロールされ、
+			//	スクロールで無効になる領域に対してだけ再描画ができるように
+			//	なりました。
+			//	これにより、Invalidate() を呼び出す必要はなくなりました。
+			//	CWndDiagram::setZone_Dgr() は内部で Invalidate() を
+			//	呼び出すため、この呼び出しは避けることにしました。
 
 			//setZone_Dgr(  
 			//	CdDcdZoneXy( zoneCDcdDiagram , getZone_Dgr().getY() ) ) ;
@@ -1359,13 +1359,13 @@ void CWndDiagram::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 		}
 	}
 	// --------------------------------
-	//	���������̃L�[�{�[�h�ɂ��X�N���[���ʂ��v�Z
+	//	垂直方向のキーボードによるスクロール量を計算
 	// --------------------------------
 	{
 		CdDcdZone	zoneCentDedDgrDia = m_pCDcdDiagram->getCentDedDgrDia()->getZone().getY()  ;
 		CdDcdZone	zoneCDcdDiagram = m_pCDcdDiagram->getZone_Dgr( &aTarget ).getY() ;
 		CdDcdZone	zoneCDcdDiagramPrev = zoneCDcdDiagram ;
-		//zoneCDcdDiagram=���݂̕\���͈�
+		//zoneCDcdDiagram=現在の表示範囲
 
 		switch( nChar ){
 		 case VK_UP :	//	WM_VSCROLL SB_LINEUP 
@@ -1393,18 +1393,18 @@ void CWndDiagram::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 			}
 			break ;
 		}
-		//	�\���͈͕ύX�v��������΁A
-		//	CDcdDiagram2�ɓ��e�𔽉f���A
-		//	�E�C���h�E���X�N���[��
+		//	表示範囲変更要求があれば、
+		//	CDcdDiagram2に内容を反映し、
+		//	ウインドウをスクロール
 		if ( zoneCDcdDiagramPrev != zoneCDcdDiagram )
 		{
-			//memo: CWndDiagram �X�N���[������ setZone_Dgr()�Ăяo��
-			//	update_updateScreen() �ɂ��E�C���h�E���X�N���[������A
-			//	�X�N���[���Ŗ����ɂȂ�̈�ɑ΂��Ă����ĕ`�悪�ł���悤��
-			//	�Ȃ�܂����B
-			//	����ɂ��AInvalidate() ���Ăяo���K�v�͂Ȃ��Ȃ�܂����B
-			//	CWndDiagram::setZone_Dgr() �͓����� Invalidate() ��
-			//	�Ăяo�����߁A���̌Ăяo���͔����邱�Ƃɂ��܂����B
+			//memo: CWndDiagram スクロール時の setZone_Dgr()呼び出し
+			//	update_updateScreen() によりウインドウがスクロールされ、
+			//	スクロールで無効になる領域に対してだけ再描画ができるように
+			//	なりました。
+			//	これにより、Invalidate() を呼び出す必要はなくなりました。
+			//	CWndDiagram::setZone_Dgr() は内部で Invalidate() を
+			//	呼び出すため、この呼び出しは避けることにしました。
 
 			//setZone_Dgr(  
 			//	CdDcdZoneXy( getZone_Dgr().getX() , zoneCDcdDiagram) ) ;
@@ -1417,7 +1417,7 @@ void CWndDiagram::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 			bRv = true ;
 		}
 	}
-	//zoneCDcdDiagram=�V�����\���͈�
+	//zoneCDcdDiagram=新しい表示範囲
 
 	// --------------------------------
 	if ( !bRv )
@@ -1432,7 +1432,7 @@ BOOL CWndDiagram::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt)
 	if ( nFlags == 0 )
 	{
 		int iYMove = zDelta / (-WHEEL_DELTA) ;
-		//iYMove = Y�����Ɉړ����鐔�B
+		//iYMove = Y方向に移動する数。
 
 
 		CdDcdZone	zoneCentDedDgrDia = 
@@ -1444,14 +1444,14 @@ BOOL CWndDiagram::OnMouseWheel(UINT nFlags, short zDelta, CPoint pt)
 					m_pCDcdDiagram->getVlinePitch() * iYMove ) ;
 		if ( zoneCDcdDiagramPrev != zoneCDcdDiagram )
 		{
-			//memo: CWndDiagram �X�N���[������ setZone_Dgr()�Ăяo��
-			//	update_updateScreen() �ɂ��E�C���h�E���X�N���[������A
-			//	�X�N���[���Ŗ����ɂȂ�̈�ɑ΂��Ă����ĕ`�悪�ł���悤��
-			//	�Ȃ�܂����B
-			//	����ɂ��AInvalidate() ���Ăяo���K�v�͂Ȃ��Ȃ�܂����B
-			//	CWndDiagram::setZone_Dgr() �͓����� Invalidate() ��
-			//	�Ăяo�����߁A
-			//	���̌Ăяo���͔����邱�Ƃɂ��܂����B
+			//memo: CWndDiagram スクロール時の setZone_Dgr()呼び出し
+			//	update_updateScreen() によりウインドウがスクロールされ、
+			//	スクロールで無効になる領域に対してだけ再描画ができるように
+			//	なりました。
+			//	これにより、Invalidate() を呼び出す必要はなくなりました。
+			//	CWndDiagram::setZone_Dgr() は内部で Invalidate() を
+			//	呼び出すため、
+			//	この呼び出しは避けることにしました。
 			
 			//setZone_Dgr( 
 			//	CdDcdZoneXy( getZone_Dgr().getX() , zoneCDcdDiagram ) ) ;
@@ -1475,7 +1475,7 @@ void CWndDiagram::OnLButtonDblClk(UINT nFlags, CPoint point)
 	int iRv = 0 ;
 	CWaitCursor	aCursor ;
 
-	//	�����\�r���[�ւ̈ړ������s
+	//	時刻表ビューへの移動を試行
 	{
 		int iResult = OnLButtonDblClk_openJikokuhyouView( point ); 
 		if ( iResult >= 1 )
@@ -1483,8 +1483,8 @@ void CWndDiagram::OnLButtonDblClk(UINT nFlags, CPoint point)
 			iRv = 1 ;
 		}
 	}
-	//	�����\�r���[���J���Ȃ��ꍇ�́A
-	//	�w�̃v���p�e�B�_�C�A���O�̃I�[�v�������s
+	//	時刻表ビューが開けない場合は、
+	//	駅のプロパティダイアログのオープンを試行
 	if ( iRv <= 0 )	
 	{
 		int iResult = OnLButtonDblClk_openDlgEkiProp( point ) ;
@@ -1494,8 +1494,8 @@ void CWndDiagram::OnLButtonDblClk(UINT nFlags, CPoint point)
 		}
 		
 	}
-	//	�ǂ̃r���[���J���Ȃ��ꍇ�́A
-	//	�f�t�H���g����
+	//	どのビューも開けない場合は、
+	//	デフォルト処理
 	if ( iRv <= 0 )
 	{
 		CWnd::OnLButtonDblClk(nFlags, point);
@@ -1504,8 +1504,8 @@ void CWndDiagram::OnLButtonDblClk(UINT nFlags, CPoint point)
 
 void CWndDiagram::OnContextMenu(CWnd* pWnd, CPoint point)
 {
-	//	�_�C���O�����r���[�̃R���e�L�X�g���j���[�́A
-	//	���݂̂Ƃ���\�����܂���B
+	//	ダイヤグラムビューのコンテキストメニューは、
+	//	現在のところ表示しません。
 	{
 		super::OnContextMenu(pWnd, point);
 	}

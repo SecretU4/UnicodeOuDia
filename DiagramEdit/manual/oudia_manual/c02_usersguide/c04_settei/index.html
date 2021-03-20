@@ -3,109 +3,109 @@
  This is part of OuDia User's Manual.
  Copyright (C) 2006-2017  take-okm.
  See the file c00_copyright\copyright.html for copying conditions.
-(��:
- ���̃t�@�C���� OuDuia ���[�U�[�Y�}�j���A���̈ꕔ�ł��B
+(訳:
+ このファイルは OuDuia ユーザーズマニュアルの一部です。
  Copyright (C) 2006-2017  take-okm.
- �����Ɋւ��鏔�����ɂ��ẮAc00_copyright\copyright.html ���Q�Ƃ��Ă�����
-���B
+ 複製に関する諸条件については、c00_copyright\copyright.html を参照してくださ
+い。
 )
 -->
 <HTML>
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 6.5.0.0 for Windows">
 <META http-equiv="Content-Style-Type" content="text/css">
-<TITLE>���낢��Ȑݒ荀��</TITLE>
+<TITLE>いろいろな設定項目</TITLE>
 <LINK rel="stylesheet" href="../../oudia01.css" type="text/css">
 </HEAD>
 <BODY>
-<H1>2.4. ���낢��Ȑݒ荀��</H1>
+<H1>2.4. いろいろな設定項目</H1>
 <HR>
-<P>�@���̏͂ł́A���낢��Ȑݒ荀�ڂ��Љ�܂��B</P>
+<P>　この章では、いろいろな設定項目を紹介します。</P>
 <OL>
-  <LI><A href="#EkimeiLength">�w�����̕�</A>
-  <LI><A href="#JikokuhyouRessyaWidth">�����\�̗�Ԃ̕�</A>
-  <LI><A href="#DiagramKitenJikoku">�_�C���O�����N�_����</A>
-  <LI><A href="#DiagramDgrYZahyouKyoriDefault">�_�C���O�����̊���̉w�ԕ�</A>
-  <LI><A href="#StopMark">�_�C���O�����r���[�ł̒�ԉw����</A>
+  <LI><A href="#EkimeiLength">駅名欄の幅</A>
+  <LI><A href="#JikokuhyouRessyaWidth">時刻表の列車の幅</A>
+  <LI><A href="#DiagramKitenJikoku">ダイヤグラム起点時刻</A>
+  <LI><A href="#DiagramDgrYZahyouKyoriDefault">ダイヤグラムの既定の駅間幅</A>
+  <LI><A href="#StopMark">ダイヤグラムビューでの停車駅明示</A>
 </OL>
 <HR>
-<H2><A name="EkimeiLength"></A>2.4.1. �w�����̕�</H2>
-<P>�@OuDia �́A������Ԃł́w�w�r���[�x�E�w�����\�r���[�x�E�w�_�C���O�����r���[�x�̉w�����̕���S�p�U�������ɂ��Ă��܂��B���̎�����蒷���w���́A�\�����r���Ő؂�Ă��܂��܂��B<BR>
-�@���̉w�����̕���ύX���邱�Ƃ��ł��܂��B���̒l�𑝂₷���Ƃɂ��A��蒷���w����\�����邱�Ƃ��ł��܂��B<BR>
+<H2><A name="EkimeiLength"></A>2.4.1. 駅名欄の幅</H2>
+<P>　OuDia は、初期状態では『駅ビュー』・『時刻表ビュー』・『ダイヤグラムビュー』の駅名欄の幅を全角６文字分にしています。この字数より長い駅名は、表示が途中で切れてしまいます。<BR>
+　この駅名欄の幅を変更することができます。この値を増やすことにより、より長い駅名を表示することができます。<BR>
 <BR>
-<B>�P�D</B>�@���j���[�R�}���h [�t�@�C��]��[�H���t�@�C���̃v���p�e�B] ��I�����Ă��������B<BR>
-�E�E�E�@[�H���t�@�C���̃v���p�e�B]�_�C�A���O���J���܂��B<BR>
+<B>１．</B>　メニューコマンド [ファイル]→[路線ファイルのプロパティ] を選択してください。<BR>
+・・・　[路線ファイルのプロパティ]ダイアログが開きます。<BR>
 <BR>
-<B>�Q�D</B>�@[�H���t�@�C���̃v���p�e�B] �_�C�A���O�� [�H��] �^�u��I�����A�e�L�X�g�{�b�N�X [�w�����̕�] �ɁA�w�����̕�����͂��Ă��������B<BR>
-�@�l�̒P�ʂ́A�S�p�����ł̎����ł��B<BR>
+<B>２．</B>　[路線ファイルのプロパティ] ダイアログで [路線] タブを選択し、テキストボックス [駅名欄の幅] に、駅名欄の幅を入力してください。<BR>
+　値の単位は、全角文字での字数です。<BR>
 <BR>
-<B>�R�D</B>�@[OK] �{�^���������Ă��������B<BR>
+<B>３．</B>　[OK] ボタンを押してください。<BR>
 <BR>
-�E�E�E�@�ݒ���e�����f����܂��B<BR>
+・・・　設定内容が反映されます。<BR>
 <BR>
-���@���̒l�̏���͂Q�X�ł��B</P>
-<H2><A name="JikokuhyouRessyaWidth"></A>2.4.2. �����\�̗�Ԃ̕�</H2>
-<P>�@OuDia �́A������Ԃł́w�����\�r���[�x�̗�Ԃ̗�̕��͔��p5�������ł��B������A4�`6�͈̔͂ŕύX���邱�Ƃ��ł��܂��B<BR>
+※　この値の上限は２９です。</P>
+<H2><A name="JikokuhyouRessyaWidth"></A>2.4.2. 時刻表の列車の幅</H2>
+<P>　OuDia は、初期状態では『時刻表ビュー』の列車の列の幅は半角5文字分です。これを、4〜6の範囲で変更することができます。<BR>
 <BR>
-�@<BR>
-�@�ꕔ�̓S���ł�6�����̗�Ԕԍ����g���Ă��܂��B�����5�������̕��ł́A6�����̗�Ԕԍ��͕\�����؂�Ă��܂��܂��B<BR>
-�@���̏ꍇ�ɂ́A�񕝂�6�����ɂ��邱�Ƃɂ��A6���̗�Ԕԍ���\�������邱�Ƃ��ł��܂��B<BR>
+　<BR>
+　一部の鉄道では6文字の列車番号が使われています。既定の5文字分の幅では、6文字の列車番号は表示が切れてしまいます。<BR>
+　この場合には、列幅を6字分にすることにより、6字の列車番号を表示させることができます。<BR>
 <BR>
-<B>�P�D</B>�@���j���[�R�}���h [�t�@�C��]��[�H���t�@�C���̃v���p�e�B] ��I�����Ă��������B<BR>
-�E�E�E�@[�H���t�@�C���̃v���p�e�B]�_�C�A���O���J���܂��B<BR>
+<B>１．</B>　メニューコマンド [ファイル]→[路線ファイルのプロパティ] を選択してください。<BR>
+・・・　[路線ファイルのプロパティ]ダイアログが開きます。<BR>
 <BR>
-<B>�Q�D</B>�@[�H���t�@�C���̃v���p�e�B] �_�C�A���O�� [�H��] �^�u��I�����A�e�L�X�g�{�b�N�X
-[�����\�̗�Ԃ̕�] �ɁA��̕�����͂��Ă��������B<BR>
-�@�l�̒P�ʂ́A�S�p�����ł̎����ł��B<BR>
+<B>２．</B>　[路線ファイルのプロパティ] ダイアログで [路線] タブを選択し、テキストボックス
+[時刻表の列車の幅] に、列の幅を入力してください。<BR>
+　値の単位は、全角文字での字数です。<BR>
 <BR>
-<B>�R�D</B>�@[OK] �{�^���������Ă��������B<BR>
+<B>３．</B>　[OK] ボタンを押してください。<BR>
 <BR>
-�E�E�E�@�ݒ���e�����f����܂��B</P>
-<H2><A name="DiagramKitenJikoku"></A>2.4.3. �_�C���O�����N�_����</H2>
-<P>�@OuDia �́A������Ԃł́A�_�C���O�����͍��[�� 00:00 �ɂȂ��Ă���A���ɂQ�S���ԕ��̒����������܂��B<BR>
-�@���́A�_�C���O�����̍��[�̎�����ύX���邱�Ƃ��ł��܂��B<BR>
+・・・　設定内容が反映されます。</P>
+<H2><A name="DiagramKitenJikoku"></A>2.4.3. ダイヤグラム起点時刻</H2>
+<P>　OuDia は、初期状態では、ダイヤグラムは左端が 00:00 になっており、横に２４時間分の長さを持ちます。<BR>
+　この、ダイヤグラムの左端の時刻を変更することができます。<BR>
 <BR>
-�@��ʓI�ȘH���ł́A�T����Ɉ�ԗ�Ԃ�����n�߂āA�I��Ԃ��O���߂��ɏI���w�ɓ������܂��B���̂悤�ȘH���ł́A�_�C���O�����̍��[���T���ɂ���ق����A���₷���_�C���O�����ɂȂ�܂��B<BR>
+　一般的な路線では、５時台に一番列車が走り始めて、終列車が０時過ぎに終着駅に到着します。このような路線では、ダイヤグラムの左端を５時にするほうが、見やすいダイヤグラムになります。<BR>
 <BR>
-<B>�P�D</B>�@���j���[�R�}���h [�t�@�C��]��[�H���t�@�C���̃v���p�e�B] ��I�����Ă��������B<BR>
-�E�E�E�@[�H���t�@�C���̃v���p�e�B]�_�C�A���O���J���܂��B<BR>
+<B>１．</B>　メニューコマンド [ファイル]→[路線ファイルのプロパティ] を選択してください。<BR>
+・・・　[路線ファイルのプロパティ]ダイアログが開きます。<BR>
 <BR>
-<B>�Q�D</B>�@[�H���t�@�C���̃v���p�e�B] �_�C�A���O�� [�_�C���O�������] �^�u��I�����A�e�L�X�g�{�b�N�X
-[�_�C���O�����N�_����] �ɁA�N�_�����i�_�C���O�����̍��[�̎����j����͂��Ă��������B<BR>
+<B>２．</B>　[路線ファイルのプロパティ] ダイアログで [ダイヤグラム画面] タブを選択し、テキストボックス
+[ダイヤグラム起点時刻] に、起点時刻（ダイヤグラムの左端の時刻）を入力してください。<BR>
 <BR>
-<B>�R�D</B>�@[OK] �{�^���������Ă��������B<BR>
+<B>３．</B>　[OK] ボタンを押してください。<BR>
 <BR>
-�E�E�E�@�ݒ���e�����f����܂��B<BR>
+・・・　設定内容が反映されます。<BR>
 </P>
-<H2><A name="DiagramDgrYZahyouKyoriDefault"></A>2.4.4. �_�C���O�����̊���̉w�ԕ�</H2>
-<P>�@�_�C���O�����r���[�ł́A��Ԃ̐ݒ肳��Ă��Ȃ��w�Ԃ̉w�ԕ����w�肷�邱�Ƃ��ł��܂��B</P>
-<P>�@�ʏ�A�_�C���O�����r���[�̉w�ԕ��i�w�Ԃ̏㉺�̍���)�́A�w�Ԃ́w<B><A href="../c03_ressyanyuuryoku/c14_ekikansaisyousec/ekikansaisyousec.html">�w�ԍŏ����v�b��</A></B>�x�����ƂɌ��܂�܂��B�������A��Ԃ̐ݒ肳��Ă��Ȃ��w�Ԃł́A�_�C���O�����r���[�̉w�ԕ���[�_�C���O�����̊���̉w�ԕ�]
-�Ŏw�肵���l�ɂȂ�܂��B</P>
-<P>�@���̋@�\�͎�ɁA�A <A href="../c03_ressyanyuuryoku/c13_sisen/sisen.html">�x�������򂷂�H�����\��</A> �̏�ʂŎg�����Ƃ�z�肵�Ă��܂��B<BR>
-�@�x���̂���H���f�[�^�ł́A��Ԃ̐ݒ肳��Ă��Ȃ��w�Ԃ��ǂ����Ă��ł��Ă��܂��܂��i�x���̏I�_�̒���j�B����ȘH���Ɏx����������ꍇ�A��Ԃ̐ݒ肳��Ă��Ȃ��w�Ԃ̉w�ԕ����ɒ[�ɋ����Ȃ��āA�_�C���O������ł̎x���Ɩ{���̋�ʂ��������ɂ����Ȃ��Ă��܂��܂��B<BR>
-�@���̂悤�ȏꍇ�ɂ́A[�_�C���O�����̊���̉w�ԕ�] ���L���邱�Ƃɂ��A�_�C���O���������₷���Ȃ�܂��B</P>
-<P>�@�͈͂͂P�`30�܂łł��B�P���w�肷��ƁA��Ԃ̐ݒ肳��Ă��Ȃ��w�Ԃł̉w�ԕ��́A�w�ԍŏ����v�������P���̉w�ԂƓ������ɂȂ�܂��B<BR>
+<H2><A name="DiagramDgrYZahyouKyoriDefault"></A>2.4.4. ダイヤグラムの既定の駅間幅</H2>
+<P>　ダイヤグラムビューでの、列車の設定されていない駅間の駅間幅を指定することができます。</P>
+<P>　通常、ダイヤグラムビューの駅間幅（駅間の上下の高さ)は、駅間の『<B><A href="../c03_ressyanyuuryoku/c14_ekikansaisyousec/ekikansaisyousec.html">駅間最小所要秒数</A></B>』をもとに決まります。しかし、列車の設定されていない駅間では、ダイヤグラムビューの駅間幅は[ダイヤグラムの既定の駅間幅]
+で指定した値になります。</P>
+<P>　この機能は主に、、 <A href="../c03_ressyanyuuryoku/c13_sisen/sisen.html">支線が分岐する路線を構成</A> の場面で使うことを想定しています。<BR>
+　支線のある路線データでは、列車の設定されていない駅間がどうしてもできてしまいます（支線の終点の直後）。長大な路線に支線を作った場合、列車の設定されていない駅間の駅間幅が極端に狭くなって、ダイヤグラム上での支線と本線の区別が見分けにくくなってしまいます。<BR>
+　このような場合には、[ダイヤグラムの既定の駅間幅] を広げることにより、ダイヤグラムが見やすくなります。</P>
+<P>　範囲は１〜30までです。１を指定すると、列車の設定されていない駅間での駅間幅は、駅間最小所要時分が１分の駅間と同じ幅になります。<BR>
 </P>
-<P><B>�P�D</B>�@���j���[�R�}���h [�t�@�C��]��[�H���t�@�C���̃v���p�e�B] ��I�����Ă��������B<BR>
-�E�E�E�@[�H���t�@�C���̃v���p�e�B]�_�C�A���O���J���܂��B<BR>
+<P><B>１．</B>　メニューコマンド [ファイル]→[路線ファイルのプロパティ] を選択してください。<BR>
+・・・　[路線ファイルのプロパティ]ダイアログが開きます。<BR>
 <BR>
-<B>�Q�D</B>�@[�H���t�@�C���̃v���p�e�B] �_�C�A���O�� [�_�C���O�������] �^�u��I�����A�e�L�X�g�{�b�N�X
-[�_�C���O�����̊���̉w�ԕ�] �ɁA��������͂��Ă��������B<BR>
+<B>２．</B>　[路線ファイルのプロパティ] ダイアログで [ダイヤグラム画面] タブを選択し、テキストボックス
+[ダイヤグラムの既定の駅間幅] に、整数を入力してください。<BR>
 <BR>
-<B>�R�D</B>�@[OK] �{�^���������Ă��������B<BR>
+<B>３．</B>　[OK] ボタンを押してください。<BR>
 <BR>
-�E�E�E�@�ݒ���e�����f����܂��B<BR>
+・・・　設定内容が反映されます。<BR>
 </P>
-<H2><A name="StopMark"></A>2.4.5.�_�C���O�����r���[�ł̒�ԉw����</H2>
-<P>�@�_�C���O�����r���[�ŁA�w��ԉw�����x ��ON�ɂ���ƁA��Ԑ���̒�ԉw�ɒ�ԋL��(
-�� ��)�����܂��B<BR>
-�@��ԉw������ ON�EOFF �́A�_�C���O�����r���[�̃��j���[�R�}���h [�\��]-[��ԉw����]
-�Ő؂�ւ��邱�Ƃ��ł��܂��B</P>
-<P>�@�A���A1���ȏ�̒�Ԏ��Ԃ̂����ԉw�ɂ́A��ԋL���͂��܂���(��ԋL�����Ȃ��Ă���Ԃł��邱�Ƃ������邽�߂ł�)�B</P>
-<P>�@��Ԏ�ʂ̃v���p�e�B�� [��ԉw����] �� [�������Ȃ�] �Ɏw�肳��Ă���ƁA���̗�Ԏ�ʂ̗�Ԑ��ɂ͒�ԋL�������܂���B<BR>
-�@���̐ݒ�́A�u�e�w��Ԃ̒�ԋL���͏Ȃ������v�Ƃ����ꍇ�̎g�p��z�肵�Ă��܂��B</P>
+<H2><A name="StopMark"></A>2.4.5.ダイヤグラムビューでの停車駅明示</H2>
+<P>　ダイヤグラムビューで、『停車駅明示』 をONにすると、列車線上の停車駅に停車記号(
+○ 印)がつきます。<BR>
+　停車駅明示の ON・OFF は、ダイヤグラムビューのメニューコマンド [表示]-[停車駅明示]
+で切り替えることができます。</P>
+<P>　但し、1分以上の停車時間のある停車駅には、停車記号はつきません(停車記号がなくても停車であることが分かるためです)。</P>
+<P>　列車種別のプロパティの [停車駅明示] が [明示しない] に指定されていると、その列車種別の列車線には停車記号がつきません。<BR>
+　この設定は、「各駅停車の停車記号は省きたい」という場合の使用を想定しています。</P>
 <HR>
-<P><A href="../index.html">�߂�</A></P>
+<P><A href="../index.html">戻る</A></P>
 </BODY>
 </HTML>
