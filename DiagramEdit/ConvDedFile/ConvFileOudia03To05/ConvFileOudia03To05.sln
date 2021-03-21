@@ -1,21 +1,17 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileOudia03To05", "ConvFileOudia03To05.vcproj", "{A1921162-95CD-41D9-AAE9-ECB67741C82F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6A8CDE73-27FD-4CE2-A206-FAA901383A73} = {6A8CDE73-27FD-4CE2-A206-FAA901383A73}
-		{8CF84999-6CF1-4730-BB9D-E6BE1E2A680C} = {8CF84999-6CF1-4730-BB9D-E6BE1E2A680C}
-		{755F8EA7-1B21-4896-8B5E-ADFE0EA11032} = {755F8EA7-1B21-4896-8B5E-ADFE0EA11032}
-		{DDC783A9-BF89-4C80-AD50-6A0BDEE4E198} = {DDC783A9-BF89-4C80-AD50-6A0BDEE4E198}
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileOudia03To05", "ConvFileOudia03To05.vcxproj", "{A1921162-95CD-41D9-AAE9-ECB67741C82F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Str", "libs\OuLib\Str\Str.vcproj", "{6A8CDE73-27FD-4CE2-A206-FAA901383A73}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Str", "libs\OuLib\Str\Str.vcxproj", "{6A8CDE73-27FD-4CE2-A206-FAA901383A73}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "logmsg", "libs\OuLib\logmsg\logmsg.vcproj", "{DDC783A9-BF89-4C80-AD50-6A0BDEE4E198}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "logmsg", "libs\OuLib\logmsg\logmsg.vcxproj", "{DDC783A9-BF89-4C80-AD50-6A0BDEE4E198}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OuPropertiesText", "libs\OuLib\Str\OuPropertiesText\OuPropertiesText.vcproj", "{8CF84999-6CF1-4730-BB9D-E6BE1E2A680C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OuPropertiesText", "libs\OuLib\Str\OuPropertiesText\OuPropertiesText.vcxproj", "{8CF84999-6CF1-4730-BB9D-E6BE1E2A680C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DcDraw", "libs\DcDraw\DcDraw\DcDraw.vcproj", "{755F8EA7-1B21-4896-8B5E-ADFE0EA11032}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DcDraw", "libs\DcDraw\DcDraw\DcDraw.vcxproj", "{755F8EA7-1B21-4896-8B5E-ADFE0EA11032}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,5 +53,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFCABEDD-16BE-4D2C-A884-704CB419A3AD}
 	EndGlobalSection
 EndGlobal

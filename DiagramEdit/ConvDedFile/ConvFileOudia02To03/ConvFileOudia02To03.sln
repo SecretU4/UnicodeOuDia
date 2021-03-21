@@ -1,17 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileExec", "..\ConvFileExec\ConvFileExec.vcproj", "{D0BDB5FA-F577-439B-A401-10592ADA4424}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileExec", "..\ConvFileExec\ConvFileExec.vcxproj", "{D0BDB5FA-F577-439B-A401-10592ADA4424}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileOudia02To03", "ConvFileOudia02To03.vcproj", "{384DCE35-F143-43F9-AD2B-9051F8400473}"
-	ProjectSection(ProjectDependencies) = postProject
-		{386A9523-2EC7-491A-9A02-6E4BB22BD55C} = {386A9523-2EC7-491A-9A02-6E4BB22BD55C}
-		{E5B9466D-30AC-44CE-A57C-C85810EC02A7} = {E5B9466D-30AC-44CE-A57C-C85810EC02A7}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileOudia02To03", "ConvFileOudia02To03.vcxproj", "{384DCE35-F143-43F9-AD2B-9051F8400473}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Str", "libs\OuLib\Str\Str.vcproj", "{E5B9466D-30AC-44CE-A57C-C85810EC02A7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Str", "libs\OuLib\Str\Str.vcxproj", "{E5B9466D-30AC-44CE-A57C-C85810EC02A7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "logmsg", "libs\OuLib\logmsg\logmsg.vcproj", "{386A9523-2EC7-491A-9A02-6E4BB22BD55C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "logmsg", "libs\OuLib\logmsg\logmsg.vcxproj", "{386A9523-2EC7-491A-9A02-6E4BB22BD55C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,5 +45,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20FB796B-318F-460E-B4FB-B742ACA587EC}
 	EndGlobalSection
 EndGlobal

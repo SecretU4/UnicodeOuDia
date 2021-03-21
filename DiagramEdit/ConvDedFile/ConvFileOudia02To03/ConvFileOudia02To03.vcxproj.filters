@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{570aa4ef-f41c-4a91-b4d4-9c5dcae7350c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{38a49bc6-3ebd-45e9-84e9-e82c1451b964}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{48a6b46f-464b-4547-bc20-19f44c08f554}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CaConvFile_Oudia02To03.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DedRosenFileData\CconvCdDedDispProp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DedRosenFileData\CconvCDedRosenFileData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DedRosenFileData\01\CconvCDedRosenFileData_01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DedRosenFileData\02\CconvCDedRosenFileData_02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CconvCentDed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DedRosenFileData\01\CconvCentDed_01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DedRosenFileData\02\CconvCentDed_02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CdDedJikan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CdDedJikoku.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedDia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedDiaCont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedEkiCont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedRessya.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedRessyaCont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedRessyasyubetsuCont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedRosen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvFileOudia02To03.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ConvFileOudia02To03.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CaConvFile_Oudia02To03.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\CconvCdDedDispProp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\CconvCDedRosenFileData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\01\CconvCDedRosenFileData_01.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\02\CconvCDedRosenFileData_02.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CconvCentDed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\01\CconvCentDed_01.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\02\CconvCentDed_02.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\CdDedDispProp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CdDedJikan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CdDedJikoku.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\CDedRosenFileData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedDia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedDiaCont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedEki.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedEkiCont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedEkiJikoku.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRessya.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRessyaCont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRessyasyubetsu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRessyasyubetsuCont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRosen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvFileDll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvFileOudia02To03.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\IfByteBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\IfConvFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

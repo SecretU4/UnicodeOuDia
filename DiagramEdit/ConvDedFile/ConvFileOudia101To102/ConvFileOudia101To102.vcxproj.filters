@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="DedRosenFileData">
+      <UniqueIdentifier>{0fe9e243-cea6-487d-9be3-4d737cdfd7d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entDed">
+      <UniqueIdentifier>{fe694cab-eb6c-418f-8e40-41a77bd66902}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CConvFile_Oudia101To102.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvFileOudia101To102.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="DedRosenFileData\CconvCdDedDispProp.cpp">
+      <Filter>DedRosenFileData</Filter>
+    </ClCompile>
+    <ClCompile Include="DedRosenFileData\CconvCDedRosenFileData.cpp">
+      <Filter>DedRosenFileData</Filter>
+    </ClCompile>
+    <ClCompile Include="DedRosenFileData\CdDedDispProp.cpp">
+      <Filter>DedRosenFileData</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CconvCentDed.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CdDedJikan.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CdDedJikoku.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedDia.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedDiaCont.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedEkiCont.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedEkiJikoku.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedRessya.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedRessya_EkijikokuModifyOperation2.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedRessyaCont.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedRessyasyubetsuCont.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+    <ClCompile Include="entDed\CentDedRosen.cpp">
+      <Filter>entDed</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CConvFile_Oudia101To102.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvFileOudia101To102.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\CconvCdDedDispProp.h">
+      <Filter>DedRosenFileData</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\CconvCDedRosenFileData.h">
+      <Filter>DedRosenFileData</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\CdDedDispProp.h">
+      <Filter>DedRosenFileData</Filter>
+    </ClInclude>
+    <ClInclude Include="DedRosenFileData\cdedrosenfiledata.h">
+      <Filter>DedRosenFileData</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CconvCentDed.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CdDedJikan.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CdDedJikoku.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CdDedJikokuOrder.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDed.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedDia.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedDiaCont.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedEki.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedEkiCont.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedEkiJikoku.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRessya.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRessya_EkijikokuModifyOperation2.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRessyaCont.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRessyasyubetsu.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRessyasyubetsuCont.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+    <ClInclude Include="entDed\CentDedRosen.h">
+      <Filter>entDed</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

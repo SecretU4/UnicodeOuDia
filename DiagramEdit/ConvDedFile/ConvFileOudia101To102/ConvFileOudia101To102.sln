@@ -1,29 +1,23 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileOudia101To102", "ConvFileOudia101To102.vcproj", "{4DC756EE-5BD0-4F4B-9F41-184ACE6FC2A4}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6A8CDE73-27FD-4CE2-A206-FAA901383A73} = {6A8CDE73-27FD-4CE2-A206-FAA901383A73}
-		{8CF84999-6CF1-4730-BB9D-E6BE1E2A680C} = {8CF84999-6CF1-4730-BB9D-E6BE1E2A680C}
-		{9FC94BA3-A5BD-4029-893D-A96136563F08} = {9FC94BA3-A5BD-4029-893D-A96136563F08}
-		{755F8EA7-1B21-4896-8B5E-ADFE0EA11032} = {755F8EA7-1B21-4896-8B5E-ADFE0EA11032}
-		{DDC783A9-BF89-4C80-AD50-6A0BDEE4E198} = {DDC783A9-BF89-4C80-AD50-6A0BDEE4E198}
-		{DE2DBCB3-3F14-4FA2-A842-80B2CA47A519} = {DE2DBCB3-3F14-4FA2-A842-80B2CA47A519}
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileOudia101To102", "ConvFileOudia101To102.vcxproj", "{4DC756EE-5BD0-4F4B-9F41-184ACE6FC2A4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Str", "libs\oulib\Str\Str.vcproj", "{6A8CDE73-27FD-4CE2-A206-FAA901383A73}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Str", "libs\oulib\Str\Str.vcxproj", "{6A8CDE73-27FD-4CE2-A206-FAA901383A73}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OuPropertiesText", "libs\oulib\Str\OuPropertiesText\OuPropertiesText.vcproj", "{8CF84999-6CF1-4730-BB9D-E6BE1E2A680C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OuPropertiesText", "libs\oulib\Str\OuPropertiesText\OuPropertiesText.vcxproj", "{8CF84999-6CF1-4730-BB9D-E6BE1E2A680C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DcDraw", "libs\DcDraw\DcDraw\DcDraw.vcproj", "{755F8EA7-1B21-4896-8B5E-ADFE0EA11032}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DcDraw", "libs\DcDraw\DcDraw\DcDraw.vcxproj", "{755F8EA7-1B21-4896-8B5E-ADFE0EA11032}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DcdCd", "libs\DcDraw\DcdCd\DcdCd.vcproj", "{9FC94BA3-A5BD-4029-893D-A96136563F08}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DcdCd", "libs\DcDraw\DcdCd\DcdCd.vcxproj", "{9FC94BA3-A5BD-4029-893D-A96136563F08}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileExec", "..\ConvFileExec\ConvFileExec.vcproj", "{D0BDB5FA-F577-439B-A401-10592ADA4424}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvFileExec", "..\ConvFileExec\ConvFileExec.vcxproj", "{D0BDB5FA-F577-439B-A401-10592ADA4424}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ErrorInfo", "libs\oulib\Str\OuPropertiesText\ErrorInfo\ErrorInfo.vcproj", "{DE2DBCB3-3F14-4FA2-A842-80B2CA47A519}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ErrorInfo", "libs\oulib\Str\OuPropertiesText\ErrorInfo\ErrorInfo.vcxproj", "{DE2DBCB3-3F14-4FA2-A842-80B2CA47A519}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "logmsg", "libs\oulib\logmsg\logmsg.vcproj", "{DDC783A9-BF89-4C80-AD50-6A0BDEE4E198}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "logmsg", "libs\oulib\logmsg\logmsg.vcxproj", "{DDC783A9-BF89-4C80-AD50-6A0BDEE4E198}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,5 +77,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87648674-DA80-4B88-8C67-3CB78E7CF9DC}
 	EndGlobalSection
 EndGlobal

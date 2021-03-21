@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{269ff1fa-8382-4136-9e1b-13aeacc512d6}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{39cf475f-9a85-482e-b826-9fe7565135a2}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="CsvDocument">
+      <UniqueIdentifier>{aab3de93-738d-4e68-b736-8b2571f3d8e2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CConnectedStringCompress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CdConnectedString2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CdFilenameStr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CStrCharSizeMb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strLf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strprintf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strToWstr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vectorToFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CsvDocument\CConvCsvDocument.cpp">
+      <Filter>CsvDocument</Filter>
+    </ClCompile>
+    <ClCompile Include="CsvDocument\CdCsvDocument.cpp">
+      <Filter>CsvDocument</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CConnectedStringCompress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CdConnectedString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CdConnectedString2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CdFilenameStr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnumToString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CStrCharSizeMb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stringSplit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strLf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strprintf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strToInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strToVector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strToWstr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vectorToFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CsvDocument\CConvCsvDocument.h">
+      <Filter>CsvDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="CsvDocument\CdCsvCell.h">
+      <Filter>CsvDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="CsvDocument\CdCsvDocument.h">
+      <Filter>CsvDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="CsvDocument\CdCsvRow.h">
+      <Filter>CsvDocument</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
