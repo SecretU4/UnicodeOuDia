@@ -4,639 +4,639 @@ $Id: DiagramEdit.txt 422 2017-01-21 05:06:42Z okm $
  ****************************************************************
 
 --------------------------------
-ƒ1„ƒfƒBƒŒƒNƒgƒŠ\¬
+ï¼œ1ï¼žãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªæ§‹æˆ
 --------------------------------
 
-ConvDedFile
-@ƒtƒ@ƒCƒ‹ƒtƒH[ƒ}ƒbƒg‚ð•ÏŠ·‚·‚éŠO•”ƒ‚ƒWƒ…[ƒ‹‚ðŽû˜^‚µ‚Ä‚¢‚Ü‚·B
+â—ŽConvDedFile
+ã€€ãƒ•ã‚¡ã‚¤ãƒ«ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆã‚’å¤‰æ›ã™ã‚‹å¤–éƒ¨ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’åŽéŒ²ã—ã¦ã„ã¾ã™ã€‚
 
-DiagramEdit
-@OuDia.exe –{‘Ì
+â—ŽDiagramEdit
+ã€€OuDia.exe æœ¬ä½“
 
-manual
-  html\oudia.hhp ‚ðƒrƒ‹ƒh‚·‚é‚ÆA
-  html\oudia.chm ‚ª¶¬‚³‚ê‚Ü‚·B
+â—Žmanual
+  html\oudia.hhp ã‚’ãƒ“ãƒ«ãƒ‰ã™ã‚‹ã¨ã€
+  html\oudia.chm ãŒç”Ÿæˆã•ã‚Œã¾ã™ã€‚
 
-DiagramEdit_setup
-@OuDia.x.xx.xx.msi‚ðƒrƒ‹ƒh‚µ‚Ü‚·B
-(1)  installer\collect.bat ‚ÅA•K—v‚Èƒtƒ@ƒCƒ‹‚ð Instaiiler\OuDia\ProgramFile\ ‚ÉƒRƒs[‚µ‚Ä‚­‚¾‚³‚¢B
-(2)  OuDiaInstaller.sln ‚ð‹N“®‚µ‚Ä‚­‚¾‚³‚¢B
-(3)@ƒvƒƒpƒeƒB‚ÌˆÈ‰º‚Ì€–Ú‚ðŠm”FŒãAƒZƒbƒgƒAƒbƒv‚ðƒrƒ‹ƒh‚µ‚Ä‚­‚¾‚³‚¢B
-  [»•iî•ñ][–¼‘O]
-  [»•iî•ñ][»•iƒR[ƒh]
-  [»•iî•ñ][ƒo[ƒWƒ‡ƒ“]
-  [ŠT—v][ƒ^ƒCƒgƒ‹]
-
-
---------------------------------
-ƒ2„ƒrƒ‹ƒh
---------------------------------
-
-(1)ƒ`ƒFƒbƒNƒAƒEƒg
-
-  Svn‚©‚ç OuDia/trunk‚ðƒ`ƒFƒbƒNƒAƒEƒg
-
-(2)ƒrƒ‹ƒh
-
-@OuDia_build.txt ‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+â—ŽDiagramEdit_setup
+ã€€OuDia.x.xx.xx.msiã‚’ãƒ“ãƒ«ãƒ‰ã—ã¾ã™ã€‚
+(1)  installer\collect.bat ã§ã€å¿…è¦ãªãƒ•ã‚¡ã‚¤ãƒ«ã‚’ Instaiiler\OuDia\ProgramFile\ ã«ã‚³ãƒ”ãƒ¼ã—ã¦ãã ã•ã„ã€‚
+(2)  OuDiaInstaller.sln ã‚’èµ·å‹•ã—ã¦ãã ã•ã„ã€‚
+(3)ã€€ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®ä»¥ä¸‹ã®é …ç›®ã‚’ç¢ºèªå¾Œã€ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—ã‚’ãƒ“ãƒ«ãƒ‰ã—ã¦ãã ã•ã„ã€‚
+  [è£½å“æƒ…å ±][åå‰]
+  [è£½å“æƒ…å ±][è£½å“ã‚³ãƒ¼ãƒ‰]
+  [è£½å“æƒ…å ±][ãƒãƒ¼ã‚¸ãƒ§ãƒ³]
+  [æ¦‚è¦][ã‚¿ã‚¤ãƒˆãƒ«]
 
 
 --------------------------------
-ƒ3„Tags
+ï¼œ2ï¼žãƒ“ãƒ«ãƒ‰
 --------------------------------
 
-Version0_04_07
-@[25/03]2007/1/3 Release
+(1)ãƒã‚§ãƒƒã‚¯ã‚¢ã‚¦ãƒˆ
+
+  Svnã‹ã‚‰ OuDia/trunkã‚’ãƒã‚§ãƒƒã‚¯ã‚¢ã‚¦ãƒˆ
+
+(2)ãƒ“ãƒ«ãƒ‰
+
+ã€€OuDia_build.txt ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
 
-Version0_04_08
-@[31/07]2007/7/7 Release
+--------------------------------
+ï¼œ3ï¼žTags
+--------------------------------
 
-ConvDedFile01To03_Exe
-@[34/20]Exe‚É‚æ‚éƒtƒ@ƒCƒ‹ƒRƒ“ƒo[ƒ^‚ª“®ì‚µ‚Ü‚µ‚½B
+â—ŽVersion0_04_07
+ã€€[25/03]2007/1/3 Release
 
-ConvFileOudia02To03_dll
-@[35/18]DLL‚É‚æ‚éƒtƒ@ƒCƒ‹ƒRƒ“ƒo[ƒ^‚É’u‚«Š·‚¦‚Ü‚µ‚½B
 
-after071209_refuct
-@[36/15]DcdGrid‚ÌƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒO‚ðs‚¢‚Ü‚µ‚½B
+â—ŽVersion0_04_08
+ã€€[31/07]2007/7/7 Release
 
-beforeConvFile2Dll
-@[35/22]ConvFile2DLL‚É’u‚«Š·‚¦‚é’¼‘O
+â—ŽConvDedFile01To03_Exe
+ã€€[34/20]Exeã«ã‚ˆã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã‚³ãƒ³ãƒãƒ¼ã‚¿ãŒå‹•ä½œã—ã¾ã—ãŸã€‚
 
-ConvFile2Dll
-@[35/22]ConvFile2DLL‚É’u‚«Š·‚¦‚Ü‚µ‚½
+â—ŽConvFileOudia02To03_dll
+ã€€[35/18]DLLã«ã‚ˆã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã‚³ãƒ³ãƒãƒ¼ã‚¿ã«ç½®ãæ›ãˆã¾ã—ãŸã€‚
 
-beforeOuPropertiesText
-@[38/23]OuPropertiesText‚ðÌ—p’¼‘O
+â—Žafter071209_refuct
+ã€€[36/15]DcdGridã®ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ã‚’è¡Œã„ã¾ã—ãŸã€‚
 
-OuPropertiesText
-@[39/14]OuPropertiesText‚ðÌ—p‚µ‚Ü‚µ‚½B
+â—ŽbeforeConvFile2Dll
+ã€€[35/22]ConvFile2DLLã«ç½®ãæ›ãˆã‚‹ç›´å‰
 
-Version0_05
-@[40/14]Ver0.05‚ðƒŠƒŠ[ƒX‚µ‚Ü‚µ‚½B
+â—ŽConvFile2Dll
+ã€€[35/22]ConvFile2DLLã«ç½®ãæ›ãˆã¾ã—ãŸ
 
-Version0_05_01
-@[40/19]Ver0.05.01‚ðƒŠƒŠ[ƒX‚µ‚Ü‚µ‚½B
- > yƒoƒOC³z  Žž•\ƒrƒ…[‚É‚¨‚¢‚ÄA˜Hü‚ÌI“_(Å‰º’i)‚É‰wŽž‚ð“ü—Í‚µ‚æ‚¤‚Æ‚·‚é‚ÆAƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒGƒ‰[‚É‚È‚Á‚Ä‚¢‚Ü‚µ‚½B‚±‚ê‚ðC³‚µ‚Ü‚µ‚½B
+â—ŽbeforeOuPropertiesText
+ã€€[38/23]OuPropertiesTextã‚’æŽ¡ç”¨ç›´å‰
 
-Version0_05_02
-@[40/20]
+â—ŽOuPropertiesText
+ã€€[39/14]OuPropertiesTextã‚’æŽ¡ç”¨ã—ã¾ã—ãŸã€‚
+
+â—ŽVersion0_05
+ã€€[40/14]Ver0.05ã‚’ãƒªãƒªãƒ¼ã‚¹ã—ã¾ã—ãŸã€‚
+
+â—ŽVersion0_05_01
+ã€€[40/19]Ver0.05.01ã‚’ãƒªãƒªãƒ¼ã‚¹ã—ã¾ã—ãŸã€‚
+ > ã€ãƒã‚°ä¿®æ­£ã€‘  æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã«ãŠã„ã¦ã€è·¯ç·šã®çµ‚ç‚¹(æœ€ä¸‹æ®µ)ã«é§…æ™‚åˆ»ã‚’å…¥åŠ›ã—ã‚ˆã†ã¨ã™ã‚‹ã¨ã€ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ã«ãªã£ã¦ã„ã¾ã—ãŸã€‚ã“ã‚Œã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
+
+â—ŽVersion0_05_02
+ã€€[40/20]
  >Version0_05_02
- > wŽž•\‚Ì—ñŽÔŽí•ÊŒÅ—LƒtƒHƒ“ƒgx‚ð“±“ü‚µ‚Ü‚µ‚½B
- > ƒtƒ@ƒCƒ‹‚Ì“Ç‚Ýž‚Ý‚ð‘½­‚‘¬‰»‚µ‚Ü‚µ‚½B
+ > ã€Žæ™‚åˆ»è¡¨ã®åˆ—è»Šç¨®åˆ¥å›ºæœ‰ãƒ•ã‚©ãƒ³ãƒˆã€ã‚’å°Žå…¥ã—ã¾ã—ãŸã€‚
+ > ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ã‚’å¤šå°‘é«˜é€ŸåŒ–ã—ã¾ã—ãŸã€‚
  > 	OuPropertiesText::CNodeContainer
- >	‚Ìget(),getInName()‚ð‚‘¬‰»‚µ‚Ü‚µ‚½(clone()‚ðs‚í‚È‚¢‚æ‚¤‚É‚µ‚Ü‚µ‚½)B
- >	OuPropertiesText::IfNodeContainerConst‚ð“±“ü‚µ‚Ü‚µ‚½B
+ >	ã®get(),getInName()ã‚’é«˜é€ŸåŒ–ã—ã¾ã—ãŸ(clone()ã‚’è¡Œã‚ãªã„ã‚ˆã†ã«ã—ã¾ã—ãŸ)ã€‚
+ >	OuPropertiesText::IfNodeContainerConstã‚’å°Žå…¥ã—ã¾ã—ãŸã€‚
  
-VisualStudio2008
-@[41/02]
+â—ŽVisualStudio2008
+ã€€[41/02]
  >Version0_05_03
- > VisualStudio2008‚Å‚Ìƒrƒ‹ƒh‚ðs‚¢‚Ü‚µ‚½B
- > OuDia.iniEOuDia.log‚ð LOCAL_APPDATAƒfƒBƒŒƒNƒgƒŠ(C:\Documents and Settings\<username>\Local Settings\Application Data\OuDia)‚É•Û‘¶‚·‚é‚æ‚¤‚É•ÏX‚µ‚Ü‚µ‚½(]—ˆ‚ÍOuDiaƒCƒ“ƒXƒg[ƒ‹ƒfƒBƒŒƒNƒgƒŠ)
+ > VisualStudio2008ã§ã®ãƒ“ãƒ«ãƒ‰ã‚’è¡Œã„ã¾ã—ãŸã€‚
+ > OuDia.iniãƒ»OuDia.logã‚’ LOCAL_APPDATAãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª(C:\Documents and Settings\<username>\Local Settings\Application Data\OuDia)ã«ä¿å­˜ã™ã‚‹ã‚ˆã†ã«å¤‰æ›´ã—ã¾ã—ãŸ(å¾“æ¥ã¯OuDiaã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª)
 
-Version0_05_03
- >@[41/02]
- > ˆê•”‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh‚ÌƒAƒNƒZƒ‰ƒŒ[ƒ^ƒL[iƒVƒ‡[ƒgƒJƒbƒgƒL[j‚ð•ÏX
- > (‚·‚×‚Ä‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh‚É CTRL ƒL[‚ð’Ç‰Á)
+â—ŽVersion0_05_03
+ >ã€€[41/02]
+ > ä¸€éƒ¨ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ã®ã‚¢ã‚¯ã‚»ãƒ©ãƒ¬ãƒ¼ã‚¿ã‚­ãƒ¼ï¼ˆã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚­ãƒ¼ï¼‰ã‚’å¤‰æ›´
+ > (ã™ã¹ã¦ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ã« CTRL ã‚­ãƒ¼ã‚’è¿½åŠ )
 
-Version0_05_04
- > ‚PD ƒƒjƒ…[ƒRƒ}ƒ“ƒh [•ÒW]-[‚â‚è’¼‚µ] ‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+â—ŽVersion0_05_04
+ > ï¼‘ï¼Ž ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ [ç·¨é›†]-[ã‚„ã‚Šç›´ã—] ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
  > 
- > ‚QD Žž•\ƒrƒ…[‚Ìˆê•”‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh‚ÌƒAƒNƒZƒ‰ƒŒ[ƒ^ƒL[(ƒVƒ‡[ƒgƒJƒbƒgƒL[)‚ð•ÏX‚µ‚Ü‚µ‚½iƒeƒ“ƒL[‚É‚æ‚éƒVƒ‡[ƒgƒJƒbƒgƒL[‚ð’Ç‰Á‚µ‚Ü‚µ‚½Bj
- > 	[‰wŽž]-[’Ê‰ß]: Ctrl+ '-' , ƒeƒ“ƒL[‚Ì '-' 
- > 	[‰wŽž]-[Œo—R‚È‚µ]: Ctrl+Shift+ '-' , ƒeƒ“ƒL[‚Ì '/' 
- > ‚RD Žž•\ƒrƒ…[‚Ìw—ñŽÔ‚Ì‰wŽž‚Ì˜A‘±‚P•ªC³x‹@”\‚ÉAˆÈ‰º‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
- > [‰wŽž]-[(ƒtƒH[ƒJƒX‚ðˆÚ“®‚¹‚¸‚É)‰wŽž‚ð-1•ª] 
- > [‰wŽž]-[ƒtƒH[ƒJƒX‚ð‘O‚Ö] 
- > [‰wŽž]-[(ƒtƒH[ƒJƒX‚ðˆÚ“®‚¹‚¸‚É)‰wŽž‚ð+1•ª] 
+ > ï¼’ï¼Ž æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ä¸€éƒ¨ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ã®ã‚¢ã‚¯ã‚»ãƒ©ãƒ¬ãƒ¼ã‚¿ã‚­ãƒ¼(ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚­ãƒ¼)ã‚’å¤‰æ›´ã—ã¾ã—ãŸï¼ˆãƒ†ãƒ³ã‚­ãƒ¼ã«ã‚ˆã‚‹ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚­ãƒ¼ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚ï¼‰
+ > 	[é§…æ™‚åˆ»]-[é€šéŽ]: Ctrl+ '-' , ãƒ†ãƒ³ã‚­ãƒ¼ã® '-' 
+ > 	[é§…æ™‚åˆ»]-[çµŒç”±ãªã—]: Ctrl+Shift+ '-' , ãƒ†ãƒ³ã‚­ãƒ¼ã® '/' 
+ > ï¼“ï¼Ž æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ã€Žåˆ—è»Šã®é§…æ™‚åˆ»ã®é€£ç¶šï¼‘åˆ†ä¿®æ­£ã€æ©Ÿèƒ½ã«ã€ä»¥ä¸‹ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+ > [é§…æ™‚åˆ»]-[(ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚’ç§»å‹•ã›ãšã«)é§…æ™‚åˆ»ã‚’-1åˆ†] 
+ > [é§…æ™‚åˆ»]-[ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚’å‰ã¸] 
+ > [é§…æ™‚åˆ»]-[(ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚’ç§»å‹•ã›ãšã«)é§…æ™‚åˆ»ã‚’+1åˆ†] 
  > 
- > ƒXƒ^[ƒgƒƒjƒ…[‚ÌIcon‚ðƒZƒbƒgƒAƒbƒv‚É’Ç‰Á‚µ‚Ü‚µ‚½B
- > —ñŽÔ‚Ì‰wŽž‚Ì˜A‘±‚P•ªC³‹@”\‚ÌƒVƒ‡[ƒgƒJƒbƒgƒL[‚ð•ÏXiJ,K,L‚ÉShiftƒL[‚ð‘g‚Ý‡‚í‚¹‚½‘€ìj
- > ConvFileOudia03To05.dll ‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
- > OuDia ƒCƒ“ƒXƒg[ƒ‹ƒpƒbƒP[ƒW‚Ìƒtƒ@ƒCƒ‹–¼‚ð•ÏX‚µ‚Ü‚µ‚½B]—ˆ‚Ì oudia.msi ‚©‚ç oudia_x.x.x.msi ‚É‚È‚è‚Ü‚µ‚½(x.x.x ‚Ì•”•ª‚Íƒo[ƒWƒ‡ƒ“”Ô†‚É’u‚«Š·‚í‚è‚Ü‚·)
- > OuDia Ver0.05.00 ‚æ‚è‘O‚ÌOuDia‚Åì¬‚³‚ê‚½ .oud ƒtƒ@ƒCƒ‹(FileType=OuDia.3 )‚Ìƒtƒ@ƒCƒ‹“à‚ÉA‹ó•¶Žš—ñ‚Ì—ñŽÔŽí•Ê–¼‚ðŽ‚Â—ñŽÔŽí•Ê‚ª‚ ‚é‚ÆAƒtƒ@ƒCƒ‹•ÏŠ·‚ªŽ¸”s‚·‚é•s‹ï‡‚ðC³B
+ > ã‚¹ã‚¿ãƒ¼ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®Iconã‚’ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—ã«è¿½åŠ ã—ã¾ã—ãŸã€‚
+ > åˆ—è»Šã®é§…æ™‚åˆ»ã®é€£ç¶šï¼‘åˆ†ä¿®æ­£æ©Ÿèƒ½ã®ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚­ãƒ¼ã‚’å¤‰æ›´ï¼ˆJ,K,Lã«Shiftã‚­ãƒ¼ã‚’çµ„ã¿åˆã‚ã›ãŸæ“ä½œï¼‰
+ > ConvFileOudia03To05.dll ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+ > OuDia ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã®ãƒ•ã‚¡ã‚¤ãƒ«åã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚å¾“æ¥ã® oudia.msi ã‹ã‚‰ oudia_x.x.x.msi ã«ãªã‚Šã¾ã—ãŸ(x.x.x ã®éƒ¨åˆ†ã¯ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå·ã«ç½®ãæ›ã‚ã‚Šã¾ã™)
+ > OuDia Ver0.05.00 ã‚ˆã‚Šå‰ã®OuDiaã§ä½œæˆã•ã‚ŒãŸ .oud ãƒ•ã‚¡ã‚¤ãƒ«(FileType=OuDia.3 )ã®ãƒ•ã‚¡ã‚¤ãƒ«å†…ã«ã€ç©ºæ–‡å­—åˆ—ã®åˆ—è»Šç¨®åˆ¥åã‚’æŒã¤åˆ—è»Šç¨®åˆ¥ãŒã‚ã‚‹ã¨ã€ãƒ•ã‚¡ã‚¤ãƒ«å¤‰æ›ãŒå¤±æ•—ã™ã‚‹ä¸å…·åˆã‚’ä¿®æ­£ã€‚
 
-Version0_05_05
+â—ŽVersion0_05_05
  (2008/11/1)
-1.@Žž•\ƒrƒ…[‚Å‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh[‰wŽž]-[’Ê‰ß]‚ÍAŽž‚ðƒNƒŠƒA‚·‚é‚æ‚¤‚É•ÏX‚µ‚Ü‚µ‚½B
-2.@Žž•\ƒrƒ…[‚Ì•‚ðÝ’è‰Â”\‚É‚µ‚Ü‚µ‚½(—ñŽÔ”Ô†6Œ…‚É‘Î‰ž)B
-3.@Žž•\ƒrƒ…[‚Å‚Ì—ñŽÔ‚Ì[‘}“ü]“®ì‚ð•ÏX‚µ‚Ü‚µ‚½B
-@[‘}“ü]“®ì‚ªs‚í‚ê‚½‚çAƒ_ƒCƒAƒƒO‚ð•\Ž¦‚¹‚¸‚É‹ós‚ð’Ç‰Á‚·‚éB
-4.  OuDia‚Å•Û‘¶‚µ‚½WinDIAŒ`Ž®ƒtƒ@ƒCƒ‹( .dia )‚ªWinDIA‚Å³‚µ‚­ŠJ‚¯‚È‚¢–â‘è‚ðC³B
+1.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰[é§…æ™‚åˆ»]-[é€šéŽ]ã¯ã€æ™‚åˆ»ã‚’ã‚¯ãƒªã‚¢ã™ã‚‹ã‚ˆã†ã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
+2.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®å¹…ã‚’è¨­å®šå¯èƒ½ã«ã—ã¾ã—ãŸ(åˆ—è»Šç•ªå·6æ¡ã«å¯¾å¿œ)ã€‚
+3.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã®åˆ—è»Šã®[æŒ¿å…¥]å‹•ä½œã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
+ã€€[æŒ¿å…¥]å‹•ä½œãŒè¡Œã‚ã‚ŒãŸã‚‰ã€ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚’è¡¨ç¤ºã›ãšã«ç©ºè¡Œã‚’è¿½åŠ ã™ã‚‹ã€‚
+4.  OuDiaã§ä¿å­˜ã—ãŸWinDIAå½¢å¼ãƒ•ã‚¡ã‚¤ãƒ«( .dia )ãŒWinDIAã§æ­£ã—ãé–‹ã‘ãªã„å•é¡Œã‚’ä¿®æ­£ã€‚
 
-DiagramRessyajouhouHyouji
+â—ŽDiagramRessyajouhouHyouji
  (2008/12/30)
-¡ƒ23.1„[35/18]—ñŽÔ”Ô†‚ðA•¡”‚ÌˆÊ’u‚ÉŽw’è‚Å‚«‚é‚æ‚¤‚É‚·‚é(‰w‚ÌƒvƒƒpƒeƒB‚É‚·‚é)[46/11,12,48/06,07,14,27,29]
+â– ï¼œ23.1ï¼ž[35/18]åˆ—è»Šç•ªå·ã‚’ã€è¤‡æ•°ã®ä½ç½®ã«æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã™ã‚‹(é§…ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã«ã™ã‚‹)[46/11,12,48/06,07,14,27,29]
 
-DiagramStopMark
+â—ŽDiagramStopMark
  (2009/01/31)
-¡[46/11]ƒ23.2„ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÅA’âŽÔ‰w‚É›‚ð‚Â‚¯‚éB[48/30,31,49/04,05,24,25,31]
+â– [46/11]ï¼œ23.2ï¼žãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§ã€åœè»Šé§…ã«â—‹ã‚’ã¤ã‘ã‚‹ã€‚[48/30,31,49/04,05,24,25,31]
 
-JikokuhyouEkijikokuPasteMulti
-¡[48/21]ƒ23.3„Žž•\ƒrƒ…[‚ÅAI’…—ñŽÔ‚ÆŽn”­—ñŽÔ‚ðŽ©“®Œ‹‡¨[49/24][Žž‚Ì‚Ý“\‚è•t‚¯]‚ð•¡”—ñŽÔ‚ÅŽg—p‰Â”\‚É‚·‚éB[49/31]
+â—ŽJikokuhyouEkijikokuPasteMulti
+â– [48/21]ï¼œ23.3ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã€çµ‚ç€åˆ—è»Šã¨å§‹ç™ºåˆ—è»Šã‚’è‡ªå‹•çµåˆâ†’[49/24][æ™‚åˆ»ã®ã¿è²¼ã‚Šä»˜ã‘]ã‚’è¤‡æ•°åˆ—è»Šã§ä½¿ç”¨å¯èƒ½ã«ã™ã‚‹ã€‚[49/31]
 
-JikokuhyouEkijikokuDecMulti
+â—ŽJikokuhyouEkijikokuDecMulti
  (2009/02/08)
-¡[49/24]ƒ23.4„‰wŽž‚Ì˜A‘±1•ªC³‚ðA•¡”—ñŽÔ‚ÅŽg—p‰Â”\‚É‚·‚éB[50/07,08]
+â– [49/24]ï¼œ23.4ï¼žé§…æ™‚åˆ»ã®é€£ç¶š1åˆ†ä¿®æ­£ã‚’ã€è¤‡æ•°åˆ—è»Šã§ä½¿ç”¨å¯èƒ½ã«ã™ã‚‹ã€‚[50/07,08]
 
-ID_EDIT_SELECT_ALL
-¡[39/29]ƒ23.5„Žž•\ƒrƒ…[‚Å[‚·‚×‚Ä‘I‘ð]‚ð’Ç‰Á[50/08]
+â—ŽID_EDIT_SELECT_ALL
+â– [39/29]ï¼œ23.5ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§[ã™ã¹ã¦é¸æŠž]ã‚’è¿½åŠ [50/08]
 
-JikokuhyouSORT
+â—ŽJikokuhyouSORT
  (2009/02/15)
-¡[48/21]ƒ23.6„Žž•\ƒrƒ…[‚ð—ñŽÔ‚ÌŽž‡‚É•À‚×‘Ö‚¦[50/14,15]
+â– [48/21]ï¼œ23.6ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã‚’åˆ—è»Šã®æ™‚åˆ»é †ã«ä¸¦ã¹æ›¿ãˆ[50/14,15]
 
-AcceleratorOnRosenView
+â—ŽAcceleratorOnRosenView
  (2009/02/15)
-¡[50/15]ƒ23.7„˜Hüƒrƒ…[‚ÉƒtƒH[ƒJƒX‚ª‚ ‚é‚ÆAƒAƒNƒZƒ‰ƒŒ[ƒ^ƒL[‚ªŒø‚©‚È‚¢[50/20]
-‚ðC³
+â– [50/15]ï¼œ23.7ï¼žè·¯ç·šãƒ“ãƒ¥ãƒ¼ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ãŒã‚ã‚‹ã¨ã€ã‚¢ã‚¯ã‚»ãƒ©ãƒ¬ãƒ¼ã‚¿ã‚­ãƒ¼ãŒåŠ¹ã‹ãªã„[50/20]
+ã‚’ä¿®æ­£
 
-Version0_06
+â—ŽVersion0_06
  (2009/02/15)
-	1.@ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÅA1—ñŽÔ‚É‚Â‚«•¡”ŒÂŠ‚É—ñŽÔî•ñ‚ª•\Ž¦‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½([ƒ_ƒCƒ„ƒOƒ‰ƒ€—ñŽÔî•ñ]‚ªA‰w‚Ì‘®«‚É‚È‚è‚Ü‚µ‚½)B
-	2.@ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚É’âŽÔ‰w–¾Ž¦‹@”\‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	3. Žž•\ƒrƒ…[‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh [•ÒW]-[Žž‚Ì‚Ý“\‚è•t‚¯] ‚ÅA•¡”—ñŽÔ‚É‘Î‚·‚éŽž‚Ì“\‚è•t‚¯‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
-	4.@Žž•\ƒrƒ…[‚Éƒƒjƒ…[ƒRƒ}ƒ“ƒh[•ÒW]-[‚·‚×‚Ä‘I‘ð]‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	5.@Žž•\ƒrƒ…[‚Éƒƒjƒ…[ƒRƒ}ƒ“ƒh[Žž•\]-[•À‚×‘Ö‚¦]‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	6.@Žž•\ƒrƒ…[‚Ìw—ñŽÔ‚Ì‰wŽž‚Ì˜A‘±‚P•ªC³x ‹@”\‚ªA•¡”—ñŽÔ‚É‘Î‚µ‚ÄŽg—p‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
-	7.@Žž•\ƒrƒ…[‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh [Žž•\]-[’Ê‰ß‰w‚Ì‰wŽž‚ð•\Ž¦] ‚ðA [•\Ž¦]-[’Ê‰ß‰w‚Ì‰wŽž‚ð•\Ž¦] ‚ÉˆÚ“®‚µ‚Ü‚µ‚½B
-	8. ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh[ƒ_ƒCƒ„ƒOƒ‰ƒ€]‚ÌƒTƒuƒƒjƒ…[‚Ì‚¤‚¿A•\Ž¦‚ÉŠÖŒW‚·‚é‚à‚Ì‚ð[•\Ž¦]‚ÌƒTƒuƒƒjƒ…[‚ÉˆÚ“®‚µ‚Ü‚µ‚½B
-	9. ƒ}ƒjƒ…ƒAƒ‹‚ÌC³
-	(1)@Žž•\ƒrƒ…[‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh [‰wŽž]-[ƒ_ƒCƒ„ƒOƒ‰ƒ€‚ÖˆÚ“®] ‚Ìà–¾‚ª”²‚¯‚Ä‚¢‚½‚Ì‚ðC³B
-	(2)@ƒ}ƒjƒ…ƒAƒ‹‚Ì 2.3.14. ‰wŠÔÅ¬Š—vŽžŠÔE‰wŠÔÅ¬Š—vŽžŠÔ—ñŽÔ ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[[•\Ž¦]-[XV] ‚Ìà–¾‚ð’Ç‹L‚µ‚Ü‚µ‚½B
-	10.@‚±‚ê‚Ü‚Å‚ÍA˜Hüƒrƒ…[‚ÉƒtƒH[ƒJƒX‚ª‚ ‚é‚ÆAƒAƒNƒZƒ‰ƒŒ[ƒ^ƒL[‚ªŒø‚«‚Ü‚¹‚ñ‚Å‚µ‚½B‚±‚ê‚ðŒø‚­‚æ‚¤‚É‚µ‚Ü‚µ‚½B
+	1.ã€€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§ã€1åˆ—è»Šã«ã¤ãè¤‡æ•°å€‹æ‰€ã«åˆ—è»Šæƒ…å ±ãŒè¡¨ç¤ºã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸ([ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ åˆ—è»Šæƒ…å ±]ãŒã€é§…ã®å±žæ€§ã«ãªã‚Šã¾ã—ãŸ)ã€‚
+	2.ã€€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã«åœè»Šé§…æ˜Žç¤ºæ©Ÿèƒ½ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	3. æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ [ç·¨é›†]-[æ™‚åˆ»ã®ã¿è²¼ã‚Šä»˜ã‘] ã§ã€è¤‡æ•°åˆ—è»Šã«å¯¾ã™ã‚‹æ™‚åˆ»ã®è²¼ã‚Šä»˜ã‘ãŒã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
+	4.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã«ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰[ç·¨é›†]-[ã™ã¹ã¦é¸æŠž]ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	5.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã«ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰[æ™‚åˆ»è¡¨]-[ä¸¦ã¹æ›¿ãˆ]ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	6.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ã€Žåˆ—è»Šã®é§…æ™‚åˆ»ã®é€£ç¶šï¼‘åˆ†ä¿®æ­£ã€ æ©Ÿèƒ½ãŒã€è¤‡æ•°åˆ—è»Šã«å¯¾ã—ã¦ä½¿ç”¨ã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
+	7.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ [æ™‚åˆ»è¡¨]-[é€šéŽé§…ã®é§…æ™‚åˆ»ã‚’è¡¨ç¤º] ã‚’ã€ [è¡¨ç¤º]-[é€šéŽé§…ã®é§…æ™‚åˆ»ã‚’è¡¨ç¤º] ã«ç§»å‹•ã—ã¾ã—ãŸã€‚
+	8. ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰[ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ]ã®ã‚µãƒ–ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ã†ã¡ã€è¡¨ç¤ºã«é–¢ä¿‚ã™ã‚‹ã‚‚ã®ã‚’[è¡¨ç¤º]ã®ã‚µãƒ–ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«ç§»å‹•ã—ã¾ã—ãŸã€‚
+	9. ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã®ä¿®æ­£
+	(1)ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ [é§…æ™‚åˆ»]-[ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã¸ç§»å‹•] ã®èª¬æ˜ŽãŒæŠœã‘ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
+	(2)ã€€ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã® 2.3.14. é§…é–“æœ€å°æ‰€è¦æ™‚é–“ãƒ»é§…é–“æœ€å°æ‰€è¦æ™‚é–“åˆ—è»Š ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼[è¡¨ç¤º]-[æ›´æ–°] ã®èª¬æ˜Žã‚’è¿½è¨˜ã—ã¾ã—ãŸã€‚
+	10.ã€€ã“ã‚Œã¾ã§ã¯ã€è·¯ç·šãƒ“ãƒ¥ãƒ¼ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ãŒã‚ã‚‹ã¨ã€ã‚¢ã‚¯ã‚»ãƒ©ãƒ¬ãƒ¼ã‚¿ã‚­ãƒ¼ãŒåŠ¹ãã¾ã›ã‚“ã§ã—ãŸã€‚ã“ã‚Œã‚’åŠ¹ãã‚ˆã†ã«ã—ã¾ã—ãŸã€‚
 
-	OuDia‚Ìƒz[ƒ€ƒy[ƒW:accesscount:62884
-	OuDiaVer0.05.05ƒ_ƒEƒ“ƒ[ƒh:2890
+	OuDiaã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸:accesscount:62884
+	OuDiaVer0.05.05ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰:2890
 
-beforeMu
+â—ŽbeforeMu
 	(2009/2/22)
 
-Mu
+â—ŽMu
 	(2009/2/22)
-	Mu‚ð“±“ü‚µ‚Ü‚µ‚½B
+	Muã‚’å°Žå…¥ã—ã¾ã—ãŸã€‚
 	
-Mu_ChangeFuncName
+â—ŽMu_ChangeFuncName
 	(2009/2/28)
-	¡ƒ24.1.2„ŠÖ”–¼‚Ì•ÏX[50/22]
+	â– ï¼œ24.1.2ï¼žé–¢æ•°åã®å¤‰æ›´[50/22]
 	
-beforeGPL
+â—ŽbeforeGPL
 	(09/3/29)
 
-GPL_Version1_00
+â—ŽGPL_Version1_00
 	(09/06/06)
-	ƒ\[ƒXEƒ}ƒjƒ…ƒAƒ‹‚ðAGPL€‹’‚Æ‚µ‚Ü‚·B
+	ã‚½ãƒ¼ã‚¹ãƒ»ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã‚’ã€GPLæº–æ‹ ã¨ã—ã¾ã™ã€‚
 
-beforeCKeyinputSenderToModalDlg_Modify
+â—ŽbeforeCKeyinputSenderToModalDlg_Modify
 	(09/06/07)
-	CKeyinputSenderToModalDlg‚ÌC³‚Ì‘O‚Å‚·B
+	CKeyinputSenderToModalDlgã®ä¿®æ­£ã®å‰ã§ã™ã€‚
 
 
-CKeyinputSenderToModalDlg_Modify
+â—ŽCKeyinputSenderToModalDlg_Modify
 	(09/06/07)
-	CKeyinputSenderToModalDlg‚ðˆê•”C³‚µ‚Ü‚µ‚½B
-	OnKeyUp(),OnKeyDown()‚ÍA–ß‚è’l‚ðbool
-	{true=ƒƒbƒZ[ƒW‚ð“]‘—‚µ‚½}‚É•ÏX‚µ‚Ü‚µ‚½B
+	CKeyinputSenderToModalDlgã‚’ä¸€éƒ¨ä¿®æ­£ã—ã¾ã—ãŸã€‚
+	OnKeyUp(),OnKeyDown()ã¯ã€æˆ»ã‚Šå€¤ã‚’bool
+	{true=ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è»¢é€ã—ãŸ}ã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
 	
-Homepage_install_modify
+â—ŽHomepage_install_modify
 	(09/06/17)
-	Homepage‚ÌInstallƒy[ƒW‚ðC³‚µ‚Ü‚µ‚½B
-	Windows98EWindowsMe ‚Å‚Í“®ì‚µ‚È‚¢‚±‚Æ‚ð’Ç‹L
+	Homepageã®Installãƒšãƒ¼ã‚¸ã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
+	Windows98ãƒ»WindowsMe ã§ã¯å‹•ä½œã—ãªã„ã“ã¨ã‚’è¿½è¨˜
 	
 	
-CKeyinputSenderToModalDlg2
+â—ŽCKeyinputSenderToModalDlg2
 	(09/07/11)
-	CKeyinputSenderToModalDlg2 ƒNƒ‰ƒX‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	Žž•\ƒrƒ…[‚Å‚ÌCWndDcdGridJikokuhyouState_Ressyahensyu
-	‚Ì“ü—Í‚ÍACKeyinputSenderToModalDlg2 ƒNƒ‰ƒX‚ð
-	—˜—p‚·‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
-	CDiagramEditDoc‚Å‚ÍA[–¼‘O‚ð•t‚¯‚Ä•Û‘¶]‚ðíŽž—LŒø‚É‚µ‚Ü‚µ‚½B
+	CKeyinputSenderToModalDlg2 ã‚¯ãƒ©ã‚¹ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã®CWndDcdGridJikokuhyouState_Ressyahensyu
+	ã®å…¥åŠ›ã¯ã€CKeyinputSenderToModalDlg2 ã‚¯ãƒ©ã‚¹ã‚’
+	åˆ©ç”¨ã™ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
+	CDiagramEditDocã§ã¯ã€[åå‰ã‚’ä»˜ã‘ã¦ä¿å­˜]ã‚’å¸¸æ™‚æœ‰åŠ¹ã«ã—ã¾ã—ãŸã€‚
 	
-Version1_00
+â—ŽVersion1_00
 	 (2009/07/12)
-	OuDia_Ver.1.00‚ðŒöŠJ‚µ‚Ü‚µ‚½B
+	OuDia_Ver.1.00ã‚’å…¬é–‹ã—ã¾ã—ãŸã€‚
 	[Release]Version=1.00@nifty
-	OuDia‚Ìƒz[ƒ€ƒy[ƒW:accesscount:79355
-	OuDiaVer0.06ƒ_ƒEƒ“ƒ[ƒh:5092
+	OuDiaã®ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸:accesscount:79355
+	OuDiaVer0.06ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰:5092
 
 	
-Version1_00_url
+â—ŽVersion1_00_url
 	 (2009/07/12)
-	oudia.msi,oudia_src.zip‚ÌURL‚ð•ÏX‚µ‚Ü‚µ‚½B
-	]—ˆ‚ÌURL‚ÍƒŠƒ“ƒNØ‚ê‚É‚È‚è‚Ü‚·B
+	oudia.msi,oudia_src.zipã®URLã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
+	å¾“æ¥ã®URLã¯ãƒªãƒ³ã‚¯åˆ‡ã‚Œã«ãªã‚Šã¾ã™ã€‚
 	
 
-D090906_RessyasyubetsuNo
+â—ŽD090906_RessyasyubetsuNo
   (2009/07/26)
-	::HtmlHelp()‚Ì‘æˆêˆø”‚ðADesktopWindow‚©‚çNULL‚É•ÏX
-	OuDiaƒCƒ“ƒXƒg[ƒ‹ƒKƒCƒh ‚Ìà–¾‚ð•ÏX(ƒ\[ƒXƒtƒ@ƒCƒ‹‚É‚Â‚¢‚Äy’ˆÓz‚ð’Ç‰Á)B
-	—˜—p‹–‘øŒ_–ñ‚ÉA–³•ÛØð€‚ð’Ç‹LB
+	::HtmlHelp()ã®ç¬¬ä¸€å¼•æ•°ã‚’ã€DesktopWindowã‹ã‚‰NULLã«å¤‰æ›´
+	OuDiaã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã‚¬ã‚¤ãƒ‰ ã®èª¬æ˜Žã‚’å¤‰æ›´(ã‚½ãƒ¼ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¤ã„ã¦ã€æ³¨æ„ã€‘ã‚’è¿½åŠ )ã€‚
+	åˆ©ç”¨è¨±è«¾å¥‘ç´„ã«ã€ç„¡ä¿è¨¼æ¡é …ã‚’è¿½è¨˜ã€‚
   (2009/09/06)
-	1.@w—ñŽÔ‚ÌƒvƒƒpƒeƒBxƒ_ƒCƒAƒƒO‚Ìw—ñŽÔŽí•Êx‚Ìƒhƒƒbƒvƒ_ƒEƒ“ƒŠƒXƒg‚Ì€–Ú‚Ìæ“ª10ŒÂ‚ÉA"0. " ` "9. " ‚Ü‚Å‚Ì”Žš‚ð’Ç‰Á(—á:@"•’Ê"¨"0. •’Ê" )B 
-	2.@w—ñŽÔŽí•Êƒrƒ…[x‚Ì¶’[‚É”Ô†—ñ‚ð’Ç‰Á‚µAæ“ª10ŒÂ‚Ì—v‘f‚Å‚Í "0"`"9" ‚ð•\Ž¦B11ŒÂ–ÚˆÈ~‚Í‹ó—“‚Æ‚·‚éB
-	3.@—ñŽÔŽí•Ê‚ª1‚Â‚Ìê‡‚ÍA‚»‚Ì—ñŽÔŽí•Ê‚ðíœ‚Å‚«‚È‚¢‚æ‚¤‚ÉC³B
-	@(—ñŽÔŽí•Ê‚ð‘S‚Äíœ‚·‚é‚ÆƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒGƒ‰[‚É‚È‚é•s‹ï‡‚ðC³)
+	1.ã€€ã€Žåˆ—è»Šã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã€ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã®ã€Žåˆ—è»Šç¨®åˆ¥ã€ã®ãƒ‰ãƒ­ãƒƒãƒ—ãƒ€ã‚¦ãƒ³ãƒªã‚¹ãƒˆã®é …ç›®ã®å…ˆé ­10å€‹ã«ã€"0. " ã€œ "9. " ã¾ã§ã®æ•°å­—ã‚’è¿½åŠ (ä¾‹:ã€€"æ™®é€š"â†’"0. æ™®é€š" )ã€‚ 
+	2.ã€€ã€Žåˆ—è»Šç¨®åˆ¥ãƒ“ãƒ¥ãƒ¼ã€ã®å·¦ç«¯ã«ç•ªå·åˆ—ã‚’è¿½åŠ ã—ã€å…ˆé ­10å€‹ã®è¦ç´ ã§ã¯ "0"ã€œ"9" ã‚’è¡¨ç¤ºã€‚11å€‹ç›®ä»¥é™ã¯ç©ºæ¬„ã¨ã™ã‚‹ã€‚
+	3.ã€€åˆ—è»Šç¨®åˆ¥ãŒ1ã¤ã®å ´åˆã¯ã€ãã®åˆ—è»Šç¨®åˆ¥ã‚’å‰Šé™¤ã§ããªã„ã‚ˆã†ã«ä¿®æ­£ã€‚
+	ã€€(åˆ—è»Šç¨®åˆ¥ã‚’å…¨ã¦å‰Šé™¤ã™ã‚‹ã¨ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ä¸å…·åˆã‚’ä¿®æ­£)
 
-D090912_TestPrjModify
+â—ŽD090912_TestPrjModify
 	src\DiagramEdit\DiagramEdit\entDed\entDedTest
 	src\DiagramEdit\DiagramEdit\DedRosenFileData\DedRosenFileDataTest
-	ƒeƒXƒgƒR[ƒh“à‚Ö‚Ìƒf[ƒ^‚Ìƒn[ƒhƒR[ƒh‚ð‚â‚ß‚Ü‚µ‚½B
-	ƒtƒ@ƒCƒ‹‚©‚çƒf[ƒ^‚ð“Ç‚Ýž‚ÝAƒtƒ@ƒCƒ‹“¯Žm‚ð”äŠr‚·‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+	ãƒ†ã‚¹ãƒˆã‚³ãƒ¼ãƒ‰å†…ã¸ã®ãƒ‡ãƒ¼ã‚¿ã®ãƒãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰ã‚’ã‚„ã‚ã¾ã—ãŸã€‚
+	ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ãƒ‡ãƒ¼ã‚¿ã‚’èª­ã¿è¾¼ã¿ã€ãƒ•ã‚¡ã‚¤ãƒ«åŒå£«ã‚’æ¯”è¼ƒã™ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 
-D0909121_CentDedRessyaCont_sort2
-	Žž•\ƒrƒ…[‚Ìw•À‚×‘Ö‚¦x‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚ð•ÏX‚µ‚Ü‚µ‚½B
-	@]—ˆ‚ÍAA‰w”­Žž‚Åw•À‚×‘Ö‚¦x‚ðs‚Á‚½ê‡AA‰w‚Ç‚Ü‚è‚Ì—ñŽÔ‚Í•À‚×‘Ö‚¦‚Ì‘ÎÛ‚©‚ç‚ÍœŠO‚µ‚Ä‚¢‚Ü‚µ‚½B
-	@¡‰ñ‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚ÍAA‰w”­Žž‚Åw•À‚×‘Ö‚¦x‚ðs‚Á‚½ê‡AA‰w‚Ç‚Ü‚è‚Ì—ñŽÔ‚à•À‚×‘Ö‚¦‚Ì‘ÎÛ‚ÉŠÜ‚ß‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+â—ŽD0909121_CentDedRessyaCont_sort2
+	æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ã€Žä¸¦ã¹æ›¿ãˆã€ã®ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
+	ã€€å¾“æ¥ã¯ã€Aé§…ç™ºæ™‚åˆ»ã§ã€Žä¸¦ã¹æ›¿ãˆã€ã‚’è¡Œã£ãŸå ´åˆã€Aé§…ã©ã¾ã‚Šã®åˆ—è»Šã¯ä¸¦ã¹æ›¿ãˆã®å¯¾è±¡ã‹ã‚‰ã¯é™¤å¤–ã—ã¦ã„ã¾ã—ãŸã€‚
+	ã€€ä»Šå›žã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯ã€Aé§…ç™ºæ™‚åˆ»ã§ã€Žä¸¦ã¹æ›¿ãˆã€ã‚’è¡Œã£ãŸå ´åˆã€Aé§…ã©ã¾ã‚Šã®åˆ—è»Šã‚‚ä¸¦ã¹æ›¿ãˆã®å¯¾è±¡ã«å«ã‚ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 
-D090920_CentDedRosen_add 
-	 [09/08/29]ƒ25.4„˜Hüƒtƒ@ƒCƒ‹‚ð’Ç‰ÁE˜Hüƒtƒ@ƒCƒ‹‚ð•ª—£[09/09/13,20]
+â—ŽD090920_CentDedRosen_add 
+	â–¡[09/08/29]ï¼œ25.4ï¼žè·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¿½åŠ ãƒ»è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã‚’åˆ†é›¢[09/09/13,20]
 
-D090920_CentDedRessyaCont_direct
-	¡[09/08/29]ƒ25.5„I’…—ñŽÔ‚ÆŽn”­—ñŽÔ‚ðŒ‹‡(’¼’Ê‰»E•ª—£)[09/09/19,20]
+â—ŽD090920_CentDedRessyaCont_direct
+	â– [09/08/29]ï¼œ25.5ï¼žçµ‚ç€åˆ—è»Šã¨å§‹ç™ºåˆ—è»Šã‚’çµåˆ(ç›´é€šåŒ–ãƒ»åˆ†é›¢)[09/09/19,20]
 
-D091011_jr_iida_2009_10_rev02
+â—ŽD091011_jr_iida_2009_10_rev02
 	data\jr_iida_2009_03\jr_iida_2009_10.oud
-	Rev.02‚É•ÏX‚µ‚Ü‚µ‚½B
-	ƒz[ƒ€ƒy[ƒW‚ðXV‚µ‚Ü‚µ‚½B
+	Rev.02ã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
+	ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã‚’æ›´æ–°ã—ã¾ã—ãŸã€‚
 
-D091101_CentDedRosen_insert
+â—ŽD091101_CentDedRosen_insert
 	(09/09/20)
-	ˆÈ‰º‚Ì‚Ì‹@”\‚ÉŠÖ‚·‚éƒŠƒ\[ƒX(ƒXƒe[ƒ^ƒXƒo[ƒvƒƒ“ƒvƒgjEƒ}ƒjƒ…ƒAƒ‹‚ðŒ©’¼‚µ
-	6.@Žž•\ƒrƒ…[‚ÉAƒƒjƒ…[ƒRƒ}ƒ“ƒh [‰wŽž]-[’Ê‰ß-’âŽÔ] ‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	7.@ƒƒjƒ…[ƒRƒ}ƒ“ƒh [‰wŽž]-[’¼’Ê‰»]E[‰wŽž]-[•ª’f] ‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+	ä»¥ä¸‹ã®ã®æ©Ÿèƒ½ã«é–¢ã™ã‚‹ãƒªã‚½ãƒ¼ã‚¹(ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆï¼‰ãƒ»ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã‚’è¦‹ç›´ã—
+	6.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã«ã€ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ [é§…æ™‚åˆ»]-[é€šéŽ-åœè»Š] ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	7.ã€€ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ [é§…æ™‚åˆ»]-[ç›´é€šåŒ–]ãƒ»[é§…æ™‚åˆ»]-[åˆ†æ–­] ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 	(09/11/01)
-	ƒƒjƒ…[[ƒtƒ@ƒCƒ‹]-[˜Hüƒtƒ@ƒCƒ‹‚Ì‘g“ü‚ê/Ø‚èo‚µ]-[˜Hüƒtƒ@ƒCƒ‹‚Ì‘g“ü‚ê]
-	‚Ìƒƒjƒ…[ƒRƒ}ƒ“ƒh‚ðŽÀ‘•‚µ‚Ü‚µ‚½B
-	ƒƒjƒ…[[ƒtƒ@ƒCƒ‹]-[˜Hüƒtƒ@ƒCƒ‹‚Ì‘g“ü‚ê/Ø‚èo‚µ]‚Æ
-	ƒƒjƒ…[[ƒtƒ@ƒCƒ‹]-[Žž•\CSVƒtƒ@ƒCƒ‹]‚Ì
-	ƒƒjƒ…[ŠK‘w‚ð•ÏX‚µ‚Ü‚µ‚½B
-	[˜Hüƒtƒ@ƒCƒ‹‚ÌØ‚èo‚µ]E[˜Hüƒtƒ@ƒCƒ‹‚Ì‘g“ü‚ê]E[Žž•\CSVƒtƒ@ƒCƒ‹]‚Ì
-	ƒ}ƒjƒ…ƒAƒ‹‚ð•ÏX
+	ãƒ¡ãƒ‹ãƒ¥ãƒ¼[ãƒ•ã‚¡ã‚¤ãƒ«]-[è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®çµ„å…¥ã‚Œ/åˆ‡ã‚Šå‡ºã—]-[è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®çµ„å…¥ã‚Œ]
+	ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ã‚’å®Ÿè£…ã—ã¾ã—ãŸã€‚
+	ãƒ¡ãƒ‹ãƒ¥ãƒ¼[ãƒ•ã‚¡ã‚¤ãƒ«]-[è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®çµ„å…¥ã‚Œ/åˆ‡ã‚Šå‡ºã—]ã¨
+	ãƒ¡ãƒ‹ãƒ¥ãƒ¼[ãƒ•ã‚¡ã‚¤ãƒ«]-[æ™‚åˆ»è¡¨CSVãƒ•ã‚¡ã‚¤ãƒ«]ã®
+	ãƒ¡ãƒ‹ãƒ¥ãƒ¼éšŽå±¤ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
+	[è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®åˆ‡ã‚Šå‡ºã—]ãƒ»[è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®çµ„å…¥ã‚Œ]ãƒ»[æ™‚åˆ»è¡¨CSVãƒ•ã‚¡ã‚¤ãƒ«]ã®
+	ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã‚’å¤‰æ›´
 	
-D091114_erase_using_from_h
-	ECentDedDgrRessya::getDgrXPosOfEkiOrder()‚ÌŽÀ‘•‚ðCentDedDgrDia::getDgrXPosOfJikokuOrder()‚ÉˆÚ“®‚µ‚Ü‚µ‚½B
-	ECdDedJikoku::CConv‚ÉAuCdDedJikoku::CConv::ESecond_NotIfZerov‚ð’Ç‰ÁB
-	ECDlgEkijikokuProp‚É‚æ‚éA•b’PˆÊ‚ÌŽæ“¾EÝ’è‚ª‚Å‚«‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
-	ECentDedDgrDiaTest‚ÌƒeƒXƒgƒf[ƒ^‚ÌƒfƒBƒŒƒNƒgƒŠ\¬‚ð•ÏX
-	ECDedRessyaContTransferSort(–¢Š®¬)‚ð’Ç‰Á
-	E‚·‚×‚Ä‚Ì.hƒtƒ@ƒCƒ‹‚©‚çAusing namespace‚ðœ‹Ž
+â—ŽD091114_erase_using_from_h
+	ãƒ»CentDedDgrRessya::getDgrXPosOfEkiOrder()ã®å®Ÿè£…ã‚’CentDedDgrDia::getDgrXPosOfJikokuOrder()ã«ç§»å‹•ã—ã¾ã—ãŸã€‚
+	ãƒ»CdDedJikoku::CConvã«ã€ã€ŒCdDedJikoku::CConv::ESecond_NotIfZeroã€ã‚’è¿½åŠ ã€‚
+	ãƒ»CDlgEkijikokuPropã«ã‚ˆã‚‹ã€ç§’å˜ä½ã®å–å¾—ãƒ»è¨­å®šãŒã§ãã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
+	ãƒ»CentDedDgrDiaTestã®ãƒ†ã‚¹ãƒˆãƒ‡ãƒ¼ã‚¿ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªæ§‹æˆã‚’å¤‰æ›´
+	ãƒ»CDedRessyaContTransferSort(æœªå®Œæˆ)ã‚’è¿½åŠ 
+	ãƒ»ã™ã¹ã¦ã®.hãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ã€using namespaceã‚’é™¤åŽ»
 	
 	
-D091122_CDedRessyaContTransferSort
-	æŒpƒ\[ƒg‚ª‚Å‚«‚Ü‚µ‚½B
-	 ƒ25.7.2.2„UI[09/11/22]
-	 ƒ25.7.3„ƒ}ƒjƒ…ƒAƒ‹‚ÌXV[09/11/22]
-	ƒ\[ƒXŒöŠJ—pƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ð•ÏX‚µACVS‚©‚çƒ`ƒFƒbƒNƒAƒEƒg‚·‚é‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
+â—ŽD091122_CDedRessyaContTransferSort
+	ä¹—ç¶™ã‚½ãƒ¼ãƒˆãŒã§ãã¾ã—ãŸã€‚
+	â–¡ï¼œ25.7.2.2ï¼žUI[09/11/22]
+	â–¡ï¼œ25.7.3ï¼žãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã®æ›´æ–°[09/11/22]
+	ã‚½ãƒ¼ã‚¹å…¬é–‹ç”¨ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã‚’å¤‰æ›´ã—ã€CVSã‹ã‚‰ãƒã‚§ãƒƒã‚¯ã‚¢ã‚¦ãƒˆã™ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
 	src\DiagramEdit\makeGplSrc\makeGplSrc.bat
 	src\DiagramEdit\makeGplSrc\oudia_export.bat
 
-D0911221_OuDia_1_00_01_Release
-	OuDia.1.00.01‚ð@homepage‚ÅŒöŠJ
+â—ŽD0911221_OuDia_1_00_01_Release
+	OuDia.1.00.01ã‚’@homepageã§å…¬é–‹
 	
-D091205_CMuiCopied
-	CentDedRessyaCont“™‚ÌŠî–{ƒNƒ‰ƒX‚ðCMuiCopied‚É’u‚«Š·‚¦‚Ü‚µ‚½B
-	CMup_deque,CMup_vector‚ðACaMup_vector‚Ì”h¶ƒNƒ‰ƒX‚©‚ç‰ðœ‚µ‚Ü‚µ‚½B
+â—ŽD091205_CMuiCopied
+	CentDedRessyaContç­‰ã®åŸºæœ¬ã‚¯ãƒ©ã‚¹ã‚’CMuiCopiedã«ç½®ãæ›ãˆã¾ã—ãŸã€‚
+	CMup_deque,CMup_vectorã‚’ã€CaMup_vectorã®æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã‹ã‚‰è§£é™¤ã—ã¾ã—ãŸã€‚
 
-D091206_HomepageUpdate
-	ƒŠƒ“ƒNW‚É ‚­‚à‚ä‚ÉŽÊ^H–[ ‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+â—ŽD091206_HomepageUpdate
+	ãƒªãƒ³ã‚¯é›†ã« ãã‚‚ã‚†ã«å†™çœŸå·¥æˆ¿ ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 
-D091228_HomepageUpdate
-	ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ÉAJR‚ŽR–{ü 2009”N12ŒŽ ‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	ƒf[ƒ^ƒtƒ@ƒCƒ‹‚Ìƒtƒ@ƒCƒ‹–¼‚ðŒ©’¼‚µ
+â—ŽD091228_HomepageUpdate
+	ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã«ã€JRé«˜å±±æœ¬ç·š 2009å¹´12æœˆ ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ•ã‚¡ã‚¤ãƒ«åã‚’è¦‹ç›´ã—
 
-D091231_Bugfix_OnUpdate
-	yƒoƒOC³z
-	uƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ðŠJ‚­¨‰w‚ð’Ç‰Á¨‚»‚Ì‰w‚É‰^s‚·‚é—ñŽÔ‚ð’Ç‰Áv
-	‚ðs‚¤‚ÆƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒGƒ‰[‚É‚È‚éŒ»Û‚ðC³B
+â—ŽD091231_Bugfix_OnUpdate
+	ã€ãƒã‚°ä¿®æ­£ã€‘
+	ã€Œãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã‚’é–‹ãâ†’é§…ã‚’è¿½åŠ â†’ãã®é§…ã«é‹è¡Œã™ã‚‹åˆ—è»Šã‚’è¿½åŠ ã€
+	ã‚’è¡Œã†ã¨ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ç¾è±¡ã‚’ä¿®æ­£ã€‚
 	CDedDiagramView::OnUpdate()
-	ˆÈ‰º‚ÌŽè‡‚Å‘€ì‚µ‚½ê‡‚ÉƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒGƒ‰[‚É‚È‚é•s‹ï‡‚ðC³‚µ‚Ü‚µ‚½B
-	(1)ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ðŠJ‚¢‚½ó‘Ô‚É‚·‚é
-	(2)‰w‚ð’Ç‰Á
-		( m_bUpdate_All_Requested =true ‚Æ‚È‚è‚Ü‚·‚ªA
-		ƒrƒ…[‚ªƒAƒNƒeƒBƒu‚Å‚È‚¢‚½‚ßA
-		CentDedDgrDia::m_CentDedDgrEkiCont ‚Ì
-		XV‚ªs‚í‚ê‚Ü‚¹‚ñB)
-	(3)‚»‚Ì‰w‚É‰^s‚·‚é—ñŽÔ‚ð“ü—Í‚·‚é
-		(•ÒWƒRƒ}ƒ“ƒh‚Í CDedRosenFileData_CEditCmd_Ressya 
-		‚È‚Ì‚ÅA—ñŽÔ‚ÌXV‚ªs‚í‚ê‚Ü‚·B
-		‚µ‚©‚µACentDedDgrDia::m_CentDedDgrEkiCont ‚ª
-		XV‚³‚ê‚Ä‚¢‚È‚¢‚½‚ßAƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒGƒ‰[‚É‚È‚è‚Ü‚·B)
+	ä»¥ä¸‹ã®æ‰‹é †ã§æ“ä½œã—ãŸå ´åˆã«ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ä¸å…·åˆã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
+	(1)ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã‚’é–‹ã„ãŸçŠ¶æ…‹ã«ã™ã‚‹
+	(2)é§…ã‚’è¿½åŠ 
+		( m_bUpdate_All_Requested =true ã¨ãªã‚Šã¾ã™ãŒã€
+		ãƒ“ãƒ¥ãƒ¼ãŒã‚¢ã‚¯ãƒ†ã‚£ãƒ–ã§ãªã„ãŸã‚ã€
+		CentDedDgrDia::m_CentDedDgrEkiCont ã®
+		æ›´æ–°ãŒè¡Œã‚ã‚Œã¾ã›ã‚“ã€‚)
+	(3)ãã®é§…ã«é‹è¡Œã™ã‚‹åˆ—è»Šã‚’å…¥åŠ›ã™ã‚‹
+		(ç·¨é›†ã‚³ãƒžãƒ³ãƒ‰ã¯ CDedRosenFileData_CEditCmd_Ressya 
+		ãªã®ã§ã€åˆ—è»Šã®æ›´æ–°ãŒè¡Œã‚ã‚Œã¾ã™ã€‚
+		ã—ã‹ã—ã€CentDedDgrDia::m_CentDedDgrEkiCont ãŒ
+		æ›´æ–°ã•ã‚Œã¦ã„ãªã„ãŸã‚ã€ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ã«ãªã‚Šã¾ã™ã€‚)
 		
-D100109_DiagramEdit_OuDia_Ver1_00_02
-	OuDia–{‘Ì‚ÌVer1.00.02‚ÌŒöŠJ—pƒtƒ@ƒCƒ‹ì¬
-D100109_Homepage_OuDia_Ver1_00_02
-	OuDia–{‘Ì‚ÌVer1.00.02‚ðŒöŠJ‚µ‚Ü‚µ‚½B
-	ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ÉAhankyu_kyoto_0912.oud‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
+â—ŽD100109_DiagramEdit_OuDia_Ver1_00_02
+	OuDiaæœ¬ä½“ã®Ver1.00.02ã®å…¬é–‹ç”¨ãƒ•ã‚¡ã‚¤ãƒ«ä½œæˆ
+â—ŽD100109_Homepage_OuDia_Ver1_00_02
+	OuDiaæœ¬ä½“ã®Ver1.00.02ã‚’å…¬é–‹ã—ã¾ã—ãŸã€‚
+	ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã«ã€hankyu_kyoto_0912.oudã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
 	
-D100123_Homepage_Ooyuudaiya
-	ƒgƒbƒvƒy[ƒW‚ÉAOuDia‚Ì“Ç‚Ý•ûu‚¨‚¨‚ä‚¤‚¾‚¢‚âv‚ð’Ç‹L‚µ‚Ü‚µ‚½B
+â—ŽD100123_Homepage_Ooyuudaiya
+	ãƒˆãƒƒãƒ—ãƒšãƒ¼ã‚¸ã«ã€OuDiaã®èª­ã¿æ–¹ã€ŒãŠãŠã‚†ã†ã ã„ã‚„ã€ã‚’è¿½è¨˜ã—ã¾ã—ãŸã€‚
 	
-D100123_DiagramEdit_CDedRessyaContSoater
-	ƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒO
-	‚·‚×‚Ä‚Ì•À‚×‘Ö‚¦ƒNƒ‰ƒX‚ðACDedRessyaContSoater‚Ì”h¶ƒNƒ‰ƒX‚Æ‚µ‚Ü‚µ‚½B
+â—ŽD100123_DiagramEdit_CDedRessyaContSoater
+	ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°
+	ã™ã¹ã¦ã®ä¸¦ã¹æ›¿ãˆã‚¯ãƒ©ã‚¹ã‚’ã€CDedRessyaContSoaterã®æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã¨ã—ã¾ã—ãŸã€‚
 	src\diagramedit\DiagramEdit
-	‚ÉACDedRessyaContTransferSortECDedRessyaContSoater_RessyasyubetsuE
+	ã«ã€CDedRessyaContTransferSortãƒ»CDedRessyaContSoater_Ressyasyubetsuãƒ»
 	CDedRessyaContSoater_Ekijikoku2
-	‚ð“±“ü‚µ‚Ü‚µ‚½B
+	ã‚’å°Žå…¥ã—ã¾ã—ãŸã€‚
 
-D100123_DiagramEdit_Branch_OuDia
-	OuDia‚Ìƒrƒ‹ƒhŽž‚Ìƒ‰ƒCƒuƒ‰ƒŠLib‚ðABranch_OuDia‚É‘Î‰ž‚³‚¹‚Ü‚µ‚½B
+â—ŽD100123_DiagramEdit_Branch_OuDia
+	OuDiaã®ãƒ“ãƒ«ãƒ‰æ™‚ã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªLibã‚’ã€Branch_OuDiaã«å¯¾å¿œã•ã›ã¾ã—ãŸã€‚
 
-D100313_DiagramEdit_beforeCWndDcdGrid2
-	CWndDcdGrid2‚ð“±“ü‚·‚é’¼‘O‚Å‚·B
+â—ŽD100313_DiagramEdit_beforeCWndDcdGrid2
+	CWndDcdGrid2ã‚’å°Žå…¥ã™ã‚‹ç›´å‰ã§ã™ã€‚
 	
-D100313_DiagramEdit_CWndDcdGrid2
-	CWndDcdGrid2‚ð“±“ü‚µ‚Ü‚µ‚½B
+â—ŽD100313_DiagramEdit_CWndDcdGrid2
+	CWndDcdGrid2ã‚’å°Žå…¥ã—ã¾ã—ãŸã€‚
 	
-D100314_DiagramEdit_CDedRessyaContSoater_Ekiatsukai
-	CDedRessyaContSoater_Ekiatsukai‚ÆCDedRessyaContSoater_TransferSort‚ð
-	‘I‘ð‚Å‚«‚é‚æ‚¤‚É‚µ‚Ü‚µ‚½B
+â—ŽD100314_DiagramEdit_CDedRessyaContSoater_Ekiatsukai
+	CDedRessyaContSoater_Ekiatsukaiã¨CDedRessyaContSoater_TransferSortã‚’
+	é¸æŠžã§ãã‚‹ã‚ˆã†ã«ã—ã¾ã—ãŸã€‚
 	
-D100327_DiagramEdit_CDedRessyaContSoater_Ekiatsukai_manual
+â—ŽD100327_DiagramEdit_CDedRessyaContSoater_Ekiatsukai_manual
 	CWndDcdGrid2::m_bLButtonIsDown
-	‚ð“±“ü‚µ‚Ü‚µ‚½B
-	ƒEƒCƒ“ƒhƒE‚ªƒtƒH[ƒJƒX‚ð“¾‚½Žž“_‚ÅŠù‚É¶ƒ{ƒ^ƒ“‚ª‰Ÿ‚µ‰º‚°‚ç‚ê‚Ä‚¢‚½ê‡‚ÍA
-	ƒtƒH[ƒJƒXƒZƒ‹‚ðƒ}ƒEƒX‚ÌˆÊ’u‚ÉˆÚ“®‚µ‚È‚¢‚æ‚¤‚É‚µ‚Ü‚µ‚½B
-	CWndDcdGridJikokuhyou‚ÅA‘I‘ðF‚ðÝ’è‚Å‚«‚é‚æ‚¤‚É‚µ‚Ü‚µ‚½B
-	CWndDcdGrid2‚É‚ ‚í‚¹‚Äƒ}ƒjƒ…ƒAƒ‹‚Ì‰æ‘œ‚ð·‚µ‘Ö‚¦‚Ü‚µ‚½B
-	Žž•\ƒrƒ…[‚Ìƒ\[ƒg‚ÌŽí—Þ‚ðAƒ}ƒjƒ…ƒAƒ‹‚É”½‰f‚µ‚Ü‚µ‚½B
+	ã‚’å°Žå…¥ã—ã¾ã—ãŸã€‚
+	ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ãŒãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚’å¾—ãŸæ™‚ç‚¹ã§æ—¢ã«å·¦ãƒœã‚¿ãƒ³ãŒæŠ¼ã—ä¸‹ã’ã‚‰ã‚Œã¦ã„ãŸå ´åˆã¯ã€
+	ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ã‚’ãƒžã‚¦ã‚¹ã®ä½ç½®ã«ç§»å‹•ã—ãªã„ã‚ˆã†ã«ã—ã¾ã—ãŸã€‚
+	CWndDcdGridJikokuhyouã§ã€é¸æŠžè‰²ã‚’è¨­å®šã§ãã‚‹ã‚ˆã†ã«ã—ã¾ã—ãŸã€‚
+	CWndDcdGrid2ã«ã‚ã‚ã›ã¦ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã®ç”»åƒã‚’å·®ã—æ›¿ãˆã¾ã—ãŸã€‚
+	æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ã‚½ãƒ¼ãƒˆã®ç¨®é¡žã‚’ã€ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã«åæ˜ ã—ã¾ã—ãŸã€‚
 
-D100424_DiagramEdit_CGdiHFontHolder
-	EIfDcdTarget‚ð•ÏX‚µACGdiHFontHolder‚É‘Î‰ž
-	Eƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÌƒvƒŒƒrƒ…[‰æ–Ê‚ÅA—ñŽÔî•ñ‚Ì
-	ƒtƒHƒ“ƒg‚Ì‘å‚«‚³‚ª³‚µ‚­‚È‚¢–â‘è‚ðC³
+â—ŽD100424_DiagramEdit_CGdiHFontHolder
+	ãƒ»IfDcdTargetã‚’å¤‰æ›´ã—ã€CGdiHFontHolderã«å¯¾å¿œ
+	ãƒ»ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã®ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼ç”»é¢ã§ã€åˆ—è»Šæƒ…å ±ã®
+	ãƒ•ã‚©ãƒ³ãƒˆã®å¤§ãã•ãŒæ­£ã—ããªã„å•é¡Œã‚’ä¿®æ­£
 
-D100425_DiagramEdit_beforeCentDedRosen_invert
-	E[‰w‚Ì”½“]]‹@”\“±“ü’¼‘O
+â—ŽD100425_DiagramEdit_beforeCentDedRosen_invert
+	ãƒ»[é§…ã®åè»¢]æ©Ÿèƒ½å°Žå…¥ç›´å‰
 
-D100425_DiagramEdit_CentDedRosen_invert
-	E[‰w‚Ì”½“]]‹@”\“±“ü
-	Eƒƒjƒ…[‚Ì”z’u•ÏX
-	3.@‰wƒrƒ…[‚ÉAƒƒjƒ…[ƒRƒ}ƒ“ƒh [‰w‚Ì”½“]] ‚ð’Ç‰ÁB
-	4.@ˆê•”‚Ìƒƒjƒ…[‚Ì”z’u‚ð•ÏX‚µ‚Ü‚µ‚½B
-	4.1.@‰wƒrƒ…[‚Ì[‰w]ƒƒjƒ…[‚ð”pŽ~‚µA[•ÒW]ƒƒjƒ…[‚É“‡‚µ‚Ü‚µ‚½B
-	4.2.@—ñŽÔŽí•Êƒrƒ…[‚Ì[—ñŽÔŽí•Ê]ƒƒjƒ…[‚ð”pŽ~‚µA[•ÒW]ƒƒjƒ…[‚É“‡‚µ‚Ü‚µ‚½B
-	4.3.@ƒƒjƒ…[ [ƒtƒ@ƒCƒ‹]-[˜Hüƒtƒ@ƒCƒ‹‚Ì‘g“ü‚ê/Ø‚èo‚µ] ‚ÍA]—ˆ‚ÍíŽž•\Ž¦‚³‚ê‚Ä‚¢‚Ü‚µ‚½‚ªA‚±‚ê‚ð[‰wƒrƒ…[]•\Ž¦’†‚Ì‚Ý‚Ì•\Ž¦‚É•ÏX‚µ‚Ü‚µ‚½B
+â—ŽD100425_DiagramEdit_CentDedRosen_invert
+	ãƒ»[é§…ã®åè»¢]æ©Ÿèƒ½å°Žå…¥
+	ãƒ»ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®é…ç½®å¤‰æ›´
+	3.ã€€é§…ãƒ“ãƒ¥ãƒ¼ã«ã€ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰ [é§…ã®åè»¢] ã‚’è¿½åŠ ã€‚
+	4.ã€€ä¸€éƒ¨ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®é…ç½®ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚
+	4.1.ã€€é§…ãƒ“ãƒ¥ãƒ¼ã®[é§…]ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’å»ƒæ­¢ã—ã€[ç·¨é›†]ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«çµ±åˆã—ã¾ã—ãŸã€‚
+	4.2.ã€€åˆ—è»Šç¨®åˆ¥ãƒ“ãƒ¥ãƒ¼ã®[åˆ—è»Šç¨®åˆ¥]ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’å»ƒæ­¢ã—ã€[ç·¨é›†]ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«çµ±åˆã—ã¾ã—ãŸã€‚
+	4.3.ã€€ãƒ¡ãƒ‹ãƒ¥ãƒ¼ [ãƒ•ã‚¡ã‚¤ãƒ«]-[è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®çµ„å…¥ã‚Œ/åˆ‡ã‚Šå‡ºã—] ã¯ã€å¾“æ¥ã¯å¸¸æ™‚è¡¨ç¤ºã•ã‚Œã¦ã„ã¾ã—ãŸãŒã€ã“ã‚Œã‚’[é§…ãƒ“ãƒ¥ãƒ¼]è¡¨ç¤ºä¸­ã®ã¿ã®è¡¨ç¤ºã«å¤‰æ›´ã—ã¾ã—ãŸã€‚
 	
 	
-D100430_DiagramEdit_CDlgEkijikokuProp_NOMODIFYOPTION	
-	¡ƒ27.5„[10/04/30]‰wŽž‚Ì•ÏX‹@”\‚ª³‚µ‚­“®ì‚µ‚È‚­‚È‚Á‚Ä‚¢‚½•s‹ï‡‚ðC³[10/04/30_03:02]
-	¡ƒ27.6„[10/04/30]Žž•\ƒrƒ…[‚Å‚Ì‰wŽž‚ÌŒJã‚°EŒJ‰º‚°‚ÌØ‚è‘Ö‚¦[10/04/30,]
-	¡ƒ27.6.1„ƒ\ƒtƒg[10/04/30_03:02`05:00]
-	¡ƒ27.6.2„ƒ}ƒjƒ…ƒAƒ‹[10/04/30_08:30`10:45]
+â—ŽD100430_DiagramEdit_CDlgEkijikokuProp_NOMODIFYOPTION	
+	â– ï¼œ27.5ï¼ž[10/04/30]é§…æ™‚åˆ»ã®å¤‰æ›´æ©Ÿèƒ½ãŒæ­£ã—ãå‹•ä½œã—ãªããªã£ã¦ã„ãŸä¸å…·åˆã‚’ä¿®æ­£[10/04/30_03:02]
+	â– ï¼œ27.6ï¼ž[10/04/30]æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã®é§…æ™‚åˆ»ã®ç¹°ä¸Šã’ãƒ»ç¹°ä¸‹ã’ã®åˆ‡ã‚Šæ›¿ãˆ[10/04/30,]
+	â– ï¼œ27.6.1ï¼žã‚½ãƒ•ãƒˆ[10/04/30_03:02ã€œ05:00]
+	â– ï¼œ27.6.2ï¼žãƒžãƒ‹ãƒ¥ã‚¢ãƒ«[10/04/30_08:30ã€œ10:45]
 
 
-D100430_DiagramEdit_CDedRessyaContSoater_Bikou
-	 ƒ27.7„[10/04/30]”õl‚Å‚Ì•À‚×‘Ö‚¦‚ð’Ç‰Á[10/04/30,]
-	¡ƒ27.7.1„ƒGƒ“ƒeƒBƒeƒBƒNƒ‰ƒXƒR[ƒfƒBƒ“ƒO.ƒeƒXƒg[10/04/30_17:30`19:15]
-	¡ƒ27.7.2„UIƒR[ƒfƒBƒ“ƒO.ƒeƒXƒg[10/04/30_19:15`19:32]
-	¡ƒ27.7.3„ƒ}ƒjƒ…ƒAƒ‹[10/04/30_19:32`19:55]
+â—ŽD100430_DiagramEdit_CDedRessyaContSoater_Bikou
+	â–¡ï¼œ27.7ï¼ž[10/04/30]å‚™è€ƒã§ã®ä¸¦ã¹æ›¿ãˆã‚’è¿½åŠ [10/04/30,]
+	â– ï¼œ27.7.1ï¼žã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã‚¯ãƒ©ã‚¹ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°.ãƒ†ã‚¹ãƒˆ[10/04/30_17:30ã€œ19:15]
+	â– ï¼œ27.7.2ï¼žUIã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°.ãƒ†ã‚¹ãƒˆ[10/04/30_19:15ã€œ19:32]
+	â– ï¼œ27.7.3ï¼žãƒžãƒ‹ãƒ¥ã‚¢ãƒ«[10/04/30_19:32ã€œ19:55]
 
-D100501_Homepage_OuDia_Ver1_00_03
-	¡ƒ27.8„ƒŠƒŠ[ƒX
+â—ŽD100501_Homepage_OuDia_Ver1_00_03
+	â– ï¼œ27.8ï¼žãƒªãƒªãƒ¼ã‚¹
 
-D100522_CDedRessyaContTransferSort
-	uƒAƒ“ƒJ[ƒZƒ‹‚ªNULL‚Ìê‡‚ÍA‘I‘ðƒZƒ‹‚È‚µv‚Ì§–ñ‚ðíœB
-	100522_‘I‘ð‚³‚ê‚½—ñŽÔ‚ÌæŒpƒ\[ƒg‚Ì•s‹ï‡
-	@Žž•\ƒrƒ…[‚Å•¡”‘I‘ð‚³‚ê‚½—ñŽÔ‚ÌæŒpƒ\[ƒg‚ª³‚µ‚­‚Å‚«‚È‚¢–â‘è‚ðC³
+â—ŽD100522_CDedRessyaContTransferSort
+	ã€Œã‚¢ãƒ³ã‚«ãƒ¼ã‚»ãƒ«ãŒNULLã®å ´åˆã¯ã€é¸æŠžã‚»ãƒ«ãªã—ã€ã®åˆ¶ç´„ã‚’å‰Šé™¤ã€‚
+	100522_é¸æŠžã•ã‚ŒãŸåˆ—è»Šã®ä¹—ç¶™ã‚½ãƒ¼ãƒˆã®ä¸å…·åˆ
+	ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§è¤‡æ•°é¸æŠžã•ã‚ŒãŸåˆ—è»Šã®ä¹—ç¶™ã‚½ãƒ¼ãƒˆãŒæ­£ã—ãã§ããªã„å•é¡Œã‚’ä¿®æ­£
 
-D100523_CWndDcdGridJikokuhyouState_Ressyasentaku_EkijikokuModifyOperation2
-	 ƒ28.3„100523_Žž•\ƒrƒ…[‚ÅA•¡”—ñŽÔ‘I‘ð’†‚Ì[‰wŽž]-[‰wŽž•ÏX]‚ð‰Â”\‚É‚·‚é[10/05/23]
-	 ƒ28.4„100523_Žž•\ƒrƒ…[‚Ì‰wŽž•ÏX.‰wˆµ‚ð’âŽÔ‚É•ÏX‚Å‚«‚È‚¢ê‡‚ª‚ ‚é–â‘è[10/05/23]
+â—ŽD100523_CWndDcdGridJikokuhyouState_Ressyasentaku_EkijikokuModifyOperation2
+	â–¡ï¼œ28.3ï¼ž100523_æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã€è¤‡æ•°åˆ—è»Šé¸æŠžä¸­ã®[é§…æ™‚åˆ»]-[é§…æ™‚åˆ»å¤‰æ›´]ã‚’å¯èƒ½ã«ã™ã‚‹[10/05/23]
+	â–¡ï¼œ28.4ï¼ž100523_æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®é§…æ™‚åˆ»å¤‰æ›´.é§…æ‰±ã‚’åœè»Šã«å¤‰æ›´ã§ããªã„å ´åˆãŒã‚ã‚‹å•é¡Œ[10/05/23]
 
-D100529_Homepage_OuDia_Ver1_00_04
-	¡ƒ28.5„Ver.1.00.04‚ÌƒŠƒŠ[ƒX
+â—ŽD100529_Homepage_OuDia_Ver1_00_04
+	â– ï¼œ28.5ï¼žVer.1.00.04ã®ãƒªãƒªãƒ¼ã‚¹
 
-D100912_OuDia_DiagramView_OnSize
-	ƒ29„OuDia_Ver1.00.04¨.ƒ29.2„ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÌƒTƒCƒY•ÏXŽž‚Ì“®ì•ÏX(ƒTƒCƒY•ÏXŽž‚ÍŠg‘å—¦‚ð•ÏX‚µ‚È‚¢).ƒ29.2.4„ƒ\[ƒX®—
-	CDlgDiaList
-	@ƒ_ƒCƒ„ˆê——ƒ_ƒCƒAƒƒO‚ÌAƒ_ƒCƒ„‚ÌƒŠƒXƒgƒRƒ“ƒgƒ[ƒ‹‚ðƒ_ƒuƒ‹ƒNƒŠƒbƒN‚·‚é‚±‚Æ‚É‚æ‚èAƒ_ƒCƒ„‚ÌƒvƒƒpƒeƒBƒ_ƒCƒAƒƒO‚ªŠJ‚­‚æ‚¤‚É‚È‚è‚Ü‚µ‚½B
-	ƒ29.2.2.2„ƒTƒCƒY•ÏXŽž‚ÉŽžE‰w‚ÌˆÊ’u‚ª”÷–­‚É•Ï‰»‚·‚é–â‘è			  CconvDcdPosOnZone_PosOrgAndRate
+â—ŽD100912_OuDia_DiagramView_OnSize
+	ï¼œ29ï¼žOuDia_Ver1.00.04â†’.ï¼œ29.2ï¼žãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã®ã‚µã‚¤ã‚ºå¤‰æ›´æ™‚ã®å‹•ä½œå¤‰æ›´(ã‚µã‚¤ã‚ºå¤‰æ›´æ™‚ã¯æ‹¡å¤§çŽ‡ã‚’å¤‰æ›´ã—ãªã„).ï¼œ29.2.4ï¼žã‚½ãƒ¼ã‚¹æ•´ç†
+	â—ŽCDlgDiaList
+	ã€€ãƒ€ã‚¤ãƒ¤ä¸€è¦§ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã®ã€ãƒ€ã‚¤ãƒ¤ã®ãƒªã‚¹ãƒˆã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã‚’ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã“ã¨ã«ã‚ˆã‚Šã€ãƒ€ã‚¤ãƒ¤ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ãŒé–‹ãã‚ˆã†ã«ãªã‚Šã¾ã—ãŸã€‚
+	â—Žï¼œ29.2.2.2ï¼žã‚µã‚¤ã‚ºå¤‰æ›´æ™‚ã«æ™‚åˆ»ãƒ»é§…ã®ä½ç½®ãŒå¾®å¦™ã«å¤‰åŒ–ã™ã‚‹å•é¡Œ			  CconvDcdPosOnZone_PosOrgAndRate
 	  CconvDcdPosOnZone_DcdZone
 	  CconvDcdPosOnZoneXy
-	  ‚ðC³
+	  ã‚’ä¿®æ­£
 
-D100912_OuDia_DiagramView_OnSize_2
-	Apps.OuDia.ƒ29„OuDia_Ver1.00.04¨.ƒ29.2„ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÌƒTƒCƒY•ÏXŽž‚Ì“®ì•ÏX(ƒTƒCƒY•ÏXŽž‚ÍŠg‘å—¦‚ð•ÏX‚µ‚È‚¢).ƒ29.2.5„CDcdDiagram::getZone_Dgr()‚ÌAƒ_ƒCƒ„ƒOƒ‰ƒ€”ñ•\Ž¦Žž“®ì•ÏX
+â—ŽD100912_OuDia_DiagramView_OnSize_2
+	Apps.OuDia.ï¼œ29ï¼žOuDia_Ver1.00.04â†’.ï¼œ29.2ï¼žãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã®ã‚µã‚¤ã‚ºå¤‰æ›´æ™‚ã®å‹•ä½œå¤‰æ›´(ã‚µã‚¤ã‚ºå¤‰æ›´æ™‚ã¯æ‹¡å¤§çŽ‡ã‚’å¤‰æ›´ã—ãªã„).ï¼œ29.2.5ï¼žCDcdDiagram::getZone_Dgr()ã®ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ éžè¡¨ç¤ºæ™‚å‹•ä½œå¤‰æ›´
 
-D100927_Homepage_OuDia_Ver1_01
-	ƒ29„OuDia_Ver1.00.04¨1.01.ƒ29.3„w—ñŽÔŽí•ÊŒÅ—LƒtƒHƒ“ƒgx‚ð‘I‘ð‚É‚·‚é
-	ƒ29„OuDia_Ver1.00.04¨.ƒ29.4„ƒŠƒŠ[ƒX€”õ
+â—ŽD100927_Homepage_OuDia_Ver1_01
+	ï¼œ29ï¼žOuDia_Ver1.00.04â†’1.01.ï¼œ29.3ï¼žã€Žåˆ—è»Šç¨®åˆ¥å›ºæœ‰ãƒ•ã‚©ãƒ³ãƒˆã€ã‚’é¸æŠžã«ã™ã‚‹
+	ï¼œ29ï¼žOuDia_Ver1.00.04â†’.ï¼œ29.4ï¼žãƒªãƒªãƒ¼ã‚¹æº–å‚™
 	
-D100102_Homepage_OuDia_Ver1_01_01
-	App.DiagramEdit.ƒ30„OuDia_Ver1.01¨1.01.01.ƒ30.1„Bugfix:ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÌŽž•\Ž¦EcŒrü‚ªŒë‚Á‚½ˆÊ’u‚É•\Ž¦‚³‚ê‚é	
+â—ŽD100102_Homepage_OuDia_Ver1_01_01
+	App.DiagramEdit.ï¼œ30ï¼žOuDia_Ver1.01â†’1.01.01.ï¼œ30.1ï¼žBugfix:ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã®æ™‚åˆ»è¡¨ç¤ºãƒ»ç¸¦ç½«ç·šãŒèª¤ã£ãŸä½ç½®ã«è¡¨ç¤ºã•ã‚Œã‚‹	
 
-D101016_ConvDedFile_Modify
-	ConvFileOudia03To05EConvFileOudia05To06EConvFileOudia06To101B
-	0ƒoƒCƒg‚Ìƒtƒ@ƒCƒ‹‚ðIfConvFile::isLeftFormat()‚É“n‚·‚Æ—áŠO‚É‚æ‚è
-	ƒvƒƒZƒX‚ª‹­§I—¹‚É‚È‚é•s‹ï‡‚ðC³B
-	Homepage‚ÌƒŠƒ“ƒNW‚©‚çAƒtƒ‰ƒbƒgƒ[ƒ‹ƒhƒ\ƒtƒg‚Ìwnewx‚ðíœB
+â—ŽD101016_ConvDedFile_Modify
+	ConvFileOudia03To05ãƒ»ConvFileOudia05To06ãƒ»ConvFileOudia06To101ã€‚
+	0ãƒã‚¤ãƒˆã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’IfConvFile::isLeftFormat()ã«æ¸¡ã™ã¨ä¾‹å¤–ã«ã‚ˆã‚Š
+	ãƒ—ãƒ­ã‚»ã‚¹ãŒå¼·åˆ¶çµ‚äº†ã«ãªã‚‹ä¸å…·åˆã‚’ä¿®æ­£ã€‚
+	Homepageã®ãƒªãƒ³ã‚¯é›†ã‹ã‚‰ã€ãƒ•ãƒ©ãƒƒãƒˆãƒ¯ãƒ¼ãƒ«ãƒ‰ã‚½ãƒ•ãƒˆã®ã€Žnewã€ã‚’å‰Šé™¤ã€‚
 	
-D110122_DiagramEdit_beforeCentDedDgrEkijikoku
-	—ñŽÔü‚Ì•ª’f‚Ì‘Î‰ž‘O
+â—ŽD110122_DiagramEdit_beforeCentDedDgrEkijikoku
+	åˆ—è»Šç·šã®åˆ†æ–­ã®å¯¾å¿œå‰
 	
-D110122_DiagramEdit_CentDedDgrEkijikoku
-	ƒ31„OuDia_Ver1.01.01¨1.01.02.ƒ31.2„101121_—ñŽÔü‚Ì•ª’f
+â—ŽD110122_DiagramEdit_CentDedDgrEkijikoku
+	ï¼œ31ï¼žOuDia_Ver1.01.01â†’1.01.02.ï¼œ31.2ï¼ž101121_åˆ—è»Šç·šã®åˆ†æ–­
 	
-D1101221_DiagramEdit_CDlgEkijikokuProp
-	ƒ31„OuDia_Ver1.01.01¨1.01.02.ƒ31.3„‰wŽžƒ_ƒCƒAƒƒO‚Ì’…ŽžƒeƒLƒXƒgƒ{ƒbƒNƒX‚ÉA•ª‚Ì‚Ý‚ð“ü—Í(Žž‚ðÈ—ª)‚µ‚Ä‚à”­Žž‚ªŒJ‚èã‚°EŒJ‰º‚°‚É‚È‚ç‚È‚¢–â‘è
-	ƒ31„OuDia_Ver1.01.01¨1.01.02.ƒ31.5„Žž•\ƒrƒ…[‚É‚¨‚¢‚ÄAˆê•”‚Ì—ñŽÔ‚ð•ÒW‚µ‚½‚Æ‚«‚ÉŽž•\‘S‘Ì‚ªÄ•`‰æ‚³‚ê‚é•s‹ï‡‚ðC³
+â—ŽD1101221_DiagramEdit_CDlgEkijikokuProp
+	ï¼œ31ï¼žOuDia_Ver1.01.01â†’1.01.02.ï¼œ31.3ï¼žé§…æ™‚åˆ»ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã®ç€æ™‚åˆ»ãƒ†ã‚­ã‚¹ãƒˆãƒœãƒƒã‚¯ã‚¹ã«ã€åˆ†ã®ã¿ã‚’å…¥åŠ›(æ™‚ã‚’çœç•¥)ã—ã¦ã‚‚ç™ºæ™‚åˆ»ãŒç¹°ã‚Šä¸Šã’ãƒ»ç¹°ä¸‹ã’ã«ãªã‚‰ãªã„å•é¡Œ
+	ï¼œ31ï¼žOuDia_Ver1.01.01â†’1.01.02.ï¼œ31.5ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã«ãŠã„ã¦ã€ä¸€éƒ¨ã®åˆ—è»Šã‚’ç·¨é›†ã—ãŸã¨ãã«æ™‚åˆ»è¡¨å…¨ä½“ãŒå†æç”»ã•ã‚Œã‚‹ä¸å…·åˆã‚’ä¿®æ­£
 	
-D1101222_DiagramEdit_CDlgEkijikokuProp
-	ƒ31„OuDia_Ver1.01.01¨1.01.02.ƒ31.6„ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚É‚¨‚¢‚ÄAƒzƒC[ƒ‹‚ÅƒXƒNƒ[ƒ‹‚µ‚½‚Æ‚«‚Éƒ_ƒCƒ„ƒOƒ‰ƒ€‘S‘Ì‚ªÄ•`‰æ‚³‚ê‚é•s‹ï‡‚ðC³
+â—ŽD1101222_DiagramEdit_CDlgEkijikokuProp
+	ï¼œ31ï¼žOuDia_Ver1.01.01â†’1.01.02.ï¼œ31.6ï¼žãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã«ãŠã„ã¦ã€ãƒ›ã‚¤ãƒ¼ãƒ«ã§ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã—ãŸã¨ãã«ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ å…¨ä½“ãŒå†æç”»ã•ã‚Œã‚‹ä¸å…·åˆã‚’ä¿®æ­£
 
-D1101223_DiagramEdit_DlgResourceModify
-	ƒ31„OuDia_Ver1.01.01¨1.01.02.ƒ31.4„ˆê•”‚Ìƒ_ƒCƒAƒƒO‚ÉƒAƒNƒZƒXƒL[‚ð’Ç‰Á
+â—ŽD1101223_DiagramEdit_DlgResourceModify
+	ï¼œ31ï¼žOuDia_Ver1.01.01â†’1.01.02.ï¼œ31.4ï¼žä¸€éƒ¨ã®ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã«ã‚¢ã‚¯ã‚»ã‚¹ã‚­ãƒ¼ã‚’è¿½åŠ 
 
 
-D110123_Homepage_OuDia_Ver1_01_02
-	OuDia Ver1.01.02 ‚ðŒöŠJ
+â—ŽD110123_Homepage_OuDia_Ver1_01_02
+	OuDia Ver1.01.02 ã‚’å…¬é–‹
 
-D110227_Homepage_DatafileAdd
-ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ÉAˆÈ‰º‚Ìƒtƒ@ƒCƒ‹‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-  ‘ä˜p‚‘¬“S˜H 2011”N2ŒŽ
-  ‘ä˜p“S˜H› “Œ“ì‰ôü 2011”N2ŒŽ
+â—ŽD110227_Homepage_DatafileAdd
+ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã«ã€ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+  å°æ¹¾é«˜é€Ÿé‰„è·¯ 2011å¹´2æœˆ
+  å°æ¹¾é‰„è·¯å±æ±å—å»»ç·š 2011å¹´2æœˆ
 
-D110321_DiagramEdit_CCalcCentDedDgrRessyasenOfPoint_VLine
-	App.DiagramEdit.ƒ32„OuDia_Ver1.01.02¨.ƒ32.3„ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[F‚ü‚ðƒ_ƒuƒ‹ƒNƒŠƒbƒN‚µ‚Ä‚àAŽž•\ƒrƒ…[‚Ö‚ÌˆÚ“®‚ª‚Å‚«‚È‚¢B
+â—ŽD110321_DiagramEdit_CCalcCentDedDgrRessyasenOfPoint_VLine
+	App.DiagramEdit.ï¼œ32ï¼žOuDia_Ver1.01.02â†’.ï¼œ32.3ï¼žãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ï¼šåž‚ç·šã‚’ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ã—ã¦ã‚‚ã€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã¸ã®ç§»å‹•ãŒã§ããªã„ã€‚
 	CCalcCentDedDgrRessyasenOfPoint_modifyForVertLine
 
-D110902_Homepage_DatafileAdd
-ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ÉAˆÈ‰º‚Ìƒtƒ@ƒCƒ‹‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-  ’†‘E¬©“S˜H 2011”N8ŒŽ
-  JR‹ãBVŠ²ü 2011”N4ŒŽ
-  JRŽ­Ž™“‡–{ü 2011”N4ŒŽ
+â—ŽD110902_Homepage_DatafileAdd
+ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã«ã€ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+  ä¸­å›½ãƒ»æˆæ˜†é‰„è·¯ 2011å¹´8æœˆ
+  JRä¹å·žæ–°å¹¹ç·š 2011å¹´4æœˆ
+  JRé¹¿å…å³¶æœ¬ç·š 2011å¹´4æœˆ
 
-D111112_DiagramEdit_CConvContentPosToTarget
-	 ƒ32„OuDia_Ver1.01.02¨
-	¡ƒ32.1„ƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒOF‰wƒrƒ…[,—ñŽÔŽí•Êƒrƒ…[‚Å‚Ì‰æ–ÊXVŽwŽ¦‚Ì‰ÓŠ‚ðŒ©’¼‚µ
-	¡ƒ32.2„I’…‰w‚Ìw’…Žž=Žw’è‚È‚µ,”­Žž=Žw’è‚ ‚èx‚É’·ŽžŠÔ’âŽÔ‰ðŒˆ‚ª“K—p‚³‚ê‚é–â‘è([11/10/31]ƒ32.8„‚ÉŠÖ˜A)[11/03/05_12:45`14:30,11/11/07_00:40`01:50]
-	¡ƒ32.4„ƒOƒŠƒbƒhŒ`Ž®ƒrƒ…[ˆóüŒã‚É‰æ–Ê‚ª•ö‚ê‚é–â‘è
-	¡ƒ32.5„ƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒOFCDcdDiagram ‚ÉACConvContentPosToTarget ‚ð“±“ü‚·‚é
-	¡ƒ32.7„ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚Ì‰¡•‚ð¬‚³‚­‚µ‚½‚Æ‚«‚ÉAƒXƒNƒ[ƒ‹ƒo[‚ª“_–Å‚·‚é–â‘è[11/10/09,23,29
-	¡ƒ32.8„ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÅAŒo—R‚È‚µ‚Ì‚ ‚Æ‚É‰^s‚È‚µEI“_‚ª‚ ‚é‚ÆA—ñŽÔü‚ª³‚µ‚­•`‰æ‚³‚ê‚È‚¢–â‘è‚ÌC³[11/11/06_23:20`00:05]
+â—ŽD111112_DiagramEdit_CConvContentPosToTarget
+	â–¡ï¼œ32ï¼žOuDia_Ver1.01.02â†’
+	â– ï¼œ32.1ï¼žãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ï¼šé§…ãƒ“ãƒ¥ãƒ¼,åˆ—è»Šç¨®åˆ¥ãƒ“ãƒ¥ãƒ¼ã§ã®ç”»é¢æ›´æ–°æŒ‡ç¤ºã®ç®‡æ‰€ã‚’è¦‹ç›´ã—
+	â– ï¼œ32.2ï¼žçµ‚ç€é§…ã®ã€Žç€æ™‚åˆ»=æŒ‡å®šãªã—,ç™ºæ™‚åˆ»=æŒ‡å®šã‚ã‚Šã€ã«é•·æ™‚é–“åœè»Šè§£æ±ºãŒé©ç”¨ã•ã‚Œã‚‹å•é¡Œ([11/10/31]ï¼œ32.8ï¼žã«é–¢é€£)[11/03/05_12:45ã€œ14:30,11/11/07_00:40ã€œ01:50]
+	â– ï¼œ32.4ï¼žã‚°ãƒªãƒƒãƒ‰å½¢å¼ãƒ“ãƒ¥ãƒ¼å°åˆ·å¾Œã«ç”»é¢ãŒå´©ã‚Œã‚‹å•é¡Œ
+	â– ï¼œ32.5ï¼žãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ï¼šCDcdDiagram ã«ã€CConvContentPosToTarget ã‚’å°Žå…¥ã™ã‚‹
+	â– ï¼œ32.7ï¼žãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã®æ¨ªå¹…ã‚’å°ã•ãã—ãŸã¨ãã«ã€ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼ãŒç‚¹æ»…ã™ã‚‹å•é¡Œ[11/10/09,23,29
+	â– ï¼œ32.8ï¼žãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§ã€çµŒç”±ãªã—ã®ã‚ã¨ã«é‹è¡Œãªã—ãƒ»çµ‚ç‚¹ãŒã‚ã‚‹ã¨ã€åˆ—è»Šç·šãŒæ­£ã—ãæç”»ã•ã‚Œãªã„å•é¡Œã®ä¿®æ­£[11/11/06_23:20ã€œ00:05]
 
-D1111121_Homepage_OuDia_Ver1_01_03
-	OuDia.1.01.03‚ðŒöŠJ
+â—ŽD1111121_Homepage_OuDia_Ver1_01_03
+	OuDia.1.01.03ã‚’å…¬é–‹
 
-D111211_OuDia_ViewJikokuhyou_VIEW_DisplayAllEkiJikoku 
-	Develop.App.DiagramEdit.ƒ33„OuDia_Ver1.01.03¨.App.DiagramEdit.111126_Žž•\ƒrƒ…[‚É[‘SŽž‚ð•\Ž¦]‚ð’Ç‰Á
+â—ŽD111211_OuDia_ViewJikokuhyou_VIEW_DisplayAllEkiJikoku 
+	Develop.App.DiagramEdit.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.App.DiagramEdit.111126_æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã«[å…¨æ™‚åˆ»ã‚’è¡¨ç¤º]ã‚’è¿½åŠ 
 
-D120104_OuDia_ViewJikokuhyou_VIEW_DisplayAllEkiJikoku_FOCUS
-	Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨.120102_Žž•\ƒrƒ…[‚Å[‘SŽž‚ð•\Ž¦]‘€ìŒã‚ÌƒtƒH[ƒJƒXƒZƒ‹‚ðA‘€ì‘O‚Æ“¯‚¶ˆÊ’u‚ÉˆÚ“®.ƒ2.3„[‘SŽž‚ð•\Ž¦]‘€ìŽž‚Ì“®ì•ÏX
+â—ŽD120104_OuDia_ViewJikokuhyou_VIEW_DisplayAllEkiJikoku_FOCUS
+	Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.120102_æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§[å…¨æ™‚åˆ»ã‚’è¡¨ç¤º]æ“ä½œå¾Œã®ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ã‚’ã€æ“ä½œå‰ã¨åŒã˜ä½ç½®ã«ç§»å‹•.ï¼œ2.3ï¼ž[å…¨æ™‚åˆ»ã‚’è¡¨ç¤º]æ“ä½œæ™‚ã®å‹•ä½œå¤‰æ›´
 
-D120108_OuDia_CWndDcdGridJikokuhyou_CXColumnSpecCont
-	App.DiagramEdit.120102_Žž•\ƒrƒ…[‚Å[‘SŽž‚ð•\Ž¦]‘€ìŒã‚ÌƒtƒH[ƒJƒXƒZƒ‹‚ðA‘€ì‘O‚Æ“¯‚¶ˆÊ’u‚ÉˆÚ“®
-	ƒ2.5„CWndDcdGridJikokuhyou ŠÖŒWƒNƒ‰ƒX‚Ì–¼Ì®—
+â—ŽD120108_OuDia_CWndDcdGridJikokuhyou_CXColumnSpecCont
+	App.DiagramEdit.120102_æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§[å…¨æ™‚åˆ»ã‚’è¡¨ç¤º]æ“ä½œå¾Œã®ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ã‚’ã€æ“ä½œå‰ã¨åŒã˜ä½ç½®ã«ç§»å‹•
+	ï¼œ2.5ï¼žCWndDcdGridJikokuhyou é–¢ä¿‚ã‚¯ãƒ©ã‚¹ã®åç§°æ•´ç†
 
-D120212_befort_OuDia_CommandHandlerRefuct
-	Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨.ƒ2„‘S•”‚ÌƒRƒ}ƒ“ƒhƒnƒ“ƒhƒ‰‚ðAOnXXX_process Œ`Ž®‚É•ÏX.ƒ2.1„‰wƒrƒ…[‚ÌƒRƒ}ƒ“ƒhƒnƒ“ƒhƒ‰‚ð OnXXX_process Œ`Ž®‚É•ÏX
+â—ŽD120212_befort_OuDia_CommandHandlerRefuct
+	Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ2ï¼žå…¨éƒ¨ã®ã‚³ãƒžãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ©ã‚’ã€OnXXX_process å½¢å¼ã«å¤‰æ›´.ï¼œ2.1ï¼žé§…ãƒ“ãƒ¥ãƒ¼ã®ã‚³ãƒžãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ©ã‚’ OnXXX_process å½¢å¼ã«å¤‰æ›´
 	
-D120212_OuDia_CommandHandlerRefuct
-	Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨.ƒ2„‘S•”‚ÌƒRƒ}ƒ“ƒhƒnƒ“ƒhƒ‰‚ðAOnXXX_process Œ`Ž®‚É•ÏX.
-	Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨.ƒ3„Žž•\ƒrƒ…[‚Åu‰w‚ÌƒvƒƒpƒeƒBvƒ_ƒCƒAƒƒO‚ðŠJ‚­(‰w–¼‚Ìƒ_ƒuƒ‹ƒNƒŠƒbƒNE‰w–¼‚ÉƒtƒH[ƒJƒXƒZƒ‹‚ª‚ ‚éó‘Ô‚ÅEnter)
-	Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨.ƒ4„ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚Åu‰w‚ÌƒvƒƒpƒeƒBvƒ_ƒCƒAƒƒO‚ðŠJ‚­(‰w–¼‚Ìƒ_ƒuƒ‹ƒNƒŠƒbƒN
+â—ŽD120212_OuDia_CommandHandlerRefuct
+	Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ2ï¼žå…¨éƒ¨ã®ã‚³ãƒžãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ©ã‚’ã€OnXXX_process å½¢å¼ã«å¤‰æ›´.
+	Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ3ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã€Œé§…ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã€ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚’é–‹ã(é§…åã®ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ãƒ»é§…åã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ãŒã‚ã‚‹çŠ¶æ…‹ã§Enter)
+	Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ4ï¼žãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§ã€Œé§…ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã€ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚’é–‹ã(é§…åã®ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯
 	
-D120401_Homepage_gyeongchunseon_1203_02
-	ƒf[ƒ^ƒtƒ@ƒCƒ‹gyeongchunseon_1203_02_arrcut.oud ‚ð’Ç‰Á
-	12/04/01
-	@ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ÉAˆÈ‰º‚Ìƒtƒ@ƒCƒ‹‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	ŠØ‘E‹žtü 2012”N3ŒŽ 
+â—ŽD120401_Homepage_gyeongchunseon_1203_02
+	ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«gyeongchunseon_1203_02_arrcut.oud ã‚’è¿½åŠ 
+	â—Ž12/04/01
+	ã€€ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã«ã€ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	éŸ“å›½ãƒ»äº¬æ˜¥ç·š 2012å¹´3æœˆ 
 
-D1204011_OuDia_EkiJikokuKeisiki
-	ƒ5„Žž•\ƒrƒ…[.I’…‰w‚Ì‰wŽžŒ`Ž®‚ªw”­Žžx‚Ìê‡‚Éw’…Žžx‚Æ‚Ý‚È‚·“Á—á‚ð”pŽ~‚·‚éB
-	¡ƒ5.1„Žž•\ƒrƒ…[‚ÌC³BI’…‰w‚Ì‰wŽžŒ`Ž®‚ªw”­Žžx‚Ìê‡‚Éw’…Žžx‚Æ‚Ý‚È‚·“Á—á‚ð”pŽ~‚·‚é(CentDedEkiCont::ContKudari::get,CentDedEkiCont::ContNobori::get)[12/03/03_11:18`12:26]
-	¡ƒ5.2„‰wƒrƒ…[.‰wŽžŒ`Ž®‚ð•Ï‚¦‚½‚Æ‚«A‘S—ñŽÔ‚Ì‰wŽž‚ð³‹K‰»‚·‚é[12/03/03_12:32`21:15,12/03/04_11:44`12:26]
-	@(‰wŽžƒ_ƒCƒAƒƒO‚Åu‰wŽž‚ð‰wŽžŒ`Ž®‚ÉÅ“K‰»‚µ‚È‚¢v‚ð‘I‘ð‰Â”\‚É‚·‚é)
-	@(u‰wŽž‚ð‰wŽžŒ`Ž®‚ÉÅ“K‰»‚µ‚È‚¢v‚ÍA‰wƒrƒ…[‚ÌƒvƒƒpƒeƒB)
-	¡ƒ5.3„‰wƒrƒ…[.Index0‚Ì‰w‚ÌƒvƒƒpƒeƒB‚ÍA‰wŽžŒ`Ž®‚ÌŠù’è’l‚ðwã‚è’…Žžx‚Æ‚·‚éB[12/03/04_10:17`10:53]
+â—ŽD1204011_OuDia_EkiJikokuKeisiki
+	ï¼œ5ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.çµ‚ç€é§…ã®é§…æ™‚åˆ»å½¢å¼ãŒã€Žç™ºæ™‚åˆ»ã€ã®å ´åˆã«ã€Žç€æ™‚åˆ»ã€ã¨ã¿ãªã™ç‰¹ä¾‹ã‚’å»ƒæ­¢ã™ã‚‹ã€‚
+	â– ï¼œ5.1ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ä¿®æ­£ã€‚çµ‚ç€é§…ã®é§…æ™‚åˆ»å½¢å¼ãŒã€Žç™ºæ™‚åˆ»ã€ã®å ´åˆã«ã€Žç€æ™‚åˆ»ã€ã¨ã¿ãªã™ç‰¹ä¾‹ã‚’å»ƒæ­¢ã™ã‚‹(CentDedEkiCont::ContKudari::get,CentDedEkiCont::ContNobori::get)[12/03/03_11:18ã€œ12:26]
+	â– ï¼œ5.2ï¼žé§…ãƒ“ãƒ¥ãƒ¼.é§…æ™‚åˆ»å½¢å¼ã‚’å¤‰ãˆãŸã¨ãã€å…¨åˆ—è»Šã®é§…æ™‚åˆ»ã‚’æ­£è¦åŒ–ã™ã‚‹[12/03/03_12:32ã€œ21:15,12/03/04_11:44ã€œ12:26]
+	ã€€(é§…æ™‚åˆ»ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã§ã€Œé§…æ™‚åˆ»ã‚’é§…æ™‚åˆ»å½¢å¼ã«æœ€é©åŒ–ã—ãªã„ã€ã‚’é¸æŠžå¯èƒ½ã«ã™ã‚‹)
+	ã€€(ã€Œé§…æ™‚åˆ»ã‚’é§…æ™‚åˆ»å½¢å¼ã«æœ€é©åŒ–ã—ãªã„ã€ã¯ã€é§…ãƒ“ãƒ¥ãƒ¼ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£)
+	â– ï¼œ5.3ï¼žé§…ãƒ“ãƒ¥ãƒ¼.Index0ã®é§…ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã¯ã€é§…æ™‚åˆ»å½¢å¼ã®æ—¢å®šå€¤ã‚’ã€Žä¸Šã‚Šç€æ™‚åˆ»ã€ã¨ã™ã‚‹ã€‚[12/03/04_10:17ã€œ10:53]
 
-D120527_OuDia_JIKOKUHYOUVFONT
-	ƒ6„Žž•\ƒrƒ…[.c‘‚«ƒtƒHƒ“ƒg‚Í•Ê“rŽw’è‰Â”\‚É‚·‚é
-	ƒ5.4„ConvFileOuDia.˜HüŽn”­‰w,I’…‰w‚Ì“Á—á‚ð”pŽ~
-	OuDia ‚Ìƒo[ƒWƒ‡ƒ“‚ð Ver.1.02 ‚É•ÏXB
-	ConvFileOudia06To101 ‚ð’Ç‰Á
+â—ŽD120527_OuDia_JIKOKUHYOUVFONT
+	ï¼œ6ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.ç¸¦æ›¸ããƒ•ã‚©ãƒ³ãƒˆã¯åˆ¥é€”æŒ‡å®šå¯èƒ½ã«ã™ã‚‹
+	ï¼œ5.4ï¼žConvFileOuDia.è·¯ç·šå§‹ç™ºé§…,çµ‚ç€é§…ã®ç‰¹ä¾‹ã‚’å»ƒæ­¢
+	OuDia ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’ Ver.1.02 ã«å¤‰æ›´ã€‚
+	ConvFileOudia06To101 ã‚’è¿½åŠ 
 
-D120530_OuDia_RessyasyubetsuRyakusyou6
-	[17:18`]Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨.ƒ7„—ñŽÔŽí•Êƒrƒ…[.Ží•Ê—ªÌ‚Ì’·‚³§ŒÀ‚ð”¼Šp6•¶Žš‚É•ÏX
+â—ŽD120530_OuDia_RessyasyubetsuRyakusyou6
+	[17:18ã€œ]Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ7ï¼žåˆ—è»Šç¨®åˆ¥ãƒ“ãƒ¥ãƒ¼.ç¨®åˆ¥ç•¥ç§°ã®é•·ã•åˆ¶é™ã‚’åŠè§’6æ–‡å­—ã«å¤‰æ›´
 
 
-D120603_OuDia_OutputDirChange
-	Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨.ƒ8„Žž•\ƒrƒ…[.ŽžÝ’è‚Ì‚È‚¢’âŽÔ‰w‚É‚Í›•\Ž¦
-	.dllE.exe ‚Ìo—ÍƒfƒBƒŒƒNƒgƒŠ‚ðAŠù’è(Debug,Release)‚É–ß‚µ‚Ü‚µ‚½B
-	ViewJikokuhyou::WndJikokuhyou::CCellBuilder ‚ÌŒø—¦Œüã
+â—ŽD120603_OuDia_OutputDirChange
+	Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ8ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.æ™‚åˆ»è¨­å®šã®ãªã„åœè»Šé§…ã«ã¯â—‹è¡¨ç¤º
+	.dllãƒ».exe ã®å‡ºåŠ›ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ã€æ—¢å®š(Debug,Release)ã«æˆ»ã—ã¾ã—ãŸã€‚
+	ViewJikokuhyou::WndJikokuhyou::CCellBuilder ã®åŠ¹çŽ‡å‘ä¸Š
 	
-D120701_OuDia_NOTIMESTOP
-	Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨ƒ9„Žž•\ƒrƒ…[.‰wˆµ=’âŽÔ,’…Žž=Žw’è‚È‚µ,”­Žž=Žw’è‚È‚µ ‚ð‹–‰Â‚·‚é
+â—ŽD120701_OuDia_NOTIMESTOP
+	Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’ï¼œ9ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.é§…æ‰±=åœè»Š,ç€æ™‚åˆ»=æŒ‡å®šãªã—,ç™ºæ™‚åˆ»=æŒ‡å®šãªã— ã‚’è¨±å¯ã™ã‚‹
 
-D120708_OuDia_CONTEXTMENU
-	Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨.ƒ10„ƒOƒŠƒbƒhŒ`Ž®ƒrƒ…[Aƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÅƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ð’ñ‹Ÿ‚·‚é
+â—ŽD120708_OuDia_CONTEXTMENU
+	Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ10ï¼žã‚°ãƒªãƒƒãƒ‰å½¢å¼ãƒ“ãƒ¥ãƒ¼ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’æä¾›ã™ã‚‹
 	
-D120715_OuDia_MANUAL_NOTIMESTOP
-	Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨. ‚©‚ç‚Ìƒ}ƒjƒ…ƒAƒ‹C³
-	111126_Žž•\ƒrƒ…[‚É[‘SŽž‚ð•\Ž¦]‚ð’Ç‰Á
-	ƒ3„Žž•\ƒrƒ…[‚Åu‰w‚ÌƒvƒƒpƒeƒBvƒ_ƒCƒAƒƒO‚ðŠJ‚­(‰w–¼‚Ìƒ_ƒuƒ‹ƒNƒŠƒbƒNE‰w–¼‚ÉƒtƒH[ƒJƒXƒZƒ‹‚ª‚ ‚éó‘Ô‚ÅEnter)
-	ƒ4„ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚Åu‰w‚ÌƒvƒƒpƒeƒBvƒ_ƒCƒAƒƒO‚ðŠJ‚­(‰w–¼‚Ìƒ_ƒuƒ‹ƒNƒŠƒbƒN)
-	ƒ5„Žž•\ƒrƒ…[.I’…‰w‚Ì‰wŽžŒ`Ž®‚ªw”­Žžx‚Ìê‡‚Éw’…Žžx‚Æ‚Ý‚È‚·“Á—á‚ð”pŽ~‚·‚éB
-	ƒ6„Žž•\ƒrƒ…[.c‘‚«ƒtƒHƒ“ƒg‚Í•Ê“rŽw’è‰Â”\‚É‚·‚é
-	ƒ7„—ñŽÔŽí•Êƒrƒ…[.Ží•Ê—ªÌ‚Ì’·‚³§ŒÀ‚ð”¼Šp6•¶Žš‚É•ÏX
-	ƒ8„Žž•\ƒrƒ…[.ŽžÝ’è‚Ì‚È‚¢’âŽÔ‰w‚É‚Í›•\Ž¦
-	ƒ9„Žž•\ƒrƒ…[.‰wˆµ=’âŽÔ,’…Žž=Žw’è‚È‚µ,”­Žž=Žw’è‚È‚µ ‚ð‹–‰Â‚·‚é
-	ƒ10„ƒOƒŠƒbƒhŒ`Ž®ƒrƒ…[Aƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÅƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ð’ñ‹Ÿ‚·‚é
+â—ŽD120715_OuDia_MANUAL_NOTIMESTOP
+	Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’. ã‹ã‚‰ã®ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ä¿®æ­£
+	111126_æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã«[å…¨æ™‚åˆ»ã‚’è¡¨ç¤º]ã‚’è¿½åŠ 
+	ï¼œ3ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã€Œé§…ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã€ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚’é–‹ã(é§…åã®ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ãƒ»é§…åã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ãŒã‚ã‚‹çŠ¶æ…‹ã§Enter)
+	ï¼œ4ï¼žãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§ã€Œé§…ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã€ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚’é–‹ã(é§…åã®ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯)
+	ï¼œ5ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.çµ‚ç€é§…ã®é§…æ™‚åˆ»å½¢å¼ãŒã€Žç™ºæ™‚åˆ»ã€ã®å ´åˆã«ã€Žç€æ™‚åˆ»ã€ã¨ã¿ãªã™ç‰¹ä¾‹ã‚’å»ƒæ­¢ã™ã‚‹ã€‚
+	ï¼œ6ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.ç¸¦æ›¸ããƒ•ã‚©ãƒ³ãƒˆã¯åˆ¥é€”æŒ‡å®šå¯èƒ½ã«ã™ã‚‹
+	ï¼œ7ï¼žåˆ—è»Šç¨®åˆ¥ãƒ“ãƒ¥ãƒ¼.ç¨®åˆ¥ç•¥ç§°ã®é•·ã•åˆ¶é™ã‚’åŠè§’6æ–‡å­—ã«å¤‰æ›´
+	ï¼œ8ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.æ™‚åˆ»è¨­å®šã®ãªã„åœè»Šé§…ã«ã¯â—‹è¡¨ç¤º
+	ï¼œ9ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.é§…æ‰±=åœè»Š,ç€æ™‚åˆ»=æŒ‡å®šãªã—,ç™ºæ™‚åˆ»=æŒ‡å®šãªã— ã‚’è¨±å¯ã™ã‚‹
+	ï¼œ10ï¼žã‚°ãƒªãƒƒãƒ‰å½¢å¼ãƒ“ãƒ¥ãƒ¼ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’æä¾›ã™ã‚‹
 
 
-D120720_OuDia_Unifier_CONTEXTMENU_RosenView
-	 ƒ12„OuDia.Žž•\ƒrƒ…[.[Žž•\]-[—ñŽÔ”Ô†‚Åˆê–{‰»] [12/07/15_08:37`19:00]
-	[08:44`]Develop.App.OuDia.ƒ33„OuDia_Ver1.01.03¨.ƒ13„˜Hüƒrƒ…[‚ÅƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ð’ñ‹Ÿ‚·‚é
+â—ŽD120720_OuDia_Unifier_CONTEXTMENU_RosenView
+	â–¡ï¼œ12ï¼žOuDia.æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.[æ™‚åˆ»è¡¨]-[åˆ—è»Šç•ªå·ã§ä¸€æœ¬åŒ–] [12/07/15_08:37ã€œ19:00]
+	[08:44ã€œ]Develop.App.OuDia.ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ13ï¼žè·¯ç·šãƒ“ãƒ¥ãƒ¼ã§ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’æä¾›ã™ã‚‹
 
-D120722_Homepage_OuDia_1_02_00
-	ƒ33„OuDia_Ver1.01.03¨.ƒ12„OuDia.Žž•\ƒrƒ…[.[Žž•\]-[—ñŽÔ”Ô†‚Åˆê–{‰»] 
-		ƒ}ƒjƒ…ƒAƒ‹‚ÌC³
-	ƒ33„OuDia_Ver1.01.03¨.ƒ14„Žž•\ƒrƒ…[.˜A‘±“ü—Íƒ‚[ƒh‚ð¶‰EƒL[‚ÅI—¹‚·‚é‚ÆAƒZƒ‹‚ÉƒSƒ~‚ªŽc‚é–â‘è
-	ƒ33„OuDia_Ver1.01.03¨.ƒ15„ƒŠƒŠ[ƒX€”õ
+â—ŽD120722_Homepage_OuDia_1_02_00
+	ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ12ï¼žOuDia.æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.[æ™‚åˆ»è¡¨]-[åˆ—è»Šç•ªå·ã§ä¸€æœ¬åŒ–] 
+		ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«ã®ä¿®æ­£
+	ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ14ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼.é€£ç¶šå…¥åŠ›ãƒ¢ãƒ¼ãƒ‰ã‚’å·¦å³ã‚­ãƒ¼ã§çµ‚äº†ã™ã‚‹ã¨ã€ã‚»ãƒ«ã«ã‚´ãƒŸãŒæ®‹ã‚‹å•é¡Œ
+	ï¼œ33ï¼žOuDia_Ver1.01.03â†’.ï¼œ15ï¼žãƒªãƒªãƒ¼ã‚¹æº–å‚™
 
-	ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ÉˆÈ‰º‚ð’Ç‰Á
+	ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã«ä»¥ä¸‹ã‚’è¿½åŠ 
 		sintetsu_120700.oud
 		jr_fukuchiyama_120715.oud
 
-@‚±‚±‚Ü‚ÅACVS‚ÌTagB‚±‚±‚©‚çASubversion‚ÌTags
+ã€€ã“ã“ã¾ã§ã€CVSã®Tagã€‚ã“ã“ã‹ã‚‰ã€Subversionã®Tags
 
 
-D120901_Homepage_OuDia_1_02_01
-	Develop.App.OuDia.ƒ34„OuDia_Ver.1.02¨
-	 ƒ3„Žž•\ƒrƒ…[‚Ì‰Eƒ{ƒ^ƒ“ƒƒjƒ…[‚Ì•s‹ï‡
+â—ŽD120901_Homepage_OuDia_1_02_01
+	Develop.App.OuDia.ï¼œ34ï¼žOuDia_Ver.1.02â†’
+	â–¡ï¼œ3ï¼žæ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®å³ãƒœã‚¿ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ä¸å…·åˆ
 	[WndDcdGrid2]
-	E@ƒtƒH[ƒJƒXƒZƒ‹ˆÈŠO‚ÌƒZƒ‹‚ð‰EƒNƒŠƒbƒN‚µ‚½ê‡‚ÍAƒtƒH[ƒJƒXƒZƒ‹‚ðƒNƒŠƒbƒN‚³‚ê‚½ƒZƒ‹‚ÉˆÚ“®‚·‚éB‚±‚Ì‚Æ‚«AƒZƒ‹‚Ì•¡”‘I‘ð‚Í‰ðœ‚·‚éB‚»‚ÌŒãAƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ð•\Ž¦‚·‚é
-	E@ƒtƒH[ƒJƒXƒZƒ‹‚ð‰EƒNƒŠƒbƒN‚µ‚½ê‡E‚à‚µ‚­‚ÍƒZƒ‹ˆÈŠO‚ÌêŠ‚ð‰EƒNƒŠƒbƒN‚µ‚½ê‡‚ÍAƒZƒ‹‚Ì•¡”‘I‘ð‚ðˆÛŽ‚·‚éB‚»‚ÌŒãAƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ð•\Ž¦‚·‚é
-	y——Rz
-	ƒZƒ‹‚ð•¡”‘I‘ð‚µ‚½ó‘Ô‚ÅAƒtƒH[ƒJƒXƒZƒ‹ˆÈŠO‚ÌƒZƒ‹‚ð‰EƒNƒŠƒbƒN‚·‚é‚ÆA
-	ƒZƒ‹‚ª•¡”‘I‘ð‚³‚ê‚½‚Ü‚ÜAƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ª•\Ž¦‚³‚ê‚Ä‚µ‚Ü‚¢‚Ü‚·B
-	‚±‚ê‚ÍAMicrosoft Excel ‚È‚Ç‚Ìˆê”Ê“I‚Èƒ\ƒtƒgƒEƒGƒA‚Æ‚Í“®ì‚ªˆÙ‚È‚èA•s•Ö‚ÉŠ´‚¶‚Ü‚·B
+	ãƒ»ã€€ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ä»¥å¤–ã®ã‚»ãƒ«ã‚’å³ã‚¯ãƒªãƒƒã‚¯ã—ãŸå ´åˆã¯ã€ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ã‚’ã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸã‚»ãƒ«ã«ç§»å‹•ã™ã‚‹ã€‚ã“ã®ã¨ãã€ã‚»ãƒ«ã®è¤‡æ•°é¸æŠžã¯è§£é™¤ã™ã‚‹ã€‚ãã®å¾Œã€ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’è¡¨ç¤ºã™ã‚‹
+	ãƒ»ã€€ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ã‚’å³ã‚¯ãƒªãƒƒã‚¯ã—ãŸå ´åˆãƒ»ã‚‚ã—ãã¯ã‚»ãƒ«ä»¥å¤–ã®å ´æ‰€ã‚’å³ã‚¯ãƒªãƒƒã‚¯ã—ãŸå ´åˆã¯ã€ã‚»ãƒ«ã®è¤‡æ•°é¸æŠžã‚’ç¶­æŒã™ã‚‹ã€‚ãã®å¾Œã€ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’è¡¨ç¤ºã™ã‚‹
+	ã€ç†ç”±ã€‘
+	ã‚»ãƒ«ã‚’è¤‡æ•°é¸æŠžã—ãŸçŠ¶æ…‹ã§ã€ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚»ãƒ«ä»¥å¤–ã®ã‚»ãƒ«ã‚’å³ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã¨ã€
+	ã‚»ãƒ«ãŒè¤‡æ•°é¸æŠžã•ã‚ŒãŸã¾ã¾ã€ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ãŒè¡¨ç¤ºã•ã‚Œã¦ã—ã¾ã„ã¾ã™ã€‚
+	ã“ã‚Œã¯ã€Microsoft Excel ãªã©ã®ä¸€èˆ¬çš„ãªã‚½ãƒ•ãƒˆã‚¦ã‚¨ã‚¢ã¨ã¯å‹•ä½œãŒç•°ãªã‚Šã€ä¸ä¾¿ã«æ„Ÿã˜ã¾ã™ã€‚
 	
 
-D120930_OuDia_Namespace
-	OuDia‚É–¼‘O‹óŠÔ‚ð“±“ü
+â—ŽD120930_OuDia_Namespace
+	OuDiaã«åå‰ç©ºé–“ã‚’å°Žå…¥
 	
 
-D1209301_OuDia_PreCompiledHeader
-	OuDia‚ÌƒvƒŠƒRƒ“ƒpƒCƒ‹ƒwƒbƒ_“K—p”ÍˆÍ‚ðŠg‘å
+â—ŽD1209301_OuDia_PreCompiledHeader
+	OuDiaã®ãƒ—ãƒªã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ãƒ˜ãƒƒãƒ€é©ç”¨ç¯„å›²ã‚’æ‹¡å¤§
 	
 
-D121006_OuDia_LibMerge
-	libs/cpp/OuLib/trunk ‚ÌRev.126 ˆÈ~‚ð OuDia‚Éƒ}[ƒWB
-	libs/cpp/OuMfc/trunk ‚ÌRev.126ˆÈ~‚ð OuDia‚Éƒ}[ƒWB
-	libs/cpp/DcDraw/trunk ‚ÌRev.126ˆÈ~‚ð OuDia‚Éƒ}[ƒWB
+â—ŽD121006_OuDia_LibMerge
+	libs/cpp/OuLib/trunk ã®Rev.126 ä»¥é™ã‚’ OuDiaã«ãƒžãƒ¼ã‚¸ã€‚
+	libs/cpp/OuMfc/trunk ã®Rev.126ä»¥é™ã‚’ OuDiaã«ãƒžãƒ¼ã‚¸ã€‚
+	libs/cpp/DcDraw/trunk ã®Rev.126ä»¥é™ã‚’ OuDiaã«ãƒžãƒ¼ã‚¸ã€‚
 	
 
-D130623_Homepage
-	@ƒf[ƒ^ƒtƒ@ƒCƒ‹ ‚ÉAˆÈ‰º‚Ìƒf[ƒ^‚ð’Ç‰Á‚µ‚Ü‚µ‚½B
-	‚Ý‚È‚Æ‚Ý‚ç‚¢üE“Œ‹}“Œ‰¡üE“Œ‹žƒƒgƒ•›“sSü 2013”N4ŒŽ 
-	¼“S“V_‘å–´“cE‘¾É•{EŠÃ–Øü 2012”N12ŒŽ 
-	–¼“S–¼ŒÃ‰®–{üE–Lìü 2011”N12ŒŽ17“ú 
-	@ƒŠƒ“ƒNW‚Ìˆê•”ƒGƒ“ƒgƒŠ‚ðŒ©’¼‚µ‚Ü‚µ‚½B
+â—ŽD130623_Homepage
+	ã€€ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ« ã«ã€ä»¥ä¸‹ã®ãƒ‡ãƒ¼ã‚¿ã‚’è¿½åŠ ã—ã¾ã—ãŸã€‚
+	ã¿ãªã¨ã¿ã‚‰ã„ç·šãƒ»æ±æ€¥æ±æ¨ªç·šãƒ»æ±äº¬ãƒ¡ãƒˆãƒ­å‰¯éƒ½å¿ƒç·š 2013å¹´4æœˆ 
+	è¥¿é‰„å¤©ç¥žå¤§ç‰Ÿç”°ãƒ»å¤ªå®°åºœãƒ»ç”˜æœ¨ç·š 2012å¹´12æœˆ 
+	åé‰„åå¤å±‹æœ¬ç·šãƒ»è±Šå·ç·š 2011å¹´12æœˆ17æ—¥ 
+	ã€€ãƒªãƒ³ã‚¯é›†ã®ä¸€éƒ¨ã‚¨ãƒ³ãƒˆãƒªã‚’è¦‹ç›´ã—ã¾ã—ãŸã€‚
 
-D140505_develop_app_OuDia_MultiSelectPropDlg
-	develop.app.OuDia.120902_ƒ35„OuDia_Ver.1.02.01¨1.02.02.ƒ35.2„”ñ˜A‘±‚Ì•¡”‘I‘ðƒvƒƒpƒeƒBƒ_ƒCƒAƒƒO
+â—ŽD140505_develop_app_OuDia_MultiSelectPropDlg
+	develop.app.OuDia.120902_ï¼œ35ï¼žOuDia_Ver.1.02.01â†’1.02.02.ï¼œ35.2ï¼žéžé€£ç¶šã®è¤‡æ•°é¸æŠžãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ€ã‚¤ã‚¢ãƒ­ã‚°
 
-D140802_Homepage_OuDia_1_02_02
-	OuDia 1.02.02 ‚ðƒŠƒŠ[ƒX‚µ‚Ü‚µ‚½B
-
-
-D160819_develop_app_OuDia_CPropEditUi2
-	develop.app.OuDia.151230_”­’…”Ôü.ƒ2„ŽÀ‘•.ƒ2.3„Šù‘¶ƒR[ƒh‚ÌƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒO.ƒ2.3.2„libs.ƒ2.3.2.4„CPropEditUi‚ÌƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒO(c#”Å‚Ì‹t—A“ü)
-
-D160828_Lacoocan_Mini
-	ƒz[ƒ€ƒy[ƒWƒT[ƒrƒX‚ðA@nifty ‚Ìw@homepagex‚©‚çAw@niftyƒz[ƒ€ƒy[ƒWƒT[ƒrƒXx‚É•ÏX‚µ‚Ü‚µ‚½(w@homepagex‚ÌƒT[ƒrƒXI—¹‚Ì‚½‚ß)
-
-D161125_Homepage_OuDia_1_02_03
-	OuDia 1.02.03 ‚ðƒŠƒŠ[ƒX‚µ‚Ü‚µ‚½B
+â—ŽD140802_Homepage_OuDia_1_02_02
+	OuDia 1.02.02 ã‚’ãƒªãƒªãƒ¼ã‚¹ã—ã¾ã—ãŸã€‚
 
 
-D161126_Homepage_OuDia_1_02_04
-	OuDia 1.02.04 ‚ðƒŠƒŠ[ƒX‚µ‚Ü‚µ‚½B
+â—ŽD160819_develop_app_OuDia_CPropEditUi2
+	develop.app.OuDia.151230_ç™ºç€ç•ªç·š.ï¼œ2ï¼žå®Ÿè£….ï¼œ2.3ï¼žæ—¢å­˜ã‚³ãƒ¼ãƒ‰ã®ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°.ï¼œ2.3.2ï¼žlibs.ï¼œ2.3.2.4ï¼žCPropEditUiã®ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°(c#ç‰ˆã®é€†è¼¸å…¥)
 
-D170121_Homepage_OuDia_1_02_05
-	OuDia 1.02.05 ‚ðƒŠƒŠ[ƒX‚µ‚Ü‚µ‚½B
+â—ŽD160828_Lacoocan_Mini
+	ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã‚µãƒ¼ãƒ“ã‚¹ã‚’ã€@nifty ã®ã€Ž@homepageã€ã‹ã‚‰ã€ã€Ž@niftyãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã‚µãƒ¼ãƒ“ã‚¹ã€ã«å¤‰æ›´ã—ã¾ã—ãŸ(ã€Ž@homepageã€ã®ã‚µãƒ¼ãƒ“ã‚¹çµ‚äº†ã®ãŸã‚)
+
+â—ŽD161125_Homepage_OuDia_1_02_03
+	OuDia 1.02.03 ã‚’ãƒªãƒªãƒ¼ã‚¹ã—ã¾ã—ãŸã€‚
+
+
+â—ŽD161126_Homepage_OuDia_1_02_04
+	OuDia 1.02.04 ã‚’ãƒªãƒªãƒ¼ã‚¹ã—ã¾ã—ãŸã€‚
+
+â—ŽD170121_Homepage_OuDia_1_02_05
+	OuDia 1.02.05 ã‚’ãƒªãƒªãƒ¼ã‚¹ã—ã¾ã—ãŸã€‚
 
 
 ------------------------------
-ƒ3.2„Branches
+ï¼œ3.2ï¼žBranches
 ------------------------------
-D161126_Homepage_OuDia_1_02_04
-	ƒ^ƒO D161126_Homepage_OuDia_1_02_04 ‚©‚ç branches ‚ÉƒRƒs[
+â—ŽD161126_Homepage_OuDia_1_02_04
+	ã‚¿ã‚° D161126_Homepage_OuDia_1_02_04 ã‹ã‚‰ branches ã«ã‚³ãƒ”ãƒ¼
 
 
 
 
 ------------------------------
-ƒ4„Libs‚ÌTag
+ï¼œ4ï¼žLibsã®Tag
 --------------------------------
 	
-Branch_OuDia
-	Libs‚É•t—^‚³‚ê‚½AOuDiaƒrƒ‹ƒh—pƒ^ƒO
+â—ŽBranch_OuDia
+	Libsã«ä»˜ä¸Žã•ã‚ŒãŸã€OuDiaãƒ“ãƒ«ãƒ‰ç”¨ã‚¿ã‚°
 	
-@‚±‚±‚Ü‚ÅACVS‚ÌBranchB‚±‚±‚©‚çASubVersion‚ÌBranches
+ã€€ã“ã“ã¾ã§ã€CVSã®Branchã€‚ã“ã“ã‹ã‚‰ã€SubVersionã®Branches
 
 
 

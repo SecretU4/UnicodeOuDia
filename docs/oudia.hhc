@@ -6,372 +6,372 @@
 </HEAD><BODY>
 <UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="‚±‚Ì•¶‘‚Ì’˜ìŒ •\Ž¦">
+		<param name="Name" value="ã“ã®æ–‡æ›¸ã®è‘—ä½œæ¨©è¡¨ç¤º">
 		<param name="Local" value="oudia_manual/c00_copyright/copyright.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="1. OuDia‚É‚Â‚¢‚Ä">
+		<param name="Name" value="1. OuDiaã«ã¤ã„ã¦">
 		<param name="Local" value="oudia_manual\c01_about\about.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="2. OuDia‘€ìƒKƒCƒh">
+		<param name="Name" value="2. OuDiaæ“ä½œã‚¬ã‚¤ãƒ‰">
 		<param name="Local" value="oudia_manual\c02_usersguide/index.html">
 		</OBJECT>
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="2.1. Šî–{“I‚ÈŽg‚¢•û">
+			<param name="Name" value="2.1. åŸºæœ¬çš„ãªä½¿ã„æ–¹">
 			<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/index.html">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.1.1. ˜Hüƒtƒ@ƒCƒ‹‚ðŠJ‚­">
+				<param name="Name" value="2.1.1. è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã">
 				<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c01_fileopen/index.html">
 				</OBJECT>
 			<UL>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.1.1. OuDia‚ð‹N“®">
+					<param name="Name" value="2.1.1.1. OuDiaã‚’èµ·å‹•">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c01_fileopen/c01_kidou/kidou.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.1.2. ˜Hüƒtƒ@ƒCƒ‹‚ðŠJ‚­">
+					<param name="Name" value="2.1.1.2. è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c01_fileopen/c02_open/open.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.1.3. Žž•\‚ð•\Ž¦‚³‚¹‚é">
+					<param name="Name" value="2.1.1.3. æ™‚åˆ»è¡¨ã‚’è¡¨ç¤ºã•ã›ã‚‹">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c01_fileopen/c03_jikokuhyouview/jikokuhyouview.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.1.4. ƒ_ƒCƒ„ƒOƒ‰ƒ€‚ð•\Ž¦‚³‚¹‚é">
+					<param name="Name" value="2.1.1.4. ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’è¡¨ç¤ºã•ã›ã‚‹">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c01_fileopen/c04_diagramview/diagramview.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.1.5. ƒRƒƒ“ƒg‚ð•\Ž¦‚³‚¹‚é">
+					<param name="Name" value="2.1.1.5. ã‚³ãƒ¡ãƒ³ãƒˆã‚’è¡¨ç¤ºã•ã›ã‚‹">
 					<param name="Local" value="oudia_manual\c02_usersguide\c01_tutorial\c01_fileopen\c05_commentview\commentview.html">
 					<param name="URL" value="oudia_manual\c02_usersguide\c01_tutorial\c01_fileopen\c05_commentview\commentview.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.1.6. Žž•\‚ðˆóü‚·‚é">
+					<param name="Name" value="2.1.1.6. æ™‚åˆ»è¡¨ã‚’å°åˆ·ã™ã‚‹">
 					<param name="Local" value="oudia_manual\c02_usersguide\c01_tutorial\c01_fileopen\c06_jikokuhyouprint\jikokuhyouprint.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.1.7. ƒ_ƒCƒ„ƒOƒ‰ƒ€‚ðˆóü‚·‚é">
+					<param name="Name" value="2.1.1.7. ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’å°åˆ·ã™ã‚‹">
 					<param name="Local" value="oudia_manual\c02_usersguide\c01_tutorial\c01_fileopen\c07_diagramprint\diagramprint.html">
 					</OBJECT>
 			</UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.1.2. ˜Hüƒtƒ@ƒCƒ‹‚ðV‹Kì¬">
+				<param name="Name" value="2.1.2. è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ–°è¦ä½œæˆ">
 				<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c02_filenew/index.html">
 				</OBJECT>
 			<UL>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.2.1. OuDiaƒf[ƒ^‚ðV‹Kì¬">
+					<param name="Name" value="2.1.2.1. OuDiaãƒ‡ãƒ¼ã‚¿ã‚’æ–°è¦ä½œæˆ">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c02_filenew/c01_filenew/filenew.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.2.2. ˜Hü–¼‚ðÝ’è">
+					<param name="Name" value="2.1.2.2. è·¯ç·šåã‚’è¨­å®š">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c02_filenew/c02_rosenmei/rosenmei.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.2.3 ‰w‚Ì“ü—Í">
+					<param name="Name" value="2.1.2.3 é§…ã®å…¥åŠ›">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c02_filenew/c03_eki/eki.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.2.4 —ñŽÔŽí•Ê‚Ì“ü—Í">
+					<param name="Name" value="2.1.2.4 åˆ—è»Šç¨®åˆ¥ã®å…¥åŠ›">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c02_filenew/c04_ressyasyubetsu/ressyasyubetsu.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.2.5 ƒ_ƒCƒ„‚ðV‹Kì¬">
+					<param name="Name" value="2.1.2.5 ãƒ€ã‚¤ãƒ¤ã‚’æ–°è¦ä½œæˆ">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c02_filenew/c05_dia/dia.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.2.6@—ñŽÔ‚Ì“ü—Í">
+					<param name="Name" value="2.1.2.6ã€€åˆ—è»Šã®å…¥åŠ›">
 					<param name="Local" value="oudia_manual\c02_usersguide/c01_tutorial/c02_filenew/c06_ressya/ressya.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.2.7. —ñŽÔ‚Ì“ü—Í‚É‚Â‚¢‚Ä‚Ì•â‘«">
+					<param name="Name" value="2.1.2.7. åˆ—è»Šã®å…¥åŠ›ã«ã¤ã„ã¦ã®è£œè¶³">
 					<param name="Local" value="oudia_manual\c02_usersguide\c01_tutorial\c02_filenew\c07_ressya_chuui\ressyanyuuryoku_chuui.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.2.8. ƒRƒƒ“ƒg‚Ì“ü—Í">
+					<param name="Name" value="2.1.2.8. ã‚³ãƒ¡ãƒ³ãƒˆã®å…¥åŠ›">
 					<param name="Local" value="oudia_manual\c02_usersguide\c01_tutorial\c02_filenew\c08_comment\comment.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2.1.2.9. ˜Hüƒtƒ@ƒCƒ‹‚Éƒf[ƒ^‚ð•Û‘¶">
+					<param name="Name" value="2.1.2.9. è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã«ãƒ‡ãƒ¼ã‚¿ã‚’ä¿å­˜">
 					<param name="Local" value="oudia_manual\c02_usersguide\c01_tutorial\c02_filenew\c09_filesave\filesave.html">
 					</OBJECT>
 			</UL>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="2.2. WinDIA ƒtƒ@ƒCƒ‹‚Ì“Ç‚Ýž‚ÝE•Û‘¶">
+			<param name="Name" value="2.2. WinDIA ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ãƒ»ä¿å­˜">
 			<param name="Local" value="oudia_manual\c02_usersguide/c02_windia/windia.html">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.2.1. WinDIAŒ`Ž®ƒtƒ@ƒCƒ‹‚Ì“Ç‚Ýž‚Ý">
+				<param name="Name" value="2.2.1. WinDIAå½¢å¼ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿">
 				<param name="Local" value="oudia_manual\c02_usersguide/c02_windia/windia.html#windia_open">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.2.2. WinDIAŒ`Ž®‚Ìƒtƒ@ƒCƒ‹‚É•Û‘¶">
+				<param name="Name" value="2.2.2. WinDIAå½¢å¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«ä¿å­˜">
 				<param name="Local" value="oudia_manual\c02_usersguide/c02_windia/windia.html#windia_save">
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="2.3. —ñŽÔ‚Ì‚¢‚ë‚¢‚ë‚È“ü—Í•û–@">
+			<param name="Name" value="2.3. åˆ—è»Šã®ã„ã‚ã„ã‚ãªå…¥åŠ›æ–¹æ³•">
 			<param name="Local" value="oudia_manual\c02_usersguide/c03_ressyanyuuryoku/index.html">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.1. [‰wŽž]ƒ_ƒCƒAƒƒO‚Ì•Ö—˜‚ÈŽg‚¢•û">
+				<param name="Name" value="2.3.1. [é§…æ™‚åˆ»]ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã®ä¾¿åˆ©ãªä½¿ã„æ–¹">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c01_ekijikokudlg\ekijikokudlg.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.2. —ñŽÔ‚Ì‰wŽž‚ÌŒJã‚°EŒJ‰º‚°">
+				<param name="Name" value="2.3.2. åˆ—è»Šã®é§…æ™‚åˆ»ã®ç¹°ä¸Šã’ãƒ»ç¹°ä¸‹ã’">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c02_kuriage\kuriage.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.3. ˜A‘±“ü—Íƒ‚[ƒh ">
+				<param name="Name" value="2.3.3. é€£ç¶šå…¥åŠ›ãƒ¢ãƒ¼ãƒ‰ ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c03_renzokunyuuryoku\renzokunyuuryoku.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.4. ‰wŽž‚ð‘}“ü^íœi‰wŽž‚ðã‰º‚ÉˆÚ“®j ">
+				<param name="Name" value="2.3.4. é§…æ™‚åˆ»ã‚’æŒ¿å…¥ï¼å‰Šé™¤ï¼ˆé§…æ™‚åˆ»ã‚’ä¸Šä¸‹ã«ç§»å‹•ï¼‰ ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c04_ekijikokusounyuu\ekijikokusounyuu.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.5. ƒtƒH[ƒJƒXˆÚ“®ƒ‚[ƒh">
+				<param name="Name" value="2.3.5. ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ç§»å‹•ãƒ¢ãƒ¼ãƒ‰">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c05_focusidou\focusidou.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.6. [•ÒW]ƒƒjƒ…[‚ÌŠî–{i—ñŽÔ‚ÌƒRƒs[Eƒy[ƒXƒgj ">
+				<param name="Name" value="2.3.6. [ç·¨é›†]ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®åŸºæœ¬ï¼ˆåˆ—è»Šã®ã‚³ãƒ”ãƒ¼ãƒ»ãƒšãƒ¼ã‚¹ãƒˆï¼‰ ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c06_hensyumenu\hensyumenu.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.7. •¡”—ñŽÔ‚ÌØ‚èŽæ‚èEƒRƒs[E“\‚è•t‚¯EÁ‹Ž ">
+				<param name="Name" value="2.3.7. è¤‡æ•°åˆ—è»Šã®åˆ‡ã‚Šå–ã‚Šãƒ»ã‚³ãƒ”ãƒ¼ãƒ»è²¼ã‚Šä»˜ã‘ãƒ»æ¶ˆåŽ» ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c07_fukusuuressya_kiritori\fukusuuressya_kiritori.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.8. ƒpƒ^[ƒ“ƒ_ƒCƒ„‚Ì˜A‘±“\‚è•t‚¯i“\‚è•t‚¯ˆÚ“®—Êj ">
+				<param name="Name" value="2.3.8. ãƒ‘ã‚¿ãƒ¼ãƒ³ãƒ€ã‚¤ãƒ¤ã®é€£ç¶šè²¼ã‚Šä»˜ã‘ï¼ˆè²¼ã‚Šä»˜ã‘ç§»å‹•é‡ï¼‰ ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c08_patterndia\patterndia.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.9. ‚Q–{‚Ì—ñŽÔ‚ð‚P–{‚Ì’¼’Ê—ñŽÔ‚É‚·‚é">
+				<param name="Name" value="2.3.9. ï¼’æœ¬ã®åˆ—è»Šã‚’ï¼‘æœ¬ã®ç›´é€šåˆ—è»Šã«ã™ã‚‹">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c09_chokutsuu\chokutsuu.html">
 				</OBJECT>
 			<UL>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="1.[‰wŽž]-[’¼’Ê‰»]iŽ©“®•ûŽ®j ">
+					<param name="Name" value="1.[é§…æ™‚åˆ»]-[ç›´é€šåŒ–]ï¼ˆè‡ªå‹•æ–¹å¼ï¼‰ ">
 					<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c09_chokutsuu\c01_direct\direct.html">
 					<param name="URL" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c09_chokutsuu\c01_direct\direct.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="2. [•ÒW]-[Žž‚Ì‚Ý“\‚è•t‚¯] (Žè“®•ûŽ®) ">
+					<param name="Name" value="2. [ç·¨é›†]-[æ™‚åˆ»ã®ã¿è²¼ã‚Šä»˜ã‘] (æ‰‹å‹•æ–¹å¼) ">
 					<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c09_chokutsuu\c02_ekijikoku_paste\ekijikoku_paste.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="3. [Žž•\]-[—ñŽÔ”Ô†‚Åˆê–{‰»]i‘SŽ©“®•ûŽ®j">
+					<param name="Name" value="3. [æ™‚åˆ»è¡¨]-[åˆ—è»Šç•ªå·ã§ä¸€æœ¬åŒ–]ï¼ˆå…¨è‡ªå‹•æ–¹å¼ï¼‰">
 					<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c09_chokutsuu\c03_unify\jikokuhyouview_unify.htm">
 					</OBJECT>
 			</UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.10. —ñŽÔ‚Ì‰^“]‹æŠÔ‚ð“r’†‚Å‘Å‚¿Ø‚é ">
+				<param name="Name" value="2.3.10. åˆ—è»Šã®é‹è»¢åŒºé–“ã‚’é€”ä¸­ã§æ‰“ã¡åˆ‡ã‚‹ ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c10_uchikiri\uchikiri.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.11. —ñŽÔ‚Ì‰wŽž‚Ì˜A‘±‚P•ªC³ ">
+				<param name="Name" value="2.3.11. åˆ—è»Šã®é§…æ™‚åˆ»ã®é€£ç¶šï¼‘åˆ†ä¿®æ­£ ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c11_renzoku1syuusei\renzoku1syuusei.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.12. ‘½”‚Ì—ñŽÔ‚Ì‰wŽž‚ð•ÏXiw‰wŽž•ÏXx‹@”\j ">
+				<param name="Name" value="2.3.12. å¤šæ•°ã®åˆ—è»Šã®é§…æ™‚åˆ»ã‚’å¤‰æ›´ï¼ˆã€Žé§…æ™‚åˆ»å¤‰æ›´ã€æ©Ÿèƒ½ï¼‰ ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c12_modifyekijikokuoperation\modifyekijikokuoperation.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.13. Žxü‚ª•ªŠò‚·‚é˜Hü‚ð\¬ ">
+				<param name="Name" value="2.3.13. æ”¯ç·šãŒåˆ†å²ã™ã‚‹è·¯ç·šã‚’æ§‹æˆ ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c13_sisen\sisen.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.14. ‰wŠÔÅ¬Š—vŽžŠÔE‰wŠÔÅ¬Š—vŽžŠÔ—ñŽÔ">
+				<param name="Name" value="2.3.14. é§…é–“æœ€å°æ‰€è¦æ™‚é–“ãƒ»é§…é–“æœ€å°æ‰€è¦æ™‚é–“åˆ—è»Š">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c14_ekikansaisyousec\ekikansaisyousec.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.15 [‰wŽžŒ`Ž®]•ÏXŽž‚ÌA—ñŽÔ‚Ì‰wŽž•ÏX">
+				<param name="Name" value="2.3.15 [é§…æ™‚åˆ»å½¢å¼]å¤‰æ›´æ™‚ã®ã€åˆ—è»Šã®é§…æ™‚åˆ»å¤‰æ›´">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c15_ekijikokukeisikihenkou\ekijikokukeisikihenkou.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.16. Žž•\CSVƒtƒ@ƒCƒ‹‚Ö‚ÌƒGƒNƒXƒ|[ƒg">
+				<param name="Name" value="2.3.16. æ™‚åˆ»è¡¨CSVãƒ•ã‚¡ã‚¤ãƒ«ã¸ã®ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c16_jikokuhyoucsv\jikokuhyoucsv.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.17. ˜Hüƒtƒ@ƒCƒ‹‚Ì‘g“ü‚ê">
+				<param name="Name" value="2.3.17. è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®çµ„å…¥ã‚Œ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c17_rosen_add\rosen_add.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.18. ˜Hüƒtƒ@ƒCƒ‹‚ÌØ‚èo‚µ">
+				<param name="Name" value="2.3.18. è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®åˆ‡ã‚Šå‡ºã—">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c18_createsubrosen\createsubrosen.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.3.19. Žž•\ƒrƒ…[‚Å‚Ì—ñŽÔ‚Ì•À‚×‘Ö‚¦">
+				<param name="Name" value="2.3.19. æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã®åˆ—è»Šã®ä¸¦ã¹æ›¿ãˆ">
 				<param name="Local" value="oudia_manual\c02_usersguide\c03_ressyanyuuryoku\c19_jikokuhyousort\jikokuhyousort.htm">
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="2.4. ‚¢‚ë‚¢‚ë‚ÈÝ’è€–Ú">
+			<param name="Name" value="2.4. ã„ã‚ã„ã‚ãªè¨­å®šé …ç›®">
 			<param name="Local" value="oudia_manual\c02_usersguide/c04_settei/index.html">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.4.1. ‰w–¼—“‚Ì•">
+				<param name="Name" value="2.4.1. é§…åæ¬„ã®å¹…">
 				<param name="Local" value="oudia_manual\c02_usersguide/c04_settei/index.html#EkimeiLength">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.4.2. Žž•\‚Ì—ñŽÔ‚Ì•">
+				<param name="Name" value="2.4.2. æ™‚åˆ»è¡¨ã®åˆ—è»Šã®å¹…">
 				<param name="Local" value="oudia_manual\c02_usersguide/c04_settei/index.html#JikokuhyouRessyaWidth">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.4.3. ƒ_ƒCƒ„ƒOƒ‰ƒ€‹N“_Žž">
+				<param name="Name" value="2.4.3. ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ èµ·ç‚¹æ™‚åˆ»">
 				<param name="Local" value="oudia_manual\c02_usersguide\c04_settei\index.html#DiagramKitenJikoku">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.4.4. ƒ_ƒCƒ„ƒOƒ‰ƒ€‚ÌŠù’è‚Ì‰wŠÔ•">
+				<param name="Name" value="2.4.4. ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®æ—¢å®šã®é§…é–“å¹…">
 				<param name="Local" value="oudia_manual\c02_usersguide\c04_settei\index.html#DiagramDgrYZahyouKyoriDefault">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="2.4.5.ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚Å‚Ì’âŽÔ‰w–¾Ž¦">
+				<param name="Name" value="2.4.5.ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§ã®åœè»Šé§…æ˜Žç¤º">
 				<param name="Local" value="oudia_manual\c02_usersguide\c04_settei\index.html#StopMark">
 				</OBJECT>
 		</UL>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="3. ƒŠƒtƒ@ƒŒƒ“ƒX">
+		<param name="Name" value="3. ãƒªãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹">
 		<param name="Local" value="oudia_manual\c03_reference/index.html">
 		</OBJECT>
 	<UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="3.1.@ƒƒCƒ“ƒEƒCƒ“ƒhƒE">
+			<param name="Name" value="3.1.ã€€ãƒ¡ã‚¤ãƒ³ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦">
 			<param name="Local" value="oudia_manual\c03_reference/c01_mainwindow/index.html">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.1.1.@ƒƒjƒ…[ƒRƒ}ƒ“ƒh">
+				<param name="Name" value="3.1.1.ã€€ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚³ãƒžãƒ³ãƒ‰">
 				<param name="Local" value="oudia_manual\c03_reference/c01_mainwindow/index.html">
 				</OBJECT>
 			<UL>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="3.1.1.1. [ƒtƒ@ƒCƒ‹]">
+					<param name="Name" value="3.1.1.1. [ãƒ•ã‚¡ã‚¤ãƒ«]">
 					<param name="Local" value="oudia_manual\c03_reference/c01_mainwindow/menu_file.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="3.1.1.2 [•\Ž¦]">
+					<param name="Name" value="3.1.1.2 [è¡¨ç¤º]">
 					<param name="Local" value="oudia_manual\c03_reference/c01_mainwindow/menu_hyouji.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="3.1.1.3@[ƒEƒCƒ“ƒhƒE]">
+					<param name="Name" value="3.1.1.3ã€€[ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦]">
 					<param name="Local" value="oudia_manual\c03_reference/c01_mainwindow/menu_window.html">
 					</OBJECT>
 				<LI> <OBJECT type="text/sitemap">
-					<param name="Name" value="3.1.1.4 [ƒwƒ‹ƒv]">
+					<param name="Name" value="3.1.1.4 [ãƒ˜ãƒ«ãƒ—]">
 					<param name="Local" value="oudia_manual\c03_reference/c01_mainwindow/menu_help.html">
 					</OBJECT>
 			</UL>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="3.2. ˜Hüƒrƒ…[">
+			<param name="Name" value="3.2. è·¯ç·šãƒ“ãƒ¥ãƒ¼">
 			<param name="Local" value="oudia_manual\c03_reference/c02_rosenview/rosenview.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="3.3. ‰wƒrƒ…[">
+			<param name="Name" value="3.3. é§…ãƒ“ãƒ¥ãƒ¼">
 			<param name="Local" value="oudia_manual\c03_reference/c03_ekiview/ekiview.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="3.4. —ñŽÔŽí•Êƒrƒ…[">
+			<param name="Name" value="3.4. åˆ—è»Šç¨®åˆ¥ãƒ“ãƒ¥ãƒ¼">
 			<param name="Local" value="oudia_manual\c03_reference/c04_ressyasyubetsuview/ressyasyubetsuview.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="3.5.@Žž•\ƒrƒ…[">
+			<param name="Name" value="3.5.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼">
 			<param name="Local" value="oudia_manual\c03_reference/c05_jikokuhyouview/jikokuhyouview.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="3.6. ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[">
+			<param name="Name" value="3.6. ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼">
 			<param name="Local" value="oudia_manual\c03_reference/c06_diagramview/diagramview.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="3.7. ƒRƒƒ“ƒgƒrƒ…[">
+			<param name="Name" value="3.7. ã‚³ãƒ¡ãƒ³ãƒˆãƒ“ãƒ¥ãƒ¼">
 			<param name="Local" value="oudia_manual\c03_reference\c07_commentview\commentview.html">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="3.8. ƒ_ƒCƒAƒƒO">
+			<param name="Name" value="3.8. ãƒ€ã‚¤ã‚¢ãƒ­ã‚°">
 			</OBJECT>
 		<UL>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.1. ˆóüƒy[ƒWÝ’è">
+				<param name="Name" value="3.8.1. å°åˆ·ãƒšãƒ¼ã‚¸è¨­å®š">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c01_dlgprintpageprop/dlgprintpageprop.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.2.@˜Hüƒtƒ@ƒCƒ‹‚ÌƒvƒƒpƒeƒB">
+				<param name="Name" value="3.8.2.ã€€è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c02_dlgrosenprop/dlgrosenprop.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.3. •Û‘¶‚·‚éƒ_ƒCƒ„‚Ì‘I‘ð">
+				<param name="Name" value="3.8.3. ä¿å­˜ã™ã‚‹ãƒ€ã‚¤ãƒ¤ã®é¸æŠž">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c03_dlgdiasaveselect/dlgdiasaveselect.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.4.@‰w‚ÌƒvƒƒpƒeƒB">
+				<param name="Name" value="3.8.4.ã€€é§…ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c04_dlgekiprop/dlgekiprop.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.5.@—ñŽÔŽí•Ê‚ÌƒvƒƒpƒeƒB">
+				<param name="Name" value="3.8.5.ã€€åˆ—è»Šç¨®åˆ¥ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c05_dlgressyasyubetsu/dlgressyasyubetsu.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.6.@ƒ_ƒCƒ„ˆê——">
+				<param name="Name" value="3.8.6.ã€€ãƒ€ã‚¤ãƒ¤ä¸€è¦§">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c06_dlgdialist/dlgdialist.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.7.@ƒ_ƒCƒ„‚ÌƒvƒƒpƒeƒB">
+				<param name="Name" value="3.8.7.ã€€ãƒ€ã‚¤ãƒ¤ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c07_dlgdiaprop/dlgdiaprop.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.8.@—ñŽÔ‚ÌƒvƒƒpƒeƒB">
+				<param name="Name" value="3.8.8.ã€€åˆ—è»Šã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c08_dlgressyaprop/dlgressyaprop.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.9.@‰wŽž">
+				<param name="Name" value="3.8.9.ã€€é§…æ™‚åˆ»">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c09_dlgekijikoku/dlgekijikoku.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.10.@Žž•\ƒrƒ…[‚ÌƒvƒƒpƒeƒB">
+				<param name="Name" value="3.8.10.ã€€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c10_dlgjikokuhyouprop/dlgjikokuhyouprop.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.11.@ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚ÌƒvƒƒpƒeƒB">
+				<param name="Name" value="3.8.11.ã€€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c11_dlgdiagramviewprop/dlgdiagramviewprop.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.12. ‰wŽž•ÏX">
+				<param name="Name" value="3.8.12. é§…æ™‚åˆ»å¤‰æ›´">
 				<param name="Local" value="oudia_manual\c03_reference/c08_dialog/c12_dlgmodifyekijikokuoperation/dlgmodifyekijikokuoperation.html">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.13. CSV‚ÖƒGƒNƒXƒ|[ƒg">
+				<param name="Name" value="3.8.13. CSVã¸ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆ">
 				<param name="Local" value="oudia_manual\c03_reference\c08_dialog\c13_cdlgoujikokuhyoucsvexport\cdlgoujikokuhyoucsvexport_00.htm">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.14. ˜Hüƒtƒ@ƒCƒ‹‚Ì‘g“ü‚ê">
+				<param name="Name" value="3.8.14. è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®çµ„å…¥ã‚Œ">
 				<param name="Local" value="oudia_manual\c03_reference\c08_dialog\c14_cdlgrosenfileinsert\cdlgrosenfileinsert_00.htm">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="3.8.15. ˜Hüƒtƒ@ƒCƒ‹‚ÌØ‚èo‚µ">
+				<param name="Name" value="3.8.15. è·¯ç·šãƒ•ã‚¡ã‚¤ãƒ«ã®åˆ‡ã‚Šå‡ºã—">
 				<param name="Local" value="oudia_manual\c03_reference\c08_dialog\c15_cdlgrosencreatesubrosen\cdlgrosencreatesubrosen_00.htm">
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="3.9.ƒOƒŠƒbƒhŒ`Ž®ƒrƒ…[">
+			<param name="Name" value="3.9.ã‚°ãƒªãƒƒãƒ‰å½¢å¼ãƒ“ãƒ¥ãƒ¼">
 			<param name="Local" value="oudia_manual\c03_reference\c09_gridview\gridview.htm">
 			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="ƒTƒ“ƒvƒ‹ƒf[ƒ^ƒtƒ@ƒCƒ‹">
+		<param name="Name" value="ã‚µãƒ³ãƒ—ãƒ«ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«">
 		<param name="Local" value="oudia_manual\c81_sample\sample.html">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="—˜—p‹–‘øŒ_–ñ‘">
+		<param name="Name" value="åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸">
 		<param name="Local" value="oudia_manual\c91_siyoujouken\riyoukyodakukoku.html">
 		</OBJECT>
 	<UL>
@@ -380,7 +380,7 @@
 			<param name="Local" value="oudia_manual\c91_siyoujouken\gpl-3.0.txt">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="GNU ˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘(GNU General Public License) “ú–{Œê–ó">
+			<param name="Name" value="GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸(GNU General Public License) æ—¥æœ¬èªžè¨³">
 			<param name="Local" value="oudia_manual\c91_siyoujouken\gpl-3.0.ja.txt">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
@@ -388,12 +388,12 @@
 			<param name="Local" value="oudia_manual\c91_siyoujouken\fdl-1.3.txt">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="GNU ƒtƒŠ[•¶‘—˜—p‹–‘øŒ_–ñ‘(GNU Free Documentation License)“ú–{Œê–ó ">
+			<param name="Name" value="GNU ãƒ•ãƒªãƒ¼æ–‡æ›¸åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸(GNU Free Documentation License)æ—¥æœ¬èªžè¨³ ">
 			<param name="Local" value="oudia_manual\c91_siyoujouken\fdl-1.2.ja.txt">
 			</OBJECT>
 	</UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="OuDia ƒo[ƒWƒ‡ƒ“—š—ð">
+		<param name="Name" value="OuDia ãƒãƒ¼ã‚¸ãƒ§ãƒ³å±¥æ­´">
 		<param name="Local" value="oudia_manual\c92_change\change.html">
 		</OBJECT>
 </UL>
