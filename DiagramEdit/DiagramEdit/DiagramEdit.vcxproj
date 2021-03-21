@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -519,6 +519,7 @@ copy /Y $(ProjectDir)..\$(Configuration)\*.chm $(SolutionDir)DiagramEdit_setup\C
     <Image Include="res\tree_ros.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="ClassDiagram1.cd" />
     <None Include="DiagramEdit.reg" />
     <None Include="res\DiagramEdit.rc2" />
