@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -114,7 +114,7 @@ int CconvCDedRosenFileData_03::CDedRosenFileData_to_CdConnectedString(
 			aCDedRosenFileData.getCentDedRosen() ,
 			&connectstrRosen ) ;
 		if ( iResult < 0 ){
-			iRv = -11 ;	//	Rosen �̓��e���s��
+			iRv = -11 ;	//	Rosen の内容が不正
 		}	else	{
 			pCdConnectedString->setSubitem( 
 				string( nameRosen ) + '.' , connectstrRosen ) ;
@@ -129,7 +129,7 @@ int CconvCDedRosenFileData_03::CDedRosenFileData_to_CdConnectedString(
 			aCDedRosenFileData.getCdDedDispProp() ,
 			&connectstrDispProp ) ;
 		if ( iResult < 0 ){
-			iRv = -21 ;	//	DispProp �̓��e���s��
+			iRv = -21 ;	//	DispProp の内容が不正
 		}	else	{
 			pCdConnectedString->setSubitem( 
 				string( nameDispProp ) + '.' , connectstrDispProp ) ;
@@ -152,7 +152,7 @@ int CconvCDedRosenFileData_03::CDedRosenFileData_from_CdConnectedString(
 		int iResult = isEncodeAbleFormat( aCdConnectedString ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -1 ;	//	FileType ������������܂���B
+			iRv = -1 ;	//	FileType が正しくありません。
 		}
 	}
 	if ( iRv >= 0 ){
@@ -170,7 +170,7 @@ int CconvCDedRosenFileData_03::CDedRosenFileData_from_CdConnectedString(
 		int iResult = aCconvCentDed_03.CentDedRosen_From_CdConnectedString( 
 			&aCentDedRosen ,connectstrRosen ) ;
 		if ( iResult < 0 ){
-			iRv = -11 ;	//	Rosen �̓��e���s��
+			iRv = -11 ;	//	Rosen の内容が不正
 		}	else	{
 			*pCDedRosenFileData->getCentDedRosen() = aCentDedRosen ;
 		}
@@ -187,7 +187,7 @@ int CconvCDedRosenFileData_03::CDedRosenFileData_from_CdConnectedString(
 			&aCdDedDispProp ,
 			connectstrDispProp ) ;
 		if ( iResult < 0 ){
-			iRv = -21 ;	//	DispProp �̓��e���s��
+			iRv = -21 ;	//	DispProp の内容が不正
 		}	else	{
 			pCDedRosenFileData->setCdDedDispProp( aCdDedDispProp ) ;
 		}
@@ -203,7 +203,7 @@ int CconvCDedRosenFileData_03::isEncodeAbleFormat(
 	string strFileType = aCdConnectedString.getValue( nameFileType ) ;
 	if ( strFileType != getFileType() )
 	{
-		iRv = -1 ;	//	FileType ������������܂���B
+		iRv = -1 ;	//	FileType が正しくありません。
 	}
 	return iRv ;
 }
@@ -221,8 +221,8 @@ int CconvCDedRosenFileData_03::CDedRosenFileData_to_string(
 		int iResult = CDedRosenFileData_to_CdConnectedString( 
 			aCDedRosenFileData , &aCdConnectedString2 ) ;
 		//iResult = 
-		//	-11 ;	//	Rosen �̓��e���s��
-		//	-21 ;	//	DispProp �̓��e���s��
+		//	-11 ;	//	Rosen の内容が不正
+		//	-21 ;	//	DispProp の内容が不正
 		if ( iResult < 0 ){
 			iRv = iResult ;
 		}
@@ -264,10 +264,10 @@ int CconvCDedRosenFileData_03::CDedRosenFileData_from_string(
 	{
 		CConnectedStringCompress	aCompress( '.' ) ;
 		int iResult = aCompress.decode( strOudFile , &aCdConnectedString )  ;
-		//	-	-1 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B
+		//	-	-1 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。
 		if ( iResult < 0 )
 		{
-			iRv = -101 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+			iRv = -101 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 		}
 	}
 	if ( iRv >= 0 )
@@ -275,9 +275,9 @@ int CconvCDedRosenFileData_03::CDedRosenFileData_from_string(
 		int iResult = CDedRosenFileData_from_CdConnectedString( 
 			pCDedRosenFileData , aCdConnectedString ) ;
 		//iResult = 
-		//		-	-1 ;	//	FileType ������������܂���B
-		//		-	-11 ;	//	Rosen �̓��e���s��
-		//		-	-21 ;	//	DispProp �̓��e���s��
+		//		-	-1 ;	//	FileType が正しくありません。
+		//		-	-11 ;	//	Rosen の内容が不正
+		//		-	-21 ;	//	DispProp の内容が不正
 		if ( iResult < 0 ){
 			iRv = iResult ;
 		}
@@ -295,17 +295,17 @@ int CconvCDedRosenFileData_03::isEncodeAbleFormat(
 	{
 		CConnectedStringCompress	aCompress( '.' ) ;
 		int iResult = aCompress.decode( strOudFile , &aCdConnectedString ) ;
-		//	-	-1 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B
+		//	-	-1 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。
 		if ( iResult < 0 )
 		{
-			iRv = -101 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+			iRv = -101 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 		}
 	}
 	if ( iRv >= 0 )
 	{
 		int iResult = isEncodeAbleFormat( aCdConnectedString ) ;
-		//-	0 ;	//	���߉\�ł��B
-		//-	-1 ;	//	FileType ������������܂���B
+		//-	0 ;	//	解釈可能です。
+		//-	-1 ;	//	FileType が正しくありません。
 		if ( iResult < 0 )
 		{
 			iRv = iResult ;

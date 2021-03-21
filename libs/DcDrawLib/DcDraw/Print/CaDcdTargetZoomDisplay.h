@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -84,101 +84,101 @@ namespace Print{
 // ****************************************************************
 /**
 @brief
-  ���/����v���r���[�̕`��̈�ł��� IfDcdTarget �I�u�W�F�N�g��
-�^�[�Q�b�g�Ƃ���A�A�_�v�^�N���X�ł��B�^�[�Q�b�g��DC�ɁA
-�f�B�X�v���C�ɏ������_�����W��ݒ肵�܂��B
+  印刷/印刷プレビューの描画領域である IfDcdTarget オブジェクトを
+ターゲットとする、アダプタクラスです。ターゲットのDCに、
+ディスプレイに準じた論理座標を設定します。
 
 <H4>
-�y���W�n�ɂ��āz
+【座標系について】
 </H4>
- �^�[�Q�b�g�I�u�W�F�N�g�ƂȂ� IfDcdTarget �I�u�W�F�N�g�� DC ��
-���W�n�́A����̏ꍇ������v���r���[�̏ꍇ���A
-  �v�����^�̂P�h�b�g���P�_���P�� 
-�łȂ��Ă͂Ȃ�܂���B
+ ターゲットオブジェクトとなる IfDcdTarget オブジェクトの DC の
+座標系は、印刷の場合も印刷プレビューの場合も、
+  プリンタの１ドット＝１論理単位 
+でなくてはなりません。
 
-  ���̃N���X�́A�ΏۂƂȂ� DC �̍��W�n���A�f�B�X�v���C��ʂ�
-���������̂ɕύX���܂��B
-  ���Ƃ��΁A 
+  このクラスは、対象となる DC の座標系を、ディスプレイ画面に
+準じたものに変更します。
+  たとえば、 
 
-	�f�B�X�v���C��DPI�F�v�����^��DPI �� �P�F�S 
+	ディスプレイのDPI：プリンタのDPI が １：４ 
 
-�̏ꍇ�́A���̃N���X��DC�̃}�b�s���O���[�h��ύX���āA
+の場合は、このクラスはDCのマッピングモードを変更して、
 
-	�P�_���P�ʁF�v�����^�̂S�h�b�g
+	１論理単位：プリンタの４ドット
 
-�ƂȂ�悤�ɂ��܂��B
-  ����ɂ��AIfDcDraw �I�u�W�F�N�g�ɂ��̃I�u�W�F�N�g��n����
-�`�悷��ƁA�قډ�ʂ̑傫���ɏ�����������ʂ𓾂邱�Ƃ��ł��܂��B
+となるようにします。
+  これにより、IfDcDraw オブジェクトにこのオブジェクトを渡して
+描画すると、ほぼ画面の大きさに準じた印刷結果を得ることができます。
 
 <H4>
-�y�g�����z
+【使い方】
 </H4>
 
-�P�D  ���炩���߁A ���/����v���r���[�̕`��̈�ł��� IfDcdTarget 
-�I�u�W�F�N�g�𐶐����Ă��Ȃ��Ă͂Ȃ�܂���B
+１．  あらかじめ、 印刷/印刷プレビューの描画領域である IfDcdTarget 
+オブジェクトを生成していなくてはなりません。
 
-�Q�D  �R���X�g���N�^�ł́A�^�[�Q�b�g��IfDcdTarget �ƁA�v�����^��DC��
-�w�肵�Ă��������B�v�����^�� DC �́ADPI�̌v�Z���s���ꍇ�ɕK�v�ł��B
-  �R���X�g���N�^�́A�w�肳�ꂽ DC ����v�����^��DPI���擾���āA
-���̌v�Z�����ƂɃ}�b�s���O���[�h��ύX���܂��B
+２．  コンストラクタでは、ターゲットのIfDcdTarget と、プリンタのDCを
+指定してください。プリンタの DC は、DPIの計算を行う場合に必要です。
+  コンストラクタは、指定された DC からプリンタのDPIを取得して、
+その計算をもとにマッピングモードを変更します。
 
-�R�D  ���̃I�u�W�F�N�g�� IfDcDraw �C���^�[�t�F�[�X�ɓn���āA�`���
-�s�����Ƃ��ł��܂��B
+３．  このオブジェクトを IfDcDraw インターフェースに渡して、描画を
+行うことができます。
 
-�S�D  ���̃N���X�̃f�X�g���N�^�́A�Q�D�ŕύX�����}�b�s���O���[�h��
-���ɖ߂��܂��B
+４．  このクラスのデストラクタは、２．で変更したマッピングモードを
+元に戻します。
  */
 class CaDcdTargetZoomDisplay : public IfDcdTarget 
 {
 // ********************************
-///@name �֘A
+///@name 関連
 // ********************************
 ///@{
  private:
 	/**
-	 *  �^�[�Q�b�g�I�u�W�F�N�g�ł��B
+	 *  ターゲットオブジェクトです。
 	 *
-	 *	���/����v���r���[�̕`��̈�ł��� IfDcdTarget �I�u�W�F�N�g�ł��B
+	 *	印刷/印刷プレビューの描画領域である IfDcdTarget オブジェクトです。
 	 *
-	 *	 �^�[�Q�b�g�I�u�W�F�N�g�ƂȂ� IfDcdTarget �I�u�W�F�N�g�� DC ��
-	 *	���W�n�́A����̏ꍇ������v���r���[�̏ꍇ���A
-	 *	�v�����^�̂P�h�b�g���P�_���P�� �łȂ��Ă͂Ȃ�܂���B
+	 *	 ターゲットオブジェクトとなる IfDcdTarget オブジェクトの DC の
+	 *	座標系は、印刷の場合も印刷プレビューの場合も、
+	 *	プリンタの１ドット＝１論理単位 でなくてはなりません。
 	 *	
-	 *	  ���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-	 *	  ���̃I�u�W�F�N�g�́Athis ���j�������܂ł͐������Ȃ��Ă͂Ȃ�܂���B
+	 *	  このオブジェクトの破棄の責務は、クラスユーザーにあります。
+	 *	  このオブジェクトは、this が破棄されるまでは生存しなくてはなりません。
 	 *	
-	 *	  �R���X�g���N�^�Ō��܂�܂��B
+	 *	  コンストラクタで決まります。
 	 */
 	IfDcdTarget* m_pTarget ;
 
 	/**
-	 *  �v�����^�� DC �ւ̃n���h���ł��B
+	 *  プリンタの DC へのハンドルです。
 	 *
-	 *	����̏ꍇ�A
+	 *	印刷の場合、
 	   @code
-	  	m_pTarget->getHdc() = �v�����^��DC
-	 	this->m_hPrinterHdc = �v�����^��DC
+	  	m_pTarget->getHdc() = プリンタのDC
+	 	this->m_hPrinterHdc = プリンタのDC
 	   @endcode
-	 *	����v���r���[�̏ꍇ�A
+	 *	印刷プレビューの場合、
 	   @code
-	 	m_pTarget->getHdc() = �v���r���[��ʂ�DC
-	 	this->m_hPrinterHdc = �v�����^��DC
+	 	m_pTarget->getHdc() = プレビュー画面のDC
+	 	this->m_hPrinterHdc = プリンタのDC
 	   @endcode
-	 *	�ƂȂ�܂��B
+	 *	となります。
 	 */
 	HDC	m_hPrinterHdc ;
 ///@}
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
 ///@{
  private:
 	/**
-	 * 	  �`��̕K�v�ȗ̈�̍��W�͈́B
-	 *	  �`��̈�̍��W�l�́A���̃N���X�ɂ��A�}�b�v���[�h���f�B�X�v���C��
-	 *	���������̂ɕύX����Ă��܂��B
+	 * 	  描画の必要な領域の座標範囲。
+	 *	  描画領域の座標値は、このクラスにより、マップモードがディスプレイに
+	 *	準じたものに変更されています。
 	 *	
-	 *	�R���X�g���N�^�Ō��܂�܂��B
+	 *	コンストラクタで決まります。
 	 */
 	CdDcdZoneXy	m_zonexyZone ;
 	
@@ -186,33 +186,33 @@ class CaDcdTargetZoomDisplay : public IfDcdTarget
 ///@}
 
 // --------------------------------
-///@name �����f�[�^
+///@name 内部データ
 // --------------------------------
 ///@{
  private:
 	/**
-	 *	�R���X�g���N�^�ɂ�����ASaveDC() �̖߂�l��ۑ����܂��B
-	 *	SaveDC() �����s�����ꍇ�́A 0 �ƂȂ�܂��B
+	 *	コンストラクタにおける、SaveDC() の戻り値を保存します。
+	 *	SaveDC() が失敗した場合は、 0 となります。
 	 */
 	int	m_iSaveDcId ;
 ///@}
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 * @param pTarget [in]
-	 *  �^�[�Q�b�g�I�u�W�F�N�g�ł��B@n
-	 *	���/����v���r���[�̕`��̈�ł��� IfDcdTarget �I�u�W�F�N�g�ł��B@n
-	 *	 �^�[�Q�b�g�I�u�W�F�N�g�ƂȂ� IfDcdTarget �I�u�W�F�N�g�� DC ��
-	 *	���W�n�́A����̏ꍇ������v���r���[�̏ꍇ���A
-	 *	�v�����^�̂P�h�b�g���P�_���P�� �łȂ��Ă͂Ȃ�܂���B@n
-	 *	���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-	 *	���̃I�u�W�F�N�g�́Athis ���j�������܂ł͐������Ȃ��Ă͂Ȃ�܂���B
+	 *  ターゲットオブジェクトです。@n
+	 *	印刷/印刷プレビューの描画領域である IfDcdTarget オブジェクトです。@n
+	 *	 ターゲットオブジェクトとなる IfDcdTarget オブジェクトの DC の
+	 *	座標系は、印刷の場合も印刷プレビューの場合も、
+	 *	プリンタの１ドット＝１論理単位 でなくてはなりません。@n
+	 *	このオブジェクトの破棄の責務は、クラスユーザーにあります。
+	 *	このオブジェクトは、this が破棄されるまでは生存しなくてはなりません。
 	 * @param hPrinterHdc [in]
-	 *  �v�����^�� DC �ւ̃n���h���ł��B@n
-	 *	���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-	 *	���̃I�u�W�F�N�g�́Athis ���j�������܂ł͐������Ȃ��Ă͂Ȃ�܂���B
+	 *  プリンタの DC へのハンドルです。@n
+	 *	このオブジェクトの破棄の責務は、クラスユーザーにあります。
+	 *	このオブジェクトは、this が破棄されるまでは生存しなくてはなりません。
 	 */
 	CaDcdTargetZoomDisplay( 
 		IfDcdTarget* pTarget ,
@@ -226,44 +226,44 @@ class CaDcdTargetZoomDisplay : public IfDcdTarget
  public:
 	/**
 	 * @return
-	 * 	�`����s��DC���擾���܂��B
-	 * 	����HDC�̔j���̐Ӗ��́Athis�ɂ���܂��B
+	 * 	描画を行うDCを取得します。
+	 * 	このHDCの破棄の責務は、thisにあります。
 	 *
-	 *	�y�I�[�o���C�h�z
+	 *	【オーバライド】
 	 *
-	 *	����̏ꍇ�A���̊֐����Ԃ��̂� �v�����^��DC�ł��B
-	 *	����v���r���[�̏ꍇ�́A���̊֐����Ԃ��̂́A�v���r���[��ʂ�DC�ł��B
+	 *	印刷の場合、この関数が返すのは プリンタのDCです。
+	 *	印刷プレビューの場合は、この関数が返すのは、プレビュー画面のDCです。
 	 *
-	 *	����v���r���[�̏ꍇ�́A�v�����^��DC�� getPrinterHdc() �Ŏ擾�ł��܂��B
+	 *	印刷プレビューの場合は、プリンタのDCは getPrinterHdc() で取得できます。
 	 */
 	virtual HDC	getHdc() ;
 	
 	/**
 	 * @return
-	 * 	�`��̕K�v�ȗ̈�̍��W�͈͂��擾���邱�Ƃ��ł��܂��B
-	 * 	�P�ʂ́A�_���P�ʂł��B
+	 * 	描画の必要な領域の座標範囲を取得することができます。
+	 * 	単位は、論理単位です。
 	 */
 	virtual CdDcdZoneXy getZone() ;
 	
 	/**
 	 * @return
-	 * 	�`�悪�L���Ȕ͈͂��擾�ł��܂��B
-	 * 	�ʏ�́AgetZone()�Ɠ����̈�ƂȂ�܂��B
+	 * 	描画が有効な範囲を取得できます。
+	 * 	通常は、getZone()と同じ領域となります。
 	 * 
-	 * 	�E�C���h�E��WM_PAINT�ɂ��`��̏ꍇ�A���̊֐����Ԃ��̂́A
-	 * 	�ĕ`�悪�K�v�ȗ̈�ƂȂ�܂��B
-	 * 	���̗̈�𖳎����Ă����܂��܂���B�������A���͈̔͊O�ւ̕`���
-	 * 	�Ӗ�������܂���̂ŁA���͈̔͊O�ւ̕`���}������悤�ɂ���΁A
-	 * 	�`�揈���̌����̉��P�����҂ł��܂��B
+	 * 	ウインドウのWM_PAINTによる描画の場合、この関数が返すのは、
+	 * 	再描画が必要な領域となります。
+	 * 	この領域を無視してもかまいません。ただし、この範囲外への描画は
+	 * 	意味がありませんので、この範囲外への描画を抑制するようにすれば、
+	 * 	描画処理の効率の改善が期待できます。
 	 */
 	virtual CdDcdZoneXy getDrawableZone() ;
 
 	/**
-	 	CdFontProp�I�u�W�F�N�g�̑��������ƂɁA�t�H���g�𐶐����܂�
+	 	CdFontPropオブジェクトの属性をもとに、フォントを生成します
 	 @param aCdFontProp [in]
-	 	�t�H���g�������w�肵�Ă��������B
+	 	フォント属性を指定してください。
 	 @return
-		�t�H���g�̃n���h����ێ����� CGdiHFontHolder ��Ԃ��܂��B
+		フォントのハンドルを保持する CGdiHFontHolder を返します。
 	*/
 	virtual Ou<CGdiHFontHolder>	createGdiHFontHolder(  const CdFontProp& aCdFontProp )
 	{
@@ -271,11 +271,11 @@ class CaDcdTargetZoomDisplay : public IfDcdTarget
 	};
 	
 	/**
-	 	CdPenProp�I�u�W�F�N�g�̑��������ƂɁA�y���𐶐����܂�
+	 	CdPenPropオブジェクトの属性をもとに、ペンを生成します
 	 @param aCdPenProp [in]
-	 	�y���������w�肵�Ă��������B
+	 	ペン属性を指定してください。
 	 @return
-		�y���̃n���h����ێ����� CGdiHPenHolder ��Ԃ��܂��B
+		ペンのハンドルを保持する CGdiHPenHolder を返します。
 	*/
 	virtual  Ou<CGdiHPenHolder>		createGdiHPenHolder(  const CdPenProp& aCdPenProp ) 
 	{
@@ -283,11 +283,11 @@ class CaDcdTargetZoomDisplay : public IfDcdTarget
 	};
 
 	/**
-	 	CdBrushProp�I�u�W�F�N�g�̑��������ƂɁA�u���V�𐶐����܂�
+	 	CdBrushPropオブジェクトの属性をもとに、ブラシを生成します
 	 @param aCdBrushProp [in]
-	 	�u���V�������w�肵�Ă��������B
+	 	ブラシ属性を指定してください。
 	 @return
-		�u���V�̃n���h����ێ����� CGdiHBrushHolder ��Ԃ��܂��B
+		ブラシのハンドルを保持する CGdiHBrushHolder を返します。
 	*/
 	virtual Ou<CGdiHBrushHolder>	createGdiHBrushHolder(  const CdBrushProp& aCdBrushProp ) 
 	{
@@ -300,7 +300,7 @@ class CaDcdTargetZoomDisplay : public IfDcdTarget
 // ********************************
  public:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	///@}

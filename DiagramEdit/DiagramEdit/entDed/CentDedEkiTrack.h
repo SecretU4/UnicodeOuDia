@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CentDedEkiTrack.h 378 2016-11-16 21:10:54Z okm $
@@ -77,31 +77,31 @@ using namespace OuLib::NsMu ;
 
 /**
 @brief
-  �w�́w�Ԑ��x��\���܂�
+  駅の『番線』を表します
   
-  �w�Ԑ��x�ɂ́A�ȉ���3�킪����܂��B
+  『番線』には、以下の3種があります。
   
- - ���{��
- - ����{��
- - ���O���Ԑ�
+ - 上り本線
+ - 下り本線
+ - 名前つき番線
  
 
-����
+制約
  -------------------------------- 
 
-���@���̃I�u�W�F�N�g���w�Ԑ��R���e�i�x(CentDedEkiTrackCont)�̈ꕔ�ł���ꍇ�A�Ԑ��̎�ނ�ύX���邱�Ƃ͂ł��܂���B
+△　このオブジェクトが『番線コンテナ』(CentDedEkiTrackCont)の一部である場合、番線の種類を変更することはできません。
 
-����̃G���[�����E�C��
+操作のエラー検査・修正
  -------------------------------- 
 
-���㏑��(operator=) : ���̃I�u�W�F�N�g���A�e�I�u�W�F�N�gCentDedEkiTrackCont �̎q�ł���ꍇ�ŁA������� CentDedEkiTrackCont::set() �ŃG���[�ɂȂ�ꍇ�A��O�X���[�ɂȂ�܂��B
+△上書き(operator=) : このオブジェクトが、親オブジェクトCentDedEkiTrackCont の子である場合で、代入元が CentDedEkiTrackCont::set() でエラーになる場合、例外スローになります。
 
-���e�I�u�W�F�N�g�̕ύX(setParent()):  adjust()�����s����
+○親オブジェクトの変更(setParent()):  adjust()を実行する
 
-����ɍ����悤�ɑ������C��(adjust)
+制約に合うように属性を修正(adjust)
  -------------------------------- 
 
-�@���ɂȂ�
+　特になし
 
 */
 class CentDedEkiTrack : public CChildBase
@@ -109,24 +109,24 @@ class CentDedEkiTrack : public CChildBase
 	typedef CChildBase	super ;
 public:
 	// ****************************************************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ****************************************************************
 	
 	/**
-	 �Ԑ��̎��
+	 番線の種類
 	*/
 	enum ETrackType
 	{
-		/// ���{��
+		/// 上り本線
 		ETrackType_NoboriMain , 
-		/// ����{��
+		/// 下り本線
 		ETrackType_KudariMain , 
-		/// ���O���Ԑ�
+		/// 名前つき番線
 		ETrackType_Named , 
 	};
 	
 	/**
-		���̃N���X���X���[�����O
+		このクラスがスローする例外
 	*/
 	class LException
 	{
@@ -134,56 +134,56 @@ public:
 	
 public:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-		�Ԑ��̎��
+		番線の種類
 	*/
 	ETrackType	m_eTrackType ;
 	
-	/** ���O�Bm_eTrackType �� ETrackType_Named �ȊO�̏ꍇ�͖����ł� */
+	/** 名前。m_eTrackType が ETrackType_Named 以外の場合は無効です */
 	string m_strName ;
 	
 	///@}
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CentDedEkiTrack()  ;
 	
 	explicit CentDedEkiTrack( ETrackType eTrackType , const string& strName = "" ) ;
 	/** 
-		ETrackType_Named �̃I�u�W�F�N�g�𐶐����܂� 
+		ETrackType_Named のオブジェクトを生成します 
 	@param strName
-		���O
+		名前
 	*/
 	explicit CentDedEkiTrack( const string& strName ) ;
 
 	/** 
-		���̃I�u�W�F�N�g���A�e�I�u�W�F�N�gCentDedEkiTrackCont ��
-		�q�ł���ꍇ�ŁA������� CentDedEkiTrackCont::set() �ŃG���[��
-		�Ȃ�ꍇ�A��O�X���[�ɂȂ�܂��B
+		このオブジェクトが、親オブジェクトCentDedEkiTrackCont の
+		子である場合で、代入元が CentDedEkiTrackCont::set() でエラーに
+		なる場合、例外スローになります。
 	@param value 
-		�����
+		代入元
 	@exception LException 
-	  value ����ނ̈قȂ�Ԑ��ł��B
+	  value が種類の異なる番線です。
 	*/
 	CentDedEkiTrack& operator=( const CentDedEkiTrack& value ) ;
 	
 	
 public:
 	// ********************************
-	///@name CParentBase-����
+	///@name CParentBase-操作
 	// ********************************
 	///@{
-	/** ���e�I�u�W�F�N�g�̕ύX(setParent()):  adjust()�����s���� */
+	/** ○親オブジェクトの変更(setParent()):  adjust()を実行する */
 	virtual void setParent( CParentBase* pParent ) ;
 	///@}
 public:
 	// ********************************
-	///@name CentDedEkiTrack-����
+	///@name CentDedEkiTrack-属性
 	// ********************************
 	///@{
 	/** @see m_eTrackType */
@@ -198,14 +198,14 @@ public:
 
 public:
 	// ********************************
-	///@name CentDedEkiTrack-����
+	///@name CentDedEkiTrack-操作
 	// ********************************
 	///@{
 	/**
-		this �̑���������ɔ����Ă���ꍇ�A����ɍ����悤�ɁA������
-		�C�����܂��B
+		this の属性が制約に反している場合、制約に合うように、属性を
+		修正します。
 
-		���̃N���X�ł́A�����͂���܂���B
+		このクラスでは、処理はありません。
 
 	*/
 	void adjust() ;

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -85,18 +85,18 @@ namespace DcDrawLib{ namespace WinUtil{
 // ****************************************************************
 /**
 @brief
-	�P���f�[�^�N���X�ł��B
-	�X�N���[���o�[������ێ����܂��B
+	単純データクラスです。
+	スクロールバー属性を保持します。
 
-	���̃N���X�́A�L���Ȓl�������Ȃ� NULL ��Ԃ������Ƃ��ł��܂��B
+	このクラスは、有効な値を持たない NULL 状態を持つことができます。
 
-	this �͑����ɑ΂��āA��Ɉȉ��̕␳���s���܂��B
+	this は属性に対して、常に以下の補正を行います。
 
 	- m_iMax >= m_iMin 
 	- m_iPage <= m_iMax - m_iMin + 1  
 	- m_iPage >= 1 
 	- m_iPos <= m_iMax 
-	- m_iPos <= m_iMax - m_iPage + 1   (m_bAdjustPosByPage=true�̏ꍇ�̂�)
+	- m_iPos <= m_iMax - m_iPage + 1   (m_bAdjustPosByPage=trueの場合のみ)
 	- m_iPos >= m_iMin
 
 
@@ -105,76 +105,76 @@ class CdScrollbarProp
 {
 private:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-		�X�N���[���o�[�̍ŏ��̈ʒu�B
-		NULL��ԂɂȂ����Ƃ��ɂ́A���̒l�� 0 �ɏ���������܂��B
+		スクロールバーの最小の位置。
+		NULL状態になったときには、この値は 0 に初期化されます。
 	*/
 	int m_iMin ;
 	/**
-		�X�N���[���o�[�̍ő�̈ʒu�B
-		NULL��ԂɂȂ����Ƃ��ɂ́A���̒l�� 0 �ɏ���������܂��B
+		スクロールバーの最大の位置。
+		NULL状態になったときには、この値は 0 に初期化されます。
 	*/
 	int m_iMax ;
 	/**
-		���ݕ\�����̃y�[�W���B
-		NULL��ԂɂȂ����Ƃ��ɂ́A���̒l�� 1 �ɏ���������܂��B
+		現在表示中のページ数。
+		NULL状態になったときには、この値は 1 に初期化されます。
 
-		m_iMin = 0 �� m_iMax �� 5 �� m_iPage �� 1 �̏ꍇ�́A
-		�X�N���[���o�[�̈ʒu�� 0����5�܂ł̒l���Ƃ�܂��B
+		m_iMin = 0 で m_iMax が 5 で m_iPage が 1 の場合は、
+		スクロールバーの位置は 0から5までの値をとります。
 
-		m_iMin = 0 �� m_iMax �� 5 �� m_iPage �� 2 �̏ꍇ�́A
-		�X�N���[���o�[�̈ʒu�� 0����4�܂ł̒l���Ƃ�܂��B
+		m_iMin = 0 で m_iMax が 5 で m_iPage が 2 の場合は、
+		スクロールバーの位置は 0から4までの値をとります。
 
-		m_iMin = 0 �� m_iMax �� 5 �� m_iPage �� 6 �̏ꍇ�́A
-		�X�N���[���o�[�͔�\��(�܂���Disable)�ƂȂ�܂��B
+		m_iMin = 0 で m_iMax が 5 で m_iPage が 6 の場合は、
+		スクロールバーは非表示(またはDisable)となります。
 	*/
 	int m_iPage ;
 	/**
-		�X�N���[���o�[�̈ʒu�B
-		NULL��ԂɂȂ����Ƃ��ɂ́A���̒l�� 0 �ɏ���������܂��B
+		スクロールバーの位置。
+		NULL状態になったときには、この値は 0 に初期化されます。
 	*/
     int m_iPos; 
 
 	/**
-		this ��NULL��ԂȂ� true �ł��B
+		this がNULL状態なら true です。
 	*/
 	bool m_bIsNull ;
 
 	/**
-		- true: �X�N���[���o�[�̎g�p���s�v�ȏꍇ�́A�X�N���[���o�[�𖳌��ɂ��܂��B
-		- false:(����l)�X�N���[���o�[�̑��삪�s�v�ȏꍇ�́A�X�N���[���o�[���\���ɂ��܂��B
+		- true: スクロールバーの使用が不要な場合は、スクロールバーを無効にします。
+		- false:(既定値)スクロールバーの操作が不要な場合は、スクロールバーを非表示にします。
 
-		���̒l�́A setNull() �ł��ω����܂���B
+		この値は、 setNull() でも変化しません。
 	@attention
-		����ɑ�������t���O SIF_DISABLENOSCROLL ��
-		�X�N���[���o�[�s�v�Ȉʒu�����w�肵��
-		SetScrollInfo() ���Ăяo���ƁA�X�N���[���o�[��������
-		�Ȃ�܂��B
-		�������A���̌��  SIF_DISABLENOSCROLL �����E
-		�X�N���[���o�[�K�v�Ȉʒu�����w�肵��
-		SetScrollInfo() ���Ăяo���Ă��A
-		�X�N���[���o�[�͖�������L���ɂ͂Ȃ�܂���B
-		�����������邽�߂ɂ́A
+		これに相当するフラグ SIF_DISABLENOSCROLL と
+		スクロールバー不要な位置情報を指定して
+		SetScrollInfo() を呼び出すと、スクロールバーが無効に
+		なります。
+		しかし、その後に  SIF_DISABLENOSCROLL 無し・
+		スクロールバー必要な位置情報を指定して
+		SetScrollInfo() を呼び出しても、
+		スクロールバーは無効から有効にはなりません。
+		これを回避するためには、
 		@code
 		EnableScrollBar( (SB_HORZ or SB_VERT), ESB_ENABLE_BOTH ) ;
 		@endcode
-		���Ăяo���Ă���A
-		SetScrollInfo()���Ăяo���Ă��������B
+		を呼び出してから、
+		SetScrollInfo()を呼び出してください。
 	*/
 	bool m_bDisableNoScroll ;
 
 	/**
-		�y�[�W�����l���������K�����s�����ۂ��������܂��B
+		ページ数を考慮した正規化を行うか否かを示します。
 
-		�y�[�W�����l���������K�����́A�ȉ����w���܂��B
+		ページ数を考慮した正規化をは、以下を指します。
 
 		- m_iPos <= m_iMax - m_iPage + 1  
 
-		���̒l�́A setNull() �ł��ω����܂���B
-		����l�� true �ł��B
+		この値は、 setNull() でも変化しません。
+		既定値は true です。
 	*/
 	bool m_bAdjustPosByPage ;
 
@@ -182,11 +182,11 @@ private:
 	///@}
 protected:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 	/**
-		������␳���܂��B
+		属性を補正します。
 	*/
 	void adjustProp() 
 	{
@@ -226,10 +226,10 @@ protected:
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
-		this ��NULL��Ԃɏ��������܂��B
+		this をNULL状態に初期化します。
 	*/
 	CdScrollbarProp()
 		: m_iMin( 0 ) 
@@ -275,7 +275,7 @@ public:
 
 public:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	int getMin()const{	return m_iMin ;};
@@ -317,8 +317,8 @@ public:
 	}
 	/** 
 	@return
-		-true : this �� NULL �B
-		-false: this �� NULL�łȂ� �B
+		-true : this が NULL 。
+		-false: this が NULLでない 。
 	*/
 	bool isNull()const
 	{
@@ -333,7 +333,7 @@ public:
 		m_bIsNull = true ;
 	};
 	/**
-		���ׂĂ̑�����ݒ肵�Athis �� ��NULL�Ƃ��܂��B
+		すべての属性を設定し、this を 非NULLとします。
 	@param iMin [in]
 	@param iMax [in]
 	@param iPage [in]
@@ -351,15 +351,15 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name ����
+	///@name 操作
 	// ********************************
 	///@{
 	/**
-		�Q�� CdScrollbarProp ���r���܂��B
+		２つの CdScrollbarProp を比較します。
 	@param value [in]
-		��r�ΏۂƂȂ� CdScrollbarProp ���w�肵�Ă��������B
+		比較対象となる CdScrollbarProp を指定してください。
 	@return
-		- true : CdScrollbarProp ���������B�o����NULL�B
+		- true : CdScrollbarProp が等しい。双方がNULL。
 	*/
 	bool isEqualTo( const CdScrollbarProp& value )const
 	{

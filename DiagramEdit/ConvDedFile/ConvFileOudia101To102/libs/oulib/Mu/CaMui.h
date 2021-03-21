@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -77,46 +77,46 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  @brief
- �A�_�v�^�N���X�ł��B
- Mui �C���^�[�t�F�[�X���T�|�[�g���Ă���R���e�i�ɑ΂��A
- �����ǉ����܂��B
+ アダプタクラスです。
+ Mui インターフェースをサポートしているコンテナに対し、
+ 操作を追加します。
  
- ���̃N���X�̃C���X�^���X�́A Mui �C���^�[�t�F�[�X���T�|�[�g���Ă���
- �R���e�i�𑀍�ΏۃI�u�W�F�N�g�Ƃ��A����Ƃ̊֘A�������܂��B
+ このクラスのインスタンスは、 Mui インターフェースをサポートしている
+ コンテナを操作対象オブジェクトとし、これとの関連を持ちます。
  
- ���̃N���X�Œǉ�����鑀��́A�ȉ��̂��̂ł��B
+ このクラスで追加される操作は、以下のものです。
  
- - insert()	//	���̃R���e�i�̓��e���A����ΏۃR���e�i�ɃR�s�[
+ - insert()	//	他のコンテナの内容を、操作対象コンテナにコピー
  */
 template < class ElementType > class CaMui
 {
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-		����ΏۃI�u�W�F�N�g�ƂȂ�A�R���e�i�ł��B
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-		�������Ȃ��Ă͂Ȃ�܂���B
+		操作対象オブジェクトとなる、コンテナです。
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、thisとの関連が保たれている間は、
+		生存しなくてはなりません。
 	 */
 	Mui<ElementType>*	m_pAdaptee ;
 	///@}
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CaMui( Mui<ElementType>* pAdaptee ) : 
 		m_pAdaptee( pAdaptee ){};
 private:
-	///	�R�s�[�͋֎~
+	///	コピーは禁止
 	CaMui( const CaMui& value )
 	{
 		assert( false ) ;
 	}
-	///	�R�s�[�͋֎~
+	///	コピーは禁止
 	CaMui& operator=( const CaMui& value )
 	{
 		assert( false ) ;
@@ -125,7 +125,7 @@ private:
 	
 public:
 	// ********************************
-	///@name CaMui-�֘A
+	///@name CaMui-関連
 	// ********************************
 	///@{
 	Mui<ElementType>*	getAdaptee(){	return 	m_pAdaptee ;};
@@ -134,34 +134,34 @@ public:
 	{	m_pAdaptee = value ;	return *this ;};
 	///@}
 	// ********************************
-	///@name CaMui-����
+	///@name CaMui-操作
 	// ********************************
 	///@{
 	/**
-		����ΏۃI�u�W�F�N�g m_pAdaptee �̃R���e�i�ɁA
-		���̃R���e�i�̗v�f��}�����܂��B
+		操作対象オブジェクト m_pAdaptee のコンテナに、
+		他のコンテナの要素を挿入します。
 	 @param pMu [in]
-		�R�s�[����v�f��ێ����Ă���R���e�i���w�肵�Ă��������B
+		コピーする要素を保持しているコンテナを指定してください。
 	 @param iSrcIndex [in]
-		�R�s�[����v�f�́A pMu ���ł̐擪�C���f�N�X�B
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� pMu->size() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+		コピーする要素の、 pMu 内での先頭インデクス。
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 pMu->size() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 @param iSize [in]
-		�R�s�[����v�f�̐��B
-	 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+		コピーする要素の数。
+	 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 @param iIndex [in]
-		m_pAdaptee ���ł́A�v�f���R�s�[����ʒu�B
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� m_pAdaptee->size() �ȉ��ł��B
-	 	�O�́A�擪�Em_pAdaptee->size() size()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-		INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+		m_pAdaptee 内での、要素をコピーする位置。
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 m_pAdaptee->size() 以下です。
+	 	０は、先頭・m_pAdaptee->size() size()なら末尾への追加になります。
+		INT_MAX は、末尾を指定したものとみなします。
 	 @attention
-		iSrcIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+		iSrcIndex と iSize の両方を INT_MAX にすることはできません。
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	iIndex���s��
-		-	-2 ;	//	iSrcIndex���s��
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	iIndexが不正
+		-	-2 ;	//	iSrcIndexが不正
 	 */
 	virtual int insert( 
 			const Mu<ElementType>* pMu , 
@@ -172,7 +172,7 @@ public:
 		{
 			if ( iSrcIndex == INT_MAX && iSize == INT_MAX )
 			{
-				iRv = -2 ;	//	iSrcIndex ���s��
+				iRv = -2 ;	//	iSrcIndex が不正
 			}
 		}
 		if ( iRv >= 0 )
@@ -187,7 +187,7 @@ public:
 			}
 			if ( !( 0 <= iSrcIndex && iSrcIndex + iSize<= (int)pMu->size() ) )
 			{
-				iRv = -2 ;	//	iSrcIndex���s��
+				iRv = -2 ;	//	iSrcIndexが不正
 			}
 		}
 		if ( iRv >= 0 )
@@ -198,7 +198,7 @@ public:
 			}
 			if ( !( 0 <= iIndex && iIndex <= (int)m_pAdaptee->size() ) )
 			{
-				iRv = -1 ;	//	iIndex���s��
+				iRv = -1 ;	//	iIndexが不正
 			}
 		}
 		// --------------------------------

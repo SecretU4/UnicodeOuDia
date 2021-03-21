@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 // $Id: CConvFile_Oudia101To102.cpp 174 2014-05-05 13:26:26Z okm $
@@ -96,7 +96,7 @@ static const char valueFileTypeAppComment[] = "ConvFileOudia101To102 Ver 0.01" ;
 //	CConvFile_Oudia101To102
 // ****************************************************************
 	// --------------------------------
-	//@name �����֐�
+	//@name 下請関数
 	// --------------------------------
 CdFontProp CConvFile_Oudia101To102::createVFontPropFromHFont( 
 		const CdFontProp& aCdFontProp ) 
@@ -112,7 +112,7 @@ CdFontProp CConvFile_Oudia101To102::createVFontPropFromHFont(
 		LOGFONT	aLOGFONT ;
 		int iResult = GetObject( aHFontHolder->getHFont() , sizeof(aLOGFONT) , &aLOGFONT ) ;
 		if ( iResult == 0 ){
-			iRv = -2 ;	//	GetObject�Ɏ��s
+			iRv = -2 ;	//	GetObjectに失敗
 		}
 		else
 		{
@@ -124,7 +124,7 @@ CdFontProp CConvFile_Oudia101To102::createVFontPropFromHFont(
 
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 
 CConvFile_Oudia101To102::CConvFile_Oudia101To102()
@@ -144,33 +144,33 @@ int CConvFile_Oudia101To102::LeftToRight(
 	int iRv = 0 ;
 	string strErrorInfoString ;
 	// --------------------------------
-	//	�t�@�C���t�H�[�}�b�g�̊m�F
+	//	ファイルフォーマットの確認
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
 		int iResult = isLeftFormat( pLeftFormat ) ;
-		//	-	-1 ;	//	FileType ������������܂���B
-		//	-	-11 ;	//	�t�@�C�����������t�H�[�}�b�g�ł͂���܂���B
+		//	-	-1 ;	//	FileType が正しくありません。
+		//	-	-11 ;	//	ファイルが正しいフォーマットではありません。
 		if ( iResult < 0 )
 		{
 			switch( iResult )
 			{
-			case -1 :	//	FileType ������������܂���B
+			case -1 :	//	FileType が正しくありません。
 				strErrorInfoString = "FileType Mismatch." ;
 				break ;
-			case -11 :	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+			case -11 :	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 				strErrorInfoString = "File Format Error." ;
 				break ;
 			}
 			iRv = iResult ;
 		}
 		//iRv = 
-		//	-	-1 ;	//	FileType ������������܂���B
-		//	-	-11 ;	//	�t�@�C�����������t�H�[�}�b�g�ł͂���܂���B
+		//	-	-1 ;	//	FileType が正しくありません。
+		//	-	-11 ;	//	ファイルが正しいフォーマットではありません。
 	}
 	// --------------------------------
-	//	�o�C�g��� 
-	//	OuPropertiesText::CNodeContainer �ɓǂݍ���
+	//	バイト列を 
+	//	OuPropertiesText::CNodeContainer に読み込み
 	// --------------------------------
 	string strLeftFormat ;
 	if ( iRv >= 0 )
@@ -187,7 +187,7 @@ int CConvFile_Oudia101To102::LeftToRight(
 		strLeftFormat = OuLib::stringOf( binLeftFormat ) ;
 		strLeftFormat = OuLib::strLfOf( strLeftFormat ) ;
 	}
-	//strLeftFormat = LeftFile �̓��e
+	//strLeftFormat = LeftFile の内容
 
 	CNodeContainer	nodecontRoot ;
 	if ( iRv >= 0 )
@@ -199,14 +199,14 @@ int CConvFile_Oudia101To102::LeftToRight(
 			&strErrorInfoString ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -11 ;	//	�t�@�C�����������t�H�[�}�b�g�ł͂���܂���B
+			iRv = -11 ;	//	ファイルが正しいフォーマットではありません。
 		}
 	}
-	//nodecontRoot = LeftFile�̓��e��ێ����Ă��܂��B
+	//nodecontRoot = LeftFileの内容を保持しています。
 
 	// --------------------------------
-	//��FileType
-	//	  "OuDia.1.01"��"OuDia.1.02" �ɕϊ����܂��B
+	//□FileType
+	//	  "OuDia.1.01"→"OuDia.1.02" に変換します。
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -215,7 +215,7 @@ int CConvFile_Oudia101To102::LeftToRight(
 			valueFileTypeRightFormat ) ;
 	}
 	// --------------------------------
-	//	CDedRosenFile�𐶐�
+	//	CDedRosenFileを生成
 	// --------------------------------
 	CDedRosenFileData	aCDedRosenFileData ;
 	if ( iRv >= 0 )
@@ -229,15 +229,15 @@ int CConvFile_Oudia101To102::LeftToRight(
 			&aErrorInfoConteiner ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -21 ;	//	CDedRosenFileData �ւ̕ϊ��Ɏ��s���܂����B
+			iRv = -21 ;	//	CDedRosenFileData への変換に失敗しました。
 			strErrorInfoString = aErrorInfoConteiner.toOuErrorInfoText() ;
 		}
 	}
 	
 
 	// --------------------------------
-	//��Rosen.Eki[0].Ekijikokukeisiki
-	//	�@"Jikokukeisiki_Hatsu"��"Jikokukeisiki_NoboriChaku" �ɕύX
+	//□Rosen.Eki[0].Ekijikokukeisiki
+	//	　"Jikokukeisiki_Hatsu"→"Jikokukeisiki_NoboriChaku" に変更
 	// --------------------------------
 	CentDedRosen* pCentDedRosen = NULL ;
 	if ( iRv >= 0 )
@@ -255,8 +255,8 @@ int CConvFile_Oudia101To102::LeftToRight(
 		}
 	}
 	// --------------------------------
-	//��Rosen.Eki[����].Ekijikokukeisiki
-	//	�@"Jikokukeisiki_Hatsu"��"Jikokukeisiki_KudariChaku" �ɕύX
+	//□Rosen.Eki[末尾].Ekijikokukeisiki
+	//	　"Jikokukeisiki_Hatsu"→"Jikokukeisiki_KudariChaku" に変更
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -273,10 +273,10 @@ int CConvFile_Oudia101To102::LeftToRight(
 		}
 	}
 	// --------------------------------
-	//��DispProp.JikokuhyouVFont
-	//	�@DispProp.JikokuhyouFont[0] �̃t�F�C�X���̐擪�� "@" ��t�^���� 
-	//	CreateFont() ���s���܂��B
-	//	�@�������ꂽ�t�H���g�̑������A���̒l�ɃZ�b�g���܂��B
+	//□DispProp.JikokuhyouVFont
+	//	　DispProp.JikokuhyouFont[0] のフェイス名の先頭に "@" を付与して 
+	//	CreateFont() を行います。
+	//	　生成されたフォントの属性を、この値にセットします。
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -287,11 +287,11 @@ int CConvFile_Oudia101To102::LeftToRight(
 		aCDedRosenFileData.setCdDedDispProp( aCdDedDispProp ) ;
 	}
 	// --------------------------------
-	//	CDedRosenFile�� ���[�g�m�[�h�ɔ��f����
+	//	CDedRosenFileを ルートノードに反映する
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
-		//	���[�g�m�[�h�͈�U��ɂ���B
+		//	ルートノードは一旦空にする。
 		nodecontRoot.erase( 0 , INT_MAX ) ;
 
 		CconvCDedRosenFileData	aConv ;
@@ -301,12 +301,12 @@ int CConvFile_Oudia101To102::LeftToRight(
 			&nodecontRoot ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -22 ;	//	CDedRosenFileData �ւ̕ϊ��Ɏ��s���܂����B
+			iRv = -22 ;	//	CDedRosenFileData への変換に失敗しました。
 		}
 	}
 
 	// --------------------------------
-	//��FileTypeAppComment
+	//□FileTypeAppComment
 	//	"ConvFileOudia101To102 Ver 0.01"
 	// --------------------------------
 	if ( iRv >= 0 )
@@ -318,8 +318,8 @@ int CConvFile_Oudia101To102::LeftToRight(
 
 	
 	// --------------------------------
-	//	CConvNodeContainer ��
-	//	�o�C�g��ɕϊ�
+	//	CConvNodeContainer を
+	//	バイト列に変換
 	// --------------------------------
 	string strRightFormat ;
 	if ( iRv >= 0 )
@@ -330,7 +330,7 @@ int CConvFile_Oudia101To102::LeftToRight(
 	}
 
 
-	//strRightFormat = RightFile �̓��e
+	//strRightFormat = RightFile の内容
 	vector<char> binRightFormat ;
 	if ( iRv >= 0 )
 	{
@@ -378,7 +378,7 @@ int CConvFile_Oudia101To102::isLeftFormat(
 		strLeftFormat = OuLib::stringOf( binLeftFormat ) ;
 		strLeftFormat = OuLib::strLfOf( strLeftFormat ) ;
 	}
-	//strLeftFormat = pLeftFormat ���i�[����������ł��B
+	//strLeftFormat = pLeftFormat を格納した文字列です。
 	OuPropertiesText::CNodeContainer	nodecontRoot ;
 	if ( iRv >= 0 )
 	{
@@ -389,7 +389,7 @@ int CConvFile_Oudia101To102::isLeftFormat(
 			&strErrorInfoString ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -11 ;	//	�t�@�C�����������t�H�[�}�b�g�ł͂���܂���B
+			iRv = -11 ;	//	ファイルが正しいフォーマットではありません。
 		}
 	}
 	if ( iRv >= 0 )
@@ -398,7 +398,7 @@ int CConvFile_Oudia101To102::isLeftFormat(
 			nameFileType ) ;
 		if ( strValue != valueFileTypeLeftFormat )
 		{
-			iRv = -1 ;	//	FileType ������������܂���B
+			iRv = -1 ;	//	FileType が正しくありません。
 		}
 	}
 	return iRv ;
@@ -414,12 +414,12 @@ int CConvFile_Oudia101To102::RightToLeft(
 		IfByteBuffer* pLeftFormat , 
 		IfByteBuffer* pErrorInfoString ) 
 {
-	return -2 ;	//	���̃��\�b�h�̓T�|�[�g����Ă��܂���B
+	return -2 ;	//	このメソッドはサポートされていません。
 }
 int CConvFile_Oudia101To102::isRightFormat( 
 		const IfByteBuffer* pRightFormat ) 
 {
-	return -2 ;	//	���̃��\�b�h�̓T�|�[�g����Ă��܂���B
+	return -2 ;	//	このメソッドはサポートされていません。
 };
 
 

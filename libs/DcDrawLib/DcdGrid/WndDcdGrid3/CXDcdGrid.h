@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -84,12 +84,12 @@ namespace WndDcdGrid3{
 // ****************************************************************
 /**
 @brief
-	CWndDcdGrid �ɕ�܂����ACDcdGrid �ł��B
+	CWndDcdGrid に包含される、CDcdGrid です。
 	
-	���̃N���X�́A CWndDcdGrid  �������I�ɐ������邽�߂ɑ��݂��܂��B
-	����ȊO�̗��p���l�͂���܂���B
-	this �́ACDcdGrid �̃I�[�o���C�h�\�ȉ��z�֐��Ăяo�����A
-	�O���� CWndDcdGrid �ɈϏ����܂��B
+	このクラスは、 CWndDcdGrid  が内部的に生成するために存在します。
+	それ以外の利用価値はありません。
+	this は、CDcdGrid のオーバライド可能な仮想関数呼び出しを、
+	外側の CWndDcdGrid に委譲します。
  */
 class CXDcdGrid : public CDcdGrid
 {
@@ -97,33 +97,33 @@ class CXDcdGrid : public CDcdGrid
 
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-	�O���́A CWndDcdGrid �ւ̊֘A�ł��B
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́A this ��蒷���������Ȃ��Ă͂Ȃ�܂���B
-		�R���X�g���N�^�Ō��܂�܂��B
+	外側の、 CWndDcdGrid への関連です。
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、 this より長く生存しなくてはなりません。
+		コンストラクタで決まります。
 	 */
 	CWndDcdGrid*	m_pCWndDcdGrid ;
 	///@}
 private:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-	@brief�@CWndDcdGrid�S�̂̍X�V�̗L��/����
+	@brief　CWndDcdGrid全体の更新の有効/無効
 
-	  �X�N���[���ʒu�̕ύX���� CWndDcdGrid �S�̂��X�V���邩�ۂ����w�肵�܂��B
+	  スクロール位置の変更時に CWndDcdGrid 全体を更新するか否かを指定します。
 
-	- true: (�f�t�H���g)�X�N���[���ʒu�̕ύX���ɁACWndDcdGrid �S�̂��X�V���܂�( CWndDcdGrid::update())���Ăяo��)�B
-	- false: �X�N���[���ʒu�̕ύX���ɂ��A CWndDcdGrid �S�̂̍X�V�͍s���܂���B
+	- true: (デフォルト)スクロール位置の変更時に、CWndDcdGrid 全体を更新します( CWndDcdGrid::update())を呼び出し)。
+	- false: スクロール位置の変更時にも、 CWndDcdGrid 全体の更新は行いません。
 
-	������ false ���� true �ɕύX�����ꍇ�́ACWndDcdGrid �S�̂��X�V���܂��B
+	属性を false から true に変更した場合は、CWndDcdGrid 全体を更新します。
 
-	�u�X�N���[���ʒu�̕ύX���v�́A�ȉ��̃��\�b�h�Ăяo���̂��Ƃ��w���܂��B
+	「スクロール位置の変更時」は、以下のメソッド呼び出しのことを指します。
 
 	- WndDcdGrid3::CXDcdGrid::setXFixafterColumnNumber() , 
 	- WndDcdGrid3::CXDcdGrid::setYFixafterColumnNumber(),
@@ -134,37 +134,37 @@ private:
 	///@}
 private:
 	// --------------------------------
-	///@name �����f�[�^
+	///@name 内部データ
 	// --------------------------------
 	///@{
 	/** 
-		���݂̃X�N���[���o�[�̑�����ۑ����܂��B
-		�����l�� NULL�ł��B
+		現在のスクロールバーの属性を保存します。
+		初期値は NULLです。
 	
-		���̒l�́A update_updateDisplay() ���ɁA�O��l��r���s���̂Ɏg���܂��B
-		m_CFocus.m_iPos �́Am_iXFixafterColumnNumber �̑O��l�ƂȂ�܂��B
+		この値は、 update_updateDisplay() 時に、前回値比較を行うのに使います。
+		m_CFocus.m_iPos は、m_iXFixafterColumnNumber の前回値となります。
 
-		�܂��AOnPaint() �ł��A�l���X�V���܂��B
+		また、OnPaint() でも、値を更新します。
 	
-		InvalidateGrid() �ł́A�����������l�ɖ߂��܂��B
+		InvalidateGrid() では、属性を初期値に戻します。
 	*/
 	WinUtil::CdScrollbarProp	m_CdScrollbarPropX_Sid ;
 	/** 
-		���݂̃X�N���[���o�[�̑�����ۑ����܂��B
-		�����l�� NULL�ł��B
+		現在のスクロールバーの属性を保存します。
+		初期値は NULLです。
 	
-		���̒l�́A update_updateDisplay() ���ɁA�O��l��r���s���̂Ɏg���܂��B
-		m_CFocus.m_iPos �́Am_iXFixafterColumnNumber �̑O��l�ƂȂ�܂��B
+		この値は、 update_updateDisplay() 時に、前回値比較を行うのに使います。
+		m_CFocus.m_iPos は、m_iXFixafterColumnNumber の前回値となります。
 
-		�܂��AOnPaint() �ł��A�l���X�V���܂��B
+		また、OnPaint() でも、値を更新します。
 	
-		InvalidateGrid() �ł́A�����������l�ɖ߂��܂��B
+		InvalidateGrid() では、属性を初期値に戻します。
 	*/
 	WinUtil::CdScrollbarProp	m_CdScrollbarPropY_Sid ;
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CXDcdGrid( CWndDcdGrid* pCWndDcdGrid ) ;
 	virtual ~CXDcdGrid() ;
@@ -173,282 +173,282 @@ public:
 	// ****************************************************************
 protected:
 	// --------------------------------
-	///@name CDcdGrid-�s�E��E�Z���̏�����
+	///@name CDcdGrid-行・列・セルの初期化
 	// --------------------------------
 	///@{
 	/**
-	this �́A�V���� Column ���������ꂽ����ɁA���̊֐����Ăяo���܂��B
-	�V���� Column �ɑ΂��āA IfDcDraw �C���^�[�t�F�[�X�I�u�W�F�N�g
-	�̐����E�o�^���͂��߂Ƃ���
-	���������s���܂��B
+	this は、新しい Column が生成された直後に、この関数を呼び出します。
+	新しい Column に対して、 IfDcDraw インターフェースオブジェクト
+	の生成・登録をはじめとした
+	初期化を行います。
 
-	���̊֐����I�[�o���C�h���邱�Ƃɂ��A Column �ɓ��L�̏�������
-	�s�����Ƃ��ł��܂��B
+	この関数をオーバライドすることにより、 Column に特有の初期化を
+	行うことができます。
 		
 	 @param iXColumnNumber [in]
-		  �V���� Column �̗�ԍ��ł��B
+		  新しい Column の列番号です。
 	 @param pCDcdGridXColumn [in,out]
-		  �V�����������ꂽ CDcdGridXColumn �I�u�W�F�N�g�ł��B
-		  ���̊֐��͂��̃I�u�W�F�N�g�ɑ΂��āA���������s�����Ƃ��ł��܂��B
+		  新しく生成された CDcdGridXColumn オブジェクトです。
+		  この関数はこのオブジェクトに対して、初期化を行うことができます。
 		
-	 [�I�[�o���C�h]
-		�O���́A CWndDcdGrid ( m_pCWndDcdGrid )�ֈϏ����܂��B
-		CWndDcdGrid::OnCreateXColumn() ���Ăяo���܂��B
+	 [オーバライド]
+		外側の、 CWndDcdGrid ( m_pCWndDcdGrid )へ委譲します。
+		CWndDcdGrid::OnCreateXColumn() を呼び出します。
 	 */
 	virtual void OnCreateXColumn( int iXColumnNumber , 
 		CDcdGridXColumn* pCDcdGridXColumn ) ;
 	
 	/**
-	this �́AColumn ���j������钼�O�ɁA���̊֐����Ăяo���܂��B
-	�j������� Column �ɑ΂��āA
-	 IfDcDraw �C���^�[�t�F�[�X�I�u�W�F�N�g��	
-	�o�^�����E�j�����͂��߂Ƃ���
-	��n�����s���܂��B
+	this は、Column が破棄される直前に、この関数を呼び出します。
+	破棄される Column に対して、
+	 IfDcDraw インターフェースオブジェクトの	
+	登録解除・破棄をはじめとした
+	後始末を行います。
 
-	���̊֐����I�[�o���C�h���邱�Ƃɂ��A Column �ɓ��L�̌�n����
-	�s�����Ƃ��ł��܂��B
+	この関数をオーバライドすることにより、 Column に特有の後始末を
+	行うことができます。
 		
 	 @param iXColumnNumber [in]
-		  �j������� Column �̗�ԍ��ł��B
+		  破棄される Column の列番号です。
 	 @param pCDcdGridXColumn [in,out]
-		  �j������� CDcdGridXColumn �I�u�W�F�N�g�ł��B
-		  ���̊֐��͂��̃I�u�W�F�N�g�ɑ΂��āA��n�����s�����Ƃ��ł��܂��B
+		  破棄される CDcdGridXColumn オブジェクトです。
+		  この関数はこのオブジェクトに対して、後始末を行うことができます。
 		
 		
-	 [�I�[�o���C�h]
-		�O���́A CWndDcdGrid ( m_pCWndDcdGrid )�ֈϏ����܂��B
-		CWndDcdGrid::OnDeleteXColumn() ���Ăяo���܂��B
+	 [オーバライド]
+		外側の、 CWndDcdGrid ( m_pCWndDcdGrid )へ委譲します。
+		CWndDcdGrid::OnDeleteXColumn() を呼び出します。
 	 */
 	virtual void OnDeleteXColumn( int iXColumnNumber , 
 		CDcdGridXColumn* pCDcdGridXColumn ) ;
 
 	/**
-	this �́A�V���� Column ���������ꂽ����ɁA���̊֐����Ăяo���܂��B
-	�V���� Column �ɑ΂��āA IfDcDraw �C���^�[�t�F�[�X�I�u�W�F�N�g
-	�̐����E�o�^���͂��߂Ƃ���
-	���������s���܂��B
+	this は、新しい Column が生成された直後に、この関数を呼び出します。
+	新しい Column に対して、 IfDcDraw インターフェースオブジェクト
+	の生成・登録をはじめとした
+	初期化を行います。
 
-	���̊֐����I�[�o���C�h���邱�Ƃɂ��A Column �ɓ��L�̏�������
-	�s�����Ƃ��ł��܂��B
+	この関数をオーバライドすることにより、 Column に特有の初期化を
+	行うことができます。
 		
 	 @param iYColumnNumber [in]
-		  �V���� Column �̗�ԍ��ł��B
+		  新しい Column の列番号です。
 	 @param pCDcdGridYColumn [in,out]
-		  �V�����������ꂽ CDcdGridYColumn �I�u�W�F�N�g�ł��B
-		  ���̊֐��͂��̃I�u�W�F�N�g�ɑ΂��āA���������s�����Ƃ��ł��܂��B
+		  新しく生成された CDcdGridYColumn オブジェクトです。
+		  この関数はこのオブジェクトに対して、初期化を行うことができます。
 		
 		
-	 [�I�[�o���C�h]
-		�O���́A CWndDcdGrid ( m_pCWndDcdGrid )�ֈϏ����܂��B
-		CWndDcdGrid::OnCreateYColumn() ���Ăяo���܂��B
+	 [オーバライド]
+		外側の、 CWndDcdGrid ( m_pCWndDcdGrid )へ委譲します。
+		CWndDcdGrid::OnCreateYColumn() を呼び出します。
 	 */
 	virtual void OnCreateYColumn( int iYColumnNumber , 
 		CDcdGridYColumn* pCDcdGridYColumn ) ;
 	
 	/**
-	this �́AColumn ���j������钼�O�ɁA���̊֐����Ăяo���܂��B
-	�j������� Column �ɑ΂��āA IfDcDraw �C���^�[�t�F�[�X
-	�I�u�W�F�N�g��	
-	�o�^�����E�j�����͂��߂Ƃ���
-	��n�����s���܂��B
+	this は、Column が破棄される直前に、この関数を呼び出します。
+	破棄される Column に対して、 IfDcDraw インターフェース
+	オブジェクトの	
+	登録解除・破棄をはじめとした
+	後始末を行います。
 
-	���̊֐����I�[�o���C�h���邱�Ƃɂ��A Column �ɓ��L�̌�n����
-	�s�����Ƃ��ł��܂��B
+	この関数をオーバライドすることにより、 Column に特有の後始末を
+	行うことができます。
 		
 	 @param iYColumnNumber [in]
-		  �j������� Column �̗�ԍ��ł��B
+		  破棄される Column の列番号です。
 	 @param pCDcdGridYColumn [in,out]
-		  �j������� CDcdGridYColumn �I�u�W�F�N�g�ł��B
-		  ���̊֐��͂��̃I�u�W�F�N�g�ɑ΂��āA��n�����s�����Ƃ��ł��܂��B
+		  破棄される CDcdGridYColumn オブジェクトです。
+		  この関数はこのオブジェクトに対して、後始末を行うことができます。
 		
 		
-	 [�I�[�o���C�h]
-		�O���́A CWndDcdGrid ( m_pCWndDcdGrid )�ֈϏ����܂��B
-		CWndDcdGrid::OnDeleteYColumn() ���Ăяo���܂��B
+	 [オーバライド]
+		外側の、 CWndDcdGrid ( m_pCWndDcdGrid )へ委譲します。
+		CWndDcdGrid::OnDeleteYColumn() を呼び出します。
 	 */
 	virtual void OnDeleteYColumn( int iYColumnNumber , 
 		CDcdGridYColumn* pCDcdGridYColumn ) ;
 
 	/**
-	this �́A�V���� Cell ���������ꂽ����ɁA���̊֐����Ăяo���܂��B
-	�V���� Cell �ɑ΂��āA IfDcDraw �C���^�[�t�F�[�X�I�u�W�F�N�g
-	�̐����E�o�^���͂��߂Ƃ���
-	���������s���܂��B
+	this は、新しい Cell が生成された直後に、この関数を呼び出します。
+	新しい Cell に対して、 IfDcDraw インターフェースオブジェクト
+	の生成・登録をはじめとした
+	初期化を行います。
 
-	���̊֐����I�[�o���C�h���邱�Ƃɂ��A Cell �ɓ��L�̏�������
-	�s�����Ƃ��ł��܂��B
+	この関数をオーバライドすることにより、 Cell に特有の初期化を
+	行うことができます。
 		
 	 @param iXColumnNumber [in]
-		  �V���� Cell ��X��ԍ��ł��B
+		  新しい Cell のX列番号です。
 	 @param iYColumnNumber [in]
-		  �V���� Cell ��Y��ԍ��ł��B
+		  新しい Cell のY列番号です。
 	 @param pCDcdGridCell [in,out]
-		  �V�����������ꂽ CDcdGridCell �I�u�W�F�N�g�ł��B
-		  ���̊֐��͂��̃I�u�W�F�N�g�ɑ΂��āA���������s�����Ƃ��ł��܂��B
+		  新しく生成された CDcdGridCell オブジェクトです。
+		  この関数はこのオブジェクトに対して、初期化を行うことができます。
 		
 		
-	 [�I�[�o���C�h]
-		�O���́A CWndDcdGrid ( m_pCWndDcdGrid )�ֈϏ����܂��B
-		CWndDcdGrid::OnCreateCell() ���Ăяo���܂��B
+	 [オーバライド]
+		外側の、 CWndDcdGrid ( m_pCWndDcdGrid )へ委譲します。
+		CWndDcdGrid::OnCreateCell() を呼び出します。
 	 */
 	virtual void OnCreateCell( int iXColumnNumber , int iYColumnNumber , 
 		CDcdGridCell* pCDcdGridCell ) ;
 	
 	/**
-	this �́ACell ���j������钼�O�ɁA���̊֐����Ăяo���܂��B
-	�j������� Cell �ɑ΂��āA IfDcDraw �C���^�[�t�F�[�X�I�u�W�F�N�g��
-	�o�^�����E�j�����͂��߂Ƃ���
-	��n�����s���܂��B
+	this は、Cell が破棄される直前に、この関数を呼び出します。
+	破棄される Cell に対して、 IfDcDraw インターフェースオブジェクトの
+	登録解除・破棄をはじめとした
+	後始末を行います。
 
-	���̊֐����I�[�o���C�h���邱�Ƃɂ��A Cell �ɓ��L�̌�n����
-	�s�����Ƃ��ł��܂��B
+	この関数をオーバライドすることにより、 Cell に特有の後始末を
+	行うことができます。
 		
 	 @param iXColumnNumber [in]
-		  �j������� Cell ��X��ԍ��ł��B
+		  破棄される Cell のX列番号です。
 	 @param iYColumnNumber [in]
-		  �j������� Cell ��Y��ԍ��ł��B
+		  破棄される Cell のY列番号です。
 	 @param pCDcdGridCell [in,out]
-		  �j������� CDcdGridCell �I�u�W�F�N�g�ł��B
-		  ���̊֐��͂��̃I�u�W�F�N�g�ɑ΂��āA��n�����s�����Ƃ��ł��܂��B
+		  破棄される CDcdGridCell オブジェクトです。
+		  この関数はこのオブジェクトに対して、後始末を行うことができます。
 		
 		
-	 [�I�[�o���C�h]
-		�O���́A CWndDcdGrid ( m_pCWndDcdGrid )�ֈϏ����܂��B
-		CWndDcdGrid::OnDeleteCell() ���Ăяo���܂��B
+	 [オーバライド]
+		外側の、 CWndDcdGrid ( m_pCWndDcdGrid )へ委譲します。
+		CWndDcdGrid::OnDeleteCell() を呼び出します。
 	 */
 	virtual void OnDeleteCell( int iXColumnNumber , int iYColumnNumber , 
 		CDcdGridCell* pCDcdGridCell ) ;
 	///@}
 public:
 	// ********************************
-	///	@name CDcdGrid-Y��EX��̐�
+	///	@name CDcdGrid-Y列・X列の数
 	// ********************************
 	///@{
 	/**
 	 @return
-		���݂�Y��̐���Ԃ��܂��B������Ԃł́A�O��Ԃ��܂��B
+		現在のY列の数を返します。初期状態では、０を返します。
 	 */
 	virtual int		getYColumnCount() ;
 	
 	/**
 	 @param ev [in]
-		Y��̐����w�肵�Ă��������B
+		Y列の数を指定してください。
 	 */
 	virtual CDcdGrid& setYColumnCount( int ev ) ;
 	
 	/**
 	 @return
-		���݂�X��̐���Ԃ��܂��B������Ԃł́A�O��Ԃ��܂��B
+		現在のX列の数を返します。初期状態では、０を返します。
 	 */
 	virtual int		getXColumnCount() ;
 
 	/**
 	 @param ev [in]
-		X��̐����w�肵�Ă��������B
+		X列の数を指定してください。
 	 */
 	virtual CDcdGrid& setXColumnCount( int ev ) ;
 
 	///@}
 public:
 	// ********************************
-	///	@name CDcdGrid-Y��EX���}��/�폜
+	///	@name CDcdGrid-Y列・X列を挿入/削除
 	// ********************************
 	///@{
 	/**
-	  Y����P�A�w��̈ʒu�ɒǉ����܂��B
+	  Y列を１つ、指定の位置に追加します。
 	 @param iYColumnNumber
-		Y��ԍ����w�肵�Ă��������B
-		�V�����ǉ����ꂽY�񂪁A����Y��ԍ��ɂȂ�܂��B
-		�͈͂� 0 �ȏ� getYColumnNumber() �ȉ��ŁA
-		0 �Ȃ�擪�EgetYColumnNumber() �Ȃ疖���ւ̒ǉ��ƂȂ�܂��B
-		  �������A INT_MAX ���w�肷��ƁA�������w�肵�����ƂɂȂ�܂��B
+		Y列番号を指定してください。
+		新しく追加されたY列が、このY列番号になります。
+		範囲は 0 以上 getYColumnNumber() 以下で、
+		0 なら先頭・getYColumnNumber() なら末尾への追加となります。
+		  ただし、 INT_MAX を指定すると、末尾を指定したことになります。
 	 @param bFixafterColumnNumberChange [in]
-		- false	�E�E�E  [FocurCellColumnNumber �ύX]  �t�H�[�J�X�Z�����A
-		�E�C���h�E����
-		�ړ����܂��B
-		- true �E�E�E 	[FixafterColumnNumber �ύX]  �t�H�[�J�X�Z����
-		�E�C���h�E���
-		�\�������悤�ɁA FixafterColumnNumber ��ύX���܂��B
+		- false	・・・  [FocurCellColumnNumber 変更]  フォーカスセルを、
+		ウインドウ内に
+		移動します。
+		- true ・・・ 	[FixafterColumnNumber 変更]  フォーカスセルが
+		ウインドウ上に
+		表示されるように、 FixafterColumnNumber を変更します。
 	 @return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 -	-2 ;	//	�C���f�N�X���s��
+		成功したら0以上、エラーなら負の数です。
+	 -	-2 ;	//	インデクスが不正
 	 */
 	virtual int insertYColumn( int iYColumnNumber ,
 		bool bFixafterColumnNumberChange ) ;
 
 	/**
-	  X����P�A�w��̈ʒu�ɒǉ����܂��B
+	  X列を１つ、指定の位置に追加します。
 	 @param iXColumnNumber
-		X��ԍ����w�肵�Ă��������B
-		�V�����ǉ����ꂽX�񂪁A����X��ԍ��ɂȂ�܂��B
-		�͈͂� 0 �ȏ� getXColumnNumber() �ȉ��ŁA
-		0 �Ȃ�擪�EgetXColumnNumber() �Ȃ疖���ւ̒ǉ��ƂȂ�܂��B
-		  �������A INT_MAX ���w�肷��ƁA�������w�肵�����ƂɂȂ�܂��B
+		X列番号を指定してください。
+		新しく追加されたX列が、このX列番号になります。
+		範囲は 0 以上 getXColumnNumber() 以下で、
+		0 なら先頭・getXColumnNumber() なら末尾への追加となります。
+		  ただし、 INT_MAX を指定すると、末尾を指定したことになります。
 	 @param bFixafterColumnNumberChange [in]
-		- false	�E�E�E  [FocurCellColumnNumber �ύX]  �t�H�[�J�X�Z�����A
-		�E�C���h�E����
-		�ړ����܂��B
-		- true �E�E�E 	[FixafterColumnNumber �ύX]  �t�H�[�J�X�Z����
-		�E�C���h�E���
-		�\�������悤�ɁA FixafterColumnNumber ��ύX���܂��B
+		- false	・・・  [FocurCellColumnNumber 変更]  フォーカスセルを、
+		ウインドウ内に
+		移動します。
+		- true ・・・ 	[FixafterColumnNumber 変更]  フォーカスセルが
+		ウインドウ上に
+		表示されるように、 FixafterColumnNumber を変更します。
 	 @return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 -	-2 ;	//	�C���f�N�X���s��
+		成功したら0以上、エラーなら負の数です。
+	 -	-2 ;	//	インデクスが不正
 	 */
 	virtual int insertXColumn( int iXColumnNumber , 
 		bool bFixafterColumnNumberChange ) ;
 	
 	/**
-	  Y����P�A�폜���܂��B
+	  Y列を１つ、削除します。
 	 @param iYColumnNumber
-		Y��ԍ����w�肵�Ă��������B
-		�͈͂� 0 �ȏ� getYColumnNumber() �����ł��B
-		  �������A INT_MAX ���w�肷��ƁA�������w�肵�����ƂɂȂ�܂��B
+		Y列番号を指定してください。
+		範囲は 0 以上 getYColumnNumber() 未満です。
+		  ただし、 INT_MAX を指定すると、末尾を指定したことになります。
 	 @return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 -	-2 ;	//	�C���f�N�X���s��
+		成功したら0以上、エラーなら負の数です。
+	 -	-2 ;	//	インデクスが不正
 	 */
 	virtual int eraseYColumn( int iYColumnNumber ) ;
 	/**
-	  X����P�A�폜���܂��B
+	  X列を１つ、削除します。
 	 @param iXColumnNumber
-		X��ԍ����w�肵�Ă��������B
-		�͈͂� 0 �ȏ� getXColumnNumber() �����ł��B
-		  �������A INT_MAX ���w�肷��ƁA�������w�肵�����ƂɂȂ�܂��B
+		X列番号を指定してください。
+		範囲は 0 以上 getXColumnNumber() 未満です。
+		  ただし、 INT_MAX を指定すると、末尾を指定したことになります。
 	 @return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 -	-2 ;	//	�C���f�N�X���s��
+		成功したら0以上、エラーなら負の数です。
+	 -	-2 ;	//	インデクスが不正
 	 */
 	virtual int eraseXColumn( int iXColumnNumber ) ;
 	///@}
 	
 public:
 	// ********************************
-	///	@name	CDcdGrid-�X�N���[��
+	///	@name	CDcdGrid-スクロール
 	// ********************************
 	///@{
 	virtual int	getXFixColumnCount() ;
 	/**
-	�@�X�N���[���ʒu�̕ύX���ɂ́ACWndDcdGrid �S�̂��X�V���܂�
-	 ( CWndDcdGrid::update())���Ăяo��)�B
+	　スクロール位置の変更時には、CWndDcdGrid 全体を更新します
+	 ( CWndDcdGrid::update())を呼び出し)。
 	*/
 	virtual CDcdGrid& setXFixColumnCount( int ev ) ;
 	virtual int	getXFixafterColumnNumber() ;
 	/**
-	�@�X�N���[���ʒu�̕ύX���ɂ́ACWndDcdGrid �S�̂��X�V���܂�
-	 ( CWndDcdGrid::update())���Ăяo��)�B
+	　スクロール位置の変更時には、CWndDcdGrid 全体を更新します
+	 ( CWndDcdGrid::update())を呼び出し)。
 	*/
 	virtual CDcdGrid& setXFixafterColumnNumber( int ev ) ;
 	virtual int	getYFixColumnCount() ;
 	/**
-	�@�X�N���[���ʒu�̕ύX���ɂ́ACWndDcdGrid �S�̂��X�V���܂�
-	 ( CWndDcdGrid::update())���Ăяo��)�B
+	　スクロール位置の変更時には、CWndDcdGrid 全体を更新します
+	 ( CWndDcdGrid::update())を呼び出し)。
 	*/
 	virtual CDcdGrid& setYFixColumnCount( int ev ) ;
 	virtual int	getYFixafterColumnNumber() ;
 	/**
-	�@�X�N���[���ʒu�̕ύX���ɂ́ACWndDcdGrid �S�̂��X�V���܂�
-	 ( CWndDcdGrid::update())���Ăяo��)�B
+	　スクロール位置の変更時には、CWndDcdGrid 全体を更新します
+	 ( CWndDcdGrid::update())を呼び出し)。
 	*/
 	virtual CDcdGrid& setYFixafterColumnNumber( int ev ) ;
 	///@}
@@ -458,46 +458,46 @@ public:
 	// ****************************************************************
 protected:
 	// ********************************
-	///@name CWndDcdGrid ����� ����
+	///@name CWndDcdGrid からの 操作
 	// ********************************
 	///@{
 	/**
-	  �����̑Ó��������؂��A�l��␳���܂��B
+	  属性の妥当性を検証し、値を補正します。
 	@return
-		���炩�̑����̍X�V���s������ true �B
+		何らかの属性の更新を行ったら true 。
 	*/
 	bool update_adjustProp() ;
 	/**
-	  ���������ƂɁA��ʂ��X�V���܂��B
+	  属性をもとに、画面を更新します。
 	@return
-		���炩�̉�ʍX�V���s������ true �B
+		何らかの画面更新を行ったら true 。
 	*/
 	bool update_updateScreen() ;
 
 	/**
-	  CWndDcdGrid �̓��ꃁ�\�b�h�̈Ϗ����󂯂܂��B
+	  CWndDcdGrid の同一メソッドの委譲を受けます。
 
-	  �E�C���h�E�S��𖳌������A�ĕ`���v�����܂��B
-	  ���̂Ƃ��A�X�N���[���o�[�̑����̍Đݒ�E
-	�t�H�[�J�X�Z���̐��K�����s���܂��B
+	  ウインドウ全域を無効化し、再描画を要求します。
+	  このとき、スクロールバーの属性の再設定・
+	フォーカスセルの正規化も行います。
 	
 	 @param bErase [in]
-		�X�V���[�W�������̔w�i���������邩�ǂ������w�肵�܂��B
-		(�E�C���h�E�̔w�i�F�����������`����s���Ă���ꍇ�́A
-		true �ɂ���K�v������܂��B
-		NULL PEN �� NULL BRUSH���g�p���ĕ`����s���Ă���ꍇ���A����ɊY�����܂�)�B
+		更新リージョン内の背景を消去するかどうかを指定します。
+		(ウインドウの背景色を活かした描画を行っている場合は、
+		true にする必要があります。
+		NULL PEN や NULL BRUSHを使用して描画を行っている場合が、これに該当します)。
 	 @attention
-		CWnd::Invalidate() �ł́A�X�N���[���o�[��t�H�[�J�X�Z����
-		�œK���͍s���܂���B
-		�O���b�h�S�̂̍ĕ`����s���ꍇ�́A CWnd::Invalidate() �̑����
-		���̊֐����Ăяo���Ȃ��Ă͂Ȃ�܂���B
+		CWnd::Invalidate() では、スクロールバーやフォーカスセルの
+		最適化は行われません。
+		グリッド全体の再描画を行う場合は、 CWnd::Invalidate() の代わりに
+		この関数を呼び出さなくてはなりません。
 	 */
 	virtual void InvalidateGrid( 
 		bool bErase = true ) ;
 	///@}
 public:
 	// ********************************
-	///@name WndDcdGrid3::CXDcdGrid �֘A
+	///@name WndDcdGrid3::CXDcdGrid 関連
 	// ********************************
 	///@{
 	CWndDcdGrid*	getCWndDcdGrid() {
@@ -505,7 +505,7 @@ public:
 	///@}
 
 	// ********************************
-	///@name WndDcdGrid3::CXDcdGrid ����
+	///@name WndDcdGrid3::CXDcdGrid 属性
 	// ********************************
 	///@{
 	bool getUpdateCWndDcdGrid()const ;
@@ -514,7 +514,7 @@ public:
 
 protected:
 	// ================================
-	///@name CXDcdGrid_ZoneCacheTemp �ɁAcreateZoneCache�����J
+	///@name CXDcdGrid_ZoneCacheTemp に、createZoneCacheを公開
 	// ================================
 	friend class CXDcdGrid_ZoneCacheTemp ;
 	bool createZoneCache( IfDcdTarget* pIfDcdTarger );

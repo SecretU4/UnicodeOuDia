@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -90,7 +90,7 @@ using namespace OuLib::Str;
 //	CDcdDiagram2
 // ****************************************************************
 	// --------------------------------
-	//@name �����֐�
+	//@name 下請関数
 	// --------------------------------
 CdDcdFreeLineProp	CDcdDiagram2::getCdLinePropNormal()const
 {
@@ -113,10 +113,10 @@ CDcdText	CDcdDiagram2::getCDcdTextEkimei()const
 {
 	string strExtent ;
 	for ( int idx = 0 ; idx < m_iEkimeiLength ; idx ++ ){
-		strExtent += "��" ;
+		strExtent += "岡" ;
 	}
-	//strExtent = �H���t�@�C���f�[�^�ɕۑ�����Ă���l�����Ƃɂ��āA
-	//	�쐬�����A�����񕝂̊������ł��B
+	//strExtent = 路線ファイルデータに保存されている値をもとにして、
+	//	作成した、文字列幅の基準文字列です。
 
 	return CDcdText( "" , 
 		CdDrawTextProp( m_fontpropDiaEkimeiFont , m_colorDiaMojiColor ) ,
@@ -124,13 +124,13 @@ CDcdText	CDcdDiagram2::getCDcdTextEkimei()const
 };
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CDcdDiagram2::CDcdDiagram2( 
 		CentDedDgrDia*	pCentDedDgrDia , 
 		const CdDedDispProp& aCdDedDispProp ) 
-	: m_fontpropDiaEkimeiFont( 9 ,"�l�r �S�V�b�N"  )
-	, m_fontpropDiaJikokuFont( 9 ,"�l�r �S�V�b�N"  )
+	: m_fontpropDiaEkimeiFont( 9 ,"ＭＳ ゴシック"  )
+	, m_fontpropDiaJikokuFont( 9 ,"ＭＳ ゴシック"  )
 	, m_colorDiaMojiColor( CdColorProp( 0 , 0 , 0 ) ) 
 	, m_iEkimeiLength( 6 )
 	, m_bHideIppanekiEkimei( false ) 
@@ -145,8 +145,8 @@ CDcdDiagram2::CDcdDiagram2(
 
 
 CDcdDiagram2::CDcdDiagram2() 
-	: m_fontpropDiaEkimeiFont( 9 ,"�l�r �S�V�b�N"  )
-	, m_fontpropDiaJikokuFont( 9 ,"�l�r �S�V�b�N"  )
+	: m_fontpropDiaEkimeiFont( 9 ,"ＭＳ ゴシック"  )
+	, m_fontpropDiaJikokuFont( 9 ,"ＭＳ ゴシック"  )
 	, m_colorDiaMojiColor( CdColorProp( 0 , 0 , 0 ) ) 
 	, m_iEkimeiLength( 6 )
 	, m_bHideIppanekiEkimei( false ) 
@@ -171,7 +171,7 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 	CentDedDgrDia* pCentDedDgrDia = m_pCDcdDiagram->getCentDedDgrDia() ;
 
 	// --------------------------------
-	//	�_�C���O�����̊e�\���v�f�̃T�C�Y���v�Z
+	//	ダイヤグラムの各構成要素のサイズを計算
 	// --------------------------------
 	CdDcdFreeLineProp	linepropNormal( getCdLinePropNormal() ) ;
 	CdDcdFreeLineProp	linepropBold( getCdLinePropBold() ) ;
@@ -179,41 +179,41 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 	CDcdText	dcdtextJikoku( getCDcdTextJikoku() ) ;
 	CdDcdSizeXy	sizeJikoku ;
 	dcdtextJikoku.getItemSize( pIfDcdTarget , &sizeJikoku ) ;
-	//dcdtextJikoku = �����e�L�X�g�`����s��DcDraw�I�u�W�F�N�g�𐶐����܂����B
-	//sizeJikoku = �����e�L�X�g�`����s��DcDraw�I�u�W�F�N�g�̃T�C�Y(�_�����W)
+	//dcdtextJikoku = 時刻テキスト描画を行うDcDrawオブジェクトを生成しました。
+	//sizeJikoku = 時刻テキスト描画を行うDcDrawオブジェクトのサイズ(論理座標)
 
 	CDcdText	dcdtextEkimei( getCDcdTextEkimei() ) ;
 	CdDcdSizeXy	sizeEkimei ;
 	dcdtextEkimei.getItemSize( pIfDcdTarget , &sizeEkimei ) ;
-	//dcdtextEkimei = �w���e�L�X�g�̕`����s��DcDraw�I�u�W�F�N�g�𐶐����܂����B
-	//sizeEkimei = �w���e�L�X�g�̕`����s��DcDraw�I�u�W�F�N�g�̃T�C�Y(�_�����W)
+	//dcdtextEkimei = 駅名テキストの描画を行うDcDrawオブジェクトを生成しました。
+	//sizeEkimei = 駅名テキストの描画を行うDcDrawオブジェクトのサイズ(論理座標)
 
 	CdDcdZoneXy	zonexyDiagram = calcDiagramZoneDcd( pIfDcdTarget );
-	//zonexyDiagram = �_�C���O�����̕`����s���̈�i�_�����W�j
+	//zonexyDiagram = ダイヤグラムの描画を行う領域（論理座標）
 	// --------------------------------
 	CaDcdTargetItemPosition	targetDiagram( pIfDcdTarget , zonexyDiagram ) ;
-		//targetDiagram = �_�C���O�����̕`����s���̈��DcDraw�I�u�W�F�N�g
+		//targetDiagram = ダイヤグラムの描画を行う領域のDcDrawオブジェクト
 	
 
 	// --------------------------------
-	//	�`����s���̈�̌v�Z	
+	//	描画を行う領域の計算	
 	// --------------------------------
 	CdDcdZoneXy	zonexyCentDedDgrDia = getCentDedDgrDia()->getZone() ;
-	//zonexyCentDedDgrDia = �_�C���O�����͈̔͂��A
-	//	�w�_�C���O�����G���e�B�e�B���W�n�x�ŕێ����܂��B
-	//	X���W��24���ԕ��AY���W�͋N�_����I�_�܂ł�\���܂��B
+	//zonexyCentDedDgrDia = ダイヤグラムの範囲を、
+	//	『ダイヤグラムエンティティ座標系』で保持します。
+	//	X座標は24時間分、Y座標は起点から終点までを表します。
 
 	// --------------------------------
-	//	���̕`��
+	//	時の描画
 	// --------------------------------
 	{
 		CdDcdZoneXy	zonexyJikokuDcd = calcJikokuZoneDcd( pIfDcdTarget );
-		//zonexyEkimeiDcd = ���\��������DcDraw���W�ɂ��͈�
+		//zonexyEkimeiDcd = 時表示部分のDcDraw座標による範囲
 
 		CaDcdTargetItemPosition	targetitemposJikoku( pIfDcdTarget , zonexyJikokuDcd ) ;
 		CaDcdTargetClip targetJikoku( &targetitemposJikoku , zonexyJikokuDcd ) ;
 
-		//	�����\���́A�_�C���O�����N�_�����̎��̐�������J�n(4:59�Ȃ�5:00�A5:00�Ȃ�5:00)
+		//	時刻表示は、ダイヤグラム起点時刻の次の正時から開始(4:59なら5:00、5:00なら5:00)
 		DcdPos posDgrXJikokuhyoujiOrg = zonexyCentDedDgrDia.getX().getPos() ;
 		{
 			int iMod = zonexyCentDedDgrDia.getX().getPos() % ( 60 * 60 ); 
@@ -222,21 +222,21 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 				posDgrXJikokuhyoujiOrg += ( 60 * 60 ) - iMod ;
 			}
 		}
-		//posDgrXJikokuhyoujiOrg = �����\���̊J�n�ʒu
-		//	�_�C���O�����N�_�����̎��̐�������J�n(4:59�Ȃ�5:00�A5:00�Ȃ�5:00)
+		//posDgrXJikokuhyoujiOrg = 時刻表示の開始位置
+		//	ダイヤグラム起点時刻の次の正時から開始(4:59なら5:00、5:00なら5:00)
 
 		for ( DcdPos posDgrX = posDgrXJikokuhyoujiOrg; 
 				posDgrX <= zonexyCentDedDgrDia.getX().getEndPos() ; 
 				posDgrX += 60 * 60 )
 		{
-			//posDgrX = �_�C���O�����G���e�B�e�B���W�ł́A
-			//	�����\���̈ʒu
+			//posDgrX = ダイヤグラムエンティティ座標での、
+			//	時刻表示の位置
 
-			//	�����̃e�L�X�g��ݒ�
+			//	時刻のテキストを設定
 			dcdtextJikoku.setText( 
 				stringOf( CdDedJikoku( posDgrX ).getHour() ) ) ;
 
-			//	���W���ADgr��Dcd�ɕϊ�
+			//	座標を、Dgr→Dcdに変換
 			DcdPos posDcdX = XDgrToDcd( pIfDcdTarget , posDgrX ) ;
 			{
 				CdDcdZoneXy	zonexyDcdZoneXy( 
@@ -252,19 +252,19 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 		}
 	}
 	// --------------------------------
-	//	�w�����̌r��
-	//	�w���E�̌r��
+	//	駅名左の罫線
+	//	駅名右の罫線
 	// --------------------------------
 	{
 
 		CdDcdZoneXy	zonexyEkimeiDcd = calcEkimeiZoneDcd( pIfDcdTarget );
-		//zonexyEkimeiDcd = �w���\��������DcDraw���W�ɂ��͈�
+		//zonexyEkimeiDcd = 駅名表示部分のDcDraw座標による範囲
 
 		CaDcdTargetItemPosition	targetitemposEkimei( pIfDcdTarget , zonexyEkimeiDcd ) ;
 		CaDcdTargetClip targetEkimei( &targetitemposEkimei , zonexyEkimeiDcd ) ;
 
 		// --------------------------------
-		//CDcdLine ���g�����r���`��
+		//CDcdLine を使った罫線描画
 		// --------------------------------
 		{
 
@@ -279,14 +279,14 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 						pCentDedDgrDia->getDgrYPosOfEki( 
 							pCentDedDgrEkiCont->size() - 1  ) );
 				}
-				//zoneDgrY = �n���w�E�I���w�̃_�C���O�������W�ɂ��Y���W�͈�
+				//zoneDgrY = 始発駅・終着駅のダイヤグラム座標によるY座標範囲
 				zoneDcdY = YDgrToDcd( &targetEkimei , zoneDgrY ) ;
-				//zoneDcdY = �n���w�E�I���w��DcDrawe���W�ɂ��Y���W�͈�
+				//zoneDcdY = 始発駅・終着駅のDcDrawe座標によるY座標範囲
 
 				zoneDcdY = zonexyEkimeiDcd.getY().CrossZone( zoneDcdY ) ;
-				//zoneDcdY =	�c����`�悷��͈͂� DcDraw���W
+				//zoneDcdY =	縦線を描画する範囲の DcDraw座標
 			}
-			//zoneDcdY =	�c����`�悷��͈͂� DcDraw���W
+			//zoneDcdY =	縦線を描画する範囲の DcDraw座標
 
 
 
@@ -327,11 +327,11 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 		}
 	}
 	// --------------------------------
-	//	���r���E�w���̕`��
+	//	横罫線・駅名の描画
 	// --------------------------------
 	{
 		CdDcdZoneXy	zonexyEkimeiDcd = calcEkimeiZoneDcd( pIfDcdTarget );
-		//zonexyEkimeiDcd = �w���\��������DcDraw���W�ɂ��Y���W�͈�
+		//zonexyEkimeiDcd = 駅名表示部分のDcDraw座標によるY座標範囲
 
 		CaDcdTargetItemPosition	targetitemposEkimei( pIfDcdTarget , zonexyEkimeiDcd ) ;
 		CaDcdTargetClip targetEkimei( &targetitemposEkimei , zonexyEkimeiDcd ) ;
@@ -340,7 +340,7 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 		const Mu<CentDedDgrEki>* pCentDedDgrEkiCont = 
 			getCentDedDgrDia()->getCentDedDgrEkiCont() ;
 		// --------------------------------
-		//	�w�����̌r��
+		//	駅名下の罫線
 		// --------------------------------
 		for ( int iEkiIndex = 0 ; 
 				iEkiIndex < pCentDedDgrEkiCont->size() ; 
@@ -358,11 +358,11 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 			{
 				aCDcdFreeLine.setCdLineProp( linepropNormal ) ;
 			}
-			//	���W���ADgr��Dcd�ɕϊ�
+			//	座標を、Dgr→Dcdに変換
 			DcdPos	posDcdY = YDgrToDcd( pIfDcdTarget , posDgrY ) ;
 			CdDcdZone	zoneDcdX = zonexyEkimeiDcd.getX() ;
 			
-			//	���r���`��
+			//	下罫線描画
 			if ( targetEkimei.getZone().getY().getPos() - 1 <= posDcdY &&
 				 posDcdY < targetEkimei.getZone().getY().getEndPos() + 1 )
 			{
@@ -376,7 +376,7 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 			}
 		}
 		// --------------------------------
-		//	�w��
+		//	駅名
 		// --------------------------------
 		for ( int iEkiIndex = 0 ; 
 				iEkiIndex < pCentDedDgrEkiCont->size() ; 
@@ -387,22 +387,22 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 			DcdPos posDgrY = getCentDedDgrDia()->getDgrYPosOfEki( iEkiIndex ) ;
 			dcdtextEkimei.setText( aCentDedDgrEki.getEkimei() ) ;
 
-			//	�w����`��
+			//	駅名を描画
 			if ( aCentDedDgrEki.getIsSyuyoueki() ||
 				iEkiIndex == 0 ||
 				iEkiIndex == pCentDedDgrEkiCont->size() - 1 ||
 				!m_bHideIppanekiEkimei  )
 			{
-				//	�n���w�E�I���w�E��v�w�E���邢��
-				//	�u��ʉw�̉w���\�����B���w��v���U�̏ꍇ��
-				//	�w����`�悵�܂��B
-				//	(�u��ʉw�̉w���\�����B���w��v ���^�̏ꍇ�A
-				//	�n���w�E�I���w�ȊO�̈�ʉw��
-				//	�w����`�悵�܂���B)
+				//	始発駅・終着駅・主要駅・あるいは
+				//	「一般駅の駅名表示を隠す指定」が偽の場合に
+				//	駅名を描画します。
+				//	(「一般駅の駅名表示を隠す指定」 が真の場合、
+				//	始発駅・終着駅以外の一般駅は
+				//	駅名を描画しません。)
 
 
 
-				//	���W���ADgr��Dcd�ɕϊ�
+				//	座標を、Dgr→Dcdに変換
 				DcdPos	posDcdY = YDgrToDcd( &targetEkimei , posDgrY ) ;
 				{
 					CdDcdZoneXy	zonexyTextEkimei( 
@@ -427,7 +427,7 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 	}
 
 	// --------------------------------
-	//	�_�C���̕`��
+	//	ダイヤの描画
 	// --------------------------------
 	{
 		bRv |= m_pCDcdDiagram->DcDraw( &targetDiagram ) ;
@@ -445,7 +445,7 @@ bool CDcdDiagram2::getItemSize( IfDcdTarget* pIfDcdTarget ,
 //	CDcdDiagram
 // ********************************
 	// ********************************
-	//@name CDcdDiagram-�֘A
+	//@name CDcdDiagram-関連
 	// ********************************
 CentDedDgrDia*	CDcdDiagram2::getCentDedDgrDia() 
 {
@@ -457,7 +457,7 @@ CDcdDiagram2& CDcdDiagram2::setCentDedDgrDia( CentDedDgrDia* value )
 	return *this ;
 }
 	// ********************************
-	//@name CDcdDiagram-����-CdDedDispProp ����ǂݍ��݉\
+	//@name CDcdDiagram-属性-CdDedDispProp から読み込み可能
 	// ********************************
 CdFontProp	CDcdDiagram2::getDiaRessyaFont()const 
 {
@@ -488,7 +488,7 @@ CDcdDiagram2& CDcdDiagram2::setDiaJikuColor( CdColorProp value )
 	return *this ;
 }
 	// ********************************
-	//@name CDcdDiagram-����-CdDedDispProp �ɂ͂Ȃ�����
+	//@name CDcdDiagram-属性-CdDedDispProp にはないもの
 	// ********************************
 bool	CDcdDiagram2::getDisplayRessyabangou()const 
 {
@@ -573,7 +573,7 @@ int CDcdDiagram2::getVlineChoices(
 }
 
 	// ********************************
-	//@name CDcdDiagram-����
+	//@name CDcdDiagram-操作
 	// ********************************
 
 CDcdDiagram2& CDcdDiagram2::readCdDedDispProp( const CdDedDispProp& value ) 
@@ -625,8 +625,8 @@ int CDcdDiagram2::calcCentDedDgrRessyasenOfPoint(
 	}
 
 	CaDcdTargetItemPosition	targetDiagram( pIfDcdTarget , zonexyDiagram ) ;
-	//targetDiagram = �_�C���O�����̕`����s���̈�
-	//zonexyDiagram = �_�C���O�����̕`����s���̈�
+	//targetDiagram = ダイヤグラムの描画を行う領域
+	//zonexyDiagram = ダイヤグラムの描画を行う領域
 
 	return m_pCDcdDiagram->calcCentDedDgrRessyasenOfPoint( 
 		&targetDiagram ,
@@ -647,8 +647,8 @@ int CDcdDiagram2::calcEkiOrderOfPoint(
 	}
 
 	CaDcdTargetItemPosition	targetDiagram( pIfDcdTarget , zonexyDiagram ) ;
-	//targetDiagram = �_�C���O�����̕`����s���̈�
-	//zonexyDiagram = �_�C���O�����̕`����s���̈�
+	//targetDiagram = ダイヤグラムの描画を行う領域
+	//zonexyDiagram = ダイヤグラムの描画を行う領域
 
 	return m_pCDcdDiagram->calcEkiOrderOfPoint( 
 		&targetDiagram ,
@@ -680,7 +680,7 @@ int CDcdDiagram2::calcEkiIndexOfPoint(
 }
 
 	// ********************************
-	//@name CDcdDiagram-�_�C���O�������W�ƁAIfDcdTarget ��̍��W��ϊ�
+	//@name CDcdDiagram-ダイヤグラム座標と、IfDcdTarget 上の座標を変換
 	// ********************************
 DcdPos CDcdDiagram2::XDgrToDcd( IfDcdTarget* pIfDcdTarget , DcdPos posSrc ) 
 {
@@ -802,7 +802,7 @@ CdDcdZoneXy CDcdDiagram2::DgrFromDcd( IfDcdTarget* pIfDcdTarget ,
 
 
 	// ********************************
-	//@name CDcdDiagram2-����
+	//@name CDcdDiagram2-属性
 	// ********************************
 CdFontProp	CDcdDiagram2::getDiaEkimeiFont()const 
 {
@@ -849,14 +849,14 @@ CDcdDiagram2& CDcdDiagram2::setHideIppanekiEkimei( bool value )
 
 	
 	// ********************************
-	//@name CDcdDiagram2-����
+	//@name CDcdDiagram2-操作
 	// ********************************
 
 CdDcdZoneXy CDcdDiagram2::calcDiagramZoneDcd( 
 			IfDcdTarget* pIfDcdTarget )const 
 {
 	// --------------------------------
-	//	�w���\���E�����̗̈�
+	//	駅名表示・時刻の領域
 	// --------------------------------
 	CdDcdZoneXy	zonexyEkimei = calcEkimeiZoneDcd( pIfDcdTarget ) ;
 	CdDcdZoneXy	zonexyJikoku = calcJikokuZoneDcd( pIfDcdTarget ) ;
@@ -884,31 +884,31 @@ CdDcdZoneXy CDcdDiagram2::calcEkimeiZoneDcd(
 			IfDcdTarget* pIfDcdTarget )const 
 {
 	// --------------------------------
-	//	�w���\���̕�
+	//	駅名表示の幅
 	// --------------------------------
 	DcdSize	sizeEkimeiX = 0 ;
 	{
 		CdDcdFreeLineProp	linepropBold( getCdLinePropBold() ) ;
 
 		// --------------------------------
-		//	�e�L�X�g�̍��̑���
+		//	テキストの左の太線
 		sizeEkimeiX += linepropBold.getLogicalunitWidth() ;
 
 		// --------------------------------
-		//	�e�L�X�g�̕�
+		//	テキストの幅
 		CdDcdSizeXy	sizeTextEkimei ;
 		CDcdText	dcdtextEkimei( getCDcdTextEkimei() ) ;
 		dcdtextEkimei.getItemSize( pIfDcdTarget , &sizeTextEkimei ) ;
-		//dcdtextEkimei = �w���̕`����s�� DcDraw �I�u�W�F�N�g
-		//sizeTextEkimei = �w���̕`����s�� DcDraw �I�u�W�F�N�g�̑傫��
+		//dcdtextEkimei = 駅名の描画を行う DcDraw オブジェクト
+		//sizeTextEkimei = 駅名の描画を行う DcDraw オブジェクトの大きさ
 
 		sizeEkimeiX += sizeTextEkimei.getX() ;
 
 		// --------------------------------
-		//	�e�L�X�g�̉E�̑���
+		//	テキストの右の太線
 		sizeEkimeiX += linepropBold.getLogicalunitWidth() ;
 	}
-	//sizeEkimeiX = �w�����̕�
+	//sizeEkimeiX = 駅名欄の幅
 
 	// --------------------------------
 	CdDcdZoneXy	zonexyEki ;
@@ -936,7 +936,7 @@ CdDcdZoneXy CDcdDiagram2::calcJikokuZoneDcd(
 			IfDcdTarget* pIfDcdTarget )const 
 {
 	// --------------------------------
-	//	�����\���̍���
+	//	時刻表示の高さ
 	// --------------------------------
 	DcdSize	sizeJikokuY = 0 ;
 	{
@@ -944,15 +944,15 @@ CdDcdZoneXy CDcdDiagram2::calcJikokuZoneDcd(
 		CdDcdSizeXy	sizeTextJikoku ;
 		dcdtextJikoku.getItemSize( pIfDcdTarget , &sizeTextJikoku ) ;
 
-		//dcdtextJikoku = ���̕`����s�� DcDraw �I�u�W�F�N�g
-		//sizeTextJikoku = ���̕`����s�� DcDraw �I�u�W�F�N�g�̑傫��
+		//dcdtextJikoku = 時の描画を行う DcDraw オブジェクト
+		//sizeTextJikoku = 時の描画を行う DcDraw オブジェクトの大きさ
 
 		sizeJikokuY = sizeTextJikoku.getY() ;
 	}
-	//sizeJikokuY=�����\���̍���
+	//sizeJikokuY=時刻表示の高さ
 
 	// --------------------------------
-	//	�w���\���̕�
+	//	駅名表示の幅
 	// --------------------------------
 	CdDcdZoneXy	zonexyEkimei = calcEkimeiZoneDcd( pIfDcdTarget ) ;
 

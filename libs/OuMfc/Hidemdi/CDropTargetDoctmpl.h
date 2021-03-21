@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,96 +81,96 @@ namespace Hidemdi{
 //	CDropTargetDoctmpl
 // ****************************************************************
 /** @brief 
-* �y�T�v�z
-* 	 CF_HDROP �`���ŁA���炩���ߎw�肳�ꂽDoctemplate�ɓo�^����Ă���
-* 	�g���q�����t�@�C�������̃h���b�v���󂯓���܂��B
+* 【概要】
+* 	 CF_HDROP 形式で、あらかじめ指定されたDoctemplateに登録されている
+* 	拡張子を持つファイルだけのドロップを受け入れます。
 *
-* �y�g�����z
+* 【使い方】
 *
-* �P�D	���̃I�u�W�F�N�g���A���C���t���[���E�C���h�E�I�u�W�F�N�g��
-* 	�����o�ϐ��Ƃ��Đ錾���Ă��������B
+* １．	このオブジェクトを、メインフレームウインドウオブジェクトの
+* 	メンバ変数として宣言してください。
 *
-* �Q�D  ���C���t���[���E�C���h�E�� OnCreate() �ŁA���̃I�u�W�F�N�g��
-* 	Register() ���\�b�h���Ăяo���āA���C���t���[���E�C���h�E�I�u�W�F�N�g��
-* 	���̃I�u�W�F�N�g�ɓo�^���Ă��������B
+* ２．  メインフレームウインドウの OnCreate() で、このオブジェクトの
+* 	Register() メソッドを呼び出して、メインフレームウインドウオブジェクトを
+* 	このオブジェクトに登録してください。
 *
-* �R�D  ���C���t���[���E�C���h�E�� OnDestroy() �ŁA���̃I�u�W�F�N�g��
-* 	Revoke() ���\�b�h���Ăяo���Ă��������B
+* ３．  メインフレームウインドウの OnDestroy() で、このオブジェクトの
+* 	Revoke() メソッドを呼び出してください。
 *
-* �S�D  �A�v���P�[�V�����N���X�iCWinApp�h���N���X�j�� InitInstance() �ŁA
-* 	AfxOleInit() ���Ăяo���Ă��������B
+* ４．  アプリケーションクラス（CWinApp派生クラス）の InitInstance() で、
+* 	AfxOleInit() を呼び出してください。
 *
-* �y���Ӂz
-* �P�D  OLE�h���b�O���h���b�v���T�|�[�g���郁�C���t���[���E�C���h�E�ł́A
-* 	DragAcceptFiles() �ďo���s��Ȃ��ł��������B�܂��AWS_EX_ACCEPTFILES
-* 	�������w�肵�Ȃ��ł��������B
+* 【注意】
+* １．  OLEドラッグ＆ドロップをサポートするメインフレームウインドウでは、
+* 	DragAcceptFiles() 呼出を行わないでください。また、WS_EX_ACCEPTFILES
+* 	属性も指定しないでください。
 */
 class CDropTargetDoctmpl : public COleDropTarget
 {
 // ********************************
-//	�]���^
+//	従属型
 // ********************************
  public:
 	typedef COleDropTarget	super ;
 
 //--------------------------------
-//	�f�[�^�����o
+//	データメンバ
 //--------------------------------
  private:
 	/**
-	* 	���̃h���b�v�^�[�Q�b�g���T�|�[�g����g���q��ێ����܂�
-	* 	������́A".txt" �̌`���ł�
+	* 	このドロップターゲットがサポートする拡張子を保持します
+	* 	文字列は、".txt" の形式です
 	*/
 	CStringArray	m_astrExt ;
 	
 	/**
-	*	̧�قP�����̃h���b�v���󂯕t���܂��iSDI�Ŏg���܂��j
-	*	�R���X�g���N�^�Ō��܂�܂��B
+	*	ﾌｧｲﾙ１つだけのドロップを受け付けます（SDIで使います）
+	*	コンストラクタで決まります。
 	*/
 	BOOL					m_bAcceptSingle ;
 	
 //--------------------------------
-//	�����֐�
+//	下請関数
 //--------------------------------
  public:
 	/**
-	* 	���̃h���b�v�^�[�Q�b�g�ɓ�������HDROP�n���h������A
-	* 	�܂܂�Ă���t�@�C���������o���āACStringArray�ɏ������݂܂��B
+	* 	このドロップターゲットに到着したHDROPハンドルから、
+	* 	含まれているファイル名を取り出して、CStringArrayに書き込みます。
 	* @param hgmemEHdrop [in]
-	* 	�h���b�v�^�[�Q�b�g�ɓ�������HDROP�n���h�����w�肵�Ă��������B
+	* 	ドロップターゲットに到着したHDROPハンドルを指定してください。
 	* @param pastrFilename [out]
-	* 	���̊֐��́A���̕�����z��ɁA�h���b�v���ꂽ̧�ق̈ꗗ��
-	* 	�i�[���܂��B
-	* 	�K�v�Ȃ��Ȃ�NULL�ł��܂��܂���B
+	* 	この関数は、この文字列配列に、ドロップされたﾌｧｲﾙの一覧を
+	* 	格納します。
+	* 	必要ないならNULLでかまいません。
 	* @return
-	* 	̧�ق̐���Ԃ��܂�
+	* 	ﾌｧｲﾙの数を返します
 	*/
 	static int HdropToFilenames( HDROP pdropgmemEHdrop 
 								, CStringArray* pastrFilename ) ;
 
 	/**
-	* 	�t�@�C�������i�[����CStringArray�̊e�v�f�̂����A
-	*	�g���q�̕s�K�؂Ȃ��̂��������܂��B
+	* 	ファイル名を格納したCStringArrayの各要素のうち、
+	*	拡張子の不適切なものを除去します。
 	* @param astrEExt [in]
-	* 	�g���q�Q���i�[����������z����w�肵�Ă��������B
-	*	�g���q�́A ".exe"
+	* 	拡張子群を格納した文字列配列を指定してください。
+	*	拡張子は、 ".exe"
 	* @param pastrFilename [in,out]
-	* 	���̊֐��́A���̕�����z��Ɋi�[����Ă���t�@�C��������A
-	* 	�g���q�̕s�K�؂ȗv�f���폜���܂�
-	* 	NULL���w�肷�邱�Ƃ͂ł��܂���
+	* 	この関数は、この文字列配列に格納されているファイル名から、
+	* 	拡張子の不適切な要素を削除します
+	* 	NULLを指定することはできません
 	*  @return
-	* 	�폜����̧�ق̐���Ԃ��܂�
+	* 	削除したﾌｧｲﾙの数を返します
 	*/
 	static int FilenamesNoExtRemove
 			( const CStringArray& astrEExt , CStringArray* pastrFilename ) ;
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	* @param bEAcceptSingle [in]
-	*	̧�قP�����̃h���b�v���󂯕t���܂��iSDI�Ŏg���܂��j
+	*	ﾌｧｲﾙ１つだけのドロップを受け付けます（SDIで使います）
 	*/
 	CDropTargetDoctmpl( BOOL bEAcceptSingle ) ;
 	virtual ~CDropTargetDoctmpl() ;
@@ -180,34 +180,34 @@ class CDropTargetDoctmpl : public COleDropTarget
 // ********************************
  public:
 	/**
-	* �y�I�[�o���C�h�z
-	* 	CWinApp�ɑ΂��āA���̃A�v���P�[�V�������T�|�[�g���Ă���g���q��
-	* 	�₢���킹�āA���̌��ʂ� m_astrExt �ɕۑ����܂��B
-	* 	�h���b�O����Ă���̂��A�A�v���P�[�V�����ŃT�|�[�g���Ă���g���q
-	* 	�ł������ꍇ�́A���̃h���b�v�^�[�Q�b�g�ւ̃R�s�[���󂯕t���܂�
+	* 【オーバライド】
+	* 	CWinAppに対して、このアプリケーションがサポートしている拡張子を
+	* 	問い合わせて、その結果を m_astrExt に保存します。
+	* 	ドラッグされているのが、アプリケーションでサポートしている拡張子
+	* 	であった場合は、このドロップターゲットへのコピーを受け付けます
 	*/
 	virtual DROPEFFECT OnDragEnter( CWnd* pWnd, COleDataObject* pDataObject
 										, DWORD dwKeyState, CPoint point );
 
 	/**
-	* �y�I�[�o���C�h�z
-	* 	�h���b�O����Ă���̂��A�A�v���P�[�V�����ŃT�|�[�g���Ă���g���q
-	* 	�ł������ꍇ�́A���̃h���b�v�^�[�Q�b�g�ւ̃R�s�[���󂯕t���܂�
+	* 【オーバライド】
+	* 	ドラッグされているのが、アプリケーションでサポートしている拡張子
+	* 	であった場合は、このドロップターゲットへのコピーを受け付けます
 	*/
 	virtual DROPEFFECT OnDragOver( CWnd* pWnd, COleDataObject* pDataObject
 										, DWORD dwKeyState, CPoint point );
 	
 	/**
-	* �y�I�[�o���C�h�z
-	* 	���ɏ����͂���܂���
+	* 【オーバライド】
+	* 	特に処理はありません
 	*/
 	virtual void OnDragLeave( CWnd* pWnd ) ;
 	
 	/**
-	* �y�I�[�o���C�h�z
-	* 	�h���b�O����Ă���̂��A�A�v���P�[�V�����ŃT�|�[�g���Ă���g���q
-	* 	�ł������ꍇ�́A���̃t�@�C������z��Ɋi�[���āADropProc() ��
-	* 	�Ăяo���܂�
+	* 【オーバライド】
+	* 	ドラッグされているのが、アプリケーションでサポートしている拡張子
+	* 	であった場合は、そのファイル名を配列に格納して、DropProc() を
+	* 	呼び出します
 	*/
 	virtual BOOL OnDrop( CWnd* pWnd, COleDataObject* pDataObject
 									, DROPEFFECT dropEffect, CPoint point );
@@ -219,23 +219,23 @@ class CDropTargetDoctmpl : public COleDropTarget
  public:
 	/**
 	* @param pWnd [in]
-	* 	�J�[�\�������݂���E�B���h�E�ւ̃|�C���^
+	* 	カーソルが現在あるウィンドウへのポインタ
 	* @param astrEFilename [in]
-	* 	�h���b�v�����f�[�^�������Ă���f�[�^ �I�u�W�F�N�g�ւ̃|�C���^�B
+	* 	ドロップされるデータを持っているデータ オブジェクトへのポインタ。
 	* @param dropEffect [in]
-	* 	���[�U�[���I������h���b�v����̌��ʁB���̒l�� 1 �ȏ��
-	* 	�g�ݍ��킹�����̂ł��B 
-	* 		- DROPEFFECT_COPY   �R�s�[���삪�s���܂��B
-	* 		- DROPEFFECT_MOVE   �ړ����삪�s���܂��B
-	* 		- DROPEFFECT_LINK   �h���b�v���ꂽ�f�[�^�ƌ��̃f�[�^��
-	* 			�����N����܂��B
-	* 		- DROPEFFECT_SCROLL   �h���b�O �X�N���[�����삪�^�[�Q�b�g����
-	* 			��������Ƃ��납�A�������Ă��܂��B 
+	* 	ユーザーが選択するドロップ操作の結果。次の値の 1 つ以上を
+	* 	組み合わせたものです。 
+	* 		- DROPEFFECT_COPY   コピー操作が行われます。
+	* 		- DROPEFFECT_MOVE   移動操作が行われます。
+	* 		- DROPEFFECT_LINK   ドロップされたデータと元のデータが
+	* 			リンクされます。
+	* 		- DROPEFFECT_SCROLL   ドラッグ スクロール操作がターゲット内で
+	* 			発生するところか、発生しています。 
 	* @param point [in]
-	* 	��ʏ�ɂ�����J�[�\���̈ʒu���s�N�Z���P�ʂŎw�肵�܂��B
+	* 	画面上におけるカーソルの位置をピクセル単位で指定します。
 	* @return
-	* 	�h���b�v�����������ꍇ�� 0 �ȊO��Ԃ��܂��B
-	* 	����ȊO�̏ꍇ�� 0 ��Ԃ��܂��B
+	* 	ドロップが成功した場合は 0 以外を返します。
+	* 	それ以外の場合は 0 を返します。
 	*/
 	virtual BOOL OnFiledrop( CWnd* pWnd , const CStringArray& astrEFilename
 								, DROPEFFECT dropEffect, CPoint point ) ;

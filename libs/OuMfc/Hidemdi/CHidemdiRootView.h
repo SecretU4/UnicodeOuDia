@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 #if !defined(AFX_ROOTVIEW2_H__E79B63C6_F828_4E88_9EC8_F421F6BA01B8__INCLUDED_)
 #define AFX_ROOTVIEW2_H__E79B63C6_F828_4E88_9EC8_F421F6BA01B8__INCLUDED_
@@ -68,7 +68,7 @@ Copyright (C) 2006-2017 take-okm
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
-// CHidemdiRootView.h : �w�b�_�[ �t�@�C��
+// CHidemdiRootView.h : ヘッダー ファイル
 //
 /** @file */
 #include <afxwin.h>
@@ -78,17 +78,17 @@ namespace Hidemdi{
 
 
 /////////////////////////////////////////////////////////////////////////////
-// CHidemdiRootView �r���[
+// CHidemdiRootView ビュー
 /** @brief
-* �y�T�v�z
-*	  HideMDI�̃��[�gDoc/View��View�N���X�ł����A����View���\������邱�Ƃ�
-*	����܂���B
-*	  �L���ȏ����͉����������Ă��܂���B
+* 【概要】
+*	  HideMDIのルートDoc/ViewのViewクラスですが、このViewが表示されることは
+*	ありません。
+*	  有効な処理は何も実装していません。
 */
 class CHidemdiRootView : public CView
 {
 // ********************************
-//	�]���^
+//	従属型
 // ********************************
  public:
 	typedef CView	super ;
@@ -97,24 +97,24 @@ class CHidemdiRootView : public CView
 //	MFC
 //----------------------------------------------------------------
 protected:
-	CHidemdiRootView();           // ���I�����Ɏg�p�����v���e�N�g �R���X�g���N�^
+	CHidemdiRootView();           // 動的生成に使用されるプロテクト コンストラクタ
 	DECLARE_DYNCREATE(CHidemdiRootView)
 
-// �A�g���r���[�g
+// アトリビュート
 public:
 
-// �I�y���[�V����
+// オペレーション
 public:
 
-// �I�[�o�[���C�h
-	// ClassWizard �͉��z�֐��̃I�[�o�[���C�h�𐶐����܂��B
+// オーバーライド
+	// ClassWizard は仮想関数のオーバーライドを生成します。
 
 	//{{AFX_VIRTUAL(CHidemdiRootView)
 	protected:
-	virtual void OnDraw(CDC* pDC);      // ���̃r���[��`�悷�邽�߂ɃI�[�o�[���C�h���܂����B
+	virtual void OnDraw(CDC* pDC);      // このビューを描画するためにオーバーライドしました。
 	//}}AFX_VIRTUAL
 
-// �C���v�������e�[�V����
+// インプリメンテーション
 protected:
 	virtual ~CHidemdiRootView();
 #ifdef _DEBUG
@@ -122,10 +122,10 @@ protected:
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-	// �������ꂽ���b�Z�[�W �}�b�v�֐�
+	// 生成されたメッセージ マップ関数
 protected:
 	//{{AFX_MSG(CHidemdiRootView)
-		// ���� - ClassWizard �͂��̈ʒu�Ƀ����o�֐���ǉ��܂��͍폜���܂��B
+		// メモ - ClassWizard はこの位置にメンバ関数を追加または削除します。
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
@@ -133,7 +133,7 @@ protected:
 /////////////////////////////////////////////////////////////////////////////
 
 //{{AFX_INSERT_LOCATION}}
-// Microsoft Visual C++ �͑O�s�̒��O�ɒǉ��̐錾��}�����܂��B
+// Microsoft Visual C++ は前行の直前に追加の宣言を挿入します。
 
 #endif // !defined(AFX_ROOTVIEW2_H__E79B63C6_F828_4E88_9EC8_F421F6BA01B8__INCLUDED_)
 

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,20 +81,20 @@ namespace Hidemdi{
 //	CHidemdiRootDoctmpl
 // ****************************************************************
 /** @brief
-�y�T�v�z
-  Hidemdi �A�v���P�[�V�����ɂ�����A���[�gDoc/View�̃e���v���[�g�ł��B
-  ���[�gDoctemplate�́A�A�v���P�[�V�����ɂP�������݂��܂��B
-  ���[�gDoctemplate �́A�ȉ��̃I�u�W�F�N�g�𐶐��E�Ǘ������ڂ������܂��B
+【概要】
+  Hidemdi アプリケーションにおける、ルートDoc/Viewのテンプレートです。
+  ルートDoctemplateは、アプリケーションに１つだけ存在します。
+  ルートDoctemplate は、以下のオブジェクトを生成・管理する役目を持ちます。
 
- - ���[�gDocument(CHidemdiRootDoc�̔h���N���X) 
+ - ルートDocument(CHidemdiRootDocの派生クラス) 
  
-�y�g�����z
+【使い方】
 
-  Doc/View���f����MFC�A�v���P�[�V�����ɂ�����A
-  ��ʓI��DocTemplate�̎g�����Ɠ����ł��B�A���A
+  Doc/ViewモデルのMFCアプリケーションにおける、
+  一般的なDocTemplateの使い方と同じです。但し、
 	
 <H4>
-�iCHidemdiApp::InitInstance() �I�[�o���C�h�̗�i�ꕔ�j�j
+（CHidemdiApp::InitInstance() オーバライドの例（一部））
 </H4>
 
 @code
@@ -108,11 +108,11 @@ namespace Hidemdi{
 		RegisterRootDoctmpl( pDocTemplate ) ;
 	}
 
-		�F
-		�i�����j
-		�F
+		：
+		（中略）
+		：
 
-	// ���C�� MDI �t���[�� �E�B���h�E���쐬
+	// メイン MDI フレーム ウィンドウを作成
 	CMainFrame* pMainFrame = new CMainFrame;
 
 	if (!pMainFrame->LoadFrame(IDR_MAINFRAME))
@@ -125,24 +125,24 @@ namespace Hidemdi{
 class CHidemdiRootDoctmpl : public CMultiDocTemplate
 {
 // ********************************
-//	�]���^
+//	従属型
 // ********************************
  public:
 	typedef CMultiDocTemplate	super ;
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
-	 *	�����́ACMultiDocTemplate �Ɠ����ł��B
+	 *	引数は、CMultiDocTemplate と同じです。
 	 *
 	 * @param nIDResource [in]
-	 *	 �h�L�������g�^�Ŏg�����\�[�X�� ID ���w�肵�܂��B
-	 *	���j���[�A�A�C�R���A�A�N�Z�����[�^ �e�[�u���A�����񃊃\�[�X��
-	 *	�w��ł��܂��B
+	 *	 ドキュメント型で使うリソースの ID を指定します。
+	 *	メニュー、アイコン、アクセラレータ テーブル、文字列リソースを
+	 *	指定できます。
 	 * @param pDocClass [in]
-	 *	  ���[�g Document �� RUNTIME_CLASS ���w�肵�Ă��������B
+	 *	  ルート Document の RUNTIME_CLASS を指定してください。
 	 */
 	CHidemdiRootDoctmpl( UINT nIDResource
 				, CRuntimeClass* pDocClass ) ;
@@ -153,23 +153,23 @@ class CHidemdiRootDoctmpl : public CMultiDocTemplate
 // ********************************
  public:
 	/**
-	* �y�I�[�o���C�h�z
-	* 	�����̃h�L�������g�����ׂĕ��Ă���A
-	* 	�V�����h�L�������g�𐶐����܂��B
+	* 【オーバライド】
+	* 	既存のドキュメントをすべて閉じてから、
+	* 	新しいドキュメントを生成します。
 	*/
 	virtual CDocument* OpenDocumentFile( LPCTSTR lpszPathName
 								, BOOL bMakeVisible = TRUE ) ;
 	
 	/**
-	* �y�I�[�o���C�h�z
-	* 	���ׂẴT�uDocview��ۑ����Ă���A����Docview��ۑ����܂�
+	* 【オーバライド】
+	* 	すべてのサブDocviewを保存してから、このDocviewを保存します
 	*/
 	virtual BOOL SaveAllModified( );
 	
 	/**
-	* �y�I�[�o���C�h�z
-	* 	���ׂẴT�uDocview��CloseAllDocuments�����s���Ă���A
-	* 	����Docview����܂�
+	* 【オーバライド】
+	* 	すべてのサブDocviewにCloseAllDocumentsを実行してから、
+	* 	このDocviewを閉じます
 	*/
 	virtual void CloseAllDocuments( BOOL bEndSession );
 // ********************************
@@ -177,27 +177,27 @@ class CHidemdiRootDoctmpl : public CMultiDocTemplate
 // ********************************
  public:
 	/**
-	* 	���ׂẴT�uDocview��ۑ����܂�
+	* 	すべてのサブDocviewを保存します
 	* @return
-	* 	���ׂẴT�uDocview����铮�삪����I��������^�A
-	* 	�������r���ŃL�����Z�����ꂽ��U��Ԃ��܂��B
+	* 	すべてのサブDocviewを閉じる動作が正常終了したら真、
+	* 	処理が途中でキャンセルされたら偽を返します。
 	*/
 	virtual BOOL SaveAllModifiedSubDocviews( );
 	
 	/**
-	* 	���ׂẴT�uDocview����܂�
+	* 	すべてのサブDocviewを閉じます
 	*/
 	virtual void CloseAllSubDocuviews( BOOL bEndSession );
 
 };
 
 /**
- *	CView::OnUpdate()�� lHint �����Ɏw�肷�邱�Ƃ̂ł���l�ł��B
+ *	CView::OnUpdate()の lHint 引数に指定することのできる値です。
  *
- *	�T�uView�ɑ΂��āA�u�ҏW���̃f�[�^�����[�gDocument�ɔ��f����v
- *	���Ƃ��w�����܂��B
+ *	サブViewに対して、「編集中のデータをルートDocumentに反映する」
+ *	ことを指示します。
  *
- *  �ȉ��̊֐��� lHint �ɁA���̒l���w�肷�邱�Ƃ��ł��܂��B
+ *  以下の関数の lHint に、この値を指定することができます。
  *
  *	- void CHidemdiRootDoc::UpdateAllSubDocviews( 
  *		CView* pSender , LPARAM lHint = 0L , CObject* pHint = NULL );
@@ -206,8 +206,8 @@ class CHidemdiRootDoctmpl : public CMultiDocTemplate
  *	- void CHidemdiSubDoc::UpdateAllViews(CView* pSender, 
  *		LPARAM lHint = 0L, CObject* pHint = NULL );
  *
- *  ��L�֐��Ŏw�肵�����̒l�́A�ŏI�I��
- *	�T�uView�� lHint �Ɏw�肳��܂��B
+ *  上記関数で指定したこの値は、最終的に
+ *	サブViewの lHint に指定されます。
  *
  *	- void CView::OnUpdate( CView* pSender, LPARAM lHint, CObject* pHint );
  */

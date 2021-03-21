@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 //$Id: CentDedEkiJikokuCont.h 378 2016-11-16 21:10:54Z okm $
 /** @file */
@@ -72,43 +72,43 @@ Copyright (C) 2006-2017 take-okm
 
 namespace entDed{
 
-//	�O���Q�Ɛ錾
+//	前方参照宣言
 class CentDedRessya ;
 class CentDedEkiJikoku ;
 	
 
 /**
 @brief
-  �w�w�����x�I�u�W�F�N�g�̃R���e�i�ł��B
+  『駅時刻』オブジェクトのコンテナです。
 
 
-����
+制約
  -------------------------------- 
 
-����Ԃ��H���̈ꕔ�ł���ꍇ�A�v�f���͉w�̐��Ɉ�v���Ă��Ȃ��Ă͂Ȃ�Ȃ�
+△列車が路線の一部である場合、要素数は駅の数に一致していなくてはならない
 
-����̃G���[�����E�C��
+操作のエラー検査・修正
  -------------------------------- 
 
-��operator=: this ���H���̈ꕔ�ł���ꍇ�́A�w�����̐��͕ύX���܂���
+△operator=: this が路線の一部である場合は、駅時刻の数は変更しません
 
-���w�����̒ǉ�(insert)�F�@��Ԃ��H���̈ꕔ�ł���ꍇ�̓G���[�B
+△駅時刻の追加(insert)：　列車が路線の一部である場合はエラー。
 
-���w�����̍폜(erase):�@��Ԃ��H���̈ꕔ�ł���ꍇ�̓G���[�B
-
-
-���w�̒ǉ�(OnInsertEki):�@��Ԃ̉w�����́A�w�̒ǉ��ɍ��킹�ăV�t�g������B
-
-���w�̍폜(OnEraseEki):�@��Ԃ̉w�����́A�w�̍폜�ɍ��킹�ăV�t�g������B
+△駅時刻の削除(erase):　列車が路線の一部である場合はエラー。
 
 
+△駅の追加(OnInsertEki):　列車の駅時刻は、駅の追加に合わせてシフトさせる。
 
-����ɍ����悤�ɑ������C��(adjust)
+△駅の削除(OnEraseEki):　列車の駅時刻は、駅の削除に合わせてシフトさせる。
+
+
+
+制約に合うように属性を修正(adjust)
  -------------------------------- 
 
-���w����(CentDedEkiJikoku)�̗v�f�����w�R���e�i(CentDedEkiCont)�ƈقȂ�ꍇ�́A�w������ǉ��E�폜���܂��B
+△駅時刻(CentDedEkiJikoku)の要素数が駅コンテナ(CentDedEkiCont)と異なる場合は、駅時刻を追加・削除します。
 
-��CentDedEkiJikoku(�w����)�ɁAadjust()���Ϗ����܂��B
+○CentDedEkiJikoku(駅時刻)に、adjust()を委譲します。
 
 
 */
@@ -119,15 +119,15 @@ public:
 	
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
-		�v�f��0�ŏ��������܂��B
+		要素数0で初期化します。
 	*/
 	CentDedEkiJikokuCont() ;
 
 	/**
-	��operator=: this ���H���̈ꕔ�ł���ꍇ�́A�w�����̐��͕ύX���܂���
+	△operator=: this が路線の一部である場合は、駅時刻の数は変更しません
 	*/
 	CentDedEkiJikokuCont& operator=( const CentDedEkiJikokuCont& value ) ;
 
@@ -137,135 +137,135 @@ public:
 	// ********************************
 	///@{
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f��ǉ����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素を追加します。
 
-		���w�����̒ǉ�(insert)�F�@��Ԃ��H���̈ꕔ�ł���ꍇ�̓G���[�B
+		△駅時刻の追加(insert)：　列車が路線の一部である場合はエラー。
 
 	 @param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 以下です。
+	 	０は、先頭・size()なら末尾への追加になります。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
-		-	-11 ;	//	��Ԃ��H���̈ꕔ�ł���ꍇ�A�w�����̒ǉ��͂ł��܂���B
+	 	0以上は成功、負の数はエラーです
+		-	-11 ;	//	列車が路線の一部である場合、駅時刻の追加はできません。
 	*/
 	virtual int insert( const CentDedEkiJikoku& element , int iIndex = INT_MAX );
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
-	 	�v�f���폜���܂��B
+	 	コンテナ内の、インデクスで指定された場所の
+	 	要素を削除します。
 
-		���w�����̍폜(erase):�@��Ԃ��H���̈ꕔ�ł���ꍇ�̓G���[�B
+		△駅時刻の削除(erase):　列車が路線の一部である場合はエラー。
 
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 @param iSize [in]
-	 	�폜����v�f�̐����w�肵�Ă��������B
-	 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 	削除する要素の数を指定してください。
+	 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 @attention
-		iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+		iIndex と iSize の両方を INT_MAX にすることはできません。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
-		-	-11 ;	//	��Ԃ��H���̈ꕔ�ł���ꍇ�A�w�����̍폜�͂ł��܂���B
+	 	0以上は成功、負の数はエラーです
+		-	-11 ;	//	列車が路線の一部である場合、駅時刻の削除はできません。
 	*/
 	virtual int erase( int iIndex  , int iSize = 1 ) ;
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f���㏑�����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素を上書きします。
 
 	@param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
-		-	-11; //�Ԑ��w��q���w�Ԑ��R���e�i�xCentDedEkiTrackCont �̗v�f�ɑΉ����Ă��܂���
+	 	0以上は成功、負の数はエラーです
+		-	-11; //番線指定子が『番線コンテナ』CentDedEkiTrackCont の要素に対応していません
 	*/
 	virtual int set( const CentDedEkiJikoku& element , int iIndex ) ;
 	///@}
 
  public:
 	// ********************************
-	///@name CentDedEkiJikokuCont-�֘A
+	///@name CentDedEkiJikokuCont-関連
 	// ********************************
 	///@{
 	/**
 	@return
-		���̃R���e�i�� CentDedRessya �ɕ�܂���Ă���ꍇ�́A
-		CentDedRessya �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedRessya に包含されている場合は、
+		CentDedRessya のアドレス。
+		そうでないならNULL。
 	*/
 	 virtual CentDedRessya* getRessya(){ return NULL ;}
 	/**
 	@return
-		���̃R���e�i�� CentDedRessya �ɕ�܂���Ă���ꍇ�́A
-		CentDedRessya �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedRessya に包含されている場合は、
+		CentDedRessya のアドレス。
+		そうでないならNULL。
 	*/
 	virtual const CentDedRessya* getRessya()const{ return NULL ;}
 
 	/**
 	@return
-		���̃R���e�i�� CentDedRosen �ɕ�܂���Ă���ꍇ�́A
-		CentDedRosen �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedRosen に包含されている場合は、
+		CentDedRosen のアドレス。
+		そうでないならNULL。
 	*/
 	CentDedRosen* getRosen() ;
 	/**
 	@return
-		���̃R���e�i�� CentDedRosen �ɕ�܂���Ă���ꍇ�́A
-		CentDedRosen �̃A�h���X�B
-		�����łȂ��Ȃ�NULL�B
+		このコンテナが CentDedRosen に包含されている場合は、
+		CentDedRosen のアドレス。
+		そうでないならNULL。
 	*/
 	const CentDedRosen* getRosen()const ;
 	///@}
 public:
 	// ********************************
-	///@name CentDedEkiJikokuCont-����
+	///@name CentDedEkiJikokuCont-操作
 	// ********************************
 	///@{
 
 	/**
-		set() ���\���ۂ��𔻒f���܂��B
-		���̃N���X�ł́A���0��Ԃ��܂��B
+		set() が可能か否かを判断します。
+		このクラスでは、常に0を返します。
 
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@param iIndex
-		�O����n�܂�C���f�N�X���w�肵�Ă��������B �͈͂͂O�ȏ� size() 
-		�����ł��B �A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B 
+		０から始まるインデクスを指定してください。 範囲は０以上 size() 
+		未満です。 但し、INT_MAX は、末尾を指定したものとみなします。 
 	@return
-		-	0�ȏ�: set() ���\�B
-		-	���̐�: set()�́A���̖߂�l�Ŏ��s���܂��B
+		-	0以上: set() が可能。
+		-	負の数: set()は、この戻り値で失敗します。
 	 */
 	virtual int  setable(  const CentDedEkiJikoku& element , int iIndex )const ;
 
 	/**
-		element �����̃R���e�i�̎q�ł���ꍇ�́A�C���f�N�X��Ԃ��܂��B
+		element がこのコンテナの子である場合は、インデクスを返します。
 	@param element
-		�v�f���w�肵�Ă��������B 
+		要素を指定してください。 
 	@return
-		element �����̃R���e�i�̎q�ł���ꍇ�́A�C���f�N�X��Ԃ��܂��B
-		�����łȂ��ꍇ�́A -1 �ł��B
+		element がこのコンテナの子である場合は、インデクスを返します。
+		そうでない場合は、 -1 です。
 	*/
 	virtual int  getIndex( const CentDedEkiJikoku* element )const ;
 	/**
-		this �̑���������ɔ����Ă���ꍇ�A����ɍ����悤�ɁA������
-		�C�����܂��B
+		this の属性が制約に反している場合、制約に合うように、属性を
+		修正します。
 
 
-		���w����(CentDedEkiJikoku)�̗v�f�����w�R���e�i(CentDedEkiCont)�ƈقȂ�ꍇ�́A�w������ǉ��E�폜���܂��B
+		△駅時刻(CentDedEkiJikoku)の要素数が駅コンテナ(CentDedEkiCont)と異なる場合は、駅時刻を追加・削除します。
 
-		��CentDedEkiJikoku(�w����)�ɁAadjust()���Ϗ����܂��B
+		○CentDedEkiJikoku(駅時刻)に、adjust()を委譲します。
 
 
 	*/
@@ -273,40 +273,40 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CentDedRosen-�q�I�u�W�F�N�g�̑����̒ʒm
+	///@name CentDedRosen-子オブジェクトの増減の通知
 	// ********************************
 	///@{
 	/**
-		m_CentDedEkiCont �� CentDedEki ���ǉ����ꂽ����A
-		m_CentDedEkiCont ����Ăяo����܂��B
+		m_CentDedEkiCont に CentDedEki が追加された直後、
+		m_CentDedEkiCont から呼び出されます。
 	@param iEkiOrder
-		�ǉ����ꂽ CentDedEki �̉wOrder(�w�C���f�N�X�ł͂���܂���)�B
+		追加された CentDedEki の駅Order(駅インデクスではありません)。
 	*/
 	virtual void onEkiInsert( int iEkiOrder );
 
 	/**
-		m_CentDedEkiCont ���� CentDedEki ���폜���ꂽ����A
-		m_CentDedEkiCont ����Ăяo����܂��B
+		m_CentDedEkiCont から CentDedEki が削除された直後、
+		m_CentDedEkiCont から呼び出されます。
 	@param iEkiOrder
-		�폜���ꂽ CentDedEki �̉wOrder(�w�C���f�N�X�ł͂���܂���)�B
+		削除された CentDedEki の駅Order(駅インデクスではありません)。
 	*/
 	virtual void onEkiErase( int iEkiOrder  ); 
 	/**
-		CentDedEkiTrackCont �� CentDedEkiTrack ���ǉ����ꂽ����A
-		CentDedEkiTrackCont ����Ăяo����܂��B
+		CentDedEkiTrackCont に CentDedEkiTrack が追加された直後、
+		CentDedEkiTrackCont から呼び出されます。
 	@param iEkiOrder
-		CentDedEkiTrackCont ���ǉ����ꂽ CentDedEki �̉wOrder(�w�C���f�N�X�ł͂���܂���)�B
+		CentDedEkiTrackCont が追加された CentDedEki の駅Order(駅インデクスではありません)。
 	@param iEkiTrackIndex
-		�ǉ����ꂽ CentDedEkiTrack �̃C���f�N�X�B
+		追加された CentDedEkiTrack のインデクス。
 	*/
 	virtual void onEkiTrackInsert( int iEkiOrder , int iEkiTrackIndex ); 
 	/**
-		CentDedEkiTrackCont ���� CentDedEkiTrack ���폜���ꂽ����A
-		CentDedEkiTrackCont ����Ăяo����܂��B
+		CentDedEkiTrackCont から CentDedEkiTrack が削除された直後、
+		CentDedEkiTrackCont から呼び出されます。
 	@param iEkiOrder
-		CentDedEkiTrackCont ���폜���ꂽ CentDedEki �̉wOrder(�w�C���f�N�X�ł͂���܂���)�B
+		CentDedEkiTrackCont が削除された CentDedEki の駅Order(駅インデクスではありません)。
 	@param iEkiTrackIndex
-		�폜���ꂽ CentDedEkiTrack �̐擪�̃C���f�N�X�B
+		削除された CentDedEkiTrack の先頭のインデクス。
 	*/
 	virtual void onEkiTrackErase( int iEkiOrder , int iEkiTrackIndex ); 
 

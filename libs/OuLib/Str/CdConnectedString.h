@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -82,45 +82,45 @@ namespace Str{
 // ****************************************************************
 /**
 * @brief
-* �y�T�v�z
-* 	�P�o�C�g�̋�؂蕶���i�f�t�H���g��';'�j�ŋ�؂�ꂽ
-* 	(���ږ�)=(�l)�̌`���́w�A��������x��ێ�����P���f�[�^�N���X�ł��B
+* 【概要】
+* 	１バイトの区切り文字（デフォルトは';'）で区切られた
+* 	(項目名)=(値)の形式の『連結文字列』を保持する単純データクラスです。
 * 	
-* 		�i��j"PROTOCOL=TCP;REMOTEIPADDR=192.168.0.1;REMOTEPORT=8001"
+* 		（例）"PROTOCOL=TCP;REMOTEIPADDR=192.168.0.1;REMOTEPORT=8001"
 * 	
-* 	���̃N���X�ł́A��L�`���̕�����S��
-* 		�i��j"PROTOCOL=TCP;REMOTEIPADDR=192.168.0.1;REMOTEPORT=8001"
-* 	���A�w�A��������x�B
-* 	��؂蕶���ŋ�؂�ꂽ������P��
-* 		�i��j"PROTOCOL=TCP"
+* 	このクラスでは、上記形式の文字列全体
+* 		（例）"PROTOCOL=TCP;REMOTEIPADDR=192.168.0.1;REMOTEPORT=8001"
+* 	を、『連結文字列』。
+* 	区切り文字で区切られた文字列１つ
+* 		（例）"PROTOCOL=TCP"
 * 			"REMOTEIPADDR=192.168.0.1"
 * 			"REMOTEPORT=8001"
-* 	���w�A�C�e���x
-* 	�A�C�e������=�̍���
-* 		�i��j"PROTOCOL"
+* 	を『アイテム』
+* 	アイテム内の=の左側
+* 		（例）"PROTOCOL"
 * 			"REMOTEIPADDR"
 * 			"REMOTEPORT"
-* 	���w���ږ��x
-* 	�A�C�e������=�̉E��
-* 		�i��j"TCP"
+* 	を『項目名』
+* 	アイテム内の=の右側
+* 		（例）"TCP"
 * 			"192.168.0.1"
 * 			"8001"
-* 	���w�l�x�ƌĂ�ł��܂��B
+* 	を『値』と呼んでいます。
 * 	
-* 	���̃N���X�́A�A����������̃A�C�e����ҏW����@�\��A
-* 	�A�C�e�����̍��ږ��E�l��ҏW����@�\�������Ă��܂��B
+* 	このクラスは、連結文字列内のアイテムを編集する機能や、
+* 	アイテム内の項目名・値を編集する機能を持っています。
 * 	
 */
 class CdConnectedString 
 {
 // ********************************
-//	�C���i�[��`
+//	インナー定義
 // ********************************
  public:
 	
 	/**
 	* @brief
-	*	�A�C�e���P�̓��e��\���\���̂ł��B
+	*	アイテム１つの内容を表す構造体です。
 	*/
 	struct ITEM
 	{
@@ -129,61 +129,61 @@ class CdConnectedString
 			: m_strName( strName ) , m_strValue( strValue )	{};
 		
 		/**
-		* 	�A�C�e�����́A���ږ��B
-		*	�l�������Ȃ��ꍇ�́A�A�C�e��������S�̂����ږ��ɂȂ�܂��B
+		* 	アイテム内の、項目名。
+		*	値部分がない場合は、アイテム文字列全体が項目名になります。
 		*/
 		std::string	m_strName ;
 
 		/**
-		*	�A�C�e�����́A�l�B
-		*	�l�������Ȃ��ꍇ�́A�󕶎���ɂȂ�܂��B
+		*	アイテム内の、値。
+		*	値部分がない場合は、空文字列になります。
 		*/
 		std::string	m_strValue ;
 	};
 
 // ********************************
-//	����
+//	属性
 // ********************************
  private:
-	///	�A�C�e���Ԃ̋�؂蕶���ł��B�f�t�H���g��';'�ł�
+	///	アイテム間の区切り文字です。デフォルトは';'です
 	char		m_chSplit ;
 
 	
-	///	���ڂƒl�̊Ԃ̋�؂蕶���ł��B�f�t�H���g��'='�ł�
+	///	項目と値の間の区切り文字です。デフォルトは'='です
 	char		m_chEqualChar ;
 
 // --------------------------------
-//	�����f�[�^
+//	内部データ
 // --------------------------------
  private:
-	///	�A�C�e����ێ�����R���e�i�̌^��\���܂��B
+	///	アイテムを保持するコンテナの型を表します。
 	typedef std::deque<ITEM>	ITEMCont ;
 	
-	///	�A�C�e����ێ�����R���e�i�ł��B
+	///	アイテムを保持するコンテナです。
 	ITEMCont	m_contItem ;
 
 
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	* @param chSplit [in]
-	* 	�A�C�e���Ԃ̋�؂蕶�����w�肵�Ă��������B
+	* 	アイテム間の区切り文字を指定してください。
 	* @param chEqualChar [in]
-	* 	���ڂƒl�̊Ԃ̋�؂蕶�����w�肵�Ă��������B
+	* 	項目と値の間の区切り文字を指定してください。
 	*/
 	CdConnectedString( char chSplit = ';' , char chEqualChar = '=' ) 
 		: m_chSplit( chSplit ) , m_chEqualChar( chEqualChar ){};
 	
 	/**
 	* @param ev [in]
-	* 	�A����������w�肵�Ă��������B
+	* 	連結文字列を指定してください。
 	* @param chSplit [in]
-	* 	��؂蕶�����w�肵�Ă��������B
+	* 	区切り文字を指定してください。
 	* @param chEqualChar [in]
-	* 	���ڂƒl�̊Ԃ̋�؂蕶�����w�肵�Ă��������B
+	* 	項目と値の間の区切り文字を指定してください。
 	*/
 	CdConnectedString( const std::string& ev ,  char chSplit = ';' , 
 										char chEqualChar = '=' ) 
@@ -195,34 +195,34 @@ class CdConnectedString
 	virtual ~CdConnectedString(){} ;
 
 // ********************************
-//	�R���e�i����
+//	コンテナ操作
 // ********************************
  public:
 	/**
 	* @return
-	* 	�A�C�e���̐���Ԃ��܂��B
+	* 	アイテムの数を返します。
 	*/
 	int size()const{	return ( (int)m_contItem.size() ) ; } ;
 	
 	/**
-	* 	�w��̈ʒu�ɂ���A�C�e�����Q�Ƃ��܂��B
+	* 	指定の位置にあるアイテムを参照します。
 	* @param idx [in]
-	* 	�O�ȏ�size()�����̃C���f�N�X���w�肵�Ă��������B
+	* 	０以上size()未満のインデクスを指定してください。
 	* @return
-	* 	�A�C�e����Ԃ��܂��B
+	* 	アイテムを返します。
 	*/
 	ITEM at( int idx )const{	return ( m_contItem[ idx ] ) ; } ;
 	
 	
 	/**
-	* 	�w��̈ʒu�ɐV�����A�C�e����}�����܂��B
+	* 	指定の位置に新しいアイテムを挿入します。
 	* @param idx [in]
-	* 	�O�ȏ�size()�ȉ��̃C���f�N�X���w�肵�Ă��������B
-	* 	-1�Ȃ�A�����ɒǉ����܂��B
+	* 	０以上size()以下のインデクスを指定してください。
+	* 	-1なら、末尾に追加します。
 	* @param ev [in]
-	* 	�}������A�C�e�����w�肵�Ă��������B
+	* 	挿入するアイテムを指定してください。
 	* @return
-	* 	����������0�ȏ�A���s�����畉�̐��ł�
+	* 	成功したら0以上、失敗したら負の数です
 	*/
 	int insert( int idx , const ITEM& ev ){
 		if ( idx < 0 ){
@@ -236,11 +236,11 @@ class CdConnectedString
 	} ;
 
 	/**
-	* 	�w��̈ʒu����A�C�e�����������܂��B
+	* 	指定の位置からアイテムを除去します。
 	* @param idx [in]
-	* 	�O�ȏ�size()�����̃C���f�N�X���w�肵�Ă��������B
+	* 	０以上size()未満のインデクスを指定してください。
 	* @return
-	* 	����������0�ȏ�A���s�����畉�̐��ł�
+	* 	成功したら0以上、失敗したら負の数です
 	*/
 	int erase( int idx ){
 		if ( !( 0 <= idx && idx < size() ) ){
@@ -251,11 +251,11 @@ class CdConnectedString
 	};
 	
 	/**
-	* 	�w��̍��ږ������A�C�e���̈ʒu�𒲂ׂ܂�
+	* 	指定の項目名を持つアイテムの位置を調べます
 	* @param strName [in]
-	* 	���ږ����w�肵�Ă��������B
+	* 	項目名を指定してください。
 	* @return
-	* 	����������0�ȏ�̃C���f�N�X�A������Ȃ����-1�ł�
+	* 	成功したら0以上のインデクス、見つからなければ-1です
 	*/
 	int find( std::string strName )const{
 		int idx ;
@@ -268,12 +268,12 @@ class CdConnectedString
 	};
 
 	/**
-	* 	�w��̍��ږ������A�C�e�����폜���܂�
+	* 	指定の項目名を持つアイテムを削除します
 	* @param strName [in]
-	* 	���ږ����w�肵�Ă��������B
+	* 	項目名を指定してください。
 	* @return
-	* 	����������A�폜�����A�C�e���̌��X�������ʒu�̃C���f�N�X�A
-	* 	������Ȃ����-1�ł�
+	* 	成功したら、削除したアイテムの元々あった位置のインデクス、
+	* 	見つからなければ-1です
 	*/
 	int remove( std::string strName ){
 		int idx = find( strName )  ;
@@ -284,19 +284,19 @@ class CdConnectedString
 	};
 	
 	/**
-	*	���ׂẴA�C�e����j�����܂��B
+	*	すべてのアイテムを破棄します。
 	*/
 	void clear(){
 		m_contItem.clear() ;
 	};
 	
 	/**
-	* 	�w��̍��ږ������A�C�e���̒l��Ԃ��܂��B
+	* 	指定の項目名を持つアイテムの値を返します。
 	* @param strName [in]
-	* 	���ږ����w�肵�Ă��������B
+	* 	項目名を指定してください。
 	* @return
-	* 	����������A�l��Ԃ��܂��B
-	* 	���ڂ����݂��Ȃ��ꍇ�́A�󕶎����Ԃ��܂��B
+	* 	成功したら、値を返します。
+	* 	項目が存在しない場合は、空文字列を返します。
 	*/
 	std::string getValue( std::string strName )const{
 		int idx = find( strName ) ;
@@ -308,15 +308,15 @@ class CdConnectedString
 	
 	
 	/**
-	* 	�w��̍��ږ������A�C�e���̒l��ύX���܂��B
-	* 	���̂Ƃ��A�w��̍��ږ������A�C�e�������݂��Ȃ���΁A
-	* 	�V�����A�C�e����ǉ�������ŁA���ږ��E�l���Z�b�g���܂��B
+	* 	指定の項目名を持つアイテムの値を変更します。
+	* 	このとき、指定の項目名を持つアイテムが存在しなければ、
+	* 	新しいアイテムを追加した上で、項目名・値をセットします。
 	* @param strName [in]
-	* 	���ږ����w�肵�Ă��������B
+	* 	項目名を指定してください。
 	* @param strValue [in]
-	* 	�l���w�肵�Ă��������B
+	* 	値を指定してください。
 	* @return
-	* 	����������0�ȏ�A���s�����畉�̐��ł�
+	* 	成功したら0以上、失敗したら負の数です
 	*/
 	int setItem( const std::string& strName , const std::string& strValue ){
 		int idx = remove( strName ) ;
@@ -324,11 +324,11 @@ class CdConnectedString
 	}; 
 
 // ********************************
-//	CdConnectedString���L
+//	CdConnectedString特有
 // ********************************
  public:
 	// ********************************
-	//	����
+	//	属性
 	// ********************************
 	char getSplit()const {	return ( m_chSplit ) ; } ;
 	CdConnectedString& setSplit( char chSplit ){
@@ -340,8 +340,8 @@ class CdConnectedString
 
 	/**
 	* @return
-	* 	���̃I�u�W�F�N�g���ێ����Ă���A�C�e���Ƌ�؂蕶�������ƂɁA
-	* 	�A����������쐬���A�����Ԃ��܂��B
+	* 	このオブジェクトが保持しているアイテムと区切り文字をもとに、
+	* 	連結文字列を作成し、それを返します。
 	*/
 	std::string encode()const{
 		std::string	strRv ;
@@ -360,11 +360,11 @@ class CdConnectedString
 	};
 
 	/**
-	* 	�w��̘A����������A���̃I�u�W�F�N�g�Ɋi�[���܂��B
+	* 	指定の連結文字列を、このオブジェクトに格納します。
 	* @param strEv [in]
-	* 	�A����������w�肵�Ă��������B
+	* 	連結文字列を指定してください。
 	* @return
-	* 	����������0�ȏ�A���s�����畉�̐��ł�
+	* 	成功したら0以上、失敗したら負の数です
 	*/
 	int decode( const std::string&	strEv ){
 		int iRv = 0 ;
@@ -373,7 +373,7 @@ class CdConnectedString
 		
 		while ( !strLeft.empty() ){
 			// --------------------------------
-			//	����ITEM��؂�o���܂��B
+			//	次のITEMを切り出します。
 			// --------------------------------
 			std::string	strItem ;
 			{
@@ -383,7 +383,7 @@ class CdConnectedString
 					idx < (int)strLeft.size() && strLeft[idx] != getSplit() ; 
 					idx++ ){}
 				
-				//idx = ������̏I�[���A�A�C�e����؂蕶�����w���Ă��܂��B
+				//idx = 文字列の終端か、アイテム区切り文字を指しています。
 
 				if ( idx == strLeft.size() ){
 					strItem = strLeft ; 
@@ -393,15 +393,15 @@ class CdConnectedString
 					strLeft.erase( 0 , idx + 1 ) ;
 				}
 				
-				//strItem = ����ǂ̃A�C�e��
-				//strLeft = ����ǂ̃A�C�e���i�ƁA���̒���̋�؂蕶���j��
-				//	�폜���܂����B
+				//strItem = こんどのアイテム
+				//strLeft = こんどのアイテム（と、その直後の区切り文字）を
+				//	削除しました。
 			}
 			if ( strItem.empty() ){
 				continue ;
 			}
 			// --------------------------------
-			//	NAME��VALUE�ɕ������܂��B
+			//	NAMEとVALUEに分離します。
 			// --------------------------------
 			{
 				ITEM	aItem ;
@@ -411,7 +411,7 @@ class CdConnectedString
 					idx < (int)strItem.size() && strItem[idx] != getEqualChar() ; 
 					idx++ ){}
 				
-				//idx = strItem �̕�����̏I�[���A'='���w���Ă��܂��B
+				//idx = strItem の文字列の終端か、'='を指しています。
 
 				if ( idx == strItem.size() ){
 					aItem.m_strName = strItem ;
@@ -426,10 +426,10 @@ class CdConnectedString
 		return ( iRv ) ;
 	};
 // ********************************
-//	���Z�q
+//	演算子
 // ********************************
  public:
-	/** encode() �Ɠ����ł� */
+	/** encode() と等価です */
 	operator std::string()const {	return encode() ;	};
 };
 

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //	CDcdDiagram_CStopMarkDraw.h
@@ -79,66 +79,66 @@ namespace ViewDiagram{
 // ****************************************************************
 /**
  @brief
-	  CDcdDiagram::DcDraw() ���ł̂ݎg�p����N���X�ł��B
-	  IfDcdTarget �I�u�W�F�N�g�̕`��̈�ɁA��ԏ��̃e�L�X�g��`�悵�܂��B
+	  CDcdDiagram::DcDraw() 内でのみ使用するクラスです。
+	  IfDcdTarget オブジェクトの描画領域に、列車情報のテキストを描画します。
 	
-	�y�g�����z
+	【使い方】
 	
-	�P�D  �R���X�g���N�^�ŁA�I�u�W�F�N�g�𐶐����Ă��������B
-	�R���X�g���N�^�̈����ɂ́A��Ԑ��̏���ێ����Ă��� CDcdDiagram 
-	�I�u�W�F�N�g�ƁA�`���� IfDcdTarget �I�u�W�F�N�g���w�肵�Ă��������B
+	１．  コンストラクタで、オブジェクトを生成してください。
+	コンストラクタの引数には、列車線の情報を保持している CDcdDiagram 
+	オブジェクトと、描画先の IfDcdTarget オブジェクトを指定してください。
 	
-	�Q�D  execute() ���Ăяo���Ă��������B
+	２．  execute() を呼び出してください。
  */
 class CDcdDiagram_CStopMarkDraw : public CEnumRessyasen
 {
 public:
 	// ********************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ********************************
 	typedef CEnumRessyasen	super ;
 
 private:
 	// ********************************
-	///@name	�֘A
+	///@name	関連
 	// ********************************
 	/**
-		DcdGrid�̕`����s���I�u�W�F�N�g�B 
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́A this �̔j������������܂� 
-		�������Ȃ��Ă͂Ȃ�܂���B
+		DcdGridの描画を行うオブジェクト。 
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、 this の破棄が完了するまで 
+		生存しなくてはなりません。
 	*/
 	CDcdDiagram*	m_pCDcdDiagram ;
 	/**
-		DcdGrid�̕`���B 
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́A this �̔j������������܂� 
-		�������Ȃ��Ă͂Ȃ�܂���B
+		DcdGridの描画先。 
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、 this の破棄が完了するまで 
+		生存しなくてはなりません。
 	*/
 	IfDcdTarget*	m_pIfDcdTarget ;
 
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
 	 @param pCDcdDiagram [in]
-		�O���� CDcdDiagram �I�u�W�F�N�g�Ƃ̊֘A�ł��B 
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		 ���̃I�u�W�F�N�g�́A this �̔j������������܂� 
-		�������Ȃ��Ă͂Ȃ�܂���B 
+		外側の CDcdDiagram オブジェクトとの関連です。 
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		 このオブジェクトは、 this の破棄が完了するまで 
+		生存しなくてはなりません。 
 	 @param pIfDcdTarget  [in] 
-		�`���B 
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́A this �̔j������������܂� 
-		�������Ȃ��Ă͂Ȃ�܂���B
+		描画先。 
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、 this の破棄が完了するまで 
+		生存しなくてはなりません。
 	 @param bDisplayRessyasenKudari [in]
-		�����Ԃ̏������s�����ۂ����w�肵�܂��B
-		- true ;	//	�����Ԃ̏������s���B
-		- false ;	//	�����Ԃ̏������s��Ȃ��B
+		下り列車の処理を行うか否かを指定します。
+		- true ;	//	下り列車の処理を行う。
+		- false ;	//	下り列車の処理を行わない。
 	 @param bDisplayRessyasenNobori [in]
-		����Ԃ̏������s�����ۂ����w�肵�܂��B
+		上り列車の処理を行うか否かを指定します。
  	 */
 	CDcdDiagram_CStopMarkDraw( CDcdDiagram* pCDcdDiagram , 
 			IfDcdTarget* pIfDcdTarget , 
@@ -150,32 +150,32 @@ protected:
 	// ********************************
 	/**
 		execute() -> onCentDedDgrRessya() -> onCentDedDgrRessyasen() -> onCentDedDgrRessyasenEki()
-	 �̏��ŌĂяo�����	�֐��ł��B
+	 の順で呼び出される	関数です。
 	
-		execute() �́A�`��\�̈�ɂ���
-		�w�_�C���O������Ԑ��̉w�x CentDedDgrRessyasenEki �I�u�W�F�N�g���ɁA
-		���̊֐����Ăяo���܂��B
+		execute() は、描画可能領域にある
+		『ダイヤグラム列車線の駅』 CentDedDgrRessyasenEki オブジェクト毎に、
+		この関数を呼び出します。
 		
 	 @param eRessyahoukou [in]
-		��ԕ����ł��B
+		列車方向です。
 	 @param iRessyaIdx [in]
-		��ԃC���f�N�X�ł��B
+		列車インデクスです。
 	 @param aCentDedDgrRessya [in]
-		�w�_�C���O������ԁx CentDedDgrRessya �I�u�W�F�N�g���w�肵�܂��B
+		『ダイヤグラム列車』 CentDedDgrRessya オブジェクトを指定します。
 	 @param iRessyasenIdx [in]
-		��Ԑ��C���f�N�X�ł��B
+		列車線インデクスです。
 	 @param pCentDedDgrRessya [in]
-		�w�_�C���O������Ԑ��x CentDedDgrRessyasen 
-		�I�u�W�F�N�g���w�肵�܂��B
+		『ダイヤグラム列車線』 CentDedDgrRessyasen 
+		オブジェクトを指定します。
 	 @param iRessyasenEkiIdx [in]
-		��Ԑ��̉w�C���f�N�X�ł��B
+		列車線の駅インデクスです。
 	 @param pCentDedDgrRessya [in]
-		�w�_�C���O������Ԑ��̉w�x pCentDedDgrRessyasenEki 
-		�I�u�W�F�N�g���w�肵�܂��B
+		『ダイヤグラム列車線の駅』 pCentDedDgrRessyasenEki 
+		オブジェクトを指定します。
 		
-	 �y�I�[�o���C�h�z
-		pCentDedDgrRessyasenEki->m_bShouldRessyajouhouDraw �� true �̉w�̈ʒu�́A
-		�`��Ώۂ� IfDcdTarget �ɁA��ԏ���`�悵�܂��B
+	 【オーバライド】
+		pCentDedDgrRessyasenEki->m_bShouldRessyajouhouDraw が true の駅の位置の、
+		描画対象の IfDcdTarget に、列車情報を描画します。
 	*/
 	virtual void onCentDedDgrEkiJikoku( 
 		ERessyahoukou eRessyahoukou ,

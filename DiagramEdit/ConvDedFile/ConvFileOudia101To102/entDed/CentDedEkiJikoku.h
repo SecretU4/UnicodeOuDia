@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -80,51 +80,51 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  * @brief
- *	yŠT—vz  DiagramEdit ‚ÌA‚P—ñÔ‚Ì‚P‰w‚É‚¨‚¯‚é‚ğ•\‚µ‚Ü‚·B
- *	‘®«‚Æ‚µ‚ÄAw’…xw”­x‚Æ
- *	w‰wˆµxo‰^s‚È‚µ,Œo—R‚È‚µ,’Ê‰ß,’âÔp
- *	‚ğ•Û‚µ‚Ü‚·B
+ *	ã€æ¦‚è¦ã€‘  DiagramEdit ã®ã€ï¼‘åˆ—è»Šã®ï¼‘é§…ã«ãŠã‘ã‚‹æ™‚åˆ»ã‚’è¡¨ã—ã¾ã™ã€‚
+ *	å±æ€§ã¨ã—ã¦ã€ã€ç€æ™‚åˆ»ã€ã€ç™ºæ™‚åˆ»ã€ã¨
+ *	ã€é§…æ‰±ã€ï½›é‹è¡Œãªã—,çµŒç”±ãªã—,é€šé,åœè»Šï½
+ *	ã‚’ä¿æŒã—ã¾ã™ã€‚
  */
 class CentDedEkiJikoku
 {
 public:
 	// ********************************
-	//	ƒCƒ“ƒi[ƒ^ƒCƒv
+	//	ã‚¤ãƒ³ãƒŠãƒ¼ã‚¿ã‚¤ãƒ—
 	// ********************************
 	/**
-		w‰wˆµx‚ğ•\‚·—ñ‹“‚Å‚·B
+		ã€é§…æ‰±ã€ã‚’è¡¨ã™åˆ—æŒ™ã§ã™ã€‚
 	 */
 	enum EEkiatsukai
 	{
 		/**
-			‰^s‚È‚µ(‹K’è’l) B
+			é‹è¡Œãªã—(è¦å®šå€¤) ã€‚
 		
-			‚±‚Ìê‡A
-			’… ( m_jikokuChakujikoku )E
-			”­ ( m_jikokuHatsujikoku )
-			‚ÍAwNulló‘Ôx‚Æ‚È‚è‚Ü‚·B
+			ã“ã®å ´åˆã€
+			ç€æ™‚åˆ» ( m_jikokuChakujikoku )ãƒ»
+			ç™ºæ™‚åˆ» ( m_jikokuHatsujikoku )
+			ã¯ã€ã€NullçŠ¶æ…‹ã€ã¨ãªã‚Šã¾ã™ã€‚
 		 */
 		Ekiatsukai_None ,
 		/**
-			 ’âÔ
+			 åœè»Š
 		
-			‚±‚Ìê‡A
-			’… ( m_jikokuChakujikoku )E
-			”­ ( m_jikokuHatsujikoku )
-			‚Ì­‚È‚­‚Æ‚à‚P‚Â‚ÍA”ñwNulló‘Ôx‚Å‚È‚­‚Ä‚Í‚È‚è‚Ü‚¹‚ñB
+			ã“ã®å ´åˆã€
+			ç€æ™‚åˆ» ( m_jikokuChakujikoku )ãƒ»
+			ç™ºæ™‚åˆ» ( m_jikokuHatsujikoku )
+			ã®å°‘ãªãã¨ã‚‚ï¼‘ã¤ã¯ã€éã€NullçŠ¶æ…‹ã€ã§ãªãã¦ã¯ãªã‚Šã¾ã›ã‚“ã€‚
 		 */
 		Ekiatsukai_Teisya ,
 		/**
-			 ’Ê‰ß
+			 é€šé
 		 */
 		Ekiatsukai_Tsuuka ,
 		/** 
-			Œo—R‚È‚µ
+			çµŒç”±ãªã—
 		
-			‚±‚Ìê‡A
-			’… ( m_jikokuChakujikoku )E
-			”­ ( m_jikokuHatsujikoku )
-			‚ÍAwNulló‘Ôx‚Æ‚È‚è‚Ü‚·B
+			ã“ã®å ´åˆã€
+			ç€æ™‚åˆ» ( m_jikokuChakujikoku )ãƒ»
+			ç™ºæ™‚åˆ» ( m_jikokuHatsujikoku )
+			ã¯ã€ã€NullçŠ¶æ…‹ã€ã¨ãªã‚Šã¾ã™ã€‚
 		 */
 		Ekiatsukai_Keiyunasi ,
 	};
@@ -132,61 +132,61 @@ public:
 
 private:
 	// ********************************
-	///@name ‘®«
+	///@name å±æ€§
 	// ********************************
 	///@{
 	/**
-		‰wˆµB
+		é§…æ‰±ã€‚
 	 */
 	EEkiatsukai	m_eEkiatsukai ;
 	
 	/**
-		’…B
+		ç€æ™‚åˆ»ã€‚
 	
-		m_eEkiatsukai ‚ª
-		‰^s‚È‚µ ( Ekiatsukai_None ),
-		Œo—R‚È‚µ ( Ekiatsukai_Keiyunasi ) ‚Ìê‡‚ÍA
-		‚±‚Ì’l‚ÍˆÓ–¡‚ğ‚¿‚Ü‚¹‚ñB
+		m_eEkiatsukai ãŒ
+		é‹è¡Œãªã— ( Ekiatsukai_None ),
+		çµŒç”±ãªã— ( Ekiatsukai_Keiyunasi ) ã®å ´åˆã¯ã€
+		ã“ã®å€¤ã¯æ„å‘³ã‚’æŒã¡ã¾ã›ã‚“ã€‚
 	 */
 	CdDedJikoku	m_jikokuChakujikoku ;
 	
 	/**
-		”­B
+		ç™ºæ™‚åˆ»ã€‚
 	
-		m_eEkiatsukai ‚ª
-		‰^s‚È‚µ ( Ekiatsukai_None ),
-		Œo—R‚È‚µ ( Ekiatsukai_Keiyunasi ) ‚Ìê‡‚ÍA
-		‚±‚Ì’l‚ÍˆÓ–¡‚ğ‚¿‚Ü‚¹‚ñB
+		m_eEkiatsukai ãŒ
+		é‹è¡Œãªã— ( Ekiatsukai_None ),
+		çµŒç”±ãªã— ( Ekiatsukai_Keiyunasi ) ã®å ´åˆã¯ã€
+		ã“ã®å€¤ã¯æ„å‘³ã‚’æŒã¡ã¾ã›ã‚“ã€‚
 	 */
 	CdDedJikoku	m_jikokuHatsujikoku ;
 	///@}
 
 public:
 	// ********************************
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	// ********************************
 	/**
 	 @param eEkiatsukai [in]
-		‰wˆµB
+		é§…æ‰±ã€‚
 	 @param jikokuChakujikoku [in]
-		’…B	\n
-		m_eEkiatsukai ‚ª
-		‰^s‚È‚µ ( Ekiatsukai_None ),
-		Œo—R‚È‚µ ( Ekiatsukai_Keiyunasi ) ‚Ìê‡‚ÍA
-		‚±‚Ì’l‚ÍˆÓ–¡‚ğ‚¿‚Ü‚¹‚ñB
+		ç€æ™‚åˆ»ã€‚	\n
+		m_eEkiatsukai ãŒ
+		é‹è¡Œãªã— ( Ekiatsukai_None ),
+		çµŒç”±ãªã— ( Ekiatsukai_Keiyunasi ) ã®å ´åˆã¯ã€
+		ã“ã®å€¤ã¯æ„å‘³ã‚’æŒã¡ã¾ã›ã‚“ã€‚
 	 @param jikokuHatsujikoku [in]
-		”­B	\n
-		m_eEkiatsukai ‚ª
-		‰^s‚È‚µ ( Ekiatsukai_None ),
-		Œo—R‚È‚µ ( Ekiatsukai_Keiyunasi ) ‚Ìê‡‚ÍA
-		‚±‚Ì’l‚ÍˆÓ–¡‚ğ‚¿‚Ü‚¹‚ñB
+		ç™ºæ™‚åˆ»ã€‚	\n
+		m_eEkiatsukai ãŒ
+		é‹è¡Œãªã— ( Ekiatsukai_None ),
+		çµŒç”±ãªã— ( Ekiatsukai_Keiyunasi ) ã®å ´åˆã¯ã€
+		ã“ã®å€¤ã¯æ„å‘³ã‚’æŒã¡ã¾ã›ã‚“ã€‚
 	 */
 	CentDedEkiJikoku( 
 		EEkiatsukai	eEkiatsukai , 
 		CdDedJikoku	jikokuChakujikoku , 
 		CdDedJikoku	jikokuHatsujikoku ) ;
 	
-	/** ƒfƒtƒHƒ‹ƒgƒRƒ“ƒXƒgƒ‰ƒNƒ^ */
+	/** ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ */
 	CentDedEkiJikoku() ;
 	
 
@@ -195,86 +195,86 @@ public:
 // ********************************
 public:
 	// ********************************
-	///@name ‘®«
+	///@name å±æ€§
 	// ********************************
 	///@{
 	EEkiatsukai	getEkiatsukai()const;
 
 	/**
-		‰wˆµ‚ğİ’è‚µ‚Ü‚·B
-		- 	Ekiatsukai_None E‚Ü‚½‚Í Ekiatsukai_Keiyunasi ‚ğİ’è‚·‚é‚ÆA
-			’…E”­‚Í‚Ç‚¿‚ç‚à Null ‚Æ‚È‚è‚Ü‚·B
+		é§…æ‰±ã‚’è¨­å®šã—ã¾ã™ã€‚
+		- 	Ekiatsukai_None ãƒ»ã¾ãŸã¯ Ekiatsukai_Keiyunasi ã‚’è¨­å®šã™ã‚‹ã¨ã€
+			ç€ãƒ»ç™ºæ™‚åˆ»ã¯ã©ã¡ã‚‰ã‚‚ Null æ™‚åˆ»ã¨ãªã‚Šã¾ã™ã€‚
 	 */
 	CentDedEkiJikoku& setEkiatsukai( EEkiatsukai value );
 	
 	/**
-		’…‚ğQÆ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+		ç€æ™‚åˆ»ã‚’å‚ç…§ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 	 @param bHatsuIfNull [in]
-		- true ; ’…‚ª Null ‚ÅA”­‚ª Null ‚Å‚È‚¢ê‡‚ÍA
-			”­‚ğ•Ô‚µ‚Ü‚·B
-		- false ; ’…‚ª Null ‚È‚çA”­‚ÉŠÖ‚í‚ç‚¸
-			 Null ‚ğ•Ô‚µ‚Ü‚·B
+		- true ; ç€æ™‚åˆ»ãŒ Null æ™‚åˆ»ã§ã€ç™ºæ™‚åˆ»ãŒ Null æ™‚åˆ»ã§ãªã„å ´åˆã¯ã€
+			ç™ºæ™‚åˆ»ã‚’è¿”ã—ã¾ã™ã€‚
+		- false ; ç€æ™‚åˆ»ãŒ Null æ™‚åˆ»ãªã‚‰ã€ç™ºæ™‚åˆ»ã«é–¢ã‚ã‚‰ãš
+			 Null æ™‚åˆ»ã‚’è¿”ã—ã¾ã™ã€‚
 	 @return
-			’…‚ğ•Ô‚µ‚Ü‚·B
+			ç€æ™‚åˆ»ã‚’è¿”ã—ã¾ã™ã€‚
 	 */
 	CdDedJikoku	getChakujikoku( bool bHatsuIfNull = false )const;
 
 	/**
-		’…‚ğİ’è‚µ‚Ü‚·B
-		- 	m_eEkiatsukai == Ekiatsukai_Teisya ‚Ì‰w‚É‘Î‚µ‚Ä
-			’…E”­—¼•û‚É Null ‚ğİ’è‚·‚é‚ÆAthis ‚Ì
-			m_eEkiatsukai = Ekiatsukai_None ‚Æ‚È‚è‚Ü‚·B
-		- 	m_eEkiatsukai == Ekiatsukai_None E
-			‚Ü‚½‚Í Ekiatsukai_Keiyunasi ‚Ì‰w‚É‘Î‚µ‚Ä
-			’…E”­‚Ì‚¢‚¸‚ê‚©‚É ”ñNull ‚ğİ’è‚·‚é‚ÆAthis ‚Ì
-			m_eEkiatsukai = Ekiatsukai_Teisya ‚Æ‚È‚è‚Ü‚·B
+		ç€æ™‚åˆ»ã‚’è¨­å®šã—ã¾ã™ã€‚
+		- 	m_eEkiatsukai == Ekiatsukai_Teisya ã®é§…ã«å¯¾ã—ã¦
+			ç€ãƒ»ç™ºä¸¡æ–¹ã« Null æ™‚åˆ»ã‚’è¨­å®šã™ã‚‹ã¨ã€this ã®
+			m_eEkiatsukai = Ekiatsukai_None ã¨ãªã‚Šã¾ã™ã€‚
+		- 	m_eEkiatsukai == Ekiatsukai_None ãƒ»
+			ã¾ãŸã¯ Ekiatsukai_Keiyunasi ã®é§…ã«å¯¾ã—ã¦
+			ç€ãƒ»ç™ºã®ã„ãšã‚Œã‹ã« éNull æ™‚åˆ»ã‚’è¨­å®šã™ã‚‹ã¨ã€this ã®
+			m_eEkiatsukai = Ekiatsukai_Teisya ã¨ãªã‚Šã¾ã™ã€‚
 	 */
 	CentDedEkiJikoku& setChakujikoku( const CdDedJikoku& value );
 
 	/**
-		”­‚ğQÆ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+		ç™ºæ™‚åˆ»ã‚’å‚ç…§ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 	 @param bChakuIfNull [in]
-		- true ; ”­‚ª Null ‚ÅA’…‚ª Null ‚Å‚È‚¢ê‡‚ÍA
-			’…‚ğ•Ô‚µ‚Ü‚·B
-		- false ; ”­‚ª Null ‚È‚çA’…‚ÉŠÖ‚í‚ç‚¸
-			 Null ‚ğ•Ô‚µ‚Ü‚·B
+		- true ; ç™ºæ™‚åˆ»ãŒ Null æ™‚åˆ»ã§ã€ç€æ™‚åˆ»ãŒ Null æ™‚åˆ»ã§ãªã„å ´åˆã¯ã€
+			ç€æ™‚åˆ»ã‚’è¿”ã—ã¾ã™ã€‚
+		- false ; ç™ºæ™‚åˆ»ãŒ Null æ™‚åˆ»ãªã‚‰ã€ç€æ™‚åˆ»ã«é–¢ã‚ã‚‰ãš
+			 Null æ™‚åˆ»ã‚’è¿”ã—ã¾ã™ã€‚
 	 @return
-			”­‚ğ•Ô‚µ‚Ü‚·B
+			ç™ºæ™‚åˆ»ã‚’è¿”ã—ã¾ã™ã€‚
 	 */
 	CdDedJikoku	getHatsujikoku( bool bChakuIfNull = false )const;
 
 	/**
-		”­‚ğİ’è‚µ‚Ü‚·B
-		- 	m_eEkiatsukai == Ekiatsukai_Teisya ‚Ì‰w‚É‘Î‚µ‚Ä
-			’…E”­—¼•û‚É Null ‚ğİ’è‚·‚é‚ÆAthis ‚Ì
-			m_eEkiatsukai = Ekiatsukai_None ‚Æ‚È‚è‚Ü‚·B
-		- 	m_eEkiatsukai == Ekiatsukai_None E
-			‚Ü‚½‚Í Ekiatsukai_Keiyunasi ‚Ì‰w‚É‘Î‚µ‚Ä
-			’…E”­‚Ì‚¢‚¸‚ê‚©‚É ”ñNull ‚ğİ’è‚·‚é‚ÆAthis ‚Ì
-			m_eEkiatsukai = Ekiatsukai_Teisya ‚Æ‚È‚è‚Ü‚·B
+		ç™ºæ™‚åˆ»ã‚’è¨­å®šã—ã¾ã™ã€‚
+		- 	m_eEkiatsukai == Ekiatsukai_Teisya ã®é§…ã«å¯¾ã—ã¦
+			ç€ãƒ»ç™ºä¸¡æ–¹ã« Null æ™‚åˆ»ã‚’è¨­å®šã™ã‚‹ã¨ã€this ã®
+			m_eEkiatsukai = Ekiatsukai_None ã¨ãªã‚Šã¾ã™ã€‚
+		- 	m_eEkiatsukai == Ekiatsukai_None ãƒ»
+			ã¾ãŸã¯ Ekiatsukai_Keiyunasi ã®é§…ã«å¯¾ã—ã¦
+			ç€ãƒ»ç™ºã®ã„ãšã‚Œã‹ã« éNull æ™‚åˆ»ã‚’è¨­å®šã™ã‚‹ã¨ã€this ã®
+			m_eEkiatsukai = Ekiatsukai_Teisya ã¨ãªã‚Šã¾ã™ã€‚
 	 */
 	CentDedEkiJikoku& setHatsujikoku( const CdDedJikoku& value ) ;
 
 	/**
 	 @param eEkiatsukai [in]
-		‰wˆµB
+		é§…æ‰±ã€‚
 	 @param jikokuChakujikoku [in]
-		’…B	\n
-		m_eEkiatsukai ‚ª
-		’… ( Ekiatsukai_None ),
-		”­ ( Ekiatsukai_Keiyunasi ) ‚Ìê‡‚ÍA
-		‚±‚Ì’l‚ÍˆÓ–¡‚ğ‚¿‚Ü‚¹‚ñB
+		ç€æ™‚åˆ»ã€‚	\n
+		m_eEkiatsukai ãŒ
+		ç€æ™‚åˆ» ( Ekiatsukai_None ),
+		ç™ºæ™‚åˆ» ( Ekiatsukai_Keiyunasi ) ã®å ´åˆã¯ã€
+		ã“ã®å€¤ã¯æ„å‘³ã‚’æŒã¡ã¾ã›ã‚“ã€‚
 	 @param jikokuHatsujikoku [in]
-		”­B	\n
-		m_eEkiatsukai ‚ª
-		’… ( Ekiatsukai_None ),
-		”­ ( Ekiatsukai_Keiyunasi ) ‚Ìê‡‚ÍA
-		‚±‚Ì’l‚ÍˆÓ–¡‚ğ‚¿‚Ü‚¹‚ñB
+		ç™ºæ™‚åˆ»ã€‚	\n
+		m_eEkiatsukai ãŒ
+		ç€æ™‚åˆ» ( Ekiatsukai_None ),
+		ç™ºæ™‚åˆ» ( Ekiatsukai_Keiyunasi ) ã®å ´åˆã¯ã€
+		ã“ã®å€¤ã¯æ„å‘³ã‚’æŒã¡ã¾ã›ã‚“ã€‚
 	
-		- 	Ekiatsukai_None E‚Ü‚½‚Í Ekiatsukai_Keiyunasi ‚ğİ’è‚·‚é‚ÆA
-			’…E”­‚Í‚Ç‚¿‚ç‚à Null ‚Æ‚È‚è‚Ü‚·B
-		- 	Ekiatsukai_Teisya E’…E”­‚ª‚Ç‚¿‚ç‚à Null ‚Ìê‡A
-			m_eEkiatsukai = Ekiatsukai_None ‚Æ‚È‚è‚Ü‚·B
+		- 	Ekiatsukai_None ãƒ»ã¾ãŸã¯ Ekiatsukai_Keiyunasi ã‚’è¨­å®šã™ã‚‹ã¨ã€
+			ç€ãƒ»ç™ºæ™‚åˆ»ã¯ã©ã¡ã‚‰ã‚‚ Null æ™‚åˆ»ã¨ãªã‚Šã¾ã™ã€‚
+		- 	Ekiatsukai_Teisya ãƒ»ç€ãƒ»ç™ºæ™‚åˆ»ãŒã©ã¡ã‚‰ã‚‚ Null æ™‚åˆ»ã®å ´åˆã€
+			m_eEkiatsukai = Ekiatsukai_None ã¨ãªã‚Šã¾ã™ã€‚
 	 */
 	CentDedEkiJikoku& set( 
 		EEkiatsukai	eEkiatsukai , 
@@ -282,37 +282,37 @@ public:
 		CdDedJikoku	jikokuHatsujikoku ) ;
 	///@}
 	// ********************************
-	///@name ‘€ì
+	///@name æ“ä½œ
 	// ********************************
 	///@{
 	/**
-		‰wŒ`®‚É‡‚í‚¹‚ÄA’…E”­‚ğÄİ’è‚µ‚Ü‚·B
+		é§…æ™‚åˆ»å½¢å¼ã«åˆã‚ã›ã¦ã€ç€æ™‚åˆ»ãƒ»ç™ºæ™‚åˆ»ã‚’å†è¨­å®šã—ã¾ã™ã€‚
 
-		- [‰wŒ`®‚É’…‚ ‚èE”­‚È‚µA
-@		  ‰w‚É’…‚È‚µA”­‚ ‚è]@n
-@		  ’…‚É‚Í”­‚ğƒRƒs[A”­‚ÍNULLB
-		- [‰wŒ`®‚É’…‚È‚µE”­‚ ‚è
-@		  ‰w‚É’…‚ ‚èA”­‚È‚µ]@n
-@		  ”­‚É‚Í’…‚ğƒRƒs[A’…‚ÍNULLB
-		- [‰w‚ªn”­‰wE
-@		  ‰wŒ`®‚É’…‚ ‚èE”­‚ ‚èA
-@		  ‰w‚É’…‚ ‚èA”­‚È‚µ]@n
-@		  ”­‚É‚Í’…‚ğƒRƒs[A’…‚ÍNULLB
-		- [‰w‚ªI’…‰wE
-@		  ‰wŒ`®‚É’…‚ ‚èE”­‚ ‚è
-@		  ‰w‚É’…‚È‚µA”­‚ ‚è]@n
-@		  ’…‚É‚Í”­‚ğƒRƒs[A”­‚ÍNULLB
+		- [é§…æ™‚åˆ»å½¢å¼ã«ç€æ™‚åˆ»ã‚ã‚Šãƒ»ç™ºæ™‚åˆ»ãªã—ã€
+ã€€		  é§…æ™‚åˆ»ã«ç€æ™‚åˆ»ãªã—ã€ç™ºæ™‚åˆ»ã‚ã‚Š]@n
+ã€€		  ç€æ™‚åˆ»ã«ã¯ç™ºæ™‚åˆ»ã‚’ã‚³ãƒ”ãƒ¼ã€ç™ºæ™‚åˆ»ã¯NULLã€‚
+		- [é§…æ™‚åˆ»å½¢å¼ã«ç€æ™‚åˆ»ãªã—ãƒ»ç™ºæ™‚åˆ»ã‚ã‚Š
+ã€€		  é§…æ™‚åˆ»ã«ç€æ™‚åˆ»ã‚ã‚Šã€ç™ºæ™‚åˆ»ãªã—]@n
+ã€€		  ç™ºæ™‚åˆ»ã«ã¯ç€æ™‚åˆ»ã‚’ã‚³ãƒ”ãƒ¼ã€ç€æ™‚åˆ»ã¯NULLã€‚
+		- [é§…ãŒå§‹ç™ºé§…ãƒ»
+ã€€		  é§…æ™‚åˆ»å½¢å¼ã«ç€æ™‚åˆ»ã‚ã‚Šãƒ»ç™ºæ™‚åˆ»ã‚ã‚Šã€
+ã€€		  é§…æ™‚åˆ»ã«ç€æ™‚åˆ»ã‚ã‚Šã€ç™ºæ™‚åˆ»ãªã—]@n
+ã€€		  ç™ºæ™‚åˆ»ã«ã¯ç€æ™‚åˆ»ã‚’ã‚³ãƒ”ãƒ¼ã€ç€æ™‚åˆ»ã¯NULLã€‚
+		- [é§…ãŒçµ‚ç€é§…ãƒ»
+ã€€		  é§…æ™‚åˆ»å½¢å¼ã«ç€æ™‚åˆ»ã‚ã‚Šãƒ»ç™ºæ™‚åˆ»ã‚ã‚Š
+ã€€		  é§…æ™‚åˆ»ã«ç€æ™‚åˆ»ãªã—ã€ç™ºæ™‚åˆ»ã‚ã‚Š]@n
+ã€€		  ç€æ™‚åˆ»ã«ã¯ç™ºæ™‚åˆ»ã‚’ã‚³ãƒ”ãƒ¼ã€ç™ºæ™‚åˆ»ã¯NULLã€‚
 
 	@param bChakujikokuHyouji [in]
-		‰wŒ`®B
-		’…•\¦‚ ‚èB
+		é§…æ™‚åˆ»å½¢å¼ã€‚
+		ç€æ™‚åˆ»è¡¨ç¤ºã‚ã‚Šã€‚
 	@param bHatsujikokuHyouji [in]
-		‰wŒ`®B
-		”­•\¦‚ ‚èB
+		é§…æ™‚åˆ»å½¢å¼ã€‚
+		ç™ºæ™‚åˆ»è¡¨ç¤ºã‚ã‚Šã€‚
 	@param bIsSihatsueki [in]
-		true: n”­‰w
+		true: å§‹ç™ºé§…
 	@param bSyuuchakueki [in]
-		true: I’…‰w
+		true: çµ‚ç€é§…
 	*/
 	void adjustByEkijikokukeisiki(
 		bool bChakujikokuHyouji , bool bHatsujikokuHyouji ,

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -78,35 +78,35 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  *	@brief
- *	  �w�H���t�@�C���x�f�[�^ ( CDedRosenFileData ) �̓��e���A����
- *	�f�[�^�`���ɕϊ�����֐������^���Ă��܂��B
+ *	  『路線ファイル』データ ( CDedRosenFileData ) の内容を、他の
+ *	データ形式に変換する関数を収録しています。
  *	
- *	 �w�H���t�@�C���x�f�[�^��  CdConnectedString2 �I�u�W�F�N�g�Ƃ̊Ԃ�
- *	�ϊ����T�|�[�g���Ă��܂��B 
+ *	 『路線ファイル』データと  CdConnectedString2 オブジェクトとの間の
+ *	変換をサポートしています。 
  *	
  *	<H4>
- *	�y�H���t�@�C�� (.ded) �z
+ *	【路線ファイル (.ded) 】
  *	</H4>
- *	  �w�H���t�@�C���x�́A�H���t�@�C���f�[�^�N���X��
- *	 CDedRosenFileData_To_string() �ŕ�����ɕϊ����A���̕�����S�̂�
- *	�ۑ������e�L�X�g�t�@�C���ł��B
+ *	  『路線ファイル』は、路線ファイルデータクラスを
+ *	 CDedRosenFileData_To_string() で文字列に変換し、その文字列全体を
+ *	保存したテキストファイルです。
  *	
- *	   CDedRosenFileData_To_string() �֐��́A
- *	   CDedRosenFileData �I�u�W�F�N�g���ێ�����f�[�^��
- *	�ȉ��̎菇�ŕ�����ɕϊ����܂��B
+ *	   CDedRosenFileData_To_string() 関数は、
+ *	   CDedRosenFileData オブジェクトが保持するデータを
+ *	以下の手順で文字列に変換します。
  *	
- *	  �P�D   CdConnectedString2 �I�u�W�F�N�g�𐶐����Ă��������B���̂Ƃ��A
- *	�A�C�e���Ԃ̋�؂蕶��( CdConnectedString2::m_chSplit ) �� "\n" �A
- *	���ڂƒl�̊Ԃ̋�؂蕶��( CdConnectedString2::m_chEqualChar ) ��
- *	 "=" �Ƃ��Ă��������B
+ *	  １．   CdConnectedString2 オブジェクトを生成してください。このとき、
+ *	アイテム間の区切り文字( CdConnectedString2::m_chSplit ) は "\n" 、
+ *	項目と値の間の区切り文字( CdConnectedString2::m_chEqualChar ) は
+ *	 "=" としてください。
  *	
- *	  �Q�D  CDedRosenFileData �I�u�W�F�N�g�̓��e���A
- *	 CDedRosenFileData_to_CdConnectedString() �ŁACdConnectedString2 ��
- *	�ǉ����Ă��������B
+ *	  ２．  CDedRosenFileData オブジェクトの内容を、
+ *	 CDedRosenFileData_to_CdConnectedString() で、CdConnectedString2 に
+ *	追加してください。
  *	
- *	  �R�D  CdConnectedString2::encode() �ɂ���ē����镶���񂪁A
- *	�w�H���t�@�C���x�`���̕�����ł��B������t�@�C���ɕۑ����邱�Ƃɂ��A
- *	 �w�H���t�@�C���x�ƂȂ�܂��B
+ *	  ３．  CdConnectedString2::encode() によって得られる文字列が、
+ *	『路線ファイル』形式の文字列です。これをファイルに保存することにより、
+ *	 『路線ファイル』となります。
  */
 class CconvCDedRosenFileData_02
 {
@@ -119,54 +119,54 @@ class CconvCDedRosenFileData_02
 	// ********************************
 	/**
 	 * @return
-	 *	CdDedDispProp_to_CdConnectedString() �̓��e��
-	 *	�t�@�C���ɕۑ�����ۂɒǉ�����A�C�e�� "FileType" �̒l�ł��B
+	 *	CdDedDispProp_to_CdConnectedString() の内容を
+	 *	ファイルに保存する際に追加するアイテム "FileType" の値です。
 	 *
 	 * @attention 
-	 *	���̃N���X�� CdDedDispProp_to_CdConnectedString() �֐���
-	 *	 "FileType" �A�C�e����t�^����킯�ł͂���܂���B
-	 *	 "FileType" �A�C�e����t�^����i���肷��j�̂́A
-	 *	�֐��ďo���̐Ӗ��ł��B
+	 *	このクラスの CdDedDispProp_to_CdConnectedString() 関数が
+	 *	 "FileType" アイテムを付与するわけではありません。
+	 *	 "FileType" アイテムを付与する（判定する）のは、
+	 *	関数呼出元の責務です。
 	 */
 	string getFileType(){	return "OuDia.2" ; } ;
 	
 	
 	/**
-	 *	  CdConnectedString �I�u�W�F�N�g�ɁA
-	 *	  CdDedDispProp �̑�����ǉ����܂��B
+	 *	  CdConnectedString オブジェクトに、
+	 *	  CdDedDispProp の属性を追加します。
 	 *	@param aCdDedDispProp [in]
-	 *	  CdDedDispProp ���w�肵�Ă��������B
+	 *	  CdDedDispProp を指定してください。
 	 *	@param pCdConnectedString [in,out]
-	 *	  ���̊֐��́A���̃I�u�W�F�N�g�ɁA CdConnectedString2::CdItem ��
-	 *	�ǉ����܂��B
-	 *	  ���̃I�u�W�F�N�g������܂ŕێ����Ă��� CdConnectedString2::CdItem ��
-	 *	�ێ����܂��B
+	 *	  この関数は、このオブジェクトに、 CdConnectedString2::CdItem を
+	 *	追加します。
+	 *	  このオブジェクトがそれまで保持していた CdConnectedString2::CdItem は
+	 *	維持します。
 	 *	@return
-	 *	  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	  ���݂̂Ƃ���A�߂�l�͏�� 0 �ł��B
+	 *	  成功したら 0 以上、エラーなら負の数です。
+	 *	  現在のところ、戻り値は常に 0 です。
 	 */
 	int CdDedDispProp_to_CdConnectedString( 
 			const CdDedDispProp& aCdDedDispProp , 
 			CdConnectedString2* pCdConnectedString ) ;
 	
 	/**
-	 *	  CdConnectedString �I�u�W�F�N�g����A
-	 *	  CdDedDispProp_To_CdConnectedString() �֐��ɂ���č쐬���ꂽ
-	 *	�A�C�e����ǂݍ��݁A CdDedDispProp �I�u�W�F�N�g�ɔ��f���܂��B
+	 *	  CdConnectedString オブジェクトから、
+	 *	  CdDedDispProp_To_CdConnectedString() 関数によって作成された
+	 *	アイテムを読み込み、 CdDedDispProp オブジェクトに反映します。
 	 *	
 	 *	@param pCdDedDispProp [out]
-	 *	  ���̊֐��͂��̃I�u�W�F�N�g�ɁA�����𔽉f���܂��B
+	 *	  この関数はこのオブジェクトに、属性を反映します。
 	 *	@param aCdConnectedString [in]
-	 *	  ������ێ����Ă��� CdConnectedString �I�u�W�F�N�g���w�肵�Ă��������B
+	 *	  属性を保持している CdConnectedString オブジェクトを指定してください。
 	 *	@return
-	 *	  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-12 ;	//	JikokuhyouFont �̓��e���s���ł��B
-	 *	-	-22 ;	//	DiaEkimeiFont �̓��e���s���ł��B
-	 *	-	-32 ;	//	DiaJikokuFont �̓��e���s���ł��B
-	 *	-	-82 ;	//	DisplayRessyabangou ���s���ł��B
-	 *	-	-92 ;	//	DisplayRessyamei ���s���ł��B
-	 *	-	-102 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari ���s���ł��B
-	 *	-	-112 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori ���s���ł��B
+	 *	  成功したら 0 以上、エラーなら負の数です。
+	 *	-	-12 ;	//	JikokuhyouFont の内容が不正です。
+	 *	-	-22 ;	//	DiaEkimeiFont の内容が不正です。
+	 *	-	-32 ;	//	DiaJikokuFont の内容が不正です。
+	 *	-	-82 ;	//	DisplayRessyabangou が不正です。
+	 *	-	-92 ;	//	DisplayRessyamei が不正です。
+	 *	-	-102 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari が不正です。
+	 *	-	-112 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori が不正です。
 	 */
 	int CdDedDispProp_from_CdConnectedString( 
 			CdDedDispProp* pCdDedDispProp ,
@@ -178,35 +178,35 @@ class CconvCDedRosenFileData_02
 	//	CDedRosenFileData
 	// ********************************
 	/**
-	 *	  CdConnectedString �I�u�W�F�N�g�ɁA
-	 *	  CDedRosenFileData �̑�����ǉ����܂��B
+	 *	  CdConnectedString オブジェクトに、
+	 *	  CDedRosenFileData の属性を追加します。
 	 *	@param aCDedRosenFileData [in]
-	 *	  CDedRosenFileData ���w�肵�Ă��������B
+	 *	  CDedRosenFileData を指定してください。
 	 *	@param pCdConnectedString [in,out]
-	 *	  ���̊֐��́A���̃I�u�W�F�N�g�ɁA CdConnectedString2::CdItem ��
-	 *	�ǉ����܂��B
-	 *	  ���̃I�u�W�F�N�g������܂ŕێ����Ă��� CdConnectedString2::CdItem ��
-	 *	�ێ����܂��B
+	 *	  この関数は、このオブジェクトに、 CdConnectedString2::CdItem を
+	 *	追加します。
+	 *	  このオブジェクトがそれまで保持していた CdConnectedString2::CdItem は
+	 *	維持します。
 	 *	@return
-	 *	  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-11 ;	//	Rosen �̓��e���s��
-	 *	-	-21 ;	//	DispProp �̓��e���s��
+	 *	  成功したら 0 以上、エラーなら負の数です。
+	 *	-	-11 ;	//	Rosen の内容が不正
+	 *	-	-21 ;	//	DispProp の内容が不正
 	 */
 	int CDedRosenFileData_to_CdConnectedString( 
 			const CDedRosenFileData& aCDedRosenFileData , 
 			CdConnectedString2* pCdConnectedString ) ;
 	
 	/**
-	 *	  CdConnectedString �I�u�W�F�N�g����A
-	 *	  CDedRosenFileData_To_CdConnectedString() �֐��ɂ���č쐬���ꂽ
-	 *	�A�C�e����ǂݍ��݁A CDedRosenFileData �I�u�W�F�N�g�ɔ��f���܂��B
+	 *	  CdConnectedString オブジェクトから、
+	 *	  CDedRosenFileData_To_CdConnectedString() 関数によって作成された
+	 *	アイテムを読み込み、 CDedRosenFileData オブジェクトに反映します。
 	 *	
 	 *	@param pCDedRosenFileData [out]
-	 *	  ���̊֐��͂��̃I�u�W�F�N�g�ɁA�����𔽉f���܂��B
+	 *	  この関数はこのオブジェクトに、属性を反映します。
 	 *	@param aCdConnectedString [in]
-	 *	  ������ێ����Ă��� CdConnectedString �I�u�W�F�N�g���w�肵�Ă��������B
+	 *	  属性を保持している CdConnectedString オブジェクトを指定してください。
 	 *	@return
-	 *	  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+	 *	  成功したら 0 以上、エラーなら負の数です。
 	 */
 	int CDedRosenFileData_from_CdConnectedString( 
 			CDedRosenFileData* pCDedRosenFileData ,
@@ -214,38 +214,38 @@ class CconvCDedRosenFileData_02
 	
 	
 	/**
-	 *	  CDedRosenFileData �̕ێ�����f�[�^����A
-	 *	�w�H���t�@�C���x(.ded) �`���̕�������쐬���܂��B
+	 *	  CDedRosenFileData の保持するデータから、
+	 *	『路線ファイル』(.ded) 形式の文字列を作成します。
 	 *
 	 *	@param aCDedRosenFileData [in]
-	 *	  CDedRosenFileData ���w�肵�Ă��������B
+	 *	  CDedRosenFileData を指定してください。
 	 *	@param pString [out]
-	 *	  ���̊֐��́A���̕�����I�u�W�F�N�g�ɁA
-	 *	�w�H���t�@�C���x(.ded) �`���̕������ݒ肵�܂��B
-	 *	  ���̃I�u�W�F�N�g������܂ŕێ����Ă���������͔j�����܂��B
+	 *	  この関数は、この文字列オブジェクトに、
+	 *	『路線ファイル』(.ded) 形式の文字列を設定します。
+	 *	  このオブジェクトがそれまで保持していた文字列は破棄します。
 	 *	@return
-	 *	  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-11 ;	//	Rosen �̓��e���s��
-	 *	-	-21 ;	//	DispProp �̓��e���s��
+	 *	  成功したら 0 以上、エラーなら負の数です。
+	 *	-	-11 ;	//	Rosen の内容が不正
+	 *	-	-21 ;	//	DispProp の内容が不正
 	 */
 	int CDedRosenFileData_to_string( 
 			const CDedRosenFileData& aCDedRosenFileData , 
 			string* pString ) ;
 	
 	/**
-	 *	  CDedRosenFileData_to_string() �Ő�������
-	 *	�w�H���t�@�C���x(.ded) �`���̕���������߂��A
-	 *	 CDedRosenFileData �I�u�W�F�N�g�ɔ��f���܂��B
+	 *	  CDedRosenFileData_to_string() で生成した
+	 *	『路線ファイル』(.ded) 形式の文字列を解釈し、
+	 *	 CDedRosenFileData オブジェクトに反映します。
 	 *	
 	 *	@param pCDedRosenFileData [out]
-	 *	  ���̊֐��͂��̃I�u�W�F�N�g�ɁA�����𔽉f���܂��B
+	 *	  この関数はこのオブジェクトに、属性を反映します。
 	 *	@param aString [in]
-	 *	  CDedRosenFileData_to_string() �Ő�������
-	 *	�w�H���t�@�C���x(.ded) �`���̕�������w�肵�Ă��������B
+	 *	  CDedRosenFileData_to_string() で生成した
+	 *	『路線ファイル』(.ded) 形式の文字列を指定してください。
 	 *	@return
-	 *	  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-11 ;	//	Rosen �̓��e���s��
-	 *	-	-21 ;	//	DispProp �̓��e���s��
+	 *	  成功したら 0 以上、エラーなら負の数です。
+	 *	-	-11 ;	//	Rosen の内容が不正
+	 *	-	-21 ;	//	DispProp の内容が不正
 	 */
 	int CDedRosenFileData_from_string( 
 			CDedRosenFileData* pCDedRosenFileData ,

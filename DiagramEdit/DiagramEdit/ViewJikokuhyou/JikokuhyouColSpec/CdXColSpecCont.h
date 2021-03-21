@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 // $Id: CdXColSpecCont.h 295 2016-06-11 05:14:13Z okm $
@@ -82,84 +82,84 @@ namespace ViewJikokuhyou{ namespace JikokuhyouColSpec{
 
 /**
 @brief
-  �����\�r���[�� CWndJikokuhyou �̊e��ԍ��ƕ\�����e�̑��ݕϊ���
-  �@�\����񋟂��܂��B
+  時刻表ビューの CWndJikokuhyou の各列番号と表示内容の相互変換の
+  機能をを提供します。
   
-  ���̃N���X�́A�����ɑS�Ă�X��ɂ��Ă� �w��ԍ�-�\�����e�x�̑Ή��\��
-�ێ����܂��B ���̑Ή��\�́A CentDedRessyaCont�ECentDedRessya �ɕύX������
-�����疳���ɂȂ�܂��B���̂��߁ACentDedRessyaCont�ECentDedRessya  �ɕύX��
-�\��������󋵂ł́A�Ή��\���X�V����K�v������܂��B
+  このクラスは、内部に全てのX列についての 『列番号-表示内容』の対応表を
+保持します。 この対応表は、 CentDedRessyaCont・CentDedRessya に変更が発生
+したら無効になります。このため、CentDedRessyaCont・CentDedRessya  に変更の
+可能性がある状況では、対応表を更新する必要があります。
 
-�y�g�����z
+【使い方】
 
-(1)  �f�t�H���g�R���X�g���N�^�ŃC���X�^���X�𐶐��������Ƃ́A scan() ��
-�w��ԍ�-�\�����e�x�̑Ή��\���X�V���Ă��������B
+(1)  デフォルトコンストラクタでインスタンスを生成したあとは、 scan() で
+『列番号-表示内容』の対応表を更新してください。
 
-(2)  �Ή��\�X�V��́AColumnNumberToSpec(),ColumnNumberFromSpec() �ŁA
-��ԍ��ƕ\�����e�̑��ݕϊ����ł��܂��B
+(2)  対応表更新後は、ColumnNumberToSpec(),ColumnNumberFromSpec() で、
+列番号と表示内容の相互変換ができます。
 
 */
 class CdXColSpecCont
 {
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	///@}
 
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-		��ԕ����Bscan() �Ō��܂�܂��B
+		列車方向。scan() で決まります。
 	*/
 	ERessyahoukou	m_eRessyahoukou ;
 
 	/**
-		��Ԃ̐��Bscan() �Ō��܂�܂��B
+		列車の数。scan() で決まります。
 	*/
 	int m_iRessyaCount ;
 
 	/**
-		��Ԃ̐擪��̗�ԍ��B
-		��Ԃ̐���0�̏ꍇ�́A��Ԃ��ǉ�������ԍ��ɂȂ�܂��B
+		列車の先頭列の列番号。
+		列車の数が0の場合は、列車が追加される列番号になります。
 	*/
 	int m_iColumnNumber_Ressya_begin ;
 
 	/**
-		��Ԃ̏I�[��̎��ʂ� X��ԍ��Bscan() �Ō��܂�܂��B
+		列車の終端列の次位の X列番号。scan() で決まります。
 
-		m_iColumnNumber_Ressya_end = getColumnNumber_Ressya_begin() + ��Ԃ̐�
+		m_iColumnNumber_Ressya_end = getColumnNumber_Ressya_begin() + 列車の数
 	*/
 	int m_iColumnNumber_Ressya_end ;
 
 	///@}
 
 	// ********************************
-	///@name �W��
+	///@name 集約
 	// ********************************
 	///@{
 	/**
-		���i�K�ł́A�w��ԁx�ȊO�̗v�f�������i�[���܂��B
+		現段階では、『列車』以外の要素だけを格納します。
 
-		�w��ԍ�-�\�����e�x�̑Ή��\�B
-		�C���f�N�X����ԍ��ɑ������܂��B
-		�v�f���������\�r���[��X�񐔂ɑ������܂��B
+		『列番号-表示内容』の対応表。
+		インデクスが列番号に相当します。
+		要素数が時刻表ビューのX列数に相当します。
 	*/
 	CMup_vector<CdXColSpec>	m_contColumnSpec ;
 	///@}
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
-		scan() �Ɠ����ł��B
+		scan() と等価です。
 	@param pCentDedRessyaCont
-		��ԃR���e�i�B
-		���̃I�u�W�F�N�g�́A�֐��I����͔j���ł��܂��B
+		列車コンテナ。
+		このオブジェクトは、関数終了後は破棄できます。
 	*/
 	CdXColSpecCont( 
 		const CentDedRessyaCont* pCentDedRessyaCont ) ;
@@ -167,12 +167,12 @@ public:
  
 public:
 	// ********************************
-	///@name CdXColSpec-�֘A
+	///@name CdXColSpec-関連
 	// ********************************
 	///@{
 	///@}
 	// ********************************
-	///@name CdXColSpec-����
+	///@name CdXColSpec-属性
 	// ********************************
 	///@{
 	ERessyahoukou	getRessyahoukou()const ;
@@ -182,15 +182,15 @@ public:
 
 	///@}
 	// ********************************
-	///@name CdXColSpecCont-����
+	///@name CdXColSpecCont-操作
 	// ********************************
 	///@{
 	/**
-		��ԃR���e�i�𑖍����āA �w��ԍ�-�\�����e�x�̑Ή��\���X�V���܂��B
-		this ������܂ŕێ����Ă������e�͂��ׂĎ����܂��B 
+		列車コンテナを走査して、 『列番号-表示内容』の対応表を更新します。
+		this がそれまで保持していた内容はすべて失われます。 
 	@param pCentDedRessyaCont
-		��ԃR���e�i�B
-		���̃I�u�W�F�N�g�́A�֐��I����͔j���ł��܂��B
+		列車コンテナ。
+		このオブジェクトは、関数終了後は破棄できます。
 	*/
 	void scan( 
 		const CentDedRessyaCont* pCentDedRessyaCont ) ;
@@ -198,46 +198,46 @@ public:
 
 	/**
 	@return 
-		�񐔂�Ԃ��܂��B
+		列数を返します。
 	*/
 	int size() ;
 
 	/**
-		��ԍ�����A�\������ׂ����e�𓱏o���܂��B
+		列番号から、表示するべき内容を導出します。
 	@param iXColumnNumber 
-		��ԍ����w�肵�Ă��������B
+		列番号を指定してください。
 	@return
-		�\�����ׂ����e��Ԃ��܂��B
-		��ԍ����������Ȃ��ꍇ�́ANULL��Ԃ̃I�u�W�F�N�g��Ԃ��܂��B
+		表示すべき内容を返します。
+		列番号が正しくない場合は、NULL状態のオブジェクトを返します。
 
-		�߂�l�� 
+		戻り値の 
 		CdXColSpec::m_eColumnType == 
-		ColumnType_NewRessya �̏ꍇ�A
-		CdXColSpec::m_iRessyaIndex �͗�Ԗ{����
-		�������Ȃ�܂��B
+		ColumnType_NewRessya の場合、
+		CdXColSpec::m_iRessyaIndex は列車本数と
+		等しくなります。
 
-		�߂�l�� 
-		CdXColSpec::m_eColumnType �� 
-		ColumnType_Ressya�ł�ColumnType_NewRessya �ł��Ȃ��ꍇ�A
-		CdXColSpec::m_iRessyaIndex = -1 �ƂȂ�܂��B
+		戻り値の 
+		CdXColSpec::m_eColumnType が 
+		ColumnType_RessyaでもColumnType_NewRessya でもない場合、
+		CdXColSpec::m_iRessyaIndex = -1 となります。
 	*/
 	CdXColSpec ColumnNumberToSpec( 
 		int iXColumnNumber ) ;
 
 	/**
-		�\�����e�ɑ΂����ԍ��𓱏o���܂��B
+		表示内容に対する列番号を導出します。
 	@param aCdXColSpec 
-		�\�����e���w�肵�Ă��������B
+		表示内容を指定してください。
 	@return
-		�\�����ׂ����e��Ԃ��܂��B
-		�Ή������ԍ����Ȃ��ꍇ(��\�����܂�)�́A-1��Ԃ��܂��B
+		表示すべき内容を返します。
+		対応する列番号がない場合(非表示を含む)は、-1を返します。
 	*/
 	int ColumnNumberFromSpec( 
 		const CdXColSpec& aCdXColSpec ) ;
 
 
 	/**
-		�w��ԍ�-�\�����e�x�̑Ή��\���폜���܂��B
+		『列番号-表示内容』の対応表を削除します。
 	*/
 	void clear() ;
 	///@}

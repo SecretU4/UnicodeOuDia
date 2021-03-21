@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -84,65 +84,65 @@ namespace ViewJikokuhyou{ namespace WndJikokuhyou{
 // ****************************************************************
 /**
   @brief
- 	�w�����\�x�O���b�h�E�C���h�E�́w��ԁx�̈�ł��B
- 	�w��ԕҏW���[�h�x���������܂��B
+ 	『時刻表』グリッドウインドウの『状態』の一つです。
+ 	『列車編集モード』を実装します。
 */
 class CWjkState_Ressyahensyu : 
 	public CWjkState
 {
 public:
 	// ********************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ********************************
 	typedef CWjkState	super ;
 
 private:
 	// ********************************
-	///@name	���/�W��
+	///@name	包含/集約
 	// ********************************
 	///@{
 	/**
-	   �e�E�C���h�E�ւ̃L�[���͂��_�@�� ModalDialog ���J���ꍇ�A
-	  ���[�_���_�C�A���O�̓���̃G�f�B�b�g�R���g���[���ɁA
-	  �L�[���̓��b�Z�[�W�i WM_KEYDOWN , WM_KEYUP �j��]�����܂��B
+	   親ウインドウへのキー入力を契機に ModalDialog を開く場合、
+	  モーダルダイアログの特定のエディットコントロールに、
+	  キー入力メッセージ（ WM_KEYDOWN , WM_KEYUP ）を転送します。
 	 */
 	CKeyinputSenderToModalDlg	m_CKeyinputSenderToModalDlg ;
 	///@}
 
 private:
 	// --------------------------------
-	///@name �����f�[�^
+	///@name 内部データ
 	// --------------------------------
 	///@{
 	/**
-	 	- false ;	//	[�t�H�[�J�X�Z�����ړ�]
-	 	- true ;	//	[�t�H�[�J�X�Z���E�ړ�]
+	 	- false ;	//	[フォーカスセル下移動]
+	 	- true ;	//	[フォーカスセル右移動]
 	 	
-	 �����l�� false �ł����A���[�U�[�̃��j���[����ŕς��܂��B
+	 初期値は false ですが、ユーザーのメニュー操作で変わります。
 	 */
 	bool m_bJikokuhyouFocusMoveRight ;
 	///@}
 
 private:
 	// --------------------------------
-	///@name OnUpdate�����֐�
+	///@name OnUpdate下請関数
 	// --------------------------------
 	///@{
 	/**
-	OnUpdate() �̉����֐��ł��B
-	�r���[�����S�ɍX�V���܂��B
-	OnUpdate() �� pHint �� NULL �̏ꍇ�̏������s���܂��B
+	OnUpdate() の下請関数です。
+	ビューを完全に更新します。
+	OnUpdate() で pHint が NULL の場合の処理を行います。
 	 */
 	void OnUpdate_All() ;
 
 
 	/**
-	OnUpdate() �̉����֐��ł��B
-	OnUpdate() �� pHint �� 
-	CRfEditCmd_Ressya �I�u�W�F�N�g�̏ꍇ�̏������s���܂��B
+	OnUpdate() の下請関数です。
+	OnUpdate() で pHint が 
+	CRfEditCmd_Ressya オブジェクトの場合の処理を行います。
 
-	CRfEditCmd_Ressya �����ƂɁA
-	�r���[�𕔕��I�ɍX�V���܂��B
+	CRfEditCmd_Ressya をもとに、
+	ビューを部分的に更新します。
 	 */
 	void OnUpdate_CentDedRessya( 
 		Ou<CRfEditCmd_Ressya> pCommand ) ;
@@ -150,136 +150,136 @@ private:
 
 protected:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 	/**
-	 	���݃t�H�[�J�X�̂���Z���ɑΉ����āA
-	 	�w��ԁx�E�w�w�����x�����ꂩ��
-	 	�v���p�e�B�_�C�A���O���J���A
-	 	�v���p�e�B�̕ҏW���s���܂��B
+	 	現在フォーカスのあるセルに対応して、
+	 	『列車』・『駅時刻』いずれかの
+	 	プロパティダイアログを開き、
+	 	プロパティの編集を行います。
 	 
-	 	execCDlgRessyaProp() �E
-	 	execCDlgEkijikokuProp() �̂����ꂩ�ɈϏ����܂��B
+	 	execCDlgRessyaProp() ・
+	 	execCDlgEkijikokuProp() のいずれかに委譲します。
 	 
 	  @param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-					�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	 @return
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+					エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	 @return
 	  @param bInsert [in]
-	 	- true ;	�t�H�[�J�X�̂���Z���̈ʒu�ɁA
-	 	�V������Ԃ�}�����܂��B 
-	 	- false ;	�t�H�[�J�X�̂���Z���̈ʒu�́A
-	 	��Ԃ̃v���p�e�B���X�V���܂��B
-	 	(�t�H�[�J�X�Z�����A��ԉE�̋󔒂̗�ɂ���ꍇ�́A
-	 	�����ւ̑}���Ƃ��ē��삵�܂�)
+	 	- true ;	フォーカスのあるセルの位置に、
+	 	新しい列車を挿入します。 
+	 	- false ;	フォーカスのあるセルの位置の、
+	 	列車のプロパティを更新します。
+	 	(フォーカスセルが、一番右の空白の列にある場合は、
+	 	末尾への挿入として動作します)
 	 @return
-	 	-	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
-	 	-	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A
-	 			//	�ύX�͔������܂���ł����B
-	 	-	-1 ;	//	X��ԍ����s���ł��B
-	 	-	-2 ;	//	Y��ԍ����s���ł��B
+	 	-	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+	 	-	0 ;	//	ダイアログがキャンセルで終了したため、
+	 			//	変更は発生しませんでした。
+	 	-	-1 ;	//	X列番号が不正です。
+	 	-	-2 ;	//	Y列番号が不正です。
 
 	 */
 	int execJikokuhyouPropDlg( bool bInsert , BOOL bQueryEnable  ) ;
 	
 	/**
-	 	���݃t�H�[�J�X�̂���Z����X��ԍ��ɑΉ�����
-	 	�w��ԁx�v���p�e�B�_�C�A���O���J���A
-	 	�v���p�e�B�̕ҏW���s���܂��B
+	 	現在フォーカスのあるセルのX列番号に対応して
+	 	『列車』プロパティダイアログを開き、
+	 	プロパティの編集を行います。
 	 @param bInsert [in]
-	 	- true ;	�t�H�[�J�X�̂���Z���̈ʒu�ɁA
-	 	�V������Ԃ�}�����܂��B 
-	 	- false ;	�t�H�[�J�X�̂���Z���̈ʒu�́A
-	 	��Ԃ̃v���p�e�B���X�V���܂��B
-	 	(�t�H�[�J�X�Z�����A��ԉE�̋󔒂̗�ɂ���ꍇ�́A
-	 	�����ւ̑}���Ƃ��ē��삵�܂�)
+	 	- true ;	フォーカスのあるセルの位置に、
+	 	新しい列車を挿入します。 
+	 	- false ;	フォーカスのあるセルの位置の、
+	 	列車のプロパティを更新します。
+	 	(フォーカスセルが、一番右の空白の列にある場合は、
+	 	末尾への挿入として動作します)
 	 @param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-					�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	 @return
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+					エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	 @return
 	 @return
-	 	-	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
-	 	-	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A@n
-	 				�ύX�͔������܂���ł����B
-	 	-	-1 ;	//	X��ԍ����s���ł��B
+	 	-	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+	 	-	0 ;	//	ダイアログがキャンセルで終了したため、@n
+	 				変更は発生しませんでした。
+	 	-	-1 ;	//	X列番号が不正です。
 	*/
 	int execCDlgRessyaProp( bool bInsert , BOOL bQueryEnable ) ;
 	
 	/**
-	 	���݃t�H�[�J�X�̂���Z����X��EY��ԍ��ɑΉ�����
-	 	�w�w�x�v���p�e�B�_�C�A���O���J���A
-	 	�v���p�e�B�̕ҏW���s���܂��B
+	 	現在フォーカスのあるセルのX列・Y列番号に対応して
+	 	『駅』プロパティダイアログを開き、
+	 	プロパティの編集を行います。
 	  @param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-					�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	 @return
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+					エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	 @return
 	  @return
 	*/
 	int execCDlgEkiProp( BOOL bQueryEnable ) ;
 
 	/**
-	 	���݃t�H�[�J�X�̂���Z����X��EY��ԍ��ɑΉ�����
-	 	�w�w�����x�v���p�e�B�_�C�A���O���J���A
-	 	�v���p�e�B�̕ҏW���s���܂��B
+	 	現在フォーカスのあるセルのX列・Y列番号に対応して
+	 	『駅時刻』プロパティダイアログを開き、
+	 	プロパティの編集を行います。
 	@param bInsert [in]
-	 	- true ;	�t�H�[�J�X�̂���Z���̈ʒu�ɁA
-	 	�V������Ԃ�}�����܂��B 
-	 	- false ;	�t�H�[�J�X�̂���Z���̈ʒu�́A
-	 	��Ԃ̃v���p�e�B���X�V���܂��B
-	 	(�t�H�[�J�X�Z�����A��ԉE�̋󔒂̗�ɂ���ꍇ�́A
-	 	�����ւ̑}���Ƃ��ē��삵�܂�)
+	 	- true ;	フォーカスのあるセルの位置に、
+	 	新しい列車を挿入します。 
+	 	- false ;	フォーカスのあるセルの位置の、
+	 	列車のプロパティを更新します。
+	 	(フォーカスセルが、一番右の空白の列にある場合は、
+	 	末尾への挿入として動作します)
 	  @param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-					�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	 @return
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+					エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	 @return
 	  @return
-	 	-	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
-	 	-	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A@n
-	 				�ύX�͔������܂���ł����B
-	 	-	-1 ;	//	X��ԍ����s���ł��B
-	 	-	-2 ;	//	Y��ԍ����s���ł��B
+	 	-	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+	 	-	0 ;	//	ダイアログがキャンセルで終了したため、@n
+	 				変更は発生しませんでした。
+	 	-	-1 ;	//	X列番号が不正です。
+	 	-	-2 ;	//	Y列番号が不正です。
 	 */
 	int execCDlgEkijikokuProp( bool bInsert , BOOL bQueryEnable ) ;
 
 
 	/**
-	�t�H�[�J�X�Z���ړ����[�h m_bJikokuhyouFocusMoveRight �ɏ]���A
-	�t�H�[�J�X�Z�����A���̈ʒu�Ɉړ����܂��B
+	フォーカスセル移動モード m_bJikokuhyouFocusMoveRight に従い、
+	フォーカスセルを、次の位置に移動します。
 
 	@param bNextEkiOrder [in]
-	 	m_bJikokuhyouFocusMoveRight ���U�ŁA���݂̃t�H�[�J�X�Z�����A
-	 	�����\���̉w�����̒������ɂ���ꍇ�́A�t�H�[�J�X�̈ړ����
-	 	�w�肵�܂��B
-	 	- true ;	//	�t�H�[�J�X�Z�������̉wOrder�Ɉړ����܂��B
-	 	- false ;	//	�t�H�[�J�X�Z���𓯂��w�̔������Ɉړ����܂��B
+	 	m_bJikokuhyouFocusMoveRight が偽で、現在のフォーカスセルが、
+	 	発着表示の駅時刻の着時刻にある場合の、フォーカスの移動先を
+	 	指定します。
+	 	- true ;	//	フォーカスセルを次の駅Orderに移動します。
+	 	- false ;	//	フォーカスセルを同じ駅の発時刻に移動します。
 	@return 
-	 	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+	 	成功したら 0 以上、エラーなら負の数です。
 	*/
 	virtual int moveFocusCellToNext( bool bNextEkiOrder ) ;
 	
 	/**
-	�t�H�[�J�X�Z���ړ����[�h m_bJikokuhyouFocusMoveRight �ɏ]���A
-	�t�H�[�J�X�Z�����A�O�̈ʒu�Ɉړ����܂��B
+	フォーカスセル移動モード m_bJikokuhyouFocusMoveRight に従い、
+	フォーカスセルを、前の位置に移動します。
 
 	@param bNextEkiOrder [in]
-	 	m_bJikokuhyouFocusMoveRight ���U�ŁA���݂̃t�H�[�J�X�Z�����A
-	 	�����\���̉w�����̔������ɂ���ꍇ�́A�t�H�[�J�X�̈ړ����
-	 	�w�肵�܂��B
-	 	- true ;	//	�t�H�[�J�X�Z����O�̉wOrder�Ɉړ����܂��B
-	 	- false ;	//	�t�H�[�J�X�Z���𓯂��w�̒������Ɉړ����܂��B
+	 	m_bJikokuhyouFocusMoveRight が偽で、現在のフォーカスセルが、
+	 	発着表示の駅時刻の発時刻にある場合の、フォーカスの移動先を
+	 	指定します。
+	 	- true ;	//	フォーカスセルを前の駅Orderに移動します。
+	 	- false ;	//	フォーカスセルを同じ駅の着時刻に移動します。
 	@return 
-	 	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+	 	成功したら 0 以上、エラーなら負の数です。
 	 */
 	virtual int moveFocusCellToPrev( bool bNextEkiOrder ) ;
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CWjkState_Ressyahensyu( 
 		CWndJikokuhyou*	pCWndDcdGrid );
@@ -290,38 +290,38 @@ protected:
 	//	CWjkState
 	// ********************************
 	// ********************************
-	///@name CWjkState-����
+	///@name CWjkState-操作
 	// ********************************
 	///@{
 	/**
-	 *	���̏�Ԃւ̓��ꓮ����s���܂��B
+	 *	この状態への入場動作を行います。
 	 *
-	 *	CWndJikokuhyou �́A�w�J�����g��ԁx��this �ɐݒ肵��
-	 *	����ɁA���̊֐����Ăяo���܂��B
+	 *	CWndJikokuhyou は、『カレント状態』をthis に設定した
+	 *	直後に、この関数を呼び出します。
 	 *
-	 *	�y�I�[�o���C�h�z
-	 *	���ꓮ����������Ă��������B
+	 *	【オーバライド】
+	 *	入場動作を実装してください。
 	 */
 	virtual void onEnter() ;
 	/**
-	 *	���̏�Ԃ���̑ޏꓮ����s���܂��B
+	 *	この状態からの退場動作を行います。
 	 *
-	 *	CWndJikokuhyou �́A�w�J�����g��ԁx��this ���瑼�ɐݒ肷��
-	 *	���O�ɁA���̊֐����Ăяo���܂��B
+	 *	CWndJikokuhyou は、『カレント状態』をthis から他に設定する
+	 *	直前に、この関数を呼び出します。
 	 *
-	 *	�y�I�[�o���C�h�z
-	 *	�ޏꓮ����������Ă��������B
+	 *	【オーバライド】
+	 *	退場動作を実装してください。
 	 */
 	virtual void onExit() ;
 	///@}
 	// ********************************
-	///@name CView ����̈Ϗ�
+	///@name CView からの委譲
 	// ********************************
 	///@{
 	virtual void OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint);
 	///@}
 	// ********************************
-	///@name ���b�Z�[�W�n���h���E�R�}���h�n���h��-CWnd
+	///@name メッセージハンドラ・コマンドハンドラ-CWnd
 	// ********************************
 	///@{
 	virtual void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
@@ -333,359 +333,359 @@ protected:
 	// --------------------------------
 
 	/**	
-		[�ҏW]-[�؂���]
+		[編集]-[切り取り]
 	@param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-					�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	@return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	���݂̃t�H�[�J�X�Z���ł́A���s�ł��܂���
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+					エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	@return
+		成功したら0以上、エラーなら負の数です。
+		-	-1 ;	//	現在のフォーカスセルでは、実行できません
 	*/
 	virtual int OnEditCut_Process( BOOL bQueryEnable );
 
-	/**	[�ҏW]-[�R�s�[]	
+	/**	[編集]-[コピー]	
 	@return
-		iRv = -1 ;	//	���݂̃t�H�[�J�X�Z���ł́A���s�ł��܂���
+		iRv = -1 ;	//	現在のフォーカスセルでは、実行できません
 	*/
 	virtual int OnEditCopy_Process( BOOL bQueryEnable );
-	/**	[�ҏW]-[�\��t��]	
+	/**	[編集]-[貼り付け]	
 	@return
-		-	-1 ;	//	���݂̃t�H�[�J�X�Z���ł́A���s�ł��܂���
-		-	-2 ;	//	�N���b�v�{�[�h�Ƀf�[�^������܂���B
+		-	-1 ;	//	現在のフォーカスセルでは、実行できません
+		-	-2 ;	//	クリップボードにデータがありません。
 	*/
 	virtual int OnEditPaste_Process( BOOL bQueryEnable );
-	/**	[�ҏW]-[����]
+	/**	[編集]-[消去]
 	@return
-		-	-1 ;	//	���݂̃t�H�[�J�X�Z���ł́A���s�ł��܂���
+		-	-1 ;	//	現在のフォーカスセルでは、実行できません
 	*/
 	virtual int OnEditClear_Process( BOOL bQueryEnable );
-	/**	[�ҏW]-[�����̂ݓ\��t��]
+	/**	[編集]-[時刻のみ貼り付け]
 	@return
-		-	-1 ;	//	���݂̃t�H�[�J�X�Z���ł́A���s�ł��܂���
-		-	-2 ;	//	�N���b�v�{�[�h�Ƀf�[�^������܂���B
+		-	-1 ;	//	現在のフォーカスセルでは、実行できません
+		-	-2 ;	//	クリップボードにデータがありません。
 	*/
 	virtual int OnEditPasteEkiJikoku_Process( BOOL bQueryEnable );
-	/**	[�ҏW]-[���ׂđI��]	
-		��ԑI�����[�h(CWjkState_Ressyasentaku ) 
-		�ɈϏ����܂��B
+	/**	[編集]-[すべて選択]	
+		列車選択モード(CWjkState_Ressyasentaku ) 
+		に委譲します。
 	*/
 	virtual int OnEditSelectAll_Process( BOOL bQueryEnable );
 	// --------------------------------
-	/** [�����\]-[��Ԃ̃v���p�e�B] */
+	/** [時刻表]-[列車のプロパティ] */
 	virtual int OnJikokuhyouRessyaProp_Process( BOOL bQueryEnable );
-	/** [�����\]-[��Ԃ�}��] 
-		��s��}������
+	/** [時刻表]-[列車を挿入] 
+		空行を挿入する
 	@return
-		-	-1 ;	//	X��ԍ����s���ł��B
+		-	-1 ;	//	X列番号が不正です。
 	*/
 	virtual int OnJikokuhyouRessyaInsert_Process( BOOL bQueryEnable );
-	/** [�����\]-[�t�H�[�J�X���ړ�] 
+	/** [時刻表]-[フォーカス下移動] 
 	 @param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��E�I������Ă��邩��@n
-					���肾�����s���܂��B�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͂��łɑI������Ă��܂�
-		-	0 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͑I������Ă��܂���
+		- TRUE ;	コマンドが現在実行できるか否か・選択されているかの@n
+					判定だけを行います。エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	 @return
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	(bQueryEnable=TRUEの場合)この項目はすでに選択されています
+		-	0 ;	//	(bQueryEnable=TRUEの場合)この項目は選択されていません
 	*/
 	virtual int OnJikokuhyouFocusMoveDown_Process( BOOL bQueryEnable );
-	/** [�����\]-[�t�H�[�J�X�E�ړ�] 
+	/** [時刻表]-[フォーカス右移動] 
 	 @param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��E�I������Ă��邩��@n
-					���肾�����s���܂��B�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͂��łɑI������Ă��܂�
-		-	0 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͑I������Ă��܂���
+		- TRUE ;	コマンドが現在実行できるか否か・選択されているかの@n
+					判定だけを行います。エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	 @return
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	(bQueryEnable=TRUEの場合)この項目はすでに選択されています
+		-	0 ;	//	(bQueryEnable=TRUEの場合)この項目は選択されていません
 	*/
 	virtual int OnJikokuhyouFocusMoveRight_Process( BOOL bQueryEnable );
-	/** [�����\]-[�ŏ����v���ԗ�ԂɈړ�] 
-	 	�t�H�[�J�X�Z�����A���݃t�H�[�J�X�Z���̂���w�Ǝ��̉w�̊Ԃ�
-	 	����ŏ����v�b���̗�ԂɈړ����܂��B
+	/** [時刻表]-[最小所要時間列車に移動] 
+	 	フォーカスセルを、現在フォーカスセルのある駅と次の駅の間を
+	 	走る最小所要秒数の列車に移動します。
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1  ;	�Z���̏ꏊ���s��
-		-	-2 ;	�t�H�[�J�X�Z�����I���w�ɂ���ꍇ�́A@n
-					���̋@�\�͎��s�ł��܂���B
-		-	-21 ;	�w�ԍŏ����v�b����Ԃ�����ł��܂���B@n
-					������%s�w��%s�w�̗����ɐݒ肳�ꂽ��Ԃ��P�{������܂���B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1  ;	セルの場所が不正
+		-	-2 ;	フォーカスセルが終着駅にある場合は、@n
+					この機能は実行できません。
+		-	-21 ;	駅間最小所要秒数列車が決定できません。@n
+					時刻が%s駅と%s駅の両方に設定された列車が１本もありません。
 	*/
 	virtual int OnJikokuhyouEKikanSaisyouSec_Process( BOOL bQueryEnable );
 
-	/** [�����\]-[���בւ�] 
-		���̊֐��́AOn...() �R�}���h�n���h���EOnUpdate...() �R�}���h�n���h����
-		���������s���܂��B
+	/** [時刻表]-[並べ替え] 
+		この関数は、On...() コマンドハンドラ・OnUpdate...() コマンドハンドラの
+		実処理を行います。
 
-		�t�H�[�J�X�̂���w�����ŗ�Ԃ��\�[�g���܂��B
-		�t�H�[�J�X����Ԏ�ʁE��Ԗ��E�����ɂ���ꍇ�́A
-		��Ԏ�ʁE��Ԗ��E�����Ń\�[�g���܂��B
+		フォーカスのある駅時刻で列車をソートします。
+		フォーカスが列車種別・列車名・号数にある場合は、
+		列車種別・列車名・号数でソートします。
 	*/
 	virtual int OnJikokuhyouSort_Process( BOOL bQueryEnable );
 
-	/** [�����\]-[��Ԕԍ��ň�{��] 
-		���̊֐��́AOn...() �R�}���h�n���h���EOnUpdate...() �R�}���h�n���h����
-		���������s���܂��B
+	/** [時刻表]-[列車番号で一本化] 
+		この関数は、On...() コマンドハンドラ・OnUpdate...() コマンドハンドラの
+		実処理を行います。
 
-		�S��Ԃ��Ԕԍ��ň�{�����܂��B
+		全列車を列車番号で一本化します。
 	*/
 	virtual int OnJikokuhyouUnify_Process( BOOL bQueryEnable );
 
 	// --------------------------------
-	/** [�w����]-[�w�����̃v���p�e�B] 
+	/** [駅時刻]-[駅時刻のプロパティ] 
 	 @return
-	 	-	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
-	 	-	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A@n
-	 				�ύX�͔������܂���ł����B
-	 	-	-1 ;	//	X��ԍ����s���ł��B
-	 	-	-2 ;	//	Y��ԍ����s���ł��B
+	 	-	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+	 	-	0 ;	//	ダイアログがキャンセルで終了したため、@n
+	 				変更は発生しませんでした。
+	 	-	-1 ;	//	X列番号が不正です。
+	 	-	-2 ;	//	Y列番号が不正です。
 	*/
 	virtual int OnJikokuhyouEkijikokuProp_Process( BOOL bQueryEnable );
 
-	/** [�w����]-[��������] 
-	 	�t�H�[�J�X�Z���̈ʒu�́w����Order�x�� �wNull�����x�ɕύX���܂��B
-		���̌��ʁA�����������������wNULL�����x�ɂȂ����ꍇ�́A
-		�w�����w�^�s�Ȃ��x�ɂ��܂��B
+	/** [駅時刻]-[時刻消去] 
+	 	フォーカスセルの位置の『時刻Order』を 『Null時刻』に変更します。
+		この結果、着時刻も発時刻も『NULL時刻』になった場合は、
+		駅扱を『運行なし』にします。
 
 
-	 	�h�L�������g�ɔ��f���A
-	 	UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
+	 	ドキュメントに反映し、
+	 	UpdateAllSubDocview() で、ドキュメントの反映を行います。
 	 
-		�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
+		フォーカスを次の位置に移動します。
 	@return
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+		-	-11  ;	//	セルの場所が不正
+		-	-1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 	*/
 	virtual int OnJikokuhyouJikokuSakujo_Process( BOOL bQueryEnable );
 
-	/** [�w����]-[�ʉ�] 
-		�t�H�[�J�X�Z���̈ʒu�́w�w�����x���w�ʉ߁x�ɕύX���܂��B
-		�w�����͒������E�������Ƃ�NULL�ɂ��܂��B
+	/** [駅時刻]-[通過] 
+		フォーカスセルの位置の『駅時刻』を『通過』に変更します。
+		駅時刻は着時刻・発時刻ともNULLにします。
 
-		�h�L�������g�ɔ��f���A
-		UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
+		ドキュメントに反映し、
+		UpdateAllSubDocview() で、ドキュメントの反映を行います。
 
-		�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
+		フォーカスを次の位置に移動します。
 
 	@return
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+		-	-11  ;	//	セルの場所が不正
+		-	-1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 	*/
 	virtual int OnJikokuhyouTsuuka_Process( BOOL bQueryEnable );
 	
-	/** [�w����]-[�ʉ�-���] 
-		�t�H�[�J�X�Z���̈ʒu�́w�w�����x���w��ԁx�w�^�s�Ȃ��x
-		�w�o�R�Ȃ��x�Ȃ�A
-		�w�ʉ߁x�ɕύX���܂��B�w�����͕ύX���܂���B
+	/** [駅時刻]-[通過-停車] 
+		フォーカスセルの位置の『駅時刻』が『停車』『運行なし』
+		『経由なし』なら、
+		『通過』に変更します。駅時刻は変更しません。
 
-		�t�H�[�J�X�Z���̈ʒu���w�ʉ߁x�Ȃ�A
-		�w��ԁx�ɕύX���܂��B�w�����͕ύX���܂���B
+		フォーカスセルの位置が『通過』なら、
+		『停車』に変更します。駅時刻は変更しません。
 
-		�h�L�������g�ɔ��f���A
-		UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
+		ドキュメントに反映し、
+		UpdateAllSubDocview() で、ドキュメントの反映を行います。
 
-		�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
+		フォーカスを次の位置に移動します。
 	@return
-		-	-11  //	�Z���̏ꏊ���s��
-		-	-1 	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+		-	-11  //	セルの場所が不正
+		-	-1 	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 	*/
 	virtual int  OnJikokuhyouTsuukateisya_Process( BOOL bQueryEnable );
 
-	/** [�w����]-[�o�R�Ȃ�] 
-		�t�H�[�J�X�Z���̈ʒu�́w�w�����x���w�o�R�Ȃ��x�ɕύX���܂��B
+	/** [駅時刻]-[経由なし] 
+		フォーカスセルの位置の『駅時刻』を『経由なし』に変更します。
 
-		�h�L�������g�ɔ��f���A
-		UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
-		�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
+		ドキュメントに反映し、
+		UpdateAllSubDocview() で、ドキュメントの反映を行います。
+		フォーカスを次の位置に移動します。
 	@return
-		-	-11  //	�Z���̏ꏊ���s��
-		-	-1 	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+		-	-11  //	セルの場所が不正
+		-	-1 	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 	*/
 	virtual int OnJikokuhyouKeiyunasi_Process( BOOL bQueryEnable );
 	// --------------------------------
-	/** [�w����]-[���w�n��] 
+	/** [駅時刻]-[当駅始発] 
 	@return 
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+		成功したら0以上、エラーなら負の数です。
+		-	-11  ;	//	セルの場所が不正
+		-	-1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 	*/
 	virtual int OnJikokuhyouSihatsu_Process( BOOL bQueryEnable );
-	/** [�w����]-[���w�~��] 
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+	/** [駅時刻]-[当駅止り] 
+		-	-11  ;	//	セルの場所が不正
+		-	-1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 	*/
 	virtual int OnJikokuhyouSyuuchaku_Process( BOOL bQueryEnable );
 
-	/** [�w����]-[���ʉ�] 
-		�r���w�~�܂�̗�ԂƁA���̓r���w�n���̗�Ԃ𒼒ʉ����܂��B
-		�h�L�������g�ɔ��f���A
-		UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
-		�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
+	/** [駅時刻]-[直通化] 
+		途中駅止まりの列車と、その途中駅始発の列車を直通化します。
+		ドキュメントに反映し、
+		UpdateAllSubDocview() で、ドキュメントの反映を行います。
+		フォーカスを次の位置に移動します。
 
 	@param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-					�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	@return 
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-12 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
-		-	-13;	//	�Z���̈ʒu���A�I���w����
-		-	-14 ;	//	�Ή�����n����Ԃ�������܂���B
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+					エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	@return 
+		成功したら0以上、エラーなら負の数です。
+		-	-11  ;	//	セルの場所が不正
+		-	-12 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
+		-	-13;	//	セルの位置が、終着駅より上
+		-	-14 ;	//	対応する始発列車が見つかりません。
 					
-	�m�P�n�t�H�[�J�X���A��Ԃ̏I���w������̉w�ɂ���ꍇ�́A
-		���̋@�\�͎g�p�ł��܂���B
+	［１］フォーカスが、列車の終着駅よりも上の駅にある場合は、
+		この機能は使用できません。
 
-	�m�Q�n���ʉ��̑ΏۂɂȂ�r���w�n�����
-	  ���ʉ��̑ΏۂƂȂ�r���w�n����Ԃ́A�ȉ��̏����𖞂�������Ԃł��B
+	［２］直通化の対象になる途中駅始発列車
+	  直通化の対象となる途中駅始発列車は、以下の条件を満たした列車です。
 
-	  �E�t�H�[�J�X�̂�����(�r���w�~�܂�̗��)�Ɠ�����Ԏ��
-	  �E�t�H�[�J�X�̂���w���n���w�Ƃ�����
-	  �E�n���w�̔��������A�I����Ԃ̒���������12���Ԉȓ�
-	  �E�����\�r���[��ŁA�t�H�[�J�X�̂����Ԃ̉E���ɂ�����
+	  ・フォーカスのある列車(途中駅止まりの列車)と同じ列車種別
+	  ・フォーカスのある駅を始発駅とする列車
+	  ・始発駅の発時刻が、終着列車の着時刻から12時間以内
+	  ・時刻表ビュー上で、フォーカスのある列車の右側にある列車
 
-	  �ΏۂƂȂ��Ԃ���������ꍇ�́A���̒��ł����Ƃ������ɂ����Ԃ�
-	  ���ʉ��̑ΏۂƂ��܂��B
+	  対象となる列車が複数ある場合は、その中でもっとも左側にある列車を
+	  直通化の対象とします。
 
-	�m�R�n�@���ʉ����s�������ʍ쐬�����V������Ԃ́A���ʉ������w��
-	�w�����́A�ȉ��̂悤�ɂȂ�܂��B
+	［３］　直通化を行った結果作成される新しい列車の、直通化した駅の
+	駅時刻は、以下のようになります。
 
-	- �w���F�r���w�~�܂�̗�ԂƓ����B
-	- ������
-		- �r���w�~�܂�̗�Ԃɒ��������w�肳��Ă����ꍇ�F
-			���̒�����
-		- �r���w�~�܂�̗�Ԃɒ��������Ȃ��A���������w�肳��Ă����ꍇ�F
-			�r���w�~�܂��Ԃ̔�����
-		- �r���w�~�܂�̗�Ԃɒ����������������w�肳��Ă��Ȃ��ꍇ�F
-			�������͂Ȃ�
-	- ������
-		- �r���w�n����Ԃɔ��������w�肳��Ă����ꍇ�F
-			���̔������𒼒ʉ�������Ԃ̔������Ƃ��܂��B
-		- �r���w�n����Ԃɔ��������Ȃ��A���������w�肳��Ă����ꍇ�F
-			�r���w�n����Ԃ̒��������A�V������Ԃ̔������Ƃ��܂��B
-		- �r���w�n����Ԃɒ����������������w�肳��Ă��Ȃ��ꍇ�F
-			�������͂Ȃ�
+	- 駅扱：途中駅止まりの列車と同じ。
+	- 着時刻
+		- 途中駅止まりの列車に着時刻が指定されていた場合：
+			その着時刻
+		- 途中駅止まりの列車に着時刻がなく、発時刻が指定されていた場合：
+			途中駅止まり列車の発時刻
+		- 途中駅止まりの列車に着時刻も発時刻も指定されていない場合：
+			着時刻はなし
+	- 発時刻
+		- 途中駅始発列車に発時刻が指定されていた場合：
+			その発時刻を直通化した列車の発時刻とします。
+		- 途中駅始発列車に発時刻がなく、着時刻が指定されていた場合：
+			途中駅始発列車の着時刻を、新しい列車の発時刻とします。
+		- 途中駅始発列車に着時刻も発時刻も指定されていない場合：
+			発時刻はなし
 	*/
 	virtual int OnJikokuhyouDirect_Process( BOOL bQueryEnable );
 
-	/** [�w����]-[���f] 
+	/** [駅時刻]-[分断] 
 	@param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-					�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	@return 
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-12 ;	//	�Z���̈ʒu������̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
-		-	-21 ;	//	���̗�Ԃ̎n���w�E�I���w�ł͕��f�͂ł��܂���B
-		-	-22 ;	//	�w�����ɒ����������������w�肳��Ă��Ȃ��w�ł́A���̋@�\�͎g�p�ł��܂���
-		-	-31 ;	//	�w��̉wOrder�ł́A���f�͂ł��܂���
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+					エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	@return 
+		成功したら0以上、エラーなら負の数です。
+		-	-11  ;	//	セルの場所が不正
+		-	-12 ;	//	セルの位置が特定の列車の特定の時刻の場所ではない。
+		-	-21 ;	//	その列車の始発駅・終着駅では分断はできません。
+		-	-22 ;	//	駅時刻に着時刻も発時刻も指定されていない駅では、この機能は使用できません
+		-	-31 ;	//	指定の駅Orderでは、分断はできません
 	*/
 	virtual int OnJikokuhyouUndirect_Process(BOOL bQueryEnable );
 
 	// --------------------------------
-	/** [�w����]-[�A������] 
+	/** [駅時刻]-[連続入力] 
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͂��łɑI������Ă��܂�
-		-	0 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͑I������Ă��܂���
-		-	-1 ;	//	���݁A���̃R�}���h�͑I���ł��܂���
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	(bQueryEnable=TRUEの場合)この項目はすでに選択されています
+		-	0 ;	//	(bQueryEnable=TRUEの場合)この項目は選択されていません
+		-	-1 ;	//	現在、このコマンドは選択できません
 	*/
 	virtual int OnJikokuhyouRenzoku_Process( BOOL bQueryEnable );
 	// --------------------------------
-	/** [�w����]-[�w������}��] 
+	/** [駅時刻]-[駅時刻を挿入] 
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
-		-	-2 ;	//	��ԉ��̉w�ł́A���̑���͂ł��܂���B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-11  ;	//	セルの場所が不正
+		-	-1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
+		-	-2 ;	//	一番下の駅では、この操作はできません。
 	*/
 	virtual int OnJikokuhyouEkijikokuInsert_Process( BOOL bQueryEnable );
-	/** [�w����]-[�w�������폜] 
+	/** [駅時刻]-[駅時刻を削除] 
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
-		-	-2 ;	//	��ԉ��̉w�ł́A���̑���͂ł��܂���B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-11  ;	//	セルの場所が不正
+		-	-1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
+		-	-2 ;	//	一番下の駅では、この操作はできません。
 	*/
 	virtual int OnJikokuhyouEkijikokuErase_Process( BOOL bQueryEnable );
 	/** 
-		[�w����]-[�w�����ύX] 
+		[駅時刻]-[駅時刻変更] 
 
-		�w�w�����ύX�x�_�C�A���O��\�����A���͓��e��
-		m_EkijikokuModifyOperation �ɕۑ����܂��B
-		�܂��A
-		m_EkijikokuModifyOperation �̓��e�ɂ��������āA
-		�t�H�[�J�X�ʒu�̉w������ύX���܂��B
+		『駅時刻変更』ダイアログを表示し、入力内容を
+		m_EkijikokuModifyOperation に保存します。
+		また、
+		m_EkijikokuModifyOperation の内容にしたがって、
+		フォーカス位置の駅時刻を変更します。
 	@param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-				�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-				�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂��B
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+				エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+				エラーが発生した場合は、エラーメッセージボックスを表示します。
 	@return
-		-	0 :	����
-		-	-1 :	���݂͎��s�ł��܂���B(�G���[���b�Z�[�W�͕\�����܂���)
+		-	0 :	成功
+		-	-1 :	現在は実行できません。(エラーメッセージは表示しません)
 	*/
 	virtual int OnJikokuhyouModifyEkijikokuCmd_Process( BOOL bQueryEnable );
 
 	/**
-		[�w����]-[�w�����ύX�̍Ď��s]
+		[駅時刻]-[駅時刻変更の再実行]
 
-		�O��́w�w�����ύX�x�_�C�A���O�Őݒ肳�ꂽ
-		m_EkijikokuModifyOperation �̓��e�ɂ��������āA
-		�t�H�[�J�X�ʒu�̉w������ύX���܂��B
+		前回の『駅時刻変更』ダイアログで設定された
+		m_EkijikokuModifyOperation の内容にしたがって、
+		フォーカス位置の駅時刻を変更します。
 	@param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-				�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-				�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂��B
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+				エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+				エラーが発生した場合は、エラーメッセージボックスを表示します。
 	@return
-		-	0 :	����
-		-	-1 :	���݂͎��s�ł��܂���B(�G���[���b�Z�[�W�͕\�����܂���)
+		-	0 :	成功
+		-	-1 :	現在は実行できません。(エラーメッセージは表示しません)
 	*/
 	virtual int OnJikokuhyouModifyEkijikokuCmdRepeat_Process( 
 		BOOL bQueryEnable );
 	// --------------------------------
-	/** [�w����]-[�A��1���C��]-[-1��������] 
+	/** [駅時刻]-[連続1分修正]-[-1分し次へ] 
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+		成功したら 0 以上、エラーなら負の数です。
+		-	-11  ;	//	セルの場所が不正
+		-	-1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 	*/
 	virtual int OnJikokuhyouEkijikokuDec_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[-1��] 
+	/** [駅時刻]-[連続1分修正]-[-1分] 
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11  ;	//	�Z���̏ꏊ���s��
-		-	-1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+		成功したら 0 以上、エラーなら負の数です。
+		-	-11  ;	//	セルの場所が不正
+		-	-1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 	*/
 	virtual int OnJikokuhyouEkijikokuDecNoMove_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[�t�H�[�J�X������] 
+	/** [駅時刻]-[連続1分修正]-[フォーカスを次へ] 
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11  ;	//	�Z���̏ꏊ���s��
+		成功したら 0 以上、エラーなら負の数です。
+		-	-11  ;	//	セルの場所が不正
 	*/
 	virtual int OnJikokuhyouEkijikokuNext_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[�t�H�[�J�X��O��] 
+	/** [駅時刻]-[連続1分修正]-[フォーカスを前へ] 
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11  ;	//	�Z���̏ꏊ���s��
+		成功したら 0 以上、エラーなら負の数です。
+		-	-11  ;	//	セルの場所が不正
 	*/
 	virtual int OnJikokuhyouEkijikokuPrev_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[+1��������] 
+	/** [駅時刻]-[連続1分修正]-[+1分し次へ] 
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-			iRv = -11  ;	//	�Z���̏ꏊ���s��
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+		成功したら 0 以上、エラーなら負の数です。
+			iRv = -11  ;	//	セルの場所が不正
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 	*/
 	virtual int OnJikokuhyouEkijikokuInc_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[+1��] 
+	/** [駅時刻]-[連続1分修正]-[+1分] 
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-			iRv = -11  ;	//	�Z���̏ꏊ���s��
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+		成功したら 0 以上、エラーなら負の数です。
+			iRv = -11  ;	//	セルの場所が不正
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 	*/
 	virtual int OnJikokuhyouEkijikokuIncNoMove_Process( BOOL bQueryEnable );
 	// --------------------------------
@@ -696,35 +696,35 @@ protected:
 	// ********************************
 	///@{
 	/**
-	 	Shift �L�[��������Ă���΁A�J�����g��Ԃ��w��ԑI�����[�h�x��
-	 	�J�ڂ����܂��B
+	 	Shift キーが押されていれば、カレント状態を『列車選択モード』に
+	 	遷移させます。
 	 	
-	 	Shift �L�[��������Ă��Ȃ��ꍇ�́A
-	 	�w��ԑI�����[�h�x�� OnSetFocusCell() �ɈϏ����܂�
+	 	Shift キーが押されていない場合は、
+	 	『列車選択モード』の OnSetFocusCell() に委譲します
 	 */
 	virtual void OnSetFocusCell( CDcdGridCell* pCDcdGridCell ) ;
 
 	/**
-	  this �́AWndDcdGrid3::CSelectCell::m_bIsSelected ��
-	  �ω������Ƃ��ɁA���̉��z�֐����Ăяo���܂��B
-	  �N���X���[�U�[�́A���̉��z�֐����I�[�o���C�h���āA�K�v�ȏ�����
-	�����ł��܂��B
+	  this は、WndDcdGrid3::CSelectCell::m_bIsSelected が
+	  変化したときに、この仮想関数を呼び出します。
+	  クラスユーザーは、この仮想関数をオーバライドして、必要な処理を
+	実装できます。
 	  
-	  this �́A�N���X���[�U�[�� 
-	CWndDcdGrid::CSelect::setColumnNumberSelect() ��
-	�l��ݒ肵���Ƃ��̂ق��A
-	�L�[�{�[�h�őI���Z����ύX�����Ƃ��ɂ�
-	���̉��z�֐����Ăяo���܂��B
+	  this は、クラスユーザーが 
+	CWndDcdGrid::CSelect::setColumnNumberSelect() で
+	値を設定したときのほか、
+	キーボードで選択セルを変更したときにも
+	この仮想関数を呼び出します。
 	
-	[�I�[�o���C�h]
-	  �I���Ԑ���0�ȏ�ɂȂ�����I�����[�h�ɑJ�ڂ��܂��B
+	[オーバライド]
+	  選択列車数が0以上になったら選択モードに遷移します。
 	
 	@param iXColumnNumber [in]
-		X��ԍ����w�肵�܂��B
+		X列番号を指定します。
 	@param iYColumnNumber [in]
-		X��ԍ����w�肵�܂��B
+		X列番号を指定します。
 	@param bIsSelected [in]
-		�V�����I����ԁB
+		新しい選択状態。
 	 */
 	virtual void OnChangeSelectCell( 
 		int iXColumnNumber , int iYColumnNumber , bool bIsSelected ) ;

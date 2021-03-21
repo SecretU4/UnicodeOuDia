@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -80,31 +80,31 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  * @brief
- * �y�T�v�z
- *   STL�� std::list �R���e�i���܂���R���e�i�N���X�ł��B
- *   IfCont �C���^�[�t�F�[�X����������񋟂��܂��B
+ * 【概要】
+ *   STLの std::list コンテナを包含するコンテナクラスです。
+ *   IfCont インターフェースを介した操作を提供します。
  * 
- *	�R���e�i�̗v�f�̑���́A IfValueCont �C���^�[�t�F�[�X���\�b�h��
- *	�g�����Ƃɂ������ł��܂��B
- *	�܂��A ��܂��Ă��� std::list �𒼐ڑ��삷�邱�Ƃ��ł��܂��B
- *	�igetAdaptee() ���\�b�h���g���܂��j�B
+ *	コンテナの要素の操作は、 IfValueCont インターフェースメソッドを
+ *	使うことにより実現できます。
+ *	また、 包含している std::list を直接操作することもできます。
+ *	（getAdaptee() メソッドを使います）。
  * 
- * @see �����o�֐��̐����́A CaCont_list ���������������B
+ * @see メンバ関数の説明は、 CaCont_list をご覧ください。
  *
- *   ���̃N���X�ł́A�^�[�Q�b�g�I�u�W�F�N�g�ł��郊�X�g�R���e�i����
- * �e�v�f�ɑ΂���A�����q�̔z�������I�� ( m_contIte �� ) �ێ����܂��B
+ *   このクラスでは、ターゲットオブジェクトであるリストコンテナ内の
+ * 各要素に対する、反復子の配列を内部的に ( m_contIte に ) 保持します。
  * 
  * <H4>
- *	�y�R���e�i���̃f�[�^�̃C���X�^���X�ɂ��āz
+ *	【コンテナ内のデータのインスタンスについて】
  * </H4>
- *	 �R���e�i�̃T�C�Y��ύX���郁�\�b�h���Ăяo�����ꍇ�ł��A
- *	�R���e�i���̃C���X�^���X�̍Ċ��蓖�Ă͋N����܂���B
- *   getp() �Ŏ擾�����|�C���^�́A�R���e�i���炻�̗v�f���폜����܂�
- *	�L���ł��B
+ *	 コンテナのサイズを変更するメソッドを呼び出した場合でも、
+ *	コンテナ内のインスタンスの再割り当ては起こりません。
+ *   getp() で取得したポインタは、コンテナからその要素を削除するまで
+ *	有効です。
  *
  *
  * @param ElementType
- *	�i�[����f�[�^�̌^���w�肵�Ă��������B
+ *	格納するデータの型を指定してください。
  */
 template< class ElementType >
 class CCont_list : public CaCont_list< std::list< ElementType > >

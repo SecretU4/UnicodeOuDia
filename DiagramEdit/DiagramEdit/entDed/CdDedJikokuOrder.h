@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //$Id: CdDedJikokuOrder.h 373 2016-08-20 21:59:57Z okm $
@@ -79,38 +79,38 @@ namespace entDed{
 
 /**
 @brief
-    CdDedJikokuOrder �́A�w�����̗v�f����肷��l�ł��B
+    CdDedJikokuOrder は、駅時刻の要素を特定する値です。
 
-����́A�����\�̊e��ɕ\�����ׂ����e�̎�ނ������l�ł�����܂��B
-�ȉ��̑�������Ȃ�܂��B
+これは、時刻表の各列に表示すべき内容の種類を示す値でもあります。
+以下の属性からなります。
 
- - �wOrder
- - �\�����e{���E��}
+ - 駅Order
+ - 表示内容{着・発}
 
-���̃N���X�́ANULL��Ԃ������Ƃ��ł��܂��B
+このクラスは、NULL状態を持つことができます。
 */
 class CdDedJikokuOrder
 {
 public:
-	/** �w�����̗v�f��\���񋓂ł��B */
+	/** 駅時刻の要素を表す列挙です。 */
 	enum EEkiJikokuItem
 	{
-		EkiJikokuItem_Chaku = 0 ,	///<������
-		EkiJikokuItem_Hatsu = 1 ,	///<������
+		EkiJikokuItem_Chaku = 0 ,	///<着時刻
+		EkiJikokuItem_Hatsu = 1 ,	///<発時刻
 	};
 private:
 	/**
-		����Order�B
-		���̒l�����̐��̏ꍇ�́ANULL��ԂƂȂ�܂��B
+		時刻Order。
+		この値が負の数の場合は、NULL状態となります。
 	*/
 	int m_iEkiOrder ;
 	/**
-		�w�����̗v�f
+		駅時刻の要素
 	*/
 	EEkiJikokuItem m_eEkiJikokuItem  ;
 public:
 	/**
-		NULL ��Ԃŏ��������܂��B
+		NULL 状態で初期化します。
 	*/
 	CdDedJikokuOrder() 
 		: m_iEkiOrder( -1 )
@@ -118,9 +118,9 @@ public:
 
 	/** 
 	@param iEkiOrder [in]
-		�wOrder 
+		駅Order 
 	@param eEkiJikokuItem [in]
-		�w�����̗v�f
+		駅時刻の要素
 	*/
 	CdDedJikokuOrder( int iEkiOrder , EEkiJikokuItem eEkiJikokuItem ) 
 		: m_iEkiOrder( iEkiOrder ) 
@@ -140,9 +140,9 @@ public:
 
 	/** 
 	@param iEkiOrder [in]
-		�wOrder 
+		駅Order 
 	@param eEkiJikokuItem [in]
-		�w�����̗v�f��\����
+		駅時刻の要素を表す列挙
 	*/
 	void setEkiOrder( int iEkiOrder , EEkiJikokuItem eEkiJikokuItem )
 	{
@@ -151,13 +151,13 @@ public:
 	};
 
 	/**
-		EEkiJikokuItem �̒��E���𔽓]���܂��B
+		EEkiJikokuItem の着・発を反転します。
 	@param eEkiJikokuItem [in]
-		���]������ EkiJikokuItem ���w�肵�Ă��������B
+		反転したい EkiJikokuItem を指定してください。
 	@return
-		- eEkiJikokuItem �� EkiJikokuItem_Chaku �Ȃ�AEkiJikokuItem_Hatsu�B
-		- eEkiJikokuItem �� EkiJikokuItem_Hatsu �Ȃ�AEkiJikokuItem_Chaku�B
-		- ����ȊO�̏ꍇ�́AeEkiJikokuItem �����̂܂ܕԂ��܂��B
+		- eEkiJikokuItem が EkiJikokuItem_Chaku なら、EkiJikokuItem_Hatsu。
+		- eEkiJikokuItem が EkiJikokuItem_Hatsu なら、EkiJikokuItem_Chaku。
+		- それ以外の場合は、eEkiJikokuItem をそのまま返します。
 	*/
 	static EEkiJikokuItem EkiJikokuItemInvert( 
 		EEkiJikokuItem eEkiJikokuItem )
@@ -175,11 +175,11 @@ public:
 	}
 
 	/**
-		m_eEkiJikokuItem �̒��E���𔽓]���܂��B
+		m_eEkiJikokuItem の着・発を反転します。
 
-		- m_eEkiJikokuItem �� EkiJikokuItem_Chaku �Ȃ�AEkiJikokuItem_Hatsu�B
-		- m_eEkiJikokuItem �� EkiJikokuItem_Hatsu �Ȃ�AEkiJikokuItem_Chaku�B
-		- ����ȊO�̏ꍇ�́AeEkiJikokuItem �����̂܂ܕԂ��܂��B
+		- m_eEkiJikokuItem が EkiJikokuItem_Chaku なら、EkiJikokuItem_Hatsu。
+		- m_eEkiJikokuItem が EkiJikokuItem_Hatsu なら、EkiJikokuItem_Chaku。
+		- それ以外の場合は、eEkiJikokuItem をそのまま返します。
 	*/
 	void EkiJikokuItemInvert( void )
 	{

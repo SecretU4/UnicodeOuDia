@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -89,7 +89,7 @@ namespace WndDcdGrid3{
 //	WndDcdGrid3::CFocus
 // ****************************************************************
 	// --------------------------------
-	//@name	CWndDcdGrid-�t�H�[�J�X
+	//@name	CWndDcdGrid-フォーカス
 	// --------------------------------
 void CFocus::CreateDcDrawFocusCell() 
 {
@@ -104,7 +104,7 @@ void CFocus::DeleteDcDrawFocusCell()
 
 
 // --------------------------------
-//@name CWndDcdGrid ����̈Ϗ�
+//@name CWndDcdGrid からの委譲
 // --------------------------------
 bool CFocus::update_adjustProp() 
 {
@@ -120,11 +120,11 @@ bool CFocus::update_adjustProp()
 	int iYFixafterColumnNumber = m_pCDcdGrid->getYFixafterColumnNumber() ;
 
 	// --------------------------------
-	//	�y1.�����̕␳�z
+	//	【1.属性の補正】
 	// --------------------------------
 
-	//  �P�DFocusCell ���팋���Z���ɂȂ����ꍇ�E�E�EFocusCell��
-	//	�����Z���Ɉړ����܂��B
+	//  １．FocusCell が被結合セルになった場合・・・FocusCellは
+	//	結合セルに移動します。
 	{
 		CDcdGridCell*	pCell = m_pCDcdGrid->getCell( 
 			iFocusCellXColumnNumber , iFocusCellYColumnNumber ) ;
@@ -139,15 +139,15 @@ bool CFocus::update_adjustProp()
 	}
 	//LogMsg( "CWndDcdGrid::adjustProp() 0" ) ;
 
-	//	�Q�DFocusCellColumnNumber �� �E�C���h�E�͈̔�
-	//	�iIfDcdTarget::getZone()�̗̈�)�Ɏ��܂��Ă��Ȃ��ꍇ�E�E�E
-	//	[FixafterColumnNumber �ύX]
-	//	FocusCellColumnNumber ���A��ʏ�̈�ԉE���� ColumnNumber �ɂ��܂��B
-	//	[FocusCellColumnNumber �ύX]
-	//	FocusCellColumnNumber ���E�C���h�E�͈̔͂Ɏ��܂�܂ŁA
-	//	FixafterColumnNumber�����Z���܂��B
-	//	���̌��ʂƂȂ� FixafterColumnNumber ���A
-	//	 FixafterColumnNumberMaxForColumn �ƌĂт܂��B
+	//	２．FocusCellColumnNumber が ウインドウの範囲
+	//	（IfDcdTarget::getZone()の領域)に収まっていない場合・・・
+	//	[FixafterColumnNumber 変更]
+	//	FocusCellColumnNumber を、画面上の一番右下の ColumnNumber にします。
+	//	[FocusCellColumnNumber 変更]
+	//	FocusCellColumnNumber がウインドウの範囲に収まるまで、
+	//	FixafterColumnNumberを加算します。
+	//	この結果となる FixafterColumnNumber を、
+	//	 FixafterColumnNumberMaxForColumn と呼びます。
 	{
 		int iColumnNumberMaxInDcdTarget = 
 				m_pCDcdGrid->getXColumnNumberMaxInDcdTarget( &aCDcdTarget ) ;
@@ -166,7 +166,7 @@ bool CFocus::update_adjustProp()
 
 				iXFixafterColumnNumber = iXFixafterColumnNumberMinForColumn ;
 
-				//bRv�̍X�V�́A���̊֐��̖����ōs���܂��B
+				//bRvの更新は、この関数の末尾で行います。
 			}
 			//LogMsg( "CWndDcdGrid::adjustProp() 02" ) ;
 		}
@@ -189,7 +189,7 @@ bool CFocus::update_adjustProp()
 
 				iYFixafterColumnNumber = iYFixafterColumnNumberMinForColumn ;
 
-				//bRv�̍X�V�́A���̊֐��̖����ōs���܂��B
+				//bRvの更新は、この関数の末尾で行います。
 			}
 			//LogMsg( "CWndDcdGrid::adjustProp() 04" ) ;
 		}
@@ -197,12 +197,12 @@ bool CFocus::update_adjustProp()
 	//LogMsg( "CWndDcdGrid::adjustProp() 1" ) ;
 
 
-	//	�R�D FocusCellColumnNumber �� ColumnScrollout �ɂȂ����ꍇ�E�E�E
-	//	[FixafterColumnNumber �ύX]
-	//	FocusCellColumnNumber �� FixafterColumnNumber �Ɠ����ɂ��܂��B
-	//	[FocurCellColumnNumber �ύX]
-	//	�X�N���[���ʒu�𐳋K�����āA�t�H�[�J�X�Z�����\�������悤�ɂ��܂��B
-	//	FixafterColumnNumber���AFocusCell��ColumnNumber�Ɠ����ɂ��܂��B
+	//	３． FocusCellColumnNumber が ColumnScrollout になった場合・・・
+	//	[FixafterColumnNumber 変更]
+	//	FocusCellColumnNumber を FixafterColumnNumber と同じにします。
+	//	[FocurCellColumnNumber 変更]
+	//	スクロール位置を正規化して、フォーカスセルが表示されるようにします。
+	//	FixafterColumnNumberを、FocusCellのColumnNumberと同じにします。
 	{
 		if ( m_pCDcdGrid->getXFixColumnCount() <= iFocusCellXColumnNumber && 
 				iFocusCellXColumnNumber < iXFixafterColumnNumber ){
@@ -211,7 +211,7 @@ bool CFocus::update_adjustProp()
 				iFocusCellXColumnNumber = iXFixafterColumnNumber ;
 			}	else	{
 				iXFixafterColumnNumber = iFocusCellXColumnNumber ;
-				//bRv�̍X�V�́A���̊֐��̖����ōs���܂��B
+				//bRvの更新は、この関数の末尾で行います。
 			}
 		}
 		if ( m_pCDcdGrid->getYFixColumnCount() <= iFocusCellYColumnNumber && 
@@ -221,14 +221,14 @@ bool CFocus::update_adjustProp()
 				iFocusCellYColumnNumber = iYFixafterColumnNumber ;
 			}	else	{
 				iYFixafterColumnNumber =  iFocusCellYColumnNumber ;
-				//bRv�̍X�V�́A���̊֐��̖����ōs���܂��B
+				//bRvの更新は、この関数の末尾で行います。
 			}
 		}
 	}
 	//LogMsg( "CWndDcdGrid::adjustProp() 2" ) ;
 
-	//  �S�DFocusCell ��0�ȏ� ColumnCount�����łȂ��ꍇ�E�E�EFocusCell��
-	//	�����̒l�ɂ��܂��B
+	//  ４．FocusCell が0以上 ColumnCount未満でない場合・・・FocusCellは
+	//	内側の値にします。
 	{
 		if ( iFocusCellXColumnNumber >= m_pCDcdGrid->getXColumnCount() ){
 			iFocusCellXColumnNumber = m_pCDcdGrid->getXColumnCount() - 1 ;
@@ -245,8 +245,8 @@ bool CFocus::update_adjustProp()
 	}
 	//LogMsg( "CWndDcdGrid::adjustProp() 3" ) ;
 
-	//  �T�DFocusCell ���팋���Z���ɂȂ����ꍇ�E�E�EFocusCell��
-	//	�����Z���Ɉړ����܂��B
+	//  ５．FocusCell が被結合セルになった場合・・・FocusCellは
+	//	結合セルに移動します。
 	{
 		CDcdGridCell*	pCell = m_pCDcdGrid->getCell( 
 			iFocusCellXColumnNumber , iFocusCellYColumnNumber ) ;
@@ -262,7 +262,7 @@ bool CFocus::update_adjustProp()
 	//LogMsg( "CWndDcdGrid::adjustProp() =" ) ;
 
 	// ----------------------------------------------------------------
-	//	�y2.�����̕ω���CWndDcdGrid�ɒʒm�z
+	//	【2.属性の変化をCWndDcdGridに通知】
 	// ----------------------------------------------------------------
 	if ( m_iFocusCellXColumnNumber != iFocusCellXColumnNumber || 
 		m_iFocusCellYColumnNumber != iFocusCellYColumnNumber )
@@ -295,13 +295,13 @@ bool CFocus::update_updateScreen()
 	CDcdTargetGetDC	aCDcdTarget( m_pCWndDcdGrid->GetSafeHwnd() ) ;
 	
 	// --------------------------------
-	//	�y2.�����̕ω���CWndDcdGrid�ɒʒm�z
+	//	【2.属性の変化をCWndDcdGridに通知】
 	// --------------------------------
 	if ( m_iFocusCellXColumnNumber_Sid != m_iFocusCellXColumnNumber ||
 			m_iFocusCellYColumnNumber_Sid != m_iFocusCellYColumnNumber )
 	{
 		// --------------------------------
-		//	�C�x���g�����̂��߂̉��z�֐�
+		//	イベント処理のための仮想関数
 		// --------------------------------
 		CDcdGridCell*	pCDcdGridCell = m_pCDcdGrid->getCell( 
 				m_iFocusCellXColumnNumber , m_iFocusCellYColumnNumber ) ;
@@ -311,8 +311,8 @@ bool CFocus::update_updateScreen()
 		}
 	}
 	// ----------------------------------------------------------------
-	//	�t�H�[�J�X�Z���ړ����́A
-	//	�t�H�[�J�X�Z���̋��ʒu�ƐV�ʒu���ĕ`��
+	//	フォーカスセル移動時は、
+	//	フォーカスセルの旧位置と新位置を再描画
 	// ----------------------------------------------------------------
 	if ( m_iFocusCellXColumnNumber_Sid != m_iFocusCellXColumnNumber ||
 			m_iFocusCellYColumnNumber_Sid != m_iFocusCellYColumnNumber )
@@ -335,7 +335,7 @@ bool CFocus::OnPaint( IfDcdTarget* pIfDcdTarget )
 	CXDcdGrid* m_pCDcdGrid = m_pCWndDcdGrid->getCXDcdGrid() ;
 
 	// --------------------------------	
-	//	�t�H�[�J�X�}�[�N
+	//	フォーカスマーク
 	// --------------------------------	
 	if ( m_pIfDcDrawFocusCell != NULL ){
 		if ( m_bIsFocusmarkShowEvery || 
@@ -362,23 +362,23 @@ bool CFocus::OnPaint( IfDcdTarget* pIfDcdTarget )
 void CFocus::OnSize(UINT nType, int cx, int cy)
 {
 	if ( cx == 0 || cy == 0 ){
-		//	���̂Q�̂����̂����ꂩ��0�̏ꍇ�A�����
-		//	Create() �ŃT�C�Y���w�肹���ɃE�C���h�E��
-		//	�����������̂Ǝv���܂��B
-		//	���̏ꍇ�́A���[�U�[�ɂ͉��������Ȃ��킯�ł�����A
-		//	�t�H�[�J�X�Z���̈ʒu�̍œK���Ȃǂ͂����Ȃ�
-		//	�K�v������܂���B
+		//	この２つのうちのいずれかが0の場合、それは
+		//	Create() でサイズを指定せずにウインドウを
+		//	生成したものと思われます。
+		//	この場合は、ユーザーには何も見えないわけですから、
+		//	フォーカスセルの位置の最適化などはおこなう
+		//	必要がありません。
 		//
-		//	�܂��A���̑傫���̂Ƃ��� adjustProp() ��
-		//	�s���ƁA�t�H�[�J�X�ʒu�͖������� (0,0) ��
-		//	�ړ����Ă��܂��܂��B���̂��߁A
-		//	adjustProp() �͂��Ȃ�����
-		//	�悢�ł��傤�B
+		//	また、この大きさのときに adjustProp() を
+		//	行うと、フォーカス位置は無条件に (0,0) に
+		//	移動してしまいます。このため、
+		//	adjustProp() はしない方が
+		//	よいでしょう。
 		return ;
 	}
-	//	���̏ꍇ�̃t�H�[�J�X�ړ��́A
-	//	m_iXFixafterColumnNumber_Sid,m_iYFixafterColumnNumber_Sid�ɂ����
-	//	�ĕ`�悳��邽�߁A�N���A����K�v�͂���܂���B
+	//	この場合のフォーカス移動は、
+	//	m_iXFixafterColumnNumber_Sid,m_iYFixafterColumnNumber_Sidによって
+	//	再描画されるため、クリアする必要はありません。
 	//m_iFocusCellXColumnNumber_Sid = -1 ;
 	//m_iFocusCellYColumnNumber_Sid = -1 ;
 
@@ -401,14 +401,14 @@ void CFocus::OnKillFocus(CWnd* pNewWnd)
 
 void CFocus::InvalidateGrid()
 {
-	//	���̃N���X�̉�ʕ`��͂��ׂ�OnPaint�ōs���܂��B
-	//	InvalidateGrid�ł́A���ʂȏ����͕s�v�ł��B
+	//	このクラスの画面描画はすべてOnPaintで行われます。
+	//	InvalidateGridでは、特別な処理は不要です。
 
 
 }
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CFocus::CFocus( CWndDcdGrid* pCWndDcdGrid ) 
 	: m_pCWndDcdGrid( pCWndDcdGrid )
@@ -428,7 +428,7 @@ CFocus::~CFocus()
 	DeleteDcDrawFocusCell() ;
 }
 	// ********************************
-	//@name �֘A
+	//@name 関連
 	// ********************************
 Ou<IfDcDraw>	CFocus::getIfDcDrawFocusCell() 
 {
@@ -439,7 +439,7 @@ void CFocus::setIfDcDrawFocusCell( Ou<IfDcDraw> value )
 	m_pIfDcDrawFocusCell = value ;
 }
 	// ********************************
-	///@name CWndDcdGrid-�t�H�[�J�X
+	///@name CWndDcdGrid-フォーカス
 	// ********************************
 
 CdDcdPosXy	CFocus::getFocusCellColumnNumber() 
@@ -467,7 +467,7 @@ void CFocus::setFocusCellColumnNumber( const CdDcdPosXy& value )
 	m_iFocusCellXColumnNumber = value.getX() ;
 	m_iFocusCellYColumnNumber = value.getY() ;
 
-	//	�����̕ύX�����ƂɁA�E�C���h�E�\���̍X�V�������s���܂��B
+	//	属性の変更をもとに、ウインドウ表示の更新処理を行います。
 	m_pCWndDcdGrid->update() ;
 }
 
@@ -498,7 +498,7 @@ void CFocus::setFocusCell( CDcdGridCell* value )
 	m_iFocusCellXColumnNumber = iXColumnNumber ;
 	m_iFocusCellYColumnNumber = iYColumnNumber ;
 
-	//	�����̕ύX�����ƂɁA�E�C���h�E�\���̍X�V�������s���܂��B
+	//	属性の変更をもとに、ウインドウ表示の更新処理を行います。
 	m_pCWndDcdGrid->update() ;
 }
 

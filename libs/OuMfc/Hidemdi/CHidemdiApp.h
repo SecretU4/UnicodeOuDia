@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -83,47 +83,47 @@ namespace Hidemdi{
 //	CHidemdiApp
 // ****************************************************************
 /** @brief
-�y�T�v�z
- Hidemdi �A�v���P�[�V�����ɂ�����A�A�v���P�[�V�����N���X�̊�{�N���X�ł��B
+【概要】
+ Hidemdi アプリケーションにおける、アプリケーションクラスの基本クラスです。
 
- ���[�gDoc/View�̃e���v���[�g�������o�Ƃ��ĕێ����܂��B
- Hidemdi �A�v���P�[�V�����ł́A���̃N���X���p�����A�h���N���X��
-InitInstance() �� ���[�gDoc/View�E�T�uDoc/View�̃e���v���[�g�𐶐����Ȃ��Ă�
-�Ȃ�܂���B���[�gDoc/View�̃e���v���[�g�́ARegisterRootDoctmpl�ŁAthis��
-�o�^���Ȃ��Ă͂Ȃ�܂���B
-  ���̃N���X�́A���[�gDoc/View�̃e���v���[�g�E�h�L�������g���擾����
-�T�[�r�X��񋟂��Ă��܂��B
+ ルートDoc/Viewのテンプレートをメンバとして保持します。
+ Hidemdi アプリケーションでは、このクラスを継承し、派生クラスの
+InitInstance() で ルートDoc/View・サブDoc/Viewのテンプレートを生成しなくては
+なりません。ルートDoc/Viewのテンプレートは、RegisterRootDoctmplで、thisに
+登録しなくてはなりません。
+  このクラスは、ルートDoc/Viewのテンプレート・ドキュメントを取得する
+サービスを提供しています。
 
-  �R�}���h���b�Z�[�W�́ARootDoc�ɈϏ�����܂��B
+  コマンドメッセージは、RootDocに委譲されます。
 */
 class CHidemdiApp : public CWinApp
 {
 // ********************************
-//	�]���^
+//	従属型
 // ********************************
  public:
 	typedef CWinApp	super ;
 
 //--------------------------------
-//	�f�[�^�����o
+//	データメンバ
 //--------------------------------
  private:
 	/**
-		�����l��NULL�ł��B
-		InitInstance() �ŁARegisterRootDoctmpl()
-		���g���āA���[�gDoc/View�̃e���v���[�g�ւ�
-		�|�C���^��o�^���܂��B
+		初期値はNULLです。
+		InitInstance() で、RegisterRootDoctmpl()
+		を使って、ルートDoc/Viewのテンプレートへの
+		ポインタを登録します。
 	*/
 	CHidemdiRootDoctmpl*	m_pdoctemplateRoot ;
 
 //--------------------------------
-//	�����֐�
+//	下請関数
 //--------------------------------
  protected:
 	/**
-		InitInstance() ��Doctemplate�𐶐������Ƃ��ɁA
-		���[�gDoctemplate�I�u�W�F�N�g�̃|�C���^���A���̃��\�b�h��
-		�o�^���Ă��������B
+		InitInstance() でDoctemplateを生成したときに、
+		ルートDoctemplateオブジェクトのポインタを、このメソッドで
+		登録してください。
 	*/
 	virtual BOOL RegisterRootDoctmpl
 								( CHidemdiRootDoctmpl* prootdoctemplateEv ) ;
@@ -134,23 +134,23 @@ class CHidemdiApp : public CWinApp
  public:
 	/**
 	@return
-		���[�gDoc/View�̃e���v���[�g�ւ�
-		�|�C���^��Ԃ��܂�
+		ルートDoc/Viewのテンプレートへの
+		ポインタを返します
 	*/
 	virtual CHidemdiRootDoctmpl*	pRootDoctmpl() ;
 
 	/**
 	@return
-		���[�gDoc�ւ̃|�C���^��Ԃ��܂�
+		ルートDocへのポインタを返します
 	*/
 	virtual CHidemdiRootDoc*			pRootDoc() ;
 
 	/**
-		�t�@�C�������AMRU���X�g����폜���܂�
+		ファイル名を、MRUリストから削除します
 	@param lpszEFilename [in]
-		�폜����t�@�C������Ԃ��܂�
+		削除するファイル名を返します
 	@return
-		�폜�����G���g���̐���Ԃ��܂�
+		削除したエントリの数を返します
 	*/
 	virtual int RemoveFromRecentFileList( LPCTSTR lpszEFilename ) ;
 
@@ -160,14 +160,14 @@ class CHidemdiApp : public CWinApp
 public:
 	CHidemdiApp();
 
-// �I�[�o�[���C�h
-	// ClassWizard �͉��z�֐��̃I�[�o�[���C�h�𐶐����܂��B
+// オーバーライド
+	// ClassWizard は仮想関数のオーバーライドを生成します。
 	//{{AFX_VIRTUAL(CHidemdiApp)
 	public:
 	virtual BOOL InitInstance();
 	//}}AFX_VIRTUAL
 	
-// �C���v�������e�[�V����
+// インプリメンテーション
 	//{{AFX_MSG(CHidemdiApp)
 	afx_msg void OnFileNew();
 	afx_msg void OnFileSave();

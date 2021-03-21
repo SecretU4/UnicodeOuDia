@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 // $Id: CconvJikokuhyouCsv.h 261 2016-01-23 03:59:53Z okm $
@@ -77,85 +77,85 @@ using namespace OuLib::Str::CsvDocument;
 
 /**
 @brief
-	�����\�`��CSV�t�@�C���Ƃ̊Ԃ̃f�[�^�ϊ����s���܂��B
+	時刻表形式CSVファイルとの間のデータ変換を行います。
 
-	CentDedRosen�ƁA�����\�`����CSV�t�@�C���𐶐����܂��B
+	CentDedRosenと、時刻表形式のCSVファイルを生成します。
 
-	���΂ɁACentDedRosen�ɁA�����\�`����CSV�t�@�C���̓��e����荞��
-	���Ƃ��ł��܂��B
+	反対に、CentDedRosenに、時刻表形式のCSVファイルの内容を取り込む
+	こともできます。
 */
 class CconvJikokuhyouCsv
 {
 private:
-	/// CSV��̌Œ蕶����u����v
+	/// CSV上の固定文字列「下り」
 	std::string m_nameKudari ;
-	/// CSV��̌Œ蕶����u���v
+	/// CSV上の固定文字列「上り」
 	std::string m_nameNobori ;
-	/// CSV��̌Œ蕶����u��Ԕԍ��v
+	/// CSV上の固定文字列「列車番号」
 	std::string m_nameRessyabangou ;
-	/// CSV��̌Œ蕶����u��Ԏ�ʁv
+	/// CSV上の固定文字列「列車種別」
 	std::string m_nameRessyasyubetsu ;
-	/// CSV��̌Œ蕶����u��Ԗ��v
+	/// CSV上の固定文字列「列車名」
 	std::string m_nameRessyamei ;
-	/// CSV��̌Œ蕶����u�����v
+	/// CSV上の固定文字列「号数」
 	std::string m_nameGousuu ;
-	/// CSV��̌Œ蕶����u���v
+	/// CSV上の固定文字列「号」
 	std::string m_nameGou ;
-	/// CSV��̌Œ蕶����u���l�v
+	/// CSV上の固定文字列「備考」
 	std::string m_nameBikou ;
-	/// CSV��̌Œ蕶����u���v
+	/// CSV上の固定文字列「着」
 	std::string m_nameChaku ;
-	/// CSV��̌Œ蕶����u���v
+	/// CSV上の固定文字列「発」
 	std::string m_nameHatsu ;
-	/// CSV��̌Œ蕶����u���v
+	/// CSV上の固定文字列「レ」
 	std::string m_nameTsuuka ;
-	/// CSV��̌Œ蕶����u||�v
+	/// CSV上の固定文字列「||」
 	std::string m_nameKeiyunasi ;
 protected:
 	// --------------------------------
-	///@name	�w�����Z���̕�����̉���
+	///@name	駅時刻セルの文字列の解釈
 	// --------------------------------
 	///@{
 	/**
-		�w���Ǝ��������ƂɁA������CSV�����ɕ����񉻂��܂��B
+		駅扱と時刻をもとに、時刻をCSV向けに文字列化します。
 		
 	@param eEkiatsukai [in]
-		�w�����w�肵�Ă��������B
+		駅扱を指定してください。
 	@param aCdDedJikoku [in]
-		�������w�肵�Ă��������B
+		時刻を指定してください。
 		
-		eEkiatsukai ��
+		eEkiatsukai が
 		CentDedEkiJikoku::Ekiatsukai_None,
 		CentDedEkiJikoku::Ekiatsukai_Keiyunasi 
-		�ł���ꍇ�́AaCdDedJikoku �͕]������܂���B
+		である場合は、aCdDedJikoku は評価されません。
 		
-		eEkiatsukai��
+		eEkiatsukaiが
 		CentDedEkiJikoku::Ekiatsukai_Teisya, 
-		�̏ꍇ�́A�ʏ�Ɏ������o�͂��܂��B
+		の場合は、通常に時刻を出力します。
 		
-		eEkiatsukai��
+		eEkiatsukaiが
 		CentDedEkiJikoku::Ekiatsukai_Tsuuka, 
-		�ŁAaCdDedJikoku �� Null �łȂ��ꍇ�́A
-		�����̖����� "?" ��t�^���܂��B
+		で、aCdDedJikoku が Null でない場合は、
+		時刻の末尾に "?" を付与します。
 	@return
-		�ϊ����ꂽ�������Ԃ��܂��B
+		変換された文字列を返します。
 	*/
 	std::string encode_Ekijikoku( 
 		CentDedEkiJikoku::EEkiatsukai eEkiatsukai , 
 		const CdDedJikoku& aCdDedJikoku ) ;
 
 	/**
-		CSV�̉w�����Z���̓��e�����߂��܂��B
+		CSVの駅時刻セルの内容を解釈します。
 		
 	@param pEkiatsukai [out]
-		���̊֐��͂����ɁA���ߌ��ʂ̉w�����������݂܂��B
+		この関数はここに、解釈結果の駅扱を書き込みます。
 	@param pCdDedJikoku [out]
-		���̊֐��͂��̃A�h���X�ɁA���ߌ��ʂ̎������������݂܂��B
+		この関数はこのアドレスに、解釈結果の時刻を書き込みます。
 	@param strEkijikoku [in]
-		�w�����̕�������w�肵�Ă��������B
+		駅時刻の文字列を指定してください。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	�����̉��߂Ɏ��s���܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	時刻の解釈に失敗しました。
 	*/
 	int  decode_Ekijikoku( 
 		CentDedEkiJikoku::EEkiatsukai* pEkiatsukai , 
@@ -163,23 +163,23 @@ protected:
 		const std::string& strEkijikoku ) ;
 	///@}
 	// --------------------------------
-	///@name encode() �̉����֐�	
+	///@name encode() の下請関数	
 	// --------------------------------
 	///@{
 
 
 	/**
-		�w�ꗗ�����ƂɁA
-		�����\Index-����Order�ΏƔz��𐶐����܂��B
+		駅一覧をもとに、
+		時刻表Index-時刻Order対照配列を生成します。
 	@param pCentDedEkiCont [in]
-		�w�R���e�i���w�肵�Ă��������B
+		駅コンテナを指定してください。
 	@param eRessyahoukou [in]
-		��ԕ������w�肵�Ă��������B
+		列車方向を指定してください。
 	@param pcontiJikokuOrderOfJikokuhyouIndex [out]
-		���̊֐��͂��̃R���e�i�ɁA
-		�����\Index-����Order�ΏƔz��𐶐����܂��B
+		この関数はこのコンテナに、
+		時刻表Index-時刻Order対照配列を生成します。
 
-		 *pcontiJikokuOrderOfJjikokuhyouIndex[<�����\Index>]=<����Order>
+		 *pcontiJikokuOrderOfJjikokuhyouIndex[<時刻表Index>]=<時刻Order>
 	
 	*/
 	void encode_createContJikokuOrderOfJjikokuhyouIndex( 
@@ -188,38 +188,38 @@ protected:
 		std::deque<CdDedJikokuOrder>*	pcontiJikokuOrderOfJikokuhyouIndex ) ;
 
 	/**
-		CdCsvDocument �ɁANull�łȂ���Ԃ�ǉ����܂��B
+		CdCsvDocument に、Nullでない列車を追加します。
 
-		��Ԃ̐ݒ�ɂ������ẮA
-		�����\Index-����Order�ΏƔz����w�肷��K�v������܂��B
-		���̔z��́A�ȉ��̌`���łȂ��Ă͂Ȃ�܂���B
+		列車の設定にあたっては、
+		時刻表Index-時刻Order対照配列を指定する必要があります。
+		この配列は、以下の形式でなくてはなりません。
 
-		 contiJikokuOrderOfJjikokuhyouIndex[<�����\Index>]=<����Order>
+		 contiJikokuOrderOfJjikokuhyouIndex[<時刻表Index>]=<時刻Order>
 	
-	  CdCsvDocument �́A�ȉ��̏����𖞂����Ă��Ȃ��Ă͂Ȃ�܂���B
+	  CdCsvDocument は、以下の条件を満たしていなくてはなりません。
 		
-		- �ȉ��̗񂪐ݒ肳��Ă���
-			- 1�s�� FileType�s
-			- 2�s�� DiaName�s
-			- ��2.3�� 3�s�� <����,���>
-			- ��2.4��4�s�� 
-		- �񐔂́A contiJikokuOrderOfJikokuhyouIndex.size() + 10 
+		- 以下の列が設定されている
+			- 1行目 FileType行
+			- 2行目 DiaName行
+			- ＜2.3＞ 3行目 <下り,上り>
+			- ＜2.4＞4行目 
+		- 列数は、 contiJikokuOrderOfJikokuhyouIndex.size() + 10 
 
-	  ���̊֐��́A�sIndex4�ɗ�Ԕԍ���ݒ肵�A
-	  �sIndex (9+ contiJikokuOrderOfJikokuhyouIndex.size() ) ��
-	���l��ݒ肵�܂��B
+	  この関数は、行Index4に列車番号を設定し、
+	  行Index (9+ contiJikokuOrderOfJikokuhyouIndex.size() ) に
+	備考を設定します。
 
 	@param pCentDedRessyasyubetsuContGet [in]
-		��Ԏ�ʃR���e�i���w�肵�Ă��������B
+		列車種別コンテナを指定してください。
 	@param contiJikokuOrderOfJikokuhyouIndex [in] 
-		�����\Index-����Order�ΏƔz����w�肵�Ă��������B
+		時刻表Index-時刻Order対照配列を指定してください。
 	@param pCentDedRessya [in]
-		��Ԃ��w�肵�Ă��������B
+		列車を指定してください。
 	@param pCdCsvDocument [in,out]
-		���̊֐��͂���CSV�h�L�������g�ɗ�ԏ���ǉ����܂��B
+		この関数はこのCSVドキュメントに列車情報を追加します。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	���̗�Ԃ�NULL�ł��B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	この列車はNULLです。
 	*/
 	int encode_AddRessya( 
 		const Mu<const CentDedRessyasyubetsu*>* 
@@ -229,33 +229,33 @@ protected:
 		CdCsvDocument* pCdCsvDocument ) ;
 
 	/**
-		CdCsvDocument �ɁANull��Ԃ�ǉ����܂��B
+		CdCsvDocument に、Null列車を追加します。
 
-		��Ԃ̐ݒ�ɂ������ẮA
-		�����\Index-����Order�ΏƔz����w�肷��K�v������܂��B
-		���̔z��́A�ȉ��̌`���łȂ��Ă͂Ȃ�܂���B
+		列車の設定にあたっては、
+		時刻表Index-時刻Order対照配列を指定する必要があります。
+		この配列は、以下の形式でなくてはなりません。
 
-		 contiJikokuOrderOfJjikokuhyouIndex[<�����\Index>]=<����Order>
+		 contiJikokuOrderOfJjikokuhyouIndex[<時刻表Index>]=<時刻Order>
 	
-	  CdCsvDocument �́A�ȉ��̏����𖞂����Ă��Ȃ��Ă͂Ȃ�܂���B
+	  CdCsvDocument は、以下の条件を満たしていなくてはなりません。
 		
-		- �ȉ��̗񂪐ݒ肳��Ă���
-			- 1�s�� FileType�s
-			- 2�s�� DiaName�s
-			- ��2.3�� 3�s�� <����,���>
-			- ��2.4��4�s�� 
-		- �񐔂́A contiJikokuOrderOfJikokuhyouIndex.size() + 10 
+		- 以下の列が設定されている
+			- 1行目 FileType行
+			- 2行目 DiaName行
+			- ＜2.3＞ 3行目 <下り,上り>
+			- ＜2.4＞4行目 
+		- 列数は、 contiJikokuOrderOfJikokuhyouIndex.size() + 10 
 
-	  ���̊֐��́A�sIndex4�ɗ�Ԕԍ���ݒ肵�A
-	  �sIndex (9+ contiJikokuOrderOfJikokuhyouIndex.size() ) �ɔ��l��ݒ肵�܂��B
+	  この関数は、行Index4に列車番号を設定し、
+	  行Index (9+ contiJikokuOrderOfJikokuhyouIndex.size() ) に備考を設定します。
 
 	@param contiJikokuOrderOfJikokuhyouIndex [in] 
-		�����\Index-����Order�ΏƔz����w�肵�Ă��������B
+		時刻表Index-時刻Order対照配列を指定してください。
 	@param pCdCsvDocument [in,out]
-		���̊֐��͂���CSV�h�L�������g�ɗ�ԏ���ǉ����܂��B
+		この関数はこのCSVドキュメントに列車情報を追加します。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	���0
+		成功したら 0 以上、エラーなら負の数です。
+		-	常に0
 	*/
 	int encode_AddRessyaNull( 
 		const std::deque<CdDedJikokuOrder>&	contiJikokuOrderOfJikokuhyouIndex , 
@@ -263,29 +263,29 @@ protected:
 
 	///@}
 	// --------------------------------
-	///@name decode() �̉����֐�	
+	///@name decode() の下請関数	
 	// --------------------------------
 	///@{
 
 	/**
-		�w�ꗗ��CdCsvDocument�����ƂɁA
-		�����\Index-����Order�ΏƔz��𐶐����܂��B
+		駅一覧とCdCsvDocumentをもとに、
+		時刻表Index-時刻Order対照配列を生成します。
 	@param pCentDedEkiCont [in]
-		�w�R���e�i���w�肵�Ă��������B
+		駅コンテナを指定してください。
 	@param eRessyahoukou [in]
-		��ԕ������w�肵�Ă��������B
+		列車方向を指定してください。
 	@param pCdCsvDocument [in]
-		���̊֐��͂���CSV�h�L�������g�ɗ�ԏ���ǉ����܂��B
+		この関数はこのCSVドキュメントに列車情報を追加します。
 	@param pcontiJikokuOrderOfJikokuhyouIndex [out]
-		���̊֐��͂��̃R���e�i�ɁA
-		�����\Index-����Order�ΏƔz��𐶐����܂��B
+		この関数はこのコンテナに、
+		時刻表Index-時刻Order対照配列を生成します。
 	@param pstrErrorInfoString [out]
-		�G���[�Ȃ�A�G���[���e�L�X�g��Ԃ��܂��B
+		エラーなら、エラー情報テキストを返します。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	�w����������܂���B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	駅名が見つかりません。
 		
-		 *pcontiJikokuOrderOfJjikokuhyouIndex[<�����\Index>]=<����Order>
+		 *pcontiJikokuOrderOfJjikokuhyouIndex[<時刻表Index>]=<時刻Order>
 	*/
 	int decode_createContJikokuOrderOfJjikokuhyouIndex( 
 		const CentDedEkiCont* pCentDedEkiCont ,
@@ -295,42 +295,42 @@ protected:
 		std::string* pstrErrorInfoString ) ;
 
 	/**
-		CdCsvDocument �̎w��̗��ǂݍ��݁A
-		���̓��e�� CentDedRessya �Ɏw�肵�܂��B
+		CdCsvDocument の指定の列を読み込み、
+		その内容を CentDedRessya に指定します。
 
-		��Ԃ̐ݒ�ɂ������ẮA
-		�����\Index-����Order�ΏƔz����w�肷��K�v������܂��B
-		���̔z��́A�ȉ��̌`���łȂ��Ă͂Ȃ�܂���B
+		列車の設定にあたっては、
+		時刻表Index-時刻Order対照配列を指定する必要があります。
+		この配列は、以下の形式でなくてはなりません。
 
-		 contiJikokuOrderOfJjikokuhyouIndex[<�����\Index>]=<����Order>
+		 contiJikokuOrderOfJjikokuhyouIndex[<時刻表Index>]=<時刻Order>
 	
-	  CdCsvDocument �́A�ȉ��̏����𖞂����Ă��Ȃ��Ă͂Ȃ�܂���B
+	  CdCsvDocument は、以下の条件を満たしていなくてはなりません。
 		
-		- �ȉ��̗񂪐ݒ肳��Ă���
-			- 1�s�� FileType�s
-			- 2�s�� DiaName�s
-			- ��2.3�� 3�s�� <����,���>
-			- ��2.4��4�s�� 
-		- �񐔂́A contiJikokuOrderOfJikokuhyouIndex.size() + 10 
+		- 以下の列が設定されている
+			- 1行目 FileType行
+			- 2行目 DiaName行
+			- ＜2.3＞ 3行目 <下り,上り>
+			- ＜2.4＞4行目 
+		- 列数は、 contiJikokuOrderOfJikokuhyouIndex.size() + 10 
 
-	  ���̊֐��́A�sIndex4�ɗ�Ԕԍ��A
-	  �sIndex (9+ contiJikokuOrderOfJikokuhyouIndex.size() ) ��
-	���l��������̂Ƃ��ĉ��߂��s���܂��B�B
+	  この関数は、行Index4に列車番号、
+	  行Index (9+ contiJikokuOrderOfJikokuhyouIndex.size() ) に
+	備考があるものとして解釈を行います。。
 
 	@param pCentDedRessyasyubetsuContGet [in]
-		��Ԏ�ʃR���e�i���w�肵�Ă��������B
+		列車種別コンテナを指定してください。
 	@param contiJikokuOrderOfJikokuhyouIndex [in] 
-		�����\Index-����Order�ΏƔz����w�肵�Ă��������B
+		時刻表Index-時刻Order対照配列を指定してください。
 	@param pCentDedRessya [out]
-		��Ԃ��w�肵�Ă��������B
+		列車を指定してください。
 	@param pCdCsvDocument [in]
-		CSV�h�L�������g���w�肵�Ă��������B
+		CSVドキュメントを指定してください。
 	@param iColumnIndex [in]
-		pCdCsvDocument �̗� Index ���w�肵�Ă��������B
+		pCdCsvDocument の列 Index を指定してください。
 	@param pstrErrorInfoString [out]
-		�G���[�Ȃ�A�G���[���e�L�X�g��Ԃ��܂��B
+		エラーなら、エラー情報テキストを返します。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+		成功したら 0 以上、エラーなら負の数です。
 	*/
 	int decode_readRessyaColumn( 
 		const Mu<const CentDedRessyasyubetsu*>* 
@@ -342,44 +342,44 @@ protected:
 		std::string* pstrErrorInfoString ) ;
 
 	/**
-		CdCsvDocument �̎w��̗� Null ��ԁiCSV�ɉ���������Ă��Ȃ��j
-		�ł��邩�ۂ��𔻒肵�܂��B
+		CdCsvDocument の指定の列が Null 列車（CSVに何も書かれていない）
+		であるか否かを判定します。
 
-		��Ԃ̐ݒ�ɂ������ẮA
-		�����\Index-����Order�ΏƔz����w�肷��K�v������܂��B
-		���̔z��́A�ȉ��̌`���łȂ��Ă͂Ȃ�܂���B
+		列車の設定にあたっては、
+		時刻表Index-時刻Order対照配列を指定する必要があります。
+		この配列は、以下の形式でなくてはなりません。
 
-		 contiJikokuOrderOfJjikokuhyouIndex[<�����\Index>]=<����Order>
+		 contiJikokuOrderOfJjikokuhyouIndex[<時刻表Index>]=<時刻Order>
 	
-	  CdCsvDocument �́A�ȉ��̏����𖞂����Ă��Ȃ��Ă͂Ȃ�܂���B
+	  CdCsvDocument は、以下の条件を満たしていなくてはなりません。
 		
-		- �ȉ��̗񂪐ݒ肳��Ă���
-			- 1�s�� FileType�s
-			- 2�s�� DiaName�s
-			- ��2.3�� 3�s�� <����,���>
-			- ��2.4��4�s�� 
-		- �񐔂́A contiJikokuOrderOfJikokuhyouIndex.size() + 10 
+		- 以下の列が設定されている
+			- 1行目 FileType行
+			- 2行目 DiaName行
+			- ＜2.3＞ 3行目 <下り,上り>
+			- ＜2.4＞4行目 
+		- 列数は、 contiJikokuOrderOfJikokuhyouIndex.size() + 10 
 
-	  ���̊֐��́A�sIndex4�ɗ�Ԕԍ��A
-	  �sIndex (9+ contiJikokuOrderOfJikokuhyouIndex.size() ) ��
-	���l��������̂Ƃ��ĉ��߂��s���܂��B�B
+	  この関数は、行Index4に列車番号、
+	  行Index (9+ contiJikokuOrderOfJikokuhyouIndex.size() ) に
+	備考があるものとして解釈を行います。。
 
 	@param pCentDedRessyasyubetsuContGet [in]
-		��Ԏ�ʃR���e�i���w�肵�Ă��������B
+		列車種別コンテナを指定してください。
 	@param contiJikokuOrderOfJikokuhyouIndex [in] 
-		�����\Index-����Order�ΏƔz����w�肵�Ă��������B
+		時刻表Index-時刻Order対照配列を指定してください。
 	@param pCentDedRessya [out]
-		��Ԃ��w�肵�Ă��������B
+		列車を指定してください。
 	@param pCdCsvDocument [in]
-		CSV�h�L�������g���w�肵�Ă��������B
+		CSVドキュメントを指定してください。
 	@param iColumnIndex [in]
-		pCdCsvDocument �̗� Index ���w�肵�Ă��������B
+		pCdCsvDocument の列 Index を指定してください。
 	@param pstrErrorInfoString [out]
-		�G���[�Ȃ�A�G���[���e�L�X�g��Ԃ��܂��B
+		エラーなら、エラー情報テキストを返します。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	���̗��Null��Ԃł��B
-		-	0 ;	//	���̗��Null��Ԃł͂���܂���B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	この列はNull列車です。
+		-	0 ;	//	この列はNull列車ではありません。
 	*/
 	int decode_isNullRessyaColumn( 
 		const Mu<const CentDedRessyasyubetsu*>* 
@@ -393,7 +393,7 @@ protected:
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CconvJikokuhyouCsv(
 		const std::string& nameKudari ,
@@ -417,30 +417,30 @@ public:
 	// ********************************
 	///@{
 	/**
-		�w��̘H���t�@�C���f�[�^�E�_�C���E��ԕ�����
-		�����\���ACSV�h�L�������g�ɏo�͂��܂��B
+		指定の路線ファイルデータ・ダイヤ・列車方向の
+		時刻表を、CSVドキュメントに出力します。
 
-		*pCdCsvDocument ������܂ŕێ����Ă����f�[�^�͔j�����܂��B
+		*pCdCsvDocument がそれまで保持していたデータは破棄します。
 	@param aCentDedRosen [in]
-		�H�����w�肵�Ă��������B
+		路線を指定してください。
 	@param iDiaIndex [in]
-		�_�C���̃C���f�N�X���w�肵�Ă��������B
+		ダイヤのインデクスを指定してください。
 	@param eRessyahoukou [in]
-		��ԕ������w�肵�Ă��������B
+		列車方向を指定してください。
 	@param iRessyaIndex [in]
-		�o�͂���擪�̗�Ԃ̃C���f�N�X(0�N�_)
-		���w�肵�Ă��������B
+		出力する先頭の列車のインデクス(0起点)
+		を指定してください。
 	@param iRessyaCount [in] 
-		�o�͂����Ԃ̖{�����w�肵�Ă��������B
-		INT_MAX �́A�����̗�Ԃ܂ł��w�肵�����ƂɂȂ�܂��B
+		出力する列車の本数を指定してください。
+		INT_MAX は、末尾の列車までを指定したことになります。
 	@param pCdCsvDocument [out]
-		���̊֐��͂��� CdCsvDocument �I�u�W�F�N�g�ɁA
-		�����\�f�[�^���������݂܂��B
+		この関数はこの CdCsvDocument オブジェクトに、
+		時刻表データを書き込みます。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	iDiaIndex ���s���ł��B
-		-	-2 ;	//	iRessyaIndex ���s���ł��B
-		-	-3 ;	//	iRessyaCount ���s���ł��B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	iDiaIndex が不正です。
+		-	-2 ;	//	iRessyaIndex が不正です。
+		-	-3 ;	//	iRessyaCount が不正です。
 	*/
 	int encode( 
 		const CentDedRosen& aCentDedRosen , 
@@ -450,33 +450,33 @@ public:
 		CdCsvDocument* pCdCsvDocument ) ;
 
 	/**
-		�����\ CSV �h�L�������g���A
-		�w��̘H���t�@�C���f�[�^�E�_�C���E��ԕ����̗�ԃR���e�i��
-		�ǉ����܂��B
+		時刻表 CSV ドキュメントを、
+		指定の路線ファイルデータ・ダイヤ・列車方向の列車コンテナに
+		追加します。
 	@param pCentDedRosen [in]
-		���̊֐��͂��̘H���ɁA��Ԃ�ǉ����܂��B
+		この関数はこの路線に、列車を追加します。
 	@param iDiaIndex [in]
-		�_�C���̃C���f�N�X���w�肵�Ă��������B
+		ダイヤのインデクスを指定してください。
 	@param eRessyahoukou [in]
-		��ԕ������w�肵�Ă��������B
+		列車方向を指定してください。
 	@param iRessyaIndex [in]
-		aCdCsvDocument �̎w��̃_�C���E��ԕ����ɂ����āA
-		��Ԃ�}������ʒu���w�肵�Ă��������B
-		-	0 ;	//	�擪�ɑ}��
-		-	INT_MAX ;	//	�����ɑ}��
+		aCdCsvDocument の指定のダイヤ・列車方向において、
+		列車を挿入する位置を指定してください。
+		-	0 ;	//	先頭に挿入
+		-	INT_MAX ;	//	末尾に挿入
 	@param aCdCsvDocument [out]
-		�����\�f�[�^���w�肵�Ă��������B
+		時刻表データを指定してください。
 	@param pstrErrorInfoString [out]
-		�G���[�Ȃ�A�G���[���e�L�X�g��Ԃ��܂��B
+		エラーなら、エラー情報テキストを返します。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	�s�����Ȃ����܂��B
-		-	-2 ;	//	�񂪏��Ȃ����܂��B
-		-	-3 ;	//	�t�@�C���`�����F���ł��܂���
-		-	-4 ;	//	�t�@�C���`�����F���ł��܂���
-		-	-11  ;	//	�w����������܂���B
-		-	-21  ;	//	iDiaIndex ���s���ł��B
-		-	-22  ;	//	iRessyaIndex ���s���ł��B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	行が少なすぎます。
+		-	-2 ;	//	列が少なすぎます。
+		-	-3 ;	//	ファイル形式が認識できません
+		-	-4 ;	//	ファイル形式が認識できません
+		-	-11  ;	//	駅名が見つかりません。
+		-	-21  ;	//	iDiaIndex が不正です。
+		-	-22  ;	//	iRessyaIndex が不正です。
 	*/
 	int decode( 
 		CentDedRosen* pCentDedRosen , 

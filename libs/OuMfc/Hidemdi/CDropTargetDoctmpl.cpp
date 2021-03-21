@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -77,16 +77,16 @@ namespace Hidemdi{
 // ****************************************************************
 int CDropTargetDoctmpl::HdropToFilenames( HDROP pdropgmemEHdrop 
 								, CStringArray* pastrExt ) 
-		//	���̃h���b�v�^�[�Q�b�g�ɓ�������HDROP�n���h������A
-		//	�g���q�����o���܂��B
+		//	このドロップターゲットに到着したHDROPハンドルから、
+		//	拡張子を取り出します。
 		//hgmemEHdrop
-		//	�h���b�v�^�[�Q�b�g�ɓ�������HDROP�n���h�����w�肵�Ă��������B
+		//	ドロップターゲットに到着したHDROPハンドルを指定してください。
 		//pastrExt
-		//	���̊֐��́A���̕�����z��ɁA�h���b�v���ꂽ̧�ق̈ꗗ��
-		//	�i�[���܂��B
-		//	�K�v�Ȃ��Ȃ�NULL�ł��܂��܂���B
+		//	この関数は、この文字列配列に、ドロップされたﾌｧｲﾙの一覧を
+		//	格納します。
+		//	必要ないならNULLでかまいません。
 		//[r]
-		//	̧�ق̐���Ԃ��܂�
+		//	ﾌｧｲﾙの数を返します
 {
 	CStringArray	LArray ;
 	if ( pastrExt == NULL ){
@@ -101,7 +101,7 @@ int CDropTargetDoctmpl::HdropToFilenames( HDROP pdropgmemEHdrop
 												, iLi , NULL, 0 ) + 1 ;
 		TCHAR* lpszFilename = new TCHAR[ iLFilenameSz ] ;
 		DragQueryFile( pdropgmemEHdrop , iLi , lpszFilename , iLFilenameSz ) ;
-			//	lpszFilename = �h���b�v���ꂽ�t�@�C���i���R�[�h�j�̖��̂ł�
+			//	lpszFilename = ドロップされたファイル（レコード）の名称です
 
 		pastrExt->Add( lpszFilename ) ;		
 
@@ -142,14 +142,14 @@ int CDropTargetDoctmpl::FilenamesNoExtRemove
 	return ( iRv ) ;
 }
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CDropTargetDoctmpl::CDropTargetDoctmpl( BOOL bEAcceptSingle ) 
 		//bEAcceptSingle ;
-		//	̧�قP�����̃h���b�v���󂯕t���܂��iSDI�Ŏg���܂��j
+		//	ﾌｧｲﾙ１つだけのドロップを受け付けます（SDIで使います）
 {
 	m_bAcceptSingle = bEAcceptSingle ;
-		//	̧�قP�����̃h���b�v���󂯕t���܂��iSDI�Ŏg���܂��j
+		//	ﾌｧｲﾙ１つだけのドロップを受け付けます（SDIで使います）
 	
 }
 
@@ -163,11 +163,11 @@ CDropTargetDoctmpl::~CDropTargetDoctmpl()
 DROPEFFECT CDropTargetDoctmpl::OnDragEnter( CWnd* pWnd
 						, COleDataObject* pDataObject
 						, DWORD dwKeyState, CPoint point )
-		//�y�I�[�o���C�h�z
-		//	CWinApp�ɑ΂��āA���̃A�v���P�[�V�������T�|�[�g���Ă���g���q��
-		//	�₢���킹�āA���̌��ʂ� m_astrExt �ɕۑ����܂��B
-		//	�h���b�O����Ă���̂��A�A�v���P�[�V�����ŃT�|�[�g���Ă���g���q
-		//	�ł������ꍇ�́A���̃h���b�v�^�[�Q�b�g�ւ̃R�s�[���󂯕t���܂�
+		//【オーバライド】
+		//	CWinAppに対して、このアプリケーションがサポートしている拡張子を
+		//	問い合わせて、その結果を m_astrExt に保存します。
+		//	ドラッグされているのが、アプリケーションでサポートしている拡張子
+		//	であった場合は、このドロップターゲットへのコピーを受け付けます
 {
 	m_astrExt.RemoveAll() ;
 	
@@ -189,9 +189,9 @@ DROPEFFECT CDropTargetDoctmpl::OnDragEnter( CWnd* pWnd
 
 DROPEFFECT CDropTargetDoctmpl::OnDragOver( CWnd* pWnd, COleDataObject* pDataObject
 										, DWORD dwKeyState, CPoint point )
-		//�y�I�[�o���C�h�z
-		//	�h���b�O����Ă���̂��A�A�v���P�[�V�����ŃT�|�[�g���Ă���g���q
-		//	�ł������ꍇ�́A���̃h���b�v�^�[�Q�b�g�ւ̃R�s�[���󂯕t���܂�
+		//【オーバライド】
+		//	ドラッグされているのが、アプリケーションでサポートしている拡張子
+		//	であった場合は、このドロップターゲットへのコピーを受け付けます
 {
 	if ( pDataObject->IsDataAvailable( CF_HDROP ) ){
 		HGLOBAL	hLGlobal = pDataObject->GetGlobalData( CF_HDROP ) ;
@@ -210,17 +210,17 @@ DROPEFFECT CDropTargetDoctmpl::OnDragOver( CWnd* pWnd, COleDataObject* pDataObje
 }
 
 void CDropTargetDoctmpl::OnDragLeave( CWnd* pWnd ) 
-		//�y�I�[�o���C�h�z
-		//	���ɏ����͂���܂���
+		//【オーバライド】
+		//	特に処理はありません
 {
 }
 	
 BOOL CDropTargetDoctmpl::OnDrop( CWnd* pWnd, COleDataObject* pDataObject
 									, DROPEFFECT dropEffect, CPoint point )
-		//�y�I�[�o���C�h�z
-		//	�h���b�O����Ă���̂��A�A�v���P�[�V�����ŃT�|�[�g���Ă���g���q
-		//	�ł������ꍇ�́A���̃t�@�C������z��Ɋi�[���āADropProc() ��
-		//	�Ăяo���܂�
+		//【オーバライド】
+		//	ドラッグされているのが、アプリケーションでサポートしている拡張子
+		//	であった場合は、そのファイル名を配列に格納して、DropProc() を
+		//	呼び出します
 {
 	BOOL	bRv = FALSE ;
 	
@@ -251,23 +251,23 @@ BOOL CDropTargetDoctmpl::OnFiledrop( CWnd* pWnd
 				, const CStringArray& astrEFilename
 				, DROPEFFECT dropEffect, CPoint point ) 
 		//pWnd
-		//	�J�[�\�������݂���E�B���h�E�ւ̃|�C���^
+		//	カーソルが現在あるウィンドウへのポインタ
 		//astrEFilename
-		//	�h���b�v�����f�[�^�������Ă���f�[�^ �I�u�W�F�N�g�ւ̃|�C���^�B
+		//	ドロップされるデータを持っているデータ オブジェクトへのポインタ。
 		//dropEffect
-		//	���[�U�[���I������h���b�v����̌��ʁB���̒l�� 1 �ȏ��
-		//	�g�ݍ��킹�����̂ł��B 
-		//		DROPEFFECT_COPY   �R�s�[���삪�s���܂��B
-		//		DROPEFFECT_MOVE   �ړ����삪�s���܂��B
-		//		DROPEFFECT_LINK   �h���b�v���ꂽ�f�[�^�ƌ��̃f�[�^��
-		//			�����N����܂��B
-		//		DROPEFFECT_SCROLL   �h���b�O �X�N���[�����삪�^�[�Q�b�g����
-		//			��������Ƃ��납�A�������Ă��܂��B 
+		//	ユーザーが選択するドロップ操作の結果。次の値の 1 つ以上を
+		//	組み合わせたものです。 
+		//		DROPEFFECT_COPY   コピー操作が行われます。
+		//		DROPEFFECT_MOVE   移動操作が行われます。
+		//		DROPEFFECT_LINK   ドロップされたデータと元のデータが
+		//			リンクされます。
+		//		DROPEFFECT_SCROLL   ドラッグ スクロール操作がターゲット内で
+		//			発生するところか、発生しています。 
 		//point
-		//	��ʏ�ɂ�����J�[�\���̈ʒu���s�N�Z���P�ʂŎw�肵�܂��B
+		//	画面上におけるカーソルの位置をピクセル単位で指定します。
 		//[r]
-		//	�h���b�v�����������ꍇ�� 0 �ȊO��Ԃ��܂��B
-		//	����ȊO�̏ꍇ�� 0 ��Ԃ��܂��B
+		//	ドロップが成功した場合は 0 以外を返します。
+		//	それ以外の場合は 0 を返します。
 {
 	BOOL	bRv = TRUE ;
 	int	idxLFilename ;

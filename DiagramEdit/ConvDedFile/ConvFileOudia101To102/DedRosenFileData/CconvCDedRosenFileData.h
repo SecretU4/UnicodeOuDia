@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-/*��
+/*─
 // ****************************************************************
 //	CconvCDedRosenFileData.h
 // ****************************************************************
@@ -79,24 +79,24 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
 	@brief
-	  �w�H���t�@�C���x�f�[�^ ( CDedRosenFileData ) �̓��e���A����
-	�f�[�^�`���ɕϊ�����֐������^���Ă��܂��B
+	  『路線ファイル』データ ( CDedRosenFileData ) の内容を、他の
+	データ形式に変換する関数を収録しています。
 	
-	 �w�H���t�@�C���x�f�[�^��  OuPropertiesText::CNodeContainer �I�u�W�F�N�g�Ƃ̊Ԃ�
-	�ϊ����T�|�[�g���Ă��܂��B 
+	 『路線ファイル』データと  OuPropertiesText::CNodeContainer オブジェクトとの間の
+	変換をサポートしています。 
 	
 	<H4>
-	�y�H���t�@�C�� (.ded) �z
+	【路線ファイル (.ded) 】
 	</H4>
-	  �w�H���t�@�C���x�́A�H���t�@�C���f�[�^�N���X��
-	 CDedRosenFileData_To_string() �ŕ�����ɕϊ����A���̕�����S�̂�
-	�ۑ������e�L�X�g�t�@�C���ł��B
+	  『路線ファイル』は、路線ファイルデータクラスを
+	 CDedRosenFileData_To_string() で文字列に変換し、その文字列全体を
+	保存したテキストファイルです。
 	
-	   CDedRosenFileData_To_string() �֐��́A
-	   CDedRosenFileData �I�u�W�F�N�g���ێ�����f�[�^��
-	�ȉ��̎菇�ŕ�����ɕϊ����܂��B
-	  ���̕�������t�@�C���ɕۑ����邱�Ƃɂ��A
-	 �w�H���t�@�C���x�ƂȂ�܂��B
+	   CDedRosenFileData_To_string() 関数は、
+	   CDedRosenFileData オブジェクトが保持するデータを
+	以下の手順で文字列に変換します。
+	  この文字列をファイルに保存することにより、
+	 『路線ファイル』となります。
 */
 class CconvCDedRosenFileData
 {
@@ -105,18 +105,18 @@ public:
 	///@name COuErrorInfo::m_strReason , m_Prop 
 	// ********************************
 	/**
-		FileType ���s���ł��B
+		FileType が不正です。
 	@param FileType
 		FileType
 	*/
 	static const char* ERRREASON_FileTypeIsInvalid(){	return "FileType Is Invalid." ;};
 	static const char* ERRPROP_FileType(){	return "FileType" ;};
 	/**
-		Rosen Directory ��������܂���B
+		Rosen Directory が見つかりません。
 	*/
 	static const char* ERRREASON_RosenDirectoryIsNotFound(){	return "Rosen Directory is not found." ;};
 	/**
-		DispProp Directory ��������܂���B
+		DispProp Directory が見つかりません。
 	*/
 	static const char* ERRREASON_DispPropnDirectoryIsNotFound(){	return "DispProp Directory is not found." ;};
 public:
@@ -125,75 +125,75 @@ public:
 	// ********************************
 	/**
 	 @return
-		PropertyText�A�C�e�� "FileType" �̒l�ł��B
+		PropertyTextアイテム "FileType" の値です。
 	*/
 	static std::string getFileType(){	return "OuDia.1.02" ; } ;
 	
 	
 	
 	// ********************************
-	///@name	OuPropertiesText �ւ̕ϊ�
+	///@name	OuPropertiesText への変換
 	// ********************************
 	///@{
 	/**
-		  OuPropertiesText �I�u�W�F�N�g�ɁA
-		  CDedRosenFileData �̑�����ǉ����܂��B
+		  OuPropertiesText オブジェクトに、
+		  CDedRosenFileData の属性を追加します。
 		@param aCDedRosenFileData [in]
-		  CDedRosenFileData ���w�肵�Ă��������B
-		  pCNodeContainer �ɂ́A"FileType" PropertyString ���܂݂܂��B
+		  CDedRosenFileData を指定してください。
+		  pCNodeContainer には、"FileType" PropertyString を含みます。
 		@param pCNodeContainer [out]
-		  ���̊֐��́A���̃I�u�W�F�N�g�ɁA CDedRosenFileData �̓��e�𔽉f���܂��B
-		  pCNodeContainer ������܂ŕێ����Ă����I�u�W�F�N�g�͔j�����܂��B
+		  この関数は、このオブジェクトに、 CDedRosenFileData の内容を反映します。
+		  pCNodeContainer がそれまで保持していたオブジェクトは破棄します。
 		@return
-		  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-				-	-11 ;	//	Ekimei ���w�肳��Ă��܂���B
-				-	-22 ;	//	Ekijikokukeisiki �̒l���s���ł��B
-				-	-32 ;	//	Ekikibo �̒l���s���ł��B
-				-	-111 ;	//	Syubetsumei ���w�肳��Ă��܂���B
-				-	-152 ;	//	DiagramSenStyle �̒l���s���ł��B
-				-	-212 ;	//	DiagramEkiatsukai �̒l���s���ł��B
+		  成功したら 0 以上、エラーなら負の数です。
+				-	-11 ;	//	Ekimei が指定されていません。
+				-	-22 ;	//	Ekijikokukeisiki の値が不正です。
+				-	-32 ;	//	Ekikibo の値が不正です。
+				-	-111 ;	//	Syubetsumei が指定されていません。
+				-	-152 ;	//	DiagramSenStyle の値が不正です。
+				-	-212 ;	//	DiagramEkiatsukai の値が不正です。
 	*/
 	int CDedRosenFileData_to_OuPropertiesText( 
 			const CDedRosenFileData* pCDedRosenFileData , 
 			OuPropertiesText::CNodeContainer* pCNodeContainer ) ;
 	
 	/**
-		  OuPropertiesText �I�u�W�F�N�g����A
-		  CDedRosenFileData_to_OuPropertiesText() �֐��ɂ���č쐬���ꂽ
-		�A�C�e����ǂݍ��݁A CDedRosenFileData �I�u�W�F�N�g�ɔ��f���܂��B
+		  OuPropertiesText オブジェクトから、
+		  CDedRosenFileData_to_OuPropertiesText() 関数によって作成された
+		アイテムを読み込み、 CDedRosenFileData オブジェクトに反映します。
 		
 		@param pCDedRosenFileData [out]
-		  ���̊֐��͂��̃I�u�W�F�N�g�ɁA�����𔽉f���܂��B
-		  ���̃I�u�W�F�N�g������܂ŕێ����Ă����f�[�^�͔j�����܂��B
+		  この関数はこのオブジェクトに、属性を反映します。
+		  このオブジェクトがそれまで保持していたデータは破棄します。
 		@param pCNodeContainer [in]
-		  ������ێ����Ă��� OuPropertiesText �I�u�W�F�N�g���w�肵�Ă��������B
+		  属性を保持している OuPropertiesText オブジェクトを指定してください。
 		@param pCOuErrorInfoContainer [out]
-		  ���̊֐��̓G���[������������A�G���[�̏������̃I�u�W�F�N�g�ɒǉ����܂��B
-		  �s�v�ł����NULL���w�肵�Ă��������B
+		  この関数はエラーが発生したら、エラーの情報をこのオブジェクトに追加します。
+		  不要であればNULLを指定してください。
 		@return
-		  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-			-	-1 ;	//	FileType ������������܂���B
-			-	-2 ;	//	Rosen Directory��������܂���B
-			-	-11 ;	//	Ekimei ���w�肳��Ă��܂���B
-			-	-22 ;	//	Ekijikokukeisiki �̒l���s���ł��B
-			-	-32 ;	//	Ekikibo �̒l���s���ł��B
-			-	-41 ;	//	DiagramRessyajouhouHyoujiKudari �̒l���s���ł��B
-			-	-42 ;	//	DiagramRessyajouhouHyoujiNobori �̒l���s���ł��B
-			-	-101 ;	//	Eki ���f�B���N�g���ł͂���܂���B
-			-	-111 ;	//	Syubetsumei ���w�肳��Ă��܂���B
-			-	-152 ;	//	DiagramSenStyle �̒l���s���ł��B
-			-	-201 ;	//	Ressyasyubetsu ���f�B���N�g���ł͂���܂���B
-			-	-211 ;	//	DiaName ���w�肳��Ă��܂���B
-			-	-212 ;	//	RessyaCont��������܂���B
-			-	-352 ;	//	�N�_�����̐ݒ肪�s�K�؂ł��B
-			-	-3 ;	//	DispProp Directory��������܂���B
-			-	-512 ;	//	JikokuhyouFont �̓��e���s���ł��B
-			-	-522 ;	//	DiaEkimeiFont �̓��e���s���ł��B
-			-	-532 ;	//	DiaJikokuFont �̓��e���s���ł��B
-			-	-582 ;	//	DisplayRessyabangou ���s���ł��B
-			-	-592 ;	//	DisplayRessyamei ���s���ł��B
-			-	-602 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari ���s���ł��B
-			-	-612 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori ���s���ł��B
+		  成功したら 0 以上、エラーなら負の数です。
+			-	-1 ;	//	FileType が正しくありません。
+			-	-2 ;	//	Rosen Directoryが見つかりません。
+			-	-11 ;	//	Ekimei が指定されていません。
+			-	-22 ;	//	Ekijikokukeisiki の値が不正です。
+			-	-32 ;	//	Ekikibo の値が不正です。
+			-	-41 ;	//	DiagramRessyajouhouHyoujiKudari の値が不正です。
+			-	-42 ;	//	DiagramRessyajouhouHyoujiNobori の値が不正です。
+			-	-101 ;	//	Eki がディレクトリではありません。
+			-	-111 ;	//	Syubetsumei が指定されていません。
+			-	-152 ;	//	DiagramSenStyle の値が不正です。
+			-	-201 ;	//	Ressyasyubetsu がディレクトリではありません。
+			-	-211 ;	//	DiaName が指定されていません。
+			-	-212 ;	//	RessyaContが見つかりません。
+			-	-352 ;	//	起点時刻の設定が不適切です。
+			-	-3 ;	//	DispProp Directoryが見つかりません。
+			-	-512 ;	//	JikokuhyouFont の内容が不正です。
+			-	-522 ;	//	DiaEkimeiFont の内容が不正です。
+			-	-532 ;	//	DiaJikokuFont の内容が不正です。
+			-	-582 ;	//	DisplayRessyabangou が不正です。
+			-	-592 ;	//	DisplayRessyamei が不正です。
+			-	-602 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari が不正です。
+			-	-612 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori が不正です。
 	*/
 	int CDedRosenFileData_from_OuPropertiesText( 
 			CDedRosenFileData* pCDedRosenFileData ,
@@ -201,16 +201,16 @@ public:
 			OuPropertiesText::ErrorInfo::COuErrorInfoContainer* pCOuErrorInfoContainer ) ;
 	
 	/**
-		  OuPropertiesText �I�u�W�F�N�g��
-		���̃N���X�ŉ��߉\�ȃt�H�[�}�b�g���ۂ��𔻒肵�܂��B
+		  OuPropertiesText オブジェクトが
+		このクラスで解釈可能なフォーマットか否かを判定します。
 	@param pCNodeContainer [in]
-		  ������ێ����Ă��� OuPropertiesText �I�u�W�F�N�g���w�肵�Ă��������B
+		  属性を保持している OuPropertiesText オブジェクトを指定してください。
 	@return
-		-	0 ;	//	���߉\�ł��B
-		-	-1 ;	//	FileType ������������܂���B
+		-	0 ;	//	解釈可能です。
+		-	-1 ;	//	FileType が正しくありません。
 		
 	@note
-		FileType �̒l�𔻒肵�܂��B
+		FileType の値を判定します。
 	*/
 	int isEncodeAbleFormat( 
 			const OuPropertiesText::CNodeContainer* pCNodeContainer ) ;
@@ -218,68 +218,68 @@ public:
 	
 	///@}
 	// ********************************
-	///@name �H���t�@�C���`��������ւ̕ϊ�
+	///@name 路線ファイル形式文字列への変換
 	// ********************************
 	///@{
 	/**
-		  CDedRosenFileData �̕ێ�����f�[�^����A
-		�w�H���t�@�C���x(.ded) �`���̕�������쐬���܂��B
+		  CDedRosenFileData の保持するデータから、
+		『路線ファイル』(.ded) 形式の文字列を作成します。
 	
 		@param aCDedRosenFileData [in]
-		  CDedRosenFileData ���w�肵�Ă��������B
+		  CDedRosenFileData を指定してください。
 		@param pString [out]
-		  ���̊֐��́A���̕�����I�u�W�F�N�g�ɁA
-		�w�H���t�@�C���x(.ded) �`���̕������ݒ肵�܂��B
-		  ���̃I�u�W�F�N�g������܂ŕێ����Ă���������͔j�����܂��B
+		  この関数は、この文字列オブジェクトに、
+		『路線ファイル』(.ded) 形式の文字列を設定します。
+		  このオブジェクトがそれまで保持していた文字列は破棄します。
 		@return
-		  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-11 ;	//	Ekimei ���w�肳��Ă��܂���B
-		-	-22 ;	//	Ekijikokukeisiki �̒l���s���ł��B
-		-	-32 ;	//	Ekikibo �̒l���s���ł��B
-		-	-111 ;	//	Syubetsumei ���w�肳��Ă��܂���B
-		-	-152 ;	//	DiagramSenStyle �̒l���s���ł��B
-		-	-212 ;	//	DiagramEkiatsukai �̒l���s���ł��B
+		  成功したら 0 以上、エラーなら負の数です。
+		-	-11 ;	//	Ekimei が指定されていません。
+		-	-22 ;	//	Ekijikokukeisiki の値が不正です。
+		-	-32 ;	//	Ekikibo の値が不正です。
+		-	-111 ;	//	Syubetsumei が指定されていません。
+		-	-152 ;	//	DiagramSenStyle の値が不正です。
+		-	-212 ;	//	DiagramEkiatsukai の値が不正です。
 	*/
 	int CDedRosenFileData_to_string( 
 			const CDedRosenFileData& aCDedRosenFileData , 
 			std::string* pString  ) ;
 	
 	/**
-		  CDedRosenFileData_to_string() �Ő�������
-		�w�H���t�@�C���x(.ded) �`���̕���������߂��A
-		 CDedRosenFileData �I�u�W�F�N�g�ɔ��f���܂��B
+		  CDedRosenFileData_to_string() で生成した
+		『路線ファイル』(.ded) 形式の文字列を解釈し、
+		 CDedRosenFileData オブジェクトに反映します。
 		
 		@param pCDedRosenFileData [out]
-		  ���̊֐��͂��̃I�u�W�F�N�g�ɁA�����𔽉f���܂��B
-		  ���̃I�u�W�F�N�g������܂ŕێ����Ă����f�[�^�͔j�����܂��B
+		  この関数はこのオブジェクトに、属性を反映します。
+		  このオブジェクトがそれまで保持していたデータは破棄します。
 		@param aString [in]
-		  CDedRosenFileData_to_string() �Ő�������
-		�w�H���t�@�C���x(.oud) �`���̕�������w�肵�Ă��������B
+		  CDedRosenFileData_to_string() で生成した
+		『路線ファイル』(.oud) 形式の文字列を指定してください。
 		@param pCOuErrorInfoContainer [in]
-		  ���̊֐��̓G���[������������A�G���[�̏������̃I�u�W�F�N�g�ɒǉ����܂��B
+		  この関数はエラーが発生したら、エラーの情報をこのオブジェクトに追加します。
 		@return
-		  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-			-	-1 ;	//	�f�B���N�g�����r���ŕ��Ă��܂��B	
-			-	-1001 ;	//	FileType ������������܂���B
-			-	-1002 ;	//	Rosen Directory��������܂���B
-			-	-1011 ;	//	Ekimei ���w�肳��Ă��܂���B
-			-	-1022 ;	//	Ekijikokukeisiki �̒l���s���ł��B
-			-	-1032 ;	//	Ekikibo �̒l���s���ł��B
-			-	-1101 ;	//	Eki ���f�B���N�g���ł͂���܂���B
-			-	-1111 ;	//	Syubetsumei ���w�肳��Ă��܂���B
-			-	-1152 ;	//	DiagramSenStyle �̒l���s���ł��B
-			-	-1201 ;	//	Ressyasyubetsu ���f�B���N�g���ł͂���܂���B
-			-	-1211 ;	//	DiaName ���w�肳��Ă��܂���B
-			-	-1212 ;	//	RessyaCont��������܂���B
-			-	-1352 ;	//	�N�_�����̐ݒ肪�s�K�؂ł��B
-			-	-1003 ;	//	DispProp Directory��������܂���B
-			-	-1512 ;	//	JikokuhyouFont �̓��e���s���ł��B
-			-	-1522 ;	//	DiaEkimeiFont �̓��e���s���ł��B
-			-	-1532 ;	//	DiaJikokuFont �̓��e���s���ł��B
-			-	-1582 ;	//	DisplayRessyabangou ���s���ł��B
-			-	-1592 ;	//	DisplayRessyamei ���s���ł��B
-			-	-1602 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari ���s���ł��B
-			-	-1612 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori ���s���ł��B
+		  成功したら 0 以上、エラーなら負の数です。
+			-	-1 ;	//	ディレクトリが途中で閉じています。	
+			-	-1001 ;	//	FileType が正しくありません。
+			-	-1002 ;	//	Rosen Directoryが見つかりません。
+			-	-1011 ;	//	Ekimei が指定されていません。
+			-	-1022 ;	//	Ekijikokukeisiki の値が不正です。
+			-	-1032 ;	//	Ekikibo の値が不正です。
+			-	-1101 ;	//	Eki がディレクトリではありません。
+			-	-1111 ;	//	Syubetsumei が指定されていません。
+			-	-1152 ;	//	DiagramSenStyle の値が不正です。
+			-	-1201 ;	//	Ressyasyubetsu がディレクトリではありません。
+			-	-1211 ;	//	DiaName が指定されていません。
+			-	-1212 ;	//	RessyaContが見つかりません。
+			-	-1352 ;	//	起点時刻の設定が不適切です。
+			-	-1003 ;	//	DispProp Directoryが見つかりません。
+			-	-1512 ;	//	JikokuhyouFont の内容が不正です。
+			-	-1522 ;	//	DiaEkimeiFont の内容が不正です。
+			-	-1532 ;	//	DiaJikokuFont の内容が不正です。
+			-	-1582 ;	//	DisplayRessyabangou が不正です。
+			-	-1592 ;	//	DisplayRessyamei が不正です。
+			-	-1602 ;	//	DiaRessyajouhouHyoujiEkiOrderKudari が不正です。
+			-	-1612 ;	//	DiaRessyajouhouHyoujiEkiOrderNobori が不正です。
 	*/
 	int CDedRosenFileData_from_string( 
 			CDedRosenFileData* pCDedRosenFileData ,
@@ -287,17 +287,17 @@ public:
 			OuPropertiesText::ErrorInfo::COuErrorInfoContainer* pCOuErrorInfoContainer ) ;
 
 	/**
-		�t�@�C���̓��e���i�[����������
-		���̃N���X�ŉ��߉\�ȃt�H�[�}�b�g���ۂ��𔻒肵�܂��B
+		ファイルの内容を格納した文字列が
+		このクラスで解釈可能なフォーマットか否かを判定します。
 	@param aString [in]
-		  CDedRosenFileData_to_string() �Ő�������
-		�w�H���t�@�C���x(.oud) �`���̕�������w�肵�Ă��������B
+		  CDedRosenFileData_to_string() で生成した
+		『路線ファイル』(.oud) 形式の文字列を指定してください。
 	@return
-		-	0 ;	//	���߉\�ł��B
-		-	-1 ;	//	FileType ������������܂���B
-		-	-1001 ;	//	FileType ������������܂���B
+		-	0 ;	//	解釈可能です。
+		-	-1 ;	//	FileType が正しくありません。
+		-	-1001 ;	//	FileType が正しくありません。
 	@note
-		FileType �̒l�𔻒肵�܂��B
+		FileType の値を判定します。
 	*/
 	int isEncodeAbleFormat( 
 			const std::string& aString  ) ;

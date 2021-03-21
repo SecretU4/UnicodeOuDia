@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -85,49 +85,49 @@ namespace entDgr{
 // ****************************************************************
 /**
 @brief
-	�y�T�v�z
-	CentDedDia ���̗�Ԃ́w���p���\�[�g�x�������s���N���X�B
+	【概要】
+	CentDedDia 内の列車の『乗り継ぎソート』処理を行うクラス。
 	
-	�y�g�����z
+	【使い方】
 	
-	1.  �R���X�g���N�^�ŃI�u�W�F�N�g�𐶐���A validate() ���Ăяo����
-	���������s���Ă��������B
-�@�@
-�@�@���@this �́A CentDedRessyaDia �ɑΉ����� CentDedDgrDia �I�u�W�F�N�g�ƁA
-�@�@�\�[�g�Ώۂ̗�Ԃ̐��莞����ێ����� CentDedRessyaCont �𐶐����܂��B
+	1.  コンストラクタでオブジェクトを生成後、 validate() を呼び出して
+	初期化を行ってください。
+　　
+　　※　this は、 CentDedRessyaDia に対応する CentDedDgrDia オブジェクトと、
+　　ソート対象の列車の推定時刻を保持した CentDedRessyaCont を生成します。
 	
-	2.�@sort() ���\�b�h���Ăяo���ƁAthis�́A�w�肳�ꂽ��ԃR���e�i�̂��ׂĂ̗�Ԃ��\�[�g���܂��B
+	2.　sort() メソッドを呼び出すと、thisは、指定された列車コンテナのすべての列車をソートします。
 
-	3.  CentDedDia�̗�ԃR���e�i���̗�Ԃ̓��e���ω�������Athis �̓��e�͖����ɂȂ�܂�
-	�@(1�{�̗�Ԃ�1�w�̉w�������ω����������ŁAthis�̓��e�͖����ɂȂ�܂�)�B
-	�@���̏ꍇ�́Ainvalidate() ���Ăяo���Ĉ�U this �����������A
-	 �ēx validate() ���Ăяo���āAthis�̓��e���X�V���Ȃ��Ă͂Ȃ�܂���B
+	3.  CentDedDiaの列車コンテナ内の列車の内容が変化したら、this の内容は無効になります
+	　(1本の列車の1駅の駅時刻が変化しただけで、thisの内容は無効になります)。
+	　この場合は、invalidate() を呼び出して一旦 this を初期化し、
+	 再度 validate() を呼び出して、thisの内容を更新しなくてはなりません。
 
 */
 class CDedRessyaSoater_Transfer : public CDedRessyaSoater
 {
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-		�\�[�g�̑ΏۂƂȂ��Ԃ��W�񂷂�H���I�u�W�F�N�g�B
+		ソートの対象となる列車を集約する路線オブジェクト。
 	*/
 	const CentDedRosen* m_pDedRosen ;
 
 	/**
-		�\�[�g�̑ΏۂƂȂ��Ԃ��W�񂷂�_�C���B
+		ソートの対象となる列車を集約するダイヤ。
 	*/
 	const CentDedDia* m_pDedDia ;
 
 	///@}
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-		�\�[�g�Ώۂ� �w����Order�B
+		ソート対象の 駅時刻Order。
 	*/
 	CdDedJikokuOrder  m_JikokuOrder ;  
 
@@ -135,59 +135,59 @@ private:
 
 	///@}
 	// ********************************
-	///@name �W��
+	///@name 集約
 	// ********************************
 	///@{
 	/**
-		�\�[�g�̑ΏۂƂȂ�_�C���̃I�u�W�F�N�g�B
-		validate() �ŁAm_pDedRosen�� m_pDedDia ��
-		���e�𔽉f���܂��B
+		ソートの対象となるダイヤのオブジェクト。
+		validate() で、m_pDedRosenと m_pDedDia の
+		内容を反映します。
 	*/
 	CentDedDgrDia m_CentDedDgrDia ;
 
 	///@}
 
 	// ********************************
-	///@name ���
+	///@name 状態
 	// ********************************
 	///@{
 	/**
-		validate() �ŏ��������Ă��� invalidate() �Ŕj������܂ł� true �B
+		validate() で初期化してから invalidate() で破棄するまでは true 。
 	*/
 	bool	m_bIsValid ;
 	///@}
 protected:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 	/**
-		�w�肳�ꂽ���ׂẴ\�[�g�O��Ԃɑ΂��āA
-		�u�w��̉wOrder�ŁA�\�[�g���Ԃ���\�[�g�O��Ԃɏ抷�����ł���v
-		�\�[�g���Ԃ�T���܂��B
+		指定されたすべてのソート前列車に対して、
+		「指定の駅Orderで、ソート後列車からソート前列車に乗換えができる」
+		ソート後列車を探します。
 
-		���̂悤�ȑg�ݍ��킹������������A
-		�\�[�g�O��Ԃ̗��Index���폜���A
-		�\�[�g���Ԃ̌�Ɉړ����܂��B
+		そのような組み合わせが見つかったら、
+		ソート前列車の列車Indexを削除し、
+		ソート後列車の後に移動します。
 	@param pEstimateRessyaCont[in]
-		�\�[�g�Ώۂ̗�Ԃ�ێ�����R���e�i�B
-		���̗�Ԃ́ACentDedDgrDia::createEstimateRessya2()�ɂ����
-		���莞�����ǉ����ꂽ��ԂłȂ��Ă͂Ȃ�܂���B
+		ソート対象の列車を保持するコンテナ。
+		この列車は、CentDedDgrDia::createEstimateRessya2()によって
+		推定時刻が追加された列車でなくてはなりません。
 	@param pcontRessyaIndexBeforeSort [in,out] 
-		�\�[�g�O��Ԃ̃C���f�N�X�̔z��
+		ソート前列車のインデクスの配列
 	@param pcontRessyaIndexAfterSort[in,out] 
-		�\�[�g���Ԃ̃C���f�N�X�̔z��
+		ソート後列車のインデクスの配列
 	@param iEkiOrder[in]
-		�抷�w�̉wOrder ���w�肵�Ă��������B
+		乗換駅の駅Order を指定してください。
 	@param pIfProgress [in]
-		�i����Ԃ̒ʒm���󂯂����ꍇ�́A�i����Ԓʒm���󂯎��
-		�C���X�^���X�ւ̃|�C���^���w�肵�Ă��������B
-		NULL�Ȃ�A���̊֐��͐i����Ԃ̒ʒm���s���܂���B
+		進捗状態の通知を受けたい場合は、進捗状態通知を受け取る
+		インスタンスへのポインタを指定してください。
+		NULLなら、この関数は進捗状態の通知を行いません。
 	@param iMaxTransferSec[in]
-		�ő�抷������(�b��)���w�肵�Ă��������B
-		INT_MAX���w�肷��ƁA�������ł��B
+		最大乗換え時間(秒数)を指定してください。
+		INT_MAXを指定すると、無制限です。
 	@return
-		true: �������f���v������܂����B
+		true: 処理中断が要求されました。
 	*/
 	bool sortRessyaIndex_TransferFromSortedRessyaAtEki( 
 		const CentDedRessyaCont* pEstimateRessyaCont ,
@@ -200,32 +200,32 @@ protected:
 
 
 	/**
-		�w�肳�ꂽ���ׂẴ\�[�g�O��Ԃɑ΂��āA
-		�u�w��̉wOrder�ŁA�\�[�g�O��Ԃ���\�[�g���Ԃɏ抷�����ł���v
-		�\�[�g���Ԃ�T���܂��B
+		指定されたすべてのソート前列車に対して、
+		「指定の駅Orderで、ソート前列車からソート後列車に乗換えができる」
+		ソート後列車を探します。
 
-		���̂悤�ȑg�ݍ��킹������������A
-		�\�[�g�O��Ԃ̗��Index���폜���A
-		�\�[�g���Ԃ̑O�Ɉړ����܂��B
+		そのような組み合わせが見つかったら、
+		ソート前列車の列車Indexを削除し、
+		ソート後列車の前に移動します。
 	@param pEstimateRessyaCont[in]
-		�\�[�g�Ώۂ̗�Ԃ�ێ�����R���e�i�B
-		���̗�Ԃ́ACentDedDgrDia::createEstimateRessya2()�ɂ����
-		���莞�����ǉ����ꂽ��ԂłȂ��Ă͂Ȃ�܂���B
+		ソート対象の列車を保持するコンテナ。
+		この列車は、CentDedDgrDia::createEstimateRessya2()によって
+		推定時刻が追加された列車でなくてはなりません。
 	@param pcontRessyaIndexBeforeSort [in,out] 
-		�\�[�g�O��Ԃ̃C���f�N�X�̔z��
+		ソート前列車のインデクスの配列
 	@param pcontRessyaIndexAfterSort[in,out] 
-		�\�[�g���Ԃ̃C���f�N�X�̔z��
+		ソート後列車のインデクスの配列
 	@param iEkiOrder[in]
-		�抷�w�̉wOrder ���w�肵�Ă��������B
+		乗換駅の駅Order を指定してください。
 	@param pIfProgress [in]
-		�i����Ԃ̒ʒm���󂯂����ꍇ�́A�i����Ԓʒm���󂯎��
-		�C���X�^���X�ւ̃|�C���^���w�肵�Ă��������B
-		NULL�Ȃ�A���̊֐��͐i����Ԃ̒ʒm���s���܂���B
+		進捗状態の通知を受けたい場合は、進捗状態通知を受け取る
+		インスタンスへのポインタを指定してください。
+		NULLなら、この関数は進捗状態の通知を行いません。
 	@param iMaxTransferSec[in]
-		�ő�抷������(�b��)���w�肵�Ă��������B
-		INT_MAX���w�肷��ƁA�������ł��B
+		最大乗換え時間(秒数)を指定してください。
+		INT_MAXを指定すると、無制限です。
 	@return
-		true: �������f���v������܂����B
+		true: 処理中断が要求されました。
 	*/
 	bool sortRessyaIndex_TransferToSortedRessyaAtEki( 
 		const CentDedRessyaCont* pEstimateRessyaCont ,
@@ -238,29 +238,29 @@ protected:
 
 
 	/**
-		�w�肳�ꂽ���ׂẴ\�[�g�O��Ԃɑ΂��āA
-		�u�w��̉wOrder�Ȍ�ŁA�\�[�g���Ԃ���\�[�g�O��Ԃɏ抷�����ł���v
-		�\�[�g���Ԃ����ׂĒT���܂��B
+		指定されたすべてのソート前列車に対して、
+		「指定の駅Order以後で、ソート後列車からソート前列車に乗換えができる」
+		ソート後列車をすべて探します。
 
-		���̂悤�ȑg�ݍ��킹������������A
-		�\�[�g�O��Ԃ̗��Index���폜���A
-		�\�[�g���Ԃ̌�Ɉړ����܂��B
+		そのような組み合わせが見つかったら、
+		ソート前列車の列車Indexを削除し、
+		ソート後列車の後に移動します。
 	@param pEstimateRessyaCont[in]
-		�\�[�g�Ώۂ̗�Ԃ�ێ�����R���e�i�B
-		���̗�Ԃ́ACentDedDgrDia::createEstimateRessya2()�ɂ����
-		���莞�����ǉ����ꂽ��ԂłȂ��Ă͂Ȃ�܂���B
+		ソート対象の列車を保持するコンテナ。
+		この列車は、CentDedDgrDia::createEstimateRessya2()によって
+		推定時刻が追加された列車でなくてはなりません。
 	@param pcontRessyaIndexBeforeSort [in,out] 
-		�\�[�g�O��Ԃ̃C���f�N�X�̔z��
+		ソート前列車のインデクスの配列
 	@param pcontRessyaIndexAfterSort[in,out] 
-		�\�[�g���Ԃ̃C���f�N�X�̔z��
+		ソート後列車のインデクスの配列
 	@param iEkijikokuOrder[in]
-		�\�[�g�̃L�[�ƂȂ�A�wOrder ���w�肵�Ă��������B
+		ソートのキーとなる、駅Order を指定してください。
 	@param pIfProgress [in]
-		�i����Ԃ̒ʒm���󂯂����ꍇ�́A�i����Ԓʒm���󂯎��
-		�C���X�^���X�ւ̃|�C���^���w�肵�Ă��������B
-		NULL�Ȃ�A���̊֐��͐i����Ԃ̒ʒm���s���܂���B
+		進捗状態の通知を受けたい場合は、進捗状態通知を受け取る
+		インスタンスへのポインタを指定してください。
+		NULLなら、この関数は進捗状態の通知を行いません。
 	@return
-		true: �������f���v������܂����B
+		true: 処理中断が要求されました。
 	*/
 	bool sortRessyaIndex_TransferFromSortedRessya( 
 		const CentDedRessyaCont* pEstimateRessyaCont ,
@@ -270,29 +270,29 @@ protected:
 		IfProgress* pIfProgress ) ;
 
 	/**
-		�w�肳�ꂽ���ׂẴ\�[�g�O��Ԃɑ΂��āA
-		�u�w��̉wOrder�ȑO�ŁA�\�[�g�O��Ԃ���\�[�g���Ԃɏ抷�����ł���v
-		�\�[�g���Ԃ����ׂĒT���܂��B
+		指定されたすべてのソート前列車に対して、
+		「指定の駅Order以前で、ソート前列車からソート後列車に乗換えができる」
+		ソート後列車をすべて探します。
 
-		���̂悤�ȑg�ݍ��킹������������A
-		�\�[�g�O��Ԃ̗��Index���폜���A
-		�\�[�g���Ԃ̑O�Ɉړ����܂��B
+		そのような組み合わせが見つかったら、
+		ソート前列車の列車Indexを削除し、
+		ソート後列車の前に移動します。
 	@param pEstimateRessyaCont[in]
-		�\�[�g�Ώۂ̗�Ԃ�ێ�����R���e�i�B
-		���̗�Ԃ́ACentDedDgrDia::createEstimateRessya2()�ɂ����
-		���莞�����ǉ����ꂽ��ԂłȂ��Ă͂Ȃ�܂���B
+		ソート対象の列車を保持するコンテナ。
+		この列車は、CentDedDgrDia::createEstimateRessya2()によって
+		推定時刻が追加された列車でなくてはなりません。
 	@param pcontRessyaIndexBeforeSort [in,out] 
-		�\�[�g�O��Ԃ̃C���f�N�X�̔z��
+		ソート前列車のインデクスの配列
 	@param pcontRessyaIndexAfterSort[in,out] 
-		�\�[�g���Ԃ̃C���f�N�X�̔z��
+		ソート後列車のインデクスの配列
 	@param iEkijikokuOrder[in]
-		�\�[�g�̃L�[�ƂȂ�A�wOrder ���w�肵�Ă��������B
+		ソートのキーとなる、駅Order を指定してください。
 	@param pIfProgress [in]
-		�i����Ԃ̒ʒm���󂯂����ꍇ�́A�i����Ԓʒm���󂯎��
-		�C���X�^���X�ւ̃|�C���^���w�肵�Ă��������B
-		NULL�Ȃ�A���̊֐��͐i����Ԃ̒ʒm���s���܂���B
+		進捗状態の通知を受けたい場合は、進捗状態通知を受け取る
+		インスタンスへのポインタを指定してください。
+		NULLなら、この関数は進捗状態の通知を行いません。
 	@return
-		true: �������f���v������܂����B
+		true: 処理中断が要求されました。
 	*/
 	bool sortRessyaIndex_TransferToSortedRessya( 
 		const CentDedRessyaCont* pEstimateRessyaCont ,
@@ -303,21 +303,21 @@ protected:
 	///@}
 
 	/**
-		�����w��2�̉w�����Ƃ̊Ԃł̏�芷�����Ԃ��v�Z���܂��B
+		同じ駅の2つの駅時刻との間での乗り換え時間を計算します。
 	@param aEkijikokuFrom [in]
-		��芷�����̗�Ԃ̉w�������w�肵�Ă��������B
+		乗り換え元の列車の駅時刻を指定してください。
 	@param aEkijikokuTo [in]
-		��芷����̗�Ԃ̉w�������w�肵�Ă��������B
+		乗り換え先の列車の駅時刻を指定してください。
 	@param jikokuKitenJikoku [in]
-		�_�C���O�����N�_�������w�肵�Ă��������B
-		���̊֐��́A���̎������z�����芷���͕s�\�Ƃ݂Ȃ��܂��B
-		(��F���̎�����5:00���w�肳�ꂽ�ꍇ�́A5:00<23:59<0:00<4:59 �Ƃ��Ĕ�r���s���܂�)
+		ダイヤグラム起点時刻を指定してください。
+		この関数は、この時刻を越える乗り換えは不可能とみなします。
+		(例：この時刻に5:00が指定された場合は、5:00<23:59<0:00<4:59 として比較を行います)
 	@return
-		�����w��2�̉w�����Ƃ̊Ԃł̏�芷������(�b��)��Ԃ��܂��B
-		��芷���s�\�ȏꍇ�� -1 ��Ԃ��܂��B
+		同じ駅の2つの駅時刻との間での乗り換え時間(秒数)を返します。
+		乗り換え不可能な場合は -1 を返します。
 
-		�ȉ��̏ꍇ�͏�芷���s�\�Ƃ��āA-1��Ԃ��܂��B	
-			- �ǂ��炩�̉w�����u��ԁv�łȂ��ꍇ�B
+		以下の場合は乗り換え不可能として、-1を返します。	
+			- どちらかの駅扱が「停車」でない場合。
 	*/
 	static int calcNorikaeSec( 
 		const CentDedEkiJikoku& aEkiJikokuFrom , 
@@ -325,26 +325,26 @@ protected:
 		const CdDedJikoku& jikokuKitenJikoku ) ;
 protected:
 	// ================================
-	///@name CDedRessyaSoater::sort �̉����֐�
+	///@name CDedRessyaSoater::sort の下請関数
 	// ================================
 	///@{
 	/**
-		�w�肳�ꂽ���Index���\�[�g���܂��B
+		指定された列車Indexをソートします。
 	@param pRessyaCont [in]
-		�\�[�g�Ώۂ̗�ԃR���e�i���w�肵�Ă��������B
+		ソート対象の列車コンテナを指定してください。
 	@param muRessyaIndexOrder [in,out]
-		�\�[�g���s�����Index��ێ������R���e�i���w�肵�Ă��������B
-		(��F���Index0�`4���\�[�g�������ꍇ�́A
-		{0,1,2,3,4} ��5�̗v�f�����R���e�i���w�肵�Ă��������B
-		���̊֐��͂��̔z����A�w����Order���̑������Index���Ƀ\�[�g���܂��B
+		ソートを行う列車Indexを保持したコンテナを指定してください。
+		(例：列車Index0～4をソートしたい場合は、
+		{0,1,2,3,4} の5つの要素を持つコンテナを指定してください。
+		この関数はこの配列を、駅時刻Order順の早い列車Index順にソートします。
 	@param pIfProgress [in]
-		�i����Ԃ̒ʒm���󂯂����ꍇ�́A�i����Ԓʒm���󂯎��
-		�C���X�^���X�ւ̃|�C���^���w�肵�Ă��������B
-		NULL�Ȃ�A���̊֐��͐i����Ԃ̒ʒm���s���܂���B
+		進捗状態の通知を受けたい場合は、進捗状態通知を受け取る
+		インスタンスへのポインタを指定してください。
+		NULLなら、この関数は進捗状態の通知を行いません。
 	@note 
-		���̊֐��œ����\�[�g���ʂ�
-		sortWithSortedRessyaIndex() �ɓn�����Ƃɂ��A
-		��ԃR���e�i���\�[�g���邱�Ƃ��ł��܂��B
+		この関数で得たソート結果を
+		sortWithSortedRessyaIndex() に渡すことにより、
+		列車コンテナをソートすることができます。
 
 	*/
 	virtual void sortRessyaIndex( 
@@ -355,15 +355,15 @@ protected:
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
-�@	@param pDedRosen [in]
-		�\�[�g�̑ΏۂƂȂ��Ԃ��W�񂷂�H���I�u�W�F�N�g�B
+　	@param pDedRosen [in]
+		ソートの対象となる列車を集約する路線オブジェクト。
 	@param iDiaIndex [in]
-		�\�[�g�̑ΏۂƂȂ��Ԃ��W�񂷂�_�C���B
+		ソートの対象となる列車を集約するダイヤ。
 	@param aCdDedJikokuOrder[in]
-		�\�[�g�Ώۂ� �w����Order�B
+		ソート対象の 駅時刻Order。
 	*/
 	CDedRessyaSoater_Transfer(
 		const CentDedRosen* pDedRosen , 
@@ -374,46 +374,46 @@ public:
 	
 public:
 	// ********************************
-	///@name CDedRessyaSoater_Transfer-����
+	///@name CDedRessyaSoater_Transfer-属性
 	// ********************************
 	///@{
 	///@}
 	// ********************************
-	///@name CDedRessyaSoater_Transfer-�W��
+	///@name CDedRessyaSoater_Transfer-集約
 	// ********************************
 	///@{
 	///@}
 	// ********************************
-	///@name CDedRessyaSoater_Transfer-����-IfValidate
+	///@name CDedRessyaSoater_Transfer-操作-IfValidate
 	// ********************************
 	///@{
 	/**
-	 	�@�I�u�W�F�N�g�̏����������s���A�L�������܂��B
-	 	�@���������ɂ������ĕK�v�ȃp�����[�^�́A�R���X�g���N�^�Ȃǂ�
-	 	�w�肵�Ă���
-	 	�K�v������܂��B
+	 	　オブジェクトの準備処理を行い、有効化します。
+	 	　準備処理にあたって必要なパラメータは、コンストラクタなどで
+	 	指定している
+	 	必要があります。
 	 @return
-	 	�@�L�����ɐ���������P�ȏ�A
-	 	�@���łɗL�������I�����Ă����ꍇ�͂O�A
-	 	�@�G���[�̏ꍇ�͕��̐���Ԃ��܂��B\n
-	 	�@���������Ƃ��̂P�ȏ�̒l�̈Ӗ��́A��������N���X�����R�ɒ�`
-	 	�ł��܂��B\n
-	 	�@���s�����Ƃ��̕��̐��̈Ӗ����A�����N���X����`�ł��܂��B����ɂ��A
-	 	���s�̗��R���ƂɈقȂ�G���[�l��Ԃ����Ƃ��ł��܂��B
+	 	　有効化に成功したら１以上、
+	 	　すでに有効化が終了していた場合は０、
+	 	　エラーの場合は負の数を返します。\n
+	 	　成功したときの１以上の値の意味は、実装するクラスが自由に定義
+	 	できます。\n
+	 	　失敗したときの負の数の意味も、実装クラスが定義できます。これにより、
+	 	失敗の理由ごとに異なるエラー値を返すことができます。
 	 	
 	 */
 	virtual int validate()  ;
 	
 	/**
-	 	�@�I�u�W�F�N�g�𖳌������܂��B
-	 	�@�L�������Ɋm�ۂ������\�[�X���J�����܂��B
-	 	  �L����ԂłȂ��I�u�W�F�N�g�ɑ΂��ẮA�Ȃɂ����܂���B
+	 	　オブジェクトを無効化します。
+	 	　有効化時に確保したリソースを開放します。
+	 	  有効状態でないオブジェクトに対しては、なにもしません。
 	 */
 	virtual void invalidate() ;
 	
 	/**
 	 @return
-	 	�@���݃I�u�W�F�N�g���L����Ԃł���ΐ^��Ԃ��܂��B
+	 	　現在オブジェクトが有効状態であれば真を返します。
 	 */
 	virtual bool isValid() ;
 	///@}

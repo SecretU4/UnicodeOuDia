@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -86,69 +86,69 @@ namespace Print{
 // ****************************************************************
 /**
  *	@brief
- *	CdPrintPageProp �I�u�W�F�N�g�̑������A���̌`���ɕϊ����铮���񋟂��܂��B
+ *	CdPrintPageProp オブジェクトの属性を、他の形式に変換する動作を提供します。
  */
 class CconvCdPrintPageProp
 {
  public:
 	/**
-	 *	CdPrintPageProp �̌��݂̗]��
+	 *	CdPrintPageProp の現在の余白
 	 *	(m_dMarginLeftMm ,  m_dMarginTopMm , 
-	 *	m_dMarginRightMm , m_dMarginBottomMm )�̑��������ƂɁA
-	 *	�v�����^�̕������W����]�������������W�̈�����߂܂��B
+	 *	m_dMarginRightMm , m_dMarginBottomMm )の属性をもとに、
+	 *	プリンタの物理座標から余白を除いた座標領域を求めます。
 	 *
 	 * @param aCdPrintPageProp [in]
-	 *	�]���̐ݒ��ێ����Ă��� CdPrintPageProp �I�u�W�F�N�g��
-	 *	�w�肵�Ă��������B
+	 *	余白の設定を保持している CdPrintPageProp オブジェクトを
+	 *	指定してください。
 	 * @param hDc [in]
-	 *	�v�����^��DC���w�肵�Ă��������B
+	 *	プリンタのDCを指定してください。
 	 * @return 
-	 *	�v�����^�̃f�o�C�X���W����A�]�������������W�̈�
-	 *	��Ԃ��܂��B
+	 *	プリンタのデバイス座標から、余白を除いた座標領域
+	 *	を返します。
 	 *
-	 *	X�����̗]�����傫������ꍇ	(m_dMarginLeftMm +m_dMarginRightMm ��
-	 *	�v�����^�̉������̗p���̑傫��������ꍇ�j�́A
-	 *	�߂�l�� CdDcdZone::getX().getSize() �̒l�����̐��ɂȂ�܂��B
-	 *	���̏ꍇ�́A���炩�̃G���[���������ׂ��ł��B
+	 *	X方向の余白が大きすぎる場合	(m_dMarginLeftMm +m_dMarginRightMm が
+	 *	プリンタの横方向の用紙の大きさを上回る場合）は、
+	 *	戻り値の CdDcdZone::getX().getSize() の値が負の数になります。
+	 *	この場合は、何らかのエラー処理をすべきです。
 	 *
-	 *	���l�ɁAY�����̗]�����傫������ꍇ�́A
-	 *	�߂�l�� CdDcdZone::getY().getSize() �̒l�����̐��ɂȂ�܂��B
+	 *	同様に、Y方向の余白が大きすぎる場合は、
+	 *	戻り値の CdDcdZone::getY().getSize() の値が負の数になります。
 	 *
-	 *	�������̗]�����A�v�����^�̍����̈󎚕s�\�̈�̕���菬�����ꍇ�́A
-	 *	���ۂ̗]���͈󎚕s�\�̈�̕��ƂȂ�܂��B���̓���́A�E�E��E��
-	 *	�̗]���ɂ����Ă͂܂�܂��B
+	 *	左方向の余白が、プリンタの左側の印字不可能領域の幅より小さい場合は、
+	 *	実際の余白は印字不可能領域の幅となります。この動作は、右・上・下
+	 *	の余白にもあてはまります。
 	 */
 	CdDcdZoneXy calcZoneInnerMargin( 
 		const CdPrintPageProp& aCdPrintPageProp , HDC hDc ) ;
 	
 	
 	/**
-	 *	�v�����^DC �ł́A
-	 *	X�����̊e�T�C�Y���A�f�o�C�X�P�ʂŎ擾���܂��B
-	 *	Win32 �� GetDeviceCaps() �̃��b�p�[�ł���Ƃ����܂��B
+	 *	プリンタDC での、
+	 *	X方向の各サイズを、デバイス単位で取得します。
+	 *	Win32 の GetDeviceCaps() のラッパーであるといえます。
 	 * @param hDc [in]
-	 *	�v�����^��DC���w�肵�Ă��������B
+	 *	プリンタのDCを指定してください。
 	 * @param piPhysicalPageSize [out]
-	 *	���̊֐��́A
-	 *	���[�̈󎚕s�\�̈���܂߂��A
-	 *	�����I�ȃy�[�W�i�v�����^�̗p���j�̑傫��
-	 *	���A���̃A�h���X�ɏ������݂܂��B�s�v�ł���� NULL ���w�肵�Ă�
-	 *	���܂��܂���B
+	 *	この関数は、
+	 *	両端の印字不可能領域を含めた、
+	 *	物理的なページ（プリンタの用紙）の大きさ
+	 *	を、このアドレスに書き込みます。不要であれば NULL を指定しても
+	 *	かまいません。
 	 * @param piPhysicalOffset1 [out]
-	 *	���̊֐��́A
-	 *	���W�̏��������i�����j�̈󎚕s�\�̈�̑傫��
-	 *	���A���̃A�h���X�ɏ������݂܂��B�s�v�ł���� NULL ���w�肵�Ă�
-	 *	���܂��܂���B
+	 *	この関数は、
+	 *	座標の小さい側（左側）の印字不可能領域の大きさ
+	 *	を、このアドレスに書き込みます。不要であれば NULL を指定しても
+	 *	かまいません。
 	 * @param piRes [out]
-	 *	���̊֐��́A
-	 *	�󎚉\�̈�̑傫��
-	 *	���A���̃A�h���X�ɏ������݂܂��B�s�v�ł���� NULL ���w�肵�Ă�
-	 *	���܂��܂���B
+	 *	この関数は、
+	 *	印字可能領域の大きさ
+	 *	を、このアドレスに書き込みます。不要であれば NULL を指定しても
+	 *	かまいません。
 	 * @param piPhysicalOffset2 [out]
-	 *	���̊֐��́A
-	 *	���W�̑傫�����i�E���j�̈󎚕s�\�̈�̑傫��
-	 *	���A���̃A�h���X�ɏ������݂܂��B�s�v�ł���� NULL ���w�肵�Ă�
-	 *	���܂��܂���B
+	 *	この関数は、
+	 *	座標の大きい側（右側）の印字不可能領域の大きさ
+	 *	を、このアドレスに書き込みます。不要であれば NULL を指定しても
+	 *	かまいません。
 	 */
 	static void getPhysicalXPageSize( HDC hDc , 
 		int* piPhysicalPageSize ,
@@ -157,32 +157,32 @@ class CconvCdPrintPageProp
 		int* piPhysicalOffset2 ) ;
 
 	/**
-	 *	�v�����^DC �ł́A
-	 *	Y�����̊e�T�C�Y���A�f�o�C�X�P�ʂŎ擾���܂��B
-	 *	Win32 �� GetDeviceCaps() �̃��b�p�[�ł���Ƃ����܂��B
+	 *	プリンタDC での、
+	 *	Y方向の各サイズを、デバイス単位で取得します。
+	 *	Win32 の GetDeviceCaps() のラッパーであるといえます。
 	 * @param hDc [in]
-	 *	�v�����^��DC���w�肵�Ă��������B
+	 *	プリンタのDCを指定してください。
 	 * @param piPhysicalPageSize [out]
-	 *	���̊֐��́A
-	 *	���[�̈󎚕s�\�̈���܂߂��A
-	 *	�����I�ȃy�[�W�i�v�����^�̗p���j�̑傫��
-	 *	���A���̃A�h���X�ɏ������݂܂��B�s�v�ł���� NULL ���w�肵�Ă�
-	 *	���܂��܂���B
+	 *	この関数は、
+	 *	両端の印字不可能領域を含めた、
+	 *	物理的なページ（プリンタの用紙）の大きさ
+	 *	を、このアドレスに書き込みます。不要であれば NULL を指定しても
+	 *	かまいません。
 	 * @param piPhysicalOffset1 [out]
-	 *	���̊֐��́A
-	 *	���W�̏��������i�㑤�j�̈󎚕s�\�̈�̑傫��
-	 *	���A���̃A�h���X�ɏ������݂܂��B�s�v�ł���� NULL ���w�肵�Ă�
-	 *	���܂��܂���B
+	 *	この関数は、
+	 *	座標の小さい側（上側）の印字不可能領域の大きさ
+	 *	を、このアドレスに書き込みます。不要であれば NULL を指定しても
+	 *	かまいません。
 	 * @param piRes [out]
-	 *	���̊֐��́A
-	 *	�󎚉\�̈�̑傫��
-	 *	���A���̃A�h���X�ɏ������݂܂��B�s�v�ł���� NULL ���w�肵�Ă�
-	 *	���܂��܂���B
+	 *	この関数は、
+	 *	印字可能領域の大きさ
+	 *	を、このアドレスに書き込みます。不要であれば NULL を指定しても
+	 *	かまいません。
 	 * @param piPhysicalOffset2 [out]
-	 *	���̊֐��́A
-	 *	���W�̑傫�����i�����j�̈󎚕s�\�̈�̑傫��
-	 *	���A���̃A�h���X�ɏ������݂܂��B�s�v�ł���� NULL ���w�肵�Ă�
-	 *	���܂��܂���B
+	 *	この関数は、
+	 *	座標の大きい側（下側）の印字不可能領域の大きさ
+	 *	を、このアドレスに書き込みます。不要であれば NULL を指定しても
+	 *	かまいません。
 	 */
 	static void getPhysicalYPageSize( HDC hDc , 
 		int* piPhysicalPageSize ,

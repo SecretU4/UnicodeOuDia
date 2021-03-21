@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// cdeddiagramview.cpp : �C���v�������e�[�V���� �t�@�C��
+// cdeddiagramview.cpp : インプリメンテーション ファイル
 //	$Id: CDedDiagramView.cpp 295 2016-06-11 05:14:13Z okm $
 
 #include "stdafx.h"
@@ -95,12 +95,12 @@ using namespace DcDrawLib::DcDrawMfc;
 /////////////////////////////////////////////////////////////////////////////
 // CDedDiagramView
 /**
-	�_�C���O�������W�̋��e�덷�l
+	ダイヤグラム座標の許容誤差値
 */
 const int ALLOWED_DIFFERENCE = 1 ;
 
 // --------------------------------
-//@name OnUpdate�����֐�
+//@name OnUpdate下請関数
 // --------------------------------
 void CDedDiagramView::OnUpdate_All() 
 {
@@ -108,7 +108,7 @@ void CDedDiagramView::OnUpdate_All()
 
 	LogMsg( "CDedDiagramView::OnUpdate_All()" ) ; 
 	// --------------------------------
-	//	�w�_�C���O�����w�x�I�u�W�F�N�g�𐶐�
+	//	『ダイヤグラム駅』オブジェクトを生成
 	// --------------------------------
 	const CentDedRosen* pCentDedRosen = getCDiagramEditDoc()->getCDedRosenFileData()->getCentDedRosen() ;
 
@@ -149,7 +149,7 @@ void CDedDiagramView::OnUpdate_CentDedRessya(
 	const CentDedRessyaCont*	pCentDedRessyaContSrc = 
 		pCommand->getCentDedRessyaContSrc() ;
 	// --------------------------------
-	//	�������̗v�f�̍폜
+	//	減少分の要素の削除
 	// --------------------------------
 	int iGensyouSize = pCommand->getSizeDst() - pCentDedRessyaContSrc->size() ;
 	if ( iGensyouSize > 0 ){
@@ -160,7 +160,7 @@ void CDedDiagramView::OnUpdate_CentDedRessya(
 		}
 	}
 	// --------------------------------
-	//	�v�f�̒u��
+	//	要素の置換
 	// --------------------------------
 	int iOkikaeSize = 0 ;
 	iOkikaeSize = min( pCommand->getSizeDst() , pCentDedRessyaContSrc->size() ) ;
@@ -186,7 +186,7 @@ void CDedDiagramView::OnUpdate_CentDedRessya(
 		}
 	}
 	// --------------------------------
-	//	�������̗v�f�̒ǉ�
+	//	増加分の要素の追加
 	// --------------------------------
 	int iZoukaSize = pCentDedRessyaContSrc->size() - pCommand->getSizeDst() ;
 	if ( iZoukaSize > 0 ){
@@ -216,62 +216,62 @@ void CDedDiagramView::OnUpdate_CentDedRessya(
 
 
 /**
-  ����(�␳�Ώےl)���A�����P�ʂ̔{���}��(�덷���e�l) �Ȃ�A
-  �Ŋ�̑����P�ʂ̔{�����x�̒l�ɕ␳���܂��B
+  整数(補正対象値)が、増減単位の倍数±α(誤差許容値) なら、
+  最寄の増減単位の倍数丁度の値に補正します。
 
-(��)iUnit=5,iAllowedDifference=1 �̏ꍇ�Avalue�ɑ΂��錋�ʂ͈ȉ��̂Ƃ���ł��B
+(例)iUnit=5,iAllowedDifference=1 の場合、valueに対する結果は以下のとおりです。
 
-�@- value=3 �Ȃ� return=3
-�@- value=4 �Ȃ� return=5
-�@- value=5 �Ȃ� return=5
-�@- value=6 �Ȃ� return=5
-�@- value=7 �Ȃ� return=7
+　- value=3 なら return=3
+　- value=4 なら return=5
+　- value=5 なら return=5
+　- value=6 なら return=5
+　- value=7 なら return=7
 
 
-�@���̊֐��́A�ȉ��̂��߂Ɏg���܂��B
+　この関数は、以下のために使います。
 
-	�uCDcdDiagram::getZone_Dgr()�Ŏ擾����(�`��͈͂̕�(�_�C���O�������W�n))��
-	�����P�ʂ̔{���}��(�덷���e�l)�Ȃ�A(�`��͈͂̕�(�_�C���O�������W�n))��
-	�Ŋ�̑����P�ʂ̔{�����x�̒l�ɕ␳����v
+	「CDcdDiagram::getZone_Dgr()で取得した(描画範囲の幅(ダイヤグラム座標系))が
+	増減単位の倍数±α(誤差許容値)なら、(描画範囲の幅(ダイヤグラム座標系))を
+	最寄の増減単位の倍数丁度の値に補正する」
 
 @param value [in]
-	�␳�Ώےl���w�肵�Ă��������B�͈͂�0�ȏ�ł��B
+	補正対象値を指定してください。範囲は0以上です。
 @param iUnit [in]
-	�����P�ʂ��w�肵�Ă��������B�͈͂�1�ȏ�ł��B
+	増減単位を指定してください。範囲は1以上です。
 @param iAllowedDifference [in]
-	�덷���e�l
+	誤差許容値
 @return
-	�␳���ꂽ�l��Ԃ��܂��B
+	補正された値を返します。
 */
 static int adjustForNearestUnit( int value , int iUnit , int iAllowedDifference ) 
 {
 
-	//�␳�P�F(���ݒl%�����P��)��(�덷���e�l) �Ȃ�A
-	//�@���ݒl=���ݒl-(���ݒl%�����P��)
+	//補正１：(現在値%増減単位)≦(誤差許容値) なら、
+	//　現在値=現在値-(現在値%増減単位)
 	//
-	//(��)
-	//�@�����P��=1800
-	//�@���ݒl=1801
-	//�@(�덷���e�l)=1
-	//�̏ꍇ
-	//�@(1801%1800)=1 (���ݒl%�����P��)
-	//�@1801-(1801%1800)=1800
+	//(例)
+	//　増減単位=1800
+	//　現在値=1801
+	//　(誤差許容値)=1
+	//の場合
+	//　(1801%1800)=1 (現在値%増減単位)
+	//　1801-(1801%1800)=1800
 	//
 	if ( value % iUnit <= iAllowedDifference )
 	{
 		value = value - ( value % iUnit ) ; 
 	}
 
-	//�␳�Q�F(���ݒl%�����P��)��(�����P��-�덷���e�l) �Ȃ�A
-	//�@���ݒl=���ݒl+(�����P��-(���ݒl%�����P��))
+	//補正２：(現在値%増減単位)≧(増減単位-誤差許容値) なら、
+	//　現在値=現在値+(増減単位-(現在値%増減単位))
 	//
-	//(��)
-	//�@�����P��=1800
-	//�@���ݒl=3599
-	//�@(�덷���e�l)=1
-	//�̏ꍇ
-	//�@(3599%1800)=1799 (���ݒl%�����P��)
-	//�@3599+(1800-(3599%1800))=3600
+	//(例)
+	//　増減単位=1800
+	//　現在値=3599
+	//　(誤差許容値)=1
+	//の場合
+	//　(3599%1800)=1799 (現在値%増減単位)
+	//　3599+(1800-(3599%1800))=3600
 	else if ( ( value % iUnit ) >= ( iUnit - iAllowedDifference ) )
 	{
 		value = value + ( iUnit - ( value % iUnit ) ) ; 
@@ -282,7 +282,7 @@ static int adjustForNearestUnit( int value , int iUnit , int iAllowedDifference 
 
 
 	// --------------------------------
-	//@param ���b�Z�[�W �}�b�v�֐��̉����֐�
+	//@param メッセージ マップ関数の下請関数
 	// --------------------------------
 int CDedDiagramView::OnDiagramXDgrSizeInc_Process( BOOL bQueryEnable )
 {
@@ -290,16 +290,16 @@ int CDedDiagramView::OnDiagramXDgrSizeInc_Process( BOOL bQueryEnable )
 	CString	strErrorMsg ;	
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
-	//	���������k��
+	//	横軸方向縮小
 	CdDcdZoneXy	zonexyCWndDiagram_Dgr = m_pCWndDiagram->getZone_Dgr() ;
 	CdDcdZone	zoneCWndDiagram_Dgr = zonexyCWndDiagram_Dgr.getX() ;
 
-	//	�E�C���h�E�ւ̕\���͈͂̑����P�ʂ��Z�o
+	//	ウインドウへの表示範囲の増減単位を算出
 	//	
-	//	�_�C���O�����S�̂���ʓ��Ɏ��܂��Ă��Ȃ��ꍇ:30��
-	//	�_�C���O�����S�̂���ʓ��Ɏ��܂��Ă���ꍇ  :12����
+	//	ダイヤグラム全体が画面内に収まっていない場合:30分
+	//	ダイヤグラム全体が画面内に収まっている場合  :12時間
 	int iUnit = 30*60 ;
 	if ( iRv >= 0 )
 	{
@@ -310,27 +310,27 @@ int CDedDiagramView::OnDiagramXDgrSizeInc_Process( BOOL bQueryEnable )
 		}
 		if ( iUnit == 0 )
 		{
-			iUnit = 1 ;	//	���Ƃ̊���Z�ɔ����āA0 �� 1 �ɂ��Ă����܂��B
+			iUnit = 1 ;	//	あとの割り算に備えて、0 は 1 にしておきます。
 		}
 	}
-		//iUnit = �E�C���h�E�ւ̕\���͈͂̑����P��(�_�C���O�����G���e�B�e�BX���W)
+		//iUnit = ウインドウへの表示範囲の増減単位(ダイヤグラムエンティティX座標)
 
-	//	�`��͈͂̕�(�_�C���O�������W�n)�������P�ʂ̔{���ɋ߂��ꍇ�́A
-	//	�����P�ʂ̔{�����x�̒l�ɕ␳����
-	//	����́ACDcdDiagram �ɑ΂��� setZone_Dgr() �Őݒ肵��
-	//	�w�`����s���̈�͈̔�(�_�C���O�����G���e�B�e�B���W�n)�x�� 
-	//	getZone_Dgr() �Ŏ擾�����l����v���Ȃ��ꍇ�����邽�߂ł��B
+	//	描画範囲の幅(ダイヤグラム座標系)が増減単位の倍数に近い場合は、
+	//	増減単位の倍数丁度の値に補正する
+	//	これは、CDcdDiagram に対して setZone_Dgr() で設定した
+	//	『描画を行う領域の範囲(ダイヤグラムエンティティ座標系)』と 
+	//	getZone_Dgr() で取得した値が一致しない場合があるためです。
 	zoneCWndDiagram_Dgr.setSize( 
 		adjustForNearestUnit( 
 			zoneCWndDiagram_Dgr.getSize() , iUnit , ALLOWED_DIFFERENCE ) ) ;
 
 	if ( iRv >= 0 )
 	{
-		//	�E�C���h�E��Ƀ_�C���O�������\������Ă��Ȃ��ꍇ�́A
-		//	X�����̕\���͈͕͂ύX�ł��܂���B
+		//	ウインドウ上にダイヤグラムが表示されていない場合は、
+		//	X方向の表示範囲は変更できません。
 		if ( m_pCWndDiagram->calcDiagramZoneDcd().getX().getSize() <= 0 )
 		{
-			iRv = -2 ;	//	�_�C���O�����͕\������Ă��܂���B
+			iRv = -2 ;	//	ダイヤグラムは表示されていません。
 		}
 	}
 	if ( iRv >= 0 )
@@ -338,8 +338,8 @@ int CDedDiagramView::OnDiagramXDgrSizeInc_Process( BOOL bQueryEnable )
 		if ( zoneCWndDiagram_Dgr.getEndPos() >= 
 			m_pCentDedDgrDia->getZone().getX().getEndPos() )
 		{
-			//	����ȏ�\���͈͂��L���邱�Ƃ͂ł��܂���B
-			iRv = -1 ;	//���݂͎��s�ł��܂���(�G���[���b�Z�[�W�͕\�����܂���)
+			//	これ以上表示範囲を広げることはできません。
+			iRv = -1 ;	//現在は実行できません(エラーメッセージは表示しません)
 		}
 	}
 
@@ -347,7 +347,7 @@ int CDedDiagramView::OnDiagramXDgrSizeInc_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		DcdSize	iDcdSize = zoneCWndDiagram_Dgr.getSize() ;
 		int iMod = iDcdSize % (iUnit) ;
@@ -368,7 +368,7 @@ int CDedDiagramView::OnDiagramXDgrSizeInc_Process( BOOL bQueryEnable )
 		{
 			switch( iRv )
 			{
-			case -1 :	//	���݂͎��s�ł��܂���B(�G���[���b�Z�[�W�͕\�����܂���)
+			case -1 :	//	現在は実行できません。(エラーメッセージは表示しません)
 				break ;
 			default:
 				strErrorMsg.Format( _T( "Error %d") , iRv ) ;
@@ -380,7 +380,7 @@ int CDedDiagramView::OnDiagramXDgrSizeInc_Process( BOOL bQueryEnable )
 			}
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -393,16 +393,16 @@ int CDedDiagramView::OnDiagramXDgrSizeDec_Process( BOOL bQueryEnable )
 	int iRv = 0 ;
 	CString	strErrorMsg ;	
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	// 
 	CdDcdZoneXy	zonexyCWndDiagram_Dgr = m_pCWndDiagram->getZone_Dgr() ;
 	CdDcdZone	zoneCWndDiagram_Dgr = zonexyCWndDiagram_Dgr.getX() ;
 
-	//	�E�C���h�E�ւ̕\���͈͂̑����P�ʂ��Z�o
+	//	ウインドウへの表示範囲の増減単位を算出
 	//	
-	//	�_�C���O�����S�̂���ʓ��Ɏ��܂��Ă��Ȃ��ꍇ:30��
-	//	�_�C���O�����S�̂���ʓ��Ɏ��܂��Ă���ꍇ  :12����
+	//	ダイヤグラム全体が画面内に収まっていない場合:30分
+	//	ダイヤグラム全体が画面内に収まっている場合  :12時間
 	int iUnit = 30*60 ;
 	if ( iRv >= 0 )
 	{
@@ -413,43 +413,43 @@ int CDedDiagramView::OnDiagramXDgrSizeDec_Process( BOOL bQueryEnable )
 		}
 		if ( iUnit == 0 )
 		{
-			iRv = -2 ;	//	�_�C���O�����͕\������Ă��܂���B
+			iRv = -2 ;	//	ダイヤグラムは表示されていません。
 		}
 	}
-		//iUnit=�E�C���h�E�ւ̕\���͈͂̑����P��(�_�C���O�����G���e�B�e�BX���W)
+		//iUnit=ウインドウへの表示範囲の増減単位(ダイヤグラムエンティティX座標)
 
 
-	//	�`��͈͂̕�(�_�C���O�������W�n)�������P�ʂ̔{���ɋ߂��ꍇ�́A
-	//	�����P�ʂ̔{�����x�̒l�ɕ␳����
-	//	����́ACDcdDiagram �ɑ΂��� setZone_Dgr() �Őݒ肵��
-	//	�w�`����s���̈�͈̔�(�_�C���O�����G���e�B�e�B���W�n)�x�� 
-	//	getZone_Dgr() �Ŏ擾�����l����v���Ȃ��ꍇ�����邽�߂ł��B
+	//	描画範囲の幅(ダイヤグラム座標系)が増減単位の倍数に近い場合は、
+	//	増減単位の倍数丁度の値に補正する
+	//	これは、CDcdDiagram に対して setZone_Dgr() で設定した
+	//	『描画を行う領域の範囲(ダイヤグラムエンティティ座標系)』と 
+	//	getZone_Dgr() で取得した値が一致しない場合があるためです。
 	zoneCWndDiagram_Dgr.setSize( 
 		adjustForNearestUnit( 
 			zoneCWndDiagram_Dgr.getSize() , iUnit , ALLOWED_DIFFERENCE ) ) ;
 
 	if ( iRv >= 0 )
 	{
-		//	�E�C���h�E��Ƀ_�C���O�������\������Ă��Ȃ��ꍇ�́A
-		//	X�����̕\���͈͕͂ύX�ł��܂���B
+		//	ウインドウ上にダイヤグラムが表示されていない場合は、
+		//	X方向の表示範囲は変更できません。
 		if ( m_pCWndDiagram->calcDiagramZoneDcd().getX().getSize() <= 0 )
 		{
-			iRv = -2 ;	//	�_�C���O�����͕\������Ă��܂���B
+			iRv = -2 ;	//	ダイヤグラムは表示されていません。
 		}
 	}
 	if ( iRv >= 0 )
 	{
 		if ( zoneCWndDiagram_Dgr.getSize() <= (iUnit) )
 		{
-			//	����ȏ�\���͈͂��L���邱�Ƃ͂ł��܂���B
-			iRv = -1 ;	//���݂͎��s�ł��܂���(�G���[���b�Z�[�W�͕\�����܂���)
+			//	これ以上表示範囲を広げることはできません。
+			iRv = -1 ;	//現在は実行できません(エラーメッセージは表示しません)
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		DcdSize	iDcdSize = zoneCWndDiagram_Dgr.getSize() ;
 		int iMod = iDcdSize % (iUnit) ;
@@ -466,13 +466,13 @@ int CDedDiagramView::OnDiagramXDgrSizeDec_Process( BOOL bQueryEnable )
 		zonexyCWndDiagram_Dgr.setX( zoneCWndDiagram_Dgr ) ;
 		m_pCWndDiagram->setZone_Dgr( zonexyCWndDiagram_Dgr ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		if ( iRv < 0 )
 		{
 			switch( iRv )
 			{
-			case -1 :	//	���݂͎��s�ł��܂���B(�G���[���b�Z�[�W�͕\�����܂���)
+			case -1 :	//	現在は実行できません。(エラーメッセージは表示しません)
 				break ;
 			default:
 				strErrorMsg.Format( _T( "Error %d") , iRv ) ;
@@ -493,22 +493,22 @@ int CDedDiagramView::OnDiagramYDgrSizeInc_Process( BOOL bQueryEnable )
 	int iRv = 0 ;
 	CString	strErrorMsg ;	
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	
-	//	�c�������k��
+	//	縦軸方向縮小
 	// 
-	//	�c�������k���́A�\���͈͂��P�i�K���₵�܂��B
+	//	縦軸方向縮小は、表示範囲を１段階増やします。
 
 	CdDcdZoneXy	zonexyCWndDiagram_Dgr = m_pCWndDiagram->getZone_Dgr() ;
 	CdDcdZone	zoneCWndDiagram_Dgr = zonexyCWndDiagram_Dgr.getY() ;
 
-	//	�E�C���h�E�ւ̕\���͈͂̑����P�ʂ��Z�o
+	//	ウインドウへの表示範囲の増減単位を算出
 	//	
-	//	�_�C���O�����S�̂���ʓ��Ɏ��܂��Ă��Ȃ��ꍇ:
-	//		�_�C���O�����S�̂̃T�C�Y��1/10
-	//	�_�C���O�����S�̂���ʓ��Ɏ��܂��Ă���ꍇ  :
-	//		�_�C���O�����S�̂̃T�C�Y��1/2
+	//	ダイヤグラム全体が画面内に収まっていない場合:
+	//		ダイヤグラム全体のサイズの1/10
+	//	ダイヤグラム全体が画面内に収まっている場合  :
+	//		ダイヤグラム全体のサイズの1/2
 	int iUnit = m_pCentDedDgrDia->getZone().getY().getSize() / 10 ;
 	if ( iRv >= 0 )
 	{
@@ -518,38 +518,38 @@ int CDedDiagramView::OnDiagramYDgrSizeInc_Process( BOOL bQueryEnable )
 			iUnit = m_pCentDedDgrDia->getZone().getY().getSize() / 2 ;
 		}
 		if ( iUnit == 0 ){
-			iUnit = 1 ;	//	���Ƃ̊���Z�ɔ����āA0 �� 1 �ɂ��Ă����܂��B
+			iUnit = 1 ;	//	あとの割り算に備えて、0 は 1 にしておきます。
 		}
 	}
-		//iUnit=�E�C���h�E�ւ̕\���͈͂̑����P��(�_�C���O�����G���e�B�e�BY���W)
+		//iUnit=ウインドウへの表示範囲の増減単位(ダイヤグラムエンティティY座標)
 
 
-	//	�`��͈͂̕�(�_�C���O�������W�n)�������P�ʂ̔{���ɋ߂��ꍇ�́A
-	//	�����P�ʂ̔{�����x�̒l�ɕ␳����
-	//	����́ACDcdDiagram �ɑ΂��� setZone_Dgr() �Őݒ肵��
-	//	�w�`����s���̈�͈̔�(�_�C���O�����G���e�B�e�B���W�n)�x�� 
-	//	getZone_Dgr() �Ŏ擾�����l����v���Ȃ��ꍇ�����邽�߂ł��B
+	//	描画範囲の幅(ダイヤグラム座標系)が増減単位の倍数に近い場合は、
+	//	増減単位の倍数丁度の値に補正する
+	//	これは、CDcdDiagram に対して setZone_Dgr() で設定した
+	//	『描画を行う領域の範囲(ダイヤグラムエンティティ座標系)』と 
+	//	getZone_Dgr() で取得した値が一致しない場合があるためです。
 	zoneCWndDiagram_Dgr.setSize( 
 		adjustForNearestUnit( 
 			zoneCWndDiagram_Dgr.getSize() , iUnit , ALLOWED_DIFFERENCE ) ) ;
 
 	if ( iRv >= 0 )
 	{
-		//	�E�C���h�E��Ƀ_�C���O�������\������Ă��Ȃ��ꍇ�́A
-		//	Y�����̕\���͈͕͂ύX�ł��܂���B
+		//	ウインドウ上にダイヤグラムが表示されていない場合は、
+		//	Y方向の表示範囲は変更できません。
 		if ( m_pCWndDiagram->calcDiagramZoneDcd().getY().getSize() <= 0 )
 		{
-			iRv = -2 ;	//	�_�C���O�����͕\������Ă��܂���B
+			iRv = -2 ;	//	ダイヤグラムは表示されていません。
 		}
 	}
 	if ( iRv >= 0 )
 	{
-		//	�͈͂́A�w�_�C���O�����G���e�B�e�BY���W�x�̃T�C�Y��10�{�l�ȉ��ł��B
+		//	範囲は、『ダイヤグラムエンティティY座標』のサイズの10倍値以下です。
 		if ( zoneCWndDiagram_Dgr.getSize() 
 				>= m_pCentDedDgrDia->getZone().getY().getSize() * 10 )
 		{
-			//	����ȏ�\���͈͂��L���邱�Ƃ͂ł��܂���B
-			iRv = -1 ;	//���݂͎��s�ł��܂���(�G���[���b�Z�[�W�͕\�����܂���)
+			//	これ以上表示範囲を広げることはできません。
+			iRv = -1 ;	//現在は実行できません(エラーメッセージは表示しません)
 		}
 	}
 
@@ -557,7 +557,7 @@ int CDedDiagramView::OnDiagramYDgrSizeInc_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		DcdSize	iDcdSize = zoneCWndDiagram_Dgr.getSize() ;
 		int iMod = iDcdSize % iUnit ;
@@ -574,7 +574,7 @@ int CDedDiagramView::OnDiagramYDgrSizeInc_Process( BOOL bQueryEnable )
 		{
 			switch( iRv )
 			{
-			case -1 ://	���݂͎��s�ł��܂���B(�G���[���b�Z�[�W�͕\�����܂���)
+			case -1 ://	現在は実行できません。(エラーメッセージは表示しません)
 				break ;
 			default:
 				strErrorMsg.Format( _T( "Error %d") , iRv ) ;
@@ -586,7 +586,7 @@ int CDedDiagramView::OnDiagramYDgrSizeInc_Process( BOOL bQueryEnable )
 			}
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -599,17 +599,17 @@ int CDedDiagramView::OnDiagramYDgrSizeDec_Process( BOOL bQueryEnable )
 	CString	strErrorMsg ;
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	CdDcdZoneXy	zonexyCWndDiagram_Dgr = m_pCWndDiagram->getZone_Dgr() ;
 	CdDcdZone	zoneCWndDiagram_Dgr = zonexyCWndDiagram_Dgr.getY() ;
 
-	//	�E�C���h�E�ւ̕\���͈͂̑����P�ʂ��Z�o
+	//	ウインドウへの表示範囲の増減単位を算出
 	//	
-	//	�_�C���O�����S�̂���ʓ��Ɏ��܂��Ă��Ȃ��ꍇ:
-	//		�_�C���O�����S�̂̃T�C�Y��1/10
-	//	�_�C���O�����S�̂���ʓ��Ɏ��܂��Ă���ꍇ  :
-	//		�_�C���O�����S�̂̃T�C�Y��1/2
+	//	ダイヤグラム全体が画面内に収まっていない場合:
+	//		ダイヤグラム全体のサイズの1/10
+	//	ダイヤグラム全体が画面内に収まっている場合  :
+	//		ダイヤグラム全体のサイズの1/2
 	int iUnit = m_pCentDedDgrDia->getZone().getY().getSize() / 10 ;
 	if ( iRv >= 0 )
 	{
@@ -619,42 +619,42 @@ int CDedDiagramView::OnDiagramYDgrSizeDec_Process( BOOL bQueryEnable )
 			iUnit = m_pCentDedDgrDia->getZone().getY().getSize() / 2 ;
 		}
 		if ( iUnit == 0 ){
-			iUnit = 1 ;	//	���Ƃ̊���Z�ɔ����āA0 �� 1 �ɂ��Ă����܂��B
+			iUnit = 1 ;	//	あとの割り算に備えて、0 は 1 にしておきます。
 		}
-		//	�͈͂́A�w�_�C���O�����G���e�B�e�BY���W�x�̃T�C�Y��10�{�l�ȉ��ł��B
+		//	範囲は、『ダイヤグラムエンティティY座標』のサイズの10倍値以下です。
 
 	}
 
-	//	�`��͈͂̕�(�_�C���O�������W�n)�������P�ʂ̔{���ɋ߂��ꍇ�́A
-	//	�����P�ʂ̔{�����x�̒l�ɕ␳����
-	//	����́ACDcdDiagram �ɑ΂��� setZone_Dgr() �Őݒ肵��
-	//	�w�`����s���̈�͈̔�(�_�C���O�����G���e�B�e�B���W�n)�x�� 
-	//	getZone_Dgr() �Ŏ擾�����l����v���Ȃ��ꍇ�����邽�߂ł��B
+	//	描画範囲の幅(ダイヤグラム座標系)が増減単位の倍数に近い場合は、
+	//	増減単位の倍数丁度の値に補正する
+	//	これは、CDcdDiagram に対して setZone_Dgr() で設定した
+	//	『描画を行う領域の範囲(ダイヤグラムエンティティ座標系)』と 
+	//	getZone_Dgr() で取得した値が一致しない場合があるためです。
 	zoneCWndDiagram_Dgr.setSize( 
 		adjustForNearestUnit( 
 			zoneCWndDiagram_Dgr.getSize() , iUnit , ALLOWED_DIFFERENCE ) ) ;
 
 	if ( iRv >= 0 )
 	{
-		//	�E�C���h�E��Ƀ_�C���O�������\������Ă��Ȃ��ꍇ�́A
-		//	Y�����̕\���͈͕͂ύX�ł��܂���B
+		//	ウインドウ上にダイヤグラムが表示されていない場合は、
+		//	Y方向の表示範囲は変更できません。
 		if ( m_pCWndDiagram->calcDiagramZoneDcd().getY().getSize() <= 0 )
 		{
-			iRv = -2 ;	//	�_�C���O�����͕\������Ă��܂���B
+			iRv = -2 ;	//	ダイヤグラムは表示されていません。
 		}
 	}
 	if ( iRv >= 0 )
 	{
 		if ( zoneCWndDiagram_Dgr.getSize() <= (iUnit) ){
-			//	����ȏ�\���͈͂��L���邱�Ƃ͂ł��܂���B
-			iRv = -1 ;	//���݂͎��s�ł��܂���(�G���[���b�Z�[�W�͕\�����܂���)
+			//	これ以上表示範囲を広げることはできません。
+			iRv = -1 ;	//現在は実行できません(エラーメッセージは表示しません)
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		DcdSize	iDcdSize = zoneCWndDiagram_Dgr.getSize() ;
 		int iMod = iDcdSize % (iUnit) ;
@@ -672,13 +672,13 @@ int CDedDiagramView::OnDiagramYDgrSizeDec_Process( BOOL bQueryEnable )
 		m_pCWndDiagram->setZone_Dgr( zonexyCWndDiagram_Dgr ) ;
 		
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		if ( iRv < 0 )
 		{
 			switch( iRv )
 			{
-			case -1 :	//	���݂͎��s�ł��܂���B(�G���[���b�Z�[�W�͕\�����܂���)
+			case -1 :	//	現在は実行できません。(エラーメッセージは表示しません)
 				break ;
 			default:
 				strErrorMsg.Format( _T( "Error %d") , iRv ) ;
@@ -699,22 +699,22 @@ int CDedDiagramView::OnDiagramYDgrSizeReset_Process( BOOL bQueryEnable )
 	int iRv = 0 ;
 	CString	strErrorMsg ;	
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
-		//	�E�C���h�E��Ƀ_�C���O�������\������Ă��Ȃ��ꍇ�́A
-		//	Y�����̕\���͈͕͂ύX�ł��܂���B
+		//	ウインドウ上にダイヤグラムが表示されていない場合は、
+		//	Y方向の表示範囲は変更できません。
 		if ( m_pCWndDiagram->calcDiagramZoneDcd().getY().getSize() <= 0 )
 		{
-			iRv = -2 ;	//	�_�C���O�����͕\������Ă��܂���B
+			iRv = -2 ;	//	ダイヤグラムは表示されていません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		CdDcdZoneXy	zonexyCWndDiagram_Dgr = m_pCWndDiagram->getZone_Dgr() ;
 		CdDcdZone	zoneCWndDiagram_Dgr = zonexyCWndDiagram_Dgr.getY() ;
@@ -725,13 +725,13 @@ int CDedDiagramView::OnDiagramYDgrSizeReset_Process( BOOL bQueryEnable )
 		m_pCWndDiagram->setZone_Dgr( zonexyCWndDiagram_Dgr ) ;
 
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		if ( iRv < 0 )
 		{
 			switch( iRv )
 			{
-			case -1 :	//	���݂͎��s�ł��܂���B(�G���[���b�Z�[�W�͕\�����܂���)
+			case -1 :	//	現在は実行できません。(エラーメッセージは表示しません)
 				break ;
 			default:
 				strErrorMsg.Format( _T( "Error %d") , iRv ) ;
@@ -751,23 +751,23 @@ int CDedDiagramView::OnDiagramMemoriDown_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	int idxVlineMode = m_pCWndDiagram->getVlineMode() ;
 	bool	bRv = true ;	
 	if ( idxVlineMode <= 0 ){
-		iRv = -1 ;	//	�R�}���h�𖳌�
+		iRv = -1 ;	//	コマンドを無効
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		m_pCWndDiagram->setVlineMode( idxVlineMode - 1 ) ;
 
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -778,21 +778,21 @@ int CDedDiagramView::OnDiagramMemoriUp_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	int idxVlineMode = m_pCWndDiagram->getVlineMode() ;
 	if ( idxVlineMode + 1 >= m_pCWndDiagram->getVlineChoices( NULL ) ){
-		iRv = -1 ;	//	�R�}���h�𖳌�
+		iRv = -1 ;	//	コマンドを無効
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		m_pCWndDiagram->setVlineMode( idxVlineMode + 1 ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -804,7 +804,7 @@ int CDedDiagramView::OnDiagramRessyabangou_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( m_pCWndDiagram->getDisplayRessyabangou() )
 	{
@@ -815,12 +815,12 @@ int CDedDiagramView::OnDiagramRessyabangou_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		m_pCWndDiagram->setDisplayRessyabangou( 
 			!m_pCWndDiagram->getDisplayRessyabangou() ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -831,7 +831,7 @@ int CDedDiagramView::OnUpdateDiagramRessyamei_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( m_pCWndDiagram->getDisplayRessyamei() )
 	{
@@ -841,12 +841,12 @@ int CDedDiagramView::OnUpdateDiagramRessyamei_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		m_pCWndDiagram->setDisplayRessyamei( 
 			!m_pCWndDiagram->getDisplayRessyamei() ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -858,7 +858,7 @@ int CDedDiagramView::OnDiagramRessyasenKudari_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( m_pCWndDiagram->getDisplayRessyasen( Ressyahoukou_Kudari ) )
 	{
@@ -868,12 +868,12 @@ int CDedDiagramView::OnDiagramRessyasenKudari_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		m_pCWndDiagram->setDisplayRessyasen( Ressyahoukou_Kudari , 
 			!m_pCWndDiagram->getDisplayRessyasen( Ressyahoukou_Kudari ) ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -885,7 +885,7 @@ int CDedDiagramView::OnDiagramRessyasenNobori_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( m_pCWndDiagram->getDisplayRessyasen( Ressyahoukou_Nobori ) )
 	{
@@ -895,12 +895,12 @@ int CDedDiagramView::OnDiagramRessyasenNobori_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		m_pCWndDiagram->setDisplayRessyasen( Ressyahoukou_Nobori , 
 			!m_pCWndDiagram->getDisplayRessyasen( Ressyahoukou_Nobori ) ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -911,7 +911,7 @@ int CDedDiagramView::OnDiagramHideIppanekiEkimei_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( m_pCWndDiagram->getHideIppanekiEkimei() )
 	{
@@ -921,12 +921,12 @@ int CDedDiagramView::OnDiagramHideIppanekiEkimei_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		m_pCWndDiagram->setHideIppanekiEkimei( 
 			!m_pCWndDiagram->getHideIppanekiEkimei() ) ;	
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -937,7 +937,7 @@ int CDedDiagramView::OnDiagramStopmarkdraw_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( m_pCWndDiagram->getStopMarkDraw() == 
 			CDcdDiagram::EStopMarkDraw_DrawOnBriefStop ) 
@@ -948,7 +948,7 @@ int CDedDiagramView::OnDiagramStopmarkdraw_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
 		CDcdDiagram::EStopMarkDraw eStopMarkDraw 
 			= CDcdDiagram::EStopMarkDraw_Nothing ;
@@ -959,7 +959,7 @@ int CDedDiagramView::OnDiagramStopmarkdraw_Process( BOOL bQueryEnable )
 		}
 		m_pCWndDiagram->setStopMarkDraw( eStopMarkDraw ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -971,19 +971,19 @@ int CDedDiagramView::OnViewUpdate_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�����s
+		//	コマンドを実行
 		// ****************************************************************
-		//	�r���[��S�X�V���܂��B
+		//	ビューを全更新します。
 		OnUpdate( NULL , 0 , NULL ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -995,23 +995,23 @@ int CDedDiagramView::OnDiagramViewProp_Process( BOOL bQueryEnable )
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
-		//	�E�C���h�E���ŁA�_�C���O������`�悷��̈�̑傫�������߂܂��B
-		//	�P�ʂ́A IfDcdTarget ��̍��W�ł��B
+		//	ウインドウ内で、ダイヤグラムを描画する領域の大きさを求めます。
+		//	単位は、 IfDcdTarget 上の座標です。
 		CdDcdZoneXy	zoneDiagramZoneDcd = m_pCWndDiagram->calcDiagramZoneDcd() ;
 
 		CDlgDiagramViewProp aDlg( 
 			m_pCentDedDgrDia->getZone() ,
-			//	�E�C���h�E��X���������A�_�C���O�������\���\�ȑ傫���ł��邩
-			//	�ۂ����w��
+			//	ウインドウのX方向幅が、ダイヤグラムが表示可能な大きさであるか
+			//	否かを指定
 			zoneDiagramZoneDcd.getX().getSize() > 0 ,
-			//	�E�C���h�E��Y���������A�_�C���O�������\���\�ȑ傫���ł��邩
-			//	�ۂ����w��
+			//	ウインドウのY方向幅が、ダイヤグラムが表示可能な大きさであるか
+			//	否かを指定
 			zoneDiagramZoneDcd.getY().getSize() > 0 ,
 			m_pCWndDiagram->getZone_Dgr() ,
 			m_pCWndDiagram->getVlineMode() ,
@@ -1021,7 +1021,7 @@ int CDedDiagramView::OnDiagramViewProp_Process( BOOL bQueryEnable )
 			m_pCWndDiagram->setVlineMode( aDlg.getVlineMode() ) ;
 		}	
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -1034,7 +1034,7 @@ int CDedDiagramView::OnDiagramViewProp_Process( BOOL bQueryEnable )
 //	CDedDiagramView
 // ********************************
 	// ********************************
-	//@name CDedDiagramView-����
+	//@name CDedDiagramView-操作
 	// ********************************
 int CDedDiagramView::setZone_Dgr( 
 		const CdDedJikoku& aCdDedJikoku ,
@@ -1042,13 +1042,13 @@ int CDedDiagramView::setZone_Dgr(
 {
 	CdDcdZoneXy	zonexyZone_Dgr = m_pCWndDiagram->getZone_Dgr() ;
 	
-	//X���W��ύX
+	//X座標を変更
 	if ( !aCdDedJikoku.isNull() ){
 		CdDcdZone	aCdDcdZone = zonexyZone_Dgr.getX() ;
 		aCdDcdZone.setPos( aCdDedJikoku.getTotalSeconds() ) ;
 		zonexyZone_Dgr.setX( aCdDcdZone ) ;
 	}
-	//Y���W��ύX
+	//Y座標を変更
 	if ( 0 <= iEkiIndex && iEkiIndex < getCentDedDia()->getEkiCount() ){
 		CdDcdZone	aCdDcdZone = zonexyZone_Dgr.getY() ;
 		int iYZahyou = m_pCentDedDgrDia->getDgrYPosOfEki( iEkiIndex ) ;
@@ -1114,7 +1114,7 @@ BEGIN_MESSAGE_MAP(CDedDiagramView, CView)
 	ON_UPDATE_COMMAND_UI(ID_Diagram_HideIppanekiEkimei, OnUpdateDiagramHideIppanekiEkimei)
 	ON_COMMAND(ID_VIEW_UPDATE, OnViewUpdate)
 	//}}AFX_MSG_MAP
-	// �W������R�}���h
+	// 標準印刷コマンド
 	ON_COMMAND(ID_Diagram_StopMarkDraw, &CDedDiagramView::OnDiagramStopmarkdraw)
 	ON_UPDATE_COMMAND_UI(ID_Diagram_StopMarkDraw, &CDedDiagramView::OnUpdateDiagramStopmarkdraw)
 	ON_COMMAND(ID_FILE_PRINT, &CDedDiagramView::OnFilePrint)
@@ -1122,16 +1122,16 @@ BEGIN_MESSAGE_MAP(CDedDiagramView, CView)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CDedDiagramView �`��
+// CDedDiagramView 描画
 
 void CDedDiagramView::OnDraw(CDC* pDC)
 {
 	CDocument* pDoc = GetDocument();
-	// TODO: ���̈ʒu�ɕ`��p�̃R�[�h��ǉ����Ă�������
+	// TODO: この位置に描画用のコードを追加してください
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// CDedDiagramView �f�f
+// CDedDiagramView 診断
 
 #ifdef _DEBUG
 void CDedDiagramView::AssertValid() const
@@ -1146,7 +1146,7 @@ void CDedDiagramView::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 /////////////////////////////////////////////////////////////////////////////
-// CDedDiagramView ���b�Z�[�W �n���h��
+// CDedDiagramView メッセージ ハンドラ
 
 
 
@@ -1158,37 +1158,37 @@ void CDedDiagramView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 	// --------------------------------
 
 	//pHint= 
-	//	pHint�� CRfEditCmdHolder �I�u�W�F�N�g�Ȃ�A
-	//	�Ή�����ҏW�R�}���h CRfEditCmd ��ێ����Ă��܂��B
-	//	���̏ꍇ�Athis �� CRfEditCmd �̓��e�ɍœK������
-	//	�X�V���s���܂��B
-	//	NULL�Ȃ�A�S�X�V���v������Ă��܂��B
+	//	pHintが CRfEditCmdHolder オブジェクトなら、
+	//	対応する編集コマンド CRfEditCmd を保持しています。
+	//	この場合、this は CRfEditCmd の内容に最適化した
+	//	更新を行います。
+	//	NULLなら、全更新が要求されています。
 
 	if ( m_bUpdate_All_Requested )
 	{
-		//	�S�X�V���ۗ�����Ă���ꍇ�́A
-		//	���̌�̓R�}���h�ɂ��œK�����ꂽ�P�̂̂����Ȃ�
-		//	�X�V�v���ɑ΂��Ă��A�S�X�V���s���܂��B
-		//memo:CDedDiagramView�̑S�X�V
-		//	������s��Ȃ��ƁA
-		//	(1)�_�C���O�����r���[���J������Ԃɂ���
-		//	(2)�w��ǉ�
-		//		( m_bUpdate_All_Requested =true �ƂȂ�܂����A
-		//		�r���[���A�N�e�B�u�łȂ����߁A
-		//		CentDedDgrDia::m_CentDedDgrEkiCont ��
-		//		�X�V���s���܂���B
-		//	(3)���̉w�ɉ^�s�����Ԃ���͂���
-		//		�ҏW�R�}���h�� CRfEditCmd_Ressya 
-		//		�Ȃ̂ŁA��Ԃ̍X�V���s���܂��B
-		//		�������ACentDedDgrDia::m_CentDedDgrEkiCont ��
-		//		�X�V����Ă��Ȃ����߁A�A�v���P�[�V�����G���[�ɂȂ�܂��B
+		//	全更新が保留されている場合は、
+		//	その後はコマンドによる最適化された単体のいかなる
+		//	更新要求に対しても、全更新を行います。
+		//memo:CDedDiagramViewの全更新
+		//	これを行わないと、
+		//	(1)ダイヤグラムビューを開いた状態にする
+		//	(2)駅を追加
+		//		( m_bUpdate_All_Requested =true となりますが、
+		//		ビューがアクティブでないため、
+		//		CentDedDgrDia::m_CentDedDgrEkiCont の
+		//		更新が行われません。
+		//	(3)その駅に運行する列車を入力する
+		//		編集コマンドは CRfEditCmd_Ressya 
+		//		なので、列車の更新が行われます。
+		//		しかし、CentDedDgrDia::m_CentDedDgrEkiCont が
+		//		更新されていないため、アプリケーションエラーになります。
 		//		
 		pHint = NULL ;
 	}
 
 
 	// --------------------------------
-	//	CRfEditCmd �ɍœK�����ꂽ�X�V
+	//	CRfEditCmd に最適化された更新
 	// --------------------------------
 	Ou<CRfEditCmd> pCmd ;
 	if ( pHint != NULL && pHint->IsKindOf( 
@@ -1198,7 +1198,7 @@ void CDedDiagramView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 			(CRfEditCmdHolder*)pHint ;
 		pCmd = pHolder->getCmd() ; 
 	}
-	//pCmd = (pCmd��NULL�łȂ��ꍇ��)�Ή�����ҏW�R�}���h
+	//pCmd = (pCmdがNULLでない場合は)対応する編集コマンド
 
 	if ( pCmd != NULL )
 	{
@@ -1207,16 +1207,16 @@ void CDedDiagramView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 			dynamic_castOu<CRfEditCmd_DiaProp>( pCmd ) || 
 			dynamic_castOu<CRfEditCmd_RessyasyubetsuSwap>( pCmd ) ) 
 		{
-			//	���̃r���[�́A
-			//		�R�����g�̕ύX
-			//		�_�C���̕ύX
-			//		�_�C���̃v���p�e�B�̕ύX
-			//		��Ԏ�ʂ̓���
-			//	�̏ꍇ�́A�X�V���s���܂���B
+			//	このビューは、
+			//		コメントの変更
+			//		ダイヤの変更
+			//		ダイヤのプロパティの変更
+			//		列車種別の入替
+			//	の場合は、更新を行いません。
 		}
 		else if ( dynamic_castOu<CRfEditCmd_Ressya>( pCmd ) )
 		{
-			//	��Ԃ̕ύX
+			//	列車の変更
 			Ou<CRfEditCmd_Ressya>	pCommand = 
 				dynamic_castOu<CRfEditCmd_Ressya>( pCmd );
 			OnUpdate_CentDedRessya( pCommand ) ;
@@ -1224,25 +1224,25 @@ void CDedDiagramView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 		else
 		{
 			//CRfEditCmd_Eki
-			//	�w�̕ύX�́A�S�X�V���K�v�ł��B
+			//	駅の変更は、全更新が必要です。
 			//CRfEditCmd_Ressyasyubetsu
-			//	��Ԏ�ʂ̕ύX�́A�S�X�V���K�v�ł��B
+			//	列車種別の変更は、全更新が必要です。
 			//CRfEditCmd_DedRosenFileDataProp
-			//	  �H���t�@�C���̃v���p�e�B�̕ύX�́A
-			//	�t�H���g�̕ω��𔺂����߁A�S�X�V���K�v�ł��B
+			//	  路線ファイルのプロパティの変更は、
+			//	フォントの変化を伴うため、全更新が必要です。
 			//CRfEditCmd_Rosen
 			//CRfEditCmd_RosenFileData
-			//	�w���܂���I�u�W�F�N�g�ł��B���ꂪ�X�V���ꂽ�ꍇ�́A
-			//	�S�X�V���K�v�ł��B
+			//	駅を包含するオブジェクトです。これが更新された場合は、
+			//	全更新が必要です。
 
-			pHint = NULL ;	//	�S�X�V�̗v��
+			pHint = NULL ;	//	全更新の要求
 		}
 	}
 
-	if ( pHint == NULL )	//	�S�X�V
+	if ( pHint == NULL )	//	全更新
 	{
 		// --------------------------------		
-		//	�S�v�f���X�V
+		//	全要素を更新
 		// --------------------------------
 		CView *pView = getCDiagramEditApp()->getCMainFrame()->
 			getMDIChildActiveView() ;
@@ -1272,7 +1272,7 @@ int CDedDiagramView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 void CDedDiagramView::OnDestroy() 
 {
-	//	�_�C���O�����r���[�̑����� .ini �t�@�C���ɏ������݁B
+	//	ダイヤグラムビューの属性を .ini ファイルに書き込み。
 	getCDiagramEditApp()->writeCWndDiagramViewProp( m_pCWndDiagram ) ;
 
 	m_pCWndDiagram->setCentDedDgrDia( NULL ) ;
@@ -1290,36 +1290,36 @@ void CDedDiagramView::OnDestroy()
 
 void CDedDiagramView::OnSize(UINT nType, int cx, int cy) 
 {
-	if ( nType == SIZE_MAXIMIZED	//�E�B���h�E�͍ő�\������܂��B
-		|| nType == SIZE_RESTORED 	// �E�B���h�E�̓T�C�Y�ύX����܂����A
-									//	SIZE_MINIMIZED �� SIZE_MAXIMIZED ��
-									//	�K�p����܂���B
+	if ( nType == SIZE_MAXIMIZED	//ウィンドウは最大表示されます。
+		|| nType == SIZE_RESTORED 	// ウィンドウはサイズ変更されますが、
+									//	SIZE_MINIMIZED と SIZE_MAXIMIZED は
+									//	適用されません。
 	){
 		//memo:CDedDiagramView::OnSize()
-		//	���̊֐����g���ƁA���T�C�Y���ɃE�C���h�E�̑S�̈悪�����ɂȂ�܂��B
+		//	この関数を使うと、リサイズ時にウインドウの全領域が無効になります。
 		m_pCWndDiagram->MoveWindow( 0 , 0 , cx , cy , TRUE ) ; 
 
 		////memo:CDedDiagramView::OnSize()
-		////	���̊֐����g���Ă��A���T�C�Y���ɃE�C���h�E��
-		////	�S�̈悪�����ɂȂ�܂�
+		////	この関数を使っても、リサイズ時にウインドウの
+		////	全領域が無効になります
 		//m_pCWndDiagram->SetWindowPos( 
 		//	NULL , 
 		//	0 , 0 , 
 		//	cx , cy , 
-		//	SWP_NOACTIVATE	//	�E�B���h�E���A�N�e�B�u�ɂ��܂���B
-		//	                //	���̃t���O���ݒ肳��Ă��Ȃ��ƁA
-		//	                //	�E�B���h�E�̓A�N�e�B�u�ɂȂ�A
-		//	                //	�ŏ�ʂ܂��͔�ŏ�ʂ̃E�B���h�E 
-		//	                //	�O���[�v�̂����ꂩ�̐擪�Ɉړ�����܂� 
-		//	                //(�p�����[�^ pWndInsertAfter �̐ݒ�Ɉˑ����܂�)�B
-		//	| SWP_NOZORDER	//  ���݂̏�����ێ����܂� 
-		//	                //	(pWndInsertAfter �𖳎����܂�)�B
-		//	| SWP_NOMOVE ) ;// ���݈ʒu��ێ����܂� 
-		//	                //(x �p�����[�^�� y �p�����[�^�𖳎����܂�)�B
+		//	SWP_NOACTIVATE	//	ウィンドウをアクティブにしません。
+		//	                //	このフラグが設定されていないと、
+		//	                //	ウィンドウはアクティブになり、
+		//	                //	最上位または非最上位のウィンドウ 
+		//	                //	グループのいずれかの先頭に移動されます 
+		//	                //(パラメータ pWndInsertAfter の設定に依存します)。
+		//	| SWP_NOZORDER	//  現在の順序を保持します 
+		//	                //	(pWndInsertAfter を無視します)。
+		//	| SWP_NOMOVE ) ;// 現在位置を保持します 
+		//	                //(x パラメータと y パラメータを無視します)。
 
 		////memo:CDedDiagramView::OnSize()
-		////	���̊֐����g���Ă��A���T�C�Y���ɃE�C���h�E��
-		////	�S�̈悪�����ɂȂ�܂��B
+		////	この関数を使っても、リサイズ時にウインドウの
+		////	全領域が無効になります。
 		//m_pCWndDiagram->MoveWindow( 0 , 0 , cx , cy , FALSE ) ; 
 
 		return ;
@@ -1491,7 +1491,7 @@ BOOL CDedDiagramView::OnPreparePrinting(CPrintInfo* pInfo)
 {
 	BOOL bRv = TRUE ;
 
-	// �f�t�H���g�̈������
+	// デフォルトの印刷準備
 	CaDcdDiagram_PageSelector	aPageSelector( 
 		m_pCWndDiagram->getCDcdDiagram() , 
 		m_sizePrintSize_Dgr ) ;
@@ -1499,18 +1499,18 @@ BOOL CDedDiagramView::OnPreparePrinting(CPrintInfo* pInfo)
 	{
 		if ( aPageSelector.getPageCount() == 0 )
 		{
-			//	�������y�[�W������܂���B
+			//	印刷するページがありません。
 			bRv = FALSE ;
 		}
 	}
 	if ( bRv )
 	{
-		//	�E�C���h�E��Ƀ_�C���O�������\������Ă��Ȃ��ꍇ�́A
-		//	����͍s���܂���B
+		//	ウインドウ上にダイヤグラムが表示されていない場合は、
+		//	印刷は行いません。
 		if ( m_pCWndDiagram->calcDiagramZoneDcd().getX().getSize() <= 0 ||
 			m_pCWndDiagram->calcDiagramZoneDcd().getY().getSize() <= 0 )
 		{
-			//	�������y�[�W������܂���B
+			//	印刷するページがありません。
 			bRv = FALSE ;
 		}
 	}
@@ -1529,9 +1529,9 @@ BOOL CDedDiagramView::OnPreparePrinting(CPrintInfo* pInfo)
 
 void CDedDiagramView::OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo) 
 {
-	//	���̎��_�ł́A 
+	//	この時点では、 
 	//	pInfo->m_rectDraw
-	//	�̒l�͌��肵�Ă��܂���B
+	//	の値は決定していません。
 
 	if ( m_bUpdate_All_Requested ){
 		OnUpdate_All() ;
@@ -1543,11 +1543,11 @@ void CDedDiagramView::OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo)
 
 void CDedDiagramView::OnPrepareDC(CDC* pDC, CPrintInfo* pInfo) 
 {
-	//	���̎��_�ł́A 
+	//	この時点では、 
 	//	pInfo->m_rectDraw
-	//	�̒l�͌��肵�Ă��܂���B
+	//	の値は決定していません。
 
-	// TODO: ���̈ʒu�ɌŗL�̏�����ǉ����邩�A�܂��͊�{�N���X���Ăяo���Ă�������
+	// TODO: この位置に固有の処理を追加するか、または基本クラスを呼び出してください
 	
 	CView::OnPrepareDC(pDC, pInfo);
 }
@@ -1571,14 +1571,14 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 	LogMsg( CDcdTargetMfcPrintInfo::stringOf( pInfo ).c_str() ) ;
 
 	// --------------------------------
-	//	�`��ʂ��쐬
+	//	描画面を作成
 	// --------------------------------
 	CDcdTargetMfcPrintInfo	aCDcdTargetMfcPrintInfo( pDC, pInfo ) ;
 
 	LogMsg( "CDedDiagramView::OnPrint()1" ) ;
 	
 	// --------------------------------
-	//	�]�����������̈���쐬
+	//	余白を除いた領域を作成
 	// --------------------------------
 	CaDcdTargetItemPosition	aTargetInnerMargin( &aCDcdTargetMfcPrintInfo , 
 		CdDcdZoneXy() ) ;
@@ -1604,23 +1604,23 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 
 	}
 
-	//aTargetInnerMargin = �]���������������`��̈�B
-	//	�P�ʂ̓v�����^�̃s�N�Z���ł��B
+	//aTargetInnerMargin = 余白部分を除いた描画領域。
+	//	単位はプリンタのピクセルです。
 
 	LogMsg( "CDedDiagramView::OnPrint()2" ) ;
 	// --------------------------------
-	//	�_�����W��ݒ�
+	//	論理座標を設定
 	// --------------------------------
 	CaDcdTargetZoomDisplay	aCaDcdTargetZoomDisplay( 
 		&aTargetInnerMargin , 
 		aCDcdTargetMfcPrintInfo.getPrinterHdc() ) ;
-	//aCaDcdTargetZoomDisplay = �]���������������`��̈�B
-	//	�P�ʂ́A��ʏ�̂P�s�N�Z�������ɂȂ�܂����B
+	//aCaDcdTargetZoomDisplay = 余白部分を除いた描画領域。
+	//	単位は、画面上の１ピクセル相当になりました。
 
 	LogMsg( "CDedDiagramView::OnPrint()3" ) ;
 	
 	// --------------------------------
-	//	�L���v�V�����ƃy�[�W�ԍ��̕��i���쐬
+	//	キャプションとページ番号の部品を作成
 	// --------------------------------
 	Ou<CDcdText>	pdcdCaption ;
 	Ou<CDcdText>	pdcdPage ;
@@ -1630,12 +1630,12 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 		CJikokuhyouDoc* pCJikokuhyouDoc = (CJikokuhyouDoc*)GetDocument() ;
 
 		string	strText ;
-		//	�H����
+		//	路線名
 		if ( !pCentDedRosen->getName().empty() ){
 			strText += pCentDedRosen->getName() ;
 			strText += " " ;
 		}
-		//	�_�C����
+		//	ダイヤ名
 		if ( !pCJikokuhyouDoc->getDiaName().empty() ){
 			strText += pCJikokuhyouDoc->getDiaName() ;
 			strText += " " ;
@@ -1654,8 +1654,8 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 
 	LogMsg( "CDedDiagramView::OnPrint()4" ) ;
 	// --------------------------------
-	//	�L���v�V�����ƃy�[�W�ԍ��̕��i�E
-	//	�O���b�h�̃��C�A�E�g�����߂�	
+	//	キャプションとページ番号の部品・
+	//	グリッドのレイアウトを決める	
 	// --------------------------------
 	Ou<IfDcdTarget>	pTargetCaption ;
 	Ou<IfDcdTarget>	pTargetGrid ;
@@ -1669,8 +1669,8 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			CdDcdZone( zoneGrid.getY().getPos() , aSize.getY() ) ) ;
 		zoneGrid.setY( CdDcdZone().setBeginEndPos( 
 			zoneCaption.getY().getEndPos() , zoneGrid.getY().getEndPos() ) ) ;
-		//zoneCaption = �S�̈�̏㕔���A�L���v�V�����p�Ɋ��蓖�ĂĂ��܂��B
-		//zoneGrid = �S�̈悩��A�㕔�̃L���v�V�����̈���������̈�ł��B
+		//zoneCaption = 全領域の上部を、キャプション用に割り当てています。
+		//zoneGrid = 全領域から、上部のキャプション領域を除いた領域です。
 
 		pdcdPage->getItemSize( &aCaDcdTargetZoomDisplay , &aSize ) ;
 		CdDcdZoneXy zonePage( zoneGrid.getX() , 
@@ -1678,9 +1678,9 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 				aSize.getY() ) ) ;
 		zoneGrid.setY( CdDcdZone().setBeginEndPos( 
 			zoneCaption.getY().getEndPos() , zonePage.getY().getPos() ) ) ;
-		//zonePage = �S�̈�̉������A�y�[�W�p�Ɋ��蓖�ĂĂ��܂��B
-		//zoneGrid = �㕔�̃L���v�V�����ɑ����āA�����̃y�[�W�̈��������
-		//			�̈�ł��B
+		//zonePage = 全領域の下部を、ページ用に割り当てています。
+		//zoneGrid = 上部のキャプションに続いて、下部のページ領域も除いた
+		//			領域です。
 
 
 		pTargetCaption = OuNew<CaDcdTargetItemPosition>( 
@@ -1694,7 +1694,7 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 				&aCaDcdTargetZoomDisplay , zonePage ) ) ;
 	}
 	// --------------------------------
-	//	�_�C���O������`��
+	//	ダイヤグラムを描画
 	// --------------------------------
 	int iPage = 0 ;
 	int iXPage = 0 ;
@@ -1707,7 +1707,7 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 		aPageSelector.DcDraw( pTargetGrid ) ;
 
 		if ( (int)pInfo->m_nCurPage >= aPageSelector.getPageCount() ){
-			//�ŏI�y�[�W�����������A������[�v���I���܂��B
+			//最終ページを印刷したら、印刷ループを終わります。
 			pInfo->m_bContinuePrinting = false ;
 		}	else	{
 			pInfo->m_bContinuePrinting = true ;
@@ -1721,10 +1721,10 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 	LogMsg( "CDedDiagramView::OnPrint()5" ) ;
 	LogMsg( "CDedDiagramView::OnPrint()6" ) ;
 	// --------------------------------
-	//	�L���v�V�����ƃy�[�W�ԍ��̃e�L�X�g���쐬
+	//	キャプションとページ番号のテキストを作成
 	// --------------------------------
 	{
-		//�L���v�V�����Ƀy�[�W��ǉ�
+		//キャプションにページを追加
 		{
 			string	strCaption = pdcdCaption->getText() ;
 			CString	strSono ;
@@ -1733,7 +1733,7 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			strCaption += " " ;
 			pdcdCaption->setText( strCaption ) ;
 		}
-		//�y�[�W�ԍ�������
+		//ページ番号も決定
 		{
 			string	strPage = stringOf( iPage + 1) ;
 			pdcdPage->setText( strPage ) ;
@@ -1742,7 +1742,7 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 
 	LogMsg( "CDedDiagramView::OnPrint()7" ) ;
 	// --------------------------------
-	//	�L���v�V�����ƃy�[�W�ԍ���`��
+	//	キャプションとページ番号を描画
 	// --------------------------------
 	{
 			pdcdCaption->DcDraw( pTargetCaption ) ;
@@ -1756,13 +1756,13 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 void CDedDiagramView::OnEndPrinting(CDC* pDC, CPrintInfo* pInfo) 
 {
 
-	//	����I����ɉ�ʕ\����������������B
+	//	印刷終了後に画面表示が崩れる問題を回避。
 	//
-	//	���̃N���X�́A������̓X�N���[���ʒu��
-	//	�ꎞ�I�ɕύX���܂��B
-	//	���̂Ƃ��� m_pCWndDiagram �ɍĕ`�悪��������ƁA
-	//	��ʂɂ͈ꎞ�I�Ɉʒu�̕ύX���ꂽ�R���e���c��
-	//	�`�悳��邽�߁A��ʂ�����܂��B
+	//	このクラスは、印刷中はスクロール位置を
+	//	一時的に変更します。
+	//	このときに m_pCWndDiagram に再描画が発生すると、
+	//	画面には一時的に位置の変更されたコンテンツが
+	//	描画されるため、画面が崩れます。
 	m_pCWndDiagram->Invalidate() ;
 	
 	CView::OnEndPrinting(pDC, pInfo);
@@ -1792,7 +1792,7 @@ void CDedDiagramView::OnActivateView(BOOL bActivate, CView* pActivateView, CView
 
 void CDedDiagramView::OnFilePrint()
 {
-	//	������ɁA�P�y�[�W�Ɉ������_�C���O�����͈̔͂�ۑ�
+	//	印刷時に、１ページに印刷するダイヤグラムの範囲を保存
 	m_sizePrintSize_Dgr = m_pCWndDiagram->getZone_Dgr().getSize() ;
 
 	CView::OnFilePrint() ;
@@ -1800,7 +1800,7 @@ void CDedDiagramView::OnFilePrint()
 
 void CDedDiagramView::OnFilePrintPreview()
 {
-	//	������ɁA�P�y�[�W�Ɉ������_�C���O�����͈̔͂�ۑ�
+	//	印刷時に、１ページに印刷するダイヤグラムの範囲を保存
 	m_sizePrintSize_Dgr = m_pCWndDiagram->getZone_Dgr().getSize() ;
 
 	CView::OnFilePrintPreview() ;

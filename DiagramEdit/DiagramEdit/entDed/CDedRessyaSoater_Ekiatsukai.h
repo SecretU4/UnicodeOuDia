@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,20 +81,20 @@ namespace entDed{
 // ****************************************************************
 /**
 @brief
-�y�T�v�z
-	CentDedRessyaDia ���̗�Ԃ́A�w��̉w����Order�̉w���E�����ɂ��\�[�g���s���܂��B
+【概要】
+	CentDedRessyaDia 内の列車の、指定の駅時刻Orderの駅扱・時刻によるソートを行います。
 
-�y�g�����z
+【使い方】
 	
-	1.  �R���X�g���N�^�ŃI�u�W�F�N�g�𐶐����Ă��������B
+	1.  コンストラクタでオブジェクトを生成してください。
 
-	2.�@sort() ���\�b�h���Ăяo���ƁAthis�́A�w�肳�ꂽ��ԃR���e�i�̂��ׂĂ̗�Ԃ��\�[�g���܂��B
+	2.　sort() メソッドを呼び出すと、thisは、指定された列車コンテナのすべての列車をソートします。
 
-	��r��́A�ȉ��̂Ƃ���ł��B
-			- �w��wIndex�̉w���́A��ԁE�ʉ߁E�o�R�Ȃ��E�^�s�Ȃ��̏�
-			- �w������NULL�łȂ����̂�NULL�̂��̂Ƃł́ANULL�łȂ����̂���B
-			- �w�����̏��������̂���
-			- �w�����������Ȃ�RessyaIdx�̏������ق�����B
+	比較基準は、以下のとおりです。
+			- 指定駅Indexの駅扱は、停車・通過・経由なし・運行なしの順
+			- 駅時刻がNULLでないものとNULLのものとでは、NULLでないものが先。
+			- 駅時刻の小さいものが先
+			- 駅時刻が同じならRessyaIdxの小さいほうが先。
 
 
 */
@@ -102,26 +102,26 @@ class CDedRessyaSoater_Ekiatsukai : public CDedRessyaSoater
 {
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	///@}
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-		�\�[�g�Ώۂ� �w����Order�B
+		ソート対象の 駅時刻Order。
 	*/
 	CdDedJikokuOrder  m_JikokuOrder ;  
 	/**
-		�_�C���O�����N�_�������w�肵�Ă��������B 
-		this �́A�\�[�g���ɁA���̒l���ł������������� �݂Ȃ��܂��B
-		 (��F���̎�����5:00���w�肳�ꂽ�ꍇ�́A
+		ダイヤグラム起点時刻を指定してください。 
+		this は、ソート時に、この値を最も小さい時刻と みなします。
+		 (例：この時刻に5:00が指定された場合は、
 		 @code
 		 5:00<23:59<0:00<4:59 
 		 @endcode
-		 �Ƃ��Ĕ�r���s���܂�) 
+		 として比較を行います) 
 	*/
   	CdDedJikoku  m_jikokuKitenJikoku ;
 	
@@ -129,37 +129,37 @@ private:
 
 	///@}
 	// ********************************
-	///@name �W��
+	///@name 集約
 	// ********************************
 	///@{
 	///@}
 
 	// ********************************
-	///@name ���
+	///@name 状態
 	// ********************************
 	///@{
 	///@}
 protected:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
 	@param aJikokuOrder  [in] 
-		�w����Order ���w�肵�Ă��������B  
+		駅時刻Order を指定してください。  
 	@param jikokuKitenJikoku  [in] 
-		�_�C���O�����N�_�������w�肵�Ă��������B 
-		this �́A�\�[�g���ɁA���̒l���ł������������� �݂Ȃ��܂��B 
-		(��F���̎�����5:00���w�肳�ꂽ�ꍇ�́A
+		ダイヤグラム起点時刻を指定してください。 
+		this は、ソート時に、この値を最も小さい時刻と みなします。 
+		(例：この時刻に5:00が指定された場合は、
  		 @code
 		 5:00<23:59<0:00<4:59 
 		 @endcode
-		 �Ƃ��Ĕ�r���s���܂�)  
+		 として比較を行います)  
 	*/
 	CDedRessyaSoater_Ekiatsukai(
 		CdDedJikokuOrder  aJikokuOrder,  
@@ -169,37 +169,37 @@ public:
 	
 public:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	///@}
 	// ********************************
-	///@name �W��
+	///@name 集約
 	// ********************************
 	///@{
 	///@}
 protected:
 	// --------------------------------
-	///@name sort �̉����֐�(template�p�^�[��)
+	///@name sort の下請関数(templateパターン)
 	// --------------------------------
 	///@{
 	/**
-		�w�肳�ꂽ���Index���\�[�g���܂��B
+		指定された列車Indexをソートします。
 	@param pRessyaCont [in]
-		�\�[�g�Ώۂ̗�Ԃ�ێ�������Ԃ̃R���e�i���w�肵�Ă��������B
+		ソート対象の列車を保持した列車のコンテナを指定してください。
 	@param muRessyaIndexOrder [in,out]
-		�\�[�g���s�����Index��ێ������R���e�i���w�肵�Ă��������B
-		(��F���Index0�`4���\�[�g�������ꍇ�́A
-		{0,1,2,3,4} ��5�̗v�f�����R���e�i���w�肵�Ă��������B
-		���̊֐��͂��̔z����A�w����Order���̑������Index���Ƀ\�[�g���܂��B
+		ソートを行う列車Indexを保持したコンテナを指定してください。
+		(例：列車Index0～4をソートしたい場合は、
+		{0,1,2,3,4} の5つの要素を持つコンテナを指定してください。
+		この関数はこの配列を、駅時刻Order順の早い列車Index順にソートします。
 	@param pIfProgress [in]
-		�i����Ԃ̒ʒm���󂯂����ꍇ�́A�i����Ԓʒm���󂯎��
-		�C���X�^���X�ւ̃|�C���^���w�肵�Ă��������B
-		NULL�Ȃ�A���̊֐��͐i����Ԃ̒ʒm���s���܂���B
+		進捗状態の通知を受けたい場合は、進捗状態通知を受け取る
+		インスタンスへのポインタを指定してください。
+		NULLなら、この関数は進捗状態の通知を行いません。
 	@note 
-		���̊֐��œ����\�[�g���ʂ�
-		sortRessyaByRessyaIndexOrder() �ɓn�����Ƃɂ��A
-		��ԃR���e�i���\�[�g���邱�Ƃ��ł��܂��B
+		この関数で得たソート結果を
+		sortRessyaByRessyaIndexOrder() に渡すことにより、
+		列車コンテナをソートすることができます。
 
 	*/
 	virtual void sortRessyaIndex( 

@@ -29,42 +29,42 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 #if !defined(AFX_CDLGROSENFILEPROP_FONTCOLOR_H__25C7879F_3AA8_41A9_9B19_3A1AFBB4F97E__INCLUDED_)
 #define AFX_CDLGROSENFILEPROP_FONTCOLOR_H__25C7879F_3AA8_41A9_9B19_3A1AFBB4F97E__INCLUDED_
-// CDlgRosenFileProp_FontColor.h : �w�b�_�[ �t�@�C��
+// CDlgRosenFileProp_FontColor.h : ヘッダー ファイル
 //	$Id: CDlgRosenFileProp_FontColor.h 179 2014-05-05 13:50:33Z okm $
 //
 /** @file */
@@ -83,78 +83,78 @@ namespace ViewRosen{
 class CDlgRosenFileProp ;
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgRosenFileProp_FontColor �_�C�A���O
+// CDlgRosenFileProp_FontColor ダイアログ
 
 /**
   @brief
- 	�w�H���t�@�C���̃v���p�e�B�x�_�C�A���O��
- 	�w�t�H���g�E�F�x�y�[�W����������A���[�h���X�_�C�A���O�ł��B
+ 	『路線ファイルのプロパティ』ダイアログの
+ 	『フォント・色』ページを実装する、モードレスダイアログです。
 */
 class CDlgRosenFileProp_FontColor : public CDialog
 {
 private:
 	// ********************************
-	///@name	����
+	///@name	属性
 	// ********************************
 	///@{
 	/**
-	 	�t�H���g�B
-	 	�K��l�́A	CdFontProp( 9 ,"�l�r �S�V�b�N"  ) �B
+	 	フォント。
+	 	規定値は、	CdFontProp( 9 ,"ＭＳ ゴシック"  ) 。
 
-		- 0�`CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT	�����\��ʃt�H���g
-		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+0 �����\��ʁE�c�����t�H���g
-		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+1	�_�C����ʉw���t�H���g�B
-		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+2 �_�C����ʎ����t�H���g�B
-		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+3 �_�C����ʗ�ԃt�H���g�B
-		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+4 �R�����g�r���[�t�H���g�B
+		- 0～CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT	時刻表画面フォント
+		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+0 時刻表画面・縦書きフォント
+		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+1	ダイヤ画面駅名フォント。
+		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+2 ダイヤ画面時刻フォント。
+		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+3 ダイヤ画面列車フォント。
+		- CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+4 コメントビューフォント。
 	 */
 	CdFontProp	m_arFontProp[entDed::CentDedRessyasyubetsu::JIKOKUHYOUFONT_COUNT+5] ;
 
 
 	/**
-	 	�_�C����ʕ����F�B
-	 	�K��l�́A���B
+	 	ダイヤ画面文字色。
+	 	規定値は、黒。
 
-		- 0	�_�C����ʕ����F�B
-		- 1	�_�C����ʏc�����F�B
+		- 0	ダイヤ画面文字色。
+		- 1	ダイヤ画面縦横軸色。
 	*/
 	COLORREF	m_arColor[2] ;
 	///@}
 
 private:
 	// --------------------------------
-	//	�����f�[�^
+	//	内部データ
 	// --------------------------------
 	/**
-	 	�t�H���g�̃T���v����`�悷�� DcDraw �I�u�W�F�N�g
-	 	OnInitDialog() �Ő����EOnDestroy() �Ŕj�����܂��B
+	 	フォントのサンプルを描画する DcDraw オブジェクト
+	 	OnInitDialog() で生成・OnDestroy() で破棄します。
 	*/
 	CDcdTextbox*	m_pdcdrawFont ;
 
 	/**
-	 	�t�H���g�̃T���v����`�悷�� DcDraw �I�u�W�F�N�g
-	 	OnInitDialog() �Ő����EOnDestroy() �Ŕj�����܂��B
+	 	フォントのサンプルを描画する DcDraw オブジェクト
+	 	OnInitDialog() で生成・OnDestroy() で破棄します。
 	*/
 	DcDraw::CDcdTextboxV3*	m_pdcdrawFontV ;
 
 	/**
-	 	�F�̃T���v����`�悷�� DcDraw �I�u�W�F�N�g
-	 	OnInitDialog() �Ő����EOnDestroy() �Ŕj�����܂��B
+	 	色のサンプルを描画する DcDraw オブジェクト
+	 	OnInitDialog() で生成・OnDestroy() で破棄します。
 	*/
 	CDcdRectangle*	m_pdcdrawColor ;
 protected:
 	// --------------------------------
-	//	�����֐�
+	//	下請関数
 	// --------------------------------
 	CDlgRosenFileProp* GetParent() ;
 	/**
-	 	UI�̏�Ԃ��X�V����(��:�R���g���[���̗L���E�����A���͒l�̐��K��)
+	 	UIの状態を更新する(例:コントロールの有効・無効、入力値の正規化)
 	 */
 	virtual void updateUIState() ;
 
 	/**
 	@return 
-		���X�g�R���g���[���ŏc�����t�H���g���I������Ă����� true �ł��B
+		リストコントロールで縦書きフォントが選択されていたら true です。
 	*/
 	bool VerticalFontIsChoosed() ;
 
@@ -163,16 +163,16 @@ protected:
 	//	CDlgRosenFileProp_FontColor
 	// ********************************
 	/**
-		�ҏW�Ώۃf�[�^��UI�ɔ��f���� 
+		編集対象データをUIに反映する 
 	*/
 	void updateUI() ;
 
 	/**
-�@�@�@	UI�̌��݂̓��͓��e���擾���A�ҏW�Ώۃf�[�^�ɔ��f������
+　　　	UIの現在の入力内容を取得し、編集対象データに反映させる
 	@return 
-	 	����������  0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+	 	成功したら  0 以上、エラーなら負の数です。
 
-		-	-1 ;	�G���[���������A���b�Z�[�W�{�b�N�X���\������܂����B
+		-	-1 ;	エラーが発生し、メッセージボックスが表示されました。
 	*/
 	int updatePropEditorData();
 
@@ -180,28 +180,28 @@ protected:
 // ----------------------------------------------------------------
 //	MFC
 // ----------------------------------------------------------------
-// �R���X�g���N�V����
+// コンストラクション
 public:
-	CDlgRosenFileProp_FontColor(CWnd* pParent = NULL);   // �W���̃R���X�g���N�^
+	CDlgRosenFileProp_FontColor(CWnd* pParent = NULL);   // 標準のコンストラクタ
 
-// �_�C�A���O �f�[�^
+// ダイアログ データ
 	//{{AFX_DATA(CDlgRosenFileProp_FontColor)
 	enum { IDD = IDD_RosenFileProp_FontColor };
-		// ����: ClassWizard �͂��̈ʒu�Ƀf�[�^ �����o��ǉ����܂��B
+		// メモ: ClassWizard はこの位置にデータ メンバを追加します。
 	//}}AFX_DATA
 
 
-// �I�[�o�[���C�h
-	// ClassWizard �͉��z�֐��̃I�[�o�[���C�h�𐶐����܂��B
+// オーバーライド
+	// ClassWizard は仮想関数のオーバーライドを生成します。
 	//{{AFX_VIRTUAL(CDlgRosenFileProp_FontColor)
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV �T�|�[�g
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV サポート
 	//}}AFX_VIRTUAL
 
-// �C���v�������e�[�V����
+// インプリメンテーション
 protected:
 
-	// �������ꂽ���b�Z�[�W �}�b�v�֐�
+	// 生成されたメッセージ マップ関数
 	//{{AFX_MSG(CDlgRosenFileProp_FontColor)
 	virtual BOOL OnInitDialog();
 	afx_msg void OnPaint();
@@ -215,7 +215,7 @@ protected:
 };
 
 //{{AFX_INSERT_LOCATION}}
-// Microsoft Visual C++ �͑O�s�̒��O�ɒǉ��̐錾��}�����܂��B
+// Microsoft Visual C++ は前行の直前に追加の宣言を挿入します。
 
 } //namespace ViewRosen
 

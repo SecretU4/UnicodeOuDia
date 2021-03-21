@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CMuiOu.h 352 2016-08-16 20:22:40Z okm $
@@ -77,20 +77,20 @@ using namespace NsOu ;
 
 /**
 @brief
-�@ElementType�^�̃I�u�W�F�N�g���w�� NsOu::Ou (�Q�ƃJ�E���^���g�p�����X�}�[�g�|�C���^)��ێ�����R���e�i�ł��B
+　ElementType型のオブジェクトを指す NsOu::Ou (参照カウンタを使用したスマートポインタ)を保持するコンテナです。
 
-  �R���e�i�ɂ́AElementType �̔h���N���X�̃I�u�W�F�N�g���w�� NsOu::Ou ���i�[���邱�Ƃ��ł��܂��B
+  コンテナには、ElementType の派生クラスのオブジェクトを指す NsOu::Ou も格納することができます。
 
-   getMuOu() ���\�b�h���g�����Ƃɂ��A Mu< NsOu::Ou< const ElementType > > �C���^�[�t�F�[�X�����擾���邱�Ƃ��ł��܂��B
+   getMuOu() メソッドを使うことにより、 Mu< NsOu::Ou< const ElementType > > インターフェースをを取得することができます。
   
-  �܂��AgetMuPtr() ���\�b�h���g�����Ƃɂ��A Mu< ElementType* > , Mu< const ElementType* > �C���^�[�t�F�[�X���擾���邱�Ƃ��ł��܂��B
+  また、getMuPtr() メソッドを使うことにより、 Mu< ElementType* > , Mu< const ElementType* > インターフェースを取得することもできます。
 
 @param ElementType
-  �i�[����I�u�W�F�N�g�̌^���w�肵�Ă��������B���̃p�����[�^�[�ɂ́AOu �͊܂߂Ȃ��ł��������B
+  格納するオブジェクトの型を指定してください。このパラメーターには、Ou は含めないでください。
  
 @param ContType
-  Ou< ElementType > ��ێ�����STL�R���e�i���w�肵�Ă��������B
-  ����ł́Astd::deque �ł����A std::vector ���g�����Ƃ��ł��܂��B
+  Ou< ElementType > を保持するSTLコンテナを指定してください。
+  既定では、std::deque ですが、 std::vector を使うこともできます。
 */
 template <
 	class ElementType,
@@ -99,26 +99,26 @@ class CMuiOu : public Mui< Ou< ElementType > >
 {
 private:
 	// ********************************
-	///@name �W��
+	///@name 集約
 	// ********************************
 	///@{
 	/**
-		Ou<ElementType> �� new �Ő��������C���X�^���X��ێ�����R���e�i�ł��B
+		Ou<ElementType> を new で生成したインスタンスを保持するコンテナです。
 	*/
 	ContType	m_Cont ;
 	///@}
 	
 private:
 	// ********************************
-	///@name ���
+	///@name 包含
 	// ********************************
 	///@{
 
 	/**
 	 @brief
-		CMuiCopied::getMuOu() ���\�b�h���Ԃ�
-		Mu< Ou<const ElementType> > �C���^�[�t�F�[�X��
-		���������N���X�ł��B
+		CMuiCopied::getMuOu() メソッドが返す
+		Mu< Ou<const ElementType> > インターフェースを
+		実装したクラスです。
 	 */
 	class XMuOuConst : public Mu< Ou< const ElementType > >
 	{
@@ -145,9 +145,9 @@ private:
 
 	/**
 	 @brief
-		CMuiCopied::getMuPtr() ���\�b�h���Ԃ�
-		Mu< ElementType* > �C���^�[�t�F�[�X��
-		���������N���X�ł��B
+		CMuiCopied::getMuPtr() メソッドが返す
+		Mu< ElementType* > インターフェースを
+		実装したクラスです。
 	 */
 	class XMuPtr : public Mu< ElementType* >
 	{
@@ -174,9 +174,9 @@ private:
 
 	/**
 	 @brief
-		CMuiCopied::getMuPtr()const ���\�b�h���Ԃ�
-		Mu< const ElementType* > �C���^�[�t�F�[�X��
-		���������N���X�ł��B
+		CMuiCopied::getMuPtr()const メソッドが返す
+		Mu< const ElementType* > インターフェースを
+		実装したクラスです。
 	 */
 	class XMuConstPtr : public Mu< const ElementType* >
 	{
@@ -206,18 +206,18 @@ private:
 
 public:
 	// ********************************
-	// �R���X�g���N�^
+	// コンストラクタ
 	// ********************************
 	/**
-	  ��R���e�i�𐶐����܂��B
+	  空コンテナを生成します。
 	*/
 	CMuiOu(){} ; 
-	/**  �R�s�[�R���X�g���N�^ */
+	/**  コピーコンストラクタ */
 	CMuiOu( const CMuiOu<ElementType,ContType>& value ) 
 		: m_Cont( value.m_Cont ) 
 	{
 	}
-	/**  ������Z�q */
+	/**  代入演算子 */
 	CMuiOu& operator=( const CMuiOu<ElementType,ContType>& value ) 
 	{
 		m_Cont = value.m_Cont ;
@@ -230,19 +230,19 @@ public:
 	// ********************************
 	/**
 	 @return
-	 	�R���e�i�Ɋi�[����Ă���v�f�̌���Ԃ��܂��B
+	 	コンテナに格納されている要素の個数を返します。
 	*/
 	virtual int size() const{ return (int)m_Cont.size() ;};
 
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
-	 	�v�f�̃R�s�[��Ԃ��܂��B
+	 	コンテナ内の、インデクスで指定された場所に格納されている
+	 	要素のコピーを返します。
 	 @param iIndex [in]
-	 	0 ����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂� 0 �ȏ� size() �����ł��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	0 から始まるインデクスを指定してください。
+	 	範囲は 0 以上 size() 未満です。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	 	インデクスで指定された要素を返します。
 	*/
 	virtual Ou<ElementType> get(int iIndex)const
 	{
@@ -257,17 +257,17 @@ public:
 	///@name Mui 
 	// ********************************
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f�̃R�s�[��ǉ����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素のコピーを追加します。
 	 @param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 以下です。
+	 	０は、先頭・size()なら末尾への追加になります。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	*/
 	virtual int insert( const Ou<ElementType> & element ,  int iIndex=INT_MAX) 
 	{
@@ -279,7 +279,7 @@ public:
 		// --------------------------------	
 		if ( !( 0 <= iIndex && iIndex <= (int)m_Cont.size() ) )
 		{
-			iRv = -1 ;	//	�C���f�N�X���͈͊O�ł��B
+			iRv = -1 ;	//	インデクスが範囲外です。
 		}
 		else
 		{
@@ -292,19 +292,19 @@ public:
 	}
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
-	 	�v�f���폜���܂��B
+	 	コンテナ内の、インデクスで指定された場所の
+	 	要素を削除します。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 @param iSize [in]
-	 	�폜����v�f�̐����w�肵�Ă��������B
-	 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 	削除する要素の数を指定してください。
+	 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 @attention
-		iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+		iIndex と iSize の両方を INT_MAX にすることはできません。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	*/
 	virtual int erase( int iIndex , int iSize = 1 )
 	{
@@ -320,7 +320,7 @@ public:
 		// --------------------------------	
 		if ( !( 0 <= iIndex && iIndex + iSize <= (int)m_Cont.size() ) )
 		{
-			iRv = -1 ;	//	�C���f�N�X���͈͊O�ł��B
+			iRv = -1 ;	//	インデクスが範囲外です。
 		}
 		else
 		{
@@ -334,16 +334,16 @@ public:
 		return iRv ;
 	}
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f���㏑�����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素を上書きします。
 	 @param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	*/
 	virtual int set( const Ou<ElementType>& element , int iIndex ) 
 	{
@@ -355,7 +355,7 @@ public:
 		// --------------------------------	
 		if ( !( 0 <= iIndex && iIndex < (int)m_Cont.size() ) )
 		{
-			iRv = -1 ;	//	�C���f�N�X���͈͊O�ł��B
+			iRv = -1 ;	//	インデクスが範囲外です。
 		}
 		else
 		{
@@ -366,29 +366,29 @@ public:
 	}
 public:
 	// ********************************
-	///@name CMuiOu-����
+	///@name CMuiOu-操作
 	// ********************************
 	///@{
 	
 	/**
-		�R���e�i����Ou���w���C���X�^���X�ɃA�N�Z�X�ł���
+		コンテナ内のOuが指すインスタンスにアクセスできる
 		 const Mu< Ou< const ElementType > >
-		�C���^�[�t�F�[�X��Ԃ��܂��B
+		インターフェースを返します。
 	*/
 	virtual const Mu< Ou< const ElementType > >* getMuOu()const 
 	{	return &m_xMuOuConst ;};
 
 	/**
-		�R���e�i����Ou���w���C���X�^���X�ɃA�N�Z�X�ł���
+		コンテナ内のOuが指すインスタンスにアクセスできる
 		 Mu<ElementType*>
-		�C���^�[�t�F�[�X��Ԃ��܂��B
+		インターフェースを返します。
 	*/
 	virtual Mu<ElementType*>* getMuPtr(){ return &m_xMuPtr ;}
 	
 	/**
-		�R���e�i����Ou���w���C���X�^���X�ɃA�N�Z�X�ł���
+		コンテナ内のOuが指すインスタンスにアクセスできる
 		 const Mu<const ElementType*>
-		�C���^�[�t�F�[�X��Ԃ��܂��B
+		インターフェースを返します。
 	*/
 	virtual const Mu<const ElementType*>* getMuPtr()const{ return &m_xMuConstPtr ;}
 	

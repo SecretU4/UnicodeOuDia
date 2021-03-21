@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -86,7 +86,7 @@ static char THIS_FILE[] = __FILE__;
 //	CentDedDiaCont
 // ****************************************************************
 // --------------------------------
-//@name CaContFilter-ƒI[ƒoƒ‰ƒCƒh‰Â”\‚È‰¼‘zŠÖ”
+//@name CaContFilter-ã‚ªãƒ¼ãƒãƒ©ã‚¤ãƒ‰å¯èƒ½ãªä»®æƒ³é–¢æ•°
 // --------------------------------
 CentDedDiaCont::adaptee_value_type 
 CentDedDiaCont::onSet( const value_type& value , int* piResult ) 
@@ -107,7 +107,7 @@ void CentDedDiaCont::onErase( const adaptee_value_type& value )
 }
 
 // ********************************
-//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 // ********************************
 CentDedDiaCont::CentDedDiaCont( int iEkiCount , int iRessyasyubetsuCount ) 
 	:
@@ -123,7 +123,7 @@ CentDedDiaCont::CentDedDiaCont( const CentDedDiaCont& value )
 	m_iEkiCount( value.m_iEkiCount ) ,
 	m_iRessyasyubetsuCount( value.m_iRessyasyubetsuCount ) 
 {
-	//	value ‚Ìƒ_ƒCƒ„‚ğAthis‚ÉƒRƒs[‚µ‚Ä‚¢‚Ü‚·B
+	//	value ã®ãƒ€ã‚¤ãƒ¤ã‚’ã€thisã«ã‚³ãƒ”ãƒ¼ã—ã¦ã„ã¾ã™ã€‚
 	CaCont< CentDedDia >	aCaCont_this( this ) ;
 	aCaCont_this.insert( &value ) ;
 
@@ -131,9 +131,9 @@ CentDedDiaCont::CentDedDiaCont( const CentDedDiaCont& value )
 	
 CentDedDiaCont& CentDedDiaCont::operator=( const CentDedDiaCont& value )
 {
-	//	•Û‚µ‚Ä‚¢‚éƒ_ƒCƒ„‚ğA‚·‚×‚Ä”jŠü‚µ‚Ü‚·B
+	//	ä¿æŒã—ã¦ã„ã‚‹ãƒ€ã‚¤ãƒ¤ã‚’ã€ã™ã¹ã¦ç ´æ£„ã—ã¾ã™ã€‚
 	erase( 0 , INT_MAX ) ;
-	//	value ‚Ìƒ_ƒCƒ„‚ğAthis‚ÉƒRƒs[‚µ‚Ä‚¢‚Ü‚·B
+	//	value ã®ãƒ€ã‚¤ãƒ¤ã‚’ã€thisã«ã‚³ãƒ”ãƒ¼ã—ã¦ã„ã¾ã™ã€‚
 	CaCont< CentDedDia >	aCaCont_this( this ) ;
 	aCaCont_this.insert( &value ) ;
 
@@ -154,14 +154,14 @@ int CentDedDiaCont::set( const CentDedDia& element , int iIndex )
 	int iRv = 0 ;
 	if ( iRv >= 0 ){
 		if ( element.getName().empty() ){
-			iRv = -2 ;	//	element ‚É‚Íƒ_ƒCƒ„–¼‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
+			iRv = -2 ;	//	element ã«ã¯ãƒ€ã‚¤ãƒ¤åãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 		}
 	}
 	if ( iRv >= 0 ){
 		int iIndexFind = findCentDedDiaByName( element.getName() ) ;
 		if ( iIndexFind >= 0 && iIndexFind != iIndex ){
-			//	“¯‚¶ƒCƒ“ƒfƒNƒX‚É‘Î‚µ‚Ä‚ÍA–¼‘O‚ª“¯‚¶‚Å‚à‚©‚Ü‚¢‚Ü‚¹‚ñB
-			iRv = -3 ;	//	‚·‚Å‚É“¯–¼‚Ìƒ_ƒCƒ„‚ª‘¶İ‚µ‚Ü‚·B
+			//	åŒã˜ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ã«å¯¾ã—ã¦ã¯ã€åå‰ãŒåŒã˜ã§ã‚‚ã‹ã¾ã„ã¾ã›ã‚“ã€‚
+			iRv = -3 ;	//	ã™ã§ã«åŒåã®ãƒ€ã‚¤ãƒ¤ãŒå­˜åœ¨ã—ã¾ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 ){
@@ -174,13 +174,13 @@ int CentDedDiaCont::insert( const CentDedDia& element , int iIndex )
 	int iRv = 0 ;
 	if ( iRv >= 0 ){
 		if ( element.getName().empty() ){
-			iRv = -2 ;	//	element ‚É‚Íƒ_ƒCƒ„–¼‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
+			iRv = -2 ;	//	element ã«ã¯ãƒ€ã‚¤ãƒ¤åãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 		}
 	}
 	if ( iRv >= 0 ){
 		int iIndexFind = findCentDedDiaByName( element.getName() ) ;
 		if ( iIndexFind >= 0 ){
-			iRv = -3 ;	//	‚·‚Å‚É“¯–¼‚Ìƒ_ƒCƒ„‚ª‘¶İ‚µ‚Ü‚·B
+			iRv = -3 ;	//	ã™ã§ã«åŒåã®ãƒ€ã‚¤ãƒ¤ãŒå­˜åœ¨ã—ã¾ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 ){
@@ -193,7 +193,7 @@ int CentDedDiaCont::insert( const CentDedDia& element , int iIndex )
 //	CentDedDiaCont
 // ********************************
 	// ********************************
-	//@name ‘®«
+	//@name å±æ€§
 	// ********************************
 int CentDedDiaCont::getEkiCount()const
 {
@@ -205,7 +205,7 @@ int CentDedDiaCont::getRessyasyubetsuCount()const
 };
 
 	// ********************************
-	//@name CentDedDiaCont-‘€ì
+	//@name CentDedDiaCont-æ“ä½œ
 	// ********************************
 int CentDedDiaCont::findCentDedDiaByName( const string& strName )const 
 {
@@ -219,7 +219,7 @@ int CentDedDiaCont::findCentDedDiaByName( const string& strName )const
 	return ( iRv ) ;
 }
 	// ********************************
-	//@name CentDedDiaCont-‘€ì ‰w‚Ì‘Œ¸
+	//@name CentDedDiaCont-æ“ä½œ é§…ã®å¢—æ¸›
 	// ********************************
 int CentDedDiaCont::onSetCentDedEki( const CentDedEkiCont* pCentDedEkiCont , int iEkiIndex ) 
 {
@@ -271,7 +271,7 @@ int CentDedDiaCont::insertRessyasyubetsuIndex( int iRessyasyubetsuIndex )
 		}
 		if ( !( 0 <= iRessyasyubetsuIndex && 
 				iRessyasyubetsuIndex <= getRessyasyubetsuCount() ) ){
-			iRv = -1 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³
+			iRv = -1 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£
 		}
 	}
 	// --------------------------------
@@ -297,18 +297,18 @@ int CentDedDiaCont::eraseRessyasyubetsuIndex( int iRessyasyubetsuIndex )
 		}
 		if ( !( 0 <= iRessyasyubetsuIndex && 
 				iRessyasyubetsuIndex < getRessyasyubetsuCount() ) ){
-			iRv = -1 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³
+			iRv = -1 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£
 		}
 	}
 	if ( iRv >= 0 ){
 		if ( isExistRessyaOfRessyasyubetsu( 
 			iRessyasyubetsuIndex , NULL , NULL , NULL ) > 0 ){
-			iRv = -3 ;	//	w—ñÔí•Êx‚ª iRessyasyubtsuIndex ‚Ì—ñÔ‚ª‘¶İ‚µ‚Ü‚·B
+			iRv = -3 ;	//	ã€åˆ—è»Šç¨®åˆ¥ã€ãŒ iRessyasyubtsuIndex ã®åˆ—è»ŠãŒå­˜åœ¨ã—ã¾ã™ã€‚
 		}
 	}
 	// --------------------------------
-	//	iRessyasyubetsuIndex ˆÈã‚Ìw—ñÔí•ÊIndexx‚ğ‚à‚Â
-	//	—ñÔ‚Ìw—ñÔí•ÊIndexx‚ğA|‚P
+	//	iRessyasyubetsuIndex ä»¥ä¸Šã®ã€åˆ—è»Šç¨®åˆ¥Indexã€ã‚’ã‚‚ã¤
+	//	åˆ—è»Šã®ã€åˆ—è»Šç¨®åˆ¥Indexã€ã‚’ã€ï¼ï¼‘
 	if ( iRv >= 0 ){
 		IfContGet<CentDedDia*>* pIfContGet = getIfContGet() ; 
 		int iDiaIndex ;
@@ -340,7 +340,7 @@ int CentDedDiaCont::isExistRessyaOfRessyasyubetsu(
 		}
 		if ( !( 0 <= iRessyasyubetsuIndex && 
 				iRessyasyubetsuIndex < getRessyasyubetsuCount() ) ){
-			iRv = -1 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³
+			iRv = -1 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£
 
 		}
 	}
@@ -379,7 +379,7 @@ int CentDedDiaCont::isExistRessyaOfRessyasyubetsu(
 
 /*
 // --------------------------------
-//@name CentDedRosen ê—pƒƒ“ƒoŠÖ”
+//@name CentDedRosen å°‚ç”¨ãƒ¡ãƒ³ãƒé–¢æ•°
 // --------------------------------
 int CentDedDiaCont::insertCentDedEkiJikoku(	int iEkiIndex ) 
 {
@@ -412,7 +412,7 @@ int CentDedDiaCont::eraseCentDedEkiJikoku( int iEkiIndex )
 }
 
 // ********************************
-//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 // ********************************
 CentDedDiaCont::CentDedDiaCont( int iEkiCount ) 
 	: m_iEkiCount( iEkiCount )
@@ -442,10 +442,10 @@ CentDedDiaCont::~CentDedDiaCont()
 // ********************************
 
 // ********************************
-//	ƒRƒ“ƒeƒi‘€ì
+//	ã‚³ãƒ³ãƒ†ãƒŠæ“ä½œ
 // ********************************
 	// ********************************
-	//@name •ïŠÜ-CentDedRessya
+	//@name åŒ…å«-CentDedRessya
 	// ********************************
 int CentDedDiaCont::size()const 
 {
@@ -461,7 +461,7 @@ int CentDedDiaCont::set( const CentDedDia& value , int iIndex )
 {
 	int iRv = 0 ;
 	if ( !( 0 <= iIndex && iIndex < m_xCont.size() ) ){
-		iRv = -1 ;	//	ƒCƒ“ƒfƒNƒX‚ª•s³‚Å‚·B
+		iRv = -1 ;	//	ã‚¤ãƒ³ãƒ‡ã‚¯ã‚¹ãŒä¸æ­£ã§ã™ã€‚
 	}
 	if ( iRv >= 0 ){
 		CentDedDia* pCentDedDia = m_xCont.get( iIndex ) ;
@@ -488,7 +488,7 @@ int CentDedDiaCont::insert( const CentDedDia& value , int iIndex , int iSize )
 			iIndex = m_xCont.size() ;
 		}
 		if ( !( 0 <= iIndex && iIndex <= m_xCont.size() ) ){
-			iRv = -1 ;	//	iIndex ‚ª•s³‚Å‚·B
+			iRv = -1 ;	//	iIndex ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 ){
@@ -498,7 +498,7 @@ int CentDedDiaCont::insert( const CentDedDia& value , int iIndex , int iSize )
 			int iResult = m_xCont.insert( pCentDedDia , iIndex + cnt ) ;
 			if ( iResult < 0 ){
 				delete pCentDedDia ;
-				iRv = -1 ;	//	iIndex ‚ª•s³‚Å‚·B
+				iRv = -1 ;	//	iIndex ãŒä¸æ­£ã§ã™ã€‚
 			}
 		}
 	}
@@ -514,7 +514,7 @@ int CentDedDiaCont::insert( const CentDedDiaCont* pSrc ,
 			iIndex = m_xCont.size() ;
 		}
 		if ( !( 0 <= iIndex && iIndex <= m_xCont.size() ) ){
-			iRv = -1 ;	//	iIndex ‚ª•s³‚Å‚·B
+			iRv = -1 ;	//	iIndex ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 ){
@@ -522,7 +522,7 @@ int CentDedDiaCont::insert( const CentDedDiaCont* pSrc ,
 			iSrcIndex = pSrc->size() - iSize ;
 		}
 		if ( !( 0 <= iSrcIndex && iSrcIndex <= pSrc->size() - iSize ) ){
-			iRv = -2 ;	//	iSrcIndex ‚ª•s³‚Å‚·B
+			iRv = -2 ;	//	iSrcIndex ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 ){
@@ -544,7 +544,7 @@ int CentDedDiaCont::erase( int iIndex , int iSize )
 	int iRv = 0 ;
 	if ( iRv >= 0 ){
 		if ( iIndex == INT_MAX && iSize == INT_MAX ){
-			iRv = -1 ;	//	iIndex ‚ª•s³‚Å‚·B
+			iRv = -1 ;	//	iIndex ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 ){
@@ -555,7 +555,7 @@ int CentDedDiaCont::erase( int iIndex , int iSize )
 			iSize = m_xCont.size() - iIndex ;
 		}
 		if ( !( 0 <= iIndex && iIndex <= m_xCont.size() - iSize ) ){
-			iRv = -1 ;	//	iIndex ‚ª•s³‚Å‚·B
+			iRv = -1 ;	//	iIndex ãŒä¸æ­£ã§ã™ã€‚
 		}
 	}
 	if ( iRv >= 0 ){

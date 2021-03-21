@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -84,107 +84,107 @@ namespace ViewJikokuhyou{ namespace WndJikokuhyou{
 // ****************************************************************
 /**
 @brief
-  CWndJikokuhyou �̏�ԋ@�B��\���N���X�ł��B
+  CWndJikokuhyou の状態機械を表すクラスです。
 
-�@���̃N���X�́A��Ԃ�\�� CWjkState �I�u�W�F�N�g��
- �R���e�i�Ƃ��ē����܂��B
+　このクラスは、状態を表す CWjkState オブジェクトの
+ コンテナとして働きます。
 
-  �܂��A���̃N���X�̓J�����g��Ԃ�ێ����܂��B��ԑJ�ڎ���
-����E�ޏꓮ��̌Ăяo�����s���܂��B
+  また、このクラスはカレント状態を保持します。状態遷移時の
+入場・退場動作の呼び出しも行います。
 
   
-�y�g�����z
+【使い方】
 
-(1)  add() �ŁACWndJikokuhyou �I�u�W�F�N�g��ǉ����Ă��������B
+(1)  add() で、CWndJikokuhyou オブジェクトを追加してください。
 
-(2)  setCurrentStateIdx() �ŁA�����̃J�����g��Ԃ��w�肵�Ă��������B
+(2)  setCurrentStateIdx() で、初期のカレント状態を指定してください。
 
-(3)  getCurrentState() �ŁA�J�����g��Ԃ� CWjkState �I�u�W�F�N�g�ւ̃|�C���^���擾���邱�Ƃ��ł��܂��B
-  ���̃|�C���^�ɑ΂��ă��\�b�h���Ăяo�����Ƃɂ��A��ԑJ�ڂɉ������������s�킹�邱�Ƃ��ł��܂��B
+(3)  getCurrentState() で、カレント状態の CWjkState オブジェクトへのポインタを取得することができます。
+  このポインタに対してメソッドを呼び出すことにより、状態遷移に応じた処理を行わせることができます。
 
-(4)  setCurrentStateIdx() �ŁA��ԑJ�ڐ���w�肷�邱�Ƃɂ��A�J�����g��Ԃ�J�ڂ����邱�Ƃ��ł��܂��B
+(4)  setCurrentStateIdx() で、状態遷移先を指定することにより、カレント状態を遷移させることができます。
 
 */
 class CWjkStateMachine 
 {
 private:
 	// ********************************
-	///@name	����
+	///@name	属性
 	// ********************************
 	///@{
 	/**
-		�w�J�����g��ԁx��\���܂��B
+		『カレント状態』を表します。
 	
-		�w�J�����g��ԁx�́A m_CStateCont �R���e�i�̃C���f�N�X�Ŏ����܂��B
-		-1 �́A�ǂ̏�Ԃɂ������Ă��Ȃ���Ԃł��B
+		『カレント状態』は、 m_CStateCont コンテナのインデクスで示します。
+		-1 は、どの状態にも属していない状態です。
 	 */
 	int m_iCurrentStateIdx ;
 	///@}
 	// ********************************
-	///@name	�W��
+	///@name	集約
 	// ********************************
 	///@{
 	/**
-		�w��ԁx�I�u�W�F�N�g�ւ̃|�C���^��ێ�����R���e�i�ł��B
+		『状態』オブジェクトへのポインタを保持するコンテナです。
 	
-		add() �ŃI�u�W�F�N�g��ǉ����邱�Ƃ��ł��܂��B
+		add() でオブジェクトを追加することができます。
 	 */
 	CMup_vector< Ou< CWjkState > >	m_CStateCont ;
 
 	/**
-		m_CStateCont �̃A�_�v�^�ł��B
+		m_CStateCont のアダプタです。
 	
-		Mu �C���^�[�t�F�[�X��񋟂��܂��B
+		Mu インターフェースを提供します。
 	 */
 	CaMuCast< CWjkState* , Ou< CWjkState > >
 		m_CStateContGet ;
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CWjkStateMachine() ;
 
 	// ********************************
-	///@name	CWjkStateMachine-����
+	///@name	CWjkStateMachine-属性
 	// ********************************
 	///@{
 	int getCurrentStateIdx() ;
 
 	/**
-		�w�J�����g��ԁx��ύX���܂��B
+		『カレント状態』を変更します。
 	
-		���̊֐��́A�ȉ��̏��ŏ������s���܂��B
+		この関数は、以下の順で処理を行います。
 	
-		-# �V�����w�J�����g��ԁx�� CWjkState �I�u�W�F
-		�N�g�ɑ΂��āA CWjkState::canEnter() ��
-		�Ăяo���āA����\���ۂ��𒲂ׂ�B
-			����s�\�Ȃ�A�㑱�̏����͍s��Ȃ��B
-		-# ����܂ł́w�J�����g��ԁx�� CWjkState 
-		�I�u�W�F�N�g�ɑ΂��āA CWjkState::onExit() ��
-		�Ăяo���āA�ޏꓮ����s�킹��B
-		-# �J�����g��Ԃ����� m_iCurrentStateIdx ���X�V�B
-		-# �V�����w�J�����g��ԁx�� CWjkState 
-		�I�u�W�F�N�g�ɑ΂��āACWjkState::onEnter() ��
-		�Ăяo���āA���ꓮ����s�킹��B
+		-# 新しい『カレント状態』の CWjkState オブジェ
+		クトに対して、 CWjkState::canEnter() を
+		呼び出して、入場可能か否かを調べる。
+			入場不可能なら、後続の処理は行わない。
+		-# それまでの『カレント状態』の CWjkState 
+		オブジェクトに対して、 CWjkState::onExit() を
+		呼び出して、退場動作を行わせる。
+		-# カレント状態を示す m_iCurrentStateIdx を更新。
+		-# 新しい『カレント状態』の CWjkState 
+		オブジェクトに対して、CWjkState::onEnter() を
+		呼び出して、入場動作を行わせる。
 	
-		���� value �� m_iCurrentStateIdx ���������ꍇ�ł��A
+		引数 value と m_iCurrentStateIdx が等しい場合でも、
 		CWjkState::onExit() , 
-		CWjkState::onEnter() �̌Ăяo���͍s���܂��B
+		CWjkState::onEnter() の呼び出しは行います。
 		
 	@param value [in]
-		���́w�J�����g��ԁx���w�肵�Ă��������B
-		�w�J�����g��ԁx�́A m_CStateCont �R���e�i�̃C���f�N�X�Ŏ����܂��B
+		次の『カレント状態』を指定してください。
+		『カレント状態』は、 m_CStateCont コンテナのインデクスで示します。
 	@return
-		��ԑJ�ڂ����������� 0 �ȏ�A�J�ڂł��Ȃ���Ε��̐��ł��B
-		�J�ڐ�̏�Ԃ� canEnter() �����̐���Ԃ����ꍇ�́A
-		���̐���Ԃ��āA��ԑJ�ڂ͎��s���܂��B
+		状態遷移が成功したら 0 以上、遷移できなければ負の数です。
+		遷移先の状態の canEnter() が負の数を返した場合は、
+		その数を返して、状態遷移は失敗します。
 	*/
 	int setCurrentStateIdx( int value ) ;
 	///@}
 
 	// ********************************
-	///@name	CWjkStateMachine-�W�� 
+	///@name	CWjkStateMachine-集約 
 	// ********************************
 	///@{
 	Mu< CWjkState* >*	getCStateContGet()
@@ -192,21 +192,21 @@ public:
 	///@}
 
 	// ********************************
-	///@name	CWjkStateMachine-���� 
+	///@name	CWjkStateMachine-操作 
 	// ********************************
 	///@{
 	/**
-		��Ԃ�ǉ����܂��B
+		状態を追加します。
 	*/
 	void add( Ou< CWjkState > pState ) ;
 	
 	/**
 	@return 
-		�J�����g��Ԃ̃I�u�W�F�N�g��Ԃ��܂��B
-		 m_iCurrentStateIdx == -1 �̏ꍇ�� NULL ��Ԃ��܂��B
+		カレント状態のオブジェクトを返します。
+		 m_iCurrentStateIdx == -1 の場合は NULL を返します。
 
-		���̊֐��̖߂�l�́A getCStateContGet( getCurrentStateIdx() ) 
-		�Ɠ����ł��B
+		この関数の戻り値は、 getCStateContGet( getCurrentStateIdx() ) 
+		と等価です。
 	*/
 	CWjkState* getCurrentState() ;
 

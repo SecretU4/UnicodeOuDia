@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(–ó: 
+(è¨³: 
 
-	OuDia - —ñÔ•\‚ğ‚à‚Æ‚ÉAƒ_ƒCƒ„ƒOƒ‰ƒ€‚ğ•`‰æ‚·‚éWin32ƒAƒvƒŠƒP[ƒV
-ƒ‡ƒ“B
+	OuDia - åˆ—è»Šæ™‚åˆ»è¡¨ã‚’ã‚‚ã¨ã«ã€ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã‚’æç”»ã™ã‚‹Win32ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·
+ãƒ§ãƒ³ã€‚
 
 Copyright (C) 2006-2017 take-okm 
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÍƒtƒŠ[ƒ\ƒtƒgƒEƒFƒA‚Å‚·B‚ ‚È‚½‚Í‚±‚ê‚ğAƒtƒŠ[ƒ\ƒtƒgƒEƒFƒAà
-’c‚É‚æ‚Á‚Ä”­s‚³‚ê‚½GNU ˆê”ÊŒöO—˜—p‹–‘ø‘(ƒo[ƒWƒ‡ƒ“3‚©A‚»‚êˆÈ~‚Ìƒo[ƒWƒ‡
-ƒ“‚Ì‚¤‚¿‚Ç‚ê‚©)‚ª’è‚ß‚éğŒ‚Ì‰º‚ÅÄ”Ğ•z‚Ü‚½‚Í‰ü•Ï ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã§ã™ã€‚ã‚ãªãŸã¯ã“ã‚Œã‚’ã€ãƒ•ãƒªãƒ¼ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢è²¡
+å›£ã«ã‚ˆã£ã¦ç™ºè¡Œã•ã‚ŒãŸGNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸(ãƒãƒ¼ã‚¸ãƒ§ãƒ³3ã‹ã€ãã‚Œä»¥é™ã®ãƒãƒ¼ã‚¸ãƒ§
+ãƒ³ã®ã†ã¡ã©ã‚Œã‹)ãŒå®šã‚ã‚‹æ¡ä»¶ã®ä¸‹ã§å†é ’å¸ƒã¾ãŸã¯æ”¹å¤‰ ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-‚±‚ÌƒvƒƒOƒ‰ƒ€‚Í—L—p‚Å‚ ‚é‚±‚Æ‚ğŠè‚Á‚Ä”Ğ•z‚³‚ê‚Ü‚·‚ªA*‘S‚­‚Ì–³•ÛØ *‚Å‚·B
-¤‹Æ‰Â”\«‚Ì•ÛØ‚â“Á’è–Ú“I‚Ö‚Ì“K‡«‚ÍAŒ¾ŠO‚É¦‚³‚ê‚½‚à‚Ì‚à ŠÜ‚ßA‘S‚­‘¶İ
-‚µ‚Ü‚¹‚ñBÚ‚µ‚­‚ÍGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ğ‚²——‚­‚¾‚³‚¢B
+ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯æœ‰ç”¨ã§ã‚ã‚‹ã“ã¨ã‚’é¡˜ã£ã¦é ’å¸ƒã•ã‚Œã¾ã™ãŒã€*å…¨ãã®ç„¡ä¿è¨¼ *ã§ã™ã€‚
+å•†æ¥­å¯èƒ½æ€§ã®ä¿è¨¼ã‚„ç‰¹å®šç›®çš„ã¸ã®é©åˆæ€§ã¯ã€è¨€å¤–ã«ç¤ºã•ã‚ŒãŸã‚‚ã®ã‚‚ å«ã‚ã€å…¨ãå­˜åœ¨
+ã—ã¾ã›ã‚“ã€‚è©³ã—ãã¯GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã‚’ã”è¦§ãã ã•ã„ã€‚
 
-‚ ‚È‚½‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚Æ‹¤‚ÉAGNU ˆê”ÊŒöO—˜—p‹–‘ø‘‚ÌƒRƒs[‚ğˆê•” ó‚¯æ‚Á
-‚Ä‚¢‚é‚Í‚¸‚Å‚·B‚à‚µó‚¯æ‚Á‚Ä‚¢‚È‚¯‚ê‚ÎA<http://www.gnu.org/licenses/> ‚ğ
-‚²——‚­‚¾‚³‚¢B
+ã‚ãªãŸã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¨å…±ã«ã€GNU ä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾æ›¸ã®ã‚³ãƒ”ãƒ¼ã‚’ä¸€éƒ¨ å—ã‘å–ã£
+ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚ã‚‚ã—å—ã‘å–ã£ã¦ã„ãªã‘ã‚Œã°ã€<http://www.gnu.org/licenses/> ã‚’
+ã”è¦§ãã ã•ã„ã€‚
 
 )
 
-  ‰Á‚¦‚ÄA“Á•Ê‚È—áŠO‚Æ‚µ‚ÄAtake-okm ‚Í‚±‚ÌƒvƒƒOƒ‰ƒ€‚ÌƒR[ƒh‚ğ 
+  åŠ ãˆã¦ã€ç‰¹åˆ¥ãªä¾‹å¤–ã¨ã—ã¦ã€take-okm ã¯ã“ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ã‚³ãƒ¼ãƒ‰ã‚’ 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ‚ ‚é‚¢‚Í "MFC Version 9.0" ‚Æ“¯‚¶ƒ‰ƒCƒZƒ“ƒX‚ª“K—p‚³‚ê‚½
-  "MFC Version 9.0" ‚Ì‰ü•Ï‚³‚ê‚½ƒo[ƒWƒ‡ƒ“)‚ÆƒŠƒ“ƒN‚µA
-  ƒŠƒ“ƒN‚³‚ê‚½—¼Ò‚ğŠÜ‚ŞŒ‹‡’˜ì•¨‚ğ”Ğ•z‚·‚é‹–‰Â‚ğ—^‚¦‚Ü‚·B
-  ‚ ‚È‚½‚Í "MFC" ˆÈŠO‚Åg‚í‚ê‚Ä‚¢‚é‚·‚×‚Ä
-  ‚ÌƒR[ƒh‚ÉŠÖ‚µ‚Ä‚Í‘S–Ê“I‚ÉGNUˆê”ÊŒöO—˜—p‹–‘øŒ_–ñ‘‚É]‚í‚È‚¯‚ê‚Î
-  ‚È‚è‚Ü‚¹‚ñB‚ ‚È‚½‚ª‚±‚Ìƒtƒ@ƒCƒ‹‚ğ‰ü•Ï‚µ‚½‚È‚ç‚ÎA‚ ‚È‚½‚Í‚±‚Ì—áŠO
-  ‚ğ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚Éˆø‚«‘±‚«İ‚¯‚é‚±‚Æ‚à‚Å‚«‚Ü‚·‚ªA‚»
-  ‚¤‚·‚é‹`–±‚Í‚ ‚è‚Ü‚¹‚ñB‚à‚µ—áŠO‚ğİ‚¯‚½‚­‚È‚¯‚ê‚ÎA‚±‚Ì—áŠOğ€‚ğ
-  ‚ ‚È‚½‚Ìƒo[ƒWƒ‡ƒ“‚©‚ç‚Ííœ‚µ‚Ä‚­‚¾‚³‚¢B)
+  (  ã‚ã‚‹ã„ã¯ "MFC Version 9.0" ã¨åŒã˜ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŒé©ç”¨ã•ã‚ŒãŸ
+  "MFC Version 9.0" ã®æ”¹å¤‰ã•ã‚ŒãŸãƒãƒ¼ã‚¸ãƒ§ãƒ³)ã¨ãƒªãƒ³ã‚¯ã—ã€
+  ãƒªãƒ³ã‚¯ã•ã‚ŒãŸä¸¡è€…ã‚’å«ã‚€çµåˆè‘—ä½œç‰©ã‚’é ’å¸ƒã™ã‚‹è¨±å¯ã‚’ä¸ãˆã¾ã™ã€‚
+  ã‚ãªãŸã¯ "MFC" ä»¥å¤–ã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ã™ã¹ã¦
+  ã®ã‚³ãƒ¼ãƒ‰ã«é–¢ã—ã¦ã¯å…¨é¢çš„ã«GNUä¸€èˆ¬å…¬è¡†åˆ©ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã‚ãªã‘ã‚Œã°
+  ãªã‚Šã¾ã›ã‚“ã€‚ã‚ãªãŸãŒã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ”¹å¤‰ã—ãŸãªã‚‰ã°ã€ã‚ãªãŸã¯ã“ã®ä¾‹å¤–
+  ã‚’ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«å¼•ãç¶šãè¨­ã‘ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™ãŒã€ã
+  ã†ã™ã‚‹ç¾©å‹™ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚‚ã—ä¾‹å¤–ã‚’è¨­ã‘ãŸããªã‘ã‚Œã°ã€ã“ã®ä¾‹å¤–æ¡é …ã‚’
+  ã‚ãªãŸã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‹ã‚‰ã¯å‰Šé™¤ã—ã¦ãã ã•ã„ã€‚)
 */
 /*
 // ****************************************************************
@@ -86,30 +86,30 @@ namespace entDed{
 // ****************************************************************
 /**
 @brief
-  DiagramEdit ‚ÌA˜Hü‚É‚ ‚éw—ñÔí•Êx‚Pí—Ş‚ğ•\‚µ‚Ü‚·B
+  DiagramEdit ã®ã€è·¯ç·šã«ã‚ã‚‹ã€åˆ—è»Šç¨®åˆ¥ã€ï¼‘ç¨®é¡ã‚’è¡¨ã—ã¾ã™ã€‚
 
-  ‘®«‚Æ‚µ‚ÄAwí•Ê–¼x‚ÆA‚»‚Ì—ñÔí•Ê‚ğ•\¦‚·‚é•\ƒrƒ…[E
-ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚Å‚Ì•`‰æFEüƒXƒ^ƒCƒ‹‚ğ•Û‚µ‚Ü‚·B
+  å±æ€§ã¨ã—ã¦ã€ã€ç¨®åˆ¥åã€ã¨ã€ãã®åˆ—è»Šç¨®åˆ¥ã‚’è¡¨ç¤ºã™ã‚‹æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ãƒ»
+ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§ã®æç”»è‰²ãƒ»ç·šã‚¹ã‚¿ã‚¤ãƒ«ã‚’ä¿æŒã—ã¾ã™ã€‚
 
 
-§–ñ
+åˆ¶ç´„
  -------------------------------- 
-¢‚±‚ÌƒIƒuƒWƒFƒNƒg‚ªeƒIƒuƒWƒFƒNƒgCentDedRessyasyubetsuCont ‚Ìq‚Å‚ ‚éê‡A—ñÔí•Ê–¼‚Í‹ó•¶š—ñ‚Å‚ ‚Á‚Ä‚Í‚È‚è‚Ü‚¹‚ñB
+â–³ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒè¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆCentDedRessyasyubetsuCont ã®å­ã§ã‚ã‚‹å ´åˆã€åˆ—è»Šç¨®åˆ¥åã¯ç©ºæ–‡å­—åˆ—ã§ã‚ã£ã¦ã¯ãªã‚Šã¾ã›ã‚“ã€‚
 
-›m_iJikokuhyouFontIndex ‚ÍA0ˆÈã JIKOKUHYOUFONT_COUNT –¢–‚Å‚·B
+â—‹m_iJikokuhyouFontIndex ã¯ã€0ä»¥ä¸Š JIKOKUHYOUFONT_COUNT æœªæº€ã§ã™ã€‚
 
-‘€ì‚ÌƒGƒ‰[ŒŸ¸EC³
+æ“ä½œã®ã‚¨ãƒ©ãƒ¼æ¤œæŸ»ãƒ»ä¿®æ­£
  -------------------------------- 
-¢ã‘‚«(operator=): ‚±‚ÌƒIƒuƒWƒFƒNƒg‚ªeƒIƒuƒWƒFƒNƒgCentDedRessyasyubetsuCont ‚Ìq‚Å‚ ‚éê‡‚ÅA‘ã“üŒ³‚Ì—ñÔí•Ê–¼‚ª‹ó•¶š—ñ‚Å‚ ‚éê‡A‘ã“ü‚Í—áŠOƒXƒ[‚Æ‚µ‚Ü‚·B(CentDedRessyasyubetsuCont::set()‚ÅƒGƒ‰[‚É‚È‚éƒIƒuƒWƒFƒNƒg‚Ì‘ã“ü‚Í—áŠOƒXƒ[‚Æ‚µ‚Ü‚·B)
+â–³ä¸Šæ›¸ã(operator=): ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒè¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆCentDedRessyasyubetsuCont ã®å­ã§ã‚ã‚‹å ´åˆã§ã€ä»£å…¥å…ƒã®åˆ—è»Šç¨®åˆ¥åãŒç©ºæ–‡å­—åˆ—ã§ã‚ã‚‹å ´åˆã€ä»£å…¥ã¯ä¾‹å¤–ã‚¹ãƒ­ãƒ¼ã¨ã—ã¾ã™ã€‚(CentDedRessyasyubetsuCont::set()ã§ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ä»£å…¥ã¯ä¾‹å¤–ã‚¹ãƒ­ãƒ¼ã¨ã—ã¾ã™ã€‚)
 
-›eƒIƒuƒWƒFƒNƒg‚ª•ÏX(setParent):adjust‚ğÀs‚·‚é
+â—‹è¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå¤‰æ›´(setParent):adjustã‚’å®Ÿè¡Œã™ã‚‹
 
-¢setName:‚±‚ÌƒIƒuƒWƒFƒNƒg‚ªAeƒIƒuƒWƒFƒNƒg CentDedRessyasyubetsu ‚Ìq‚Å‚ ‚éê‡A‹ó•¶š—ñ‚Ö‚Ì•ÏX‚ÍƒGƒ‰[‚Æ‚µ‚Ü‚·B
-(CentDedRessyasyubetsuCont::set()‚ÅƒGƒ‰[‚É‚È‚é‚æ‚¤‚È‘®«•ÏX‚ÍƒGƒ‰[‚Æ‚µ‚Ü‚·B)
-›setJikokuhyouFontIndex() : 0ˆÈã JIKOKUHYOUFONT_COUNT ‚Ì”ÍˆÍ‚É‚È‚¢ê‡‚ÍAƒGƒ‰[‚Å‚·B
+â–³setName:ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒã€è¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ CentDedRessyasyubetsu ã®å­ã§ã‚ã‚‹å ´åˆã€ç©ºæ–‡å­—åˆ—ã¸ã®å¤‰æ›´ã¯ã‚¨ãƒ©ãƒ¼ã¨ã—ã¾ã™ã€‚
+(CentDedRessyasyubetsuCont::set()ã§ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ã‚ˆã†ãªå±æ€§å¤‰æ›´ã¯ã‚¨ãƒ©ãƒ¼ã¨ã—ã¾ã™ã€‚)
+â—‹setJikokuhyouFontIndex() : 0ä»¥ä¸Š JIKOKUHYOUFONT_COUNT ã®ç¯„å›²ã«ãªã„å ´åˆã¯ã€ã‚¨ãƒ©ãƒ¼ã§ã™ã€‚
 
 
-§–ñ‚É‡‚¤‚æ‚¤‚É‘®«‚ğC³(adjust)
+åˆ¶ç´„ã«åˆã†ã‚ˆã†ã«å±æ€§ã‚’ä¿®æ­£(adjust)
  -------------------------------- 
 
  */
@@ -117,62 +117,62 @@ class CentDedRessyasyubetsu: public CChildBase
 {
  public:
 	// ****************************************************************
-	//	ƒCƒ“ƒi[ƒ^ƒCƒv
+	//	ã‚¤ãƒ³ãƒŠãƒ¼ã‚¿ã‚¤ãƒ—
 	// ****************************************************************
 	typedef CChildBase super ;
 
 	/**
-		—ñÔü(’¼ü)‚ÌŒ`ó‚ğ•\‚·—ñ‹“‚Å‚·B
+		åˆ—è»Šç·š(ç›´ç·š)ã®å½¢çŠ¶ã‚’è¡¨ã™åˆ—æŒ™ã§ã™ã€‚
 	*/
 	enum ESenStyle
 	{
-		/// Àü
+		/// å®Ÿç·š
 		SenStyle_Jissen = 0 ,
-		/// ”jü
+		/// ç ´ç·š
 		SenStyle_Hasen ,
-		/// “_ü
+		/// ç‚¹ç·š
 		SenStyle_Tensen ,
-		/// ˆê“_½ü
+		/// ä¸€ç‚¹é–ç·š
 		SenStyle_Ittensasen ,
 	};
 	/**
 	@brief
-		—ñÔü(’¼ü)‚Ìü‚ÌŒ`ó‘®«‚ğ•\‚·’Pƒƒf[ƒ^ƒNƒ‰ƒXB
+		åˆ—è»Šç·š(ç›´ç·š)ã®ç·šã®å½¢çŠ¶å±æ€§ã‚’è¡¨ã™å˜ç´”ãƒ‡ãƒ¼ã‚¿ã‚¯ãƒ©ã‚¹ã€‚
 	*/
 	class CdDiagramLineStyle
 	{
 	private:
 		// ********************************
-		///@name ‘®«
+		///@name å±æ€§
 		// ********************************
 		///@{
 		/**
-	  		ƒ_ƒCƒ„ƒOƒ‰ƒ€‚ÌüFB
+	  		ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®ç·šè‰²ã€‚
 		  
-	  		‹K’è’l‚ÍA•B
+	  		è¦å®šå€¤ã¯ã€é»’ã€‚
 		 */
 		CdColorProp	m_colorDiagramSenColor ;
 
 		/**
-			ƒ_ƒCƒ„ƒOƒ‰ƒ€‚ÌüƒXƒ^ƒCƒ‹B
+			ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®ç·šã‚¹ã‚¿ã‚¤ãƒ«ã€‚
 		  
-	  		‹K’è’l‚ÍA SenStyle_Jissen
+	  		è¦å®šå€¤ã¯ã€ SenStyle_Jissen
 		 */
 		ESenStyle	m_eDiagramSenStyle ;
 		
 		/**
-	  		ƒ_ƒCƒ„ƒOƒ‰ƒ€‚Ìü‚Ì‘¾‚³B
+	  		ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®ç·šã®å¤ªã•ã€‚
 		  
-	  		ƒ_ƒCƒ„ƒOƒ‰ƒ€‚Ìü‚ª‘¾ü‚Å‚ ‚ê‚Î trueB
-	  		×ü‚È‚ç false ‚Å‚·B
+	  		ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®ç·šãŒå¤ªç·šã§ã‚ã‚Œã° trueã€‚
+	  		ç´°ç·šãªã‚‰ false ã§ã™ã€‚
 		  
-	  		‹K’è’l‚ÍA false ‚Å‚·B
+	  		è¦å®šå€¤ã¯ã€ false ã§ã™ã€‚
 		 */
 		bool m_bDiagramSenIsBold ;
 
 	public:
 		// ********************************
-		//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+		//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 		// ********************************
 		CdDiagramLineStyle( 
 			const CdColorProp& colorDiagramSenColor ,
@@ -191,7 +191,7 @@ class CentDedRessyasyubetsu: public CChildBase
 		{};
 
 		// ********************************
-		///@name CdDiagramLineStyle::‘®«
+		///@name CdDiagramLineStyle::å±æ€§
 		// ********************************
 		///@{
 		CdColorProp	getDiagramSenColor()const
@@ -210,46 +210,46 @@ class CentDedRessyasyubetsu: public CChildBase
 
 
 	/**
-		—ñÔí•Ê–ˆ‚ÌA’âÔ‰w–¾¦‚Ì•û–@‚Ì‘I‘ğˆ‚ğ•\‚·—ñ‹“‚Å‚·B
+		åˆ—è»Šç¨®åˆ¥æ¯ã®ã€åœè»Šé§…æ˜ç¤ºã®æ–¹æ³•ã®é¸æŠè‚¢ã‚’è¡¨ã™åˆ—æŒ™ã§ã™ã€‚
 	*/
 	enum EStopMarkDrawType
 	{
 		/**
-			’âÔ‰w–¾¦=’âÔ‰w‚ğ–¾¦@
+			åœè»Šé§…æ˜ç¤º=åœè»Šé§…ã‚’æ˜ç¤ºã€€
 			
-			Šù’è’lBƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚Å’âÔ‰w–¾¦‚ªON‚Ìê‡‚ÍA
-			’ZŠÔ’âÔ‰w‚É›‚ğ•`‰æ‚µ‚Ü‚·B
+			æ—¢å®šå€¤ã€‚ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§åœè»Šé§…æ˜ç¤ºãŒONã®å ´åˆã¯ã€
+			çŸ­æ™‚é–“åœè»Šé§…ã«â—‹ã‚’æç”»ã—ã¾ã™ã€‚
 		*/
 		EStopMarkDrawType_DrawOnStop = 0 ,
 		
 		/**
-			’âÔ‰w–¾¦=–¾¦‚µ‚È‚¢
+			åœè»Šé§…æ˜ç¤º=æ˜ç¤ºã—ãªã„
 		
-			’âÔ‰w–¾¦‚ğs‚¢‚Ü‚¹‚ñB
+			åœè»Šé§…æ˜ç¤ºã‚’è¡Œã„ã¾ã›ã‚“ã€‚
 			
-			Še‰w’âÔ‚È‚ÇA’âÔ‰w–¾¦‚Ì•K—v‚Ì‚È‚¢—ñÔí•Ê‚Å‚ ‚é‚±‚Æ‚ğ
-			¦‚µ‚Ü‚·B
+			å„é§…åœè»Šãªã©ã€åœè»Šé§…æ˜ç¤ºã®å¿…è¦ã®ãªã„åˆ—è»Šç¨®åˆ¥ã§ã‚ã‚‹ã“ã¨ã‚’
+			ç¤ºã—ã¾ã™ã€‚
 			
-			ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚Ì‘®«‚ª’âÔ‰w–¾¦=ON
+			ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã®å±æ€§ãŒåœè»Šé§…æ˜ç¤º=ON
 			(CDcdDiagram::m_eStopMarkDraw==
 				CDcdDiagram::EStopMarkDraw_DrawOnBriefStop )
-			‚ğs‚¤ê‡‚Å‚àA‚±‚Ì—ñÔí•Ê‚Ì—ñÔ‚É‚ÍA
-			’âÔ‰w–¾¦‚Ís‚í‚ê‚Ü‚¹‚ñB
+			ã‚’è¡Œã†å ´åˆã§ã‚‚ã€ã“ã®åˆ—è»Šç¨®åˆ¥ã®åˆ—è»Šã«ã¯ã€
+			åœè»Šé§…æ˜ç¤ºã¯è¡Œã‚ã‚Œã¾ã›ã‚“ã€‚
 		*/
 		EStopMarkDrawType_Nothing ,
 
 		/**
-			Œ»İ‚Íg‚í‚ê‚Ä‚¢‚Ü‚¹‚ñB«—ˆ‚É—\–ñ‚³‚ê‚Ä‚¢‚Ü‚·B
+			ç¾åœ¨ã¯ä½¿ã‚ã‚Œã¦ã„ã¾ã›ã‚“ã€‚å°†æ¥ã«äºˆç´„ã•ã‚Œã¦ã„ã¾ã™ã€‚
 			
-			’âÔ‰w–¾¦=’Ê‰ß‰w‚ğ–¾¦
+			åœè»Šé§…æ˜ç¤º=é€šéé§…ã‚’æ˜ç¤º
 
-			ƒ_ƒCƒ„ƒOƒ‰ƒ€ƒrƒ…[‚Å’âÔ‰w–¾¦‚ªON‚Ìê‡‚ÍA
-			’Ê‰ß‰w‚É‹L†‚ğ•`‰æ‚µ‚Ü‚·B’âÔ‰w‚Ö‚Ì•`‰æ‚Ís‚í‚ê‚Ü‚¹‚ñB
+			ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ãƒ“ãƒ¥ãƒ¼ã§åœè»Šé§…æ˜ç¤ºãŒONã®å ´åˆã¯ã€
+			é€šéé§…ã«è¨˜å·ã‚’æç”»ã—ã¾ã™ã€‚åœè»Šé§…ã¸ã®æç”»ã¯è¡Œã‚ã‚Œã¾ã›ã‚“ã€‚
 		*/
 		EStopMarkDrawType_DrawOnPass ,
 	};
 	/**
-		‚±‚ÌƒNƒ‰ƒX‚ªƒXƒ[‚·‚é—áŠO
+		ã“ã®ã‚¯ãƒ©ã‚¹ãŒã‚¹ãƒ­ãƒ¼ã™ã‚‹ä¾‹å¤–
 	*/
 	class LException
 	{
@@ -261,7 +261,7 @@ class CentDedRessyasyubetsu: public CChildBase
 
 public:
 	/**
-		•\‰æ–ÊƒtƒHƒ“ƒg‚Ì”B
+		æ™‚åˆ»è¡¨ç”»é¢ãƒ•ã‚©ãƒ³ãƒˆã®æ•°ã€‚
 	*/
 	static const int JIKOKUHYOUFONT_COUNT = 8 ;
 
@@ -269,72 +269,72 @@ public:
 
 private:
 	// ********************************
-	///@name ‘®«
+	///@name å±æ€§
 	// ********************************
 	///@{
 	/**
-	  	í•Ê–¼B
+	  	ç¨®åˆ¥åã€‚
 	  
-	  	‹K’è’l‚ÍA‹ó•¶š—ñB
+	  	è¦å®šå€¤ã¯ã€ç©ºæ–‡å­—åˆ—ã€‚
 	  
-	  	‚±‚Ì’l‚ª‹ó•¶š—ñ‚Ìê‡A‚±‚ÌƒIƒuƒWƒFƒNƒg‚Í–³Œø‚Å‚·B
+	  	ã“ã®å€¤ãŒç©ºæ–‡å­—åˆ—ã®å ´åˆã€ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¯ç„¡åŠ¹ã§ã™ã€‚
 	 */
 	std::string	m_strSyubetsumei ;
 	
 	/**
-	  	—ªÌií•Ê–¼‚Ì—ªÌjB
+	  	ç•¥ç§°ï¼ˆç¨®åˆ¥åã®ç•¥ç§°ï¼‰ã€‚
 	  
-	  	‹K’è’l‚ÍA‹ó•¶š—ñB
+	  	è¦å®šå€¤ã¯ã€ç©ºæ–‡å­—åˆ—ã€‚
 	 */
 	std::string	m_strRyakusyou ;
 	
 	/**
-	  	•\•¶šF(ƒ_ƒCƒ„ƒOƒ‰ƒ€‚Ì—ñÔî•ñ‚Ì•¶šF‚ğŒ“‚Ë‚Ü‚·)
+	  	æ™‚åˆ»è¡¨æ–‡å­—è‰²(ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®åˆ—è»Šæƒ…å ±ã®æ–‡å­—è‰²ã‚’å…¼ã­ã¾ã™)
 	  
-	  	‹K’è’l‚ÍA•B
+	  	è¦å®šå€¤ã¯ã€é»’ã€‚
 	 */
 	CdColorProp	m_colorJikokuhyouMojiColor ;
 
 	/**
-		•\ƒrƒ…[‚ÅA‚±‚Ì—ñÔí•Ê‚Ì‚ğ•\¦‚·‚é‚½‚ß‚Ì•\ƒtƒHƒ“ƒgB
-		”ÍˆÍ‚ÍA 0 ˆÈãA JIKOKUHYOUFONT_COUNT –¢–‚Å‚·B
+		æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ã§ã€ã“ã®åˆ—è»Šç¨®åˆ¥ã®æ™‚åˆ»ã‚’è¡¨ç¤ºã™ã‚‹ãŸã‚ã®æ™‚åˆ»è¡¨ãƒ•ã‚©ãƒ³ãƒˆã€‚
+		ç¯„å›²ã¯ã€ 0 ä»¥ä¸Šã€ JIKOKUHYOUFONT_COUNT æœªæº€ã§ã™ã€‚
 	
-	- 0Fw•\ƒrƒ…[ 1x
-	- 1: w•\ƒrƒ…[ 2x
-	- 2: w•\ƒrƒ…[ 3x
+	- 0ï¼šã€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ 1ã€
+	- 1: ã€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ 2ã€
+	- 2: ã€æ™‚åˆ»è¡¨ãƒ“ãƒ¥ãƒ¼ 3ã€
 	*/
 	int m_iJikokuhyouFontIndex ;
 
 	/**
-		—ñÔü(’¼ü)‚Ìü‚ÌŒ`ó‘®«B
+		åˆ—è»Šç·š(ç›´ç·š)ã®ç·šã®å½¢çŠ¶å±æ€§ã€‚
 	*/
 	CdDiagramLineStyle	m_CdDiagramLineStyle ;
 
 	/**
-		—ñÔí•Ê–ˆ‚ÌA’âÔ‰w–¾¦‚Ì•û–@B
-		Šù’è’l‚ÍA EStopMarkDrawType_DrawOnStop B
+		åˆ—è»Šç¨®åˆ¥æ¯ã®ã€åœè»Šé§…æ˜ç¤ºã®æ–¹æ³•ã€‚
+		æ—¢å®šå€¤ã¯ã€ EStopMarkDrawType_DrawOnStop ã€‚
 	*/
 	EStopMarkDrawType m_eStopMarkDrawType ;
 	///@}
  public:
 	// ********************************
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	// ********************************
 	/**
 	   @param strSyubetsumei [in]
-	  	í•Ê–¼B
+	  	ç¨®åˆ¥åã€‚
 	   @param strRyakusyou [in]
-	  	—ªÌií•Ê–¼‚Ì—ªÌjB
+	  	ç•¥ç§°ï¼ˆç¨®åˆ¥åã®ç•¥ç§°ï¼‰ã€‚
 	   @param colorJikokuhyouMojiColor [in]
-	  	•\•¶šFB
+	  	æ™‚åˆ»è¡¨æ–‡å­—è‰²ã€‚
 	   @param colorDiagramSenColor [in] 
-	  	ƒ_ƒCƒ„ƒOƒ‰ƒ€‚ÌüFB
+	  	ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®ç·šè‰²ã€‚
 	   @param eDiagramSenStyle [in]
-	  	ƒ_ƒCƒ„ƒOƒ‰ƒ€‚ÌüƒXƒ^ƒCƒ‹B
+	  	ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®ç·šã‚¹ã‚¿ã‚¤ãƒ«ã€‚
 	   @param bDiagramSenIsBold [in]
-	  	ƒ_ƒCƒ„ƒOƒ‰ƒ€‚Ìü‚Ì‘¾‚³B
-	  	ƒ_ƒCƒ„ƒOƒ‰ƒ€‚Ìü‚ª‘¾ü‚Å‚ ‚ê‚Î trueB
-	  	×ü‚È‚ç false ‚Å‚·B
+	  	ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®ç·šã®å¤ªã•ã€‚
+	  	ãƒ€ã‚¤ãƒ¤ã‚°ãƒ©ãƒ ã®ç·šãŒå¤ªç·šã§ã‚ã‚Œã° trueã€‚
+	  	ç´°ç·šãªã‚‰ false ã§ã™ã€‚
 	 */
 	CentDedRessyasyubetsu( 
 			const std::string& strSyubetsumei ,
@@ -347,27 +347,27 @@ private:
 	CentDedRessyasyubetsu() ;
 
 	/** 
-		‚±‚ÌƒIƒuƒWƒFƒNƒg‚ªAeƒIƒuƒWƒFƒNƒgCentDedEkiCont ‚Ì
-		q‚Å‚ ‚éê‡‚ÅA‘ã“üŒ³‚ª CentDedEkiCont::set() ‚ÅƒGƒ‰[‚É
-		‚È‚éê‡A—áŠOƒXƒ[‚É‚È‚è‚Ü‚·B
+		ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒã€è¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆCentDedEkiCont ã®
+		å­ã§ã‚ã‚‹å ´åˆã§ã€ä»£å…¥å…ƒãŒ CentDedEkiCont::set() ã§ã‚¨ãƒ©ãƒ¼ã«
+		ãªã‚‹å ´åˆã€ä¾‹å¤–ã‚¹ãƒ­ãƒ¼ã«ãªã‚Šã¾ã™ã€‚
 	@param value 
-		‘ã“üŒ³
+		ä»£å…¥å…ƒ
 	@exception LException 
 	*/
 	CentDedRessyasyubetsu& operator=( const CentDedRessyasyubetsu& value ) ;
 
 public:
 	// ********************************
-	///@name CParentBase-‘€ì
+	///@name CParentBase-æ“ä½œ
 	// ********************************
 	///@{
-	/** ›eƒIƒuƒWƒFƒNƒg‚Ì•ÏX(setParent()):  adjust()‚ğÀs‚·‚é */
+	/** â—‹è¦ªã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ›´(setParent()):  adjust()ã‚’å®Ÿè¡Œã™ã‚‹ */
 	virtual void setParent( CParentBase* pParent ) ;
 	///@}
 
  public:
 	// ********************************
-	///@name CentDedRessyasyubetsu-‘®«
+	///@name CentDedRessyasyubetsu-å±æ€§
 	// ********************************
 	///@{
 	/** @see m_strSyubetsumei  */
@@ -395,7 +395,7 @@ public:
 	/**
 	@see m_iJikokuhyouFontIndex
 	@exception LException
-		value >= JIKOKUHYOUFONT_COUNT ‚Ìê‡‚ÉƒXƒ[‚³‚ê‚Ü‚·B
+		value >= JIKOKUHYOUFONT_COUNT ã®å ´åˆã«ã‚¹ãƒ­ãƒ¼ã•ã‚Œã¾ã™ã€‚
 	*/
 	CentDedRessyasyubetsu& setJikokuhyouFontIndex( int value );
 
@@ -406,22 +406,22 @@ public:
 	void setCdDiagramLineStyle( const CdDiagramLineStyle& value )
 	{	m_CdDiagramLineStyle = value ;};
 
-	/// getCdDiagramLineStyle(),getDiagramSenColor() ‚Æ“™‰¿‚Å‚·BŒİŠ·«‚Ì‚½‚ß‚Éc‚³‚ê‚Ä‚¢‚Ü‚·B
+	/// getCdDiagramLineStyle(),getDiagramSenColor() ã¨ç­‰ä¾¡ã§ã™ã€‚äº’æ›æ€§ã®ãŸã‚ã«æ®‹ã•ã‚Œã¦ã„ã¾ã™ã€‚
 	CdColorProp	getDiagramSenColor()const{
 		return 	m_CdDiagramLineStyle.getDiagramSenColor() ;};
-	/// setCdDiagramLineStyle() ‚Å‘ã‘Ö‚Å‚«‚Ü‚·BŒİŠ·«‚Ì‚½‚ß‚Éc‚³‚ê‚Ä‚¢‚Ü‚·B
+	/// setCdDiagramLineStyle() ã§ä»£æ›¿ã§ãã¾ã™ã€‚äº’æ›æ€§ã®ãŸã‚ã«æ®‹ã•ã‚Œã¦ã„ã¾ã™ã€‚
 	CentDedRessyasyubetsu& setDiagramSenColor( const CdColorProp&	value ){
 		m_CdDiagramLineStyle.setDiagramSenColor( value ); return *this ; } ;
-	/// getCdDiagramLineStyle(),getDiagramSenStyle() ‚Æ“™‰¿‚Å‚·BŒİŠ·«‚Ì‚½‚ß‚Éc‚³‚ê‚Ä‚¢‚Ü‚·B
+	/// getCdDiagramLineStyle(),getDiagramSenStyle() ã¨ç­‰ä¾¡ã§ã™ã€‚äº’æ›æ€§ã®ãŸã‚ã«æ®‹ã•ã‚Œã¦ã„ã¾ã™ã€‚
 	ESenStyle	getDiagramSenStyle()const{
 		return m_CdDiagramLineStyle.getDiagramSenStyle() ;};
-	/// setCdDiagramLineStyle() ‚Å‘ã‘Ö‚Å‚«‚Ü‚·BŒİŠ·«‚Ì‚½‚ß‚Éc‚³‚ê‚Ä‚¢‚Ü‚·B
+	/// setCdDiagramLineStyle() ã§ä»£æ›¿ã§ãã¾ã™ã€‚äº’æ›æ€§ã®ãŸã‚ã«æ®‹ã•ã‚Œã¦ã„ã¾ã™ã€‚
 	CentDedRessyasyubetsu& setDiagramSenStyle( ESenStyle value ){
 		m_CdDiagramLineStyle.setDiagramSenStyle( value ); return *this ;};
-	/// getCdDiagramLineStyle(),getDiagramSenIsBold() ‚Æ“™‰¿‚Å‚·BŒİŠ·«‚Ì‚½‚ß‚Éc‚³‚ê‚Ä‚¢‚Ü‚·B
+	/// getCdDiagramLineStyle(),getDiagramSenIsBold() ã¨ç­‰ä¾¡ã§ã™ã€‚äº’æ›æ€§ã®ãŸã‚ã«æ®‹ã•ã‚Œã¦ã„ã¾ã™ã€‚
 	bool getDiagramSenIsBold()const{ 
 		return m_CdDiagramLineStyle.getDiagramSenIsBold() ; };
-	/// setCdDiagramLineStyle() ‚Å‘ã‘Ö‚Å‚«‚Ü‚·BŒİŠ·«‚Ì‚½‚ß‚Éc‚³‚ê‚Ä‚¢‚Ü‚·B
+	/// setCdDiagramLineStyle() ã§ä»£æ›¿ã§ãã¾ã™ã€‚äº’æ›æ€§ã®ãŸã‚ã«æ®‹ã•ã‚Œã¦ã„ã¾ã™ã€‚
 	CentDedRessyasyubetsu& setDiagramSenIsBold( bool value ){
 		m_CdDiagramLineStyle.setDiagramSenIsBold( value ) ; return *this ;};
 
@@ -436,21 +436,21 @@ public:
 	///@}
 
 	// ********************************
-	///@name CentDedRessyasyubetsu-‘€ì
+	///@name CentDedRessyasyubetsu-æ“ä½œ
 	// ********************************
 	///@{
 	/**
-		this ‚Ì‘®«‚ª§–ñ‚É”½‚µ‚Ä‚¢‚éê‡A§–ñ‚É‡‚¤‚æ‚¤‚ÉA‘®«‚ğ
-		C³‚µ‚Ü‚·B
+		this ã®å±æ€§ãŒåˆ¶ç´„ã«åã—ã¦ã„ã‚‹å ´åˆã€åˆ¶ç´„ã«åˆã†ã‚ˆã†ã«ã€å±æ€§ã‚’
+		ä¿®æ­£ã—ã¾ã™ã€‚
 
-		‚±‚ÌƒNƒ‰ƒX‚Å‚ÍAˆ—‚Í‚ ‚è‚Ü‚¹‚ñB
+		ã“ã®ã‚¯ãƒ©ã‚¹ã§ã¯ã€å‡¦ç†ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
 	*/
 	void adjust() ;
 
 	/**
 	@return
-		this‚ª–³Œø( m_strSyubetsumei ‚ª‹ó•¶š—ñ)‚È‚ç^‚Å‚·B
+		thisãŒç„¡åŠ¹( m_strSyubetsumei ãŒç©ºæ–‡å­—åˆ—)ãªã‚‰çœŸã§ã™ã€‚
 	*/
 	bool isNull()const{	return m_strSyubetsumei.empty() ;};
 	///@}

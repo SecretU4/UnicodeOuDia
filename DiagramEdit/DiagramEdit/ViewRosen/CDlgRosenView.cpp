@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// CDlgRosenView.cpp : �C���v�������e�[�V���� �t�@�C��
+// CDlgRosenView.cpp : インプリメンテーション ファイル
 //	$Id: CDlgRosenView.cpp 295 2016-06-11 05:14:13Z okm $
 
 #include "stdafx.h"
@@ -89,9 +89,9 @@ using namespace std ;
 using OuMfc::TreeCtrl::CaTreeCtrl ;
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgRosenView �_�C�A���O
+// CDlgRosenView ダイアログ
 // --------------------------------
-//@name	�����֐�
+//@name	下請関数
 // --------------------------------
 int CDlgRosenView::onEnterItem( HTREEITEM aItem  , int iAction ) 
 {
@@ -103,58 +103,58 @@ int CDlgRosenView::onEnterItem( HTREEITEM aItem  , int iAction )
 		CaTreeCtrl	aCaTreeCtrl( &m_treeROSEN ) ;
 		aCaTreeCtrl.HTREEITEM_to_Itemlocation( aItem , &aItemPos ) ;
 	}
-	//	�H��
+	//	路線
 	if ( aItemPos.size() == 1 && 
 			aItemPos[0] == 0 && 
 			iAction != 1 )
 	{
-		//	�w�H���t�@�C���̃v���p�e�B�x
-		//	�_�C�A���O�i���[�_���j���N�����܂��B
+		//	『路線ファイルのプロパティ』
+		//	ダイアログ（モーダル）を起動します。
 		getCDiagramEditApp()->getCMainFrame()->execCDlgRosenFileProp() ;
 
 		iRv = 1 ;
 	}
-	//	�w
+	//	駅
 	if ( aItemPos.size() == 2 && 
 			aItemPos[0] == 0 && 
 			aItemPos[1] == 0 &&
 			iAction != 2 )
 	{
-		//	�w�w�x�r���[���J���܂��B
+		//	『駅』ビューを開きます。
 		getCDiagramEditApp()->openCEkiDoc() ;
 
 		iRv = 1 ;
 	}
-	//	��Ԏ��
+	//	列車種別
 	if ( aItemPos.size() == 2 && 
 			aItemPos[0] == 0 && 
 			aItemPos[1] == 1 &&
 			iAction != 2 )
 	{
-		//	�w��Ԏ�ʁx�r���[���J���܂��B
+		//	『列車種別』ビューを開きます。
 		getCDiagramEditApp()->openCRessyasyubetsuDoc() ;
 
 		iRv = 1 ;
 	}
-	//	�_�C��
+	//	ダイヤ
 	if ( aItemPos.size() == 2 && 
 			aItemPos[0] == 0 && 
 			aItemPos[1] == 2 &&
 			iAction != 1 )
 	{
-		//	�w�_�C���ꗗ�x�_�C�A���O(���[�_��)���J���܂��B
+		//	『ダイヤ一覧』ダイアログ(モーダル)を開きます。
 		getCDiagramEditApp()->getCMainFrame()->execCDlgDiaList() ;
 
 		iRv = 1 ;
 	}
-	//	�����\�����聄
+	//	時刻表＜下り＞
 	if ( aItemPos.size() == 4 && 
 			aItemPos[0] == 0 && 
 			aItemPos[1] == 2 && 
 			aItemPos[3] == 0 &&
 			iAction != 2 )
 	{
-		//	�w�����\�x�r���[���J���܂��B
+		//	『時刻表』ビューを開きます。
 		const CentDedDia*	pCentDedDia = getCDiagramEditDoc()->getCDedRosenFileData()->
 			getCentDedRosen()->getCentDedDiaCont()->getMuPtr()->get( aItemPos[2] ) ;
 		if ( pCentDedDia != NULL )
@@ -166,14 +166,14 @@ int CDlgRosenView::onEnterItem( HTREEITEM aItem  , int iAction )
 		} 
 		iRv = 1 ;
 	}
-	//	�����\����聄
+	//	時刻表＜上り＞
 	if ( aItemPos.size() == 4 && 
 			aItemPos[0] == 0 && 
 			aItemPos[1] == 2 &&
 			aItemPos[3] == 1 &&
 			iAction != 2 )
 	{
-		//	�w�����\�x�r���[���J���܂��B
+		//	『時刻表』ビューを開きます。
 		const CentDedDia*	pCentDedDia = getCDiagramEditDoc()->getCDedRosenFileData()->
 			getCentDedRosen()->getCentDedDiaCont()->getMuPtr()->get( aItemPos[2] ) ;
 		if ( pCentDedDia != NULL ){
@@ -184,14 +184,14 @@ int CDlgRosenView::onEnterItem( HTREEITEM aItem  , int iAction )
 		} 
 		iRv = 1 ;
 	}
-	//	�_�C���O����
+	//	ダイヤグラム
 	if ( aItemPos.size() == 4 && 
 			aItemPos[0] == 0 && 
 			aItemPos[1] == 2 && 
 			aItemPos[3] == 2 &&
 			iAction != 2 )
 	{
-		//	�w�_�C���O�����x�r���[���J���܂��B
+		//	『ダイヤグラム』ビューを開きます。
 		const CentDedDia*	pCentDedDia = getCDiagramEditDoc()->getCDedRosenFileData()->
 			getCentDedRosen()->getCentDedDiaCont()->getMuPtr()->get( aItemPos[2] ) ;
 		if ( pCentDedDia != NULL ){
@@ -199,13 +199,13 @@ int CDlgRosenView::onEnterItem( HTREEITEM aItem  , int iAction )
 		} 
 		iRv = 1 ;
 	}
-	//	�R�����g
+	//	コメント
 	if ( aItemPos.size() == 2 && 
 			aItemPos[0] == 0 && 
 			aItemPos[1] == 3 &&
 			iAction != 2 )
 	{
-		//	�w�R�����g�x�r���[���J���܂��B
+		//	『コメント』ビューを開きます。
 		{
 			getCDiagramEditApp()->openCDedCommentDoc() ;
 		} 
@@ -221,10 +221,10 @@ BOOL CDlgRosenView::PreTranslateMessage(MSG* pMsg)
 {
 
 	// -------------------------------- 
-	//        �_�C�A���O(��̃R���g���[��)�Ƀt�H�[�J�X�������Ԃ� 
-	// �A�N�Z�����[�^�ɂ�郁�j���[�R�}���h�ւ̃A�N�Z�X�� 
-	//        �s�����߂ɂ́A���C���t���[���E�C���h�E�� PreTranslateMessage() �� 
-	//        �Ϗ����Ȃ��Ă͂Ȃ�܂���B 
+	//        ダイアログ(上のコントロール)にフォーカスがある状態で 
+	// アクセラレータによるメニューコマンドへのアクセスを 
+	//        行うためには、メインフレームウインドウに PreTranslateMessage() を 
+	//        委譲しなくてはなりません。 
 	if ( WM_KEYFIRST <= pMsg->message && pMsg->message <= WM_KEYLAST ) 
 	{ 
 		if ( AfxGetMainWnd()->PreTranslateMessage( pMsg ) ) 
@@ -240,12 +240,12 @@ BOOL CDlgRosenView::PreTranslateMessage(MSG* pMsg)
 //	CDlgRosenView
 // ********************************
 	// ********************************
-	//@name ����
+	//@name 操作
 	// ********************************
 void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen ) 
 {
 	// --------------------------------
-	//	���݂̑I���A�C�e�����擾
+	//	現在の選択アイテムを取得
 	// --------------------------------
 	CaTreeCtrl::Itemlocation	aItemPos ;
 	{
@@ -258,12 +258,12 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 
 
 	// --------------------------------
-	//	��U�A�S�A�C�e����j��
+	//	一旦、全アイテムを破棄
 	// --------------------------------
 	m_treeROSEN.DeleteAllItems() ;
 
 	// --------------------------------
-	//	���H��  �s�N�g�O�����̗��
+	//	□路線  ピクトグラムの列車
 	// --------------------------------
 	HTREEITEM itemRosen = NULL ;
 	{
@@ -283,7 +283,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 	}
 
 	// --------------------------------
-	//	���w  �n�}�L���̉w
+	//	□駅  地図記号の駅
 	// --------------------------------
 	{
 		CString	strItem ;
@@ -294,7 +294,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 		m_treeROSEN.InsertItem( strItem , nImage , nSelectedImage , itemRosen , TVI_LAST ) ;
 	}
 	// --------------------------------
-	//	����Ԏ��  ���S�`���̃T�{
+	//	□列車種別  国鉄形式のサボ
 	// --------------------------------
 	{
 		CString	strItem ;
@@ -305,7 +305,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 		m_treeROSEN.InsertItem( strItem , nImage , nSelectedImage , itemRosen , TVI_LAST ) ;
 	}
 	// --------------------------------
-	//	���_�C��      �w�����\�������ǂ����A�C�R��
+	//	□ダイヤ      駅時刻表をかたどったアイコン
 	// --------------------------------
 	HTREEITEM itemDia = NULL ;
 	{
@@ -318,10 +318,10 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 		m_treeROSEN.SetItemState( itemDia , TVIS_EXPANDED ,  TVIS_EXPANDED ) ;
 
 	}
-	//itemDia = ���w�_�C���x�A�C�e��
+	//itemDia = □『ダイヤ』アイテム
 
 	// --------------------------------
-	//	��(�_�C����)  �w�����\�������ǂ����A�C�R��
+	//	□(ダイヤ名)  駅時刻表をかたどったアイコン
 	// --------------------------------
 	{
 		int nImage = 4 ;
@@ -341,7 +341,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 			m_treeROSEN.SetItemState( itemDiaName , TVIS_EXPANDED ,  TVIS_EXPANDED ) ;
 
 			// --------------------------------
-			//	�����莞���\/��莞���\  ���
+			//	□下り時刻表/上り時刻表  矢印
 			// --------------------------------
 			{
 				CString	strItem ;
@@ -362,7 +362,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 					nImage , nSelectedImage , itemDiaName , TVI_LAST ) ;
 			}
 			// --------------------------------
-			//	���_�C���O����  �_�C���O�����̐}��
+			//	□ダイヤグラム  ダイヤグラムの図柄
 			// --------------------------------
 			{
 				CString	strItem ;
@@ -377,7 +377,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 		}
 	}
 	// --------------------------------
-	//	���R�����g(0,3)
+	//	□コメント(0,3)
 	// --------------------------------
 	{
 		CString	strItem ;
@@ -392,7 +392,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 
 
 	// --------------------------------
-	//	�A�C�e����I��
+	//	アイテムを選択
 	// --------------------------------
 	if ( aItemPos.size() > 0 ){
 		HTREEITEM	hItem = NULL ;
@@ -411,22 +411,22 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 void CDlgRosenView::OnUpdate( CView* pSender, LPARAM lHint, CObject* pHint ) 
 {
 	// --------------------------------
-	//	�H��View���X�V
+	//	路線Viewを更新
 	// --------------------------------
 	if ( lHint == LHINT_SUBVIEW_TO_ROOTDOC ){
 		return ;
 	}
 	// --------------------------------
 	//pHint= 
-	//	pHint�� CRfEditCmdHolder �I�u�W�F�N�g�Ȃ�A
-	//	�Ή�����ҏW�R�}���h CRfEditCmd ��ێ����Ă��܂��B
-	//	���̏ꍇ�Athis �� CRfEditCmd �̓��e�ɍœK������
-	//	�X�V���s���܂��B
-	//	NULL�Ȃ�A�S�X�V���v������Ă��܂��B
+	//	pHintが CRfEditCmdHolder オブジェクトなら、
+	//	対応する編集コマンド CRfEditCmd を保持しています。
+	//	この場合、this は CRfEditCmd の内容に最適化した
+	//	更新を行います。
+	//	NULLなら、全更新が要求されています。
 
 
 	// --------------------------------
-	//	CRfEditCmd �ɍœK�����ꂽ�X�V
+	//	CRfEditCmd に最適化された更新
 	// --------------------------------
 	Ou<CRfEditCmd> pCmd ;
 	if ( pHint != NULL && pHint->IsKindOf( RUNTIME_CLASS( CRfEditCmdHolder ) ) ){
@@ -441,32 +441,32 @@ void CDlgRosenView::OnUpdate( CView* pSender, LPARAM lHint, CObject* pHint )
 			dynamic_castOu<CRfEditCmd_Ressyasyubetsu>( pCmd ) ||
 			dynamic_castOu<CRfEditCmd_RessyasyubetsuSwap>( pCmd ) 
 		){
-			//	���̃r���[�́A�ȉ��̏󋵂ł͍X�V�͕s�v�ł��B
-			//		�R�����g�̕ҏW
-			//		�w�̕ҏW
-			//		��Ԃ̕ҏW
-			//		��Ԃ̒��ʉ�
-			//		��Ԏ�ʂ̕ҏW
-			//		��Ԏ�ʂ̓���
+			//	このビューは、以下の状況では更新は不要です。
+			//		コメントの編集
+			//		駅の編集
+			//		列車の編集
+			//		列車の直通化
+			//		列車種別の編集
+			//		列車種別の入替
 		}
 		else
 		{
-			//	�S�X�V���s�킹�܂��B
+			//	全更新を行わせます。
 			//CRfEditCmd_DedRosenFileDataProp
-			//	�H�����̕ύX�𔽉f����K�v������܂��B
+			//	路線名の変更を反映する必要があります。
 			//CDedRosenFileData_Dia
-			//	�_�C���̒ǉ��E�폜
+			//	ダイヤの追加・削除
 			//CDedRosenFileData_DiaProp
-			//	�_�C�����̕ύX
+			//	ダイヤ名の変更
 			//CRfEditCmd_Rosen
-			//	�H���I�u�W�F�N�g�̑S�u����
+			//	路線オブジェクトの全置換え
 			//CRfEditCmd_RosenFileData
-			//	�H���t�@�C���f�[�^�̑S�u����
+			//	路線ファイルデータの全置換え
 			pHint = NULL ;
 		}
 	}
 
-	//	�S�X�V���s���܂��B
+	//	全更新を行います。
 	if ( pHint == NULL ){
 			getCDiagramEditApp()->getCDlgRosenView()->UpdateROSEN( 
 				getCDiagramEditDoc()->getCDedRosenFileData()->getCentDedRosen() ) ;
@@ -481,7 +481,7 @@ CDlgRosenView::CDlgRosenView(CWnd* pParent /*=NULL*/)
 	: CDialog(CDlgRosenView::IDD, pParent)
 {
 	//{{AFX_DATA_INIT(CDlgRosenView)
-		// ���� - ClassWizard �͂��̈ʒu�Ƀ}�b�s���O�p�̃}�N����ǉ��܂��͍폜���܂��B
+		// メモ - ClassWizard はこの位置にマッピング用のマクロを追加または削除します。
 	//}}AFX_DATA_INIT
 }
 
@@ -505,7 +505,7 @@ BEGIN_MESSAGE_MAP(CDlgRosenView, CDialog)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgRosenView ���b�Z�[�W �n���h��
+// CDlgRosenView メッセージ ハンドラ
 
 BOOL CDlgRosenView::OnInitDialog() 
 {
@@ -518,8 +518,8 @@ BOOL CDlgRosenView::OnInitDialog()
 
 	// --------------------------------
 	
-	return TRUE;  // �R���g���[���Ƀt�H�[�J�X��ݒ肵�Ȃ��Ƃ��A�߂�l�� TRUE �ƂȂ�܂�
-	              // ��O: OCX �v���p�e�B �y�[�W�̖߂�l�� FALSE �ƂȂ�܂�
+	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
+	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
 
 void CDlgRosenView::OnSize(UINT nType, int cx, int cy) 
@@ -531,7 +531,7 @@ void CDlgRosenView::OnSize(UINT nType, int cx, int cy)
 		return ;
 	}
 	// --------------------------------
-	//	�e�E�C���h�E�̌��݂̈ʒu���擾
+	//	各ウインドウの現在の位置を取得
 	// --------------------------------
 	CRect	rectThis ;
 	{
@@ -545,7 +545,7 @@ void CDlgRosenView::OnSize(UINT nType, int cx, int cy)
 		rectIDC_TREE_ROSEN = aWINDOWPLACEMENT.rcNormalPosition ;
 	}
 	// --------------------------------
-	//	�e�E�C���h�E�̐V�����ʒu���Z��
+	//	各ウインドウの新しい位置を算定
 	// --------------------------------
 	CRect	rectIDC_TREE_ROSENNew  ;
 	{
@@ -560,7 +560,7 @@ void CDlgRosenView::OnSize(UINT nType, int cx, int cy)
 		}
 	}
 	// --------------------------------
-	//	�e�E�C���h�E�̐V�����ʒu��ݒ�
+	//	各ウインドウの新しい位置を設定
 	// --------------------------------
 	GetDlgItem( IDC_TREE_ROSEN )->SetWindowPos( NULL , 
 		rectIDC_TREE_ROSENNew.left , 
@@ -573,14 +573,14 @@ void CDlgRosenView::OnSize(UINT nType, int cx, int cy)
 
 void CDlgRosenView::OnOK() 
 {
-	// �q�_�C�A���O�̏ꍇ�́AOnOK()�EOnCancel()
-	//	�́A�I�[�o���C�h���āA
-	//	CDlalog::OnOK()�̌ďo�͗}�~���Ȃ��Ă�
-	//	�Ȃ�܂���B
+	// 子ダイアログの場合は、OnOK()・OnCancel()
+	//	は、オーバライドして、
+	//	CDlalog::OnOK()の呼出は抑止しなくては
+	//	なりません。
 	//
 	//CDialog::OnOK();
 
-	//	OnOK() �ɂ́A���^�[���L�[�̑�����������܂��B
+	//	OnOK() には、リターンキーの操作を実装します。
 
 	// --------------------------------
 	int iRv = 0 ;
@@ -597,8 +597,8 @@ void CDlgRosenView::OnOK()
 
 void CDlgRosenView::OnCancel() 
 {
-	// �q�_�C�A���O�̏ꍇ�́AOnOK()�EOnCancel()
-	//	�́A�������Ȃ��悤�ɃI�[�o���C�h���Ȃ��Ă͂Ȃ�܂���B
+	// 子ダイアログの場合は、OnOK()・OnCancel()
+	//	は、何もしないようにオーバライドしなくてはなりません。
 	//
 	//CDialog::OnCancel();
 }
@@ -610,8 +610,8 @@ void CDlgRosenView::OnClickTreeRosen(NMHDR* pNMHDR, LRESULT* pResult)
 	//	Return nonzero to prevent the default processing, 
 	//	or zero to allow the default processing.
 	//
-	//	0 ;	//	�W���̏������s���܂��B
-	//	1 ;	//	�W���̏������s���܂���B
+	//	0 ;	//	標準の処理を行います。
+	//	1 ;	//	標準の処理を行いません。
 	*pResult = 0 ;
 
 	// --------------------------------
@@ -626,7 +626,7 @@ void CDlgRosenView::OnClickTreeRosen(NMHDR* pNMHDR, LRESULT* pResult)
 
 		// --------------------------------
 		/*
-		//	Tree�R���g���[���̃C�x���g�̓��e
+		//	Treeコントロールのイベントの内容
 		LogMsg( "CDlgRosenView::OnClickTreeRosen()" ) ;
 		if ( iFlags & TVHT_ABOVE ){
 			LogMsg( "\tTVHT_ABOVE" ) ;
@@ -635,31 +635,31 @@ void CDlgRosenView::OnClickTreeRosen(NMHDR* pNMHDR, LRESULT* pResult)
 			LogMsg( "\tTVHT_BELOW" ) ;
 		}
 		if ( iFlags & TVHT_NOWHERE ){
-			//	���́A�A�C�e���̂Ȃ��̈�
+			//	下の、アイテムのない領域
 			LogMsg( "\tTVHT_NOWHERE" ) ;
 		}
 		if ( iFlags & TVHT_ONITEM ){
-			//	�A�C�e���̃A�C�R��
-			//	�A�C�e���̃��x��
+			//	アイテムのアイコン
+			//	アイテムのラベル
 			LogMsg( "\tTVHT_ONITEM" ) ;
 		}
 		if ( iFlags & TVHT_ONITEMBUTTON ){
-			//	[+][-]�{�^��
+			//	[+][-]ボタン
 			LogMsg( "\tTVHT_ONITEMBUTTON" ) ;
 		}
 		if ( iFlags & TVHT_ONITEMICON ){
-			//	�A�C�e���̃A�C�R��
+			//	アイテムのアイコン
 			LogMsg( "\tTVHT_ONITEMICON" ) ;
 		}
 		if ( iFlags & TVHT_ONITEMINDENT ){
 			LogMsg( "\tTVHT_ONITEMINDENT" ) ;
 		}
 		if ( iFlags & TVHT_ONITEMLABEL ){
-			//	�A�C�e���̃��x��
+			//	アイテムのラベル
 			LogMsg( "\tTVHT_ONITEMLABEL" ) ;
 		}
 		if ( iFlags & TVHT_ONITEMRIGHT ){
-			//	�A�C�e���̉E��
+			//	アイテムの右側
 			LogMsg( "\tTVHT_ONITEMRIGHT" ) ;
 		}
 		if ( iFlags & TVHT_ONITEMSTATEICON ){
@@ -678,8 +678,8 @@ void CDlgRosenView::OnClickTreeRosen(NMHDR* pNMHDR, LRESULT* pResult)
 			iRv = onEnterItem( aItem , 1 ) ;
 			if ( iRv == 1 )
 			{
-				//	*pResult �� 1 �ɂ���ƁA�N���b�N���ꂽ�A�C�e����
-				//	�I����ԃA�C�e���ɂȂ�܂���B
+				//	*pResult を 1 にすると、クリックされたアイテムが
+				//	選択状態アイテムになりません。
 				//
 				//	*pResult = 1 ;
 			}
@@ -693,8 +693,8 @@ void CDlgRosenView::OnDblclkTreeRosen(NMHDR* pNMHDR, LRESULT* pResult)
 	//	Return nonzero to prevent the default processing, 
 	//	or zero to allow the default processing.
 	//
-	//	0 ;	//	�W���̏������s���܂��B
-	//	1 ;	//	�W���̏������s���܂���B
+	//	0 ;	//	標準の処理を行います。
+	//	1 ;	//	標準の処理を行いません。
 	*pResult = 0 ;
 
 	// --------------------------------
@@ -711,8 +711,8 @@ void CDlgRosenView::OnDblclkTreeRosen(NMHDR* pNMHDR, LRESULT* pResult)
 		if ( ( iFlags & TVHT_ONITEM ) ){
 			iRv = onEnterItem( aItem , 2 ) ;
 			if ( iRv == 1 ){
-				//	*pResult �� 0 �ɂ���ƁA�_�u���N���b�N���ꂽ�A�C�e����
-				//	�q�A�C�e�����W�J����܂��B
+				//	*pResult を 0 にすると、ダブルクリックされたアイテムの
+				//	子アイテムが展開されます。
 				*pResult = 1 ;
 			}
 		}

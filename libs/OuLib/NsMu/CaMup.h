@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -84,55 +84,55 @@ namespace NsMu{
 // ****************************************************************
 /**
  @brief
-   �A�_�v�^�N���X�ł��B�l��ێ�����R���e�i 
-	"Mup< ElementType >" �𑀍�ΏۂƂ��A�R���e�i����
-	�v�f�ւ̃|�C���^�E�Q�Ƃ�Ԃ� "Mu" �C���^�[�t�F�[�X�ɕϊ����܂��B
+   アダプタクラスです。値を保持するコンテナ 
+	"Mup< ElementType >" を操作対象とし、コンテナ内の
+	要素へのポインタ・参照を返す "Mu" インターフェースに変換します。
  
- (��  �|�C���^��ێ�����R���e�i�ɂ́A���̃A�_�v�^�͎g���܂���)
+ (※  ポインタを保持するコンテナには、このアダプタは使えません)
  
-   ���̃A�_�v�^�N���X���g���ƁA�ȉ��̃C���^�[�t�F�[�X���擾����
-	���Ƃ��ł��܂��B�Ή����郁�\�b�h���Ăяo���Ă��������B
+   このアダプタクラスを使うと、以下のインターフェースを取得する
+	ことができます。対応するメソッドを呼び出してください。
 
- 	- "Mu< ElementType* >" �E�E�E getMuPtr()
- 	- "Mu< const ElementType* >" �E�E�E getMuConstPtr() 
- 	- "Mu< ElementType& >" �E�E�E getMuConstRef()
- 	- "Mu< const ElementType& >" �E�E�E getMuConstRef() 
+ 	- "Mu< ElementType* >" ・・・ getMuPtr()
+ 	- "Mu< const ElementType* >" ・・・ getMuConstPtr() 
+ 	- "Mu< ElementType& >" ・・・ getMuConstRef()
+ 	- "Mu< const ElementType& >" ・・・ getMuConstRef() 
  
  @param ElementType
-	����ΏۃI�u�W�F�N�g���i�[���Ă���f�[�^�̌^���w�肵�Ă��������B
-	����ΏۃI�u�W�F�N�g�́A "Mup<ElementType>" �C���^�[�t�F�[�X��
-	�T�|�[�g���܂��B
-	���̃f�[�^�^�́A�l�^��z�肵�Ă��܂�
-	�i�|�C���^�E�Q�Ƃ��i�[����R���e�i�𑀍�Ώۂɂ���Ӗ��͂���܂���j�B
+	操作対象オブジェクトが格納しているデータの型を指定してください。
+	操作対象オブジェクトは、 "Mup<ElementType>" インターフェースを
+	サポートします。
+	このデータ型は、値型を想定しています
+	（ポインタ・参照を格納するコンテナを操作対象にする意味はありません）。
  */
 template < class ElementType > class CaMup 
 {
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-		����ΏۃI�u�W�F�N�g�ƂȂ�A�R���e�i�ł��B
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-		�������Ȃ��Ă͂Ȃ�܂���B
+		操作対象オブジェクトとなる、コンテナです。
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、thisとの関連が保たれている間は、
+		生存しなくてはなりません。
 	 */
 	Mup<ElementType>*	m_pAdaptee ;
 	///@}
 
 private:
 	// ********************************
-	///@name ���
+	///@name 包含
 	// ********************************
 	///@{
 	// ********************************
-	//	"Mu< ElementType* >" �E�E�E getMuPtr()
+	//	"Mu< ElementType* >" ・・・ getMuPtr()
 	// ********************************
 	/**
 	 @brief
-		CaMup::getMuPtr() ���\�b�h���Ԃ��C���^�[�t�F�[�X��
-		���������N���X�ł��B
+		CaMup::getMuPtr() メソッドが返すインターフェースを
+		実装したクラスです。
 	 */
 	class XMuPtr : public Mu< ElementType* >
 	{
@@ -151,12 +151,12 @@ private:
 	}	m_xMuPtr ;
 	friend class XMuPtr ;
 	//*******************************
-	// 	"Mu< const ElementType* >" �E�E�E getMuConstPtr() 
+	// 	"Mu< const ElementType* >" ・・・ getMuConstPtr() 
 	//*******************************
 	/**
 	 @brief
-		CaMup::getMuConstPtr() ���\�b�h���Ԃ��C���^�[�t�F�[�X��
-		���������N���X�ł��B
+		CaMup::getMuConstPtr() メソッドが返すインターフェースを
+		実装したクラスです。
 	 */
 	class XMuConstPtr : public Mu< const ElementType* >
 	{
@@ -176,12 +176,12 @@ private:
 	friend class XMuConstPtr ;
 
 	// ********************************
-	// 	"Mu< ElementType& >" �E�E�E getMuRef()
+	// 	"Mu< ElementType& >" ・・・ getMuRef()
 	// ********************************
 	/**
 	 @brief
-		CaMup::getMuRef() ���\�b�h���Ԃ��C���^�[�t�F�[�X��
-		���������N���X�ł��B
+		CaMup::getMuRef() メソッドが返すインターフェースを
+		実装したクラスです。
 	 */
 	class XMuRef : public Mu< ElementType& >
 	{
@@ -200,12 +200,12 @@ private:
 	}	m_xMuRef ;
 	friend class XMuRef ;
 	// ********************************
-	// 	"Mu< const ElementType& >" �E�E�E getMuConstRef() 
+	// 	"Mu< const ElementType& >" ・・・ getMuConstRef() 
 	// ********************************
 	/**
 	 @brief
-		CaMup::getMuConstRef() ���\�b�h���Ԃ��C���^�[�t�F�[�X��
-		���������N���X�ł��B
+		CaMup::getMuConstRef() メソッドが返すインターフェースを
+		実装したクラスです。
 	 */
 	class XMuConstRef : public Mu< const ElementType& >
 	{
@@ -226,7 +226,7 @@ private:
 
 	///@}
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 public:
 	CaMup() : 
@@ -239,7 +239,7 @@ private:
 
 public:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	Mup<ElementType>*	getAdaptee(){	return m_pAdaptee ;};
@@ -248,54 +248,54 @@ public:
 	{	m_pAdaptee = value ; 	return *this ;	};
 	///@}
 	// ********************************
-	///@name ���
+	///@name 包含
 	// ********************************
 	///@{
 	/**
 	@return 
-		ElementType �ɃA�N�Z�X���邽�߂� Mu�C���^�[�t�F�[�X�B
+		ElementType にアクセスするための Muインターフェース。
 	*/
 	Mu< ElementType* >* getMuPtr()
 	{	return &m_xMuPtr ;};
 	/**
 	@return 
-		ElementType �ɃA�N�Z�X���邽�߂� Mu�C���^�[�t�F�[�X�B
+		ElementType にアクセスするための Muインターフェース。
 	*/
 	const Mu< ElementType* >* getMuPtr()const 
 	{	return &m_xMuPtr ;};
 	/**
 	@return 
-		ElementType �ɃA�N�Z�X���邽�߂� Mu�C���^�[�t�F�[�X�B
+		ElementType にアクセスするための Muインターフェース。
 	*/
 	Mu< const ElementType* >*  getMuConstPtr()
 	{	return &m_xMuConstPtr ;};
 	/**
 	@return 
-		ElementType �ɃA�N�Z�X���邽�߂� Mu�C���^�[�t�F�[�X�B
+		ElementType にアクセスするための Muインターフェース。
 	*/
 	const Mu< const ElementType* >*  getMuConstPtr()const 
 	{	return &m_xMuConstPtr ;};
 	/**
 	@return 
-		ElementType �ɃA�N�Z�X���邽�߂� Mu�C���^�[�t�F�[�X�B
+		ElementType にアクセスするための Muインターフェース。
 	*/
 	Mu< ElementType& >* getMuRef()
 	{	return m_xMuRef ;};
 	/**
 	@return 
-		ElementType �ɃA�N�Z�X���邽�߂� Mu�C���^�[�t�F�[�X�B
+		ElementType にアクセスするための Muインターフェース。
 	*/
 	const Mu< ElementType& >* getMuRef()const 
 	{	return m_xMuRef ;};
 	/**
 	@return 
-		ElementType �ɃA�N�Z�X���邽�߂� Mu�C���^�[�t�F�[�X�B
+		ElementType にアクセスするための Muインターフェース。
 	*/
 	Mu< const ElementType& >* getMuConstRef()
 	{	return &m_xMuConstRef ;};
 	/**
 	@return 
-		ElementType �ɃA�N�Z�X���邽�߂� Mu�C���^�[�t�F�[�X�B
+		ElementType にアクセスするための Muインターフェース。
 	*/
 	const Mu< const ElementType& >* getMuConstRef()const 
 	{	return &m_xMuConstRef ;};

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -69,9 +69,9 @@ Copyright (C) 2006-2017 take-okm
 */
 /** @file
 * @brief
-* �y�T�v�z
-*	  �f�B���N�g�����̃t�@�C����f�B���N�g���̈ꗗ���擾����֐���
-*	���^���Ă��܂��B
+* 【概要】
+*	  ディレクトリ内のファイルやディレクトリの一覧を取得する関数を
+*	収録しています。
 */
 #ifndef  Directries_h
 #define  Directries_h
@@ -87,15 +87,15 @@ namespace Dir{
 // ****************************************************************
 /**
  * @brief
- *	findDir() �E findFile() �֐��ɓo�^����R�[���o�b�N�C���^�[�t�F�[�X�ł��B
+ *	findDir() ・ findFile() 関数に登録するコールバックインターフェースです。
  */
 class IfDirCallback
 {
  public:
 	/**
-		���������t�@�C�����E�f�B���N�g�������A�ďo���ɒʒm���܂��B
+		見つかったファイル名・ディレクトリ名を、呼出元に通知します。
 	 @param strName [in]
-		���������t�@�C�����E�f�B���N�g����
+		見つかったファイル名・ディレクトリ名
 	 */
 	virtual void OnNameFound( const std::string& strName ) = 0 ;
 };
@@ -103,67 +103,67 @@ class IfDirCallback
 
 
 // ****************************************************************
-///@name �t�@�C��/�f�B���N�g������
+///@name ファイル/ディレクトリ検索
 // ****************************************************************
 ///@{
 /**
- 	����������ɍ��v����f�B���N�g�������������܂��B
+ 	検索文字列に合致するディレクトリ名を検索します。
 
-	�ʏ�̃f�B���N�g�������ɂ� Dirnames() ���g�p�ł��܂��B
+	通常のディレクトリ検索には Dirnames() を使用できます。
 
- 	�f�B���N�g�����̎w��ɂ́A*��?�̃��C���h�J�[�h��
- 	�g�p���邱�Ƃ��ł��܂��B
- 	���C���h�J�[�h�́A������������̍ŉ��ʂ�
- 	�f�B���N�g�����ɂ����A�g�p�\�ł�
- 		�i��F"c:\windows\*" "c:\windows\???" "c:\user\s*" �j 
+ 	ディレクトリ名の指定には、*や?のワイルドカードを
+ 	使用することができます。
+ 	ワイルドカードは、検索文字列内の最下位の
+ 	ディレクトリ名にだけ、使用可能です
+ 		（例："c:\windows\*" "c:\windows\???" "c:\user\s*" ） 
 	
-	���̊֐��́A�f�B���N�g�����݂��閈�ɁA�o�^���ꂽ IfDirCallback 
-	�C���^�[�t�F�[�X�̊֐� IfDirCallback::OnNameFound() ���Ăяo���܂��B
+	この関数は、ディレクトリをみつける毎に、登録された IfDirCallback 
+	インターフェースの関数 IfDirCallback::OnNameFound() を呼び出します。
  @param strSearch [in]
- 	�@������������w�肵�Ă��������B
+ 	　検索文字列を指定してください。
  @param bSubdirectrySearch [in]
- 	�@�^�Ȃ�A�T�u�f�B���N�g���������ΏۂɊ܂߂܂��B
+ 	　真なら、サブディレクトリを検索対象に含めます。
  @param pIfDirCallback [in]
-	  ���̊֐��́A�f�B���N�g���������邲�ƂɁA
-	 pIfDirCallback->OnNameFound() �ŁA�����������O��ʒm���܂��B
-	 NULL �͎w��ł��܂���B
+	  この関数は、ディレクトリを見つけるごとに、
+	 pIfDirCallback->OnNameFound() で、見つかった名前を通知します。
+	 NULL は指定できません。
  @return
- 	  ����������A�O�ȏ�i�����������O�̐��j�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	�p�����[�^���s���ł�\n
-			strSearch �̖����� "."  , ".." ���w�肷�邱�Ƃ͂ł��܂���B
+ 	  成功したら、０以上（見つかった名前の数）、エラーなら負の数です。
+		-	-1 ;	//	パラメータが不正です\n
+			strSearch の末尾に "."  , ".." を指定することはできません。
  @attention
- 	 strSearch �̖����� "." ( �J�����g�f�B���N�g�� ) , ".." (�e�f�B���N�g��) ��
-	�w�肷�邱�Ƃ͂ł��܂���B���̏ꍇ�́A -1 ��Ԃ��܂��B
-	  �J�����g�f�B���N�g���̐e�f�B���N�g���̃T�u�f�B���N�g�����w�肷��ꍇ�́A"..\*"
-	���w�肵�Ă��������B
+ 	 strSearch の末尾に "." ( カレントディレクトリ ) , ".." (親ディレクトリ) を
+	指定することはできません。この場合は、 -1 を返します。
+	  カレントディレクトリの親ディレクトリのサブディレクトリを指定する場合は、"..\*"
+	を指定してください。
  */
 int findDir( const std::string& strSearch , 
 						bool bSubdirectrySearch , 
 						IfDirCallback* pIfDirCallback ) ;
 
 /**
- 	����������ɍ��v����t�@�C�������������܂��B
+ 	検索文字列に合致するファイル名を検索します。
 
-	�ʏ�̃f�B���N�g�������ɂ� Filenames() ���g�p�ł��܂��B
+	通常のディレクトリ検索には Filenames() を使用できます。
 
- 	�t�@�C�����̎w��ɂ́A*��?�̃��C���h�J�[�h��
- 	�g�p���邱�Ƃ��ł��܂��B
- 	���C���h�J�[�h�́A������������̍ŉ��ʂ�
- 	�t�@�C�����ɂ����A�g�p�\�ł�
- 		�i��F"c:\windows\*" "c:\windows\???" "c:\user\s*" �j 
+ 	ファイル名の指定には、*や?のワイルドカードを
+ 	使用することができます。
+ 	ワイルドカードは、検索文字列内の最下位の
+ 	ファイル名にだけ、使用可能です
+ 		（例："c:\windows\*" "c:\windows\???" "c:\user\s*" ） 
 	
-	���̊֐��́A�t�@�C�����݂��閈�ɁA�o�^���ꂽ IfDirCallback 
-	�C���^�[�t�F�[�X�̊֐� IfDirCallback::OnNameFound() ���Ăяo���܂��B
-	���������B* @param strSearch [in]
- 	�@������������w�肵�Ă��������B
+	この関数は、ファイルをみつける毎に、登録された IfDirCallback 
+	インターフェースの関数 IfDirCallback::OnNameFound() を呼び出します。
+	ください。* @param strSearch [in]
+ 	　検索文字列を指定してください。
  @param bSubdirectrySearch [in]
- 	�@�^�Ȃ�A�T�u�f�B���N�g���������ΏۂɊ܂߂܂��B
+ 	　真なら、サブディレクトリを検索対象に含めます。
  @param pIfDirCallback [in]
-	  ���̊֐��́A�t�@�C���������邲�ƂɁA
-	 pIfDirCallback->OnNameFound() �ŁA�����������O��ʒm���܂��B
-	 NULL �͎w��ł��܂���B
+	  この関数は、ファイルを見つけるごとに、
+	 pIfDirCallback->OnNameFound() で、見つかった名前を通知します。
+	 NULL は指定できません。
  @return
- 	  ����������A�O�ȏ�i�����������O�̐��j�A�G���[�Ȃ�s�̐��ł��B
+ 	  成功したら、０以上（見つかった名前の数）、エラーなら不の数です。
  */
 int  findFile( const std::string& strSearch , 
 						bool bSubdirectrySearch ,
@@ -171,38 +171,38 @@ int  findFile( const std::string& strSearch ,
 
 ///@}
 // ****************************************************************
-///@name �f�B���N�g���쐬
+///@name ディレクトリ作成
 // ****************************************************************
 ///@{
 /**
-	�T�u�f�B���N�g�����쐬���܂��B
-	�����i�̃T�u�f�B���N�g������x�ɍ쐬���邱�Ƃ��ł��܂��B
+	サブディレクトリを作成します。
+	複数段のサブディレクトリを一度に作成することができます。
 @param strDir [in]
-	�f�B���N�g�����w�肵�Ă��������B
-	������ "\" �́A�����Ă��Ȃ��Ă����܂��܂���B
+	ディレクトリを指定してください。
+	末尾の "\" は、あってもなくてもかまいません。
 @return
-	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	-	1 ;	//	�f�B���N�g���̍쐬�ɐ������܂����B
-	-	0 ;	//	�f�B���N�g���͊��ɑ��݂��Ă��܂����B
-	-	-1 ;	//	�f�B���N�g���̍쐬�Ɏ��s���܂����B
+	成功したら 0 以上、エラーなら負の数です。
+	-	1 ;	//	ディレクトリの作成に成功しました。
+	-	0 ;	//	ディレクトリは既に存在していました。
+	-	-1 ;	//	ディレクトリの作成に失敗しました。
 */
 int mkdirs( const std::string& strDir ) ;
 
 /** 
-	�w�肳�ꂽ�f�B���N�g������ł���΁A���̃f�B���N�g�����폜���܂��B 
-	�w�肳�ꂽ�f�B���N�g���̃T�u�f�B���N�g�����̋�̃f�B���N�g�������ׂ� 
-	�폜���܂��B 
+	指定されたディレクトリが空であれば、そのディレクトリを削除します。 
+	指定されたディレクトリのサブディレクトリ内の空のディレクトリもすべて 
+	削除します。 
 
-	�������w�肵�Ȃ��ꍇ�́A�J�����g�f�B���N�g�����w�肵�����̂Ƃ݂Ȃ��܂��B 
+	引数を指定しない場合は、カレントディレクトリを指定したものとみなします。 
 
 @param strDir [in] 
-	�폜����f�B���N�g�����w�肵�Ă��������B
+	削除するディレクトリを指定してください。
 @param pErrorStream [in]
 @return 
-	-	0 ;	//	�f�B���N�g���͍폜�ł��܂����B 
-	-	-1 ;	//	strDir�̍폜�Ɏ��s���܂����B 
-	-	-2 ;	//	���̃f�B���N�g���ɂ̓t�@�C��������܂��B 
-	-	-3 ;	//	�T�u�f�B���N�g���̍폜�Ɏ��s���܂����B 
+	-	0 ;	//	ディレクトリは削除できました。 
+	-	-1 ;	//	strDirの削除に失敗しました。 
+	-	-2 ;	//	このディレクトリにはファイルがあります。 
+	-	-3 ;	//	サブディレクトリの削除に失敗しました。 
 */ 
 int rmempdir( const std::string& strDir , FILE* pErrorStream ) ;
 
@@ -212,45 +212,45 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream ) ;
 // ****************************************************************
 /**
  @brief
-	findDir() �E findFile() �֐��Ō��������t�@�C�����A
-	STL�R���e�i�ɒǉ�����R�[���o�b�N�N���X�ł��B
+	findDir() ・ findFile() 関数で検索したファイルを、
+	STLコンテナに追加するコールバッククラスです。
 
-�y�g�����z
+【使い方】
 
-  Dirnames() , Filenames() �֐����Q�l�ɂ��Ă��������B
+  Dirnames() , Filenames() 関数を参考にしてください。
 
  @param StrContainerType
-	std::string ���i�[����STL�R���e�i���w�肵�Ă��������B@n
-	(��) std::deque< std::string > std::vector< std::string >
+	std::string を格納するSTLコンテナを指定してください。@n
+	(例) std::deque< std::string > std::vector< std::string >
 */
 template< class StrContainerType >
 class CDirCallback_StrContainer : public IfDirCallback
 {
  private:
 	// ********************************
-	/// @name �֘A	
+	/// @name 関連	
 	// ********************************
 	///@{
 	/**
-		findDir() �E findFile() �֐��Ō��������t�@�C�����A
-		�ǉ�����STL�R���e�i�B
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��͕�炷���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́A this ��蒷���������Ȃ��Ă�
-		�Ȃ�܂���B
+		findDir() ・ findFile() 関数で検索したファイルを、
+		追加するSTLコンテナ。
+		このオブジェクトの破棄の責務は暮らすユーザーにあります。
+		このオブジェクトは、 this より長く生存しなくては
+		なりません。
 	 */
 	StrContainerType*	m_pStrContainerType ;
 	///@}
  public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
 	 @param pStrContainerType [in]
-		findDir() �E findFile() �֐��Ō��������t�@�C�����A
-		�ǉ�����STL�R���e�i�B
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��̓N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́A this ��蒷���������Ȃ��Ă�
-		�Ȃ�܂���B
+		findDir() ・ findFile() 関数で検索したファイルを、
+		追加するSTLコンテナ。
+		このオブジェクトの破棄の責務はクラスユーザーにあります。
+		このオブジェクトは、 this より長く生存しなくては
+		なりません。
 	 */
 	CDirCallback_StrContainer( StrContainerType* pStrContainerType )
 		: m_pStrContainerType( pStrContainerType ){};
@@ -260,13 +260,13 @@ class CDirCallback_StrContainer : public IfDirCallback
 	// ********************************
 	///@{
 	/**
-		���������t�@�C�����E�f�B���N�g�������A�ďo���ɒʒm���܂��B
+		見つかったファイル名・ディレクトリ名を、呼出元に通知します。
 	 @param strName [in]
-		���������t�@�C�����E�f�B���N�g����
+		見つかったファイル名・ディレクトリ名
 	
-	 [�I�[�o���C�h]
-		m_pStrContainerType ���w���R���e�i�ɁCpush_back()���\�b�h��
-		���O��ǉ����܂��B
+	 [オーバライド]
+		m_pStrContainerType が指すコンテナに，push_back()メソッドで
+		名前を追加します。
 	 */
 	virtual void OnNameFound( const std::string& strName ) 
 	{
@@ -276,34 +276,34 @@ class CDirCallback_StrContainer : public IfDirCallback
 };
 
 // ****************************************************************
-///@name �t�@�C��/�f�B���N�g������
+///@name ファイル/ディレクトリ検索
 // ****************************************************************
 ///@{
 
 /**
- 	Dirnames() Filenames() ���t�@�C�����̈ꗗ���i�[����R���e�i
+ 	Dirnames() Filenames() がファイル名の一覧を格納するコンテナ
  */
 typedef std::deque<std::string> ContFilenames ;
 
 /**
- 	����������ɍ��v����f�B���N�g�������������A
- 	���̈ꗗ�̃R���e�i��Ԃ��܂��B
- 	�f�B���N�g�����̎w��ɂ́A*��?�̃��C���h�J�[�h��
- 	�g�p���邱�Ƃ��ł��܂��B
- 	���C���h�J�[�h�́A������������̍ŉ��ʂ�
- 	�f�B���N�g�����ɂ����A�g�p�\�ł�
- 		�i��F"c:\windows\*" "c:\windows\???" "c:\user\s*" �j 
+ 	検索文字列に合致するディレクトリ名を検索し、
+ 	その一覧のコンテナを返します。
+ 	ディレクトリ名の指定には、*や?のワイルドカードを
+ 	使用することができます。
+ 	ワイルドカードは、検索文字列内の最下位の
+ 	ディレクトリ名にだけ、使用可能です
+ 		（例："c:\windows\*" "c:\windows\???" "c:\user\s*" ） 
 @param strSearch
- 	�@������������w�肵�Ă��������B
+ 	　検索文字列を指定してください。
 @param bSubdirectrySearch
- 	�@�^�Ȃ�A�T�u�f�B���N�g���������ΏۂɊ܂߂܂��B
+ 	　真なら、サブディレクトリを検索対象に含めます。
 @return
- 	  ����������ɍ��v����f�B���N�g�������i�[����
- 	stl�R���e�i�ł��B
+ 	  検索文字列に合致するディレクトリ名を格納した
+ 	stlコンテナです。
 @attention
- 	 strSearch �̖����� "." ( �J�����g�f�B���N�g�� ) , ".." (�e�f�B���N�g��) ��
-	�w�肷�邱�Ƃ͂ł��܂���B���̏ꍇ�́A �߂�l�̃R���e�i��
-	�v�f���� 0 �ɂȂ�܂��B
+ 	 strSearch の末尾に "." ( カレントディレクトリ ) , ".." (親ディレクトリ) を
+	指定することはできません。この場合は、 戻り値のコンテナは
+	要素数が 0 になります。
  */
 inline ContFilenames Dirnames( const std::string& strSearch , 
 						bool bSubdirectrySearch )
@@ -315,20 +315,20 @@ inline ContFilenames Dirnames( const std::string& strSearch ,
 }
 
 /**
- 	����������ɍ��v����t�@�C�������������A
- 	���̈ꗗ�̃R���e�i��Ԃ��܂��B
- 	�t�@�C�����̎w��ɂ́A*��?�̃��C���h�J�[�h��
- 	�g�p���邱�Ƃ��ł��܂��B
- 	���C���h�J�[�h�́A������������̍ŉ��ʂ�
- 	�t�@�C�����ɂ����A�g�p�\�ł�
- 		�i��F"c:\windows\*" "c:\windows\???" "c:\user\s*" �j 
+ 	検索文字列に合致するファイル名を検索し、
+ 	その一覧のコンテナを返します。
+ 	ファイル名の指定には、*や?のワイルドカードを
+ 	使用することができます。
+ 	ワイルドカードは、検索文字列内の最下位の
+ 	ファイル名にだけ、使用可能です
+ 		（例："c:\windows\*" "c:\windows\???" "c:\user\s*" ） 
 @param strSearch
- 	�@������������w�肵�Ă��������B
+ 	　検索文字列を指定してください。
 @param bSubdirectrySearch
- 	�@�^�Ȃ�A�T�u�f�B���N�g���������ΏۂɊ܂߂܂��B
+ 	　真なら、サブディレクトリを検索対象に含めます。
 @return
- 	  ����������ɍ��v����t�@�C�������i�[����
- 	stl�R���e�i�ł��B
+ 	  検索文字列に合致するファイル名を格納した
+ 	stlコンテナです。
  */
 inline ContFilenames Filenames( const std::string& strSearch , 
 						bool bSubdirectrySearch )

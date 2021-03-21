@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -76,25 +76,25 @@ Copyright (C) 2006-2017 take-okm
 #include <algorithm>
 
 /**
-  CaMuiSelect �̎����A���S���Y����I�����邱�Ƃ��ł��܂��B
+  CaMuiSelect の実装アルゴリズムを選択することができます。
 
 <h4>0</h4>
 
-�v�f�̑I���� CaMuiSelect::m_contSelect �ɑ΂���
-�L���b�V���͂���܂���B
-CaMuiSelect::size()�ECaMuiSelect::indexToAdapteeIndex()�E
-CaMuiSelect::indexFromAdapteeIndex() �́A
-m_contSelect ���X�L�������܂��B
+要素の選択状況 CaMuiSelect::m_contSelect に対する
+キャッシュはありません。
+CaMuiSelect::size()・CaMuiSelect::indexToAdapteeIndex()・
+CaMuiSelect::indexFromAdapteeIndex() は、
+m_contSelect をスキャンします。
 
-CaMuiSelectTest::run()�̎��s����(Debug �o�[�W����)=13�b�B
+CaMuiSelectTest::run()の実行時間(Debug バージョン)=13秒。
 
 <h4>1</h4>
-indexToAdapteeIndex() �̌��ʂ̃L���b�V�����A
-�����o�ϐ� CaMuiSelect::m_AdapteeIndexCache ��
-�ێ�����悤�ɂȂ�܂��B
-CaMuiSelect::m_AdapteeIndexCache �� mutable �ɂȂ�܂��B
+indexToAdapteeIndex() の結果のキャッシュを、
+メンバ変数 CaMuiSelect::m_AdapteeIndexCache に
+保持するようになります。
+CaMuiSelect::m_AdapteeIndexCache は mutable になります。
 
-CaMuiSelectTest::run()�̎��s����(Debug �o�[�W����)=9�b�B
+CaMuiSelectTest::run()の実行時間(Debug バージョン)=9秒。
 */
 #define CaMuiSelect_ALGORITHM	1
 
@@ -110,256 +110,256 @@ namespace NsMu{
 // ****************************************************************
 /**
 @brief
-  �A�_�v�^�N���X�ł��B
-  �R���e�i�̈ꕔ�̗v�f��I�������`�́A�����R���e�i�C���^�[�t�F�[�X��
-�쐬���܂��B
+  アダプタクラスです。
+  コンテナの一部の要素を選択した形の、部分コンテナインターフェースを
+作成します。
 
-  ���̃N���X�́A����ΏۂƂȂ鑼�̃R���e�i(Adaptee)�̗v�f����A
-�ꕔ��I�����������R���e�i��񋟂��܂��B
-  �N���X���[�U�[�́A���̃N���X����� Adaptee �R���e�i�̈ꕔ�v�f��
-�Q�Ƃ��邱�Ƃ��ł��܂��B
-  Adaptee�R���e�i���I�u�W�F�N�g��ێ����Ă���A���̃I�u�W�F�N�g��
-�|�C���^��Q�ƂɃA�N�Z�X�ł���ꍇ�́AAdaptee �R���e�i�̈ꕔ�v�f��
-�΂��āA������s�����Ƃ��ł��܂��B
+  このクラスは、操作対象となる他のコンテナ(Adaptee)の要素から、
+一部を選択した部分コンテナを提供します。
+  クラスユーザーは、このクラスを介して Adaptee コンテナの一部要素を
+参照することができます。
+  Adapteeコンテナがオブジェクトを保持しており、そのオブジェクトの
+ポインタや参照にアクセスできる場合は、Adaptee コンテナの一部要素に
+対して、操作を行うこともできます。
 
-  ���̃N���X�́A�ȉ��̃C���^�[�t�F�[�X���T�|�[�g�����R���e�i��
-Adaptee �Ƃ��đ��삷�邱�Ƃ��ł��܂��B
-  �A���A���̂����̂��ׂĂ��T�|�[�g���Ă���K�v�͂���܂���B
+  このクラスは、以下のインターフェースをサポートしたコンテナを
+Adaptee として操作することができます。
+  但し、このうちのすべてをサポートしている必要はありません。
 
-  - Mu<ElementType1>   (�K�{)
-  - Mui<ElementType1>  (�C��)
-  - const Mu<const ElementType1*>�@(�C��)
-  - Mu<ElementType1*>�@(�C��)
+  - Mu<ElementType1>   (必須)
+  - Mui<ElementType1>  (任意)
+  - const Mu<const ElementType1*>　(任意)
+  - Mu<ElementType1*>　(任意)
 
-  Mui<ElementType1> ���w�肳�ꂽ�ꍇ�́AMu<ElementType1> ��
-�w�肳�ꂽ���ƂɂȂ�܂��B
+  Mui<ElementType1> が指定された場合は、Mu<ElementType1> も
+指定されたことになります。
   
   	 
-  CaMuiSelect �́A��������́A�P�̗v�f���I������Ȃ���Ԃł��B
-  �C���X�^���X�𐶐�������A setSelect() �ŁA�v�f��I�����Ă��������B
+  CaMuiSelect は、生成直後は、１つの要素も選択されない状態です。
+  インスタンスを生成したら、 setSelect() で、要素を選択してください。
 
 <h3>
-�y��1�zMu<ElementType1> ���T�|�[�g���Ă���R���e�i
+【例1】Mu<ElementType1> をサポートしているコンテナ
 </h3>
 
-  Mu<string> ���T�|�[�g����R���e�i�ɁA�ȉ��̗v�f���i�[�����
-�����Ƃ��܂��B(string �́Astd::string �̂��Ƃ��w���܂�)
+  Mu<string> をサポートするコンテナに、以下の要素が格納されて
+いたとします。(string は、std::string のことを指します)
   
   { "zero" , "one" , "two" , "three" , "four" , "five" , 
     "six" , "seven" } ;
   
-  ���̃R���e�i�� Mu<string>�C���^�[�t�F�[�X�ɑ΂��āA
- CaMuiSelect<string> �A�_�v�^��ݒ肵����A�v�f0,4,6��I�����邱�Ƃ�
-���A CaMuiSelect�� Mu<string> �C���^�[�t�F�[�X�́A�ȉ��̂R��
-�v�f��Ԃ��܂��B
+  このコンテナの Mu<string>インターフェースに対して、
+ CaMuiSelect<string> アダプタを設定した後、要素0,4,6を選択することに
+より、 CaMuiSelectの Mu<string> インターフェースは、以下の３つの
+要素を返します。
 
   { "zero" , "four" , "six" } ;
   
  
  
 <h3>
-�y��2�zMui<ElementType1> ���T�|�[�g���Ă���R���e�i�ւ̒ǉ�
+【例2】Mui<ElementType1> をサポートしているコンテナへの追加
 </h3>
 
-  Mui<string> ���T�|�[�g����R���e�i�ɁA�ȉ��̗v�f���i�[�����
-�����Ƃ��܂��B
+  Mui<string> をサポートするコンテナに、以下の要素が格納されて
+いたとします。
   
   { "zero" , "one" , "two" , "three" , "four" , "five" , 
     "six" , "seven" } ;
 
-  ���̃R���e�i�� Mui<string>�C���^�[�t�F�[�X�ɑ΂��āA 
-CaMuiSelect<string> �A�_�v�^��ݒ肵����A�v�f0,4,6��I�����邱�Ƃ�
-���ACaMuiSelect�� Mui<string> �C���^�[�t�F�[�X�́A�ȉ��̂R��
-�v�f��Ԃ��܂��B
+  このコンテナの Mui<string>インターフェースに対して、 
+CaMuiSelect<string> アダプタを設定した後、要素0,4,6を選択することに
+より、CaMuiSelectの Mui<string> インターフェースは、以下の３つの
+要素を返します。
 
   { "zero" , "four" , "six" } ;
 
-  �����ŁACaMuiSelect �� insert() ���\�b�h���g���A0�Ԗڂɗv�f
- "newzero" ��}������ƁACaMuiSelect �́A�ȉ���4�̗v�f��Ԃ��悤��
-�Ȃ�܂��B
+  ここで、CaMuiSelect に insert() メソッドを使い、0番目に要素
+ "newzero" を挿入すると、CaMuiSelect は、以下の4つの要素を返すように
+なります。
 
   { "newzero" , "zero" , "four" , "six" } ;
 
-  ����ΏۃR���e�i(m_pAdaptee)�̓��e�́A�ȉ��̂悤�ɂȂ�܂��B
+  操作対象コンテナ(m_pAdaptee)の内容は、以下のようになります。
 
   { "newzero" , "zero" , "one" , "two" , "three" , "four" , 
     "five" , "six" , "seven" } ;
   
 
-  �܂��ACaMuiSelect�̗v�f�I���󋵂́A{0,1,5,7} �ƂȂ�܂��B
+  また、CaMuiSelectの要素選択状況は、{0,1,5,7} となります。
 
 
 
 <h3>
-�y��3�zMui<ElementType1> ���T�|�[�g���Ă���R���e�i����̍폜
+【例3】Mui<ElementType1> をサポートしているコンテナからの削除
 </h3>
 
-  Mui<string> ���T�|�[�g����R���e�i�ɁA�ȉ��̗v�f���i�[����Ă����Ƃ��܂��B
+  Mui<string> をサポートするコンテナに、以下の要素が格納されていたとします。
   
   { "zero" , "one" , "two" , "three" , "four" , "five" , 
     "six" , "seven" } ;
 
-  ���̃R���e�i�� Mui<string>�C���^�[�t�F�[�X�ɑ΂��āA CaMuiSelect<string> 
-�A�_�v�^��ݒ肵����A�v�f0,4,6��I�����邱�Ƃɂ��A CaMuiSelect�� 
-Mui<string> �C���^�[�t�F�[�X�́A�ȉ��̂R�̗v�f��Ԃ��܂��B
+  このコンテナの Mui<string>インターフェースに対して、 CaMuiSelect<string> 
+アダプタを設定した後、要素0,4,6を選択することにより、 CaMuiSelectの 
+Mui<string> インターフェースは、以下の３つの要素を返します。
 
   { "zero" , "four" , "six" } ;
 
-  �����ŁACaMuiSelect �� erase() ���\�b�h���g���A0�Ԗڂ���2�̗v�f��
-�폜����ƁACaMuiSelect �́A�ȉ��̗v�f��Ԃ��悤�ɂȂ�܂��B
+  ここで、CaMuiSelect の erase() メソッドを使い、0番目から2個の要素を
+削除すると、CaMuiSelect は、以下の要素を返すようになります。
 
   {  "six" } ;
 
-  ����ΏۃR���e�i(m_pAdaptee)�̓��e�́A�ȉ��̂悤�ɂȂ�܂��B
+  操作対象コンテナ(m_pAdaptee)の内容は、以下のようになります。
 
   { "one" , "two" , "three" , "five" , "six" , "seven" } ;
   
 
-  �܂��ACaMuiSelect�̗v�f�I���󋵂́A{ 4 } �ƂȂ�܂��B
+  また、CaMuiSelectの要素選択状況は、{ 4 } となります。
 
 
 <h3>
-�y��4�zMu<ElementType1*> �E const Mu<const ElementType1*> ���T�|�[�g
-���Ă���R���e�i
+【例4】Mu<ElementType1*> ・ const Mu<const ElementType1*> をサポート
+しているコンテナ
 </h3>
 
-  Mui<string> ���T�|�[�g����R���e�i�ɁA�ȉ��̗v�f���i�[����Ă���A
-���A���̃R���e�i�� Mu<string*> ���T�|�[�g���Ă����Ƃ��܂��B
+  Mui<string> をサポートするコンテナに、以下の要素が格納されており、
+かつ、このコンテナが Mu<string*> をサポートしていたとします。
   
   { "zero" , "one" , "two" , "three" , "four" , "five" , 
     "six" , "seven" } ;
 
-  ���̃R���e�i�� Mui<string*> �C���^�[�t�F�[�X�ɑ΂��āA
- CaMuiSelect<string> �A�_�v�^��ݒ肵����A�v�f0,4,6��I�����邱�Ƃɂ��A
- CaMuiSelect�� Mui<string> �C���^�[�t�F�[�X�́A�ȉ��̂R�̗v�f��Ԃ��܂��B
+  このコンテナの Mui<string*> インターフェースに対して、
+ CaMuiSelect<string> アダプタを設定した後、要素0,4,6を選択することにより、
+ CaMuiSelectの Mui<string> インターフェースは、以下の３つの要素を返します。
 
   { "zero" , "four" , "six" } ;
 
-  CaMuiSelect �� getMuPtr() ���\�b�h�ŁA Mu<string*> �C���^�[�t�F�[�X���擾����
-���Ƃ��ł��܂��B���� Mu<string*> �C���^�[�t�F�[�X�ł��A��L�̗v�f���擾����
-���Ƃ��ł��܂��B
+  CaMuiSelect の getMuPtr() メソッドで、 Mu<string*> インターフェースを取得する
+ことができます。この Mu<string*> インターフェースでも、上記の要素を取得する
+ことができます。
 
-  ����ɁA���� Mu<string*> ���g���ƁA�i�[����Ă��� string �I�u�W�F�N�g��
-�����o�֐����Ăяo������A�����o�ϐ��𒼐ڑ��삷�邱�Ƃ��ł��܂��B
-  ��L��3�̗v�f�ɑ΂��āA string::erase() ���\�b�h���g�p���āA�擪��1������
-�폜���邱�Ƃ��ł��܂��B
+  さらに、この Mu<string*> を使うと、格納されている string オブジェクトの
+メンバ関数を呼び出したり、メンバ変数を直接操作することができます。
+  上記の3つの要素に対して、 string::erase() メソッドを使用して、先頭の1文字を
+削除することができます。
 
   { "ero" , "our" , "ix" } ;
 
-  ����ΏۃR���e�i(m_pAdaptee)�̓��e�́A�ȉ��̂悤�ɂȂ�܂��B
+  操作対象コンテナ(m_pAdaptee)の内容は、以下のようになります。
 
   { "ero" , "one" , "two" , "three" , "our" , "five" , 
     "ix" , "seven" } ;
 
 @note
-  CMuiCopied �� Adaptee �Ƃ��Ă��̃N���X���g�p����ꍇ�́A
-�ȉ��̂悤�ȃR���X�g���N�^�Ăяo���ŁA�C���X�^���X�𐶐����Ă��������B
+  CMuiCopied を Adaptee としてこのクラスを使用する場合は、
+以下のようなコンストラクタ呼び出しで、インスタンスを生成してください。
 
 @code
 	CMuiCopied<CBase> aCont ;
 
-	//	aCont �ɗv�f��ǉ�
+	//	aCont に要素を追加
 
 	CaMuiSelect<CBase>	aSelect( &aCont , aCont.getMuPtr() ) ;
 @endcode
 
 
 @param ElementType1
-  	�i�[����v�f�̌^���w�肵�Ă��������B
-  	���̃N���X�́A Mu< ElementType1 > �C���^�[�t�F�[�X��
-  	�T�|�[�g���܂��B
+  	格納する要素の型を指定してください。
+  	このクラスは、 Mu< ElementType1 > インターフェースを
+  	サポートします。
  */
 template < class ElementType1 > class CaMuiSelect : 
 	public Mui< ElementType1 > 
 {
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i(Adaptee)�́A 
-		Mu<ElementType1>�C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナ(Adaptee)の、 
+		Mu<ElementType1>インターフェースです。
 		
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-		�������Ȃ��Ă͂Ȃ�܂���B
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、thisとの関連が保たれている間は、
+		生存しなくてはなりません。
 		
-		m_pAdapteeMui �ɗL���ȃC���^�[�t�F�[�X������ꍇ�́A
-		���̃C���^�[�t�F�[�X���L���ɂȂ�܂��B
+		m_pAdapteeMui に有効なインターフェースがある場合は、
+		このインターフェースも有効になります。
 	*/
 	Mu<ElementType1>*	m_pAdapteeMu ;
 
 	/**
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i�́A 
-		Mui<ElementType1>�C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナの、 
+		Mui<ElementType1>インターフェースです。
 
-		����Ώۂ����̃C���^�[�t�F�[�X���T�|�[�g���Ă��Ȃ��ꍇ�́A
-		NULL �Ƃ��邱�Ƃ��ł��܂��B
-		�A���A���̃N���X�� set(),insert(),erase() ���\�b�h���g�p���邽�߂ɂ́A
-		���̃C���^�[�t�F�[�X���Z�b�g����K�v������܂��B
+		操作対象がこのインターフェースをサポートしていない場合は、
+		NULL とすることもできます。
+		但し、このクラスの set(),insert(),erase() メソッドを使用するためには、
+		このインターフェースをセットする必要があります。
 
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-		�������Ȃ��Ă͂Ȃ�܂���B
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、thisとの関連が保たれている間は、
+		生存しなくてはなりません。
 		
-		�܂��Athis�Ƃ̊֘A���L���ȊԂɁAthis�̃��\�b�h�ȊO�̕��@�ŁA
-		���̃R���e�i�̗v�f����ς��Ȃ��ł��������B
-		���̃N���X�́Am_pAdaptee �̗v�f���ƁAthis->m_contSelect�� �v�f����
-		�قȂ�ƁA���������삵�Ȃ��Ȃ�܂��B
-		�����Am_pAdapteeMui �̗v�f�����A�ς����ꍇ�́AsetAdaptee() �ŁA
-		�֘A���Đݒ肵�Ă��������B
+		また、thisとの関連が有効な間に、thisのメソッド以外の方法で、
+		このコンテナの要素数を変えないでください。
+		このクラスは、m_pAdaptee の要素数と、this->m_contSelectの 要素数が
+		異なると、正しく動作しなくなります。
+		もし、m_pAdapteeMui の要素数を、変えた場合は、setAdaptee() で、
+		関連を再設定してください。
 	*/
 	Mui<ElementType1>*	m_pAdapteeMui ;
 
 	/**
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i(Adaptee)�́A 
-		Mu<const ElementType1*> �C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナ(Adaptee)の、 
+		Mu<const ElementType1*> インターフェースです。
 		
-		����Ώۂ����̃C���^�[�t�F�[�X���T�|�[�g���Ă��Ȃ��ꍇ�́A
-		NULL �Ƃ��邱�Ƃ��ł��܂��B
-		�A���AgetMuPtr() �ɂ��C���^�[�t�F�[�X���g�p����ꍇ�́A
-		m_pAdapteeMuConstPtr,m_pAdapteeMuPtr �̂����ꂩ��
-		�K�v�ł��B
+		操作対象がこのインターフェースをサポートしていない場合は、
+		NULL とすることもできます。
+		但し、getMuPtr() によるインターフェースを使用する場合は、
+		m_pAdapteeMuConstPtr,m_pAdapteeMuPtr のいずれかが
+		必要です。
 
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-		�������Ȃ��Ă͂Ȃ�܂���B
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、thisとの関連が保たれている間は、
+		生存しなくてはなりません。
 
-		m_pAdapteeMuPtr ���L���ȏꍇ�́A���̃C���^�[�t�F�[�X�̎w�肪�Ȃ��Ă�
-		Mu<const ElementType1*> �C���^�[�t�F�[�X���g�p���邱�Ƃ��ł��܂��B
+		m_pAdapteeMuPtr が有効な場合は、このインターフェースの指定がなくても
+		Mu<const ElementType1*> インターフェースを使用することができます。
 	*/
 	Mu<const ElementType1*>* m_pAdapteeMuConstPtr ;
 	
 	/**
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i(Adaptee)�́A 
-		Mu<ElementType1*> �C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナ(Adaptee)の、 
+		Mu<ElementType1*> インターフェースです。
 		
-		����Ώۂ����̃C���^�[�t�F�[�X���T�|�[�g���Ă��Ȃ��ꍇ�́A
-		NULL �Ƃ��邱�Ƃ��ł��܂��B
-		�A���AgetMuPtr() �ɂ��C���^�[�t�F�[�X�ŁA
-		�R���e�i���̗v�f�̔�const�|�C���^���擾����ꍇ�́A
-		m_pAdapteeMuPtr ���K�v�ł��B
+		操作対象がこのインターフェースをサポートしていない場合は、
+		NULL とすることもできます。
+		但し、getMuPtr() によるインターフェースで、
+		コンテナ内の要素の非constポインタを取得する場合は、
+		m_pAdapteeMuPtr が必要です。
 
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		���̃I�u�W�F�N�g�́Athis�Ƃ̊֘A���ۂ���Ă���Ԃ́A
-		�������Ȃ��Ă͂Ȃ�܂���B
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		このオブジェクトは、thisとの関連が保たれている間は、
+		生存しなくてはなりません。
 	*/
 	Mu<ElementType1*>* m_pAdapteeMuPtr ;
 	///@}
 private:
 	// ********************************
-	///@name ���
+	///@name 包含
 	// ********************************
 	///@{
 
 	/**
 	@brief
-		���ݑI������Ă���v�f�ւ́A Mu<ElementType*> 
-		�C���^�[�t�F�[�X���������܂��B
+		現在選択されている要素への、 Mu<ElementType*> 
+		インターフェースを実装します。
 
-	 m_pAdapteeMuPtr �ɁA�L���ȃC���^�[�t�F�[�X���ݒ肳��Ă���
-	�K�v������܂��B
+	 m_pAdapteeMuPtr に、有効なインターフェースが設定されている
+	必要があります。
 
 	*/
 	class XMuConstPtr : public Mu<const ElementType1*>
@@ -371,13 +371,13 @@ private:
 		///@{
 		/**
 		@return
-	 		�R���e�i�Ɋi�[����Ă���f�[�^�̌���Ԃ��܂��B
+	 		コンテナに格納されているデータの個数を返します。
 		 	
-	 		�I������Ă���f�[�^�̌���Ԃ��܂��B
+	 		選択されているデータの個数を返します。
 		@attention
-			 CaMuiSelect �� m_pAdapteeMuPtr�Em_pAdapteeMu �̂ǂ���ɂ�
-			 �L���ȃC���^�[�t�F�[�X���ݒ肳��Ă��Ȃ�
-			�ꍇ�A���̃��\�b�h�͓��삵�܂���B
+			 CaMuiSelect の m_pAdapteeMuPtr・m_pAdapteeMu のどちらにも
+			 有効なインターフェースが設定されていない
+			場合、このメソッドは動作しません。
 		*/
 		virtual int	size()const
 		{
@@ -389,18 +389,18 @@ private:
 		
 
 		/**
- 		  �R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
- 		�v�f��Ԃ��܂��B
+ 		  コンテナ内の、インデクスで指定された場所に格納されている
+ 		要素を返します。
 		 @param idx [in]
-	 		�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 		�͈͂͂O�ȏ� size() �����ł��B
-			INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 		０から始まるインデクスを指定してください。
+	 		範囲は０以上 size() 未満です。
+			INT_MAX は、末尾を指定したものとみなします。
 		 @return
-	 		�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	 		インデクスで指定された要素を返します。
 		@attention
-			 CaMuiSelect �� m_pAdapteeMuPtr�Em_pAdapteeMu �̂ǂ���ɂ�
-			 �L���ȃC���^�[�t�F�[�X���ݒ肳��Ă��Ȃ�
-			�ꍇ�A���̃��\�b�h�͓��삵�܂���B
+			 CaMuiSelect の m_pAdapteeMuPtr・m_pAdapteeMu のどちらにも
+			 有効なインターフェースが設定されていない
+			場合、このメソッドは動作しません。
 		*/
 		virtual const ElementType1* get( int idx )const 
 		{
@@ -436,11 +436,11 @@ private:
 
 	/**
 	@brief
-		���ݑI������Ă���v�f�ւ́A Mu<ElementType*> 
-		�C���^�[�t�F�[�X���������܂��B
+		現在選択されている要素への、 Mu<ElementType*> 
+		インターフェースを実装します。
 
-	 m_pAdapteeMuPtr �ɁA�L���ȃC���^�[�t�F�[�X���ݒ肳��Ă���
-	�K�v������܂��B
+	 m_pAdapteeMuPtr に、有効なインターフェースが設定されている
+	必要があります。
 
 	*/
 	class XMuPtr : public Mu<ElementType1*>
@@ -452,12 +452,12 @@ private:
 		///@{
 		/**
 		 @return
-	 		�R���e�i�Ɋi�[����Ă���f�[�^�̌���Ԃ��܂��B
+	 		コンテナに格納されているデータの個数を返します。
 		 	
-	 		�I������Ă���f�[�^�̌���Ԃ��܂��B
+	 		選択されているデータの個数を返します。
 		@attention
-			 m_pAdapteeMuPtr �ɁA�L���ȃC���^�[�t�F�[�X���ݒ肳��Ă��Ȃ�
-			�ꍇ�A���̃��\�b�h�͓��삵�܂���B
+			 m_pAdapteeMuPtr に、有効なインターフェースが設定されていない
+			場合、このメソッドは動作しません。
 		*/
 		virtual int	size()const
 		{
@@ -468,17 +468,17 @@ private:
 		
 
 		/**
- 		  �R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
- 		�v�f��Ԃ��܂��B
+ 		  コンテナ内の、インデクスで指定された場所に格納されている
+ 		要素を返します。
 		 @param idx [in]
-	 		�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 		�͈͂͂O�ȏ� size() �����ł��B
-			INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 		０から始まるインデクスを指定してください。
+	 		範囲は０以上 size() 未満です。
+			INT_MAX は、末尾を指定したものとみなします。
 		 @return
-	 		�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	 		インデクスで指定された要素を返します。
 		@attention
-			 m_pAdapteeMu �ɁA�L���ȃC���^�[�t�F�[�X���ݒ肳��Ă��Ȃ�
-			�ꍇ�A���̃��\�b�h�͓��삵�܂���B
+			 m_pAdapteeMu に、有効なインターフェースが設定されていない
+			場合、このメソッドは動作しません。
 		*/
 		virtual ElementType1* get( int idx )const 
 		{
@@ -509,33 +509,33 @@ private:
 
 private:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-		����Ώۂ̃R���e�i m_pAdaptee �̒��ŁA�e�v�f�̑I���󋵁B
-		true �� �I���Afalse �͔�I���ł��B����l�́A false �ł��B
-		���̔z��̗v�f���́A m_pAdaptee->size() �Ɠ������Ȃ�܂��B
+		操作対象のコンテナ m_pAdaptee の中で、各要素の選択状況。
+		true は 選択、false は非選択です。既定値は、 false です。
+		この配列の要素数は、 m_pAdaptee->size() と等しくなります。
 	*/
 	std::vector<bool> m_contSelect ;
 	///@}
 private:
 	#if ( CaMuiSelect_ALGORITHM >= 1 )
 	// --------------------------------
-	///@name �����f�[�^
+	///@name 内部データ
 	// --------------------------------
 	///@{
 	/**
 	@brief
-		CaMuiSelect::indexToAdapteeIndex() �̌��ʂ�
-		�L���b�V����ێ�����N���X�ł��B
+		CaMuiSelect::indexToAdapteeIndex() の結果の
+		キャッシュを保持するクラスです。
 
-	  �O���� CaMuiSelect �� m_contSelect�̓��e�EAdaptee�̗v�f����
-	�ύX���ꂽ�Ƃ��́Athis �̃L���b�V���̓��e�͖����ɂȂ�܂��B
-	  ���̏ꍇ�ACaMuiSelect �́A invalidate() ���Ăяo���āA
-	�L���b�V���������ɂȂ������Ƃ�this �ɒm�点�Ȃ��Ă͂Ȃ�܂���B
-	�@CaMuiSelect �� insert(),erase(),setSelect() ���Ăяo���ꂽ�Ƃ����A
-	 ����ɊY�����܂��B
+	  外側の CaMuiSelect の m_contSelectの内容・Adapteeの要素数が
+	変更されたときは、this のキャッシュの内容は無効になります。
+	  この場合、CaMuiSelect は、 invalidate() を呼び出して、
+	キャッシュが無効になったことをthis に知らせなくてはなりません。
+	　CaMuiSelect の insert(),erase(),setSelect() が呼び出されたときが、
+	 これに該当します。
 	*/
 	class CAdapteeIndexCache
 	{
@@ -543,24 +543,24 @@ private:
 		CAdapteeIndexCache() : m_bIsValid( false ){}
 	private:
 		/**
-			- true: this ���L�� 
+			- true: this が有効 
 		*/
 		bool m_bIsValid ;
 
 		/**
-			indexToAdapteeIndex() �̌��ʂ̃L���b�V���ł��B
-			this�̃C���f�N�X��Y���AAdaptee�̃C���f�N�X��v�f�Ɏ���
-			�z��ł��B
+			indexToAdapteeIndex() の結果のキャッシュです。
+			thisのインデクスを添字、Adapteeのインデクスを要素に持つ
+			配列です。
 			
-			this �������ȂƂ��ɁAgetAdapteeIndex() ���Ăяo������
-			�X�V����܂��B
+			this が無効なときに、getAdapteeIndex() が呼び出されると
+			更新されます。
 		*/
 		std::vector<int> m_contAdapteeIndex ;
 	private:
 		/**
-			this �������̏ꍇ�́A
-			m_contAdapteeIndex �𐶐����A�L���ɂ��܂��B
-			this ���L���ȏꍇ�́A�������܂���B
+			this が無効の場合は、
+			m_contAdapteeIndex を生成し、有効にします。
+			this が有効な場合は、何もしません。
 		*/
 		void update()
 		{
@@ -583,12 +583,12 @@ private:
 	public:
 		/**
 		@return 
-			indexToAdapteeIndex() �̌��ʂ̃L���b�V���ł��B
-			this�̃C���f�N�X��Y���AAdaptee�̃C���f�N�X��v�f�Ɏ���
-			�z��ł��B
+			indexToAdapteeIndex() の結果のキャッシュです。
+			thisのインデクスを添字、Adapteeのインデクスを要素に持つ
+			配列です。
 
-			this�������̏ꍇ�Am_contAdapteeIndex ���X�V���āA
-			this��L���ɂ��܂��B
+			thisが無効の場合、m_contAdapteeIndex を更新して、
+			thisを有効にします。
 		*/
 		const std::vector<int>& getAdapteeIndex()
 		{
@@ -596,7 +596,7 @@ private:
 			return m_contAdapteeIndex ;
 		};
 		/**
-			�L���b�V���𖳌��ɂ��܂��B
+			キャッシュを無効にします。
 		*/
 		void invalidate()
 		{
@@ -614,12 +614,12 @@ private:
 
 protected:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 	/**
-		m_contSelect ���Am_pAdaptee �̗v�f���ɂ��킹�ď��������܂��B
-		�v�f�̑I����Ԃ́A���ׂ� ��I�� �ƂȂ�܂��B
+		m_contSelect を、m_pAdaptee の要素数にあわせて初期化します。
+		要素の選択状態は、すべて 非選択 となります。
 	*/
 	void initSelect()
 	{
@@ -638,9 +638,9 @@ protected:
 	///@{
 	/**
 	 @return
-	 	�R���e�i�Ɋi�[����Ă���f�[�^�̌���Ԃ��܂��B
+	 	コンテナに格納されているデータの個数を返します。
 	 	
-	 	�I������Ă���f�[�^�̌���Ԃ��܂��B
+	 	選択されているデータの個数を返します。
 	*/
 	virtual int	size()const
 	{
@@ -664,15 +664,15 @@ protected:
 	
 
 	/**
- 	  �R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
- 	�v�f��Ԃ��܂��B
+ 	  コンテナ内の、インデクスで指定された場所に格納されている
+ 	要素を返します。
 
 	@param idx [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-		INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+		INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	 	インデクスで指定された要素を返します。
 	*/
 	virtual ElementType1 get( int idx )const 
 	{
@@ -695,43 +695,43 @@ public:
 	// ********************************
 	///@{
 	/**
- 	  �R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
- 	�v�f��ǉ����܂��B
+ 	  コンテナ内の、インデクスで指定された場所に、
+ 	要素を追加します。
 
 	@param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	@param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 以下です。
+	 	０は、先頭・size()なら末尾への追加になります。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 
 	@note
-		�v�f��ǉ������ꍇ�A���̗v�f�͍ŏ�����I����ԂɂȂ�܂��B
+		要素を追加した場合、その要素は最初から選択状態になります。
 
 	@note
-		�v�f0(�I��v�f���P���Ȃ�)�̃R���e�i�֒ǉ����s�����ꍇ�A
-		���̗v�f�́AiIndex �̎w��ɂ���āAm_pAdaptee(�I��ΏۃR���e�i)�̈ȉ��̈ʒu�ɒǉ�����܂��B
-		- 0 : �v�f�́Am_pAdaptee(�I��ΏۃR���e�i)�̐擪�ɒǉ�����܂��B
-		- INT_MAX : �v�f�́Am_pAdaptee(�I��ΏۃR���e�i)�̖����ɒǉ�����܂��B
+		要素0(選択要素が１つもない)のコンテナへ追加を行った場合、
+		その要素は、iIndex の指定によって、m_pAdaptee(選択対象コンテナ)の以下の位置に追加されます。
+		- 0 : 要素は、m_pAdaptee(選択対象コンテナ)の先頭に追加されます。
+		- INT_MAX : 要素は、m_pAdaptee(選択対象コンテナ)の末尾に追加されます。
 	@attention
-		 m_pAdapteeMui �ɁA�L���ȃC���^�[�t�F�[�X���ݒ肳��Ă��Ȃ�
-		�ꍇ�A���̃��\�b�h�͓��삵�܂���B
+		 m_pAdapteeMui に、有効なインターフェースが設定されていない
+		場合、このメソッドは動作しません。
 	*/
 	virtual int insert( const ElementType1& element , int iIndex = INT_MAX ) 
 	{
 		int iRv = 0 ; 
 		int iContSize = size() ;
 		// --------------------------------
-		//	�p�����[�^�̌���
+		//	パラメータの検証
 		// --------------------------------
 		if ( iContSize == 0 && iIndex == INT_MAX )
 		{
-			//	�R���e�i�v�f0(�I��v�f���P���Ȃ�)�ŁA
-			//	�w�肪 INT_MAX �̏ꍇ�́Am_pAdaptee(�I��ΏۃR���e�i)��
-			//	�����ɒǉ�����܂��B
+			//	コンテナ要素0(選択要素が１つもない)で、
+			//	指定が INT_MAX の場合は、m_pAdaptee(選択対象コンテナ)の
+			//	末尾に追加されます。
 		}
 		else
 		{
@@ -741,41 +741,41 @@ public:
 			}
 			if ( !( 0 <= iIndex && iIndex <=iContSize ) )
 			{
-				iRv = -1 ;	//	�������s���ł��B
+				iRv = -1 ;	//	引数が不正です。
 			}
 		}
 		
 
 		// --------------------------------
-		//	m_pAdaptee �ւ̑���
-		//	m_contSelect �ւ̑���
+		//	m_pAdaptee への操作
+		//	m_contSelect への操作
 		// --------------------------------
 		if ( iRv >= 0 )
 		{ 
 			int iAdapteeIndex = -1 ;
 
-			//	�I��v�f���S���Ȃ��R���e�i�ւ̒ǉ�
+			//	選択要素が全くないコンテナへの追加
 			if ( iContSize == 0 )	
 			{
 				if ( iIndex == INT_MAX )
 				{
-					//	- INT_MAX : �v�f�́Am_pAdaptee(�I��ΏۃR���e�i)�̖����ɒǉ�����܂��B
+					//	- INT_MAX : 要素は、m_pAdaptee(選択対象コンテナ)の末尾に追加されます。
 					iAdapteeIndex = m_pAdapteeMui->size() ;
 				}
 				else
 				{
-					//	- 0 : �v�f�́Am_pAdaptee(�I��ΏۃR���e�i)�̐擪�ɒǉ�����܂��B
+					//	- 0 : 要素は、m_pAdaptee(選択対象コンテナ)の先頭に追加されます。
 					iAdapteeIndex = 0 ; 
 				}
 			}
-			//	�I��v�f������R���e�i�́A�����v�f�ւ̒ǉ��́A
-			//	�����̎��̈ʒu�ɒǉ����܂��B
+			//	選択要素があるコンテナの、末尾要素への追加は、
+			//	末尾の次の位置に追加します。
 			else if ( iIndex == iContSize )
 			{
 				iAdapteeIndex =indexToAdapteeIndex( iContSize - 1 ) + 1 ;
 			}
-			//	���̑��̈ʒu�ւ̒ǉ��́A
-			//	�w��̗v�f�̒��O�ɒǉ����܂��B
+			//	その他の位置への追加は、
+			//	指定の要素の直前に追加します。
 			else
 			{
 				iAdapteeIndex = indexToAdapteeIndex( iIndex ) ;
@@ -785,9 +785,9 @@ public:
 			m_contSelect.insert( m_contSelect.begin() + iAdapteeIndex , true ) ;
 
 			#if ( CaMuiSelect_ALGORITHM >= 1 )
-			//	m_contSelect�̓��e�EAdaptee�̗v�f�����ύX�����ƁA
-			//	m_AdapteeIndexCache �͖����ɂȂ�܂��B
-			//	insert(),erase(),setSelect() ���삪����ɂ�����܂��B
+			//	m_contSelectの内容・Adapteeの要素数が変更されると、
+			//	m_AdapteeIndexCache は無効になります。
+			//	insert(),erase(),setSelect() 操作がこれにあたります。
 			m_AdapteeIndexCache.invalidate() ;
 			#endif /*( CaMuiSelect_ALGORITHM >= 1 )*/
 		}
@@ -797,35 +797,35 @@ public:
 	}
 	
 	/**
- 	  �R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
- 	�v�f���폜���܂��B
+ 	  コンテナ内の、インデクスで指定された場所の
+ 	要素を削除します。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 @param iSize [in]
-	 	�폜����v�f�̐����w�肵�Ă��������B
-	 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 	削除する要素の数を指定してください。
+	 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 @attention
-		iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+		iIndex と iSize の両方を INT_MAX にすることはできません。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	@attention
-		 m_pAdapteeMui �ɁA�L���ȃC���^�[�t�F�[�X���ݒ肳��Ă��Ȃ�
-		�ꍇ�A���̃��\�b�h�͓��삵�܂���B
+		 m_pAdapteeMui に、有効なインターフェースが設定されていない
+		場合、このメソッドは動作しません。
 	*/
 	virtual int erase( int iIndex  , int iSize = 1 ) 
 	{
 		int iRv = 0 ; 
 		int iContSize = size() ;
 		// --------------------------------
-		//	�p�����[�^�̌���
+		//	パラメータの検証
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
 			if ( iIndex == INT_MAX && iSize == INT_MAX )
 			{
-				iRv = -1 ;	//	iIndex ���s��
+				iRv = -1 ;	//	iIndex が不正
 			}
 		}
 		if ( iRv >= 0 )
@@ -840,12 +840,12 @@ public:
 			}
 			if ( !( 0 <= iIndex && iIndex + iSize <= iContSize ) )
 			{
-				iRv = -1 ;	//	iIndex ���s��
+				iRv = -1 ;	//	iIndex が不正
 			}
 		}
 		// --------------------------------
-		//	m_pAdaptee �ւ̑���
-		//	m_contSelect �ւ̑���
+		//	m_pAdaptee への操作
+		//	m_contSelect への操作
 		// --------------------------------
 
 		if ( iRv >= 0 )
@@ -859,9 +859,9 @@ public:
 
 
 			#if ( CaMuiSelect_ALGORITHM >= 1 )
-			//	m_contSelect�̓��e�EAdaptee�̗v�f�����ύX�����ƁA
-			//	m_AdapteeIndexCache �͖����ɂȂ�܂��B
-			//	insert(),erase(),setSelect() ���삪����ɂ�����܂��B
+			//	m_contSelectの内容・Adapteeの要素数が変更されると、
+			//	m_AdapteeIndexCache は無効になります。
+			//	insert(),erase(),setSelect() 操作がこれにあたります。
 			m_AdapteeIndexCache.invalidate() ;
 			#endif /*( CaMuiSelect_ALGORITHM >= 1 )*/
 		}
@@ -869,27 +869,27 @@ public:
 	}
 	
 	/**
- 	  �R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
- 	�v�f���㏑�����܂��B
+ 	  コンテナ内の、インデクスで指定された場所に、
+ 	要素を上書きします。
 	
 	@param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	@attention
-		 m_pAdapteeMui �ɁA�L���ȃC���^�[�t�F�[�X���ݒ肳��Ă��Ȃ�
-		�ꍇ�A���̃��\�b�h�͓��삵�܂���B
+		 m_pAdapteeMui に、有効なインターフェースが設定されていない
+		場合、このメソッドは動作しません。
 	*/
 	virtual int set( const ElementType1& element , int iIndex ) 
 	{
 		int iRv = 0 ; 
 		int iContSize = size() ;
 		// --------------------------------
-		//	�p�����[�^�̌���
+		//	パラメータの検証
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
@@ -899,12 +899,12 @@ public:
 			}
 			if ( !( 0 <= iIndex && iIndex < iContSize ) )
 			{
-				iRv = -1 ;	//	iIndex ���s��
+				iRv = -1 ;	//	iIndex が不正
 			}
 		}
 		// --------------------------------
-		//	m_pAdaptee �ւ̑���
-		//	m_contSelect �ւ̑���
+		//	m_pAdaptee への操作
+		//	m_contSelect への操作
 		// --------------------------------
 
 		if ( iRv >= 0 )
@@ -920,10 +920,10 @@ public:
 	
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
-		�f�t�H���g�R���X�g���N�^
+		デフォルトコンストラクタ
 	*/
 	CaMuiSelect() : 
 		m_pAdapteeMu( NULL ) , 
@@ -935,8 +935,8 @@ public:
 
 	/**
 	@param pAdapteeMu [in]
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i(Adaptee)�́A 
-		Mu<ElementType1>�C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナ(Adaptee)の、 
+		Mu<ElementType1>インターフェースです。
 	*/
 	CaMuiSelect( Mu<ElementType1>* pAdapteeMu ) : 
 		m_pAdapteeMu( pAdapteeMu ) , 
@@ -948,8 +948,8 @@ public:
 	};
 	/**
 	@param pAdapteeMui [in]
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i(Adaptee)�́A 
-		Mui<ElementType1>�C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナ(Adaptee)の、 
+		Mui<ElementType1>インターフェースです。
 	*/
 	CaMuiSelect( Mui<ElementType1>* pAdapteeMui ) : 
 		m_pAdapteeMu( pAdapteeMui ) ,
@@ -961,11 +961,11 @@ public:
 	};
 	/**
 	@param pAdapteeMu [in]
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i(Adaptee)�́A 
-		Mu<ElementType1>�C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナ(Adaptee)の、 
+		Mu<ElementType1>インターフェースです。
 	@param pAdapteeMuConstPtr [in]
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i(Adaptee)�́A 
-		const Mu<const ElementType1*>* �C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナ(Adaptee)の、 
+		const Mu<const ElementType1*>* インターフェースです。
 		
 	*/
 	CaMuiSelect( Mu<ElementType1>* pAdapteeMu , 
@@ -979,11 +979,11 @@ public:
 	};
 	/**
 	@param pAdapteeMui [in]
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i(Adaptee)�́A 
-		Mui<ElementType1>�C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナ(Adaptee)の、 
+		Mui<ElementType1>インターフェースです。
 	@param pAdapteeMuPtr [in]
-		����ΏۃI�u�W�F�N�g�ƂȂ�R���e�i(Adaptee)�́A 
-		Mu<ElementType1*>* �C���^�[�t�F�[�X�ł��B
+		操作対象オブジェクトとなるコンテナ(Adaptee)の、 
+		Mu<ElementType1*>* インターフェースです。
 		
 	*/
 	CaMuiSelect( Mui<ElementType1>* pAdapteeMui , 
@@ -997,7 +997,7 @@ public:
 	};
 	
 private:
-	//	�R�s�[�͋֎~
+	//	コピーは禁止
 	CaMuiSelect( const CaMuiSelect& value )
 	{
 		assert( false ) ;
@@ -1009,7 +1009,7 @@ private:
 	}
 public:
 	// ********************************
-	///@name CaMuiSelect-�֘A
+	///@name CaMuiSelect-関連
 	// ********************************
 	///@{
 	Mu<ElementType1>*	getAdapteeMu(){	return m_pAdapteeMu ;};
@@ -1021,8 +1021,8 @@ public:
 	Mu<ElementType1*>*	getAdapteeMuPtr()const{	return m_pAdapteeMuPtr ;};
 	
 	/**
-	����Ώۂ̃R���e�i��ύX���܂��B
-	���̂Ƃ��A���ׂĂ̗v�f�͔�I���ƂȂ�܂��B
+	操作対象のコンテナを変更します。
+	このとき、すべての要素は非選択となります。
 	*/
 	CaMuiSelect<ElementType1>& setAdaptee( Mu<ElementType1>* pAdapteeMu ) 
 	{
@@ -1041,8 +1041,8 @@ public:
 
 
 	/**
-	����Ώۂ̃R���e�i��ύX���܂��B
-	���̂Ƃ��A���ׂĂ̗v�f�͔�I���ƂȂ�܂��B
+	操作対象のコンテナを変更します。
+	このとき、すべての要素は非選択となります。
 	*/
 	CaMuiSelect<ElementType1>& setAdaptee( Mui<ElementType1>* pAdapteeMui ) 
 	{
@@ -1058,8 +1058,8 @@ public:
 	};
 
 	/**
-	����Ώۂ̃R���e�i��ύX���܂��B
-	���̂Ƃ��A���ׂĂ̗v�f�͔�I���ƂȂ�܂��B
+	操作対象のコンテナを変更します。
+	このとき、すべての要素は非選択となります。
 	*/
 	CaMuiSelect<ElementType1>& setAdaptee( 
 			Mu<ElementType1>* pAdapteeMu , 
@@ -1076,8 +1076,8 @@ public:
 		return *this ;
 	};
 	/**
-	����Ώۂ̃R���e�i��ύX���܂��B
-	���̂Ƃ��A���ׂĂ̗v�f�͔�I���ƂȂ�܂��B
+	操作対象のコンテナを変更します。
+	このとき、すべての要素は非選択となります。
 	*/
 	CaMuiSelect<ElementType1>& setAdaptee(  
 		Mui<ElementType1>* pAdapteeMui , 
@@ -1096,18 +1096,18 @@ public:
 
 	///@}
 	// ********************************
-	///@name CaMuiSelect-���
+	///@name CaMuiSelect-包含
 	// ********************************
 	///@{
 	/**
 	@return
-		���ݑI������Ă���v�f�ւ́A Mu<const ElementType*> 
-		�C���^�[�t�F�[�X��Ԃ��܂��B
-		�A���A m_pAdapteeMuConstPtr �ɁA�L���ȃC���^�[�t�F�[�X���ݒ�
-		����Ă���K�v������܂��B
+		現在選択されている要素への、 Mu<const ElementType*> 
+		インターフェースを返します。
+		但し、 m_pAdapteeMuConstPtr に、有効なインターフェースが設定
+		されている必要があります。
 	@attention
-		 m_pAdapteeMuPtr�Em_pAdapteeMuConstPtr �̂����ꂩ�ɁA
-		 �L���ȃC���^�[�t�F�[�X���ݒ肳��Ă���K�v������܂��B
+		 m_pAdapteeMuPtr・m_pAdapteeMuConstPtr のいずれかに、
+		 有効なインターフェースが設定されている必要があります。
 	*/
 	const Mu<const ElementType1*>* getMuPtr()const 
 	{
@@ -1120,13 +1120,13 @@ public:
 	
 	/**
 	@return
-		���ݑI������Ă���v�f�ւ́A Mu<ElementType*> 
-		�C���^�[�t�F�[�X��Ԃ��܂��B
-		�A���A m_pAdapteeMuPtr �ɁA�L���ȃC���^�[�t�F�[�X���ݒ�
-		����Ă���K�v������܂��B
+		現在選択されている要素への、 Mu<ElementType*> 
+		インターフェースを返します。
+		但し、 m_pAdapteeMuPtr に、有効なインターフェースが設定
+		されている必要があります。
 	@attention
-		 m_pAdapteeMu �ɁA
-		 �L���ȃC���^�[�t�F�[�X���ݒ肳��Ă���K�v������܂��B
+		 m_pAdapteeMu に、
+		 有効なインターフェースが設定されている必要があります。
 	*/
 	Mu<ElementType1*>* getMuPtr() 
 	{
@@ -1139,15 +1139,15 @@ public:
 	
 	///@}
 	// ********************************
-	///@name CaMuiSelect-����
+	///@name CaMuiSelect-属性
 	// ********************************
 	///@{
 	/**
-	  �v�f�̑I����Ԃ��擾���܂��B
+	  要素の選択状態を取得します。
 	@param idx [in]
-		0����n�܂�C���f�N�X�ԍ����w�肵�Ă��������B
+		0から始まるインデクス番号を指定してください。
 	@return
-		true �� �I���Afalse �͔�I���ł��B
+		true は 選択、false は非選択です。
 	*/
 	virtual bool getSelect( int idx )const
 	{
@@ -1159,11 +1159,11 @@ public:
 		return bRv ;
 	}
 	/**
-	  �v�f�̑I����Ԃ�ݒ肵�܂��B
+	  要素の選択状態を設定します。
 	@param idx
-		0����n�܂�C���f�N�X�ԍ����w�肵�Ă��������B
+		0から始まるインデクス番号を指定してください。
 	@param bSelect
-		true �� �I���Afalse �͔�I���ł��B
+		true は 選択、false は非選択です。
 	*/
 	virtual CaMuiSelect<ElementType1>& setSelect( int idx , bool bSelect )
 	{
@@ -1173,10 +1173,10 @@ public:
 
 			#if ( CaMuiSelect_ALGORITHM >= 1 )
 
-				//	m_contSelect�̓��e�EAdaptee�̗v�f�����ύX�����ƁA
-				//	m_contAdapteeIndex �̓��e�͖����ɂȂ�܂��B
-				//	���̏ꍇ�́A�L���b�V���𖾎��I�ɖ����ɂ���K�v������܂��B
-				//	insert(),erase(),setSelect() ���삪����ɂ�����܂��B
+				//	m_contSelectの内容・Adapteeの要素数が変更されると、
+				//	m_contAdapteeIndex の内容は無効になります。
+				//	この場合は、キャッシュを明示的に無効にする必要があります。
+				//	insert(),erase(),setSelect() 操作がこれにあたります。
 				m_AdapteeIndexCache.invalidate() ; 
 
 			#endif /*( CaMuiSelect_ALGORITHM >= 1 )*/
@@ -1186,9 +1186,9 @@ public:
 	}
 
 	/**
-	  ���ׂĂ̗v�f�̑I����Ԃ�ݒ肵�܂��B
+	  すべての要素の選択状態を設定します。
 	@param bSelect
-		true �� �I���Afalse �͔�I���ł��B
+		true は 選択、false は非選択です。
 	*/
 	virtual CaMuiSelect<ElementType1>& setSelectAll( bool bSelect )
 	{
@@ -1198,10 +1198,10 @@ public:
 
 			#if ( CaMuiSelect_ALGORITHM >= 1 )
 
-				//	m_contSelect�̓��e�EAdaptee�̗v�f�����ύX�����ƁA
-				//	m_contAdapteeIndex �̓��e�͖����ɂȂ�܂��B
-				//	���̏ꍇ�́A�L���b�V���𖾎��I�ɖ����ɂ���K�v������܂��B
-				//	insert(),erase(),setSelect() ���삪����ɂ�����܂��B
+				//	m_contSelectの内容・Adapteeの要素数が変更されると、
+				//	m_contAdapteeIndex の内容は無効になります。
+				//	この場合は、キャッシュを明示的に無効にする必要があります。
+				//	insert(),erase(),setSelect() 操作がこれにあたります。
 				m_AdapteeIndexCache.invalidate() ; 
 
 			#endif /*( CaMuiSelect_ALGORITHM >= 1 )*/
@@ -1215,21 +1215,21 @@ public:
 
 
 	// ********************************
-	///@name CaMuiSelect-����
+	///@name CaMuiSelect-操作
 	// ********************************
 	///@{
 	/**
-	  this �̃C���f�N�X�ɑΉ�����v�f�́Am_pAdapteeMu ���ł̃C���f�N�X��
-	�Ԃ��܂��B
+	  this のインデクスに対応する要素の、m_pAdapteeMu 内でのインデクスを
+	返します。
 	@param iThisIndex
-		this ��ł̃C���f�N�X���w�肵�Ă��������B
+		this 上でのインデクスを指定してください。
 	@return 
-		m_Adaptee ���ł̃C���f�N�X��Ԃ��܂��B
-		�Ή�����v�f���Ȃ��ꍇ�́A-1 �ł��B
+		m_Adaptee 内でのインデクスを返します。
+		対応する要素がない場合は、-1 です。
 
-		m_Adaptee ��   { "zero" , "one" , "two" , "three" , "four" , "five" , "six" , "seven" } @n
-		m_contSelect ��{ true  , false , false , false    , true   , false  , true  , false }  @n
-		�̏ꍇ�A  indexToAdapteeIndex(0)=0,indexToAdapteeIndex(1)=4,indexToAdapteeIndex(2)=6 �ƂȂ�܂��B
+		m_Adaptee が   { "zero" , "one" , "two" , "three" , "four" , "five" , "six" , "seven" } @n
+		m_contSelect が{ true  , false , false , false    , true   , false  , true  , false }  @n
+		の場合、  indexToAdapteeIndex(0)=0,indexToAdapteeIndex(1)=4,indexToAdapteeIndex(2)=6 となります。
 
 		
 	*/
@@ -1264,18 +1264,18 @@ public:
 #endif /*( CaMuiSelect_ALGORITHM >= 1 )*/
 	}
 	/**
-	  m_Adaptee ���̃C���f�N�X���A�ɑΉ�����v�f�́A
-	this �̃C���f�N�X��Ԃ��܂��B
+	  m_Adaptee 内のインデクスを、に対応する要素の、
+	this のインデクスを返します。
 	@param iAdapteeIndex
-		this ��ł̃C���f�N�X���w�肵�Ă��������B
+		this 上でのインデクスを指定してください。
 	@return 
-		m_Adaptee ���ł̃C���f�N�X��Ԃ��܂��B
-		�Ή�����v�f���Ȃ��ꍇ�́A-1 �ł��B
+		m_Adaptee 内でのインデクスを返します。
+		対応する要素がない場合は、-1 です。
 
-		m_Adaptee ��   { "zero" , "one" , "two" , "three" , "four" , "five" , "six" , "seven" } @n
-		m_contSelect ��{ true  , false , false , false    , true   , false  , true  , false }  @n
-		�̏ꍇ�A  indexFromAdapteeIndex(0)=0,indexFromAdapteeIndex(4)=2 ,indexFromAdapteeIndex(6)=3 �ƂȂ�܂��B
-		���̑��̈����ŌĂяo���ꂽ�ꍇ�́A�߂�l�� -1 �ƂȂ�܂��B
+		m_Adaptee が   { "zero" , "one" , "two" , "three" , "four" , "five" , "six" , "seven" } @n
+		m_contSelect が{ true  , false , false , false    , true   , false  , true  , false }  @n
+		の場合、  indexFromAdapteeIndex(0)=0,indexFromAdapteeIndex(4)=2 ,indexFromAdapteeIndex(6)=3 となります。
+		その他の引数で呼び出された場合は、戻り値は -1 となります。
 	*/
 	int indexFromAdapteeIndex( int iAdapteeIndex )const 
 	{
@@ -1314,7 +1314,7 @@ public:
 					iSelectedCount ++ ;
 				}
 			}
-			//iSelectedCount = iAdapteeIndex �ȑO�ŁAtrue �̐��B
+			//iSelectedCount = iAdapteeIndex 以前で、true の数。
 
 			iRv = iSelectedCount ;
 		}

@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// CDlgRessyasyubetsuProp.cpp : �C���v�������e�[�V���� �t�@�C��
+// CDlgRessyasyubetsuProp.cpp : インプリメンテーション ファイル
 //
 
 #include "stdafx.h"
@@ -93,7 +93,7 @@ using namespace OuMfc;
 //	CDlgRessyasyubetsuProp::CPropEditUiInternal
 // ================================================================
 		// ================================
-		// �I�[�o�[���C�g�̕K�v�ȃ��\�b�h2-UI�Ɉˑ����鏈��
+		// オーバーライトの必要なメソッド2-UIに依存する処理
 		// ================================
 void CDlgRessyasyubetsuProp::CPropEditUiInternal::
 UiDataToUi( const UIDATA* pUiData ) 
@@ -101,71 +101,71 @@ UiDataToUi( const UIDATA* pUiData )
 	CDlgRessyasyubetsuProp* pOuter = (CDlgRessyasyubetsuProp*)( (char*)this - offsetof( CDlgRessyasyubetsuProp , m_PropEditUiInternal ) ) ;
 
 	// --------------------------------
-	//	DDX��p�����AUiControl�ւ̐ݒ�
+	//	DDXを用いた、UiControlへの設定
 	// --------------------------------
 	{
-		//	�����ŁADDX�ϐ��ɐݒ�
+		//	ここで、DDX変数に設定
 
 		pOuter->UpdateData( FALSE ) ;
 	}
 	// --------------------------------
-	//	DDX��p���Ȃ��AUiControl�ւ̐ݒ�
-	//	�����́ADDX�ɂ��l�ݒ�̌��
-	//	�s��Ȃ��Ă͂Ȃ�܂���B
+	//	DDXを用いない、UiControlへの設定
+	//	これらは、DDXによる値設定の後で
+	//	行わなくてはなりません。
 	// --------------------------------
 
-	// ��Ԏ�ʖ� 
+	// 列車種別名 
 	{
 		CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Syubetsumei ) ;
 		pEdit->EnableWindow(  pUiData->bSyubetsumeiIsEnable ? TRUE : FALSE ) ;
 		pEdit->SetWindowText( pUiData->strSyubetsumei.c_str() ) ;
 		pEdit->SetSel( 0 , -1 ) ;
 	}
-	// ���́i��ʖ��̗��́j
+	// 略称（種別名の略称）
 	{
 		CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Ryakusyou ) ;
 		pEdit->SetWindowText( pUiData->strRyakusyou.c_str() ) ;
 		pEdit->SetSel( 0 , -1 ) ;
 	}
 	
-	//	�����\�����F(�_�C���O�����̗�ԏ��̕����F�����˂܂�)
+	//	時刻表文字色(ダイヤグラムの列車情報の文字色を兼ねます)
 	{
-		//	���̍��ڂ́A�R���g���[���ɂ͋L������܂���B
+		//	この項目は、コントロールには記憶されません。
 	}
-	//�����\�r���[�ŁA���̗�Ԏ�ʂ̎�����\�����邽�߂̎����\�t�H���g
+	//時刻表ビューで、この列車種別の時刻を表示するための時刻表フォント
 	{
 		CComboBox* pComboBox = (CComboBox*)pOuter->GetDlgItem( IDC_COMBO_JikokuhyouFontIndex ) ;
 		pComboBox->SetCurSel( pUiData->iJikokuhyouFontIndex ) ;
 	}
 
-	// �_�C���O�������̐F
+	// ダイヤグラム線の色
 	{
-		//	���̍��ڂ́A�R���g���[���ɂ͋L������܂���B
+		//	この項目は、コントロールには記憶されません。
 	}
 
-	// �_�C���O�������̐��X�^�C��	
+	// ダイヤグラム線の線スタイル	
 	{
 		CComboBox* pComboBox = (CComboBox*)pOuter->GetDlgItem( IDC_COMBO_DiagramSenStyle ) ;
 		pComboBox->SetCurSel( pUiData->iDiagramSenStyle ) ;
 	}
 
-	// �_�C���O�������̐��X�^�C�����������ۂ����w�肵�܂��B
+	// ダイヤグラム線の線スタイルが太線か否かを指定します。
 	{
 		CButton* pButton = (CButton*)pOuter->GetDlgItem( IDC_CHECK_DiagramSenStyleIsBold ) ;
 		int nCheck = BST_INDETERMINATE ;
 		switch( pUiData->iDiagramSenIsBold )
 		{
-		case 1: // ���E������
+		case 1: // 境界線あり
 			nCheck = BST_CHECKED ;
 			break ;
-		case 0: //�Ȃ�
+		case 0: //なし
 			nCheck = BST_UNCHECKED ;
 			break ;
 		}
 		pButton->SetCheck( nCheck ) ;
 	}
 	
-	// ��ԉw�����̕��@
+	// 停車駅明示の方法
 	{
 		CComboBox* pComboBox = (CComboBox*)pOuter->GetDlgItem( IDC_COMBO_StopMarkDrawType ) ;
 		pComboBox->SetCurSel( pUiData->iStopMarkDrawType ) ;
@@ -173,33 +173,33 @@ UiDataToUi( const UIDATA* pUiData )
 
 
 	// --------------------------------	
-	//	DcDraw �ւ̐ݒ�
+	//	DcDraw への設定
 	// --------------------------------	
-	//	�����F�̐ݒ�
+	//	文字色の設定
 	{
 		pOuter->m_pdcdJikokuhyouMojiColor->setCdBrushProp( 
 			pUiData->colorJikokuhyouMojiColor ) ;
 		CRect	aRect = MfcUtil::GetDlgControlRect( pOuter , IDC_STATIC_JikokuhyouMojiColor ) ;
 		pOuter->InvalidateRect( &aRect ) ;
 	}
-	//	�����\�t�H���g(�����F�Ǝ����\�t�H���g)
+	//	時刻表フォント(文字色と時刻表フォント)
 	{
 		CdDrawTextProp	aCdDrawTextProp = pOuter->m_pdcdJikokuhyouFont->getCdDrawTextProp() ;
 		aCdDrawTextProp.setTextColor( pUiData->colorJikokuhyouMojiColor ) ;
 		
 		// --------------------------------
-		//	�����\�t�H���g���ݒ肳��Ă���ꍇ�́A
-		//	�������T���v�����\���ł��܂��B
+		//	時刻表フォントが設定されている場合は、
+		//	正しいサンプルが表示できます。
 		if ( pUiData->iJikokuhyouFontIndex >= 0 )
 		{
 			aCdDrawTextProp.setCdFontProp( pOuter->m_fontpropJikokuhyouFont[pUiData->iJikokuhyouFontIndex] );
 		}
-		//	�����\�t�H���g���ݒ肳��Ă��Ȃ��ꍇ�́A
-		//	�������T���v�����\���ł��܂���B
+		//	時刻表フォントが設定されていない場合は、
+		//	正しいサンプルが表示できません。
 		else
 		{
-			//	�����\�t�H���g�̃T���v�����\���ł��܂���B
-			//	���̂Ƃ��́A�f�t�H���g�t�H���g�ŕ\�����܂��B
+			//	時刻表フォントのサンプルが表示できません。
+			//	このときは、デフォルトフォントで表示します。
 			CConverter_WinGdi	aConv ;
 			aCdDrawTextProp.setCdFontProp( aConv.CdFontPropOf( DEFAULT_GUI_FONT ) );
 		}
@@ -210,12 +210,12 @@ UiDataToUi( const UIDATA* pUiData )
 		CRect	aRect = MfcUtil::GetDlgControlRect( pOuter , IDC_STATIC_JikokuhyouFont ) ;
 		pOuter->InvalidateRect( &aRect ) ;
 	}
-	//	�_�C���O������
-	// (�_�C���O�������̐F�E���X�^�C���E����)
+	//	ダイヤグラム線
+	// (ダイヤグラム線の色・線スタイル・太線)
 	{
 		CdDcdFreeLineProp	aCdLineProp ;
-		//	���X�^�C���E�������ǂ�����ݒ肳��Ă���ꍇ�́A
-		//	�������T���v�����\���ł��܂��B
+		//	線スタイル・太線がどちらも設定されている場合は、
+		//	正しいサンプルが表示できます。
 		if ( pUiData->iDiagramSenStyle >= 0 && pUiData->iDiagramSenIsBold  >= 0 )
 		{
 			CconvCentDed aCconvCentDed ;
@@ -226,12 +226,12 @@ UiDataToUi( const UIDATA* pUiData )
 					pUiData->iDiagramSenIsBold == 1 ) ,
 				&aCdLineProp ) ;
 		}
-		//	���X�^�C���E�����̂����ꂩ���s��̏ꍇ�́A
-		//	�T���v�����\���ł��܂���
+		//	線スタイル・太線のいずれかが不定の場合は、
+		//	サンプルが表示できません
 		else
 		{
-			//	�T���v�����\���ł��܂���B
-			//	���̏ꍇ�́A����\�����܂���(�����Ȃ̂ŁA�����܂���)
+			//	サンプルが表示できません。
+			//	この場合は、線を表示しません(白線なので、見えません)
 			aCdLineProp = CdDcdFreeLineProp().setColor( CdColorProp( 255 , 255 , 255 ) ) ;
 			
 		}
@@ -247,19 +247,19 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData 
 	CDlgRessyasyubetsuProp* pOuter = (CDlgRessyasyubetsuProp*)( (char*)this - offsetof( CDlgRessyasyubetsuProp , m_PropEditUiInternal ) ) ;
 	int iRv = 0 ;
 	// --------------------------------
-	//	DDX��p�����AUiControl�ւ̐ݒ�
+	//	DDXを用いた、UiControlへの設定
 	// --------------------------------
 	if ( !pOuter->UpdateData( TRUE ) )
 	{
-		iRv = -1 ;	//	UpdateData �ŃG���[���������܂����B
+		iRv = -1 ;	//	UpdateData でエラーが発生しました。
 	}
 	// --------------------------------
-	//	DDX��p���Ȃ��AUiControl�ւ̐ݒ�
-	//	�����́ADDX�ɂ��l�ݒ�̌��
-	//	�s��Ȃ��Ă͂Ȃ�܂���B
+	//	DDXを用いない、UiControlへの設定
+	//	これらは、DDXによる値設定の後で
+	//	行わなくてはなりません。
 	// --------------------------------
 
-	// ��Ԏ�ʖ� 
+	// 列車種別名 
 	if ( iRv >= 0 )
 	{
 		{
@@ -269,7 +269,7 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData 
 			pUiData->strSyubetsumei = (LPCTSTR)aString ;
 		}
 	}
-	// ���́i��ʖ��̗��́j
+	// 略称（種別名の略称）
 	if ( iRv >= 0 )
 	{
 		{
@@ -280,12 +280,12 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData 
 		}
 	}
 	
-	//	�����\�����F(�_�C���O�����̗�ԏ��̕����F�����˂܂�)
+	//	時刻表文字色(ダイヤグラムの列車情報の文字色を兼ねます)
 	if ( iRv >= 0 )
 	{
-		//	���̍��ڂ́A�R���g���[���ɂ͋L������܂���B
+		//	この項目は、コントロールには記憶されません。
 	}
-	//�����\�r���[�ŁA���̗�Ԏ�ʂ̎�����\�����邽�߂̎����\�t�H���g
+	//時刻表ビューで、この列車種別の時刻を表示するための時刻表フォント
 	if ( iRv >= 0 )
 	{
 		{
@@ -298,13 +298,13 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData 
 		}
 	}
 
-	// �_�C���O�������̐F
+	// ダイヤグラム線の色
 	if ( iRv >= 0 )
 	{
-		//	���̍��ڂ́A�R���g���[���ɂ͋L������܂���B
+		//	この項目は、コントロールには記憶されません。
 	}
 
-	// �_�C���O�������̐��X�^�C��	
+	// ダイヤグラム線の線スタイル	
 	if ( iRv >= 0 )
 	{
 		{
@@ -317,31 +317,31 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData 
 		}
 	}
 
-	// �_�C���O�������̐��X�^�C�����������ۂ����w�肵�܂��B
+	// ダイヤグラム線の線スタイルが太線か否かを指定します。
 	if ( iRv >= 0 )
 	{
 		CButton* pButton = (CButton*)pOuter->GetDlgItem( IDC_CHECK_DiagramSenStyleIsBold ) ;
 		int nCheck =  pButton->GetCheck() ; 
 		switch( nCheck )
 		{
-		case BST_CHECKED: // ���E������
+		case BST_CHECKED: // 境界線あり
 			pUiData->iDiagramSenIsBold = 1 ;
 			break ;
-		case BST_UNCHECKED: //�Ȃ�
+		case BST_UNCHECKED: //なし
 			pUiData->iDiagramSenIsBold = 0 ;
 			break ;
 		}
 
-		//	�`�F�b�N�{�b�N�X�́A���ԏ�Ԃւ̕ύX��F�߂܂���B
-		//	���[�U�[�ɂ���Ē��ԏ�ԈȊO�����ԏ�Ԃ֕ύX���ꂽ�ꍇ�́A
-		//	�`�F�b�N�Ȃ���ԂɕύX���܂��B
+		//	チェックボックスは、中間状態への変更を認めません。
+		//	ユーザーによって中間状態以外→中間状態へ変更された場合は、
+		//	チェックなし状態に変更します。
 		if ( pUiData->iDiagramSenIsBold != -1 && nCheck == BST_INDETERMINATE )
 		{
 			pUiData->iDiagramSenIsBold = 0 ;
 		}
 	}
 	
-	// ��ԉw�����̕��@
+	// 停車駅明示の方法
 	if ( iRv >= 0 )
 	{
 		{
@@ -380,14 +380,14 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::
 	CDlgRessyasyubetsuProp* pOuter = (CDlgRessyasyubetsuProp*)( (char*)this - offsetof( CDlgRessyasyubetsuProp , m_PropEditUiInternal ) ) ;
 	CWnd* pControl = NULL ;
 
-	// ��Ԏ�ʖ� 
+	// 列車種別名 
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , strSyubetsumei ) )
 		{
 			pControl = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Syubetsumei ) ;
 		}
 	}
-	// ���́i��ʖ��̗��́j
+	// 略称（種別名の略称）
 	{
 		if (iOffsetofUiDataMember == offsetof( UIDATA , strRyakusyou ) )
 		{
@@ -395,11 +395,11 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::
 		}
 	}
 	
-	//	�����\�����F(�_�C���O�����̗�ԏ��̕����F�����˂܂�)
+	//	時刻表文字色(ダイヤグラムの列車情報の文字色を兼ねます)
 	{
-		//	���̍��ڂ́A�R���g���[���ɂ͋L������܂���B
+		//	この項目は、コントロールには記憶されません。
 	}
-	//�����\�r���[�ŁA���̗�Ԏ�ʂ̎�����\�����邽�߂̎����\�t�H���g
+	//時刻表ビューで、この列車種別の時刻を表示するための時刻表フォント
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , iJikokuhyouFontIndex ) )
 		{
@@ -407,12 +407,12 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::
 		}
 	}
 
-	// �_�C���O�������̐F
+	// ダイヤグラム線の色
 	{
-		//	���̍��ڂ́A�R���g���[���ɂ͋L������܂���B
+		//	この項目は、コントロールには記憶されません。
 	}
 
-	// �_�C���O�������̐��X�^�C��	
+	// ダイヤグラム線の線スタイル	
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , iDiagramSenStyle ) )
 		{
@@ -420,7 +420,7 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::
 		}
 	}
 
-	// �_�C���O�������̐��X�^�C�����������ۂ����w�肵�܂��B
+	// ダイヤグラム線の線スタイルが太線か否かを指定します。
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , iDiagramSenIsBold ) )
 		{
@@ -428,7 +428,7 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::
 		}
 	}
 	
-	// ��ԉw�����̕��@
+	// 停車駅明示の方法
 	{
 		if ( iOffsetofUiDataMember == offsetof( UIDATA , iStopMarkDrawType ) )
 		{
@@ -443,7 +443,7 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::
 }
 
 		// ********************************
-		//	�R���X�g���N�^
+		//	コンストラクタ
 		// ********************************
 CDlgRessyasyubetsuProp::CPropEditUiInternal::
 CPropEditUiInternal( bool bNewItem , Mu<CentDedRessyasyubetsu*>* pTarget )
@@ -454,7 +454,7 @@ CPropEditUiInternal( bool bNewItem , Mu<CentDedRessyasyubetsu*>* pTarget )
 
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgRessyasyubetsuProp �_�C�A���O
+// CDlgRessyasyubetsuProp ダイアログ
 
 
 // ----------------------------------------------------------------
@@ -484,7 +484,7 @@ CDlgRessyasyubetsuProp::CDlgRessyasyubetsuProp(
 	//}}AFX_DATA_INIT
 
 	// --------------------------------
-	//	DcDraw(�_�C�A���O��ɕ`����s���I�u�W�F�N�g)�̐���
+	//	DcDraw(ダイアログ上に描画を行うオブジェクト)の生成
 	// --------------------------------
 	CConverter_WinGdi aCConverter_WinGdi ;
 	m_pdcdJikokuhyouMojiColor = new CDcdRectangle( 
@@ -540,18 +540,18 @@ BEGIN_MESSAGE_MAP(CDlgRessyasyubetsuProp, CDialog)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CDlgRessyasyubetsuProp ���b�Z�[�W �n���h��
+// CDlgRessyasyubetsuProp メッセージ ハンドラ
 
 BOOL CDlgRessyasyubetsuProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
 	
-	//	�ҏW���J�n
+	//	編集を開始
 	m_PropEditUiInternal.StartEdit() ;
 
 	
-	return TRUE;  // �R���g���[���Ƀt�H�[�J�X��ݒ肵�Ȃ��Ƃ��A�߂�l�� TRUE �ƂȂ�܂�
-	              // ��O: OCX �v���p�e�B �y�[�W�̖߂�l�� FALSE �ƂȂ�܂�
+	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
+	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
 
 void CDlgRessyasyubetsuProp::OnShowWindow(BOOL bShow, UINT nStatus) 
@@ -561,11 +561,11 @@ void CDlgRessyasyubetsuProp::OnShowWindow(BOOL bShow, UINT nStatus)
 	if ( bShow )
 	{
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		switch( m_iFocusItem )
 		{
-		 //��Ԏ�ʖ�
+		 //列車種別名
 		 case 0 :
 			{
 				CWnd*	pControl = GetDlgItem( IDC_EDIT_Syubetsumei );
@@ -576,7 +576,7 @@ void CDlgRessyasyubetsuProp::OnShowWindow(BOOL bShow, UINT nStatus)
 				}
 			}
 			break ;
-		 //����
+		 //略称
 		 case 1 :
 			{
 				CWnd*	pControl = GetDlgItem( IDC_EDIT_Ryakusyou );
@@ -588,7 +588,7 @@ void CDlgRessyasyubetsuProp::OnShowWindow(BOOL bShow, UINT nStatus)
 			}
 			break ;
 	
-		 //���X�^�C��
+		 //線スタイル
 		 case 2 :
 			{
 				CWnd*	pControl = GetDlgItem( IDC_BUTTON_DiagramSeniColor );
@@ -606,11 +606,11 @@ void CDlgRessyasyubetsuProp::OnShowWindow(BOOL bShow, UINT nStatus)
 
 void CDlgRessyasyubetsuProp::OnPaint() 
 {
-	CPaintDC dc(this); // �`��p�̃f�o�C�X �R���e�L�X�g
+	CPaintDC dc(this); // 描画用のデバイス コンテキスト
 	CDcdTargetOnPaint	aCDcdTargetOnPaint( GetSafeHwnd() , &dc.m_ps ) ; 
 	
 	{
-		//�����\�����F
+		//時刻表文字色
 		CConverter_WinGdi	aConverter ;
 
 		CRect	aRect = MfcUtil::GetDlgControlRect( this , IDC_STATIC_JikokuhyouMojiColor ) ;
@@ -619,7 +619,7 @@ void CDlgRessyasyubetsuProp::OnPaint()
 		m_pdcdJikokuhyouMojiColor->DcDraw( &aTarget ) ;
 	}
 	{
-		//�����\�t�H���g
+		//時刻表フォント
 		CConverter_WinGdi	aConverter ;
 
 		CRect	aRect = MfcUtil::GetDlgControlRect( this , IDC_STATIC_JikokuhyouFont ) ;
@@ -628,7 +628,7 @@ void CDlgRessyasyubetsuProp::OnPaint()
 		m_pdcdJikokuhyouFont->DcDraw( &aTarget ) ;
 	}
 	{
-		//�_�C���O�������X�^�C��
+		//ダイヤグラム線スタイル
 		CConverter_WinGdi	aConverter ;
 
 		CRect	aRect = MfcUtil::GetDlgControlRect( this , IDC_STATIC_DiagramSen ) ;

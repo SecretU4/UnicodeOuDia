@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -110,7 +110,7 @@ namespace ViewJikokuhyou{ namespace WndJikokuhyou{
 //	CWjkState_Ressyahensyu
 // ****************************************************************
 // --------------------------------
-//@name OnUpdate�����֐�
+//@name OnUpdate下請関数
 // --------------------------------
 void CWjkState_Ressyahensyu::OnUpdate_All() 
 {
@@ -131,7 +131,7 @@ void CWjkState_Ressyahensyu::OnUpdate_CentDedRessya(
 	{
 		return ;
 	}
-	//	��Ԃ̃Z����u������
+	//	列車のセルを置き換え
 	getCWndDcdGrid()->updateUI_ReplaceRessya( 
 		pCommand->getIndexDst() ,
 		pCommand->getSizeDst() ,
@@ -146,19 +146,19 @@ int CWjkState_Ressyahensyu::
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	
-	//iType = { 0: �w�����̕ҏW,1: ��Ԃ̕ҏW,2;�w�̕ҏW } 
+	//iType = { 0: 駅時刻の編集,1: 列車の編集,2;駅の編集 } 
 	int iType = -1 ;
 
 	if ( iRv >= 0 && iType == -1 )
 	{
-		//	�w�v���p�e�B�_�C�A���O�̎g�p�𔻒�
+		//	駅プロパティダイアログの使用を判定
 		int iResult = execCDlgEkiProp( TRUE ) ;
 		if ( iResult >= 0 )
 		{
-			iType = 2;	//	�w�̕ҏW
+			iType = 2;	//	駅の編集
 		}
 	}
 	if ( iRv >= 0 && iType == -1 )
@@ -166,65 +166,65 @@ int CWjkState_Ressyahensyu::
 		int iResult = execCDlgEkijikokuProp( bInsert , TRUE ) ;
 		if ( iResult >= 0 )
 		{	
-			iType = 0 ;	// �w�����̕ҏW
+			iType = 0 ;	// 駅時刻の編集
 		}
 	}
 	if ( iRv >= 0 && iType == -1 )
 	{
 		int iResult = execCDlgRessyaProp( bInsert , TRUE ) ;
 		//iResult = 
- 		//	-	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
- 		//	-	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A
- 		//		//	�ύX�͔������܂���ł����B
- 		//	-	-1 ;	//	X��ԍ����s���ł��B
- 		//	-	-2 ;	//	Y��ԍ����s���ł��B
+ 		//	-	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+ 		//	-	0 ;	//	ダイアログがキャンセルで終了したため、
+ 		//		//	変更は発生しませんでした。
+ 		//	-	-1 ;	//	X列番号が不正です。
+ 		//	-	-2 ;	//	Y列番号が不正です。
 		if ( iResult >= 0 )
 		{	
-			iType = 1 ;	// ��Ԃ̕ҏW
+			iType = 1 ;	// 列車の編集
 		}
 		else
 		{
 			iRv = iResult ;
 		}
 	}
-	//iType = { 0: �w�����̕ҏW,1: ��Ԃ̕ҏW,2;�w�̕ҏW } 
+	//iType = { 0: 駅時刻の編集,1: 列車の編集,2;駅の編集 } 
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
-		if ( iType == 2 ) //	2;�w�̕ҏW
+		if ( iType == 2 ) //	2;駅の編集
 		{
 			iRv = execCDlgEkiProp( FALSE ) ;
 		}
-		if ( iType == 1 ) //	1: ��Ԃ̕ҏW
+		if ( iType == 1 ) //	1: 列車の編集
 		{
 			// --------------------------------
-			//	�w��ԃv���p�e�B�x�_�C�A���O���J��
+			//	『列車プロパティ』ダイアログを開く
 			// --------------------------------
 			iRv = execCDlgRessyaProp( bInsert , FALSE ) ;
 			//iRv = 
-	 		//	-	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
-	 		//	-	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A@n
-	 		//			�ύX�͔������܂���ł����B
-	 		//	-	-1 ;	//	X��ԍ����s���ł��B
+	 		//	-	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+	 		//	-	0 ;	//	ダイアログがキャンセルで終了したため、@n
+	 		//			変更は発生しませんでした。
+	 		//	-	-1 ;	//	X列番号が不正です。
 		}
-		if ( iType == 0 )	//0: �w�����̕ҏW,, } 
+		if ( iType == 0 )	//0: 駅時刻の編集,, } 
 		{
 			// --------------------------------
-			//	�w�w�����̃v���p�e�B�x�_�C�A���O���J��
+			//	『駅時刻のプロパティ』ダイアログを開く
 			// --------------------------------
 			iRv = execCDlgEkijikokuProp( bInsert , FALSE ) ;
 			//iRv = 
-	 		//	-	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
-	 		//	-	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A
-	 		//		//	�ύX�͔������܂���ł����B
-	 		//	-	-1 ;	//	X��ԍ����s���ł��B
-	 		//	-	-2 ;	//	Y��ԍ����s���ł��B
+	 		//	-	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+	 		//	-	0 ;	//	ダイアログがキャンセルで終了したため、
+	 		//		//	変更は発生しませんでした。
+	 		//	-	-1 ;	//	X列番号が不正です。
+	 		//	-	-2 ;	//	Y列番号が不正です。
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -246,7 +246,7 @@ int CWjkState_Ressyahensyu::
 	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
@@ -254,14 +254,14 @@ int CWjkState_Ressyahensyu::
 		{
 			if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_NewItem , ppCmd ) )
 			{
-				iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+				iRv = -1 ;	//	列車選択位置が正しくありません。
 			}
 		}
 		else
 		{
 			if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 			{
-				iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+				iRv = -1 ;	//	列車選択位置が正しくありません。
 			}
 		}
 	}
@@ -269,10 +269,10 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�w��ԃv���p�e�B�x�_�C�A���O���J��
+		//	『列車プロパティ』ダイアログを開く
 		// --------------------------------
 		CdYColSpecCont	aYColSpecCont
 			= getCWndDcdGrid()->createYColSpecCont() ;
@@ -284,12 +284,12 @@ int CWjkState_Ressyahensyu::
 		if ( aYColSpec.getColumnType() 
 			== CdYColSpec::ColumnType_Gou )
 		{
-			iFocus = 4	;	//	����
+			iFocus = 4	;	//	号数
 		}
 		if ( aYColSpec.getColumnType() 
 			== CdYColSpec::ColumnType_Bikou )
 		{
-			iFocus = 5	;	//	���l
+			iFocus = 5	;	//	備考
 		}
 
 		CDlgRessyaProp	aDlg( 
@@ -303,32 +303,32 @@ int CWjkState_Ressyahensyu::
 			iRv = 1 ;
 		}
 		//iRv = 
-		//	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
-		//	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A
-		//		//	�ύX�͔������܂���ł����B
+		//	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+		//	0 ;	//	ダイアログがキャンセルで終了したため、
+		//		//	変更は発生しませんでした。
 		//pCentDedRessyaSelectedCont = 
-		//	�_�C�A���O��OK�ŏI�������ꍇ�́A
-		//	pCentDedRessyaSelectedCont->m_pRessyaContAdaptee ��
-		//	���e���ύX����Ă��܂��B
+		//	ダイアログがOKで終了した場合は、
+		//	pCentDedRessyaSelectedCont->m_pRessyaContAdaptee の
+		//	内容が変更されています。
 
 
 		// --------------------------------
-		//	�_�C�A���OOK���̏���
+		//	ダイアログOK時の処理
 		// --------------------------------
 		if ( iRv == 1 )
 		{
 			// --------------------------------
-			//	�ҏW�R�}���h�����s
+			//	編集コマンドを実行
 			// --------------------------------
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 
 			// --------------------------------
-			//	�t�H�[�J�X�Z�����A�V�ݗ�Ԃ̎n���w��
-			//	�ڂ��܂��B
+			//	フォーカスセルを、新設列車の始発駅に
+			//	移します。
 			// --------------------------------
 			if ( bInsert )
 			{
-				//	�t�H�[�J�X�Z�����A�V�ݗ�Ԃ�X��Ɉړ�
+				//	フォーカスセルを、新設列車のX列に移動
 				CDcdGridCell*	pCell = getCWndDcdGrid()->
 					getCXDcdGrid()->calcMovedCell( 
 						getCWndDcdGrid()->getCFocus()->getFocusCell() , 
@@ -341,10 +341,10 @@ int CWjkState_Ressyahensyu::
 			}
 
 			// --------------------------------
-			//	�t�H�[�J�X�Z����Y��ԍ���
-			//	��Ԕԍ��E��Ԏ�ʁE��Ԗ��E�����E���l��
-			//	�����ꂩ�ɂ���ꍇ�����A���̈ʒu�Ƀt�H�[�J�X��
-			//	�ړ����܂��B
+			//	フォーカスセルのY列番号が
+			//	列車番号・列車種別・列車名・号数・備考の
+			//	いずれかにある場合だけ、次の位置にフォーカスを
+			//	移動します。
 			// --------------------------------
 			{
 				CdYColSpecCont	aYColSpecCont
@@ -372,7 +372,7 @@ int  CWjkState_Ressyahensyu::
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	int iEkiIndex = -1 ;
 	{
@@ -397,15 +397,15 @@ int  CWjkState_Ressyahensyu::
 		}
 		else
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���w���ł͂���܂���B
+			iRv = -1 ;	//	セルの位置が駅名ではありません。
 		}
 	}
-	//iEkiIndex = �wIndex
+	//iEkiIndex = 駅Index
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		CEkiView* pCEkiView = NULL ;
 		getCDiagramEditApp()->openCEkiDoc( &pCEkiView ) ;
@@ -414,7 +414,7 @@ int  CWjkState_Ressyahensyu::
 			pCEkiView->openCDlgEkiProp( iEkiIndex ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -436,7 +436,7 @@ int CWjkState_Ressyahensyu::
 		ppCmd = &pCmd ;
 	}
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	CdDedJikokuOrder	aCdJikokuOrder ;
 	if ( iRv >= 0 )
@@ -445,14 +445,14 @@ int CWjkState_Ressyahensyu::
 		{
 			if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_NewItem , ppCmd ) )
 			{
-				iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+				iRv = -1 ;	//	列車選択位置が正しくありません。
 			}
 		}
 		else
 		{
 			if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 			{
-				iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+				iRv = -1 ;	//	列車選択位置が正しくありません。
 			}
 		}
 	}
@@ -462,19 +462,19 @@ int CWjkState_Ressyahensyu::
 				getCWndDcdGrid()->getYColSpecOfFocus() ) ;
 		if ( aCdJikokuOrder.getIsNull() )
 		{
-			iRv = -2 ;	//	Y��ԍ����s���ł��B
+			iRv = -2 ;	//	Y列番号が不正です。
 		}
 	}
-	//aCdJikokuOrder = �ҏW�Ώۂ̎���Order�ł�
+	//aCdJikokuOrder = 編集対象の時刻Orderです
 
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�w�w�����̃v���p�e�B�x�_�C�A���O���J��
+		//	『駅時刻のプロパティ』ダイアログを開く
 		// --------------------------------
 		bool bJikokuModify = getCWndDcdGrid()->getModifyEkijikoku() ;
 
@@ -491,30 +491,30 @@ int CWjkState_Ressyahensyu::
 			iRv = 1 ;
 		}
 		// --------------------------------
-		//	�_�C�A���OOK���̏���
+		//	ダイアログOK時の処理
 		// --------------------------------
 		if ( iRv == 1 )
 		{
-			//	CWndJikokuhyou �I�u�W�F�N�g��
-			//	�J�グ�E�J�����̐ݒ�𔽉f
+			//	CWndJikokuhyou オブジェクトに
+			//	繰上げ・繰下げの設定を反映
 			getCWndDcdGrid()->setModifyEkijikoku( bJikokuModify ) ;
 
 			// --------------------------------
-			//	�ҏW�R�}���h�����s
+			//	編集コマンドを実行
 			// --------------------------------
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 
 			// --------------------------------
-			//	�t�H�[�J�X�Z�����ڂ��܂��B
+			//	フォーカスセルを移します。
 			// --------------------------------
 			if ( bInsert )
 			{
 				// --------------------------------
-				//	�t�H�[�J�X�Z�����A�V�ݗ�Ԃ̎��̉w��
-				//	�ڂ��܂��B
+				//	フォーカスセルを、新設列車の次の駅に
+				//	移します。
 				// --------------------------------
 
-				//	�t�H�[�J�X�Z�����A�V�ݗ�Ԃ�X��Ɉړ�
+				//	フォーカスセルを、新設列車のX列に移動
 				{
 					CDcdGridCell*	pCell = getCWndDcdGrid()->
 						getCXDcdGrid()->calcMovedCell( 
@@ -525,17 +525,17 @@ int CWjkState_Ressyahensyu::
 						getCWndDcdGrid()->getCFocus()->setFocusCell( pCell ) ;
 					}
 				}
-				//	�t�H�[�J�X�Z�������ֈڂ��܂��B
+				//	フォーカスセルを次へ移します。
 				moveFocusCellToNext( true ) ;	
 			}
 			else 
 			{
-				//	�t�H�[�J�X�Z�������ֈڂ��܂��B
+				//	フォーカスセルを次へ移します。
 				moveFocusCellToNext( true ) ;
 			}
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -561,7 +561,7 @@ int CWjkState_Ressyahensyu::
 }
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CWjkState_Ressyahensyu::
 	CWjkState_Ressyahensyu( 
@@ -579,12 +579,12 @@ CWjkState_Ressyahensyu::
 	//	CWjkState
 	// ********************************
 		// ********************************
-		//@name ����
+		//@name 操作
 		// ********************************
 void CWjkState_Ressyahensyu::onEnter() 
 {
 
-	//	�I��͈͂̐ݒ�
+	//	選択範囲の設定
 	getCWndDcdGrid()->getCSelect()->setSelectMode( CSelect::SelectMode_XColumn ) ;
 
 	const CentDedRessyaCont* pCentDedRessyaCont = getCentDedRessyaCont() ;
@@ -598,7 +598,7 @@ void CWjkState_Ressyahensyu::onEnter()
 			) );
 	}
 
-	//	���̏�Ԃɓ��ꎞ�́A�S��ԑI��������
+	//	この状態に入場時は、全列車選択を解除
 	getCWndDcdGrid()->clearSelect() ;
 	
 
@@ -608,7 +608,7 @@ void CWjkState_Ressyahensyu::onExit()
 }
 
 	// ********************************
-	//@name CView ����̈Ϗ�
+	//@name CView からの委譲
 	// ********************************
 void CWjkState_Ressyahensyu::
 	OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
@@ -619,27 +619,27 @@ void CWjkState_Ressyahensyu::
 	}
 	// --------------------------------
 	//pHint= 
-	//	pHint�� CRfEditCmdHolder �I�u�W�F�N�g�Ȃ�A
-	//	�Ή�����ҏW�R�}���h CRfEditCmd ��ێ����Ă��܂��B
-	//	���̏ꍇ�Athis �� CRfEditCmd �̓��e�ɍœK������
-	//	�X�V���s���܂��B
-	//	NULL�Ȃ�A�S�X�V���v������Ă��܂��B
+	//	pHintが CRfEditCmdHolder オブジェクトなら、
+	//	対応する編集コマンド CRfEditCmd を保持しています。
+	//	この場合、this は CRfEditCmd の内容に最適化した
+	//	更新を行います。
+	//	NULLなら、全更新が要求されています。
 
 
-	//	���̃r���[����A�N�e�B�u�ŁA�S�X�V���v������Ă���ꍇ��
-	//	�X�V�͍s���܂���B
+	//	このビューが非アクティブで、全更新が要求されている場合は
+	//	更新は行いません。
 	CView *pActiveView = getCDiagramEditApp()->getCMainFrame()->
 		getMDIChildActiveView() ;
 	if ( pActiveView != getCWndDcdGrid()->GetParent() && getCWndDcdGrid()->getUpdate_All_Requested() )
 	{
-		//	���̃r���[����A�N�e�B�u�ŁA�S�X�V���v������Ă���ꍇ��
-		//	���ׂĂ̍X�V���s���܂���B
+		//	このビューが非アクティブで、全更新が要求されている場合は
+		//	すべての更新を行いません。
 	}
 	else
 	{
 		bool bUpdateComplete = false ;
 		// --------------------------------
-		//	CRfEditCmd �ɍœK�����ꂽ�X�V
+		//	CRfEditCmd に最適化された更新
 		// --------------------------------
 
 		Ou<CRfEditCmd> pCmd ;
@@ -659,17 +659,17 @@ void CWjkState_Ressyahensyu::
 				dynamic_castOu<CRfEditCmd_RessyasyubetsuSwap>( pCmd )
 			) 
 			{
-				//	���̃r���[�́A
-				//		�R�����g�̕ύX
-				//		�_�C���̕ύX
-				//		�_�C���̃v���p�e�B�̕ύX
-				//		��Ԏ�ʂ̓���
-				//	�̏ꍇ�́A�X�V���s���܂���B
+				//	このビューは、
+				//		コメントの変更
+				//		ダイヤの変更
+				//		ダイヤのプロパティの変更
+				//		列車種別の入替
+				//	の場合は、更新を行いません。
 				bUpdateComplete = true ;
 			}
 			else if ( dynamic_castOu<CRfEditCmd_Ressya>( pCmd )	) 
 			{
-				//	��Ԃ̕ύX
+				//	列車の変更
 				Ou<CRfEditCmd_Ressya>	pCommand = 
 					dynamic_castOu<CRfEditCmd_Ressya>( pCmd );
 				OnUpdate_CentDedRessya( pCommand ) ;
@@ -678,28 +678,28 @@ void CWjkState_Ressyahensyu::
 			else
 			{
 				//CRfEditCmd_Eki
-				//	�w�̕ύX�́A�S�X�V���K�v�ł��B
+				//	駅の変更は、全更新が必要です。
 				//CRfEditCmd_Ressyasyubetsu
-				//	��Ԏ�ʂ̕ύX�́A�S�X�V���K�v�ł��B
+				//	列車種別の変更は、全更新が必要です。
 				//CRfEditCmd_DedRosenFileDataProp
-				//	  �H���t�@�C���̃v���p�e�B�̕ύX�́A
-				//	�t�H���g�̕ω��𔺂����߁A�S�X�V���K�v�ł��B
+				//	  路線ファイルのプロパティの変更は、
+				//	フォントの変化を伴うため、全更新が必要です。
 				//CRfEditCmd_Rosen
 				//CRfEditCmd_RosenFileData
-				//	�w���܂���I�u�W�F�N�g�ł��B���ꂪ�X�V���ꂽ�ꍇ�́A
-				//	�S�X�V���K�v�ł��B
+				//	駅を包含するオブジェクトです。これが更新された場合は、
+				//	全更新が必要です。
 			}
 		}
 		// --------------------------------
 		if ( !bUpdateComplete )
 		{
-			//	�S�v�f���X�V
+			//	全要素を更新
 			OnUpdate_All() ;
 		}
 	}
 
 	// --------------------------------
-	//	��I��͈͂�ݒ�
+	//	列選択範囲を設定
 	// --------------------------------
 	{
 		getCWndDcdGrid()->getCSelect()->setSelectMode( CSelect::SelectMode_XColumn ) ;
@@ -715,7 +715,7 @@ void CWjkState_Ressyahensyu::
 }
 
 	// ********************************
-	//@name ���b�Z�[�W�n���h���E�R�}���h�n���h��-CWnd
+	//@name メッセージハンドラ・コマンドハンドラ-CWnd
 	// ********************************
 void CWjkState_Ressyahensyu::
 	OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -723,12 +723,12 @@ void CWjkState_Ressyahensyu::
 	LogMsg( "CWjkState_Ressyahensyu::OnKeyDown %02x %d %02x" , nChar , nRepCnt , nFlags ) ;
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 
-	//	�t�H�[�J�X�Z�����V�K��Ԉʒu�ɂ���Ƃ��́A
-	//	�u�V�K��Ԃ̃v���p�e�B���͂��s���A����𖖔��ɑ}������v�Ƃ���
-	//	����ɂȂ�܂��B
+	//	フォーカスセルが新規列車位置にあるときは、
+	//	「新規列車のプロパティ入力を行い、それを末尾に挿入する」という
+	//	動作になります。
 	bool bInsert = false ;
 	CdXColSpec aXColSpec = getCWndDcdGrid()->getXColSpecOfFocus() ;
 	if ( aXColSpec.getColumnType() == CdXColSpec::ColumnType_NewRessya )
@@ -738,8 +738,8 @@ void CWjkState_Ressyahensyu::
 
 	// ****************************************************************
 
-	//	�����L�[��������Ă��āA�_�C�A���O�{�b�N�X���J���Ă��Ȃ��ꍇ��
-	//	�_�C�A���O�{�b�N�X���J���܂��B
+	//	文字キーが押されていて、ダイアログボックスが開いていない場合は
+	//	ダイアログボックスを開きます。
 	if ( CKeyinputSenderToModalDlg::AnyLetterOrDigitKeyIsDown() && 
 			m_CKeyinputSenderToModalDlg.startSend() >= 0 )
 	{
@@ -747,7 +747,7 @@ void CWjkState_Ressyahensyu::
 		execJikokuhyouPropDlg( bInsert , FALSE ) ;
 		m_CKeyinputSenderToModalDlg.endSend() ;
 	}
-	//	���łɃ_�C�A���O���N�������_�C�A���O�{�b�N�X�Ƀ��b�Z�[�W��]��
+	//	すでにダイアログが起動中→ダイアログボックスにメッセージを転送
 	else
 	{
 		if ( !m_CKeyinputSenderToModalDlg.OnKeyDown( nChar , nRepCnt , nFlags ) )
@@ -772,9 +772,9 @@ void CWjkState_Ressyahensyu::
 void CWjkState_Ressyahensyu::
 	OnLButtonDblClk(UINT nFlags, CPoint point)
 {
-	//	�t�H�[�J�X�Z�����V�K��Ԉʒu�ɂ���Ƃ��́A
-	//	�u�V�K��Ԃ̃v���p�e�B���͂��s���A����𖖔��ɑ}������v�Ƃ���
-	//	����ɂȂ�܂��B
+	//	フォーカスセルが新規列車位置にあるときは、
+	//	「新規列車のプロパティ入力を行い、それを末尾に挿入する」という
+	//	動作になります。
 	bool bInsert = false ;
 	CdXColSpec aXColSpec = getCWndDcdGrid()->getXColSpecOfFocus() ;
 	if ( aXColSpec.getColumnType() == CdXColSpec::ColumnType_NewRessya )
@@ -816,31 +816,31 @@ OnEditCut_Process( BOOL bQueryEnable )
 	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�폜������Ԃ��擾
+		//	削除される列車を取得
 		// --------------------------------
 		CentDedRessyaCont	aCentDedRessyaCont( getCentDedRessyaCont()->createEmptyCont() ) ;
 		CaMui<CentDedRessya> aCaMui( &aCentDedRessyaCont ) ;
 		aCaMui.insert( pCmd->getCaMuiSelect() ) ;
 
 		// -------------------------------- 
-		//	��Ԃ��N���b�v�{�[�h�Ɋi�[
-		//	�w�\��t���ړ���(�b)�x�̒l�́A�O�ɂ��܂��B
+		//	列車をクリップボードに格納
+		//	『貼り付け移動量(秒)』の値は、０にします。
 		// --------------------------------
 		getCDiagramEditDoc()->CentDedRessyaCont_To_Cliboard( 
 			aCentDedRessyaCont ) ;
@@ -848,19 +848,19 @@ OnEditCut_Process( BOOL bQueryEnable )
 		getCWndDcdGrid()->m_jikanPasteIdouryouPrevValue = 0 ;
 		
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		{
 			pCmd->getCaMuiSelect()->erase( 0 , INT_MAX ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -881,31 +881,31 @@ OnEditCopy_Process( BOOL bQueryEnable )
 	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�폜������Ԃ��擾
+		//	削除される列車を取得
 		// --------------------------------
 		CentDedRessyaCont	aCentDedRessyaCont( getCentDedRessyaCont()->createEmptyCont() ) ;
 		CaMui<CentDedRessya> aCaMui( &aCentDedRessyaCont ) ;
 		aCaMui.insert( pCmd->getCaMuiSelect() ) ;
 
 		// -------------------------------- 
-		//	��Ԃ��N���b�v�{�[�h�Ɋi�[
-		//	�w�\��t���ړ���(�b)�x�̒l�́A�O�ɂ��܂��B
+		//	列車をクリップボードに格納
+		//	『貼り付け移動量(秒)』の値は、０にします。
 		// --------------------------------
 		getCDiagramEditDoc()->CentDedRessyaCont_To_Cliboard( 
 			aCentDedRessyaCont ) ;
@@ -913,10 +913,10 @@ OnEditCopy_Process( BOOL bQueryEnable )
 		getCWndDcdGrid()->m_jikanPasteIdouryouPrevValue = 0 ;
 		
 		// -------------------------------- 
-		//	�t�H�[�J�X�Z�����A�I���Ԓ��ōő�̗��Index�̎��ʂɈړ�
+		//	フォーカスセルを、選択列車中で最大の列車Indexの次位に移動
 		// --------------------------------
 		{
-			//	�t�H�[�J�X�Z���̈ړ��ɂ��Z���I���𖳌������܂��B
+			//	フォーカスセルの移動によるセル選択を無効化します。
 			CPropStack	aPropStack( getCWndDcdGrid() ) ;
 			aPropStack.CSelect_setSelectMode( CSelect::SelectMode_NONE ) ;
 		
@@ -932,7 +932,7 @@ OnEditCopy_Process( BOOL bQueryEnable )
 					}
 				}
 			}
-			//iRessyaIndexMax = �I������Ă����Ԃ̂����A�ő��Index
+			//iRessyaIndexMax = 選択されている列車のうち、最大のIndex
 			
 			int iXColumnNumber = -1 ;
 			{
@@ -941,8 +941,8 @@ OnEditCopy_Process( BOOL bQueryEnable )
 								CdXColSpec::ColumnType_Ressya , 
 								iRessyaIndexMax ) ) + 1 ;
 			}
-			//iXColumnNumber = �I������Ă����Ԃ̂����A�ő��Index�̗�Ԃ̉E�̗�ԍ�
-			//	���ꂪ�A���̃t�H�[�J�X�Z���̗�ԍ��ɂȂ�܂��B
+			//iXColumnNumber = 選択されている列車のうち、最大のIndexの列車の右の列番号
+			//	これが、次のフォーカスセルの列番号になります。
 
 			int iYColumnNmber = -1 ;
 			{
@@ -952,7 +952,7 @@ OnEditCopy_Process( BOOL bQueryEnable )
 					iYColumnNmber = getCWndDcdGrid()->getCXDcdGrid()->getYColumnNumberOfCell( pCDcdGridCell ) ;
 				}
 			}
-			//iYColumnNmber = ���݂̃t�H�[�J�X�Z���B���̃t�H�[�J�X�Z���������ʒu�ɂȂ�܂��B
+			//iYColumnNmber = 現在のフォーカスセル。次のフォーカスセルも同じ位置になります。
 
 			{
 				CDcdGridCell* pCDcdGridCellNew = getCWndDcdGrid()->getCXDcdGrid()->getCell( 
@@ -965,7 +965,7 @@ OnEditCopy_Process( BOOL bQueryEnable )
 		}
 
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -985,13 +985,13 @@ OnEditPaste_Process( BOOL bQueryEnable )
 	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_NewItem , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	if ( iRv >= 0 )
@@ -999,26 +999,26 @@ OnEditPaste_Process( BOOL bQueryEnable )
 		if ( !getCDiagramEditDoc()->
 				CentDedRessyaCont_IsClipboardFormatAvailable() )
 		{
-			iRv = -2 ;	//	�N���b�v�{�[�h�Ƀf�[�^������܂���B
+			iRv = -2 ;	//	クリップボードにデータがありません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�N���b�v�{�[�h�����Ԃ��擾
+		//	クリップボードから列車を取得
 		// --------------------------------
 		CentDedRessyaCont	aCentDedRessyaCont( 
 			getCentDedRessyaCont()->createEmptyCont()) ;
 		getCDiagramEditDoc()->CentDedRessyaCont_From_Cliboard( 
 			&aCentDedRessyaCont ) ;
-		//aCentDedRessyaCont = �N���b�v�{�[�h���̗��
+		//aCentDedRessyaCont = クリップボード内の列車
 
 		// --------------------------------
-		//	�\��t�����ԂɈړ��ʂ����Z
+		//	貼り付ける列車に移動量を加算
 		// --------------------------------
 		{
 			CdDedJikan	aCdDedJikan = getCWndDcdGrid()->m_jikanPasteIdouryouPrevValue + 
@@ -1035,24 +1035,24 @@ OnEditPaste_Process( BOOL bQueryEnable )
 			}
 		}
 		// --------------------------------
-		//	�\��t���ړ���(�b)��ǉ�
+		//	貼り付け移動量(秒)を追加
 		// --------------------------------
 		getCWndDcdGrid()->m_jikanPasteIdouryouPrevValue += 
 			getCWndDcdGrid()->m_jikanPasteIdouryou ;
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		{
-			//	CWndJikokuhyou::ECreateCmd_NewTrain �ɂ���Đ������ꂽ
-			//	�V�K�A�C�e���͍폜���܂��B
+			//	CWndJikokuhyou::ECreateCmd_NewTrain によって生成された
+			//	新規アイテムは削除します。
 			pCmd->getCaMuiSelect()->erase( 0 , INT_MAX ) ;
 
-			//	�R�}���h�ɃN���b�v�{�[�h����̃A�C�e����ǉ����܂��B
+			//	コマンドにクリップボードからのアイテムを追加します。
 			CaMui<CentDedRessya> aCaMui( pCmd->getCaMuiSelect() ) ;
 			aCaMui.insert( &aCentDedRessyaCont , 0 , INT_MAX , 0 ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
@@ -1074,35 +1074,35 @@ OnEditClear_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		{
 			pCmd->getCaMuiSelect()->erase( 0 , INT_MAX ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -1123,13 +1123,13 @@ OnEditPasteEkiJikoku_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Focus , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	if ( iRv >= 0 )
@@ -1137,33 +1137,33 @@ OnEditPasteEkiJikoku_Process( BOOL bQueryEnable )
 		if ( !getCDiagramEditDoc()->
 				CentDedRessyaCont_IsClipboardFormatAvailable() )
 		{
-			iRv = -2 ;	//	�N���b�v�{�[�h�Ƀf�[�^������܂���B
+			iRv = -2 ;	//	クリップボードにデータがありません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�N���b�v�{�[�h�����Ԃ��擾
+		//	クリップボードから列車を取得
 		// --------------------------------
 		CentDedRessyaCont	aCentDedRessyaCont( 
 			getCentDedRessyaCont()->createEmptyCont()) ;
 		getCDiagramEditDoc()->CentDedRessyaCont_From_Cliboard( 
 			&aCentDedRessyaCont ) ;
-		//aCentDedRessyaCont = �N���b�v�{�[�h���̗��
+		//aCentDedRessyaCont = クリップボード内の列車
 
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		{
 			CentDedRessya* pCentDedRessya = pCmd->getCaMuiSelect()->getMuPtr()->get( 0 ) ;
 			pCentDedRessya->pasteEkiJikoku( aCentDedRessyaCont.get( 0 ) ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
@@ -1183,14 +1183,14 @@ int CWjkState_Ressyahensyu::OnEditSelectAll_Process(
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		getCWndDcdGrid()->selectAll() ;
 	}
@@ -1204,12 +1204,12 @@ int CWjkState_Ressyahensyu::
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 
-	//	�t�H�[�J�X�Z�����V�K��Ԉʒu�ɂ���Ƃ��́A
-	//	�u�V�K��Ԃ̃v���p�e�B���͂��s���A����𖖔��ɑ}������v�Ƃ���
-	//	����ɂȂ�܂��B
+	//	フォーカスセルが新規列車位置にあるときは、
+	//	「新規列車のプロパティ入力を行い、それを末尾に挿入する」という
+	//	動作になります。
 	bool bInsert = false ;
 	CdXColSpec aXColSpec = getCWndDcdGrid()->getXColSpecOfFocus() ;
 	if ( aXColSpec.getColumnType() == CdXColSpec::ColumnType_NewRessya )
@@ -1220,20 +1220,20 @@ int CWjkState_Ressyahensyu::
 	iRv = execCDlgRessyaProp( bInsert , TRUE ) ;
 
 	//iRv = 
-	// 	-	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
-	//	-	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A@n
-	//				�ύX�͔������܂���ł����B
-	//	-	-1 ;	//	X��ԍ����s���ł��B
+	// 	-	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+	//	-	0 ;	//	ダイアログがキャンセルで終了したため、@n
+	//				変更は発生しませんでした。
+	//	-	-1 ;	//	X列番号が不正です。
 
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		iRv = execCDlgRessyaProp( bInsert , FALSE ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -1251,30 +1251,30 @@ OnJikokuhyouRessyaInsert_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_NewItem , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
-		//	��Ԃ̑}���̏ꍇ�́A����(��Ԏ��Index=0)�ł͂Ȃ��A
-		//	NULL��Ԃ�}�����܂��B
-		//	Command ���̗�Ԃ�u�������܂��B
+		//	列車の挿入の場合は、空列車(列車種別Index=0)ではなく、
+		//	NULL列車を挿入します。
+		//	Command 内の列車を置き換えます。
 		{
 			Mu<CentDedRessya*>* pmuRessya = pCmd->getCaMuiSelect()->getMuPtr() ;
 			pmuRessya->get( 0 )->setIsNull( true ) ; 
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
@@ -1289,22 +1289,22 @@ int CWjkState_Ressyahensyu::
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( !m_bJikokuhyouFocusMoveRight )
 	{
-		iRv = 1 ;	//(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͂��łɑI������Ă��܂�
+		iRv = 1 ;	//(bQueryEnable=TRUEの場合)この項目はすでに選択されています
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		m_bJikokuhyouFocusMoveRight = false ;
 		
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -1317,21 +1317,21 @@ int CWjkState_Ressyahensyu::
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( m_bJikokuhyouFocusMoveRight )
 	{
-		iRv = 1 ;	//(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͂��łɑI������Ă��܂�
+		iRv = 1 ;	//(bQueryEnable=TRUEの場合)この項目はすでに選択されています
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		m_bJikokuhyouFocusMoveRight = true ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -1347,7 +1347,7 @@ int CWjkState_Ressyahensyu::
 	CString strErrorMessage ;
 	const CentDedRessyaCont* pCentDedRessyaCont = getCentDedRessyaCont() ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	CdYColSpec aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 	if ( iRv >= 0 )
@@ -1355,7 +1355,7 @@ int CWjkState_Ressyahensyu::
 		if ( !( aCdYColSpec.getColumnType() == CdYColSpec::ColumnType_Ekijikoku_Chaku || 
 				aCdYColSpec.getColumnType() == CdYColSpec::ColumnType_Ekijikoku_Hatsu ) )
 		{
-			iRv = -1 ;	//	�t�H�[�J�X�Z���̈ʒu���s���ł��B
+			iRv = -1 ;	//	フォーカスセルの位置が不正です。
 		}
 	}
 	if ( iRv >= 0 )
@@ -1363,14 +1363,14 @@ int CWjkState_Ressyahensyu::
 		if ( !( 0 <= aCdYColSpec.getEkiOrder() 
 			&& aCdYColSpec.getEkiOrder() <  pCentDedRessyaCont->getEkiCount() - 1 ) )
 		{
-			iRv = -2 ;	//	�t�H�[�J�X�Z�����I���w�ɂ���ꍇ�͎��s�ł��܂���B
+			iRv = -2 ;	//	フォーカスセルが終着駅にある場合は実行できません。
 		}
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		int iEkikanSaisyouSecRessyaIndex = -1 ;
 
@@ -1413,21 +1413,21 @@ int CWjkState_Ressyahensyu::
 			aStr.Format( strFmt , strEkimei0 , strEkimei1 ) ;
 			
 			strErrorMessage = aStr ;
-			iRv = -21 ;	//	�w�ԍŏ����v�b����Ԃ�����ł��܂���B
-						//	������%s�w��%s�w�̗����ɐݒ肳�ꂽ��Ԃ��P�{��
-						//	����܂���B"
+			iRv = -21 ;	//	駅間最小所要秒数列車が決定できません。
+						//	時刻が%s駅と%s駅の両方に設定された列車が１本も
+						//	ありません。"
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		if ( iRv < 0 )
 		{
 			switch( iRv )
 			{
-			case -1 :	//	�t�H�[�J�X�Z���̈ʒu���s���ł��B
-			case -2 :	//	�t�H�[�J�X�Z�����I���w�ɂ���ꍇ�́A
-						//	���̋@�\�͎��s�ł��܂���
-			case -21 :	//	�w�ԍŏ����v�b����Ԃ�����ł��܂���B
+			case -1 :	//	フォーカスセルの位置が不正です。
+			case -2 :	//	フォーカスセルが終着駅にある場合は、
+						//	この機能は実行できません
+			case -21 :	//	駅間最小所要秒数列車が決定できません。
 				break ;
 			default:
 				strErrorMessage.Format( _T( "Error=%d" ) , iRv ) ;
@@ -1456,7 +1456,7 @@ int CWjkState_Ressyahensyu::
 	CdYColSpec aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	bool bRessyasyubetsuSort = false ;
 	CdDedJikokuOrder aJikokuOrder  ;
@@ -1465,7 +1465,7 @@ int CWjkState_Ressyahensyu::
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_All , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	if ( iRv >= 0 )
@@ -1487,7 +1487,7 @@ int CWjkState_Ressyahensyu::
 		else if ( aCdYColSpec.getColumnType() == 
 			CdYColSpec::ColumnType_Bikou )
  		{
-			//	�t�H�[�J�X�Z�������l��ɂ���ꍇ�́A���l�Ń\�[�g
+			//	フォーカスセルが備考列にある場合は、備考でソート
 			bBikouSort = true ;
 		}
 		else if ( aCdYColSpec.getColumnType() == 
@@ -1502,22 +1502,22 @@ int CWjkState_Ressyahensyu::
 		}
 		else
 		{
-			iRv = -1 ;	//	�t�H�[�J�X�Z���̈ʒu���s���ł��B
+			iRv = -1 ;	//	フォーカスセルの位置が不正です。
 		}
 	}
-	//bRessyasyubetsuSort = ��Ԏ�ʂŃ\�[�g����ꍇ��true ;
-	//iJikokuOrder = �w��̃Z���ɑΉ�����w����Order�x
-	//bBikouSort = ���l�Ń\�[�g����ꍇ��true ;
+	//bRessyasyubetsuSort = 列車種別でソートする場合はtrue ;
+	//iJikokuOrder = 指定のセルに対応する『時刻Order』
+	//bBikouSort = 備考でソートする場合はtrue ;
 
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		CWaitCursor	aCursor ;	
 
 		// --------------------------------
-		//	�Ώۗ�Ԃ��擾���A�\�[�g�p�̃R���e�i�Ɉړ�
+		//	対象列車を取得し、ソート用のコンテナに移動
 		// --------------------------------
 		CentDedRessyaCont aCentDedRessyaCont( getCentDedRessyaCont()->createEmptyCont() ) ;
 		CaMui<CentDedRessya> aCaMui( &aCentDedRessyaCont ) ;
@@ -1525,17 +1525,17 @@ int CWjkState_Ressyahensyu::
 
 
 		// --------------------------------
-		//	�Ώۗ�Ԃ��\�[�g
+		//	対象列車をソート
 		// --------------------------------
 		if ( bRessyasyubetsuSort )
 		{
-			//	��Ԏ�ʂŃ\�[�g
+			//	列車種別でソート
 			CDedRessyaSoater_Ressyasyubetsu	aSoater ;
 			aSoater.sort( &aCentDedRessyaCont , NULL ) ;
 		}
 		else if ( bBikouSort )
 		{
-			//	���l�Ń\�[�g
+			//	備考でソート
 			CDedRessyaSoater_Bikou	aSoater ;
 			aSoater.sort( &aCentDedRessyaCont , NULL ) ;
 
@@ -1545,14 +1545,14 @@ int CWjkState_Ressyahensyu::
 			if ( getCWndDcdGrid()->getEkijikokuSort() 
 				== CWndJikokuhyou::EEkijikokuSort_Ekiatsukai )
 			{
-				//	�w���\�[�g
+				//	駅扱ソート
 
-				//	�N�_����
+				//	起点時刻
 				CdDedJikoku jikokuKitenJikoku = getCDiagramEditDoc()
 					->getCDedRosenFileData()->getCentDedRosen()
 					->getKitenJikoku() ;
 
-				//	�w�����Ń\�[�g
+				//	駅時刻でソート
 				CDedRessyaSoater_Ekiatsukai	aSoater( 
 					aJikokuOrder ,
 					jikokuKitenJikoku ) ;
@@ -1563,9 +1563,9 @@ int CWjkState_Ressyahensyu::
 			else if ( getCWndDcdGrid()->getEkijikokuSort() 
 				== CWndJikokuhyou::EEkijikokuSort_Transfer )
 			{
-				//	��p�\�[�g
+				//	乗継ソート
 
-				//	�i���_�C�A���O�̍쐬
+				//	進捗ダイアログの作成
 				CWnd* pWndToDisable = AfxGetMainWnd() ;
 				pWndToDisable->EnableWindow( FALSE ) ;
 
@@ -1574,7 +1574,7 @@ int CWjkState_Ressyahensyu::
 				aDlg.ShowWindow( SW_SHOW ) ;
 				aDlg.CenterWindow() ;
 
-				//	�\�[�g�I�u�W�F�N�g�𐶐�
+				//	ソートオブジェクトを生成
 				CDedRessyaSoater_Transfer	aRessyaContTransferSort( 
 					getCDiagramEditDoc()->getCDedRosenFileData()
 						->getCentDedRosen() , 
@@ -1582,7 +1582,7 @@ int CWjkState_Ressyahensyu::
 					aJikokuOrder ) ;
 				aRessyaContTransferSort.validate() ;
 
-				//	��p�\�[�g
+				//	乗継ソート
 				aRessyaContTransferSort.sort(
 					&aCentDedRessyaCont ,
 					&aDlg ) ;
@@ -1592,8 +1592,8 @@ int CWjkState_Ressyahensyu::
 			}
 		}
 		// --------------------------------
-		//	�\�[�g�p�̃R���e�i�̓��e���R�}���h�I�u�W�F�N�g��
-		//	�����߂�
+		//	ソート用のコンテナの内容をコマンドオブジェクトに
+		//	書き戻す
 		// --------------------------------
 		{
 			for ( int i = 0 ; i < pCmd->getCaMuiSelect()->size() ; i ++ )
@@ -1602,7 +1602,7 @@ int CWjkState_Ressyahensyu::
 			}
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
@@ -1620,13 +1620,13 @@ OnJikokuhyouUnify_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_All , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -1635,20 +1635,20 @@ OnJikokuhyouUnify_Process( BOOL bQueryEnable )
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		CWaitCursor	aCursor ;	
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		{
-			//	�i���_�C�A���O�̍쐬
+			//	進捗ダイアログの作成
 			CWnd* pWndToDisable = AfxGetMainWnd() ;
 			pWndToDisable->EnableWindow( FALSE ) ;
 			CDlgProgress	aDlg ;
@@ -1656,7 +1656,7 @@ OnJikokuhyouUnify_Process( BOOL bQueryEnable )
 			aDlg.ShowWindow( SW_SHOW ) ;
 			aDlg.CenterWindow() ;
 
-			//	�ҏW��������s
+			//	編集操作を実行
 			{
 				Mui<CentDedRessya>* muCentDedRessya = 
 					pCmd->getCaMuiSelect() ;
@@ -1666,12 +1666,12 @@ OnJikokuhyouUnify_Process( BOOL bQueryEnable )
 					&aDlg ) ;
 			}
 
-			//	�i���_�C�A���O�����
+			//	進捗ダイアログを閉じる
 			pWndToDisable->EnableWindow( TRUE ) ;
 			aDlg.DestroyWindow() ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
@@ -1690,11 +1690,11 @@ int CWjkState_Ressyahensyu::
 	int iRv = 0 ;
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
-	//	�t�H�[�J�X�Z�����V�K��Ԉʒu�ɂ���Ƃ��́A
-	//	�u�V�K��Ԃ̃v���p�e�B���͂��s���A����𖖔��ɑ}������v�Ƃ���
-	//	����ɂȂ�܂��B
+	//	フォーカスセルが新規列車位置にあるときは、
+	//	「新規列車のプロパティ入力を行い、それを末尾に挿入する」という
+	//	動作になります。
 	bool bInsert = false ;
 	CdXColSpec aXColSpec = getCWndDcdGrid()->getXColSpecOfFocus() ;
 	if ( aXColSpec.getColumnType() == CdXColSpec::ColumnType_NewRessya )
@@ -1704,21 +1704,21 @@ int CWjkState_Ressyahensyu::
 	iRv = execJikokuhyouPropDlg( bInsert , TRUE ) ;
 
 	//iRv = 
-	//	-	1 ;	//	��Ԃ̒ǉ��E�܂��̓v���p�e�B�̕ύX���s���܂����B
-	//	-	0 ;	//	�_�C�A���O���L�����Z���ŏI���������߁A
-	//			//	�ύX�͔������܂���ł����B
-	//	-	-1 ;	//	X��ԍ����s���ł��B
-	//	-	-2 ;	//	Y��ԍ����s���ł��B
+	//	-	1 ;	//	列車の追加・またはプロパティの変更を行いました。
+	//	-	0 ;	//	ダイアログがキャンセルで終了したため、
+	//			//	変更は発生しませんでした。
+	//	-	-1 ;	//	X列番号が不正です。
+	//	-	-2 ;	//	Y列番号が不正です。
 
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		iRv = execJikokuhyouPropDlg( bInsert , FALSE ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -1736,13 +1736,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -1751,42 +1751,42 @@ int CWjkState_Ressyahensyu::
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
 		for ( int i = 0 ; iRv >= 0 && i < muCentDedRessya->size() ; i++ )
 		{
 			CentDedRessya* pCentDedRessya = muCentDedRessya->get( i ) ;
 
-			//	�t�H�[�J�X�̂���w�̉w�������w��ԁx�ɕύX���A
-			//	�t�H�[�J�X�̂��鎞����NULL�����ɂ��܂��B
+			//	フォーカスのある駅の駅時刻を『停車』に変更し、
+			//	フォーカスのある時刻をNULL時刻にします。
 			//
-			//	����ɔ����āA���E���Ƃ�NULL�����ɂȂ�ƁA�w���� Ekiatsukai_None 
-			//	�ɂȂ�܂��B
+			//	これに伴って、着・発ともNULL時刻になると、駅扱は Ekiatsukai_None 
+			//	になります。
 			CentDedEkiJikoku aCentDedEkiJikoku =
 				pCentDedRessya->getCentDedEkiJikoku( aCdYColSpec.getEkiOrder() ) ;
 
 			aCentDedEkiJikoku.setEkiatsukai( 
 				CentDedEkiJikoku::Ekiatsukai_Teisya )	 ;
 			if ( aCdYColSpec.getColumnType() == CdYColSpec::ColumnType_Ekijikoku_Chaku )
-			{	//	�������̏���
+			{	//	着時刻の消去
 				aCentDedEkiJikoku.setChakujikoku( CdDedJikoku() ) ;
 			}
 			else
-			{	//	�������̏���
+			{	//	発時刻の消去
 				aCentDedEkiJikoku.setHatsujikoku( CdDedJikoku() ) ;
 			}
-			//	����ɔ����āA���E���Ƃ�NULL�����ɂȂ�ƁA�w���� Ekiatsukai_None 
-			//	�ɂȂ�܂��B
+			//	これに伴って、着・発ともNULL時刻になると、駅扱は Ekiatsukai_None 
+			//	になります。
 			if ( aCentDedEkiJikoku.getChakujikoku().isNull() && 
 				aCentDedEkiJikoku.getHatsujikoku().isNull() )
 			{
@@ -1797,16 +1797,16 @@ int CWjkState_Ressyahensyu::
 
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
-		//	�����\���ŁA���Ƀt�H�[�J�X������ꍇ�A
-		//	���Ɉړ����܂��B
+		//	着発表示で、着にフォーカスがある場合、
+		//	発に移動します。
 		{
 			moveFocusCellToNext( false ) ;
 		}
@@ -1826,13 +1826,13 @@ int CWjkState_Ressyahensyu
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -1841,16 +1841,16 @@ int CWjkState_Ressyahensyu
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
 		for ( int i = 0 ; iRv >= 0 && i < muCentDedRessya->size() ; i++ )
@@ -1861,21 +1861,21 @@ int CWjkState_Ressyahensyu
 				pCentDedRessya->getCentDedEkiJikoku( aCdYColSpec.getEkiOrder() ) ;
 			aCentDedEkiJikoku.setEkiatsukai( CentDedEkiJikoku::Ekiatsukai_Tsuuka ) ;
 
-			//	�w������NULL�ɂ���
-			//	���̂ق����֗�
+			//	駅時刻もNULLにする
+			//	このほうが便利
 			aCentDedEkiJikoku.setChakujikoku( CdDedJikoku() ) ;
 			aCentDedEkiJikoku.setHatsujikoku( CdDedJikoku() ) ;
 
 			pCentDedRessya->setCentDedEkiJikoku( aCdYColSpec.getEkiOrder() , aCentDedEkiJikoku ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
@@ -1897,13 +1897,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -1912,16 +1912,16 @@ int CWjkState_Ressyahensyu::
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
 		for ( int i = 0 ; iRv >= 0 && i < muCentDedRessya->size() ; i++ )
@@ -1932,33 +1932,33 @@ int CWjkState_Ressyahensyu::
 			
 			if ( aCentDedEkiJikoku.getEkiatsukai() == CentDedEkiJikoku::Ekiatsukai_Tsuuka )
 			{
-				//�t�H�[�J�X�Z���̈ʒu���w�ʉ߁x�Ȃ�΁w��ԁx�ɕύX���܂��B�w�����͕ύX���܂���B
+				//フォーカスセルの位置が『通過』ならば『停車』に変更します。駅時刻は変更しません。
 				aCentDedEkiJikoku.setEkiatsukai( CentDedEkiJikoku::Ekiatsukai_Teisya ) ;
 			}
 			else
 			{
-				//�t�H�[�J�X�Z���̈ʒu�́w�w�����x���w��ԁx�w�^�s�Ȃ��x�w�o�R�Ȃ��x�Ȃ�A
-				//�w�ʉ߁x�ɕύX���܂��B�w�����͕ύX���܂���B
+				//フォーカスセルの位置の『駅時刻』が『停車』『運行なし』『経由なし』なら、
+				//『通過』に変更します。駅時刻は変更しません。
 				aCentDedEkiJikoku.setEkiatsukai( CentDedEkiJikoku::Ekiatsukai_Tsuuka ) ;
 			}
 
 			pCentDedRessya->setCentDedEkiJikoku( aCdYColSpec.getEkiOrder() , aCentDedEkiJikoku ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
 			moveFocusCellToNext( true ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -1976,13 +1976,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -1991,16 +1991,16 @@ int CWjkState_Ressyahensyu::
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
 		for ( int i = 0 ; iRv >= 0 && i < muCentDedRessya->size() ; i++ )
@@ -2015,20 +2015,20 @@ int CWjkState_Ressyahensyu::
 			pCentDedRessya->setCentDedEkiJikoku( aCdYColSpec.getEkiOrder() , aCentDedEkiJikoku ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
 			moveFocusCellToNext( true ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -2047,13 +2047,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -2062,41 +2062,41 @@ int CWjkState_Ressyahensyu::
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
 		for ( int i = 0 ; iRv >= 0 && i < muCentDedRessya->size() ; i++ )
 		{
 			CentDedRessya* pCentDedRessya = muCentDedRessya->get( i ) ;
 
-			//	�R���e�i�̗�Ԃ�ҏW
+			//	コンテナの列車を編集
 			pCentDedRessya->setSihatsuEki(  aCdYColSpec.getEkiOrder() ) ;
 
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
 			moveFocusCellToNext( true ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -2115,13 +2115,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -2130,41 +2130,41 @@ int CWjkState_Ressyahensyu::
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
 		for ( int i = 0 ; iRv >= 0 && i < muCentDedRessya->size() ; i++ )
 		{
 			CentDedRessya* pCentDedRessya = muCentDedRessya->get( i ) ;
 
-			//	�R���e�i�̗�Ԃ�ҏW
+			//	コンテナの列車を編集
 			pCentDedRessya->setSyuuchakuEki(  aCdYColSpec.getEkiOrder() ) ;
 
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
 			moveFocusCellToNext( true ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 
 		// ****************************************************************
@@ -2183,13 +2183,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Focus , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -2198,7 +2198,7 @@ int CWjkState_Ressyahensyu::
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	const CentDedRessyaCont* pCentDedRessyaCont = NULL ;
@@ -2212,21 +2212,21 @@ int CWjkState_Ressyahensyu::
 		pCentDedRessya = pCentDedRessyaCont->getMuPtr()->get( aCdXColSpec.getRessyaIndex() ) ;
 	}
 
-	//���r���w�~�܂��Ԃ��擾�@�@�@�@�@�@CentDedRessyaCont
-	//��[�t�H�[�J�X�Z���̈ʒu���A���̗�Ԃ̏I���wOrder����]���G���[
+	//○途中駅止まり列車を取得　　　　　　CentDedRessyaCont
+	//◇[フォーカスセルの位置が、その列車の終着駅Orderより上]→エラー
 	if ( iRv >= 0 )
 	{
 		if ( aCdYColSpec.getEkiOrder() < pCentDedRessya->getSyuuchakuEki() )
 		{
-			iRv = -13;	//	�Z���̈ʒu���A�I���w����
+			iRv = -13;	//	セルの位置が、終着駅より上
 		}
 	}
-	//idxRessyaSyuuchaku = �t�H�[�J�X�̂���ʒu�̗��
-	//pCentDedRessya = �t�H�[�J�X�Z���̂���ʒu�̗��
+	//idxRessyaSyuuchaku = フォーカスのある位置の列車
+	//pCentDedRessya = フォーカスセルのある位置の列車
 
 
-	//���Ή�����r���w�n����Ԃ�����      CentDedRessyaCont
-	//��[�Ή������Ԃ��Ȃ�]�������I��
+	//○対応する途中駅始発列車を検索      CentDedRessyaCont
+	//◇[対応する列車がない]→処理終了
 	int idxRessyaSihatsu = -1 ;
 	if ( iRv >= 0 )
 	{
@@ -2235,25 +2235,25 @@ int CWjkState_Ressyahensyu::
 			aCdYColSpec.getEkiOrder() ) ;
 		if ( idxRessyaSihatsu < 0 )
 		{
-			iRv = -14 ;	//	�Ή�����n����Ԃ�������܂���B
+			iRv = -14 ;	//	対応する始発列車が見つかりません。
 		}
 	}
-	//idxRessyaSihatsu = �Ή�����n����Ԃ̃C���f�N�X
+	//idxRessyaSihatsu = 対応する始発列車のインデクス
 
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�𐶐�
+		//	コマンドオブジェクトを生成
 		// --------------------------------
 		if ( !getCWndDcdGrid()->createCmd( idxRessyaSyuuchaku , idxRessyaSihatsu - idxRessyaSyuuchaku + 1  , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g���̗�Ԃ�ҏW
+		//	コマンドオブジェクト内の列車を編集
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
@@ -2261,11 +2261,11 @@ int CWjkState_Ressyahensyu::
 			CentDedRessya aCentDedRessyaToDirect = pCmd->getCaMuiSelect()->get( INT_MAX ) ;
 			int iResult = aRessyaSyuuchaku.direct( aCentDedRessyaToDirect ) ;
 			//iResult = 
-			//-	-1 ;	//	���̗�Ԃɂ͉w�������w�肳��Ă��܂���B
-			//-	-2 ;	//	�n����Ԃɂ͉w�������w�肳��Ă��܂���B
-			//-	-3 ;	//	aRessyaSihatsu �Ƃ̒��ʉ��͂ł��܂���B\n
-			//	//aRessyaSihatsu �̎n���w�́A	this �̏I���w�Ɠ������A
-			//	//	����ȍ~�łȂ��Ă͂Ȃ�܂���B
+			//-	-1 ;	//	この列車には駅時刻が指定されていません。
+			//-	-2 ;	//	始発列車には駅時刻が指定されていません。
+			//-	-3 ;	//	aRessyaSihatsu との直通化はできません。\n
+			//	//aRessyaSihatsu の始発駅は、	this の終着駅と同じか、
+			//	//	それ以降でなくてはなりません。
 
 			if ( iResult < 0 )
 			{
@@ -2278,13 +2278,13 @@ int CWjkState_Ressyahensyu::
 			}
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
@@ -2292,7 +2292,7 @@ int CWjkState_Ressyahensyu::
 		}
 
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		CString strErrorMsg ;
 		if ( iRv < 0 )
@@ -2326,13 +2326,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Focus , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -2341,7 +2341,7 @@ int CWjkState_Ressyahensyu::
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	const CentDedRessyaCont* pCentDedRessyaCont = NULL ;
@@ -2353,20 +2353,20 @@ int CWjkState_Ressyahensyu::
 		pCentDedRessya = pCentDedRessyaCont->getMuPtr()->get( aCdXColSpec.getRessyaIndex() ) ;
 	}
 
-	//�����j���[[�w����]-[���f]
-	//��
-	//�����f�����Ԃ��擾	CentDedRessyaCont
-	//��[!(���̗�Ԃ̎n���wOrder<�t�H�[�J�X�Z���̈ʒu<�I���wOrder)]���G���[
+	//●メニュー[駅時刻]-[分断]
+	//↓
+	//○分断する列車を取得	CentDedRessyaCont
+	//◇[!(その列車の始発駅Order<フォーカスセルの位置<終着駅Order)]→エラー
 	if ( iRv >= 0 )
 	{
 		if ( !( pCentDedRessya->getSihatsuEki() < aCdYColSpec.getEkiOrder() 
 			&& aCdYColSpec.getEkiOrder() < pCentDedRessya->getSyuuchakuEki()
 		) )
 		{
-			iRv = -21 ;	//	���̗�Ԃ̎n���w�E�I���w�ł͕��f�͂ł��܂���B
+			iRv = -21 ;	//	その列車の始発駅・終着駅では分断はできません。
 		}
 	}
-	//��[�w�����ɒ����������������w�肳��Ă��Ȃ��w�ł́A���̋@�\�͎g�p�ł��܂���]���G���[
+	//◇[駅時刻に着時刻も発時刻も指定されていない駅では、この機能は使用できません]→エラー
 	if ( iRv >= 0 )
 	{
 		CentDedEkiJikoku	aCentDedEkiJikoku 
@@ -2375,16 +2375,16 @@ int CWjkState_Ressyahensyu::
 		if ( aCentDedEkiJikoku.getChakujikoku().isNull() && 
 			aCentDedEkiJikoku.getHatsujikoku().isNull() )
 		{
-			iRv = -22 ;	//	�w�����ɒ����������������w�肳��Ă��Ȃ��w�ł́A���̋@�\�͎g�p�ł��܂���
+			iRv = -22 ;	//	駅時刻に着時刻も発時刻も指定されていない駅では、この機能は使用できません
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g���̗�Ԃ�ҏW
+		//	コマンドオブジェクト内の列車を編集
 		// --------------------------------
 		CentDedRessya aRessyaSyuuchaku( getCentDedRessyaCont()->createNullRessya() ) ;
 		CentDedRessya aRessyaSihatsu( getCentDedRessyaCont()->createNullRessya() ) ;
@@ -2397,7 +2397,7 @@ int CWjkState_Ressyahensyu::
 				&aRessyaSyuuchaku, 
 				&aRessyaSihatsu ) ;
 			//iResult = 
-			//	-	-1 ;	//	�w��̉wOrder�ł́A���f�͂ł��܂���
+			//	-	-1 ;	//	指定の駅Orderでは、分断はできません
 			if ( iResult < 0 )
 			{
 				iRv = iResult - 30 ;
@@ -2408,24 +2408,24 @@ int CWjkState_Ressyahensyu::
 				pCmd->getCaMuiSelect()->insert( aRessyaSihatsu , 1 ) ; 
 			}
 			//iRv = 
-			//	-	-31 ;	//	�w��̉wOrder�ł́A���f�͂ł��܂���
+			//	-	-31 ;	//	指定の駅Orderでは、分断はできません
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		if ( iRv >= 0 ){
 			moveFocusCellToNext( true ) ;
 		}
 
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 		CString strErrorMsg ;
 		if ( iRv < 0 )
@@ -2452,7 +2452,7 @@ int CWjkState_Ressyahensyu::
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	CWjkState* pCState = 
 		getCWndDcdGrid()->getStateMachine()->getCStateContGet()->get( 
@@ -2460,18 +2460,18 @@ int CWjkState_Ressyahensyu::
 	int iResult = pCState->canEnter() ;
 	if ( iResult < 0 )
 	{
-		iRv = -1 ;	//	���݁A���̃R�}���h�͑I���ł��܂���
+		iRv = -1 ;	//	現在、このコマンドは選択できません
 	}
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		getCWndDcdGrid()->getStateMachine()->setCurrentStateIdx( 
 			CWndJikokuhyou::StateIdx_Renzoku ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;
@@ -2488,13 +2488,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -2503,7 +2503,7 @@ int CWjkState_Ressyahensyu::
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	if ( iRv >= 0 ){
@@ -2511,16 +2511,16 @@ int CWjkState_Ressyahensyu::
 			aCdYColSpec.getEkiOrder() 
 			< getCentDedRessyaCont()->getEkiCount() - 1 ) )
 		{
-			iRv = -2 ;	//	��ԉ��̉w�ł́A���̑���͂ł��܂���B
+			iRv = -2 ;	//	一番下の駅では、この操作はできません。
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		const CentDedRessyaCont* pCentDedRessyaCont  =  getCentDedRessyaCont() ;
 
@@ -2544,13 +2544,13 @@ int CWjkState_Ressyahensyu::
 
 		}	
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;
@@ -2569,13 +2569,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdYColSpec	aCdYColSpec ;
@@ -2584,16 +2584,16 @@ int CWjkState_Ressyahensyu::
 		aCdYColSpec = getCWndDcdGrid()->getYColSpecOfFocus() ;
 		if ( !aCdYColSpec.isEkiJikoku() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
 		}
 	}
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		const CentDedRessyaCont* pCentDedRessyaCont  =  getCentDedRessyaCont() ;
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
@@ -2615,13 +2615,13 @@ int CWjkState_Ressyahensyu::
 				aCentDedEkiJikoku ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;
@@ -2637,13 +2637,13 @@ OnJikokuhyouModifyEkijikokuCmd_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdDedJikokuOrder aCdJikokuOrder ;
@@ -2653,20 +2653,20 @@ OnJikokuhyouModifyEkijikokuCmd_Process( BOOL bQueryEnable )
 			getCWndDcdGrid()->getYColSpecOfFocus() ) ;
 		if ( aCdJikokuOrder.getIsNull() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 		}
 	}
-	//aCdJikokuOrder = �w��̃Z���ɑΉ�����w����Order�x
+	//aCdJikokuOrder = 指定のセルに対応する『時刻Order』
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		bool bRepeat = false ;
 		do{
 			bRepeat = false ;
 			// --------------------------------
-			//	�_�C�A���O���N��
+			//	ダイアログを起動
 			// --------------------------------
 			CDlgModifyEkijikokuOperation2 aCDlgModifyEkijikokuOperation2( 
 				getCWndDcdGrid()->getEkijikokuModifyOperation2() , 
@@ -2679,27 +2679,27 @@ OnJikokuhyouModifyEkijikokuCmd_Process( BOOL bQueryEnable )
 					aCDlgModifyEkijikokuOperation2.getCentDedRessya_EkijikokuModifyOperation2() ) ;
 
 				// --------------------------------
-				//	�w�����ύX�̓�������s
+				//	駅時刻変更の動作を実行
 				// --------------------------------
 				int iResult = getCWndDcdGrid()->execCdModifyEkijikokuCmd(
 					pCmd , 
 					aCdJikokuOrder ) ;
 				if  ( iResult < 0 )
 				{
-					//	�G���[�����������ꍇ�́A�_�C�A���O���ēx�J���܂��B
+					//	エラーが発生した場合は、ダイアログを再度開きます。
 					bRepeat = true ;
 				}
 				else
 				{
 					// --------------------------------
-					//	�t�H�[�J�X�Z�������ֈڂ��܂��B
+					//	フォーカスセルを次へ移します。
 					// --------------------------------
 					moveFocusCellToNext( true ) ;
 				}
 			}
 		}	while ( bRepeat ) ;
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;
@@ -2718,13 +2718,13 @@ int CWjkState_Ressyahensyu::OnJikokuhyouModifyEkijikokuCmdRepeat_Process( BOOL b
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdDedJikokuOrder aCdJikokuOrder ;
@@ -2734,33 +2734,33 @@ int CWjkState_Ressyahensyu::OnJikokuhyouModifyEkijikokuCmdRepeat_Process( BOOL b
 			getCWndDcdGrid()->getYColSpecOfFocus() ) ;
 		if ( aCdJikokuOrder.getIsNull() )
 		{
-			iRv = -1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ�
+			iRv = -1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない
 		}
 	}
-	//aCdJikokuOrder = �w��̃Z���ɑΉ�����w����Order�x
+	//aCdJikokuOrder = 指定のセルに対応する『時刻Order』
 	if ( iRv >= 0 )
 	{
 		if ( getCWndDcdGrid()->getEkijikokuModifyOperation2().isNull() )
 		{
-			iRv = -1 ;	//	�O��́u�w�����ύX�v�������ł��B
+			iRv = -1 ;	//	前回の「駅時刻変更」が無効です。
 		}
 	}
 
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		{
 				// --------------------------------
-				//	�w�����ύX�̓�������s
+				//	駅時刻変更の動作を実行
 				// --------------------------------
 				int iResult = getCWndDcdGrid()->execCdModifyEkijikokuCmd(
 					pCmd , 
 					aCdJikokuOrder ) ;
 				if  ( iResult >= 0 )
 				{
-					//	�t�H�[�J�X�Z�������ֈڂ��܂��B
+					//	フォーカスセルを次へ移します。
 					moveFocusCellToNext( true ) ;
 				}
 		}
@@ -2779,13 +2779,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdDedJikokuOrder aCdJikokuOrder ;
@@ -2798,14 +2798,14 @@ int CWjkState_Ressyahensyu::
 			iRv = -1 ;
 		}
 	}
-	//aCdJikokuOrder = �w��̃Z���ɑΉ�����w����Order�x
+	//aCdJikokuOrder = 指定のセルに対応する『時刻Order』
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		const CentDedRessyaCont* pCentDedRessyaCont  =  getCentDedRessyaCont() ;
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
@@ -2817,19 +2817,19 @@ int CWjkState_Ressyahensyu::
 				aCdJikokuOrder ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		{
 			moveFocusCellToNext( false ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;
@@ -2846,13 +2846,13 @@ OnJikokuhyouEkijikokuDecNoMove_Process( BOOL bQueryEnable )
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdDedJikokuOrder aCdJikokuOrder ;
@@ -2865,14 +2865,14 @@ OnJikokuhyouEkijikokuDecNoMove_Process( BOOL bQueryEnable )
 			iRv = -1 ;
 		}
 	}
-	//aCdJikokuOrder = �w��̃Z���ɑΉ�����w����Order�x
+	//aCdJikokuOrder = 指定のセルに対応する『時刻Order』
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		const CentDedRessyaCont* pCentDedRessyaCont  =  getCentDedRessyaCont() ;
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
@@ -2884,13 +2884,13 @@ OnJikokuhyouEkijikokuDecNoMove_Process( BOOL bQueryEnable )
 				aCdJikokuOrder ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;
@@ -2903,7 +2903,7 @@ int CWjkState_Ressyahensyu::
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	CDcdGridCell*	pCDcdGridCell = NULL ;
 	if ( iRv >= 0 )
@@ -2911,25 +2911,25 @@ int CWjkState_Ressyahensyu::
 		pCDcdGridCell = getCWndDcdGrid()->getCFocus()->getFocusCell() ;
 		if ( pCDcdGridCell == NULL )
 		{
-			iRv = -11  ;	//	�Z���̏ꏊ���s��
+			iRv = -11  ;	//	セルの場所が不正
 		}
 	}
-	//pCDcdGridCell = �ҏW���̃Z��
+	//pCDcdGridCell = 編集中のセル
 	
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		{
 			moveFocusCellToNext( false ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;
@@ -2942,7 +2942,7 @@ int CWjkState_Ressyahensyu::
 {
 	int iRv = 0 ;
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	CDcdGridCell*	pCDcdGridCell = NULL ;
 	if ( iRv >= 0 )
@@ -2950,25 +2950,25 @@ int CWjkState_Ressyahensyu::
 		pCDcdGridCell = getCWndDcdGrid()->getCFocus()->getFocusCell() ;
 		if ( pCDcdGridCell == NULL )
 		{
-			iRv = -11  ;	//	�Z���̏ꏊ���s��
+			iRv = -11  ;	//	セルの場所が不正
 		}
 	}
-	//pCDcdGridCell = �ҏW���̃Z��
+	//pCDcdGridCell = 編集中のセル
 	
 	// ****************************************************************
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		{
 			moveFocusCellToPrev( false ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;
@@ -2983,13 +2983,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdDedJikokuOrder aCdJikokuOrder ;
@@ -3002,14 +3002,14 @@ int CWjkState_Ressyahensyu::
 			iRv = -1 ;
 		}
 	}
-	//aCdJikokuOrder = �w��̃Z���ɑΉ�����w����Order�x
+	//aCdJikokuOrder = 指定のセルに対応する『時刻Order』
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		const CentDedRessyaCont* pCentDedRessyaCont  =  getCentDedRessyaCont() ;
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
@@ -3021,19 +3021,19 @@ int CWjkState_Ressyahensyu::
 				aCdJikokuOrder ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// --------------------------------
-		//	�t�H�[�J�X���ړ�
+		//	フォーカスを移動
 		// --------------------------------
 		{
 			moveFocusCellToNext( false ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;
@@ -3050,13 +3050,13 @@ int CWjkState_Ressyahensyu::
 	if ( !bQueryEnable ){	ppCmd = &pCmd ;	}
 
 	// ****************************************************************
-	//	�R�}���h�̗L���E��������
+	//	コマンドの有効・無効判定
 	// ****************************************************************
 	if ( iRv >= 0 )
 	{
 		if ( !getCWndDcdGrid()->createCmd( CWndJikokuhyou::ECreateCmd_Select , ppCmd ) )
 		{
-			iRv = -1 ;	//	��ԑI���ʒu������������܂���B
+			iRv = -1 ;	//	列車選択位置が正しくありません。
 		}
 	}
 	CdDedJikokuOrder aCdJikokuOrder ;
@@ -3069,14 +3069,14 @@ int CWjkState_Ressyahensyu::
 			iRv = -1 ;
 		}
 	}
-	//aCdJikokuOrder = �w��̃Z���ɑΉ�����w����Order�x
+	//aCdJikokuOrder = 指定のセルに対応する『時刻Order』
 	if ( !bQueryEnable && iRv >= 0 )
 	{
 		// ****************************************************************
-		//	�R�}���h�̎��s
+		//	コマンドの実行
 		// ****************************************************************
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�̗�Ԃ�ҏW
+		//	コマンドオブジェクトの列車を編集
 		// --------------------------------
 		const CentDedRessyaCont* pCentDedRessyaCont  =  getCentDedRessyaCont() ;
 		Mu<CentDedRessya*>* muCentDedRessya =  pCmd->getCaMuiSelect()->getMuPtr() ;
@@ -3088,13 +3088,13 @@ int CWjkState_Ressyahensyu::
 				aCdJikokuOrder ) ;
 		}
 		// --------------------------------
-		//	�R�}���h�I�u�W�F�N�g�����s
+		//	コマンドオブジェクトを実行
 		// --------------------------------
 		{
 			getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 		}
 		// ****************************************************************
-		//	�G���[���b�Z�[�W
+		//	エラーメッセージ
 		// ****************************************************************
 	}
 	return iRv ;

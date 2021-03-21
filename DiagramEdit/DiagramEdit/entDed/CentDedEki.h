@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -84,25 +84,25 @@ namespace entDed{
 // ****************************************************************
 /**
 @brief
-  DiagramEdit �́A�H���ɂ���w�ЂƂ�\���܂��B
+  DiagramEdit の、路線にある駅ひとつを表します。
 
-  �����Ƃ��āA�w�w���x�E�w�w�����`���x�E�w�w�K�́x��ێ����܂��B
-  �܂��ACentDedEkiTrackCont ���܂��܂��B
+  属性として、『駅名』・『駅時刻形式』・『駅規模』を保持します。
+  また、CentDedEkiTrackCont を包含します。
 
-����
+制約
  -------------------------------- 
 
 
-����̃G���[�����E�C��
+操作のエラー検査・修正
  -------------------------------- 
 
-���e�I�u�W�F�N�g�̕ύX(setParent()):  adjust()�����s����
+○親オブジェクトの変更(setParent()):  adjust()を実行する
 
-���㏑��(operator=) : ���̃I�u�W�F�N�g���A�e�I�u�W�F�N�gCentDedEkiCont �̎q�ł���ꍇ�ŁA������� CentDedEkiCont::set() �ŃG���[�ɂȂ�ꍇ�A��O�X���[�ɂȂ�܂��B
+△上書き(operator=) : このオブジェクトが、親オブジェクトCentDedEkiCont の子である場合で、代入元が CentDedEkiCont::set() でエラーになる場合、例外スローになります。
 
-����ɍ����悤�ɑ������C��(adjust)
+制約に合うように属性を修正(adjust)
  -------------------------------- 
-��CentDedEkiTrackCont(�Ԑ��R���e�i)�ɁAadjust()���Ϗ�����B
+○CentDedEkiTrackCont(番線コンテナ)に、adjust()を委譲する。
 
 */
 class CentDedEki : public CChildBase
@@ -110,86 +110,86 @@ class CentDedEki : public CChildBase
 	typedef CChildBase	super ;
 public:
 	// ****************************************************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ****************************************************************
 	/**
-		�w�w�����`���x��\���񋓂ł��B
+		『駅時刻形式』を表す列挙です。
 	 */
 	enum EEkijikokukeisiki
 	{
 		/**
-			�������݂̂̕\���B(�K��l)
+			発時刻のみの表示。(規定値)
 		
-			(�������A�I���w�ł͒������݂̂�\�����܂�)
+			(ただし、終着駅では着時刻のみを表示します)
 		 */
 		Jikokukeisiki_Hatsu = 0 ,
 		
 		/**
-			�����\���B
+			発着表示。
 		
-			����E���Ƃ��A���������̎�����\���B
-			(�n���w�E�I���w�ł�����������\��)
+			下り・上りとも、発着両方の時刻を表示。
+			(始発駅・終着駅でも発着両方を表示)
 		 */
 		Jikokukeisiki_Hatsuchaku ,
 
 		/**
-			���蒅�\���B
+			下り着表示。
 		
-			-	�����Ԃł́A�������݂̂̕\���B
-			-	����Ԃł́A�������݂̂̕\���B
-			(�������A�I���w�ł͒������݂̂�\�����܂�)
+			-	下り列車では、着時刻のみの表示。
+			-	上り列車では、発時刻のみの表示。
+			(ただし、終着駅では着時刻のみを表示します)
 		 */
 		Jikokukeisiki_KudariChaku ,
 		
 		/**
-			��蒅�\���B
+			上り着表示。
 		
-			-	�����Ԃł́A�������݂̂̕\���B
-			(�������A�I���w�ł͒������݂̂�\�����܂�)
-			-	����Ԃł́A�������݂̂̕\���B
+			-	下り列車では、発時刻のみの表示。
+			(ただし、終着駅では着時刻のみを表示します)
+			-	上り列車では、着時刻のみの表示。
 		 */
 		Jikokukeisiki_NoboriChaku ,
 		
 	};
 	
 	/**
-		�w�w�K�́x��\���񋓂ł��B
+		『駅規模』を表す列挙です。
 	 */
 	enum EEkikibo
 	{
 		/**
-			��ʉw�B(�K��l)
+			一般駅。(規定値)
 		 */
 		Ekikibo_Ippan = 0 ,
 		/**
-			��v�w�B
+			主要駅。
 		
-			��v�w�ł́A�_�C���O�����̌r���������ɂȂ�܂��B
+			主要駅では、ダイヤグラムの罫線が太線になります。
 		 */
 		Ekikibo_Syuyou ,
 	};
 	
 	/**
-		�_�C���O������ԏ��\��
+		ダイヤグラム列車情報表示
 	*/
 	enum EDiagramRessyajouhouHyouji
 	{
 		/**
-			�n���w�̏ꍇ�ɂ͕\��(����l)
+			始発駅の場合には表示(既定値)
 		*/
 		DiagramRessyajouhouHyouji_Origin ,
 		/**
-			��ɕ\������B
+			常に表示する。
 		*/
 		DiagramRessyajouhouHyouji_Anytime ,
 		/**
-			�\�����Ȃ��B
+			表示しない。
 		*/
 		DiagramRessyajouhouHyouji_Not ,
 	};
 
 	/**
-		���̃N���X���X���[�����O
+		このクラスがスローする例外
 	*/
 	class LException
 	{
@@ -198,53 +198,53 @@ public:
 
 private:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-		�w��
+		駅名
 	
-		�K��l�́A�󕶎���B
+		規定値は、空文字列。
 	 */
 	std::string	m_strEkimei ;
 	
 	/**
-		�w�����`���B
+		駅時刻形式。
 	
-		�K��l�́A Jikokukeisiki_Hatsuhyouji 
+		規定値は、 Jikokukeisiki_Hatsuhyouji 
 	 */
 	EEkijikokukeisiki	m_eEkijikokukeisiki ;
 	
 	/**
-		�w�w�K�́x��\���񋓂ł��B
+		『駅規模』を表す列挙です。
 	
-		�K��l�́A Ekikibo_Ippan 
+		規定値は、 Ekikibo_Ippan 
 	 */
 	EEkikibo	m_eEkikibo ;
 	
 	/**
-		���E������B
+		境界線あり。
 	
-	  ���̑����� true �̉w�ł́A�����\��ʂ�
-		��������̉��ɁA�������E����`�悵�܂��B
-	  ���̑����́A�w�r���[�Ǝ����\�r���[�ɓK�p����܂��B
+	  この属性が true の駅では、時刻表画面の
+		下り方向の下に、太い境界線を描画します。
+	  この属性は、駅ビューと時刻表ビューに適用されます。
 	 */
 	bool m_bKyoukaisen ;
 
 	/**
-		�_�C���O������ԏ��\���i����j
+		ダイヤグラム列車情報表示（下り）
 	
-		����l�� DiagramRessyajouhouHyouji_Origin �ł��B
+		既定値は DiagramRessyajouhouHyouji_Origin です。
 	*/	
 	EDiagramRessyajouhouHyouji m_eDiagramRessyajouhouHyoujiKudari ;
 	
 	/**
-		�_�C���O������ԏ��\���i���j
+		ダイヤグラム列車情報表示（上り）
 	
-		���̑����� true �̉w�ł́A�_�C���O�����r���[�ɂ����āA
-		�����Ԃ̗�ԏ���`�悵�܂��B
+		この属性が true の駅では、ダイヤグラムビューにおいて、
+		下り列車の列車情報を描画します。
 
-		����l�� DiagramRessyajouhouHyouji_Origin �ł��B
+		既定値は DiagramRessyajouhouHyouji_Origin です。
 	*/
 	EDiagramRessyajouhouHyouji m_eDiagramRessyajouhouHyoujiNobori ;
 
@@ -253,65 +253,65 @@ private:
 	///@}
 private:
 	// ********************************
-	///@name ���
+	///@name 包含
 	// ********************************
 	///@{
 	/**
 	@brief
-		CentDedEki �ɕ�܂���� CentDedEkiTrackCont
+		CentDedEki に包含される CentDedEkiTrackCont
 	*/
 	class CXentDedEkiTrackCont : public CentDedEkiTrackCont
 	{
 	public:
 		// ********************************
-		//	�R���X�g���N�^
+		//	コンストラクタ
 		// ********************************
 		
 
 	public:
 		// ********************************
-		///@name CentDedEkiTrackCont-�֘A
+		///@name CentDedEkiTrackCont-関連
 		// ********************************
 		///@{
 		/**
 		@return
-			�O���� CentDedEki �I�u�W�F�N�g��Ԃ��܂��B
+			外側の CentDedEki オブジェクトを返します。
 		*/
 		virtual CentDedEki* getEki();
 		/**
 		@return
-			�O���� CentDedEki �I�u�W�F�N�g��Ԃ��܂��B
+			外側の CentDedEki オブジェクトを返します。
 		*/
 		virtual const CentDedEki* getEki()const;
 	};
 	
-	/** CentDedEki �ɕ�܂���� CentDedEkiTrackCont */	
+	/** CentDedEki に包含される CentDedEkiTrackCont */	
 	CXentDedEkiTrackCont m_EkiTrackCont ;
 	///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	CentDedEki() ;
 	
 	/**
 	 @param strEkimei [in]
-		�w��
+		駅名
 	 @param eEkijikokukeisiki [in]
-		�w�����`���B
+		駅時刻形式。
 	 @param eEkikibo [in]
-		�w�w�K�́x��\���񋓂ł��B
+		『駅規模』を表す列挙です。
 	 @param bKyoukaisen [in]
-		���E������B
-	  ���̑����� true �̉w�ł́A�����\��ʂ�
-		��������̉��ɁA�������E����`�悵�܂��B
-	  ���̑����́A�w�r���[�Ǝ����\�r���[�ɓK�p����܂��B
+		境界線あり。
+	  この属性が true の駅では、時刻表画面の
+		下り方向の下に、太い境界線を描画します。
+	  この属性は、駅ビューと時刻表ビューに適用されます。
 	  
 	@param eDiagramRessyajouhouHyoujiKudari
-		�_�C���O������ԏ��\���i����j
+		ダイヤグラム列車情報表示（下り）
 	@param eDiagramRessyajouhouHyoujiNobori
-		�_�C���O������ԏ��\���i���j
+		ダイヤグラム列車情報表示（上り）
 	*/
 	CentDedEki( const std::string& strEkimei , 
 			EEkijikokukeisiki	eEkijikokukeisiki ,
@@ -323,11 +323,11 @@ private:
 				= DiagramRessyajouhouHyouji_Origin ) ;
 
 	/** 
-		���̃I�u�W�F�N�g���A�e�I�u�W�F�N�gCentDedEkiCont ��
-		�q�ł���ꍇ�ŁA������� CentDedEkiCont::set() �ŃG���[��
-		�Ȃ�ꍇ�A��O�X���[�ɂȂ�܂��B
+		このオブジェクトが、親オブジェクトCentDedEkiCont の
+		子である場合で、代入元が CentDedEkiCont::set() でエラーに
+		なる場合、例外スローになります。
 	@param value 
-		�����
+		代入元
 	@exception LException 
 	*/
 	CentDedEki& operator=( const CentDedEki& value ) ;
@@ -337,16 +337,16 @@ private:
 
 public:
 	// ********************************
-	///@name CParentBase-����
+	///@name CParentBase-操作
 	// ********************************
 	///@{
-	/** ���e�I�u�W�F�N�g�̕ύX(setParent()):  adjust()�����s���� */
+	/** ○親オブジェクトの変更(setParent()):  adjust()を実行する */
 	virtual void setParent( CParentBase* pParent ) ;
 	///@}
 
 public:
 	// ********************************
-	///@name CentDedEki-����
+	///@name CentDedEki-属性
 	// ********************************
 	///@{
 	/** @see m_strEkimei */
@@ -385,7 +385,7 @@ public:
 
 	///@}
 	// ********************************
-	///@name CentDedEki-���
+	///@name CentDedEki-包含
 	// ********************************
 	///@{
 	/** @see m_EkiTrackCont  */
@@ -396,14 +396,14 @@ public:
 	///@}
 	
 	// ********************************
-	///@name CentDedEki-����
+	///@name CentDedEki-操作
 	// ********************************
 	///@{
 	/**
-		this �̑���������ɔ����Ă���ꍇ�A����ɍ����悤�ɁA������
-		�C�����܂��B
+		this の属性が制約に反している場合、制約に合うように、属性を
+		修正します。
 
-		���̃N���X�ł́A�����͂���܂���B
+		このクラスでは、処理はありません。
 
 	*/
 	void adjust() ;

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -77,7 +77,7 @@ namespace entDgr{
 //	CEnumRessyasen
 // ****************************************************************
 	//*******************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	//*******************************
 CEnumRessyasen::CEnumRessyasen( 
 		const CentDedDgrDia* pCentDedDgrDia ,
@@ -102,9 +102,9 @@ void CEnumRessyasen::onCentDedDgrRessya(
 		int iRessyaIdx ,
 		const CentDedDgrRessya* pCentDedDgrRessya ) 
 {
-	//	�ΏۂƂȂ�`��̈���A
-	//	�w�_�C���O�����G���e�B�e�B���W�n�x�ŕێ����܂��B
-	//	����́A����`����s���͈͂�\���Ă��܂��B
+	//	対象となる描画領域を、
+	//	『ダイヤグラムエンティティ座標系』で保持します。
+	//	これは、今回描画を行う範囲を表しています。
 	CdDcdZoneXy	zonexyDgrZone = m_zonexyDgrZone ;
 
 	const Mu<const CentDedDgrRessyasen*>* pMuCentDedDgrRessyasen = 
@@ -114,12 +114,12 @@ void CEnumRessyasen::onCentDedDgrRessya(
 			iRessyasenIdx ++ )
 	{
 		// --------------------------------
-		//	��Ԑ����̏���
+		//	列車線毎の処理
 		// --------------------------------
 		const CentDedDgrRessyasen*	pCentDedDgrRessyasen = 	
 			pMuCentDedDgrRessyasen->get( iRessyasenIdx ) ;
 		// --------------------------------
-		//	��Ԑ����͂ދ�`�̈�����߂�
+		//	列車線を囲む矩形領域を求める
 		// --------------------------------
 		CdDcdZoneXy	zonexyDgrRessyasen ;
 		CdDcdPosXy	posRessyasenKiten ;
@@ -145,14 +145,14 @@ void CEnumRessyasen::onCentDedDgrRessya(
 			{
 				if ( zoneDgrX.getSize() == 0 )
 				{
-					//	�n�_�ƏI�_��X���W������̏ꍇ(������)�́A��O�I�ɕ���1�Ƃ��܂�
-					//	(0�Ƃ��Ă��܂��ƁA�����`�悳��܂���)
+					//	始点と終点のX座標が同一の場合(垂直線)は、例外的に幅を1とします
+					//	(0としてしまうと、線が描画されません)
 					zoneDgrX.setSize( 1 ) ;
 				}
 				if ( zoneDgrY.getSize() == 0 )
 				{
-					//	�n�_�ƏI�_��Y���W������̏ꍇ(������)�́A��O�I�ɕ���1�Ƃ��܂�
-					//	(0�Ƃ��Ă��܂��ƁA�����`�悳��܂���)
+					//	始点と終点のY座標が同一の場合(水平線)は、例外的に幅を1とします
+					//	(0としてしまうと、線が描画されません)
 					zoneDgrY.setSize( 1 ) ;
 				}
 			}
@@ -164,13 +164,13 @@ void CEnumRessyasen::onCentDedDgrRessya(
 
 		CdDcdZoneXy	zonexyDgrRessyasenOnDgrZone = zonexyDgrZone.CrossZone( zonexyDgrRessyasen ) ;
 		//zonexyDgrRessyasenOnDgrZone
-		//	��Ԑ��ƕ`��̈�́A�����̈�
-		//	���̒l�̃T�C�Y��0�Ȃ�A���̗�Ԑ��͕`��\�ȗ̈�ɂ͂���܂���B
+		//	列車線と描画領域の、交差領域
+		//	この値のサイズが0なら、この列車線は描画可能な領域にはありません。
 
 		if ( zonexyDgrRessyasenOnDgrZone.getX().getSize() > 0 && 
 			zonexyDgrRessyasenOnDgrZone.getY().getSize() > 0 )
 		{
-			//	���̗�Ԑ��́A�`��\�ȉw�Ԃɂ���܂��B
+			//	この列車線は、描画可能な駅間にあります。
 			onCentDedDgrRessyasen( 
 				eRessyahoukou ,
 				iRessyaIdx ,
@@ -226,14 +226,14 @@ void CEnumRessyasen::onCentDedDgrEkiJikoku(
 }
 
 	// ********************************
-	//@name CEnumRessyasen-�֘A
+	//@name CEnumRessyasen-関連
 	// ********************************
 const CentDedDgrDia*	CEnumRessyasen::getCentDedDgrDia()
 {	
 		return m_pCentDedDgrDia ; 
 } ;
 	// ********************************
-	//@name CEnumRessyasen-����
+	//@name CEnumRessyasen-属性
 	// ********************************
 CdDcdZoneXy	CEnumRessyasen::getDgrZone()
 {
@@ -251,13 +251,13 @@ bool CEnumRessyasen::getDisplayRessyasen(  ERessyahoukou eRessyahoukou )const
 	return ( bRv ) ;
 }
 	// ********************************
-	//@name CEnumRessyasen-����
+	//@name CEnumRessyasen-操作
 	// ********************************
 void CEnumRessyasen::execute() 
 {
-	//	�ΏۂƂȂ�`��̈���A
-	//	�w�_�C���O�����G���e�B�e�B���W�n�x�ŕێ����܂��B
-	//	����́A����`����s���͈͂�\���Ă��܂��B
+	//	対象となる描画領域を、
+	//	『ダイヤグラムエンティティ座標系』で保持します。
+	//	これは、今回描画を行う範囲を表しています。
 	CdDcdZoneXy	zonexyDgrZone = m_zonexyDgrZone ;
 
 
@@ -266,16 +266,16 @@ void CEnumRessyasen::execute()
 		iRessyahoukou ++ )
 	{
 		// --------------------------------
-		//	��ԕ����̏��������s���邩�ۂ��̔���
+		//	列車方向の処理を実行するか否かの判定
 		// --------------------------------
 		ERessyahoukou	eRessyahoukou = (ERessyahoukou)iRessyahoukou ;
 		if ( !getDisplayRessyasen( eRessyahoukou ) ) 
 		{
-			//	���̕����̏����͍s���܂���B
+			//	この方向の処理は行いません。
 			continue ;
 		}
 		// --------------------------------
-		//	��ԕ������̏���
+		//	列車方向毎の処理
 		// --------------------------------
 		const Mu<const CentDedDgrRessya*>*	pMuCentDedDgrRessya = 
 			m_pCentDedDgrDia->getCentDedDgrRessyaCont( eRessyahoukou );
@@ -284,43 +284,43 @@ void CEnumRessyasen::execute()
 				 iRessyaIdx ++ )
 		{
 			// --------------------------------
-			//	��Ԗ��̏���
+			//	列車毎の処理
 			// --------------------------------
 			const CentDedDgrRessya* pCentDedDgrRessya = 
 				pMuCentDedDgrRessya->get( iRessyaIdx ) ;
 			if ( pCentDedDgrRessya->getIsNull() || 
 				pCentDedDgrRessya->getCentDedDgrRessyasenCont()->size() <= 0 )
 			{
-				//	NULL��ԁE��Ԑ��̑S���Ȃ���Ԃ͑ΏۊO
+				//	NULL列車・列車線の全くない列車は対象外
 				continue ;
 			}
 			// --------------------------------
 
 			CentDedDgrRessya	aCentDedDgrRessya( *pCentDedDgrRessya ) ;
-			//	��Ԃ̍ő��DgrX���W���_�C���O������
-			//	���[��DgrX���W�ɂȂ�܂ŁA
-			//	��ԑS�̂�DgrX���W��24���Ԃ����Z����B
+			//	列車の最大のDgrX座標＜ダイヤグラムの
+			//	左端のDgrX座標になるまで、
+			//	列車全体のDgrX座標を24時間ずつ減算する。
 			//
-			//	���̏����́A��Ԃ��_�C���O�������[��
-			//	�ׂ��ł���ꍇ�ɁA�K�v�ł��B
-			//	���Ƃ��΁A�_�C���O�����̍��[�� 00:00:00
-			//	�ɂȂ��Ă���_�C���̏ꍇ�A
-			//	23:00 ���� 01:00 �Ɍ������đ����Ă����Ԃ�
-			//	-01:00��01:00 
-			//	 23:00��25:00
-			//	�̂Q�ӏ��ɗ�Ԑ���`�悵�Ȃ��Ă͂Ȃ�܂���B
-			//	���̃��[�v�ł́A��U��Ԃ̎�����
-			//	-25:00��-23:00 
-			//	�ɂ��܂��B
+			//	この処理は、列車がダイヤグラム左端を
+			//	跨いでいる場合に、必要です。
+			//	たとえば、ダイヤグラムの左端が 00:00:00
+			//	になっているダイヤの場合、
+			//	23:00 から 01:00 に向かって走っている列車は
+			//	-01:00→01:00 
+			//	 23:00→25:00
+			//	の２箇所に列車線を描画しなくてはなりません。
+			//	このループでは、一旦列車の時刻を
+			//	-25:00→-23:00 
+			//	にします。
 			while ( !( aCentDedDgrRessya.getDgrXZone().getEndPos() < 
 				zonexyDgrZone.getX().getPos() ) )
 			{
 				aCentDedDgrRessya.modifyDgrXPos( - CdDedJikoku::TOTALSECONDS_A_DAY ) ;
 			}
 
-			//	�����ŁA24���ԉ��Z���܂��B����ɂ��A��Ԏ�����
-			//	-01:00��01:00 
-			//	�ƂȂ�܂��B
+			//	ここで、24時間加算します。これにより、列車時刻は
+			//	-01:00→01:00 
+			//	となります。
 			aCentDedDgrRessya.modifyDgrXPos( + CdDedJikoku::TOTALSECONDS_A_DAY ) ;
 
 			
@@ -329,13 +329,13 @@ void CEnumRessyasen::execute()
 				aCentDedDgrRessya.modifyDgrXPos( + CdDedJikoku::TOTALSECONDS_A_DAY ) )
 			{
 				// --------------------------------
-				//	��Ԃ̕\���ʒu�i�Q�S���ԊԊu�j���̏���
+				//	列車の表示位置（２４時間間隔）毎の処理
 				// --------------------------------
 				CdDcdZone	zoneDgrXCross = zonexyDgrZone.getX().CrossZone(
 					aCentDedDgrRessya.getDgrXZone() ) ;
 				if ( zoneDgrXCross.getSize() > 0 )
 				{
-					//	���̗�Ԃ́A�ΏۂƂȂ�`��̈���ɂ���܂��B
+					//	この列車は、対象となる描画領域内にあります。
 					onCentDedDgrRessya( 
 						eRessyahoukou ,
 						iRessyaIdx ,

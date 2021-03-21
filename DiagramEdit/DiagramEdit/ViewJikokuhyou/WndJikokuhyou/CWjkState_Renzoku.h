@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -85,75 +85,75 @@ namespace ViewJikokuhyou{ namespace WndJikokuhyou{
 // ****************************************************************
 /**
  * @brief
- *	�w�����\�x�O���b�h�E�C���h�E�́w��ԁx�̈�ł��B
- *	�w�A�����̓��[�h�x���������܂��B
+ *	『時刻表』グリッドウインドウの『状態』の一つです。
+ *	『連続入力モード』を実装します。
  */
 class CWjkState_Renzoku : 
 	public CWjkState
 {
  public:
 	// ********************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ********************************
 	typedef CWjkState	super ;
 
 private:
 	// ********************************
-	///@name	���/�W��
+	///@name	包含/集約
 	// ********************************
 	///@{
 	///@}
 
 private:
 	// --------------------------------
-	///	@name �����f�[�^
+	///	@name 内部データ
 	// --------------------------------
 	///@{
 	/**
-		���ݘA�����͒��̃Z���́AX��ԍ��EY��ԍ��ł��B
+		現在連続入力中のセルの、X列番号・Y列番号です。
 	
-		���[�h�J�n���iOnEnter�j�ƁA�V�����Z���ւ̘A�����͊J�n���ɁA
-		�t�H�[�J�X�Z���̒l��ݒ肵�܂��B
+		モード開始時（OnEnter）と、新しいセルへの連続入力開始時に、
+		フォーカスセルの値を設定します。
 	
 		OnKeyDown() : 
-		�Z���ɐ����Q���̓��͂����������Ƃ��ɂ́A
-		���̕�������擾���A�w�������X�V���܂��B
-		���̌�AstartEditCell() �ŁA�t�H�[�J�X�Z�����P���Ɉړ����܂��B
+		セルに数字２桁の入力が完了したときには、
+		その文字列を取得し、駅時刻を更新します。
+		その後、startEditCell() で、フォーカスセルを１つ下に移動します。
 	
 		OnSetFocusCell() : 
-		�t�H�[�J�X�Z�������̒l�ƈقȂ�Z���Ɉړ������ꍇ�́A
-		�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-		�ɑJ�ڂ��܂��B
+		フォーカスセルがこの値と異なるセルに移動した場合は、
+		『連続入力モード』->『列車編集モード』
+		に遷移します。
 	*/
 	int m_iXColumnNumberFocus ;
 
 	/**
-		���͒��̕��B
+		入力中の分。
 	*/
 	std::string m_strMinutes ;
 	///@}
  private:
 	// --------------------------------
-	///@name OnUpdate�����֐�
+	///@name OnUpdate下請関数
 	// --------------------------------
 	///@{
 	/**
-	OnUpdate() �̉����֐��ł��B
-	�r���[�����S�ɍX�V���܂��B
-	OnUpdate() �� pHint �� NULL �̏ꍇ�̏������s���܂��B
+	OnUpdate() の下請関数です。
+	ビューを完全に更新します。
+	OnUpdate() で pHint が NULL の場合の処理を行います。
 
-	���̂悤�ȍX�V�����������ꍇ�́A
-	�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-	�ɑJ�ڂ��܂��B
-	OnUpdate() �́A�w��ԕҏW���[�h�x�ɈϏ����܂��B
+	このような更新が発生した場合は、
+	『連続入力モード』->『列車編集モード』
+	に遷移します。
+	OnUpdate() は、『列車編集モード』に委譲します。
 	*/
 	void OnUpdate_All() ;
 
 
 	/**
-	OnUpdate() �̉����֐��ł��B
-	OnUpdate() �� pHint �� 
-	CRfEditCmd_Ressya �I�u�W�F�N�g�̏ꍇ�̏������s���܂��B
+	OnUpdate() の下請関数です。
+	OnUpdate() で pHint が 
+	CRfEditCmd_Ressya オブジェクトの場合の処理を行います。
  	*/
 	void OnUpdate_CentDedRessya( 
 		Ou<CRfEditCmd_Ressya> pCommand ) ;
@@ -162,57 +162,57 @@ private:
 	///@}
  private:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 	/**
-	�����̐��K�����s���܂��B
+	属性の正規化を行います。
 
-	- ��[�t�H�[�J�X�Z�����ҏW����Ԃ̒��������ł͂Ȃ�]Ressyahensyu�ɑJ��
-	- ��[�t�H�[�J�X�ʒu�̉w����Ourder�ȑO�ɁA�w�����̓��͂��ꂽ�w������Ȃ�]Ressyahensyu�ɑJ��
+	- ○[フォーカスセルが編集中列車の着発時刻ではない]Ressyahensyuに遷移
+	- ○[フォーカス位置の駅時刻Ourder以前に、駅時刻の入力された駅が一つもない]Ressyahensyuに遷移
 	*/
 	bool update_adjustProp() ;
 
 	/**
-		�����ɉ����āA��ʕ\�����X�V���܂��B
+		属性に応じて、画面表示を更新します。
 
-		- 1. �ҏW������A�w�����ōX�V
-		- 2. �ҏW���̉w����Order�ɑ΂��āA�u���O�̉w�����̎�+�ҏW���̕��v��ݒ�
+		- 1. 編集中列を、駅時刻で更新
+		- 2. 編集中の駅時刻Orderに対して、「直前の駅時刻の時+編集中の分」を設定
 
 	@param bOnExit
-		- false : onExit()�ȊO�̓�����s���܂��B
-			�u2. �ҏW���̉w����Order�ɑ΂��āA�u���O�̉w�����̎�+�ҏW���̕��v��ݒ�v
-			�̏������s���܂��B
-		- true:   onExit() ���̓�����s���܂��B
-			�u2. �ҏW���̉w����Order�ɑ΂��āA�u���O�̉w�����̎�+�ҏW���̕��v��ݒ�v
-			�̏����͍s���܂���B
+		- false : onExit()以外の動作を行います。
+			「2. 編集中の駅時刻Orderに対して、「直前の駅時刻の時+編集中の分」を設定」
+			の処理も行います。
+		- true:   onExit() 時の動作を行います。
+			「2. 編集中の駅時刻Orderに対して、「直前の駅時刻の時+編集中の分」を設定」
+			の処理は行いません。
 	*/
 	bool update_updateScreen(bool bOnExit=false) ;
 
 	/**
-		�����̐��K���ƁA��ʕ\���X�V���s���܂��B
+		属性の正規化と、画面表示更新を行います。
 	*/
 	bool update() ;
 
 	/**
-	�A�����̓��[�h�ɂ�����A�J�����g�Z���̎��̃Z�����v�Z���܂��B
-	�Ώۂ́A�w�����̃Z���Ɍ��肳��܂��B
+	連続入力モードにおける、カレントセルの次のセルを計算します。
+	対象は、駅時刻のセルに限定されます。
 	@param pcellCurrent [in]
-		�J�����g�Z�����w�肵�Ă��������B
+		カレントセルを指定してください。
 	@param iSign [in]
-		�ړ��������w�肵�Ă��������B
-		-	+1 ;	//	�wOrder����������ق��Ɉړ����܂��B
-		-	-1 ;	//	�wOrder����������ق��Ɉړ����܂��B
+		移動方向を指定してください。
+		-	+1 ;	//	駅Orderが増加するほうに移動します。
+		-	-1 ;	//	駅Orderが減少するほうに移動します。
 	@return
-		���̃Z��������ł���΁A���̃Z���̃I�u�W�F�N�g��Ԃ��܂��B
-		����ł��Ȃ��ꍇ�́ANULL��Ԃ��܂��B
+		次のセルが決定できれば、そのセルのオブジェクトを返します。
+		決定できない場合は、NULLを返します。
 	*/
 	CDcdGridCell* calcCellToNext( CDcdGridCell* pcellCurrent , int iSign ) ;
 	///@}
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CWjkState_Renzoku( 
 		CWndJikokuhyou*	pCWndDcdGrid );
@@ -223,123 +223,123 @@ protected:
 	//	CWjkState
 	// ********************************
 	// ********************************
-	///@name CWjkState-����
+	///@name CWjkState-操作
 	// ********************************
 	///@{
 	/**
 	 @return
-		���̏�ԂɑJ�ډ\�ł���� 0 �ȏ�ł��B
-		-	-1 ;	//	�Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
-		-	-2 ;	//	�Z���̈ʒu���O�ɁA�w�������ݒ肳��Ă��Ȃ�
+		この状態に遷移可能であれば 0 以上です。
+		-	-1 ;	//	セルの位置が、特定の列車の特定の時刻の場所ではない。
+		-	-2 ;	//	セルの位置より前に、駅時刻が設定されていない
 	
-	�y�I�[�o���C�h�z
+	【オーバライド】
 
-	�ȉ��̏����̂P�ł��������Ă���ꍇ�́A��ԑI�����[�h��
-	�J�n�ł��܂���B
+	以下の条件の１つでも満たしている場合は、列車選択モードは
+	開始できません。
 
-	- �Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
-	- �Z���̈ʒu���O�ɁA�w�������ݒ肳��Ă��Ȃ�
-	- �Z���̈ʒu���A�w�����̍ŉ��i�̃Z��
+	- セルの位置が、特定の列車の特定の時刻の場所ではない。
+	- セルの位置より前に、駅時刻が設定されていない
+	- セルの位置が、駅時刻の最下段のセル
 	
 	*/
 	virtual int canEnter() ;
 
 	/**
-		���̏�Ԃւ̓��ꓮ����s���܂��B
+		この状態への入場動作を行います。
 	
-		CWndJikokuhyou �́A�w�J�����g��ԁx��this �ɐݒ肵��
-		����ɁA���̊֐����Ăяo���܂��B
+		CWndJikokuhyou は、『カレント状態』をthis に設定した
+		直後に、この関数を呼び出します。
 	
-		�y�I�[�o���C�h�z
+		【オーバライド】
 	
-		m_iXColumnNumberFocus ���t�H�[�J�X�Z���ŕύX���܂��B
+		m_iXColumnNumberFocus をフォーカスセルで変更します。
 
-		m_strMinutes �͋󕶎���Ƃ��܂��B
+		m_strMinutes は空文字列とします。
 
-		���̂����ŁA�\�����X�V���܂��B
+		そのうえで、表示を更新します。
 
-		�ȉ��̏����̂P�ł��������Ă���ꍇ�́A��ԑI�����[�h��
-		�J�n�ł��܂���B
+		以下の条件の１つでも満たしている場合は、列車選択モードは
+		開始できません。
 	
-		- �Z���̈ʒu���A����̗�Ԃ̓���̎����̏ꏊ�ł͂Ȃ��B
-		- �Z���̈ʒu���O�ɁA�w�������ݒ肳��Ă��Ȃ�
-		- �Z���̈ʒu���A�w�����̍ŉ��i�̃Z��
+		- セルの位置が、特定の列車の特定の時刻の場所ではない。
+		- セルの位置より前に、駅時刻が設定されていない
+		- セルの位置が、駅時刻の最下段のセル
 	
-		���̏ꍇ�́A�����Ɂw��ԕҏW���[�h�x�ɑJ�ڂ��܂��B
+		この場合は、直ちに『列車編集モード』に遷移します。
 	*/
 	virtual void onEnter() ;
 	/**
-		���̏�Ԃ���̑ޏꓮ����s���܂��B
+		この状態からの退場動作を行います。
 	
-		CWndJikokuhyou �́A�w�J�����g��ԁx��this ���瑼�ɐݒ肷��
-		���O�ɁA���̊֐����Ăяo���܂��B
+		CWndJikokuhyou は、『カレント状態』をthis から他に設定する
+		直前に、この関数を呼び出します。
 	
-		�y�I�[�o���C�h�z
+		【オーバライド】
 	
-		m_iXColumnNumberFocus �ɑΉ��������X�V���܂��B
+		m_iXColumnNumberFocus に対応する列を更新します。
 	*/
 	virtual void onExit() ;
 	///@}
 	// ********************************
-	///@name CView ����̈Ϗ�
+	///@name CView からの委譲
 	// ********************************
 	///@{
 	/**
-		pHint �� CHint_CentDedRessya �ŁA�Ȃ�����
-		pCHint_CentDedRessya.m_eOperation == OperationUpdate �̏ꍇ�́A
-		��̍Đݒ���s���܂��B
-		���̌�A�t�H�[�J�X�Z���̈ʒu�ɁA
-		���̏����ݒ���s���܂��B
+		pHint が CHint_CentDedRessya で、なおかつ
+		pCHint_CentDedRessya.m_eOperation == OperationUpdate の場合は、
+		列の再設定を行います。
+		その後、フォーカスセルの位置に、
+		時の初期設定を行います。
 	
-		���̑��̏ꍇ�́A
-		�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-		�ɑJ�ڂ��܂��BOnUpdate() �͐V�������[�h�ɈϏ����܂��B
+		その他の場合は、
+		『連続入力モード』->『列車編集モード』
+		に遷移します。OnUpdate() は新しいモードに委譲します。
 	*/
 	virtual void OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint);
 	///@}
 	// ********************************
-	///@name ���b�Z�[�W�n���h���E�R�}���h�n���h��-CWnd
+	///@name メッセージハンドラ・コマンドハンドラ-CWnd
 	// ********************************
 	///@{
 
 	/**
-		"0"�`"9" ,BackSpace : ���ݓ��͒��̃Z���̕�������X�V���A
-		��������Z���ɐݒ肵�܂��B
+		"0"～"9" ,BackSpace : 現在入力中のセルの文字列を更新し、
+		文字列をセルに設定します。
 	
-		���������S�����ɂȂ����i�������͂������j�ꍇ�́A���̕������擾���A
-		�����ɕϊ����܂��B
-		���̎������A���̗�Ԃ̒��O�̎��������������i�O�́j�ꍇ�́A
-		�P���Ԃ����Z���܂��B
+		文字数が４文字になった（時刻入力が完成）場合は、分の部分を取得し、
+		時刻に変換します。
+		この時刻が、その列車の直前の時刻よりも小さい（前の）場合は、
+		１時間を加算します。
 	
-		���߂��������A�h�L�������g�ɔ��f���A
-		UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
-		���̂Ƃ��� pHint �́A
-		CHint_CentDedRessya �I�u�W�F�N�g
-		( m_eOperation == OperationUpdate ) �Ƃ��܂��B
+		求めた時刻を、ドキュメントに反映し、
+		UpdateAllSubDocview() で、ドキュメントの反映を行います。
+		このときの pHint は、
+		CHint_CentDedRessya オブジェクト
+		( m_eOperation == OperationUpdate ) とします。
 	
-		startFocusCell() �ŁA�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
-		���̃t�H�[�J�X�ʒu���w�w�����x�łȂ��̂Ȃ�A
-		���[�h��
-		�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-		�ɑJ�ڂ��܂��B
+		startFocusCell() で、フォーカスを次の位置に移動します。
+		次のフォーカス位置が『駅時刻』でないのなら、
+		モードは
+		『連続入力モード』->『列車編集モード』
+		に遷移します。
 	
 		"BS" :
 	
-		[����1�������͂��Ă���]
-		���̂P�������폜���āA
-		��������Z���ɐݒ肵�܂��B
+		[分を1文字入力している]
+		分の１文字を削除して、
+		文字列をセルに設定します。
 		
-		[�����O�������͂��Ă���]
-		startFocusCell() �ŁA�t�H�[�J�X��O�̈ʒu�Ɉړ����܂��B
-		���̃t�H�[�J�X�ʒu���w�w�����x�łȂ��̂Ȃ�A
-		���[�h��
-		�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-		�ɑJ�ڂ��܂��B
+		[分を０文字入力している]
+		startFocusCell() で、フォーカスを前の位置に移動します。
+		次のフォーカス位置が『駅時刻』でないのなら、
+		モードは
+		『連続入力モード』->『列車編集モード』
+		に遷移します。
 	
 		"ESC" : 
-		���[�h��
-		�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-		�ɑJ�ڂ��܂��B
+		モードを
+		『連続入力モード』->『列車編集モード』
+		に遷移します。
 	*/
 	virtual void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
 	/**
@@ -347,90 +347,90 @@ protected:
 	virtual void OnChar(UINT nChar, UINT nRepCnt, UINT nFlags);
 	// --------------------------------
 
-	/**[�w����]-[��������]
-		�t�H�[�J�X�Z���̈ʒu�́w����Order�x�� �wNull�����x�ɕύX���܂��B
-		�h�L�������g�ɔ��f���A
-		UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
-		���̂Ƃ��� pHint �́A
-		CHint_CentDedRessya �I�u�W�F�N�g
-		( m_eOperation == OperationUpdate ) �Ƃ��܂��B
+	/**[駅時刻]-[時刻消去]
+		フォーカスセルの位置の『時刻Order』を 『Null時刻』に変更します。
+		ドキュメントに反映し、
+		UpdateAllSubDocview() で、ドキュメントの反映を行います。
+		このときの pHint は、
+		CHint_CentDedRessya オブジェクト
+		( m_eOperation == OperationUpdate ) とします。
 	
-		calcCellToNext() �ŁA�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
-		���̃t�H�[�J�X�ʒu���w�w�����x�łȂ��̂Ȃ�A
-		���[�h��
-		�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-		�ɑJ�ڂ��܂��B
+		calcCellToNext() で、フォーカスを次の位置に移動します。
+		次のフォーカス位置が『駅時刻』でないのなら、
+		モードは
+		『連続入力モード』->『列車編集モード』
+		に遷移します。
 	@return	
-		-	-1 ;	//	�t�H�[�J�X�Z�����A��Ԃ̈ʒu�ł͂���܂���B
-		-	-2 ;	//	�t�H�[�J�X�Z�����A�w�����̈ʒu�ł͂���܂���B
+		-	-1 ;	//	フォーカスセルが、列車の位置ではありません。
+		-	-2 ;	//	フォーカスセルが、駅時刻の位置ではありません。
 	*/
 	virtual int OnJikokuhyouJikokuSakujo_Process( BOOL bQueryEnable );
 
-	/** [�w����]-[�ʉ�] 
-	�t�H�[�J�X�Z���̈ʒu�́w�w�����x���w�ʉ߁x�ɕύX���܂��B
-	�w�����͒������E�������Ƃ�NULL�ɂ��܂��B
+	/** [駅時刻]-[通過] 
+	フォーカスセルの位置の『駅時刻』を『通過』に変更します。
+	駅時刻は着時刻・発時刻ともNULLにします。
 
-	�h�L�������g�ɔ��f���A
-	UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
+	ドキュメントに反映し、
+	UpdateAllSubDocview() で、ドキュメントの反映を行います。
 
-	�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
+	フォーカスを次の位置に移動します。
 
-	���̃t�H�[�J�X�ʒu���w�w�����x�łȂ��̂Ȃ�A
-	���[�h��
-	�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-	�ɑJ�ڂ��܂��B
+	次のフォーカス位置が『駅時刻』でないのなら、
+	モードは
+	『連続入力モード』->『列車編集モード』
+	に遷移します。
 	*/
 	virtual int OnJikokuhyouTsuuka_Process( BOOL bQueryEnable );
 
-	/** [�w����]-[�ʉ�-���] 
-	���̊֐��́AOn...() �R�}���h�n���h���EOnUpdate...() �R�}���h�n���h����
-	���������s���܂��B
+	/** [駅時刻]-[通過-停車] 
+	この関数は、On...() コマンドハンドラ・OnUpdate...() コマンドハンドラの
+	実処理を行います。
 
-	�t�H�[�J�X�Z���̈ʒu�́w�w�����x���w��ԁx�w�^�s�Ȃ��x�w�o�R�Ȃ��x�Ȃ�A
-	�w�ʉ߁x�ɕύX���܂��B�w�����͕ύX���܂���B
+	フォーカスセルの位置の『駅時刻』が『停車』『運行なし』『経由なし』なら、
+	『通過』に変更します。駅時刻は変更しません。
 
-	�t�H�[�J�X�Z���̈ʒu���w�ʉ߁x�ŁA�w�����ɒ������E�������̂����ꂩ������Ȃ�A
-	�w��ԁx�ɕύX���܂��B�w�����͕ύX���܂���B
+	フォーカスセルの位置が『通過』で、駅時刻に着時刻・発時刻のいずれかがあるなら、
+	『停車』に変更します。駅時刻は変更しません。
 
-	�h�L�������g�ɔ��f���A
-	UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
+	ドキュメントに反映し、
+	UpdateAllSubDocview() で、ドキュメントの反映を行います。
 
-	�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
+	フォーカスを次の位置に移動します。
 
-	���̃t�H�[�J�X�ʒu���w�w�����x�łȂ��̂Ȃ�A
-	���[�h��
-	�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-	�ɑJ�ڂ��܂��B
+	次のフォーカス位置が『駅時刻』でないのなら、
+	モードは
+	『連続入力モード』->『列車編集モード』
+	に遷移します。
 
 	*/
 	virtual int OnJikokuhyouTsuukateisya_Process( BOOL bQueryEnable );
 
-	/** [�w����]-[�o�R�Ȃ�] 
-	 �t�H�[�J�X�Z���̈ʒu�́w�w�����x���w�o�R�Ȃ��x�ɕύX���܂��B
-	�h�L�������g�ɔ��f���A
-	UpdateAllSubDocview() �ŁA�h�L�������g�̔��f���s���܂��B
-	���̂Ƃ��� pHint �́A
-	CHint_CentDedRessya �I�u�W�F�N�g
-	( m_eOperation == OperationUpdate ) �Ƃ��܂��B
+	/** [駅時刻]-[経由なし] 
+	 フォーカスセルの位置の『駅時刻』を『経由なし』に変更します。
+	ドキュメントに反映し、
+	UpdateAllSubDocview() で、ドキュメントの反映を行います。
+	このときの pHint は、
+	CHint_CentDedRessya オブジェクト
+	( m_eOperation == OperationUpdate ) とします。
 
-	startFocusCell() �ŁA�t�H�[�J�X�����̈ʒu�Ɉړ����܂��B
-	���̃t�H�[�J�X�ʒu���w�w�����x�łȂ��̂Ȃ�A
-	���[�h��
-	�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-	�ɑJ�ڂ��܂��B
+	startFocusCell() で、フォーカスを次の位置に移動します。
+	次のフォーカス位置が『駅時刻』でないのなら、
+	モードは
+	『連続入力モード』->『列車編集モード』
+	に遷移します。
 	@return
-		-	-1 ;	//	�t�H�[�J�X�Z�����A��Ԃ̈ʒu�ł͂���܂���B
-		-	-2 ;	//	�t�H�[�J�X�Z�����A�w�����̈ʒu�ł͂���܂���B
+		-	-1 ;	//	フォーカスセルが、列車の位置ではありません。
+		-	-2 ;	//	フォーカスセルが、駅時刻の位置ではありません。
 	*/
 	virtual int OnJikokuhyouKeiyunasi_Process( BOOL bQueryEnable );
 
 	// --------------------------------
-	/** [�w����]-[�A������] 
+	/** [駅時刻]-[連続入力] 
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͂��łɑI������Ă��܂�
-		-	0 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͑I������Ă��܂���
-		-	-1 ;	//	���݁A���̃R�}���h�͑I���ł��܂���
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	(bQueryEnable=TRUEの場合)この項目はすでに選択されています
+		-	0 ;	//	(bQueryEnable=TRUEの場合)この項目は選択されていません
+		-	-1 ;	//	現在、このコマンドは選択できません
 	*/
 	virtual int OnJikokuhyouRenzoku_Process( BOOL bQueryEnable );
 	///@}
@@ -439,33 +439,33 @@ protected:
 	// ********************************
 	///@{
 	/**
-		�t�H�[�J�X�Z���̈ʒu���A�A�����͒��̃Z���ȊO�ɂȂ����ꍇ�́A
-		�w�A�����̓��[�h�x->�w��ԕҏW���[�h�x
-		�ɑJ�ڂ��܂��B
+		フォーカスセルの位置が、連続入力中のセル以外になった場合は、
+		『連続入力モード』->『列車編集モード』
+		に遷移します。
 	*/
 	virtual void OnSetFocusCell( CDcdGridCell* pCDcdGridCell ) ;
 
 	/**
-	  this �́AWndDcdGrid3::CSelectCell::m_bIsSelected ��
-	  �ω������Ƃ��ɁA���̉��z�֐����Ăяo���܂��B
-	  �N���X���[�U�[�́A���̉��z�֐����I�[�o���C�h���āA�K�v�ȏ�����
-	�����ł��܂��B
+	  this は、WndDcdGrid3::CSelectCell::m_bIsSelected が
+	  変化したときに、この仮想関数を呼び出します。
+	  クラスユーザーは、この仮想関数をオーバライドして、必要な処理を
+	実装できます。
 	  
-	  this �́A�N���X���[�U�[�� 
-	CWndDcdGrid::CSelect::setColumnNumberSelect() ��
-	�l��ݒ肵���Ƃ��̂ق��A
-	�L�[�{�[�h�őI���Z����ύX�����Ƃ��ɂ�
-	���̉��z�֐����Ăяo���܂��B
+	  this は、クラスユーザーが 
+	CWndDcdGrid::CSelect::setColumnNumberSelect() で
+	値を設定したときのほか、
+	キーボードで選択セルを変更したときにも
+	この仮想関数を呼び出します。
 	
-	[�I�[�o���C�h]
-		�����͂���܂���
+	[オーバライド]
+		処理はありません
 	
 	@param iXColumnNumber [in]
-		X��ԍ����w�肵�܂��B
+		X列番号を指定します。
 	@param iYColumnNumber [in]
-		X��ԍ����w�肵�܂��B
+		X列番号を指定します。
 	@param bIsSelected [in]
-		�V�����I����ԁB
+		新しい選択状態。
 	 */
 	virtual void OnChangeSelectCell( 
 		int iXColumnNumber , int iYColumnNumber , bool bIsSelected ) ;

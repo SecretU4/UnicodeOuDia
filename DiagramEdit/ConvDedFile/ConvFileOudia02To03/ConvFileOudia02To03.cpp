@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// ConvFileOudia02To03.cpp : DLL �A�v���P�[�V�����p�̃G���g�� �|�C���g���`���܂��B
+// ConvFileOudia02To03.cpp : DLL アプリケーション用のエントリ ポイントを定義します。
 //
 #include "stdafx.h"
 #include "ConvFile2Dll.h"
@@ -108,19 +108,19 @@ CONVFILEOUDIA02TO03_API void* ConvFile2Dll_getIfConvFile( void )
 
 
 // ----------------------------------------------------------------
-//	�����֐�
+//	下請関数
 // ----------------------------------------------------------------
 
 // ----------------------------------------------------------------
-//	DLL�ŗL
+//	DLL固有
 // ----------------------------------------------------------------
 /**
-  �֐��ďo���ɕԂ����߂̃��������m�ۂ��܂��B
+  関数呼出元に返すためのメモリを確保します。
 @param iBytes [in]
-  �m�ۂ���o�C�g�����w�肵�Ă��������B
+  確保するバイト数を指定してください。
 @return
-  �m�ۂ����������̈�̃A�h���X��Ԃ��܂��B
-  ���s������NULL��Ԃ��܂��B
+  確保したメモリ領域のアドレスを返します。
+  失敗したらNULLを返します。
 */
 static CHAR* ConvFile_MemAlloc( DWORD iBytes )
 {
@@ -171,7 +171,7 @@ CONVFILEOUDIA02TO03_API int ConvFile_leftToRight(
 	bool	bFormatFound = false ;
 
 	// --------------------------------
-	//	������ւ̕ϊ�
+	//	文字列への変換
 	// --------------------------------
 	string 	strSrcFileContent ;
 	string strFileType ;
@@ -183,7 +183,7 @@ CONVFILEOUDIA02TO03_API int ConvFile_leftToRight(
 			strSrcFileContent.begin() , 
 			binLeftFile , 
 			binLeftFile+iLeftFileBytes ) ;
-		//	���s�R�[�h�� '\r\n' ���� '\n' �ɕϊ�
+		//	改行コードは '\r\n' から '\n' に変換
 		strSrcFileContent = OuLib::strLfOf( strSrcFileContent ) ;
 	}
 	if ( iRv >= 0 )
@@ -194,11 +194,11 @@ CONVFILEOUDIA02TO03_API int ConvFile_leftToRight(
 		strFileTypeAppComment = aCdConnectedString2.getValue( nameFileTypeAppComment );
 	}
 	// ================================
-	//	�����񂩂�H���t�@�C���f�[�^�ւ̕ϊ�
+	//	文字列から路線ファイルデータへの変換
 	// ================================
 	CDedRosenFileData	aCDedRosenFileData ;
 	// --------------------------------
-	//	Ver.01 �� SrcFile ����H���t�@�C���f�[�^���쐬
+	//	Ver.01 の SrcFile から路線ファイルデータを作成
 	// --------------------------------
 	if ( iRv >= 0 && !bFormatFound )
 	{
@@ -210,13 +210,13 @@ CONVFILEOUDIA02TO03_API int ConvFile_leftToRight(
 				&aCDedRosenFileData , strSrcFileContent ) ;
 			if ( iResult < 0 )
 			{
-				iRv = -1 ;	//	�ϊ��O�̃t�@�C���́A���̃R�}���h�ł̕ϊ����ł��܂���B
+				iRv = -1 ;	//	変換前のファイルは、このコマンドでの変換ができません。
 			}
 		}
 	}
 
 	// --------------------------------
-	//	Ver.02 �� SrcFile ����H���t�@�C���f�[�^���쐬
+	//	Ver.02 の SrcFile から路線ファイルデータを作成
 	// --------------------------------
 	if ( iRv >= 0 && !bFormatFound )
 	{
@@ -233,17 +233,17 @@ CONVFILEOUDIA02TO03_API int ConvFile_leftToRight(
 				&aCDedRosenFileData , aCdConnectedString2 ) ;
 			if ( iResult < 0 )
 			{
-				iRv = -1 ;	//	�ϊ��O�̃t�@�C���́A���̃R�}���h�ł̕ϊ����ł��܂���B
+				iRv = -1 ;	//	変換前のファイルは、このコマンドでの変換ができません。
 			}
 		}
 	}
 	// --------------------------------
 	if ( iRv >= 0 && !bFormatFound )
 	{
-				iRv = -1 ;	//	�ϊ��O�̃t�@�C���́A���̃R�}���h�ł̕ϊ����ł��܂���B
+				iRv = -1 ;	//	変換前のファイルは、このコマンドでの変換ができません。
 	}
 	// ================================
-	//	�H���t�@�C���f�[�^���� Ver.3 �̃t�@�C�����쐬
+	//	路線ファイルデータから Ver.3 のファイルを作成
 	// ================================
 	string strDstFile ;
 	{
@@ -252,8 +252,8 @@ CONVFILEOUDIA02TO03_API int ConvFile_leftToRight(
 		{
 			CconvCDedRosenFileData	aCconvCDedRosenFileData ;
 
-			//	CdConnectedString2 ��
-			//	FileType �� FileTypeAppComment ��t�^
+			//	CdConnectedString2 に
+			//	FileType と FileTypeAppComment を付与
 			aCdConnectedString2.setItem( nameFileType , CconvCDedRosenFileData().getFileType() );
 			aCdConnectedString2.setItem( nameFileTypeAppComment , valueFileTypeAppComment );
 
@@ -261,30 +261,30 @@ CONVFILEOUDIA02TO03_API int ConvFile_leftToRight(
 				aCDedRosenFileData , &aCdConnectedString2 ) ;
 			if ( iResult < 0 )
 			{
-				iRv = -3 ;	//	�ϊ���̃t�@�C���̍쐬�Ɏ��s���܂����B
+				iRv = -3 ;	//	変換後のファイルの作成に失敗しました。
 			}
 		}
 		// --------------------------------
-		//	CdConnectedString2 �̓��e��
-		//	������Ɋi�[
+		//	CdConnectedString2 の内容を
+		//	文字列に格納
 		// --------------------------------
 		if ( iRv >= 0 )
 		{
 
-			//	CConnectedStringCompress �ɂ�鈳�k
+			//	CConnectedStringCompress による圧縮
 			CConnectedStringCompress	aCompress( '.' ) ;
 			strDstFile = aCompress.encode( aCdConnectedString2 ) ;
 			
 		}
 	}
-	//strDstFile=�ϊ���̕�����
+	//strDstFile=変換後の文字列
 
 	// ================================
-	//	��������ďo���ɕԂ��B
+	//	文字列を呼出元に返す。
 	// ================================
 	if ( iRv >= 0 )
 	{
-		//	���s�R�[�h�� '\n' ���� '\r\n' �ɕϊ�
+		//	改行コードは '\n' から '\r\n' に変換
 		strDstFile = OuLib::strCrlfOf( strDstFile ) ;
 
 		if ( pbinRightFile != NULL )
@@ -311,7 +311,7 @@ CONVFILEOUDIA02TO03_API int ConvFile_isLeft(
 	bool	bFormatFound = false ;
 
 	// --------------------------------
-	//	������ւ̕ϊ�
+	//	文字列への変換
 	// --------------------------------
 	string 	strSrcFileContent ;
 	string strFileType ;
@@ -323,7 +323,7 @@ CONVFILEOUDIA02TO03_API int ConvFile_isLeft(
 			strSrcFileContent.begin() , 
 			binLeftFile , 
 			binLeftFile+iLeftFileBytes ) ;
-		//	���s�R�[�h�� '\r\n' ���� '\n' �ɕϊ�
+		//	改行コードは '\r\n' から '\n' に変換
 		strSrcFileContent = OuLib::strLfOf( strSrcFileContent ) ;
 	}
 	if ( iRv >= 0 )
@@ -334,11 +334,11 @@ CONVFILEOUDIA02TO03_API int ConvFile_isLeft(
 		strFileTypeAppComment = aCdConnectedString2.getValue( nameFileTypeAppComment );
 	}
 	// ================================
-	//	�����񂩂�H���t�@�C���f�[�^�ւ̕ϊ�
+	//	文字列から路線ファイルデータへの変換
 	// ================================
 	CDedRosenFileData	aCDedRosenFileData ;
 	// --------------------------------
-	//	Ver.01 �� SrcFile ����H���t�@�C���f�[�^���쐬
+	//	Ver.01 の SrcFile から路線ファイルデータを作成
 	// --------------------------------
 	if ( iRv >= 0 && !bFormatFound )
 	{
@@ -350,7 +350,7 @@ CONVFILEOUDIA02TO03_API int ConvFile_isLeft(
 	}
 
 	// --------------------------------
-	//	Ver.02 �� SrcFile ����H���t�@�C���f�[�^���쐬
+	//	Ver.02 の SrcFile から路線ファイルデータを作成
 	// --------------------------------
 	if ( iRv >= 0 && !bFormatFound )
 	{
@@ -365,7 +365,7 @@ CONVFILEOUDIA02TO03_API int ConvFile_isLeft(
 	// --------------------------------
 	if ( iRv >= 0 && !bFormatFound )
 	{
-				iRv = -1 ;	//	�ϊ��O�̃t�@�C���́A���̃R�}���h�ł̕ϊ����ł��܂���B
+				iRv = -1 ;	//	変換前のファイルは、このコマンドでの変換ができません。
 	}
 	return ( iRv ) ;
 }

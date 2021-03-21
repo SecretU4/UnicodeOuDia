@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //	$Id: CConvCsvDocument.h 10 2012-08-26 09:48:47Z okm $
@@ -73,35 +73,35 @@ Copyright (C) 2006-2017 take-okm
 
 /**
 @brief
-	CdCsvDocument �I�u�W�F�N�g�ƁACSV�t�@�C��(�̓��e���i�[����������)�̊Ԃ�
-	������̕ϊ����s���܂��B
+	CdCsvDocument オブジェクトと、CSVファイル(の内容を格納した文字列)の間の
+	文字列の変換を行います。
 
-	��{�I�ɂ́A1�s�̋�؂肪 '\n' �A �s���̃Z���̋�؂肪 ',' ��
-	�Ȃ�܂��B
+	基本的には、1行の区切りが '\n' 、 行内のセルの区切りが ',' と
+	なります。
 
-	�ȉ��̕ϊ����s���܂��B
+	以下の変換を行います。
 
-	- ���s�E��d���p�����܂ރZ�����S�̂��d���p���ň݂͂܂��B
-	- ��d���p�����̓�d���p������d���p���Q�ɂ��܂��B
+	- 改行・二重引用符を含むセル→全体を二重引用符で囲みます。
+	- 二重引用符内の二重引用符→二重引用符２つにします。
 */
 class CConvCsvDocument
 {
 protected:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 	/**
-		�Z���̓��e���ACSV�`���̕�����ɕϊ����܂��B
+		セルの内容を、CSV形式の文字列に変換します。
 
-		- ���s�E��d���p�����܂ރZ�����S�̂��d���p���ň݂͂܂��B
-		- ��d���p�����̓�d���p������d���p���Q�ɂ��܂��B
+		- 改行・二重引用符を含むセル→全体を二重引用符で囲みます。
+		- 二重引用符内の二重引用符→二重引用符２つにします。
 	*/
 	std::string encodeCell( const CdCsvCell& aCdCsvCell ) ;
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CConvCsvDocument(void);
 	~CConvCsvDocument(void);
@@ -112,26 +112,26 @@ public:
 	// ********************************
 	///@{
 	/**
-		CdCsvDocument �̓��e���ACSV�t�@�C���`����
-		�e�L�X�g�ɕϊ����܂��B
+		CdCsvDocument の内容を、CSVファイル形式の
+		テキストに変換します。
 	@param pCdCsvDocument [in]
-		CdCsvDocument ���w�肵�Ă��������B
+		CdCsvDocument を指定してください。
 	@return 
-		�ϊ����ʂ̃e�L�X�g��Ԃ��܂��B
+		変換結果のテキストを返します。
 	*/
 	std::string encode( const CdCsvDocument* pCdCsvDocument ) ;
 
 	/**
-		CSV �`���̃e�L�X�g�����߂��A���ʂ�
-		CdCsvDocument �I�u�W�F�N�g�ɒǉ����܂��B
+		CSV 形式のテキストを解釈し、結果を
+		CdCsvDocument オブジェクトに追加します。
 	@param pCdCsvDocument [out]
-		���̊֐��͂��̃I�u�W�F�N�g�ɁA
-		strCsvText �����߂������ʂ�ǉ����܂��B
+		この関数はこのオブジェクトに、
+		strCsvText を解釈した結果を追加します。
 	@param strCsvText [in]
-		Csv �`���̃e�L�X�g���w�肵�Ă��������B
+		Csv 形式のテキストを指定してください。
 	@return 
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	���p�������Ă��܂���
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	引用符が閉じていません
 	*/
 	int decode( CdCsvDocument* pCdCsvDocument 
 		, const std::string& strCsvText ) ;

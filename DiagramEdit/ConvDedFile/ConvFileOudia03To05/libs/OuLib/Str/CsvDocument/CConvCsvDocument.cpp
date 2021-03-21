@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //	$Id: CConvCsvDocument.cpp 10 2012-08-26 09:48:47Z okm $
@@ -76,71 +76,71 @@ using std::string ;
 // ****************************************************************
 /**
 @brief
-	CSV�t�@�C���̓��e�����߂��� CdCsvDocument �I�u�W�F�N�g��
-	�\������ۂ̏�ԋ@�B�ł��B
+	CSVファイルの内容を解釈して CdCsvDocument オブジェクトを
+	構成する際の状態機械です。
 
-�y�g�����z
+【使い方】
 
-1.  �C���X�^���X�𐶐����Ă��������B
+1.  インスタンスを生成してください。
 
-2.  CSV�t�@�C���̓��e�� addChar() ���\�b�h�ŉ��߂����Ă��������B
+2.  CSVファイルの内容を addChar() メソッドで解釈させてください。
 
-3.  CSV�t�@�C���̓��e�����ׂ� addChar() �ɓn������́A addEof() ��
-�Ăяo���Ă��������B
-�@���̏�Ԃ� CdCsvDocument �̍\�����I�����܂��BgetCdCsvDocument() ��
- �\�������h�L�������g���擾���邱�Ƃ��ł��܂��B
+3.  CSVファイルの内容をすべて addChar() に渡した後は、 addEof() を
+呼び出してください。
+　この状態で CdCsvDocument の構成が終了します。getCdCsvDocument() で
+ 構成したドキュメントを取得することができます。
 
-4.  �V����CSV�t�@�C�������߂�����ꍇ�́A
-�@�V�����C���X�^���X�𐶐����Ȃ��Ă͂Ȃ�܂���B
+4.  新しいCSVファイルを解釈させる場合は、
+　新しいインスタンスを生成しなくてはなりません。
 */
 class CCsvDecoder
 {
 public:
 	// ********************************
-	///@name �C���i�[�^�C�v
+	///@name インナータイプ
 	// ********************************
 	///@{
 	enum EState
 	{
 		/**
-			���p���̊O��
+			引用符の外側
 		*/
 		EState_OuterQuote ,
 		/**
-			���p���̓���
+			引用符の内側
 		*/
 		EState_InnerQuote ,
 		/**
-			���p���̓����́A1�ڂ̈��p���̒���
+			引用符の内側の、1個目の引用符の直後
 		*/
 		EState_QuoteInnerQuote ,
 	};
 	///@}
 private:
 	// ********************************
-	///@name ��� 
+	///@name 状態 
 	// ********************************
 	///@{
 	/**
-		���݂̏��
+		現在の状態
 	*/
 	EState m_EState ;
 	/**
-		���ݍ\�����̃h�L�������g
+		現在構成中のドキュメント
 	*/
 	CdCsvDocument	m_CdCsvDocument ;
 	/**
-		���ݍ\�����̍s
+		現在構成中の行
 	*/
 	CdCsvRow	m_CdCsvRow ;
 	/**
-		���ݍ\�����̃Z���̕�����
+		現在構成中のセルの文字列
 	*/
 	std::string	m_strCellData ;
 	///@}
 private:
 	// --------------------------------
-	///@name addChar() �̉����֐�
+	///@name addChar() の下請関数
 	// --------------------------------
 	///@{
 	void addChar_EState_OuterQuote( char ch ) ;
@@ -149,34 +149,34 @@ private:
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CCsvDecoder()
 		: m_EState( EState_OuterQuote ) 
 	{
 	};
 	// ********************************
-	///@name ��� 
+	///@name 状態 
 	// ********************************
 	///@{
 	CdCsvDocument	getCdCsvDocument()
 	{	return m_CdCsvDocument ;};
 	///@}
 	// ********************************
-	///@name ����
+	///@name 操作
 	// ********************************
 	///@{
 	/**
-		CSV�t�@�C���̓��e�����߂����܂��B
+		CSVファイルの内容を解釈させます。
 	@param ch [in]
-		�t�@�C���̓��e�̃L�����N�^���w�肵�Ă��������B
+		ファイルの内容のキャラクタを指定してください。
 	*/
 	void addChar( char ch ) ;
 	/**
-		CSV�t�@�C���̉��߂��I�������܂��B
+		CSVファイルの解釈を終了させます。
 	@return
-		-	0 ;	//	����
-		-	-1 ;	//	���p�������Ă��܂���
+		-	0 ;	//	成功
+		-	-1 ;	//	引用符が閉じていません
 	//	
 	*/
 	int addEof() ;
@@ -263,19 +263,19 @@ void CCsvDecoder::addChar( char ch )
 	switch( m_EState )
 	{
 	case EState_OuterQuote :
-		//	���p���̊O��
+		//	引用符の外側
 		{
 			addChar_EState_OuterQuote( ch ) ;
 		}
 		break ;
 	case EState_InnerQuote :
-		//	���p���̓���
+		//	引用符の内側
 		{
 			addChar_EState_InnerQuote( ch ) ;
 		}
 		break ;
 	case EState_QuoteInnerQuote :
-		//	���p���̓����́A1�ڂ̈��p���̒���
+		//	引用符の内側の、1個目の引用符の直後
 		{
 			addChar_EState_QuoteInnerQuote( ch ) ;
 		}
@@ -289,7 +289,7 @@ int CCsvDecoder::addEof()
 	{
 	case EState_OuterQuote :
 	case EState_QuoteInnerQuote :
-		//	���p���̓����́A1�ڂ̈��p���̒���
+		//	引用符の内側の、1個目の引用符の直後
 		{
 			if ( m_strCellData.size() > 0 
 						|| m_CdCsvRow.getCellCont()->size() )
@@ -307,9 +307,9 @@ int CCsvDecoder::addEof()
 		}
 		break ;
 	case EState_InnerQuote :
-		//	���p���̓���
+		//	引用符の内側
 		{
-			iRv = -1 ;	//	���p�������Ă��܂���
+			iRv = -1 ;	//	引用符が閉じていません
 		}
 		break ;
 	}
@@ -319,7 +319,7 @@ int CCsvDecoder::addEof()
 
 // ****************************************************************
 	// --------------------------------
-	//@name �����֐�
+	//@name 下請関数
 	// --------------------------------
 std::string CConvCsvDocument::encodeCell( const CdCsvCell& aCdCsvCell ) 
 {
@@ -352,7 +352,7 @@ std::string CConvCsvDocument::encodeCell( const CdCsvCell& aCdCsvCell )
 	return strRv ;
 }
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CConvCsvDocument::CConvCsvDocument(void)
 {
@@ -409,7 +409,7 @@ int CConvCsvDocument::decode( CdCsvDocument* pCdCsvDocument
 			aCCsvDecoder.addChar( strCsvText[idxChar] ) ;
 		}
 		int iResult = aCCsvDecoder.addEof() ;
-		//-	-1 ;	//	���p�������Ă��܂���
+		//-	-1 ;	//	引用符が閉じていません
 		if ( iResult < 0 )
 		{
 			iRv = iResult ;

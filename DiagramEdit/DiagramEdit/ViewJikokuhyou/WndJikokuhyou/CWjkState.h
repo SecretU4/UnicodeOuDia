@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -80,80 +80,80 @@ namespace ViewJikokuhyou{ namespace WndJikokuhyou{
 using namespace DcDrawLib::DcdGrid;
 
 
-class CWndJikokuhyou ;	// outer �ւ̎Q��
+class CWndJikokuhyou ;	// outer への参照
 
 // ****************************************************************
 //	CWjkState
 // ****************************************************************
 /**
    @brief
-   �y�T�v�z
-     CJikokuhyou�́w��ԁx�P��\�����ۃN���X�ł��B
-     �w��ԁx���ɔh���N���X���쐬���A CWndJikokuhyou �ւ�
-   �E�C���h�E���b�Z�[�W�n���h���E���j���[�R�}���h�n���h���ɑΉ����鏈����
-   �������Ă��������B
+   【概要】
+     CJikokuhyouの『状態』１つを表す抽象クラスです。
+     『状態』毎に派生クラスを作成し、 CWndJikokuhyou への
+   ウインドウメッセージハンドラ・メニューコマンドハンドラに対応する処理を
+   実装してください。
    
-     CWndJikokuhyou �I�u�W�F�N�g�́A�w��ԁx�̐��� CState ���W���
-   �ێ����܂��B�܂��A�����w��ԁx�̂����̈���w�J�����g��ԁx�Ƃ��܂��B
+     CWndJikokuhyou オブジェクトは、『状態』の数の CState を集約で
+   保持します。また、それら『状態』のうちの一つを『カレント状態』とします。
    
-     �w�J�����g��ԁx�́A CWndJikokuhyou::m_iCurrentStateIndex 
-   �ŕ\���܂��B
+     『カレント状態』は、 CWndJikokuhyou::m_iCurrentStateIndex 
+   で表します。
  */	
 class CWjkState
 {
 public:
 	// ********************************
-	//	�C���i�[�^�C�v
+	//	インナータイプ
 	// ********************************
 	typedef CWndJikokuhyou outer ;
 	
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-	  	  �O���� CWndJikokuhyou �I�u�W�F�N�g�ւ̃|�C���^�ł��B
-	  	  ���̃I�u�W�F�N�g�́Athis ���j�������܂ł͐�������
-	  	���Ȃ��Ă͂Ȃ�܂���B
-	  	  �R���X�g���N�^�Ō��܂�܂��B
+	  	  外側の CWndJikokuhyou オブジェクトへのポインタです。
+	  	  このオブジェクトは、this が破棄されるまでは生存して
+	  	いなくてはなりません。
+	  	  コンストラクタで決まります。
 	 */
 	CWndJikokuhyou*	m_pCWndDcdGrid ;
 	///@}
 
 protected:
 	// --------------------------------
-	///@name	�����֐�
+	///@name	下請関数
 	// --------------------------------
 	///@{
 	/**
 	   @return
-	  	�Ή�����h�L�������g�I�u�W�F�N�g��Ԃ��܂��B
+	  	対応するドキュメントオブジェクトを返します。
 	 */
 	CJikokuhyouDoc*	GetDocument() ;
 	
 	/**
 	   @return
-	  	���̃O���b�h��������ԕ�����Ԃ��܂��B
+	  	このグリッドが扱う列車方向を返します。
 	 */
 	ERessyahoukou getRessyahoukou() ;
 	
 	
 	/**
 	   @return
-	  	CentDedDia �I�u�W�F�N�g��Ԃ��܂��B
+	  	CentDedDia オブジェクトを返します。
 	 */
 	const CentDedDia*	getCentDedDia();
 	
 	/**
 	   @return
-	  	CentDedRessyaCont �I�u�W�F�N�g��Ԃ��܂��B
+	  	CentDedRessyaCont オブジェクトを返します。
 	 */
 	const CentDedRessyaCont*	getCentDedRessyaCont();
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CWjkState( CWndJikokuhyou*	pCWndDcdGrid ) ;
 	virtual ~CWjkState() ;
@@ -163,203 +163,203 @@ public:
 	//	CWjkState
 	// ********************************
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	CWndJikokuhyou*	getCWndDcdGrid();
 	///@}
 	// ********************************
-	///@name ����
+	///@name 操作
 	// ********************************
 	///@{
 	/**
 	 @return
-		���̏�ԂɑJ�ډ\�ł���� 0 �ȏ�ł��B
-		�f�t�H���g�ł́A0�ł��B
+		この状態に遷移可能であれば 0 以上です。
+		デフォルトでは、0です。
 		
-		�y�I�[�o���C�h�z
-		���̏�ԂɑJ�ڂ��邽�߂̏������w�肵�Ă��������B
+		【オーバライド】
+		この状態に遷移するための条件を指定してください。
 	*/
 	virtual int canEnter() ;
 	/**
-	 	���̏�Ԃւ̓��ꓮ����s���܂��B
+	 	この状態への入場動作を行います。
 	 
-	 	CWndJikokuhyou �́A�w�J�����g��ԁx��this �ɐݒ肵��
-	 	����ɁA���̊֐����Ăяo���܂��B
+	 	CWndJikokuhyou は、『カレント状態』をthis に設定した
+	 	直後に、この関数を呼び出します。
 	 
-	 	�y�I�[�o���C�h�z
-	 	���ꓮ����������Ă��������B
+	 	【オーバライド】
+	 	入場動作を実装してください。
 	*/
 	virtual void onEnter() = 0  ;
 	/**
-	 	���̏�Ԃ���̑ޏꓮ����s���܂��B
+	 	この状態からの退場動作を行います。
 	 
-	 	CWndJikokuhyou �́A�w�J�����g��ԁx��this ���瑼�ɐݒ肷��
-	 	���O�ɁA���̊֐����Ăяo���܂��B
+	 	CWndJikokuhyou は、『カレント状態』をthis から他に設定する
+	 	直前に、この関数を呼び出します。
 	 
-	 	�y�I�[�o���C�h�z
-	 	�ޏꓮ����������Ă��������B
+	 	【オーバライド】
+	 	退場動作を実装してください。
 	*/
 	virtual void onExit() = 0  ;
 	///@}
 	// ********************************
-	///@name CView ����̈Ϗ�
+	///@name CView からの委譲
 	// ********************************
 	///@{
 	virtual void OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint) ;
 	///@}
 	// ********************************
-	///@name CWndJikokuhyou����̈Ϗ�
+	///@name CWndJikokuhyouからの委譲
 	// ********************************
 	///@{
 	/**
-	 	[�I�[�o���C�h] CWndJikokuhyou::super (CWndDcdGrid)��
-	 	�����ɈϏ����܂��B
+	 	[オーバライド] CWndJikokuhyou::super (CWndDcdGrid)の
+	 	実装に委譲します。
 	*/
 	virtual void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags) ;
 	/**
-	  	[�I�[�o���C�h] CWndJikokuhyou::super (CWndDcdGrid)��
-	  	�����ɈϏ����܂��B
+	  	[オーバライド] CWndJikokuhyou::super (CWndDcdGrid)の
+	  	実装に委譲します。
 	 */
 	virtual void OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags) ;
 	/**
-	  	[�I�[�o���C�h] CWndJikokuhyou::super (CWndDcdGrid)��
-	  	�����ɈϏ����܂��B
+	  	[オーバライド] CWndJikokuhyou::super (CWndDcdGrid)の
+	  	実装に委譲します。
 	 */
 	virtual void OnChar(UINT nChar, UINT nRepCnt, UINT nFlags) ;
 	/**
-	  	[�I�[�o���C�h] CWndJikokuhyou::super (CWndDcdGrid)��
-	  	�����ɈϏ����܂��B
+	  	[オーバライド] CWndJikokuhyou::super (CWndDcdGrid)の
+	  	実装に委譲します。
 	 */
 	virtual void OnWM_IME_STARTCOMPOSITION() ;
 	/**
-	  	[�I�[�o���C�h] CWndJikokuhyou::super (CWndDcdGrid)��
-	  	�����ɈϏ����܂��B
+	  	[オーバライド] CWndJikokuhyou::super (CWndDcdGrid)の
+	  	実装に委譲します。
 	 */
 	virtual void OnLButtonDblClk(UINT nFlags, CPoint point) ;
 	///@}
 	// ********************************
-	///@name View�̃R�}���h�n���h���̈Ϗ�
+	///@name Viewのコマンドハンドラの委譲
 	// ********************************
 	///@{
 	// --------------------------------
 	//	Edit
 	/**	
-		[�ҏW]-[�؂���]
+		[編集]-[切り取り]
 	@param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��̔��肾�����s���܂��B@n
-					�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�
+		- TRUE ;	コマンドが現在実行できるか否かの判定だけを行います。@n
+					エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します
 	@return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	���̃R�}���h�͑I���ł��܂���
+		成功したら0以上、エラーなら負の数です。
+		-	-1 ;	//	このコマンドは選択できません
 	
-		���̃N���X�ł́A��� -1 �ł��B
+		このクラスでは、常に -1 です。
 	*/
 	virtual int OnEditCut_Process( BOOL bQueryEnable );
 
-	/**	[�ҏW]-[�R�s�[]	*/
+	/**	[編集]-[コピー]	*/
 	virtual int OnEditCopy_Process( BOOL bQueryEnable );
-	/**	[�ҏW]-[�\��t��]	*/
+	/**	[編集]-[貼り付け]	*/
 	virtual int OnEditPaste_Process( BOOL bQueryEnable );
-	/**	[�ҏW]-[����]	*/
+	/**	[編集]-[消去]	*/
 	virtual int OnEditClear_Process( BOOL bQueryEnable );
-	/**	[�ҏW]-[�����̂ݓ\��t��]	*/
+	/**	[編集]-[時刻のみ貼り付け]	*/
 	virtual int OnEditPasteEkiJikoku_Process( BOOL bQueryEnable );
-	/**	[�ҏW]-[���ׂđI��]	*/
+	/**	[編集]-[すべて選択]	*/
 	virtual int OnEditSelectAll_Process( BOOL bQueryEnable );
 
 	// --------------------------------
 	//	Jikokuhyou
-	/** [�����\]-[��Ԃ̃v���p�e�B] */
+	/** [時刻表]-[列車のプロパティ] */
 	virtual int OnJikokuhyouRessyaProp_Process( BOOL bQueryEnable );
-	/** [�����\]-[��Ԃ�}��] */
+	/** [時刻表]-[列車を挿入] */
 	virtual int OnJikokuhyouRessyaInsert_Process( BOOL bQueryEnable );
-	/** [�����\]-[�t�H�[�J�X���ړ�]
+	/** [時刻表]-[フォーカス下移動]
 	 @param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��E�I������Ă��邩��@n
-					���肾�����s���܂��B�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͂��łɑI������Ă��܂�
-		-	0 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͑I������Ă��܂���
-		-  -1 ;	//	���̃R�}���h�͑I���ł��܂���(���j���[������)
+		- TRUE ;	コマンドが現在実行できるか否か・選択されているかの@n
+					判定だけを行います。エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	 @return
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	(bQueryEnable=TRUEの場合)この項目はすでに選択されています
+		-	0 ;	//	(bQueryEnable=TRUEの場合)この項目は選択されていません
+		-  -1 ;	//	このコマンドは選択できません(メニューが無効)
 	*/
 	virtual int OnJikokuhyouFocusMoveDown_Process( BOOL bQueryEnable );
-	/** [�����\]-[�t�H�[�J�X�E�ړ�] 
+	/** [時刻表]-[フォーカス右移動] 
 	 @param bQueryEnable [in]
-		- TRUE ;	�R�}���h�����ݎ��s�ł��邩�ۂ��E�I������Ă��邩��@n
-					���肾�����s���܂��B�G���[���b�Z�[�W�̕\���͍s���܂���B
-		- FALSE ;	�R�}���h�����s���܂��B @n
-					�G���[�����������ꍇ�́A�G���[���b�Z�[�W�{�b�N�X��\�����܂�	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͂��łɑI������Ă��܂�
-		-	0 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͑I������Ă��܂���
-		-  -1 ;	//	���̃R�}���h�͑I���ł��܂���(���j���[������)
+		- TRUE ;	コマンドが現在実行できるか否か・選択されているかの@n
+					判定だけを行います。エラーメッセージの表示は行いません。
+		- FALSE ;	コマンドを実行します。 @n
+					エラーが発生した場合は、エラーメッセージボックスを表示します	 @return
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	(bQueryEnable=TRUEの場合)この項目はすでに選択されています
+		-	0 ;	//	(bQueryEnable=TRUEの場合)この項目は選択されていません
+		-  -1 ;	//	このコマンドは選択できません(メニューが無効)
 	*/
 	virtual int OnJikokuhyouFocusMoveRight_Process( BOOL bQueryEnable );
-	/** [�����\]-[�ŏ����v���ԗ�ԂɈړ�] */
+	/** [時刻表]-[最小所要時間列車に移動] */
 	virtual int OnJikokuhyouEKikanSaisyouSec_Process( BOOL bQueryEnable );
-	/** [�����\]-[���בւ�] */
+	/** [時刻表]-[並べ替え] */
 	virtual int OnJikokuhyouSort_Process( BOOL bQueryEnable );
-	/** [�����\]-[��Ԕԍ��ň�{��] */
+	/** [時刻表]-[列車番号で一本化] */
 	virtual int OnJikokuhyouUnify_Process( BOOL bQueryEnable );
-	// [�����\]-[�����\�r���[�̃v���p�e�B] 
-	//	�́ACWndJikokuhyou �ŏ������܂��B
+	// [時刻表]-[時刻表ビューのプロパティ] 
+	//	は、CWndJikokuhyou で処理します。
 
 	// --------------------------------
 	//	Ekijikoku
-	/** [�w����]-[�w�����̃v���p�e�B] */
+	/** [駅時刻]-[駅時刻のプロパティ] */
 	virtual int OnJikokuhyouEkijikokuProp_Process( BOOL bQueryEnable );
-	/** [�w����]-[��������] */
+	/** [駅時刻]-[時刻消去] */
 	virtual int OnJikokuhyouJikokuSakujo_Process( BOOL bQueryEnable );
-	/** [�w����]-[�ʉ�] */
+	/** [駅時刻]-[通過] */
 	virtual int OnJikokuhyouTsuuka_Process( BOOL bQueryEnable );
-	/** [�w����]-[�ʉ�-���] */
+	/** [駅時刻]-[通過-停車] */
 	virtual int OnJikokuhyouTsuukateisya_Process( BOOL bQueryEnable );
-	/** [�w����]-[�o�R�Ȃ�] */
+	/** [駅時刻]-[経由なし] */
 	virtual int OnJikokuhyouKeiyunasi_Process( BOOL bQueryEnable );
 	// --------------
-	/** [�w����]-[���w�n��] */
+	/** [駅時刻]-[当駅始発] */
 	virtual int OnJikokuhyouSihatsu_Process( BOOL bQueryEnable );
-	/** [�w����]-[���w�~��] */
+	/** [駅時刻]-[当駅止り] */
 	virtual int OnJikokuhyouSyuuchaku_Process( BOOL bQueryEnable );
-	/** [�w����]-[���ʉ�] */
+	/** [駅時刻]-[直通化] */
 	virtual int OnJikokuhyouDirect_Process( BOOL bQueryEnable );
-	/** [�w����]-[���f] */
+	/** [駅時刻]-[分断] */
 	virtual int OnJikokuhyouUndirect_Process( BOOL bQueryEnable );
 	// --------------
-	/** [�w����]-[�A������] 
+	/** [駅時刻]-[連続入力] 
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͂��łɑI������Ă��܂�
-		-	0 ;	//	(bQueryEnable=TRUE�̏ꍇ)���̍��ڂ͑I������Ă��܂���
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	(bQueryEnable=TRUEの場合)この項目はすでに選択されています
+		-	0 ;	//	(bQueryEnable=TRUEの場合)この項目は選択されていません
 	*/
 	virtual int OnJikokuhyouRenzoku_Process( BOOL bQueryEnable );
 	// --------------
-	/** [�w����]-[�w������}��] */
+	/** [駅時刻]-[駅時刻を挿入] */
 	virtual int OnJikokuhyouEkijikokuInsert_Process( BOOL bQueryEnable );
-	/** [�w����]-[�w�������폜] */
+	/** [駅時刻]-[駅時刻を削除] */
 	virtual int OnJikokuhyouEkijikokuErase_Process( BOOL bQueryEnable );
-	/** [�w����]-[�w�����ύX] */
+	/** [駅時刻]-[駅時刻変更] */
 	virtual int OnJikokuhyouModifyEkijikokuCmd_Process( BOOL bQueryEnable );
-	/** [�w����]-[�w�����ύX�̍Ď��s] */
+	/** [駅時刻]-[駅時刻変更の再実行] */
 	virtual int OnJikokuhyouModifyEkijikokuCmdRepeat_Process( 
 		BOOL bQueryEnable );
 	// --------------
-	/** [�w����]-[�A��1���C��]-[-1��������] */
+	/** [駅時刻]-[連続1分修正]-[-1分し次へ] */
 	virtual int OnJikokuhyouEkijikokuDec_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[-1��] */
+	/** [駅時刻]-[連続1分修正]-[-1分] */
 	virtual int OnJikokuhyouEkijikokuDecNoMove_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[�t�H�[�J�X������] */
+	/** [駅時刻]-[連続1分修正]-[フォーカスを次へ] */
 	virtual int OnJikokuhyouEkijikokuNext_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[�t�H�[�J�X��O��] */
+	/** [駅時刻]-[連続1分修正]-[フォーカスを前へ] */
 	virtual int OnJikokuhyouEkijikokuPrev_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[+1��������] */
+	/** [駅時刻]-[連続1分修正]-[+1分し次へ] */
 	virtual int OnJikokuhyouEkijikokuInc_Process( BOOL bQueryEnable );
-	/** [�w����]-[�A��1���C��]-[+1��] */
+	/** [駅時刻]-[連続1分修正]-[+1分] */
 	virtual int OnJikokuhyouEkijikokuIncNoMove_Process( BOOL bQueryEnable );
 	///@}
 	// ********************************
@@ -367,43 +367,43 @@ public:
 	// ********************************
 	///@{
 	/**
-	 	[�I�[�o���C�h] CWndJikokuhyou::super (CWndDcdGrid)��
-	 	�����ɈϏ����܂��B
+	 	[オーバライド] CWndJikokuhyou::super (CWndDcdGrid)の
+	 	実装に委譲します。
 	*/
 	virtual void OnSetFocusCell( CDcdGridCell* pCDcdGridCell ) ;
 	/**
-		[�I�[�o���C�h] CWndJikokuhyou::super (CWndDcdGrid)��
-		�����ɈϏ����܂��B
+		[オーバライド] CWndJikokuhyou::super (CWndDcdGrid)の
+		実装に委譲します。
 	*/
 	virtual void OnSetXFixafterColumnNumber( int iFixafterColumnNumber ) ;
 	/**
-		[�I�[�o���C�h] CWndJikokuhyou::super (CWndDcdGrid)��
-		�����ɈϏ����܂��B
+		[オーバライド] CWndJikokuhyou::super (CWndDcdGrid)の
+		実装に委譲します。
 	*/
 	virtual void OnSetYFixafterColumnNumber( int iFixafterColumnNumber ) ;
 
 
 	/**
-	  this �́AWndDcdGrid3::CSelectCell::m_bIsSelected ��
-	  �ω������Ƃ��ɁA���̉��z�֐����Ăяo���܂��B
-	  �N���X���[�U�[�́A���̉��z�֐����I�[�o���C�h���āA�K�v�ȏ�����
-	�����ł��܂��B
+	  this は、WndDcdGrid3::CSelectCell::m_bIsSelected が
+	  変化したときに、この仮想関数を呼び出します。
+	  クラスユーザーは、この仮想関数をオーバライドして、必要な処理を
+	実装できます。
 	  
-	  this �́A�N���X���[�U�[�� 
-	CWndDcdGrid::CSelect::setColumnNumberSelect() ��
-	�l��ݒ肵���Ƃ��̂ق��A
-	�L�[�{�[�h�őI���Z����ύX�����Ƃ��ɂ�
-	���̉��z�֐����Ăяo���܂��B
+	  this は、クラスユーザーが 
+	CWndDcdGrid::CSelect::setColumnNumberSelect() で
+	値を設定したときのほか、
+	キーボードで選択セルを変更したときにも
+	この仮想関数を呼び出します。
 	
-	[�I�[�o���C�h]
-		  �����͂���܂���B
+	[オーバライド]
+		  処理はありません。
 	
 	@param iXColumnNumber [in]
-		X��ԍ����w�肵�܂��B
+		X列番号を指定します。
 	@param iYColumnNumber [in]
-		X��ԍ����w�肵�܂��B
+		X列番号を指定します。
 	@param bIsSelected [in]
-		�V�����I����ԁB
+		新しい選択状態。
 	 */
 	virtual void OnChangeSelectCell( 
 		int iXColumnNumber , int iYColumnNumber , bool bIsSelected ) ;

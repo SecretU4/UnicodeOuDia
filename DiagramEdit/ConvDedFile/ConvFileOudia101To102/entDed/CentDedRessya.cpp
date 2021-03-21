@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -86,7 +86,7 @@ static char THIS_FILE[] = __FILE__;
 // ****************************************************************
 
 // --------------------------------
-//@name CentDedRosen��CentDedRessyaCont ��p�����o�֐�
+//@name CentDedRosen→CentDedRessyaCont 専用メンバ関数
 // --------------------------------
 int CentDedRessya::onSetCentDedEki(const Mu<CentDedEkiCont::CdDedEki>* pCentDedEkiCont , int iEkiOrder) 
 {
@@ -104,7 +104,7 @@ int CentDedRessya::insertCentDedEkiJikoku(
 			iEkiOrder = (int)m_CentDedEkiJikokuCont.size()  ;
 		}
 		if ( !( 0 <= iEkiOrder && iEkiOrder <= (int)m_CentDedEkiJikokuCont.size() ) ){
-			iRv = -1 ;	//	�C���f�N�X���s���ł��B
+			iRv = -1 ;	//	インデクスが不正です。
 		}
 	}
 	if ( iRv >= 0 ){
@@ -125,7 +125,7 @@ int CentDedRessya::eraseCentDedEkiJikoku( int iEkiOrder )
 			iEkiOrder = (int)m_CentDedEkiJikokuCont.size() - 1 ;
 		}
 		if ( !( 0 <= iEkiOrder && iEkiOrder < (int)m_CentDedEkiJikokuCont.size() ) ){
-			iRv = -1 ;	//	�C���f�N�X���s���ł��B
+			iRv = -1 ;	//	インデクスが不正です。
 		}
 	}
 	if ( iRv >= 0 ){
@@ -140,7 +140,7 @@ int CentDedRessya::eraseCentDedEkiJikoku( int iEkiOrder )
 }
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CentDedRessya::CentDedRessya( 
 		int iEkiJikokuCount ,
@@ -208,7 +208,7 @@ CentDedRessya::~CentDedRessya()
 //	CentDedRessya
 // ********************************
 	// ********************************
-	//@name ����
+	//@name 属性
 	// ********************************
 ERessyahoukou	CentDedRessya::getRessyahoukou()const
 {
@@ -225,7 +225,7 @@ CentDedRessya& CentDedRessya::setRessyasyubetsuIndex( int value )
 };
 	
 	// ********************************
-	//@name ���-CentDedEkiJikoku
+	//@name 包含-CentDedEkiJikoku
 	// ********************************
 
 int CentDedRessya::getCentDedEkiJikokuCount()const 
@@ -260,7 +260,7 @@ setCentDedEkiJikoku( int iEkiOrder , const CentDedEkiJikoku& value )
 	return *this ;
 }
 	// ********************************
-	//@name �w�wOrder�x�P�ʂ̑���
+	//@name 『駅Order』単位の操作
 	// ********************************
 int CentDedRessya::EkiIndexOfEkiOrder( int iEkiOrder )const  
 {
@@ -291,7 +291,7 @@ CentDedRessya& CentDedRessya::modifyCentDedEkiJikoku(
 	if ( 0 <= iEkiOrder && iEkiOrder < (int)m_CentDedEkiJikokuCont.size() ){
 		m_bIsNull = false ;
 	
-		//	�ύX�O�̎�����ۑ�
+		//	変更前の時刻を保存
 		CdDedJikoku jikokuChakujikokuPrev = 
 				m_CentDedEkiJikokuCont[iEkiOrder]->getChakujikoku() ;
 		CdDedJikoku jikokuHatsujikokuPrev = 
@@ -299,16 +299,16 @@ CentDedRessya& CentDedRessya::modifyCentDedEkiJikoku(
 		CdDedJikoku jikokuChakujikoku = value.getChakujikoku() ;
 		CdDedJikoku jikokuHatsujikoku =  value.getHatsujikoku() ;
 		
-		//	�w�����̕ύX
+		//	駅時刻の変更
 		m_CentDedEkiJikokuCont[iEkiOrder]->set( 
 			value.getEkiatsukai() , value.getChakujikoku() , value.getHatsujikoku() ) ;
 
-		//	���̌�̎����̌J�グ�E�J����
+		//	その後の時刻の繰上げ・繰下げ
 		if ( !jikokuHatsujikoku.isNull() && !jikokuHatsujikokuPrev.isNull() )
 		{
-			//	���������ύX�O�E�ύX������͂���Ă���ꍇ�́A
-			//	�������̓��͑O�E���͌�̍��������߂āA
-			//	���̉w�ȍ~����J�������s���܂��B
+			//	発時刻が変更前・変更後も入力されている場合は、
+			//	発時刻の入力前・入力後の差分を求めて、
+			//	次の駅以降から繰下げを行います。
 			CdDedJikan	aCdDedJikan = jikokuHatsujikoku.subJikoku( 
 					jikokuHatsujikokuPrev ) ;
 			modifyRessyaJikoku( 
@@ -317,10 +317,10 @@ CentDedRessya& CentDedRessya::modifyCentDedEkiJikoku(
 		}
 		else if ( !jikokuChakujikoku.isNull() && !jikokuChakujikokuPrev.isNull() )
 		{
-			//	�������ɂ��J�グ�E�J�����͂ł��Ȃ����A
-			//	���������ύX�O�E�ύX������͂���Ă���ꍇ�́A
-			//	�������̍��������߂āA
-			//	���̉w�̔������ȍ~����J�������s���܂��B
+			//	発時刻による繰上げ・繰下げはできないが、
+			//	着時刻が変更前・変更後も入力されている場合は、
+			//	着時刻の差分を求めて、
+			//	その駅の発時刻以降から繰下げを行います。
 			CdDedJikan	aCdDedJikan = jikokuChakujikoku.subJikoku( 
 					jikokuChakujikokuPrev ) ;
 			modifyRessyaJikoku(
@@ -357,7 +357,7 @@ int CentDedRessya::setSihatsuEki( int iEkiOrder )
 
 	if ( iRv >= 0 ){
 		if ( !( 0 <= iEkiOrder && iEkiOrder < (int)m_CentDedEkiJikokuCont.size() ) ){
-			iRv = -1 ;	//	�w�wIndex�x���s���ł��B
+			iRv = -1 ;	//	『駅Index』が不正です。
 		}
 	}
 
@@ -374,11 +374,11 @@ int CentDedRessya::setSihatsuEki( int iEkiOrder )
 		CentDedEkiJikoku*	pCentDedEkiJikoku = 
 			m_CentDedEkiJikokuCont[ iEkiOrderCurr ] ;
 		if ( !pCentDedEkiJikoku->getHatsujikoku().isNull() ){
-			//	���������ݒ肳��Ă���ꍇ����
-			//	���������������܂��B
-			//	�i���������ݒ肳��Ă��Ȃ��ꍇ�ɒ�������
-			//	�������Ă��܂��ƁA���̉w�̉w������
-			//	�^�s�Ȃ� Ekiatsukai_None �ɂȂ��Ă��܂����߂ł��j
+			//	発時刻が設定されている場合だけ
+			//	着時刻を消去します。
+			//	（発時刻が設定されていない場合に着時刻を
+			//	消去してしまうと、その駅の駅時刻は
+			//	運行なし Ekiatsukai_None になってしまうためです）
 			pCentDedEkiJikoku->setChakujikoku( CdDedJikoku() ) ;
 	
 		}
@@ -415,7 +415,7 @@ int CentDedRessya::setSyuuchakuEki( int iEkiOrder )
 
 	if ( iRv >= 0 ){
 		if ( !( 0 <= iEkiOrder && iEkiOrder < (int)m_CentDedEkiJikokuCont.size() ) ){
-			iRv = -1 ;	//	�w�wIndex�x���s���ł��B
+			iRv = -1 ;	//	『駅Index』が不正です。
 		}
 	}
 
@@ -424,11 +424,11 @@ int CentDedRessya::setSyuuchakuEki( int iEkiOrder )
 		CentDedEkiJikoku*	pCentDedEkiJikoku = 
 			m_CentDedEkiJikokuCont[ iEkiOrder ] ;
 		if ( !pCentDedEkiJikoku->getChakujikoku().isNull() ){
-			//	���������ݒ肳��Ă���ꍇ����
-			//	���������������܂��B
-			//	�i���������ݒ肳��Ă��Ȃ��ꍇ�ɔ�������
-			//	�������Ă��܂��ƁA���̉w�̉w������
-			//	�^�s�Ȃ� Ekiatsukai_None �ɂȂ��Ă��܂����߂ł��j
+			//	着時刻が設定されている場合だけ
+			//	発時刻を消去します。
+			//	（着時刻が設定されていない場合に発時刻を
+			//	消去してしまうと、その駅の駅時刻は
+			//	運行なし Ekiatsukai_None になってしまうためです）
 			pCentDedEkiJikoku->setHatsujikoku( CdDedJikoku() ) ;
 
 		}
@@ -450,7 +450,7 @@ bool CentDedRessya::isRunBetweenNextEki( int iEkiOrder )const
 	bool bRv = false ;
 	if ( !( 0 <= iEkiOrder && iEkiOrder < (int)m_CentDedEkiJikokuCont.size() - 1 ) )
 	{
-		bRv = false ;	//	�w�wIndex�x���s���ł��B
+		bRv = false ;	//	『駅Index』が不正です。
 	}
 	else
 	{
@@ -519,7 +519,7 @@ void CentDedRessya::adjustByEkijikokukeisiki(
 
 
 	// ********************************
-	//@name �w����Order�x�P�ʂ̑���
+	//@name 『時刻Order』単位の操作
 	// ********************************
 CdDedJikokuOrder CentDedRessya::incJikokuOrder( 
 		const CdDedJikokuOrder& aJikokuOrder )const 
@@ -527,13 +527,13 @@ CdDedJikokuOrder CentDedRessya::incJikokuOrder(
 	CdDedJikokuOrder jikokuOrderRv = aJikokuOrder ;
 
 
-	//	- aJikokuOrder �� EkiOrder>=this.size() (�Ō�̉wOrder�̎�) �Ȃ�A@n
-	//		aJikokuOrder �����̂܂ܕԂ��܂��B
-	//	- aJikokuOrder ��NULL��� �Ȃ�AaJikokuOrder �����̂܂ܕԂ��܂��B
+	//	- aJikokuOrder の EkiOrder>=this.size() (最後の駅Orderの次) なら、@n
+	//		aJikokuOrder をそのまま返します。
+	//	- aJikokuOrder がNULL状態 なら、aJikokuOrder をそのまま返します。
 	if ( !aJikokuOrder.getIsNull() && 
 		aJikokuOrder.getEkiOrder() < (int)m_CentDedEkiJikokuCont.size() )
 	{
-		//	- aJikokuOrder ���������̏ꍇ�́A�����wOrder�̔�����
+		//	- aJikokuOrder が着時刻の場合は、同じ駅Orderの発時刻
 		if ( jikokuOrderRv.getEkiJikokuItem() == CdDedJikokuOrder::EkiJikokuItem_Chaku )
 		{
 			jikokuOrderRv.setEkiOrder( jikokuOrderRv.getEkiOrder() , 
@@ -541,7 +541,7 @@ CdDedJikokuOrder CentDedRessya::incJikokuOrder(
 		}
 		else if ( jikokuOrderRv.getEkiJikokuItem() == CdDedJikokuOrder::EkiJikokuItem_Hatsu )
 		{
-			//- aJikokuOrder ���������̏ꍇ�́A���̉wOrder�̒�����
+			//- aJikokuOrder が発時刻の場合は、次の駅Orderの着時刻
 			jikokuOrderRv.setEkiOrder( jikokuOrderRv.getEkiOrder() + 1 , 
 				CdDedJikokuOrder::EkiJikokuItem_Chaku );
 		}
@@ -554,24 +554,24 @@ CdDedJikokuOrder CentDedRessya::decJikokuOrder(
 {
 	CdDedJikokuOrder jikokuOrderRv = aJikokuOrder ;
 
-	//	- aJikokuOrder ��NULL��� �Ȃ�AaJikokuOrder �����̂܂ܕԂ��܂��B
+	//	- aJikokuOrder がNULL状態 なら、aJikokuOrder をそのまま返します。
 	if ( !aJikokuOrder.getIsNull() )
 	{ 
-		//- aJikokuOrder �� EkiOrder>=this.size() (�Ō�̉wOrder�̎�) �Ȃ�A@n
-		//	�Ō�̉wOrder�̔�����
+		//- aJikokuOrder の EkiOrder>=this.size() (最後の駅Orderの次) なら、@n
+		//	最後の駅Orderの発時刻
 		if ( aJikokuOrder.getEkiOrder() >= (int)m_CentDedEkiJikokuCont.size() )
 		{
 			jikokuOrderRv.setEkiOrder( m_CentDedEkiJikokuCont.size() - 1, 
 				CdDedJikokuOrder::EkiJikokuItem_Hatsu ) ;
 		}
-		//- aJikokuOrder ���������̏ꍇ�́A�����wOrder�̒�����
+		//- aJikokuOrder が発時刻の場合は、同じ駅Orderの着時刻
 		else if ( aJikokuOrder.getEkiJikokuItem() == CdDedJikokuOrder::EkiJikokuItem_Hatsu )
 		{
 			jikokuOrderRv.setEkiOrder( aJikokuOrder.getEkiOrder() , 
 				CdDedJikokuOrder::EkiJikokuItem_Chaku ) ; 
 		}
-		//- aJikokuOrder ���������̏ꍇ�́A���̉wOrder�̔�����
-		//- aJikokuOrder �� EkiOrder=0 �̒��Ȃ�ANULL���
+		//- aJikokuOrder が着時刻の場合は、次の駅Orderの発時刻
+		//- aJikokuOrder が EkiOrder=0 の着なら、NULL状態
 		else if (  aJikokuOrder.getEkiJikokuItem() == CdDedJikokuOrder::EkiJikokuItem_Chaku )
 		{
 			jikokuOrderRv.setEkiOrder( aJikokuOrder.getEkiOrder() - 1 , 
@@ -590,7 +590,7 @@ CdDedJikoku CentDedRessya::getEkiJikoku( CdDedJikokuOrder aJikokuOrder )const
 	if ( iRv >= 0 ){
 		if ( !( 0 <= aJikokuOrder.getEkiOrder() && 
 				aJikokuOrder.getEkiOrder() < (int)m_CentDedEkiJikokuCont.size() ) ){
-			iRv = -1 ;	//	�p�����[�^���s��
+			iRv = -1 ;	//	パラメータが不正
 		}
 	}
 	if ( iRv >= 0 ){
@@ -613,7 +613,7 @@ int CentDedRessya::setEkiJikoku(
 	if ( iRv >= 0 ){
 		if ( !( 0 <= aJikokuOrder.getEkiOrder() && 
 				aJikokuOrder.getEkiOrder() < (int)m_CentDedEkiJikokuCont.size() ) ){
-			iRv = -1 ;	//	�p�����[�^���s��
+			iRv = -1 ;	//	パラメータが不正
 		}
 	}
 	if ( iRv >= 0 ){
@@ -636,7 +636,7 @@ int CentDedRessya::modifyRessyaJikoku(
 	if ( iRv >= 0 ){
 		if ( !( 0 <= aJikokuOrder.getEkiOrder() && 
 				aJikokuOrder.getEkiOrder() < (int)m_CentDedEkiJikokuCont.size() ) ){
-			iRv = -1 ;	//	�p�����[�^���s��
+			iRv = -1 ;	//	パラメータが不正
 		}
 	}
 	if ( iRv >= 0 ){
@@ -679,7 +679,7 @@ CdDedJikokuOrder CentDedRessya::findrevJikoku(
 	
 	
 	// ********************************
-	//@name ����
+	//@name 操作
 	// ********************************
 bool CentDedRessya::isNull()const 
 {
@@ -742,29 +742,29 @@ int CentDedRessya::direct(
 	int iEkiOrderSyuuchaku = -1 ;
 	int iEkiOrderSihatsu = -1 ;
 
-	//	this��Ԃ̏I���w�E�n����Ԃ̎n���w�̎擾
+	//	this列車の終着駅・始発列車の始発駅の取得
 	if ( iRv >= 0 )
 	{
 		iEkiOrderSyuuchaku = getRunLastEkiOrder() ;
 		iEkiOrderSihatsu = aRessyaSihatsu.getRunFirstEkiOrder() ;
 		if ( iEkiOrderSyuuchaku == -1 )
 		{
-			iRv = -1 ;	//	���̗�Ԃɂ͉w�������w�肳��Ă��܂���B
+			iRv = -1 ;	//	この列車には駅時刻が指定されていません。
 		}
 		else if ( iEkiOrderSihatsu == -1 )
 		{
-			iRv = -2 ;	//	�n����Ԃɂ͉w�������w�肳��Ă��܂���B
+			iRv = -2 ;	//	始発列車には駅時刻が指定されていません。
 		}
 		else if ( !( iEkiOrderSyuuchaku <= iEkiOrderSihatsu ) )
 		{
-			iRv = -3 ;	//	aRessyaSihatsu �Ƃ̒��ʉ��͂ł��܂���B\n
-			//aRessyaSihatsu �̎n���w�́A	this �̏I���w�Ɠ������A����ȍ~�łȂ��Ă͂Ȃ�܂���B
+			iRv = -3 ;	//	aRessyaSihatsu との直通化はできません。\n
+			//aRessyaSihatsu の始発駅は、	this の終着駅と同じか、それ以降でなくてはなりません。
 		}
 	}
-	//iEkiOrderSyuuchaku = this��Ԃ̏I���w�̉wOrder
-	//iEkiOrderSihatsu = aRessyaSihatsu �̎n���w�̉wOrder
+	//iEkiOrderSyuuchaku = this列車の終着駅の駅Order
+	//iEkiOrderSihatsu = aRessyaSihatsu の始発駅の駅Order
 
-	//	�I���w�`�n���w�܂ł̊Ԃ́A�o�R�Ȃ��Ƃ��܂��B
+	//	終着駅～始発駅までの間は、経由なしとします。
 	if ( iRv <= 0 )
 	{
 		for ( int iEkiOrder = iEkiOrderSyuuchaku + 1 ;
@@ -778,62 +778,62 @@ int CentDedRessya::direct(
 		}
 	}
 
-	//	�n����Ԃ̎n���w
+	//	始発列車の始発駅
 	//
-	//�n���w�̎���(���ʉ���������)�́A�ȉ��̂悤�ɂȂ�܂��B
-	//- �w���F�ς��܂���B
-	//- �������F
-	//  - this��Ԃɒ��������w�肳��Ă����ꍇ�F���̒�����
-	//  - this��Ԃɒ��������Ȃ��A���������w�肳��Ă����ꍇ�F�r���w�~�܂��Ԃ̔�����
-	//  - this��Ԃɒ����������������w�肳��Ă��Ȃ��ꍇ�F�������͂Ȃ�
-	//- ������
-	//  - �n����Ԃɔ��������w�肳��Ă����ꍇ�F���̔������𒼒ʉ�������Ԃ̔������Ƃ��܂��B
-	//  - �n����Ԃɔ��������Ȃ��A���������w�肳��Ă����ꍇ�F�r���w�n����Ԃ̒��������A�V������Ԃ̔������Ƃ��܂��B
-	//  - �n����Ԃɒ����������������w�肳��Ă��Ȃ��ꍇ�F�������͂Ȃ�
+	//始発駅の時刻(直通化した時刻)は、以下のようになります。
+	//- 駅扱：変わりません。
+	//- 着時刻：
+	//  - this列車に着時刻が指定されていた場合：その着時刻
+	//  - this列車に着時刻がなく、発時刻が指定されていた場合：途中駅止まり列車の発時刻
+	//  - this列車に着時刻も発時刻も指定されていない場合：着時刻はなし
+	//- 発時刻
+	//  - 始発列車に発時刻が指定されていた場合：その発時刻を直通化した列車の発時刻とします。
+	//  - 始発列車に発時刻がなく、着時刻が指定されていた場合：途中駅始発列車の着時刻を、新しい列車の発時刻とします。
+	//  - 始発列車に着時刻も発時刻も指定されていない場合：発時刻はなし
 	if ( iRv <= 0 )
 	{
 		CentDedEkiJikoku	aCentDedEkiJikokuSyuuchaku = getCentDedEkiJikoku( iEkiOrderSihatsu ) ;
 		CentDedEkiJikoku	aCentDedEkiJikokuSihatsu = aRessyaSihatsu.getCentDedEkiJikoku( iEkiOrderSihatsu ) ;
 
 		CentDedEkiJikoku	aCentDedEkiJikokuNew = aCentDedEkiJikokuSyuuchaku ;
-		//- �������F
+		//- 着時刻：
 		if ( !aCentDedEkiJikokuSyuuchaku.getChakujikoku().isNull() )
 		{
-			//�@�r���w�~�܂�̗�Ԃɒ��������w�肳��Ă����ꍇ�F���̒�����
+			//　途中駅止まりの列車に着時刻が指定されていた場合：その着時刻
 			aCentDedEkiJikokuNew.setChakujikoku( aCentDedEkiJikokuSyuuchaku.getChakujikoku() ) ;
 		}
 		else if ( !aCentDedEkiJikokuSyuuchaku.getHatsujikoku().isNull() )
 		{
-			//�@�r���w�~�܂�̗�Ԃɒ��������Ȃ��A���������w�肳��Ă����ꍇ�F�r���w�~�܂��Ԃ̔�����
+			//　途中駅止まりの列車に着時刻がなく、発時刻が指定されていた場合：途中駅止まり列車の発時刻
 			aCentDedEkiJikokuNew.setChakujikoku( aCentDedEkiJikokuSyuuchaku.getHatsujikoku() ) ;
 		}
 		else
 		{
-			//�@�r���w�~�܂�̗�Ԃɒ����������������w�肳��Ă��Ȃ��ꍇ�F�������͂Ȃ�
+			//　途中駅止まりの列車に着時刻も発時刻も指定されていない場合：着時刻はなし
 			aCentDedEkiJikokuNew.setChakujikoku( CdDedJikoku() ) ;
 		}
 
 
-		//- ������
+		//- 発時刻
 		if ( !( aCentDedEkiJikokuSihatsu.getHatsujikoku().isNull() ) )
 		{
-			//  - �n����Ԃɔ��������w�肳��Ă����ꍇ�F���̔������𒼒ʉ�������Ԃ̔������Ƃ��܂��B
+			//  - 始発列車に発時刻が指定されていた場合：その発時刻を直通化した列車の発時刻とします。
 			aCentDedEkiJikokuNew.setHatsujikoku( aCentDedEkiJikokuSihatsu.getHatsujikoku() ) ;
 		}
 		else if ( !( aCentDedEkiJikokuSihatsu.getChakujikoku().isNull() ) )
 		{
-			//  - �n����Ԃɔ��������Ȃ��A���������w�肳��Ă����ꍇ�F�r���w�n����Ԃ̒��������A�V������Ԃ̔������Ƃ��܂��B
+			//  - 始発列車に発時刻がなく、着時刻が指定されていた場合：途中駅始発列車の着時刻を、新しい列車の発時刻とします。
 			aCentDedEkiJikokuNew.setHatsujikoku( aCentDedEkiJikokuSihatsu.getChakujikoku() ) ;
 		}
 		else
 		{
-			//  - �n����Ԃɒ����������������w�肳��Ă��Ȃ��ꍇ�F�������͂Ȃ�
+			//  - 始発列車に着時刻も発時刻も指定されていない場合：発時刻はなし
 			aCentDedEkiJikokuNew.setHatsujikoku( CdDedJikoku() ) ;
 		}
 		setCentDedEkiJikoku( iEkiOrderSihatsu , aCentDedEkiJikokuNew ) ;
 	}
 
-	//	�n���w����̉w
+	//	始発駅より後の駅
 	if ( iRv <= 0 )
 	{
 		for ( int iEkiOrder = iEkiOrderSihatsu + 1 ; 
@@ -855,11 +855,11 @@ int CentDedRessya::undirect(
 	int iRv = 0 ;
 
 
-	//���r���w�~�܂��Ԃ̏I���wOrder������
-	//��([�I���wOrder�̉w�ƏI���wOrder-1�̉w�̊Ԃɗ�ԉ^�s���Ȃ�]
-	//���̏������U�̊Ԃ́A�I���wOrder--����B
-	//���I���wOrder��0�Ȃ�G���[)
-	//��[�I���wOrder==0]���G���[
+	//○途中駅止まり列車の終着駅Orderを決定
+	//│([終着駅Orderの駅と終着駅Order-1の駅の間に列車運行がない]
+	//│の条件が偽の間は、終着駅Order--する。
+	//↓終着駅Orderが0ならエラー)
+	//◇[終着駅Order==0]→エラー
 	int iEkiOrderSyuuchaku = -1 ;
 	if ( iRv >= 0 )
 	{
@@ -870,14 +870,14 @@ int CentDedRessya::undirect(
 		}
 		if ( iEkiOrderSyuuchaku == 0 )
 		{
-			iRv = -1 ;	//	�w��̉wOrder�ł́A���f�͂ł��܂���
+			iRv = -1 ;	//	指定の駅Orderでは、分断はできません
 		}
 	}
 
-	//���r���w�n����Ԃ̎n���wIndex������
-	//��([�n���wOrder�̉w�Ǝn���wOrder+1�̉w�̊Ԃɗ�ԉ^�s���Ȃ�]
-	//���̏������U�̊Ԃ́A�n���wrOder++����B)
-	//��[�n���wOrder==�w��-1]���G���[
+	//○途中駅始発列車の始発駅Indexを決定
+	//│([始発駅Orderの駅と始発駅Order+1の駅の間に列車運行がない]
+	//↓の条件が偽の間は、始発駅rOder++する。)
+	//◇[始発駅Order==駅数-1]→エラー
 	int iEkiOrderSihatsu = -1 ;
 	if ( iRv >= 0 )
 	{
@@ -889,13 +889,13 @@ int CentDedRessya::undirect(
 		}
 		if ( iEkiOrderSihatsu == m_CentDedEkiJikokuCont.size() - 1 )
 		{
-			iRv = -1 ;	//	�w��̉wOrder�ł́A���f�͂ł��܂���
+			iRv = -1 ;	//	指定の駅Orderでは、分断はできません
 		}
 	}
-	//�����f�����Ԃ̃R�s�[��2�쐬�B
-	//�������r���w�~�܂��ԁE�r���w�n����ԂƂ���B
-	//���r���w�~�܂��Ԃ̕����A�I���wOrder�œ��w�ǂ܂�ɂ���
-	//���r���w�n����Ԃ̕����A�n���wOrder�œ��w�n���ɂ���
+	//○分断する列車のコピーを2つ作成。
+	//↓これを途中駅止まり列車・途中駅始発列車とする。
+	//○途中駅止まり列車の方を、終着駅Orderで当駅どまりにする
+	//○途中駅始発列車の方を、始発駅Orderで当駅始発にする
 	if ( iRv >= 0 )
 	{
 		*pCentDedRessyaSyuuchaku = *this ;

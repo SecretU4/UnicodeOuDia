@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CInnameIndexContainer.h 63 2012-09-01 08:54:26Z okm $
@@ -76,65 +76,65 @@ namespace OuPropertiesText{
 
 /**
 @brief
-	Index �� InNameIndex �̕ϊ��@�\�����������N���X�ł��B
+	Index と InNameIndex の変換機能を実装したクラスです。
 	
-	���̃N���X�́ACNodeContainer �ɏW�񂳂�܂��B
-	���̃N���X��P�̂Ŏg�����_�͂���܂���B
+	このクラスは、CNodeContainer に集約されます。
+	このクラスを単体で使う利点はありません。
 	
-	���̃N���X�́A
+	このクラスは、
 
 		Index[ Name ][ InNameIndex ] 
 
-	�̌`���̃R���e�i���N���X���������̂ł��B
+	の形式のコンテナをクラス化したものです。
 
 */
 class CInNameIndexContainer
 {
 public:
 	/**
-		����� Name �ɂ�����AInNameIndex �� Index �̑Ώƕ\
-		�ƂȂ�R���e�i�ł��B
+		特定の Name における、InNameIndex と Index の対照表
+		となるコンテナです。
 
-		- �Y������ InNameIndex
-		- �l�� Index
+		- 添え字が InNameIndex
+		- 値が Index
 
-		�ƂȂ�܂��B
+		となります。
 	*/
 	typedef std::deque< int >	InNameIndexCont ;
 	/**
-		���ׂĂ� Name �ɂ�����AInNameIndex �� Index �̑Ώƕ\
-		�ƂȂ�R���e�i�ł��B
+		すべての Name における、InNameIndex と Index の対照表
+		となるコンテナです。
 
-		- �L�[�� Name
-		- �l�� InNameIndexCont
+		- キーが Name
+		- 値が InNameIndexCont
 
-		�ƂȂ�܂��B
+		となります。
 	*/
 	typedef std::map< std::string , InNameIndexCont >	NameIndexCont ;
 private:
 	// ********************************
-	///@name �W��
+	///@name 集約
 	// ********************************
 	///@{
 	/**
-		���ׂĂ� Index �̐��B
+		すべての Index の数。
 	*/
 	int m_iNodeCount ;
 	/**
-		���ׂĂ� Name �ɂ�����AInNameIndex �� Index �̑Ώƕ\
-		�ƂȂ�R���e�i�ł��B
+		すべての Name における、InNameIndex と Index の対照表
+		となるコンテナです。
 
-		- �L�[�� Name
-		- �l�� InNameIndexCont
+		- キーが Name
+		- 値が InNameIndexCont
 
-		�ƂȂ�܂��B
+		となります。
 	*/
 	NameIndexCont	m_NameIndexCont ;
 	///@}
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CInNameIndexContainer();
 	virtual ~CInNameIndexContainer();
@@ -148,7 +148,7 @@ public:
 	
 	/**
 	 * @return
-	 * 	�R���e�i�Ɋi�[����Ă���v�f�̌���Ԃ��܂��B
+	 * 	コンテナに格納されている要素の個数を返します。
 	 */
 	virtual int	size()const ;
 	
@@ -160,77 +160,77 @@ public:
 	///@{
 
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 * 	�v�f��ǉ����܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に、
+	 * 	要素を追加します。
 	 * @param element [in]
-	 * 	�v�f���w�肵�Ă��������B
+	 * 	要素を指定してください。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 * 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-	 *	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 以下です。
+	 * 	０は、先頭・size()なら末尾への追加になります。
+	 *	但し、INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 * 	0以上は成功、負の数はエラーです
 	 */
 	virtual int insert( const std::string& element , int iIndex = INT_MAX ) ;
 	
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
-	 * 	�v�f���폜���܂��B
+	 * 	コンテナ内の、インデクスで指定された場所の
+	 * 	要素を削除します。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �����ł��B
-	 * 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 未満です。
+	 * 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 * @param iSize [in]
-	 * 	�폜����v�f�̐����w�肵�Ă��������B
-	 * 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 * 	削除する要素の数を指定してください。
+	 * 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 * @attention
-	 *	iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+	 *	iIndex と iSize の両方を INT_MAX にすることはできません。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 * 	0以上は成功、負の数はエラーです
 	 */
 	virtual int erase( int iIndex  , int iSize = 1 ) ;
 	
 	///@}
 public:
 	// ********************************
-	///@name	CNodeContainer-InNameIndex�ł̃A�N�Z�X
+	///@name	CNodeContainer-InNameIndexでのアクセス
 	// ********************************
 	///@{
 	
 	/**
-	 	�w��� Name �����v�f�̌���Ԃ��܂��B
+	 	指定の Name を持つ要素の個数を返します。
 	 @param strName [in]
-		Name ���w�肵�Ă��������B
+		Name を指定してください。
 	 @return
-	 	�v�f�̌���Ԃ��܂��B
+	 	要素の個数を返します。
 	*/
 	virtual int	sizeInName( const std::string& strName )const ;
 	/**
-		InNameIndex ���R���e�i�̃C���f�N�X�ɕϊ����܂��B
+		InNameIndex をコンテナのインデクスに変換します。
 	@param strName [in]
-		Name ���w�肵�Ă��������B
+		Name を指定してください。
 	@param iInNameIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� sizeInName() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 sizeInName() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	@return
-		�C���f�N�X ��Ԃ��܂��B
-		-	-1 ;	//	�C���f�N�X���s���ł��B
+		インデクス を返します。
+		-	-1 ;	//	インデクスが不正です。
 	*/
 	virtual int indexOfInNameIndex( 
 		const std::string& strName ,
 		int iInNameIndex )const ;
 	/**
-		�R���e�i�̃C���f�N�X���AInNameIndex �ɕϊ����܂��B
+		コンテナのインデクスを、InNameIndex に変換します。
 	@param strName [in]
-		Name ���w�肵�Ă��������B
+		Name を指定してください。
 	@param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	@return
-		InNameIndex ��Ԃ��܂��B
+		InNameIndex を返します。
 	*/
 	virtual int indexToInNameIndex( 
 		const std::string& element ,

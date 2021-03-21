@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -79,41 +79,41 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  @brief
-	�y�T�v�z
-	  X,Y ���W�n�̊ԂŁA���W��ϊ����܂��B
+	【概要】
+	  X,Y 座標系の間で、座標を変換します。
 	
-	  ���̃N���X�́A X �����̍��W��ϊ����� CconvDcdPosOnZone �� 
-	Y �����̍��W��ϊ�����  CconvDcdPosOnZone ���܂��Ă��܂��B
+	  このクラスは、 X 方向の座標を変換する CconvDcdPosOnZone と 
+	Y 方向の座標を変換する  CconvDcdPosOnZone を包含しています。
  */
 class CconvDcdPosOnZoneXy
 {
 private:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-		X �����̍��W��ϊ����� CconvDcdPosOnZone �I�u�W�F�N�g�ł��B
+		X 方向の座標を変換する CconvDcdPosOnZone オブジェクトです。
 	 */
 	Ou<CconvDcdPosOnZone>	m_pCconvDcdPosOnZoneX ;
 	
 	/**
-		Y �����̍��W��ϊ����� CconvDcdPosOnZone �I�u�W�F�N�g�ł��B
+		Y 方向の座標を変換する CconvDcdPosOnZone オブジェクトです。
 	 */
 	Ou<CconvDcdPosOnZone>	m_pCconvDcdPosOnZoneY ;
 	
 	///@}
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
 	 @param pCconvDcdPosOnZoneX [in]
-		X �����̍��W��ϊ����� CconvDcdPosOnZone�I�u�W�F�N�g��
-		�w�肵�ĉ������B�B
+		X 方向の座標を変換する CconvDcdPosOnZoneオブジェクトを
+		指定して下さい。。
 	 @param pCconvDcdPosOnZoneY [in]
-		Y �����̍��W��ϊ����� CconvDcdPosOnZone�I�u�W�F�N�g��
-		�w�肵�ĉ������B�B
+		Y 方向の座標を変換する CconvDcdPosOnZoneオブジェクトを
+		指定して下さい。。
 	 */
 	CconvDcdPosOnZoneXy( 
 		Ou<CconvDcdPosOnZone> pCconvDcdPosOnZoneX ,
@@ -129,7 +129,7 @@ public:
 // ********************************
  public:
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	Ou<CconvDcdPosOnZone> getX()const
@@ -143,55 +143,55 @@ public:
 	///@}
 	
 	// ********************************
-	///@name ����
+	///@name 操作
 	// ********************************
 	///@{
 	
 	/**
-	  	Zone1 �̍��W�n
-	  	�ł̈ʒu���A
-	  	Zone2 �̍��W�n
-	  	�ɕϊ����܂��B
+	  	Zone1 の座標系
+	  	での位置を、
+	  	Zone2 の座標系
+	  	に変換します。
 	   @param value [in]
-	  	�ϊ��O�̒l���w�肵�ĉ������B
+	  	変換前の値を指定して下さい。
 	   @return
-	  	�ϊ���̒l��Ԃ��܂��B
+	  	変換後の値を返します。
 	 */
 	virtual CdDcdPosXy Zone1PosToZone2( const CdDcdPosXy& value )const ;
 	
 	/**
-	  	Zone2 �̍��W�n
-	  	�ł̈ʒu���A
-	  	Zone1 �̍��W�n
-	  	�ɕϊ����܂��B
+	  	Zone2 の座標系
+	  	での位置を、
+	  	Zone1 の座標系
+	  	に変換します。
 	   @param value [in]
-	  	�ϊ��O�̒l���w�肵�ĉ������B
+	  	変換前の値を指定して下さい。
 	   @return
-	  	�ϊ���̒l��Ԃ��܂��B
+	  	変換後の値を返します。
 	 */
 	virtual CdDcdPosXy Zone1PosFromZone2( const CdDcdPosXy& value )const ;
 
 	/**
-	  	Zone1 �̍��W�n
-	  	�ł͈̔͂��A
-	  	Zone2 �̍��W�n
-	  	�ɕϊ����܂��B
+	  	Zone1 の座標系
+	  	での範囲を、
+	  	Zone2 の座標系
+	  	に変換します。
 	   @param value [in]
-	  	�ϊ��O�̒l���w�肵�ĉ������B
+	  	変換前の値を指定して下さい。
 	   @return
-	  	�ϊ���̒l��Ԃ��܂��B
+	  	変換後の値を返します。
 	 */
 	virtual CdDcdZoneXy Zone1ToZone2( const CdDcdZoneXy& value )const ;
 	
 	/**
-	  	Zone2 �̍��W�n
-	  	�ł͈̔͂��A
-	  	Zone1 �̍��W�n
-	  	�ɕϊ����܂��B
+	  	Zone2 の座標系
+	  	での範囲を、
+	  	Zone1 の座標系
+	  	に変換します。
 	   @param value [in]
-	  	�ϊ��O�̒l���w�肵�ĉ������B
+	  	変換前の値を指定して下さい。
 	   @return
-	  	�ϊ���̒l��Ԃ��܂��B
+	  	変換後の値を返します。
 	 */
 	virtual CdDcdZoneXy Zone1FromZone2( const CdDcdZoneXy& value )const ;
 	///@}

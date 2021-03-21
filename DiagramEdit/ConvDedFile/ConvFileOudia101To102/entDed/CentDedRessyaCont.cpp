@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -92,7 +92,7 @@ static char THIS_FILE[] = __FILE__;
 // ****************************************************************
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CentDedRessyaCont::CentDedRessyaCont( 
 		int iEkiCount ,
@@ -116,10 +116,10 @@ CentDedRessyaCont::CentDedRessyaCont( const CentDedRessyaCont& value )
 	
 CentDedRessyaCont& CentDedRessyaCont::operator=( const CentDedRessyaCont& value )
 {
-	//	�ێ����Ă����Ԃ��A���ׂĔj�����܂��B
+	//	保持している列車を、すべて破棄します。
 	erase( 0 , INT_MAX ) ;
 
-	//	value �̗�Ԃ��Athis�ɃR�s�[���Ă��܂��B
+	//	value の列車を、thisにコピーしています。
 	CaMui< CentDedRessya >	aCaCont_this( this ) ;
 	aCaCont_this.insert( &value ) ;
 
@@ -128,9 +128,9 @@ CentDedRessyaCont& CentDedRessyaCont::operator=( const CentDedRessyaCont& value 
 
 CentDedRessyaCont::~CentDedRessyaCont()
 {
-	//	�R���e�i���ێ����Ă���|�C���^�̗v�f��
-	//	erase()->onErase() �ɂ��A
-	//	delete �ō폜���Ȃ��Ă͂Ȃ�܂���B
+	//	コンテナが保持しているポインタの要素は
+	//	erase()->onErase() により、
+	//	delete で削除しなくてはなりません。
 	erase( 0 , INT_MAX ) ;
 }
 
@@ -168,19 +168,19 @@ int CentDedRessyaCont::findEkikanSaisyouSec(
 	// --------------------------------
 			int iSaisyouSyouSecTeisya = -1 ;
 			//iSaisyouSyouSecTeisya = 
-			//	iEkiiIndex �E iEkiIndex + 1 �̗��w�ɒ�Ԃ����Ԃ̂����́A
-			//	�ŏ��w�ԏ��v�b�� 
+			//	iEkiiIndex ・ iEkiIndex + 1 の両駅に停車する列車のうちの、
+			//	最小駅間所要秒数 
 			int iSaisyouSyouSec = -1 ;
 			//iSaisyouSyouSec = 
-			//	iEkiiIndex �E iEkiIndex + 1 �̍ŏ��w�ԏ��v�b��
-			//	�Е��E�܂��͗��w���ʉ߉w�̗�Ԃ��܂݂܂��B
+			//	iEkiiIndex ・ iEkiIndex + 1 の最小駅間所要秒数
+			//	片方・または両駅が通過駅の列車を含みます。
 
 			int iSaisyouSyouSecTeisyaRessyaIdx = -1 ;
 			//iSaisyouSyouSecTeisyaRessyaIdx = 
-			//	iSaisyouSyouSecTeisya �ɑΉ�������Index 
+			//	iSaisyouSyouSecTeisya に対応する列車Index 
 			int iSaisyouSyouSecRessyaIdx = -1 ;
 			//iSaisyouSyouSecRessyaIdx = 
-			//	iSaisyouSyouSec �ɑΉ�������Index 
+			//	iSaisyouSyouSec に対応する列車Index 
 			
 			const Mu<const CentDedRessya*>* pCentDedRessyaContGet =
 				this->getMuPtr() ;
@@ -249,22 +249,22 @@ int CentDedRessyaCont::findEkikanSaisyouSec(
 
 
 /**
-	CentDedRessyaCont::sort() �Ɏg�p����
-	���ׂ����p�w�����I�u�W�F�N�g�B
+	CentDedRessyaCont::sort() に使用する
+	並べかえ用駅時刻オブジェクト。
 */
 class CdRessyaForSort_Ekijikoku
 {
 public:
 	/**
-		CdRessyaForSort_Ekijikoku �̔�r���s���֐��I�u�W�F�N�g�ł��B
+		CdRessyaForSort_Ekijikoku の比較を行う関数オブジェクトです。
 	*/
 	class CCompareFunction
 	{
 		/**
-		�_�C���O�����N�_�������w�肵�Ă��������B
-		���̊֐��́A�\�[�g���ɁA���̒l���ł�������������
-		�݂Ȃ��܂��B
-		(��F���̎�����5:00���w�肳�ꂽ�ꍇ�́A5:00<23:59<0:00<4:59 �Ƃ��Ĕ�r���s���܂�)
+		ダイヤグラム起点時刻を指定してください。
+		この関数は、ソート時に、この値を最も小さい時刻と
+		みなします。
+		(例：この時刻に5:00が指定された場合は、5:00<23:59<0:00<4:59 として比較を行います)
 		*/
 		CdDedJikoku m_jikokuKitenJikoku ;
 	public:
@@ -275,35 +275,35 @@ public:
 		};
 		/**
 		@return
-			left < right �Ȃ�^�ł��B
+			left < right なら真です。
 
 		@note
-		  ��r��́A
-			- �w������NULL�łȂ����̂�NULL�̂��̂Ƃł́ANULL�łȂ����̂���B
-			- Ekijikoku�̏������ق�����B
-			- Ekijikoku�������Ȃ�A����������B
-			- Ekijikoku����/���������Ȃ�RessyaIdx�̏������ق�����B
+		  比較基準は、
+			- 駅時刻がNULLでないものとNULLのものとでは、NULLでないものが先。
+			- Ekijikokuの小さいほうが先。
+			- Ekijikokuが同じなら、着時刻が先。
+			- Ekijikokuも着/発も同じならRessyaIdxの小さいほうが先。
 		*/
 		bool operator()( 
 			const CdRessyaForSort_Ekijikoku& left , 
 			const CdRessyaForSort_Ekijikoku& right )
 		{
 			// --------------------------------
-			//	�Е���NULL�̏ꍇ�̔�r
+			//	片方がNULLの場合の比較
 			// --------------------------------
 			if ( !left.getJikoku().isNull() && right.getJikoku().isNull() )
 			{
-				//	left��NULL�ŁAright�͔�NULL
+				//	leftはNULLで、rightは非NULL
 				return true ;
 			}
 			else if ( left.getJikoku().isNull() && !right.getJikoku().isNull() )
 			{
-				//	left�͔�NULL�ŁAright��NULL
+				//	leftは非NULLで、rightはNULL
 				return false ;
 			}
 			// --------------------------------
-			//	m_Jikoku �͂ǂ����NULL�ł͂Ȃ��E�������͂ǂ����NULL
-			//	m_Jikoku �͓�����
+			//	m_Jikoku はどちらもNULLではない・もしくはどちらもNULL
+			//	m_Jikoku は等しい
 			// --------------------------------
 			int iResult = left.getJikoku().compare( right.getJikoku() , m_jikokuKitenJikoku ) ;
 			if ( iResult == -1 )
@@ -316,8 +316,8 @@ public:
 			}
 
 			// --------------------------------
-			//	m_Jikoku �͓�����
-			//	Ekijikoku�������Ȃ�A����������B
+			//	m_Jikoku は等しい
+			//	Ekijikokuが同じなら、着時刻が先。
 			// --------------------------------
 			if ( !left.getIsHatsuJikoku() &&
 				right.getIsHatsuJikoku() )
@@ -330,8 +330,8 @@ public:
 			}
 			
 			// --------------------------------
-			// m_Jikoku , m_bIsHatsuJikoku �͓�����
-			//	- Ekijikoku����/���������Ȃ�RessyaIdx�̏������ق�����B
+			// m_Jikoku , m_bIsHatsuJikoku は等しい
+			//	- Ekijikokuも着/発も同じならRessyaIdxの小さいほうが先。
 			// --------------------------------
 			if ( left.getRessyaIdx() < right.getRessyaIdx() )
 			{
@@ -344,17 +344,17 @@ public:
 
 private:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
-	/** ��ԃC���f�N�X */
+	/** 列車インデクス */
 	int m_iRessyaIdx ;
 
-	/** �w���� */
+	/** 駅時刻 */
 	CdDedJikoku m_Jikoku ;
 	/** 
-	-	false : m_Jikoku �́A������
-	-	true  : m_Jikoku �́A������
+	-	false : m_Jikoku は、着時刻
+	-	true  : m_Jikoku は、発時刻
 	*/
 	bool	m_bIsHatsuJikoku ;
 	///@}
@@ -374,7 +374,7 @@ public:
 
 
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	int getRessyaIdx()const{	return m_iRessyaIdx ;};
@@ -385,14 +385,14 @@ public:
 
 };
 /**
-	CentDedRessyaCont::sort() �Ɏg�p����
-	���ׂ����p��ԃI�u�W�F�N�g
+	CentDedRessyaCont::sort() に使用する
+	並べかえ用列車オブジェクト
 */
 class CdRessyaForSort_Ressya
 {
 public:
 	/**
-		CdRessyaForSort �̔�r���s���֐��I�u�W�F�N�g�ł��B
+		CdRessyaForSort の比較を行う関数オブジェクトです。
 	*/
 	class CCompareFunction
 	{
@@ -402,36 +402,36 @@ public:
 		};
 		/**
 		@return
-			left < right �Ȃ�^�ł��B
+			left < right なら真です。
 
 		@note
-		  ��r��́A
-			- NULL�łȂ����̂�NULL�̂��̂Ƃł́ANULL�łȂ����̂���B
-			- ��Ԏ��Index�̏������ق�����B
-			- ��Ԗ����������ő���������B
-			- �����𐮐��������ꍇ�ɑ���������B
-			- �������������ő���������B
+		  比較基準は、
+			- NULLでないものとNULLのものとでは、NULLでないものが先。
+			- 列車種別Indexの小さいほうが先。
+			- 列車名が辞書順で早い方が先。
+			- 号数を整数化した場合に早い方が先。
+			- 号数が辞書順で早い方が先。
 		*/
 		bool operator()( 
 			const CdRessyaForSort_Ressya& left , 
 			const CdRessyaForSort_Ressya& right )
 		{
 			// --------------------------------
-			//	�Е���NULL�̏ꍇ�̔�r
-			//	- NULL�łȂ����̂�NULL�̂��̂Ƃł́ANULL�łȂ����̂���B
+			//	片方がNULLの場合の比較
+			//	- NULLでないものとNULLのものとでは、NULLでないものが先。
 			// --------------------------------
 			if ( !left.getIsNull() && right.getIsNull() )
 			{
-				//	left��NULL�ŁAright�͔�NULL
+				//	leftはNULLで、rightは非NULL
 				return true ;
 			}
 			else if ( left.getIsNull() && !right.getIsNull() )
 			{
-				//	left�͔�NULL�ŁAright��NULL
+				//	leftは非NULLで、rightはNULL
 				return false ;
 			}
 			// --------------------------------
-			//	- ��Ԏ��Index�̏������ق�����B
+			//	- 列車種別Indexの小さいほうが先。
 			// --------------------------------
 			if ( left.getRessyasyubetsuIndex() < right.getRessyasyubetsuIndex() )
 			{
@@ -443,7 +443,7 @@ public:
 			}
 
 			// --------------------------------
-			//	- ��Ԗ����������ő���������B
+			//	- 列車名が辞書順で早い方が先。
 			// --------------------------------
 			if ( left.getRessyamei() < right.getRessyamei() )
 			{
@@ -455,7 +455,7 @@ public:
 			}
 
 			// --------------------------------
-			//	- �����𐮐��������ꍇ�ɑ���������B
+			//	- 号数を整数化した場合に早い方が先。
 			// --------------------------------
 			{
 				int iLeftGousuu = OuLib::intOf( left.getGousuu() ) ;
@@ -470,7 +470,7 @@ public:
 				}
 			}
 			// --------------------------------
-			//	- �������������ő���������B
+			//	- 号数が辞書順で早い方が先。
 			// --------------------------------
 			if ( left.getGousuu()  < right.getGousuu() )
 			{
@@ -483,53 +483,53 @@ public:
 
 private:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
-	/** ��ԃC���f�N�X */
+	/** 列車インデクス */
 	int m_iRessyaIdx ;
 	/**
-		���̗�Ԃ��wNull��ԁx�Ȃ�^�A
-		�L���ȗ�ԑ�����ێ����Ă���̂Ȃ�U�ł��B
+		この列車が『Null状態』なら真、
+		有効な列車属性を保持しているのなら偽です。
 		
-		���̑������^�̏ꍇ�A���� 
+		この属性が真の場合、属性 
 		-	m_iRessyasyubetsuIndex,
 		-	m_strRessyabangou ;
 		-	m_strRessyamei ;
 		-	m_strGousuu ;
 		-	m_strBikou ;
 	
-		����сA
-			m_CentDedEkiJikokuCont �Ɋi�[����Ă��� 
-		CentDedEkiJikoku �́A�Ӗ��������܂���B
+		および、
+			m_CentDedEkiJikokuCont に格納されている 
+		CentDedEkiJikoku は、意味を持ちません。
 		
-		�K��l�� true �ł��B
-		set...() ���\�b�h�ŁAm_eRessyahoukou �ȊO��
-		�����ꂩ�̑�����ݒ肵���Ƃ��ɂ́A
-		�����I�ɋU�ɕς��܂��B
-		clear() �ŁA�^�ƂȂ�܂��B
+		規定値は true です。
+		set...() メソッドで、m_eRessyahoukou 以外の
+		いずれかの属性を設定したときには、
+		自動的に偽に変わります。
+		clear() で、真となります。
 	 */
 	bool m_bIsNull ;
 
 	/**
-		���̗�Ԃ́w��Ԏ�ʁx���A
-		�w��Ԏ��Index�x�ŕێ����܂��B
+		この列車の『列車種別』を、
+		『列車種別Index』で保持します。
 		
-		�K��l�� 0 �ł��B
+		規定値は 0 です。
 	*/
 	int	m_iRessyasyubetsuIndex ;
 	
 	/**
-		���̗�Ԃ́w��Ԗ��x�B
+		この列車の『列車名』。
 		
-		�K��l�͋󕶎���ł��B
+		規定値は空文字列です。
 	 */
 	string m_strRessyamei ;
 	
 	/**
-		���̗�Ԃ́w�����x�B
+		この列車の『号数』。
 		
-		�K��l�͋󕶎���ł��B
+		規定値は空文字列です。
 	 */
 	string m_strGousuu ;
 	///@}
@@ -552,7 +552,7 @@ public:
 		, m_strRessyamei()
 		, m_strGousuu(){} ;
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	int getRessyaIdx()const{	return m_iRessyaIdx ;};
@@ -575,23 +575,23 @@ int CentDedRessyaCont::findTrainToDirect(
 		int iEkiOrderSyuuchaku = pCentDedRessyaSyuuchaku->getRunLastEkiOrder() ;
 		jikokuSyuuchaku = pCentDedRessyaSyuuchaku->getCentDedEkiJikoku( iEkiOrderSyuuchaku ).getChakujikoku( true ) ;
 	}
-	//jikokuSyuuchaku = this��Ԃ̏I���w�̒������iNULL�̏ꍇ������܂��j
+	//jikokuSyuuchaku = this列車の終着駅の着時刻（NULLの場合もあります）
 
 	int iRv = -1 ;
 	for ( idxRessya ++ ; iRv == -1 && idxRessya  < getMuPtr()->size() ; idxRessya ++ )
 	{
 		const CentDedRessya* pCentDedRessyaSihatsu = getMuPtr()->get( idxRessya ) ;
-		//	  - �E�t�H�[�J�X�̂�����(�r���w�~�܂�̗��)�Ɠ�����Ԏ��
+		//	  - ・フォーカスのある列車(途中駅止まりの列車)と同じ列車種別
 		if ( pCentDedRessyaSyuuchaku->getRessyasyubetsuIndex() == 
 			pCentDedRessyaSihatsu->getRessyasyubetsuIndex() )
 		{
-			//	  - �E�t�H�[�J�X�̂���w���n���w�Ƃ�����
+			//	  - ・フォーカスのある駅を始発駅とする列車
 			if ( iEkiOrder == pCentDedRessyaSihatsu->getRunFirstEkiOrder() )
 			{
-				//	  - �E�I����Ԃ̒��������n���w�̔��������w�肳��Ă���ꍇ�́A
-				//	  - �E�n���w�̔��������A�I����Ԃ̒���������12���Ԉȓ�
-				//	  - �E�I����Ԃ̒������E�n���w�̔������̂ǂ��炩�������Ă���ꍇ�́A
-				//		�������ɒ��ʉ��̑ΏۂƂȂ�܂��B
+				//	  - ・終着列車の着時刻も始発駅の発時刻も指定されている場合は、
+				//	  - ・始発駅の発時刻が、終着列車の着時刻から12時間以内
+				//	  - ・終着列車の着時刻・始発駅の発時刻のどちらかが欠けている場合は、
+				//		無条件に直通化の対象となります。
 				CdDedJikoku jikokuSihatsu = pCentDedRessyaSihatsu->getCentDedEkiJikoku( iEkiOrder ).getHatsujikoku( true ) ;
 				if ( !jikokuSyuuchaku.isNull() && !jikokuSihatsu.isNull() )
 				{
@@ -603,7 +603,7 @@ int CentDedRessyaCont::findTrainToDirect(
 				}
 				else
 				{
-					//	  - �E�n���w�̔��������A�I����Ԃ̒���������12���Ԉȓ�
+					//	  - ・始発駅の発時刻が、終着列車の着時刻から12時間以内
 					iRv = idxRessya ;
 				}
 			}
@@ -627,8 +627,8 @@ void CentDedRessyaCont::adjustByEkijikokukeisiki(
 
 
 // --------------------------------
-//@name CentDedRessya ���� 
-//	CentDedEkiJikoku �𑝌�
+//@name CentDedRessya 内の 
+//	CentDedEkiJikoku を増減
 // --------------------------------
 int CentDedRessyaCont::onSetCentDedEki( const Mu<CentDedEkiCont::CdDedEki>* pCentDedEkiCont , int iEkiOrder ) 
 {
@@ -645,7 +645,7 @@ int CentDedRessyaCont::onSetCentDedEki( const Mu<CentDedEkiCont::CdDedEki>* pCen
 			iRv = pCentDedRessya->onSetCentDedEki( 
 					pCentDedEkiCont , 
 					iEkiOrder ) ;
-				//-1 ; // �C���f�N�X���s���ł��B 
+				//-1 ; // インデクスが不正です。 
 		}
 	}
 	return ( iRv ) ;
@@ -667,7 +667,7 @@ int CentDedRessyaCont::insertCentDedEkiJikoku(	int iEkiOrder )
 			iRv = pCentDedRessya->insertCentDedEkiJikoku( 
 					CentDedEkiJikoku() , 
 					iEkiOrder ) ;
-				//-1 ; // �C���f�N�X���s���ł��B 
+				//-1 ; // インデクスが不正です。 
 		}
 	}
 	return ( iRv ) ;
@@ -686,7 +686,7 @@ int CentDedRessyaCont::eraseCentDedEkiJikoku( int iEkiOrder )
 				idxRessya ++ ){
 			CentDedRessya*	pCentDedRessya = pIfContGet->get( idxRessya ) ;
 			iRv = pCentDedRessya->eraseCentDedEkiJikoku( iEkiOrder ) ;
-			//-1 ; // �C���f�N�X���s���ł��B 
+			//-1 ; // インデクスが不正です。 
 		}
 	}
 	return ( iRv ) ;
@@ -700,7 +700,7 @@ int CentDedRessyaCont::insertRessyasyubetsuIndex( int iRessyasyubetsuIndex )
 		}
 		if ( !( 0 <= iRessyasyubetsuIndex && 
 				iRessyasyubetsuIndex <= m_iRessyasyubetsuCount ) ){
-			iRv = -1 ;	//	�C���f�N�X���s��
+			iRv = -1 ;	//	インデクスが不正
 		}
 	}
 	// --------------------------------
@@ -735,13 +735,13 @@ int CentDedRessyaCont::eraseRessyasyubetsuIndex( int iRessyasyubetsuIndex )
 		}
 		if ( !( 0 <= iRessyasyubetsuIndex && 
 				iRessyasyubetsuIndex < m_iRessyasyubetsuCount ) ){
-			iRv = -1 ;	//	�C���f�N�X���s��
+			iRv = -1 ;	//	インデクスが不正
 		}
 	}
 	if ( iRv >= 0 ){
 		if ( isExistRessyaOfRessyasyubetsu( 
 			iRessyasyubetsuIndex , NULL ) > 0 ){
-			iRv = -3 ;	//	�w��Ԏ�ʁx�� iRessyasyubtsuIndex �̗�Ԃ����݂��܂��B
+			iRv = -3 ;	//	『列車種別』が iRessyasyubtsuIndex の列車が存在します。
 		}
 	}
 	// --------------------------------
@@ -782,7 +782,7 @@ int CentDedRessyaCont::isExistRessyaOfRessyasyubetsu(
 		}
 		if ( !( 0 <= iRessyasyubetsuIndex && 
 				iRessyasyubetsuIndex < m_iRessyasyubetsuCount ) ){
-			iRv = -1 ;	//	�C���f�N�X���s��
+			iRv = -1 ;	//	インデクスが不正
 		}
 	}
 	
@@ -802,7 +802,7 @@ int CentDedRessyaCont::isExistRessyaOfRessyasyubetsu(
 					// --------------------------------
 					if ( iRessyasyubetsuIndexCurr == iRessyasyubetsuIndex ){
 						iRessyaIndexFound = iRessyaIndex ;
-						iRv = 1 ;	//	�w��̗�Ԏ�ʂ̗�Ԃ����݂��܂��B
+						iRv = 1 ;	//	指定の列車種別の列車が存在します。
 					}
 				}
 	}

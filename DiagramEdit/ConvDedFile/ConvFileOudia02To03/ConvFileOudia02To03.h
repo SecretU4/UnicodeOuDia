@@ -29,45 +29,45 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 
 /**
 @file
 @brief
-  OuDia Ver2 �̃t�@�C���`����Ver.3 �ɕϊ����� ConvFileDll �ł��B
-  OuDia Ver1 �̃t�@�C���� Ver.3 �ɕϊ����邱�Ƃ��ł��܂��B
+  OuDia Ver2 のファイル形式をVer.3 に変換する ConvFileDll です。
+  OuDia Ver1 のファイルを Ver.3 に変換することもできます。
 */
 //$Id: ConvFileOudia02To03.h 10 2012-08-26 09:48:47Z okm $
 #ifndef  ConvFileOudia02To03_h
@@ -85,14 +85,14 @@ extern "C"{
 #endif //__cplusplus
 
 /**
-  DLL �̐ÓI�I�u�W�F�N�g�� IfConvFile �C���^�[�t�F�[�X���擾���邱�Ƃ��ł��܂��B
+  DLL の静的オブジェクトの IfConvFile インターフェースを取得することができます。
   
-�@���̃I�u�W�F�N�g�́A DLL �� FreeLibrary() ����܂ŗL���ł��B
+　このオブジェクトは、 DLL を FreeLibrary() するまで有効です。
 
 @return 
-  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	-	0 ;	//	�ϊ��ɐ������܂����B
-	-	-1 ; // �ϊ����̃t�H�[�}�b�g���s���ł��B
+  成功したら 0 以上、エラーなら負の数です。
+	-	0 ;	//	変換に成功しました。
+	-	-1 ; // 変換元のフォーマットが不正です。
 
 */
 CONVFILEOUDIA02TO03_API void* ConvFile2Dll_getIfConvFile( void ) ;
@@ -100,29 +100,29 @@ CONVFILEOUDIA02TO03_API void* ConvFile2Dll_getIfConvFile( void ) ;
 //kyuusi
 #if 0
 /**
-  Left FileFormat �̃t�@�C���t�H�[�}�b�g���ARight FileFormat �ɕϊ����܂��B
+  Left FileFormat のファイルフォーマットを、Right FileFormat に変換します。
   
 @param binLeftFile [in]
-  Left FileFormat �̃o�C�i���f�[�^(�t�@�C���̓��e��ǂݍ��񂾃������̈�)��
-�w�肵�Ă��������B
+  Left FileFormat のバイナリデータ(ファイルの内容を読み込んだメモリ領域)を
+指定してください。
 @param iLeftFileBytes [in]
-  binLeftFile �̃o�C�g�����w�肵�Ă��������B
+  binLeftFile のバイト数を指定してください。
 @param pbinRightFile [out]
-  ���̊֐��́A�t�@�C���̕ϊ��ɐ���������A�ϊ���̃f�[�^���i�[����
-�������̈�̐擪�A�h���X���A�����ɐݒ肵�܂��B
-  �֐��ďo���́A���̃f�[�^�̎g�p��́A ConvFile_MemFree �Ń������̈��
-������Ȃ��Ă͂Ȃ�܂���B
+  この関数は、ファイルの変換に成功したら、変換後のデータを格納した
+メモリ領域の先頭アドレスを、ここに設定します。
+  関数呼出元は、このデータの使用後は、 ConvFile_MemFree でメモリ領域を
+解放しなくてはなりません。
 @param piRightFileBytes [out]
-  ���̊֐��́A�t�@�C���̕ϊ��ɐ���������A�ϊ���̃f�[�^�̃o�C�g����
-�����ɐݒ肵�܂��B
+  この関数は、ファイルの変換に成功したら、変換後のデータのバイト数を
+ここに設定します。
 @return 
-  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	-	0 ;	//	�ϊ��ɐ������܂����B
-	-	-1 ; // �ϊ����̃t�H�[�}�b�g���s���ł��B
+  成功したら 0 以上、エラーなら負の数です。
+	-	0 ;	//	変換に成功しました。
+	-	-1 ; // 変換元のフォーマットが不正です。
   
 @atteintion
-  ���̊֐��́ApbinRightFile �� NULL���w�肵���ꍇ�ł��A
-�ϊ����s���A�ύX�̌��ʂ�߂�l�ŕԂ��܂��B
+  この関数は、pbinRightFile に NULLを指定した場合でも、
+変換を行い、変更の結果を戻り値で返します。
 
 */
 CONVFILEOUDIA02TO03_API int ConvFile_leftToRight(
@@ -132,29 +132,29 @@ CONVFILEOUDIA02TO03_API int ConvFile_leftToRight(
 	DWORD* piRightFileBytes ) ;
 
 /**
-  Left FileFormat ���������t�H�[�}�b�g���ۂ��𔻒肵�܂��B
+  Left FileFormat が正しいフォーマットか否かを判定します。
   
-  ���̊֐��́A�ȒP�Ȍ����Ńt�H�[�}�b�g�����؂��܂��B
+  この関数は、簡単な検査でフォーマットを検証します。
   
 @param binLeftFile [in]
-  Left FileFormat �̃o�C�i���f�[�^(�t�@�C���̓��e��ǂݍ��񂾃������̈�)��
-�w�肵�Ă��������B
+  Left FileFormat のバイナリデータ(ファイルの内容を読み込んだメモリ領域)を
+指定してください。
 @param iLeftFileBytes [in]
-  binLeftFile �̃o�C�g�����w�肵�Ă��������B
+  binLeftFile のバイト数を指定してください。
 @return 
-  ���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	-	0 ;	//	�ϊ��ɐ������܂����B
-	-	-1 ; // �ϊ����̃t�H�[�}�b�g���s���ł��B
+  成功したら 0 以上、エラーなら負の数です。
+	-	0 ;	//	変換に成功しました。
+	-	-1 ; // 変換元のフォーマットが不正です。
 */
 CONVFILEOUDIA02TO03_API int ConvFile_isLeft(
 	const CHAR* binLeftFile , 
 	DWORD iLeftFileBytes ) ;
 
 /**
-  ����DLL���Ԃ����������̈��������܂��B
+  このDLLが返したメモリ領域を解放します。
 @param binMem [in]
-  ������郁�����̈���w�肵�Ă��������B
-  NULL�̏ꍇ�́A�����s���܂���B
+  解放するメモリ領域を指定してください。
+  NULLの場合は、何も行いません。
 */
 CONVFILEOUDIA02TO03_API void ConvFile_MemFree(
 	CHAR* binMem ) ;

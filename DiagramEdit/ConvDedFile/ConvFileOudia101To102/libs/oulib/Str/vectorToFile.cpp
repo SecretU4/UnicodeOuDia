@@ -29,47 +29,47 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
 //	vectorToFile.cpp
 // ****************************************************************
-//�y�T�v�z
-//	vector<char> �̓��e���t�@�C���֏����o��
-//	�t�@�C���̓��e�� vector<char> �ւ̓ǂݍ���
-//	���s�������֐��ł��B
+//【概要】
+//	vector<char> の内容をファイルへ書き出し
+//	ファイルの内容の vector<char> への読み込み
+//	を行う下請関数です。
 */
 #include "stdafx.h"
 #include "vectorToFile.h"
@@ -79,25 +79,25 @@ namespace OuLib {
 // ****************************************************************
 
 
-//	�t�@�C���ɁAaVector �Ɋi�[����Ă���f�[�^���������݂܂��B
-//	Win32�̏ꍇ�́A�o�C�i�����[�h�ł̏������݂ƂȂ�܂��B
+//	ファイルに、aVector に格納されているデータを書き込みます。
+//	Win32の場合は、バイナリモードでの書き込みとなります。
 //[in]aVector
-//	���̊֐��́A���̔z��̓��e���t�@�C���ɏ������݂܂��B
+//	この関数は、この配列の内容をファイルに書き込みます。
 //[in]strFilename
-//	�������ݐ�̃t�@�C�������w�肵�Ă��������B
-//	�֐����s�O�Ƀt�@�C�������݂��Ă���ꍇ�́A�����̓��e��j�����܂��B
+//	書き込み先のファイル名を指定してください。
+//	関数実行前にファイルが存在している場合は、既存の内容を破棄します。
 //[retval]
-//	0:����
-//	���̐��̓G���[�ł��B
-//	-1:	�t�@�C�����I�[�v���ł��܂���B
-//	-2 ;	//	�������݂Ɏ��s���܂����B
+//	0:成功
+//	負の数はエラーです。
+//	-1:	ファイルがオープンできません。
+//	-2 ;	//	書き込みに失敗しました。
 int vectorToFile( const std::vector<char>& aVector , 
 					const std::string& strFilename ) 
 {
 	int	iRv = 0 ;
 	if ( strFilename.empty() )
 	{
-		iRv = -1 ;	//	�t�@�C���I�[�v���G���[
+		iRv = -1 ;	//	ファイルオープンエラー
 	}
 	if ( iRv >= 0 )
 	
@@ -109,15 +109,15 @@ int vectorToFile( const std::vector<char>& aVector ,
 			iReadBytes = fwrite( &aVector.front() , 1 , 
 								aVector.size() , pFile ) ;
 			if ( iReadBytes != aVector.size() ){
-				iRv = -2 ;	//	�������݂Ɏ��s���܂����B
+				iRv = -2 ;	//	書き込みに失敗しました。
 			}
 			if ( fclose( pFile ) != 0 ){
 				if ( iRv >= 0 ){
-					iRv = -2 ;	//	�������݂Ɏ��s���܂����B
+					iRv = -2 ;	//	書き込みに失敗しました。
 				}
 			}
 		}	else	{
-			iRv = -1 ;	//	�t�@�C���I�[�v���G���[
+			iRv = -1 ;	//	ファイルオープンエラー
 		}
 	}
 	return ( iRv ) ;
@@ -125,18 +125,18 @@ int vectorToFile( const std::vector<char>& aVector ,
 
 
 
-//	�t�@�C���̓��e���ApVector �Ɋi�[���܂��B
-//	Win32�̏ꍇ�́A�o�C�i�����[�h�ł̓ǂݍ��݂ƂȂ�܂��B
+//	ファイルの内容を、pVector に格納します。
+//	Win32の場合は、バイナリモードでの読み込みとなります。
 //[out]pVector
-//	���̊֐��́A���̔z��ɁA�t�@�C���̓��e���������݂܂��B
-//	�z��ɂ��łɃf�[�^������ꍇ�́A�����̓��e��j�����܂��B
+//	この関数は、この配列に、ファイルの内容を書き込みます。
+//	配列にすでにデータがある場合は、既存の内容を破棄します。
 //[in]strFilename
-//	�ǂݍ��ރt�@�C�������w�肵�Ă��������B
+//	読み込むファイル名を指定してください。
 //[retval]
-//	0:����
-//	���̐��̓G���[�ł��B
-//	-1:	�t�@�C�����I�[�v���ł��܂���B
-//	-2 ;	//	�ǂݍ��݂Ɏ��s���܂����B
+//	0:成功
+//	負の数はエラーです。
+//	-1:	ファイルがオープンできません。
+//	-2 ;	//	読み込みに失敗しました。
 int vectorFromFile( std::vector<char>* pVector , 
 					const std::string& strFilename ) 
 {
@@ -144,7 +144,7 @@ int vectorFromFile( std::vector<char>* pVector ,
 	
 	if ( strFilename.empty() )
 	{
-		iRv = -1 ;	//	�t�@�C���I�[�v���G���[
+		iRv = -1 ;	//	ファイルオープンエラー
 	}
 	
 	
@@ -165,16 +165,16 @@ int vectorFromFile( std::vector<char>* pVector ,
 					pVector->insert( pVector->end() , szLs , 
 													szLs + iReadBytes ) ;
 				}	else if ( iReadBytes < 0 ){
-					iRv = -2 ;	//	�ǂݍ��݂Ɏ��s���܂����B
+					iRv = -2 ;	//	読み込みに失敗しました。
 				}
 			}	while ( iReadBytes > 0 && iRv >= 0 ) ;
 			if ( fclose( pFile ) != 0 ){
 				if ( iRv >= 0 ){
-					iRv = -2 ;	//	�ǂݍ��݂Ɏ��s���܂����B
+					iRv = -2 ;	//	読み込みに失敗しました。
 				}
 			}
 		}	else	{
-			iRv = -1 ;	//	�t�@�C���I�[�v���G���[
+			iRv = -1 ;	//	ファイルオープンエラー
 		}
 
 	}
@@ -185,25 +185,25 @@ int vectorFromFile( std::vector<char>* pVector ,
 
 
 
-//	�t�@�C���ɁAaString �Ɋi�[����Ă���f�[�^���������݂܂��B
-//	Win32�̏ꍇ�́A�e�L�X�g���[�h�ł̏������݂ƂȂ�܂��B
+//	ファイルに、aString に格納されているデータを書き込みます。
+//	Win32の場合は、テキストモードでの書き込みとなります。
 //[in]aString
-//	���̊֐��́A���̕�����̓��e���t�@�C���ɏ������݂܂��B
+//	この関数は、この文字列の内容をファイルに書き込みます。
 //[in]strFilename
-//	�������ݐ�̃t�@�C�������w�肵�Ă��������B
-//	�֐����s�O�Ƀt�@�C�������݂��Ă���ꍇ�́A�����̓��e��j�����܂��B
+//	書き込み先のファイル名を指定してください。
+//	関数実行前にファイルが存在している場合は、既存の内容を破棄します。
 //[retval]
-//	0:����
-//	���̐��̓G���[�ł��B
-//	-1:	�t�@�C�����I�[�v���ł��܂���B
-//	-2 ;	//	�������݂Ɏ��s���܂����B
+//	0:成功
+//	負の数はエラーです。
+//	-1:	ファイルがオープンできません。
+//	-2 ;	//	書き込みに失敗しました。
 int stringToFile( const std::string& aString , 
 					const std::string& strFilename ) 
 {
 	int	iRv = 0 ;
 	if ( strFilename.empty() )
 	{
-		iRv = -1 ;	//	�t�@�C���I�[�v���G���[
+		iRv = -1 ;	//	ファイルオープンエラー
 	}
 	if ( iRv >= 0 ){
 		FILE*	pFile = fopen( strFilename.c_str() , "wt" ) ;
@@ -213,15 +213,15 @@ int stringToFile( const std::string& aString ,
 			iReadBytes = fwrite( aString.c_str() , 1 , 
 								aString.size() , pFile ) ;
 			if ( iReadBytes != aString.size() ){
-				iRv = -2 ;	//	�������݂Ɏ��s���܂����B
+				iRv = -2 ;	//	書き込みに失敗しました。
 			}
 			if ( fclose( pFile ) != 0 ){
 				if ( iRv >= 0 ){
-					iRv = -2 ;	//	�������݂Ɏ��s���܂����B
+					iRv = -2 ;	//	書き込みに失敗しました。
 				}
 			}
 		}	else	{
-			iRv = -1 ;	//	�t�@�C���I�[�v���G���[
+			iRv = -1 ;	//	ファイルオープンエラー
 		}
 	}
 	return ( iRv ) ;
@@ -229,19 +229,19 @@ int stringToFile( const std::string& aString ,
 
 
 
-//	�t�@�C���̓��e���ApVector �Ɋi�[���܂��B
-//	Win32�̏ꍇ�́A�o�C�i�����[�h�ł̓ǂݍ��݂ƂȂ�܂��B
+//	ファイルの内容を、pVector に格納します。
+//	Win32の場合は、バイナリモードでの読み込みとなります。
 //[out]pVector
-//	���̊֐��́A���̔z��ɁA�t�@�C���̓��e���������݂܂��B
-//	�z��ɂ��łɃf�[�^������ꍇ�́A�����̓��e��j�����܂��B
+//	この関数は、この配列に、ファイルの内容を書き込みます。
+//	配列にすでにデータがある場合は、既存の内容を破棄します。
 //[in]strFilename
-//	�ǂݍ��ރt�@�C�������w�肵�Ă��������B
+//	読み込むファイル名を指定してください。
 //[retval]
-//	0:����
-//	���̐��̓G���[�ł��B
-//	-1:	�t�@�C�����I�[�v���ł��܂���B
-//	-2 ;	//	�ǂݍ��݂Ɏ��s���܂����B
-//	-3 ;	//	�t�@�C���ɂ�'\0' ���܂܂�܂��B
+//	0:成功
+//	負の数はエラーです。
+//	-1:	ファイルがオープンできません。
+//	-2 ;	//	読み込みに失敗しました。
+//	-3 ;	//	ファイルには'\0' が含まれます。
 #include <sys/types.h>
 #include <sys/stat.h>
 
@@ -252,7 +252,7 @@ int stringFromFile( std::string* pString ,
 	
 	if ( strFilename.empty() )
 	{
-		iRv = -1 ;	//	�t�@�C���I�[�v���G���[
+		iRv = -1 ;	//	ファイルオープンエラー
 	}
 
 	
@@ -260,8 +260,8 @@ int stringFromFile( std::string* pString ,
 		pString->erase() ;
 	}
 	// --------------------------------
-	//	�t�@�C���T�C�Y���ǂ݂��āA
-	//	string �Ƀ������m��
+	//	ファイルサイズを先読みして、
+	//	string にメモリ確保
 	// --------------------------------
 	if ( iRv >= 0 ){
 		long lSize = 0 ;
@@ -292,21 +292,21 @@ int stringFromFile( std::string* pString ,
 					int idx ;
 					for ( idx = 0 ; szLs[idx] != '\0' ; idx ++ ){} ;
 					if ( idx != iReadBytes ){
-						iRv = -3 ;	//	�t�@�C���ɂ�'\0' ���܂܂�܂��B
+						iRv = -3 ;	//	ファイルには'\0' が含まれます。
 					}	else	{
 						*pString += szLs ;
 					}
 				}	else if ( iReadBytes < 0 ){
-					iRv = -2 ;	//	�ǂݍ��݂Ɏ��s���܂����B
+					iRv = -2 ;	//	読み込みに失敗しました。
 				}
 			}	while ( iReadBytes > 0 && iRv >= 0 ) ;
 			if ( fclose( pFile ) != 0 ){
 				if ( iRv >= 0 ){
-					iRv = -2 ;	//	�ǂݍ��݂Ɏ��s���܂����B
+					iRv = -2 ;	//	読み込みに失敗しました。
 				}
 			}
 		}	else	{
-			iRv = -1 ;	//	�t�@�C���I�[�v���G���[
+			iRv = -1 ;	//	ファイルオープンエラー
 		}
 
 	}

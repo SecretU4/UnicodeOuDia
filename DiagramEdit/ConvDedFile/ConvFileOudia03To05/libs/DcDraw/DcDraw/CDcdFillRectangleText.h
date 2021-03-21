@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -86,174 +86,174 @@ using namespace std ;
 // ****************************************************************
 /**
  * @brief
- * �y�T�v�z
- * 	   DcDraw���f���ɂ�����A�w�i�F���E�g���Ńe�L�X�g�̕`����s��
- *	�A�C�e���ł��B
+ * 【概要】
+ * 	   DcDrawモデルにおける、背景色つき・枠つきでテキストの描画を行う
+ *	アイテムです。
  *
- *	  ���̃N���X�ł́ADcDraw�Ŏw�肳�ꂽ�̈�̊O�ӂ��㉺���E�ɁA
+ *	  このクラスでは、DcDrawで指定された領域の外辺より上下左右に、
  *
  *		- m_logicalunitFrameWidth 
  *		- m_logicalunitFrameHeight 
  *	
- *	���̘g�̈���m�ۂ��A���̓����� m_strText �̃e�L�X�g���������݂܂��B
+ *	分の枠領域を確保し、その内側に m_strText のテキストを書き込みます。
  *
- *	  ���̃I�u�W�F�N�g�ɑ΂��� DcDraw() ���Ăяo���ƁA�ȉ��̏������s���܂��B
+ *	  このオブジェクトに対して DcDraw() を呼び出すと、以下の処理を行います。
  *
- *	�P�D  �܂��A�̈�S�̂��A�u���V���� m_CdBrushProp �œh��Ԃ��܂��B
+ *	１．  まず、領域全体を、ブラシ属性 m_CdBrushProp で塗りつぶします。
  *
- *	�Q�D  �̈�̊O�ӓ����ɁA�w��̃y������ m_CdPenProp �Řg����
- *	�`�悵�܂��B
+ *	２．  領域の外辺内側に、指定のペン属性 m_CdPenProp で枠線を
+ *	描画します。
  *
- *	�R�D  �g�̈�̓����ɁA���� m_CdDrawTextProp �ŁA
- *	�e�L�X�g m_strText ��`�悵�܂��B
+ *	３．  枠領域の内側に、属性 m_CdDrawTextProp で、
+ *	テキスト m_strText を描画します。
  *
  *	<H4>
- * �y���̃N���X�̑����z
+ * 【このクラスの属性】
  *	</H4>
- *	  ���̃N���X�̑����́A���ۂɂ͂��̃N���X����܂���I�u�W�F�N�g
- *	m_CDcdFillrect , m_CDcdRectangle , m_CDcdText �̑����ƂȂ�܂��B
+ *	  このクラスの属性は、実際にはこのクラスが包含するオブジェクト
+ *	m_CDcdFillrect , m_CDcdRectangle , m_CDcdText の属性となります。
  *
  *	<H5>
  *	CdPenProp	m_CdPenProp
  *	</H5>
- *	�g����`�悷�邽�߂̃y���̑����B
+ *	枠線を描画するためのペンの属性。
  *
  *	<H5>
  *	int	m_logicalunitFrameWidth ;
  *	</H5>
- *	�e�L�X�g�̍��E�̘g�̈�̑������A�_���P�ʂŕێ����܂��B
- *	�����E�E�����ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
+ *	テキストの左右の枠領域の太さを、論理単位で保持します。
+ *	左側・右側それぞれに、このサイズの幅を確保します。
  *
  *	<H5>
  *	int	m_logicalunitFrameHeight ;
  *	</H5>
- *	�e�L�X�g�̏㉺�̘g�̈�̑������A�_���P�ʂŕێ����܂��B
- *	�㑤�E�������ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
+ *	テキストの上下の枠領域の太さを、論理単位で保持します。
+ *	上側・下側それぞれに、このサイズの幅を確保します。
  *
  *	<H5>
  *	tstring			m_strText ;
  *	</H5>
- *	�`�悷�镶����ł��B
+ *	描画する文字列です。
  *
  *	<H5>
  *	CdDrawTextProp	m_CdDrawTextProp ;
  *	</H5>
- *	�e�L�X�g��`�悷��ۂ̑�����ێ����܂��B
+ *	テキストを描画する際の属性を保持します。
  *
  *	<H5>
  *	tstring			m_strExtent;
  *	</H5>
- *	���̕`�敔�i�̑傫���̖ڈ��ƂȂ�
- *	������ł�
- *	getItemSize() �́A���̕������\���ł��镝��Ԃ��܂��B
- *	�ȗ�������AstrText�Ɠ����Ƃ݂Ȃ��܂��B
+ *	この描画部品の大きさの目安となる
+ *	文字列です
+ *	getItemSize() は、この文字列を表示できる幅を返します。
+ *	省略したら、strTextと同じとみなします。
  *
  * <H5>
  *	int	m_iLinesExtent ;
  * </H5>
- *	���̕`�敔�i�̑傫���̍s���ł� getItemSize() �́A
- *	���̍s����\���ł��鍂����Ԃ��܂��B 
- *	getItemSize() ���g��Ȃ��̂ł���΁A���̑����͎g���܂���B
- *	�f�t�H���g�͂P�ł��B 
+ *	この描画部品の大きさの行数です getItemSize() は、
+ *	この行数を表示できる高さを返します。 
+ *	getItemSize() を使わないのであれば、この属性は使いません。
+ *	デフォルトは１です。 
  *
  * <H5>
  *	CdBrushProp	m_CdBrushProp ;
  * </H5>
- *	�h��Ԃ��Ɏg�p����u���V�̑����B
+ *	塗りつぶしに使用するブラシの属性。
  *
  * @note
- *	CDcdRectangleText��CDcdFillRectangleText �̈Ⴂ�́A�y���̑�����
- *	SOLID�łȂ��ꍇ�ɖ��炩�ɂȂ�܂��B
- *	���̂Ƃ��A CDcdRectangleText �ł́A�g���̕`�悳��Ȃ�������DC�̔w�i�F��
- *	�Ȃ�܂����A CDcdFillRectangleText �̏ꍇ�́A�g���̕`�悳��Ȃ�������
- *	���߃��[�h�Ƃ��܂��i�܂�A�w�i�u���V�����f����܂��j�B
+ *	CDcdRectangleTextとCDcdFillRectangleText の違いは、ペンの属性が
+ *	SOLIDでない場合に明らかになります。
+ *	このとき、 CDcdRectangleText では、枠線の描画されない部分はDCの背景色と
+ *	なりますが、 CDcdFillRectangleText の場合は、枠線の描画されない部分を
+ *	透過モードとします（つまり、背景ブラシが反映されます）。
  */
 class CDcdFillRectangleText : public IfDcDraw
 {
 // --------------------------------
-///@name	���
+///@name	包含
 // --------------------------------
 ///@{
  private:
 	/**
-	 *	�w�i��`�悷��I�u�W�F�N�g�ł��B
+	 *	背景を描画するオブジェクトです。
 	 *
-	 *	���̃I�u�W�F�N�g�̑��� CDcdFillrect::m_CdBrushProp �́A
-	 *	���̃N���X�̃����o�֐��o�R�ő���ł��܂��B
+	 *	このオブジェクトの属性 CDcdFillrect::m_CdBrushProp は、
+	 *	このクラスのメンバ関数経由で操作できます。
 	 */
 	CDcdFillrect		m_CDcdFillrect ;
 	/**
-	 *	�g����`�悷��I�u�W�F�N�g�ł��B
+	 *	枠線を描画するオブジェクトです。
 	 *
-	 *	���̃I�u�W�F�N�g�̑��� CDcdRectangle::m_CdPenProp �́A
-	 *	���̃N���X�̃����o�֐��o�R�ő���ł��܂��B
+	 *	このオブジェクトの属性 CDcdRectangle::m_CdPenProp は、
+	 *	このクラスのメンバ関数経由で操作できます。
 	 */
 	CDcdRectangle		m_CDcdRectangle ;
 	
 	/**
-	 *	�e�L�X�g��`�悷��I�u�W�F�N�g�ł��B
+	 *	テキストを描画するオブジェクトです。
 	 *
-	 *	���̃I�u�W�F�N�g�̑��� 
+	 *	このオブジェクトの属性 
 	 *	CDcdText::m_strText ,
 	 *	CDcdText::m_CdDrawTextProp ,
 	 *	CDcdText::m_strExtent ,
 	 *	CDcdText::m_iLinesExtent 
-	 *	�́A���̃N���X�̃����o�֐��o�R�ő���ł��܂��B
+	 *	は、このクラスのメンバ関数経由で操作できます。
 	 */
 	CDcdText			m_CDcdText ;
 ///@}
 // ********************************
-/// @name ����
+/// @name 属性
 // ********************************
 ///@{
  private:
 	/**
-	*	�e�L�X�g�̍��E�̘g�̈�̑������A�_���P�ʂŕێ����܂��B
-	*	�����E�E�����ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
+	*	テキストの左右の枠領域の太さを、論理単位で保持します。
+	*	左側・右側それぞれに、このサイズの幅を確保します。
 	*/
 	int	m_logicalunitFrameWidth ;
 
 	/**
-	*	�e�L�X�g�̏㉺�̘g�̈�̑������A�_���P�ʂŕێ����܂��B
-	*	�㑤�E�������ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
+	*	テキストの上下の枠領域の太さを、論理単位で保持します。
+	*	上側・下側それぞれに、このサイズの幅を確保します。
 	*/
 	int	m_logicalunitFrameHeight ;
 	
 ///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	* @param strText [in]
-	*	�`�悷�镶����ł��B
+	*	描画する文字列です。
 	* @param aCdDrawTextProp [in]
-	*	�e�L�X�g��`�悷��ۂ̑�����ێ����܂��B
+	*	テキストを描画する際の属性を保持します。
 	* @param strExtent [in]
-	*	���̕`�敔�i�̑傫���̖ڈ��ƂȂ�
-	*	������ł�
-	*	getItemSize() �́A���̕������\���ł��镝��Ԃ��܂��B
-	*	�ȗ�������AstrText�Ɠ����Ƃ݂Ȃ��܂��B
+	*	この描画部品の大きさの目安となる
+	*	文字列です
+	*	getItemSize() は、この文字列を表示できる幅を返します。
+	*	省略したら、strTextと同じとみなします。
 	* @param iLinesExtent [in]
-	*	���̕`�敔�i�̑傫���̍s���ł�
-	*	getItemSize() �́A���̍s����\���ł��鍂����Ԃ��܂��B
-	*	�ȗ�������A�P�Ƃ݂Ȃ��܂��B
+	*	この描画部品の大きさの行数です
+	*	getItemSize() は、この行数を表示できる高さを返します。
+	*	省略したら、１とみなします。
 	* @param logicalunitFrameWidth [in]
-	*	�e�L�X�g�̍��E�̘g�̈�̑������A�_���P�ʂŎw�肵�Ă��������B
-	*	�����E�E�����ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
+	*	テキストの左右の枠領域の太さを、論理単位で指定してください。
+	*	左側・右側それぞれに、このサイズの幅を確保します。
 	* @param logicalunitFrameHeight [in]
-	*	�e�L�X�g�̏㉺�̘g�̈�̑������A�_���P�ʂŎw�肵�Ă��������B
-	*	�㑤�E�������ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
-	*	logicalunitFrameHeight �������ȗ������ꍇ�́A logicalunitFrameWidth 
-	*	�Ɠ����ł���Ƃ݂Ȃ���܂��B
-	*	logicalunitFrameHeight �E logicalunitFrameWidth �̗�����
-	*	�ȗ������ꍇ�́A �O �Ƃ݂Ȃ��܂�
+	*	テキストの上下の枠領域の太さを、論理単位で指定してください。
+	*	上側・下側それぞれに、このサイズの幅を確保します。
+	*	logicalunitFrameHeight だけを省略した場合は、 logicalunitFrameWidth 
+	*	と同じであるとみなされます。
+	*	logicalunitFrameHeight ・ logicalunitFrameWidth の両方を
+	*	省略した場合は、 ０ とみなします
 	* @param aCdPenProp [in]
-	*	�g����`�悷�邽�߂̃y���̑���
+	*	枠線を描画するためのペンの属性
 	* @param aCdBrushProp [in]
-	*	�h��Ԃ��Ɏg�p����u���V�̑������w�肵�Ă��������B
-	*	�ȗ�������ANULLBRUSH�Ƃ݂Ȃ��܂��B
+	*	塗りつぶしに使用するブラシの属性を指定してください。
+	*	省略したら、NULLBRUSHとみなします。
 	*/
 	CDcdFillRectangleText( 
 		const tstring&			strText  ,
@@ -266,35 +266,35 @@ class CDcdFillRectangleText : public IfDcDraw
 		const CdBrushProp& 		aCdBrushProp = CdBrushProp() );
 
 	/**
-	*	��̃R���X�g���N�^�Ƃ́A�����̏����������قȂ�܂��B
+	*	上のコンストラクタとは、引数の順序だけが異なります。
 	* @param aCdPenProp [in]
-	*	�g����`�悷�邽�߂̃y���̑���
+	*	枠線を描画するためのペンの属性
 	* @param logicalunitFrameWidth [in]
-	*	�e�L�X�g�̍��E�̘g�̈�̑������A�_���P�ʂŎw�肵�Ă��������B
-	*	�����E�E�����ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
+	*	テキストの左右の枠領域の太さを、論理単位で指定してください。
+	*	左側・右側それぞれに、このサイズの幅を確保します。
 	* @param logicalunitFrameHeight [in]
-	*	�e�L�X�g�̏㉺�̘g�̈�̑������A�_���P�ʂŎw�肵�Ă��������B
-	*	�㑤�E�������ꂼ��ɁA���̃T�C�Y�̕����m�ۂ��܂��B
-	*	logicalunitFrameHeight �������ȗ������ꍇ�́A logicalunitFrameWidth 
-	*	�Ɠ����ł���Ƃ݂Ȃ���܂��B
-	*	logicalunitFrameHeight �E logicalunitFrameWidth �̗�����
-	*	�ȗ������ꍇ�́A �O �Ƃ݂Ȃ��܂�
+	*	テキストの上下の枠領域の太さを、論理単位で指定してください。
+	*	上側・下側それぞれに、このサイズの幅を確保します。
+	*	logicalunitFrameHeight だけを省略した場合は、 logicalunitFrameWidth 
+	*	と同じであるとみなされます。
+	*	logicalunitFrameHeight ・ logicalunitFrameWidth の両方を
+	*	省略した場合は、 ０ とみなします
 	* @param strText [in]
-	*	�`�悷�镶����ł��B
+	*	描画する文字列です。
 	* @param aCdDrawTextProp [in]
-	*	�e�L�X�g��`�悷��ۂ̑�����ێ����܂��B
+	*	テキストを描画する際の属性を保持します。
 	* @param strExtent [in]
-	*	���̕`�敔�i�̑傫���̖ڈ��ƂȂ�
-	*	������ł�
-	*	getItemSize() �́A���̕������\���ł��镝��Ԃ��܂��B
-	*	�ȗ�������AstrText�Ɠ����Ƃ݂Ȃ��܂��B
+	*	この描画部品の大きさの目安となる
+	*	文字列です
+	*	getItemSize() は、この文字列を表示できる幅を返します。
+	*	省略したら、strTextと同じとみなします。
 	* @param iLinesExtent [in]
-	*	���̕`�敔�i�̑傫���̍s���ł�
-	*	getItemSize() �́A���̍s����\���ł��鍂����Ԃ��܂��B
-	*	�ȗ�������A�P�Ƃ݂Ȃ��܂��B
+	*	この描画部品の大きさの行数です
+	*	getItemSize() は、この行数を表示できる高さを返します。
+	*	省略したら、１とみなします。
 	* @param aCdBrushProp [in]
-	*	�h��Ԃ��Ɏg�p����u���V�̑������w�肵�Ă��������B
-	*	�ȗ�������ANULLBRUSH�Ƃ݂Ȃ��܂��B
+	*	塗りつぶしに使用するブラシの属性を指定してください。
+	*	省略したら、NULLBRUSHとみなします。
 	*/
 	CDcdFillRectangleText( 
 		const CdPenProp&		aCdPenProp ,
@@ -318,40 +318,40 @@ class CDcdFillRectangleText : public IfDcDraw
 ///@{
  public:
 	/**
-	* 	�`���v�����܂��B
-	* 	���̊֐��́A pIfDcdTarget �ɁA�`����s���܂��B
+	* 	描画を要求します。
+	* 	この関数は、 pIfDcdTarget に、描画を行います。
 	*
-	*	�y�I�[�o���C�h�z
-	*	  �n���ꂽ�̈�ɁA m_strText ��`�悵�܂��B
+	*	【オーバライド】
+	*	  渡された領域に、 m_strText を描画します。
 	* @param pIfDcdTarget  [in]
-	* 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	* 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	* @return
-	* 	�`����s�����ꍇ�͐^�E���̗̈�ւ̕`�悪�ł��Ȃ������ꍇ�͋U�ł��B
+	* 	描画を行った場合は真・この領域への描画ができなかった場合は偽です。
 	*/
 	virtual bool DcDraw( IfDcdTarget* pIfDcdTarget ) ;
 	
 	/**
-	* 	���̃I�u�W�F�N�g���`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	* 	���̑傫���𒲂ׂ邱�Ƃ��ł��܂��B
-	* 	�֐��Ăяo������������ IfDcDraw �I�u�W�F�N�g��`�悷��ꍇ�ɂ́A
-	* 	�֐��Ăяo�����́A���̊֐��ŃA�C�e���̑傫���𒲂ׂāA
-	* 	�K�؂ȃ��C�A�E�g���l���Ă���ADcDraw() �����s���邱�Ƃ��ł��܂��B
+	* 	このオブジェクトが描画するアイテムの大きさが決まっている場合は、
+	* 	その大きさを調べることができます。
+	* 	関数呼び出し元が複数の IfDcDraw オブジェクトを描画する場合には、
+	* 	関数呼び出し元は、この関数でアイテムの大きさを調べて、
+	* 	適切なレイアウトを考えてから、DcDraw() を実行することができます。
 	*
-	*	�y�I�[�o���C�h�z
-	*	  Extent �� LinesExtent �����ƂɌv�Z�����e�L�X�g�̈�̃T�C�Y��
-	*	m_logicalunitFrameWidth ,m_logicalunitFrameHeight �������āA
-	*	�̈�̃T�C�Y���v�Z���܂��B
+	*	【オーバライド】
+	*	  Extent と LinesExtent をもとに計算したテキスト領域のサイズに
+	*	m_logicalunitFrameWidth ,m_logicalunitFrameHeight を加えて、
+	*	領域のサイズを計算します。
 	* @param pIfDcdTarget [in]
-	* 	���̃I�u�W�F�N�g�ɕ`����s�킹����DC�Ɨ̈���w�肵�Ă��������B
+	* 	このオブジェクトに描画を行わせたいDCと領域を指定してください。
 	* @param pCdDcdSizeXy [out]
-	* 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă���ꍇ�́A
-	* 	���̊֐��͂��̃A�h���X�ɁA���̃A�C�e���̃T�C�Y��Ԃ��܂��B
-	* 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��Ȃ��ꍇ�́A
-	* 	���̒l�͕s��ł��B
+	* 	このオブジェクトの描画するアイテムの大きさが決まっている場合は、
+	* 	この関数はこのアドレスに、そのアイテムのサイズを返します。
+	* 	このオブジェクトの描画するアイテムの大きさが決まっていない場合は、
+	* 	この値は不定です。
 	* @return
-	* 	���̃I�u�W�F�N�g�̕`�悷��A�C�e���̑傫�������܂��Ă��āA
-	* 	���̑傫���� *pCDcdSizeXy�ɏ������񂾏ꍇ�͐^�ł��B
-	* 	�����łȂ��ꍇ�́A�U�ł��B
+	* 	このオブジェクトの描画するアイテムの大きさが決まっていて、
+	* 	その大きさを *pCDcdSizeXyに書き込んだ場合は真です。
+	* 	そうでない場合は、偽です。
 	*/
 	virtual bool getItemSize( IfDcdTarget* pIfDcdTarget , 
 							CdDcdSizeXy* pCdDcdSizeXy ) ;
@@ -361,12 +361,12 @@ class CDcdFillRectangleText : public IfDcDraw
 // ********************************
  public:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
 	 * @return
-	 *	�g���Ɏg���y���̑����B
+	 *	枠線に使うペンの属性。
 	 */
 	virtual CdPenProp	getCdPenProp(){	
 		return m_CDcdRectangle.getCdPenProp()	;	} ;
@@ -383,7 +383,7 @@ class CDcdFillRectangleText : public IfDcDraw
 	
 	/**
 	 * @return
-	 *	�`�悷�镶����ł��B
+	 *	描画する文字列です。
 	 */
 	virtual tstring			getText(){	
 		return m_CDcdText.getText() ;	} ;
@@ -391,7 +391,7 @@ class CDcdFillRectangleText : public IfDcDraw
 		m_CDcdText.setText( ev ) ; 	return *this ; } ;
 	/**
 	 * @return
-	 *	�e�L�X�g��`�悷��ۂ̑�����ێ����܂��B
+	 *	テキストを描画する際の属性を保持します。
 	 */
 	virtual CdDrawTextProp	getCdDrawTextProp(){
 		return m_CDcdText.getCdDrawTextProp() ;};
@@ -400,10 +400,10 @@ class CDcdFillRectangleText : public IfDcDraw
 		m_CDcdText.setCdDrawTextProp( ev ) ; 	return *this ; } ;
 	/**
 	 * @return
-	 *	���̕`�敔�i�̑傫���̖ڈ��ƂȂ�
-	 *	������ł�
-	 *	getItemSize() �́A���̕������\���ł��镝��Ԃ��܂��B
-	 *	getItemSize() ���g��Ȃ��̂ł���΁A���̑����͎g���܂���B
+	 *	この描画部品の大きさの目安となる
+	 *	文字列です
+	 *	getItemSize() は、この文字列を表示できる幅を返します。
+	 *	getItemSize() を使わないのであれば、この属性は使いません。
 	 */
 	virtual tstring			getExtent(){
 		return m_CDcdText.getExtent() ; } ;
@@ -411,9 +411,9 @@ class CDcdFillRectangleText : public IfDcDraw
 		m_CDcdText.setExtent( ev ) ;	return *this ; };
 	/**
 	 * @return
-	 *	���̕`�敔�i�̑傫���̍s���ł�
-	 *	getItemSize() �́A���̍s����\���ł��鍂����Ԃ��܂��B
-	 *	getItemSize() ���g��Ȃ��̂ł���΁A���̑����͎g���܂���B
+	 *	この描画部品の大きさの行数です
+	 *	getItemSize() は、この行数を表示できる高さを返します。
+	 *	getItemSize() を使わないのであれば、この属性は使いません。
 	 */
 	virtual int				getLinesExtent(){
 		return m_CDcdText.getLinesExtent() ; } ;
@@ -422,7 +422,7 @@ class CDcdFillRectangleText : public IfDcDraw
 
 	/**
 	 * @return
-	 *	�h��Ԃ��Ɏg�p����u���V�̑����B
+	 *	塗りつぶしに使用するブラシの属性。
 	 */
 	virtual CdBrushProp	getCdBrushProp(){	
 		return m_CDcdFillrect.getCdBrushProp()	;	} ;

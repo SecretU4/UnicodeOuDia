@@ -29,40 +29,40 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
-// CWndSplitBarV.cpp : �C���v�������e�[�V���� �t�@�C��
+// CWndSplitBarV.cpp : インプリメンテーション ファイル
 //
 
 #include "CWndSplitBarV.h"
@@ -80,7 +80,7 @@ namespace FrameLeftPane{
 // CWndSplitBarV
 
 // ********************************
-//@param	�\�z
+//@param	構築
 // ********************************
 BOOL CWndSplitBarV::Create( CWnd* pParentWnd, 
 			CWnd* pwndLeftPane ,
@@ -105,10 +105,10 @@ BOOL CWndSplitBarV::Create( CWnd* pParentWnd,
 	return ( bRv ) ;
 }
 //SM_CXEDGE,
-//SM_CYEDGE ���̌��ʕt���̃E�B���h�E�̋��E���̕��ƍ������擾���܂��BSM_CXBORDER �� SM_CYBORDER �� 3D �łł��B 
+//SM_CYEDGE 立体効果付きのウィンドウの境界線の幅と高さを取得します。SM_CXBORDER と SM_CYBORDER の 3D 版です。 
 
 // ********************************
-//@param	����
+//@param	操作
 // ********************************
 
 void CWndSplitBarV::CMDIFrameWnd_RecalcLayout(
@@ -119,16 +119,16 @@ void CWndSplitBarV::CMDIFrameWnd_RecalcLayout(
 
 {
 	CWnd*	wndMDIClient = pCMDIFrameWnd->GetDlgItem( AFX_IDW_PANE_FIRST ) ;
-	//wndMDIClient=MDIClient �̃I�u�W�F�N�g
+	//wndMDIClient=MDIClient のオブジェクト
 
 	// --------------------------------
-	//	���̑�����s���Ԃ́A
-	//	MDIClient �E�C���h�E���\����
-	//	���Ȃ��ĂȂȂ�܂���B
-	//	�������A���ł� MDIClient ��
-	//	��\���ł���ꍇ�́A���̏�Ԃ�
-	//	�ύX���܂���iPrintPreview��
-	//	�\�����Ă���ꍇ���A����ɂ�����܂��j
+	//	この操作を行う間は、
+	//	MDIClient ウインドウを非表示に
+	//	しなくてななりません。
+	//	ただし、すでに MDIClient が
+	//	非表示である場合は、その状態は
+	//	変更しません（PrintPreviewを
+	//	表示している場合が、これにあたります）
 	// --------------------------------
 	bool	bMDIClientMustShow = false ;
 	if ( wndMDIClient != NULL ){
@@ -140,8 +140,8 @@ void CWndSplitBarV::CMDIFrameWnd_RecalcLayout(
 	}
 	
 	// --------------------------------
-	//	��{�N���X�̎����ŁA
-	//	MDIClient �E�C���h�E��z�u
+	//	基本クラスの実装で、
+	//	MDIClient ウインドウを配置
 	// --------------------------------
 	pCMDIFrameWnd->CMDIFrameWnd::RecalcLayout(bNotify);
 
@@ -150,9 +150,9 @@ void CWndSplitBarV::CMDIFrameWnd_RecalcLayout(
 		pCWndSplitBarV->GetSafeHwnd() == NULL ){
 
 		// --------------------------------
-		//	���̑�����s���Ԃ́A
-		//	MDIClient �E�C���h�E���\����
-		//	���Ȃ��ĂȂȂ�܂���B
+		//	この操作を行う間は、
+		//	MDIClient ウインドウを非表示に
+		//	しなくてななりません。
 		// --------------------------------
 		if ( bMDIClientMustShow ){
 			wndMDIClient->ShowWindow( SW_SHOW ) ;
@@ -161,12 +161,12 @@ void CWndSplitBarV::CMDIFrameWnd_RecalcLayout(
 	}
 
 
-	//	���̎��_�ł́AMDIClient �̈ʒu�ƃT�C�Y�́A
-	//	�����y�C���ƁA�X�v���b�g�o�[���Ȃ���Ԃ�
-	//	���̂ɂȂ��Ă��܂��B
+	//	この時点では、MDIClient の位置とサイズは、
+	//	左側ペインと、スプリットバーがない状態の
+	//	ものになっています。
 
 	// --------------------------------
-	//	�e�E�C���h�E�̌��݂̈ʒu���擾
+	//	各ウインドウの現在の位置を取得
 	// --------------------------------
 	CRect	rectMDIClient ;
 	{
@@ -189,15 +189,15 @@ void CWndSplitBarV::CMDIFrameWnd_RecalcLayout(
 		pCWndSplitBarV->GetWindowPlacement( &aWINDOWPLACEMENT ) ;
 		rectSplitBarV = aWINDOWPLACEMENT.rcNormalPosition ;
 	}
-	//rectMDIClient=MDIClient �̈ʒu�ƃT�C�Y
-	//	(�����y�C���ƁA�X�v���b�g�o�[���Ȃ����)
-	//rectLeftpane = LeftPane�̌��݂̈ʒu
-	//rectSplitBarV = SplitBarV�̌��݂̈ʒu
+	//rectMDIClient=MDIClient の位置とサイズ
+	//	(左側ペインと、スプリットバーがない状態)
+	//rectLeftpane = LeftPaneの現在の位置
+	//rectSplitBarV = SplitBarVの現在の位置
 
 
 
 	// --------------------------------
-	//	�e�E�C���h�E�̐V�����ʒu���Z��
+	//	各ウインドウの新しい位置を算定
 	// --------------------------------
 	CRect	rectLeftpaneNew ;
 	{
@@ -228,13 +228,13 @@ void CWndSplitBarV::CMDIFrameWnd_RecalcLayout(
 		
 
 	}
-	//rectLeftpaneNew=�����y�C���� �̈ʒu�ƃT�C�Y
-	//rectSplitBarVNew=�X�v���b�g�o�[�̈ʒu�ƃT�C�Y
-	//rectMDIClientNew=MDIClient �̈ʒu�ƃT�C�Y
-	//	(�����y�C���ƁA�X�v���b�g�o�[�̗̈���m�ۂ����T�C�Y)
+	//rectLeftpaneNew=左側ペインの の位置とサイズ
+	//rectSplitBarVNew=スプリットバーの位置とサイズ
+	//rectMDIClientNew=MDIClient の位置とサイズ
+	//	(左側ペインと、スプリットバーの領域を確保したサイズ)
 
 	// --------------------------------
-	//	�e�E�C���h�E�̐V�����ʒu��ݒ�
+	//	各ウインドウの新しい位置を設定
 	// --------------------------------
 	pwndLeftPane->SetWindowPos( NULL , 
 		rectLeftpaneNew.left , 
@@ -256,9 +256,9 @@ void CWndSplitBarV::CMDIFrameWnd_RecalcLayout(
 		SWP_NOZORDER ) ;   
 
 	// --------------------------------
-	//	���̑�����s���Ԃ́A
-	//	MDIClient �E�C���h�E���\����
-	//	���Ȃ��ĂȂȂ�܂���B
+	//	この操作を行う間は、
+	//	MDIClient ウインドウを非表示に
+	//	しなくてななりません。
 	// --------------------------------
 	if ( bMDIClientMustShow ){
 		wndMDIClient->ShowWindow( SW_SHOW ) ;
@@ -289,15 +289,15 @@ END_MESSAGE_MAP()
 
 
 /////////////////////////////////////////////////////////////////////////////
-// CWndSplitBarV ���b�Z�[�W �n���h��
+// CWndSplitBarV メッセージ ハンドラ
 
 void CWndSplitBarV::OnPaint() 
 {
-	CPaintDC dc(this); // �`��p�̃f�o�C�X �R���e�L�X�g
+	CPaintDC dc(this); // 描画用のデバイス コンテキスト
 	
 	CRect	rectClient ;
 	GetClientRect( &rectClient ) ;
-	// �`��p���b�Z�[�W�Ƃ��� CWnd::OnPaint() ���Ăяo���Ă͂����܂���
+	// 描画用メッセージとして CWnd::OnPaint() を呼び出してはいけません
 
 	{
 		CRect	rectFill = rectClient ;
@@ -317,11 +317,11 @@ void CWndSplitBarV::OnPaint()
 		FillRect(  dc.GetSafeHdc() , &rectFill , GetSysColorBrush( COLOR_3DSHADOW ) ) ;
 	}
 
-//COLOR_3DDKSHADOW 3D �I�u�W�F�N�g�̈Â��e�̐F�B 
-//COLOR_3DFACE, COLOR_BTNFACE 3D �I�u�W�F�N�g�̕\�ʐF�ƁA�_�C�A���O�{�b�N�X�̔w�i�F�B 
-//COLOR_3DHILIGHT, COLOR_3DHIGHLIGHT, COLOR_BTNHILIGHT, COLOR_BTNHIGHLIGHT 3D �I�u�W�F�N�g�̍ł����邢�F�i�����ɖʂ����Ӂj�B 
-//COLOR_3DLIGHT 3D �I�u�W�F�N�g�̖��邢�F�i�����ɖʂ����Ӂj�B 
-//COLOR_3DSHADOW, COLOR_BTNSHADOW 3D �I�u�W�F�N�g�̉e�̐F�i�����ɖʂ��Ă��Ȃ��Ӂj�B 
+//COLOR_3DDKSHADOW 3D オブジェクトの暗い影の色。 
+//COLOR_3DFACE, COLOR_BTNFACE 3D オブジェクトの表面色と、ダイアログボックスの背景色。 
+//COLOR_3DHILIGHT, COLOR_3DHIGHLIGHT, COLOR_BTNHILIGHT, COLOR_BTNHIGHLIGHT 3D オブジェクトの最も明るい色（光源に面した辺）。 
+//COLOR_3DLIGHT 3D オブジェクトの明るい色（光源に面した辺）。 
+//COLOR_3DSHADOW, COLOR_BTNSHADOW 3D オブジェクトの影の色（光源に面していない辺）。 
 
 
 
@@ -359,7 +359,7 @@ void CWndSplitBarV::OnMouseMove(UINT nFlags, CPoint point)
 		return ;
 	}
 	// --------------------------------
-	//	�e�E�C���h�E�̌��݂̈ʒu���擾
+	//	各ウインドウの現在の位置を取得
 	// --------------------------------
 	CWnd*	wndMDIClient = GetParent()-> GetDlgItem( AFX_IDW_PANE_FIRST ) ;
 
@@ -384,13 +384,13 @@ void CWndSplitBarV::OnMouseMove(UINT nFlags, CPoint point)
 		GetWindowPlacement( &aWINDOWPLACEMENT ) ;
 		rectSplitBarV = aWINDOWPLACEMENT.rcNormalPosition ;
 	}
-	//rectMDIClient=MDIClient �̈ʒu�ƃT�C�Y
-	//	(�����y�C���ƁA�X�v���b�g�o�[���Ȃ����)
-	//rectLeftpane = LeftPane�̌��݂̈ʒu
-	//rectSplitBarV = SplitBarV�̌��݂̈ʒu
+	//rectMDIClient=MDIClient の位置とサイズ
+	//	(左側ペインと、スプリットバーがない状態)
+	//rectLeftpane = LeftPaneの現在の位置
+	//rectSplitBarV = SplitBarVの現在の位置
 
 	// --------------------------------
-	//	�e�E�C���h�E�̐V�����ʒu���Z��
+	//	各ウインドウの新しい位置を算定
 	// --------------------------------
 	CRect	rectSplitBarVNew ;
 	{
@@ -415,7 +415,7 @@ void CWndSplitBarV::OnMouseMove(UINT nFlags, CPoint point)
 		rectMDIClientNew.left = rectSplitBarVNew.right  ;
 	}
 	// --------------------------------
-	//	�e�E�C���h�E�̐V�����ʒu��ݒ�
+	//	各ウインドウの新しい位置を設定
 	// --------------------------------
 	m_pwndLeftPane->SetWindowPos( NULL , 
 		rectLeftpaneNew.left , 

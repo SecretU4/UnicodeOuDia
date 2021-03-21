@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 //	$Id: CPropEditUI_Ekijikoku.cpp 357 2016-08-18 16:59:16Z okm $
@@ -78,7 +78,7 @@ namespace ViewJikokuhyou{
 	using namespace OuLib::Str;
 
 		
-/** �_�C�A���O�{�b�N�X�ւ̎����̏�����ێ����܂��B */
+/** ダイアログボックスへの時刻の書式を保持します。 */
 const CdDedJikoku::CConv	g_CdDedJikokuConv(
 	true ,		//	NoColon 
 	CdDedJikoku::CConv::EHour_ZeroToNone ,		//	HourZeroToNone 
@@ -86,22 +86,22 @@ const CdDedJikoku::CConv	g_CdDedJikokuConv(
 
 
 /**
-	������UI�`�������߂��āA�����ɕϊ����܂��B
-	�G�f�B�b�g�R���g���[���̓��e��2�������̏ꍇ�́A
-	�O�̉w����Order�����ƂɁA����⊮���܂��B
+	時刻のUI形式を解釈して、時刻に変換します。
+	エディットコントロールの内容が2桁数字の場合は、
+	前の駅時刻Orderをもとに、時を補完します。
 @param strUIJikoku [in]
-	UI�`���̎������w�肵�Ă��������B
+	UI形式の時刻を指定してください。
 @param jikokuRevOrder [in]
-	���O�́w�w�����x�B
-	���̒l�́AstrControl�����̂�(����2��)�̏ꍇ�A����⊮����̂Ɏg���܂��B
-	�wNULL��ԁx�̏ꍇ�A���̕⊮�͍s���܂���B
+	直前の『駅時刻』。
+	この値は、strControlが分のみ(数字2桁)の場合、時を補完するのに使います。
+	『NULL状態』の場合、時の補完は行われません。
 @param pCdDedJikoku [out]
-	���̊֐��́A������̉��߂ɐ���������A������̓��e��ϊ�����������
-	�����ɏ������݂܂��B
+	この関数は、文字列の解釈に成功したら、文字列の内容を変換した時刻を
+	ここに書き込みます。
 @return
-	���������� 0 �ȏ�B�����ւ̕ϊ����ł��Ȃ���Ε��̐��ł��B
-	-	-1 ;	//	���ڐ����s�����Ă��܂��B
-	-	-2 ;	//	���E���E�b�̕\�L���s���ł��B
+	成功したら 0 以上。時刻への変換ができなければ負の数です。
+	-	-1 ;	//	項目数が不足しています。
+	-	-2 ;	//	時・分・秒の表記が不正です。
 */
 static int	getJikokuFromUI( 
 	const string& strUIJikoku , 
@@ -117,14 +117,14 @@ static int	getJikokuFromUI(
 	if ( iResult < 0 )
 	{
 		iRv = iResult ;
-		//	�����񂪉��߂ł��܂���B
+		//	文字列が解釈できません。
 	}
 	//iRv = 
-	//-	-1 ;	//	���ڐ����s�����Ă��܂��B
-	//-	-2 ;	//	���E���E�b�̕\�L���s���ł��B
+	//-	-1 ;	//	項目数が不足しています。
+	//-	-2 ;	//	時・分・秒の表記が不正です。
 
-	//	��������2���ŁA�O�̉w����������ꍇ�́A
-	//	�������Ɏ���⊮
+	//	着時刻が2桁で、前の駅時刻がある場合は、
+	//	着時刻に時を補完
 	if ( iRv == -1 && 
 		 !jikokuRevOrder.isNull() && 
 		strControl.size() == 2 && 
@@ -141,10 +141,10 @@ static int	getJikokuFromUI(
 			{
 				aCdDedJikoku = aCdDedJikoku.getTotalSeconds() + 60*60 ;
 			}
-			//aCdDedJikoku = ���ݓ��͂��ꂽ2���̕�����ɁA
-			//	jikokuRevOrder �Ȍ�ƂȂ鎞��⊮
+			//aCdDedJikoku = 現在入力された2桁の文字列に、
+			//	jikokuRevOrder 以後となる時を補完
 
-			iRv = 0 ;	//	�����⊮�ɐ������܂����B 
+			iRv = 0 ;	//	時刻補完に成功しました。 
 		}
 	}
 
@@ -157,7 +157,7 @@ static int	getJikokuFromUI(
 }
 
 	// ********************************
-	//@name �G���[���b�Z�[�W
+	//@name エラーメッセージ
 	// ********************************
 const char* const CPropEditUi_EkiJikoku::ERRMSG_INVALID_CHAKUJIKOKU = "Invalid ChakuJikoku.";
 const char* const CPropEditUi_EkiJikoku::ERRMSG_INVALID_HATSUJIKOKU = "Invalid HatsuJikoku.";
@@ -166,7 +166,7 @@ const char* const CPropEditUi_EkiJikoku::ERRMSG_INVALID_HATSUJIKOKU = "Invalid H
 
 
 	// ================================
-	//@name �����֐�
+	//@name 下請関数
 	// ================================
 
 
@@ -175,16 +175,16 @@ const CConvTable<CentDedEkiJikoku::EEkiatsukai,int>& getEkiatsukaiConvTable()
 	static CConvTable<CentDedEkiJikoku::EEkiatsukai,int>	aTable ;
 	if ( aTable.size() == 0 )
 	{
-		aTable.add( CentDedEkiJikoku::Ekiatsukai_None     , 0 ) ;//	�^�s�Ȃ�
-		aTable.add( CentDedEkiJikoku::Ekiatsukai_Teisya   , 1 ) ;//	���
-		aTable.add( CentDedEkiJikoku::Ekiatsukai_Tsuuka   , 2 ) ;//	�ʉ�
-		aTable.add( CentDedEkiJikoku::Ekiatsukai_Keiyunasi, 3 ) ;// �o�R�Ȃ�
+		aTable.add( CentDedEkiJikoku::Ekiatsukai_None     , 0 ) ;//	運行なし
+		aTable.add( CentDedEkiJikoku::Ekiatsukai_Teisya   , 1 ) ;//	停車
+		aTable.add( CentDedEkiJikoku::Ekiatsukai_Tsuuka   , 2 ) ;//	通過
+		aTable.add( CentDedEkiJikoku::Ekiatsukai_Keiyunasi, 3 ) ;// 経由なし
 	}
 	return aTable ;
 }
 
 	// ================================
-	//@name UiData - Target�Ԃ̃f�[�^�]��
+	//@name UiData - Target間のデータ転送
 	// ================================
 
 	
@@ -198,12 +198,12 @@ void CPropEditUi_EkiJikoku::UiDataFromTarget( UIDATA* pUiData )
 		CentDedEkiJikoku aEkiJikoku 
 			= pRessya->getCentDedEkiJikoku( m_iEkiOrder ) ;
 
-		/*	 �w�� 
-			 -	 0: �^�s�Ȃ�
-			 -	 1: ���
-			 -	 2: �ʉ�
-			 -	 3: �o�R�Ȃ�
-			 -	-1: �I���Ȃ�
+		/*	 駅扱 
+			 -	 0: 運行なし
+			 -	 1: 停車
+			 -	 2: 通過
+			 -	 3: 経由なし
+			 -	-1: 選択なし
 		*/
 		if ( i == 0 )
 		{
@@ -216,15 +216,15 @@ void CPropEditUi_EkiJikoku::UiDataFromTarget( UIDATA* pUiData )
 			pUiData->iEkiatsukai = -1 ;
 		}
 
-		/* ������	*/
+		/* 着時刻	*/
 		if ( i == 0 )
 		{
-			//	�P��I�����A
-			//	�w�����ʉ߁E��ԂȂ�A�L���ETarget�𔽉f
-			//�@�@�o�R�Ȃ��Ȃ�L�����
-			//�@�@�^�s�Ȃ��Ȃ�L�����
-			if ( pUiData->iEkiatsukai == 1		// ���
-				|| pUiData->iEkiatsukai ==2 )	// �ʉ�
+			//	単一選択時、
+			//	駅扱が通過・停車なら、有効・Targetを反映
+			//　　経由なしなら有効･空
+			//　　運行なしなら有効･空
+			if ( pUiData->iEkiatsukai == 1		// 停車
+				|| pUiData->iEkiatsukai ==2 )	// 通過
 			{
 				pUiData->strChakujikoku = aJikokuConv.encode( 
 					aEkiJikoku.getChakujikoku() ) ;
@@ -233,20 +233,20 @@ void CPropEditUi_EkiJikoku::UiDataFromTarget( UIDATA* pUiData )
 		}
 		else 
 		{
-			//�����I�����́A�������͋�E����
+			//複数選択時は、着時刻は空・無効
 			pUiData->strChakujikoku = "" ;
 			pUiData->bChakujikokuIsEnable = false ;
 		}
 
-		/* ������	*/
+		/* 発時刻	*/
 		if ( i == 0 )
 		{
-			//	�P��I�����A
-			//	�w�����ʉ߁E��ԂȂ�A�L���ETarget�𔽉f
-			//�@�@�o�R�Ȃ��Ȃ�L�����
-			//�@�@�^�s�Ȃ��Ȃ�L�����
-			if ( pUiData->iEkiatsukai == 1		// ���
-				|| pUiData->iEkiatsukai ==2 )	// �ʉ�
+			//	単一選択時、
+			//	駅扱が通過・停車なら、有効・Targetを反映
+			//　　経由なしなら有効･空
+			//　　運行なしなら有効･空
+			if ( pUiData->iEkiatsukai == 1		// 停車
+				|| pUiData->iEkiatsukai ==2 )	// 通過
 			{
 				pUiData->strHatsujikoku 
 					= aJikokuConv.encode( aEkiJikoku.getHatsujikoku() ) ;
@@ -255,14 +255,14 @@ void CPropEditUi_EkiJikoku::UiDataFromTarget( UIDATA* pUiData )
 		}
 		else
 		{
-			//�����I�����́A�������͋�E����
+			//複数選択時は、発時刻は空・無効
 			pUiData->strHatsujikoku = "" ;
 			pUiData->bHatsujikokuIsEnable = false ;
 		}
 	}
 	// --------------------------------
 
-	//	 �����̌J�グ�E�J�艺����ON/OFF�B
+	//	 時刻の繰上げ・繰り下げのON/OFF。
 	pUiData->bModifyHatsujikoku = *m_pbModifyHatsujikoku ;
 
 }
@@ -271,18 +271,18 @@ void CPropEditUi_EkiJikoku::AdjustUiData(
 		const UIDATA* pUiDataPrev , 
 		bool bStartEdit )
 {
-	//	�w��
+	//	駅扱
 	if ( bStartEdit || pUiDataPrev->iEkiatsukai != pUiData->iEkiatsukai )
 	{
 	}
 	
-	//	�w���Ɋ֌W���鐳�K��
+	//	駅扱に関係する正規化
 	{
-		//��[�P��I����]
+		//◇[単一選択時]
 		if ( m_pTarget->size() == 1 )
 		{
-			//�@���y�w���z�w�����^�s�Ȃ��E�o�R�Ȃ��ŁA
-			//	�����������������ύX���ꂽ��A�w���͒�Ԃɂ���
+			//　○【駅扱】駅扱が運行なし・経由なしで、
+			//	着時刻か発時刻が変更されたら、駅扱は停車にする
 			{
 				if ( ( pUiData->iEkiatsukai == 0 || pUiData->iEkiatsukai == 3 )
 					&& !bStartEdit
@@ -293,10 +293,10 @@ void CPropEditUi_EkiJikoku::AdjustUiData(
 					pUiData->iEkiatsukai = 1 ;	
 				}
 			}
-			//�@���y�������E�������z�w�����^�s�Ȃ��E�o�R�Ȃ��ɕύX���ꂽ��A
-			//	�������E�������͖����ɂ���
-			//�@���y�������E�������z�w������ԁE�ʉ߂ɕύX���ꂽ��A��
-			//	�����E�������͗L���ɂ���B
+			//　○【着時刻・発時刻】駅扱が運行なし・経由なしに変更されたら、
+			//	着時刻・発時刻は無効にする
+			//　○【着時刻・発時刻】駅扱が停車・通過に変更されたら、着
+			//	時刻・発時刻は有効にする。
 			{
 				if ( !bStartEdit 
 					&& pUiDataPrev->iEkiatsukai !=  pUiData->iEkiatsukai )
@@ -315,19 +315,19 @@ void CPropEditUi_EkiJikoku::AdjustUiData(
 				}
 			}
 		}
-		//���m�����I����]
+		//◇［複数選択時]
 		else if ( m_pTarget->size() > 1 )
 		{
-			//�@���y�������E�������z�������E�������͖����E��
+			//　○【着時刻・発時刻】着時刻・発時刻は無効・空
 			pUiData->bChakujikokuIsEnable = false ;
 			pUiData->bHatsujikokuIsEnable = false ;
 		}
 	}
 
 
-	//	���O�̎���Order�̉w�������擾
-	//	���̒l�́A�����ȗ�����ĕ��݂̂����͂��ꂽ�Ƃ��ɁA
-	//	����⊮����̂Ɏg���܂��B
+	//	直前の時刻Orderの駅時刻を取得
+	//	この値は、時が省略されて分のみが入力されたときに、
+	//	時を補完するのに使います。
 	CdDedJikoku jikokuRevOrder ;
 	if ( pUiData->bChakujikokuIsEnable )
 	{
@@ -340,14 +340,14 @@ void CPropEditUi_EkiJikoku::AdjustUiData(
 			jikokuRevOrder = pRessya->getEkiJikoku( aJikokuOrderRev ) ;
 		}
 	}
-	//jikokuRevOrder = ���O�̎���Order�̉w����
+	//jikokuRevOrder = 直前の時刻Orderの駅時刻
 
-	/*  ������	*/
+	/*  着時刻	*/
 	if ( bStartEdit || pUiDataPrev->strChakujikoku != pUiData->strChakujikoku )
 	{
-		//�@���y�������z���������ύX���ꂽ��A
-		//�@�@(1)������𔼊p�ɕϊ�
-		//�@�@(2)��������2�����͂Ȃ�A����⊮���܂��B
+		//　○【着時刻】着時刻が変更されたら、
+		//　　(1)文字列を半角に変換
+		//　　(2)着時刻に2桁入力なら、時を補完します。
 		if ( pUiData->bChakujikokuIsEnable )
 		{
 			CdDedJikoku aJikoku ;
@@ -362,9 +362,9 @@ void CPropEditUi_EkiJikoku::AdjustUiData(
 		}
 	}
 	
-	//	���O�̎���Order�𒅎����ōX�V�B
-	//	���̒l�́A�����ȗ�����ĕ��݂̂����͂��ꂽ�Ƃ��ɁA
-	//	����⊮����̂Ɏg���܂��B
+	//	直前の時刻Orderを着時刻で更新。
+	//	この値は、時が省略されて分のみが入力されたときに、
+	//	時を補完するのに使います。
 	{
 		CdDedJikoku aJikoku( pUiData->strChakujikoku ) ;
 		if ( !aJikoku.isNull() )
@@ -372,15 +372,15 @@ void CPropEditUi_EkiJikoku::AdjustUiData(
 			jikokuRevOrder = aJikoku ;
 		}
 	}
-		//jikokuRevOrder = ���O�̎���Order�̉w�����B
-		//	�A���A�������̓��͂�����΁A�������B
+		//jikokuRevOrder = 直前の時刻Orderの駅時刻。
+		//	但し、着時刻の入力があれば、着時刻。
 
-	/* ������	*/
+	/* 発時刻	*/
 	if ( bStartEdit || pUiDataPrev->strHatsujikoku != pUiData->strHatsujikoku )
 	{
-		//�@���y�������z���������ύX���ꂽ��A
-		//�@�@(1)������𔼊p�ɕϊ�
-		//�@�@(2)��������2�����͂Ȃ�A����⊮���܂��B
+		//　○【発時刻】発時刻が変更されたら、
+		//　　(1)文字列を半角に変換
+		//　　(2)着時刻に2桁入力なら、時を補完します。
 		if ( pUiData->bHatsujikokuIsEnable )
 		{
 			CdDedJikoku aJikoku ;
@@ -394,14 +394,14 @@ void CPropEditUi_EkiJikoku::AdjustUiData(
 			}
 		}
 	}
-	//�@���y�������z���������ύX����A�w�����̌J�グ�E�J�艺���x=�w�L���x�ŁA
-	//		�����������͍ς݂Ȃ�A�������̌J�グ�E�J�艺�����s���܂��B�@
+	//　○【発時刻】着時刻が変更され、『時刻の繰上げ・繰り下げ』=『有効』で、
+	//		発時刻が入力済みなら、発時刻の繰上げ・繰り下げを行います。　
 	if ( !bStartEdit 
 		&& pUiDataPrev->strChakujikoku != pUiData->strChakujikoku )
 	{
 		if ( pUiData->bModifyHatsujikoku )
 		{
-			//	�������̑O��l�E���ݒl�E�������̓��͂��擾
+			//	着時刻の前回値・現在値・発時刻の入力を取得
 			CdDedJikoku	jikokuChakuPrev( pUiDataPrev->strChakujikoku ) ;
 			CdDedJikoku	jikokuChaku( pUiData->strChakujikoku ) ;
 			CdDedJikoku jikokuHatsu( pUiData->strHatsujikoku ) ;
@@ -422,21 +422,21 @@ int CPropEditUi_EkiJikoku::CheckUiData(
 		const UIDATA* pUiDataStartEdit ) 
 {
 	int iRv = 0 ; 
-	//	�w��
+	//	駅扱
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem || pUiDataStartEdit->iEkiatsukai != pUiData->iEkiatsukai )
 		{
 		}
 	}
-	//	������
+	//	着時刻
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem 
 			|| pUiDataStartEdit->strChakujikoku != pUiData->strChakujikoku )
 		{
-			//�@���y�������z���������󕶎���łȂ��Ȃ�A
-			//	�l�̎����ւ̕ϊ������݂āA�s���Ȃ�G���[�\��
+			//　○【着時刻】着時刻が空文字列でないなら、
+			//	値の時刻への変換を試みて、不正ならエラー表示
 			CdDedJikoku aJikoku ;
 			int iResult = aJikoku.decode( pUiData->strChakujikoku ) ;
 			if ( iResult < 0 )
@@ -445,15 +445,15 @@ int CPropEditUi_EkiJikoku::CheckUiData(
 			}
 		}
 	}
-	//	������
+	//	発時刻
 	if ( iRv >= 0 )
 	{
 		if ( bNewItem 
 			|| pUiDataStartEdit->strHatsujikoku != pUiData->strHatsujikoku )
 		{
 
-			//�@���y�������z���������󕶎���łȂ��Ȃ�A
-			//	�l�̎����ւ̕ϊ������݂āA�s���Ȃ�G���[�\��
+			//　○【発時刻】発時刻が空文字列でないなら、
+			//	値の時刻への変換を試みて、不正ならエラー表示
 			CdDedJikoku aJikoku ;
 			int iResult = aJikoku.decode( pUiData->strHatsujikoku ) ;
 			if ( iResult < 0 )
@@ -463,7 +463,7 @@ int CPropEditUi_EkiJikoku::CheckUiData(
 		}
 	}
 	// --------------------------------
-	//	�G���[���b�Z�[�W��\�����܂�
+	//	エラーメッセージを表示します
 	// --------------------------------
 	if ( iRv < 0 )
 	{
@@ -530,7 +530,7 @@ int CPropEditUi_EkiJikoku::UiDataToTarget(
 			}
 		}
 		// --------------------------------
-		//	��Ԃɉw��������������(�J�グ�E�J�艺���̏ꍇ������܂�)
+		//	列車に駅時刻を書き込む(繰上げ・繰り下げの場合もあります)
 		if ( pUiData->bModifyHatsujikoku )
 		{
 			pRessya->modifyCentDedEkiJikoku( m_iEkiOrder , aEkiJikoku ) ;
@@ -551,7 +551,7 @@ int CPropEditUi_EkiJikoku::UiDataToTarget(
 
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CPropEditUi_EkiJikoku::CPropEditUi_EkiJikoku( 
 		bool bNewItem , 

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CentDedEkiJikokuTrack.cpp 378 2016-11-16 21:10:54Z okm $
@@ -77,7 +77,7 @@ namespace entDed{
 
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CentDedEkiJikokuTrack::CentDedEkiJikokuTrack() 
 {
@@ -109,7 +109,7 @@ CentDedEkiJikokuTrack::operator=( const CentDedEkiJikokuTrack& value )
 	return *this ;
 }
 	// ********************************
-	//@name CParentBase-����
+	//@name CParentBase-操作
 	// ********************************
 void CentDedEkiJikokuTrack::setParent( CParentBase* pParent )
 {
@@ -118,15 +118,15 @@ void CentDedEkiJikokuTrack::setParent( CParentBase* pParent )
 }
 
 	// ********************************
-	//@name CentDedEkiJikokuTrack-����
+	//@name CentDedEkiJikokuTrack-属性
 	// ********************************
 CdDedJikoku CentDedEkiJikokuTrack::getNyusenJikoku()const
 { return m_NyusenJikoku ;}
 
 void CentDedEkiJikokuTrack::setNyusenJikoku( const CdDedJikoku value )
 { 
-	//��setNyusenJikoku:CentDedEkiJikokuTrack ���w�w�����x�̈ꕔ�ł���ꍇ�ŁA
-	//�@�w�����w�^�s�Ȃ��x�܂��́w�o�R�Ȃ��x�̏ꍇ�ANULL�ȊO�̎����̐ݒ�̓G���[(��O)
+	//△setNyusenJikoku:CentDedEkiJikokuTrack が『駅時刻』の一部である場合で、
+	//　駅扱が『運行なし』または『経由なし』の場合、NULL以外の時刻の設定はエラー(例外)
 	CentDedEkiJikokuTrackCont* pEkiJikokuTrackCont = dynamic_cast<CentDedEkiJikokuTrackCont*>( getParent() ) ;
 	if ( pEkiJikokuTrackCont != NULL )
 	{
@@ -152,9 +152,9 @@ CentDedEkiTrackSelector CentDedEkiJikokuTrack::getTrack()const
 
 void CentDedEkiJikokuTrack::setTrack( const CentDedEkiTrackSelector& value )
 { 
-	// CentDedEkiJikokuTrack ���H��(CentDedRosen)�̈ꕔ�ł���
-	//�ꍇ�ŁA�Ԑ��w��q���w�Ԑ��R���e�i�xCentDedEkiTrackCont �̗v�f�ɑΉ�����
-	//���Ȃ��ꍇ�̓G���[�B(��O�X���[)
+	// CentDedEkiJikokuTrack が路線(CentDedRosen)の一部である
+	//場合で、番線指定子が『番線コンテナ』CentDedEkiTrackCont の要素に対応して
+	//いない場合はエラー。(例外スロー)
 	CentDedEkiJikokuTrackCont* pEkiJikokuTrackCont = dynamic_cast<CentDedEkiJikokuTrackCont*>( getParent() ) ;
 	if ( pEkiJikokuTrackCont != NULL )
 	{
@@ -165,12 +165,12 @@ void CentDedEkiJikokuTrack::setTrack( const CentDedEkiTrackSelector& value )
 			const CentDedEkiTrackCont* pEkTrackCont = pEki->getEkiTrackCont() ;
 			if ( !value.isNull() && value.getiIndex() >= pEkTrackCont->size() )
 			{
-				throw( LException() ) ;	//	�Ԑ���Index���ACentDedEkiTrackCont�̗v�f�ɑΉ����Ă��܂���
+				throw( LException() ) ;	//	番線のIndexが、CentDedEkiTrackContの要素に対応していません
 			}
 		}
 	}
-	//��setEkiTrack:CentDedEkiJikokuTrack ���w�w�����x�̈ꕔ�ł���ꍇ�ŁA
-	//�@�w�����w�^�s�Ȃ��x�܂��́w�o�R�Ȃ��x�̏ꍇ�ANULL�ȊO�̔Ԑ��̐ݒ�̓G���[(��O)
+	//△setEkiTrack:CentDedEkiJikokuTrack が『駅時刻』の一部である場合で、
+	//　駅扱が『運行なし』または『経由なし』の場合、NULL以外の番線の設定はエラー(例外)
 	if ( pEkiJikokuTrackCont != NULL )
 	{
 		CentDedEkiJikoku* pEkiJikoku = pEkiJikokuTrackCont->getEkiJikoku() ;
@@ -192,13 +192,13 @@ void CentDedEkiJikokuTrack::setTrack( const CentDedEkiTrackSelector& value )
 }
 
 	// ********************************
-	//@name CentDedEkiJikokuTrack-����
+	//@name CentDedEkiJikokuTrack-操作
 	// ********************************
 void CentDedEkiJikokuTrack::adjust() 
 {
-	//��CentDedEkiJikokuTrack ���H��(CentDedRosen)�̈ꕔ�ł���ꍇ�ŁA
-	//�Ԑ��w��q���w�Ԑ��R���e�i�xCentDedEkiTrackCont �̗v�f��
-	//�Ή����Ă��Ȃ��ꍇ�́A�w�w��Ȃ��x�ɕύX����
+	//△CentDedEkiJikokuTrack が路線(CentDedRosen)の一部である場合で、
+	//番線指定子が『番線コンテナ』CentDedEkiTrackCont の要素に
+	//対応していない場合は、『指定なし』に変更する
 	CentDedEkiJikokuTrackCont* pEkiJikokuTrackCont = dynamic_cast<CentDedEkiJikokuTrackCont*>( getParent() ) ;
 	if ( pEkiJikokuTrackCont != NULL )
 	{
@@ -208,14 +208,14 @@ void CentDedEkiJikokuTrack::adjust()
 			const CentDedEkiTrackCont* pEkTrackCont = pEki->getEkiTrackCont() ;
 			if ( !this->m_Track.isNull() && this->m_Track.getiIndex() >= pEkTrackCont->size() )
 			{
-				this->m_Track.setNull() ;	//	�Ԑ���Index���ACentDedEkiTrackCont�̗v�f�ɑΉ����Ă��܂���
+				this->m_Track.setNull() ;	//	番線のIndexが、CentDedEkiTrackContの要素に対応していません
 			}
 		}
 	}
 
-	//��CentDedEkiJikokuTrack ���w�w�����x�̈ꕔ�ł���ꍇ�ŁA
-	//�@�w�����w�^�s�Ȃ��x�܂��́w�o�R�Ȃ��x�̏ꍇ�A�������E��������NULL�B
-	//�@�����́A�Ԑ�Index�E���������Ƃ���NULL��ݒ肷��B
+	//△CentDedEkiJikokuTrack が『駅時刻』の一部である場合で、
+	//　駅扱が『運行なし』または『経由なし』の場合、着時刻・発時刻はNULL。
+	//　入線は、番線Index・入線時刻ともにNULLを設定する。
 	if ( pEkiJikokuTrackCont != NULL )
 	{
 		CentDedEkiJikoku* pEkiJikoku = pEkiJikokuTrackCont->getEkiJikoku() ;
@@ -233,12 +233,12 @@ void CentDedEkiJikokuTrack::adjust()
 	
 	
 	// ********************************
-	//@name CentDedRosen-�q�I�u�W�F�N�g�̑����̒ʒm
+	//@name CentDedRosen-子オブジェクトの増減の通知
 	// ********************************
 void CentDedEkiJikokuTrack::onEkiTrackInsert( int iEkiTrackIndex )
 {
-	//���Ԑ��̒ǉ�(OnInsertEkiTrack):�w���������I�u�W�F�N�g�̔Ԑ��w��q�̎w��
-	//�������C���f�N�X�̏ꍇ�A�C���f�N�X�́A�R���e�i�ւ̒ǉ��ɍ��킹�ăV�t�g������B
+	//△番線の追加(OnInsertEkiTrack):駅時刻入線オブジェクトの番線指定子の指定
+	//方式がインデクスの場合、インデクスは、コンテナへの追加に合わせてシフトさせる。
 	if ( !m_Track.isNull() && m_Track.getiIndex() >= iEkiTrackIndex )
 	{
 		m_Track.setIndex( m_Track.getiIndex() + 1 ) ;
@@ -247,10 +247,10 @@ void CentDedEkiJikokuTrack::onEkiTrackInsert( int iEkiTrackIndex )
 
 void CentDedEkiJikokuTrack::onEkiTrackErase( int iEkiTrackIndex )
 {
-	//���Ԑ��̍폜(OnEraseEkiTrack):�w���������I�u�W�F�N�g�̔Ԑ��w��q�̎w�����
-	//���C���f�N�X�̏ꍇ�A�C���f�N�X�́A�R���e�i�ւ̍폜�ɍ��킹�ăV�t�g������B
-	//�@�w���������I�u�W�F�N�g�̔Ԑ��w��q�̎w��������C���f�N�X�ŁA����
-	// �C���f�N�X���폜�Ώۂ̂��̂ł���ꍇ�A�w�w��Ȃ��x�ɕύX����
+	//△番線の削除(OnEraseEkiTrack):駅時刻入線オブジェクトの番線指定子の指定方式
+	//がインデクスの場合、インデクスは、コンテナへの削除に合わせてシフトさせる。
+	//　駅時刻入線オブジェクトの番線指定子の指定方式がインデクスで、その
+	// インデクスが削除対象のものである場合、『指定なし』に変更する
 	if ( !m_Track.isNull() )
 	{
 		if ( m_Track.getiIndex() > iEkiTrackIndex )

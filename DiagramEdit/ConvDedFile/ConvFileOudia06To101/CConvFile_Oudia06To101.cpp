@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 // $Id: CConvFile_Oudia06To101.cpp 10 2012-08-26 09:48:47Z okm $
@@ -117,33 +117,33 @@ int CConvFile_Oudia06To101::LeftToRight(
 	string strErrorInfoString ;
 
 	// --------------------------------
-	//	�t�@�C���t�H�[�}�b�g�̊m�F
+	//	ファイルフォーマットの確認
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
 		int iResult = isLeftFormat( pLeftFormat ) ;
-		//	-	-1 ;	//	FileType ������������܂���B
-		//	-	-11 ;	//	�t�@�C�����������t�H�[�}�b�g�ł͂���܂���B
+		//	-	-1 ;	//	FileType が正しくありません。
+		//	-	-11 ;	//	ファイルが正しいフォーマットではありません。
 		if ( iResult < 0 )
 		{
 			switch( iResult )
 			{
-			case -1 :	//	FileType ������������܂���B
+			case -1 :	//	FileType が正しくありません。
 				strErrorInfoString = "FileType Mismatch." ;
 				break ;
-			case -11 :	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+			case -11 :	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 				strErrorInfoString = "File Format Error." ;
 				break ;
 			}
 			iRv = iResult ;
 		}
 		//iRv = 
-		//	-	-1 ;	//	FileType ������������܂���B
-		//	-	-11 ;	//	�t�@�C�����������t�H�[�}�b�g�ł͂���܂���B
+		//	-	-1 ;	//	FileType が正しくありません。
+		//	-	-11 ;	//	ファイルが正しいフォーマットではありません。
 	}
 	// --------------------------------
-	//	�o�C�g��� 
-	//	OuPropertiesText::CNodeContainer �ɓǂݍ���
+	//	バイト列を 
+	//	OuPropertiesText::CNodeContainer に読み込み
 	// --------------------------------
 	string strLeftFormat ;
 	if ( iRv >= 0 )
@@ -160,7 +160,7 @@ int CConvFile_Oudia06To101::LeftToRight(
 		strLeftFormat = OuLib::stringOf( binLeftFormat ) ;
 		strLeftFormat = OuLib::strLfOf( strLeftFormat ) ;
 	}
-	//strLeftFormat = LeftFile �̓��e
+	//strLeftFormat = LeftFile の内容
 
 	OuPropertiesText::CNodeContainer	nodecontainerLeftFormat ;
 	if ( iRv >= 0 )
@@ -172,15 +172,15 @@ int CConvFile_Oudia06To101::LeftToRight(
 			&strErrorInfoString ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -11 ;	//	�t�@�C�����������t�H�[�}�b�g�ł͂���܂���B
+			iRv = -11 ;	//	ファイルが正しいフォーマットではありません。
 		}
 	}
-	//nodecontainerLeftFormat = LeftFile�̓��e��ێ����Ă��܂��B
+	//nodecontainerLeftFormat = LeftFileの内容を保持しています。
 
 	// --------------------------------
-	//	��4.0��[FileType]
+	//	＜4.0＞[FileType]
 	//
-	//  "OuDia.6"��"OuDia.1.01" �ɕϊ����܂��B
+	//  "OuDia.6"→"OuDia.1.01" に変換します。
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -189,29 +189,29 @@ int CConvFile_Oudia06To101::LeftToRight(
 			valueFileTypeRightFormat ) ;
 	}
 	/* --------------------------------
-	��4.1��[Rosen.Ressyasyubetsu[]]
+	＜4.1＞[Rosen.Ressyasyubetsu[]]
 
-	��4.1.1��[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]
+	＜4.1.1＞[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]
 
-	��[Rosen.Ressyasyubetsu]�ɁA[Rosen.Ressyasyubetsu.JikokuhyouFont]���Ȃ��ꍇ�B
-	   ��[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=0 �Ƃ��܂��B
+	◇[Rosen.Ressyasyubetsu]に、[Rosen.Ressyasyubetsu.JikokuhyouFont]がない場合。
+	   □[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=0 とします。
 
-	��[Rosen.Ressyasyubetsu]�ɁA[Rosen.Ressyasyubetsu.JikokuhyouFont]������ꍇ�B
-	  ��[DispProp.JikokuhyouFont[]]�ɓ����t�H���g������ꍇ�B
-		��[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=
-			DispProp.JikokuhyouFont[]�́A����t�H���g�̃C���f�N�X
+	◇[Rosen.Ressyasyubetsu]に、[Rosen.Ressyasyubetsu.JikokuhyouFont]がある場合。
+	  ◇[DispProp.JikokuhyouFont[]]に同じフォントがある場合。
+		□[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=
+			DispProp.JikokuhyouFont[]の、同一フォントのインデクス
 		.
-	  ��[DispProp.JikokuhyouFont[]]�ɓ����t�H���g���Ȃ��ꍇ�B
-		��[DispProp.JikokuhyouFont[]]�̗v�f����8�ȓ��̏ꍇ�B
-�@		  ��[DispProp.JikokuhyouFont[]]�̖����ɗv�f��ǉ����A
-�@�@		[Rosen.Ressyasyubetsu.JikokuhyouFont]�̓��e���R�s�[
-�@		  ��[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=
-�@�@		����ǉ�����DispProp.JikokuhyouFont[] �̃C���f�N�X
-		��else
-�@		  ��[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=0 �Ƃ��܂��B
+	  ◇[DispProp.JikokuhyouFont[]]に同じフォントがない場合。
+		◇[DispProp.JikokuhyouFont[]]の要素数が8以内の場合。
+　		  □[DispProp.JikokuhyouFont[]]の末尾に要素を追加し、
+　　		[Rosen.Ressyasyubetsu.JikokuhyouFont]の内容をコピー
+　		  □[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=
+　　		今回追加したDispProp.JikokuhyouFont[] のインデクス
+		◇else
+　		  □[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=0 とします。
 
-	��4.1.2��[Rosen.Ressyasyubetsu.JikokuhyouFont]
-	  �d�l����͔p�~����܂����A�R���o�[�^�͂��̒l��ҏW���܂���B
+	＜4.1.2＞[Rosen.Ressyasyubetsu.JikokuhyouFont]
+	  仕様からは廃止されますが、コンバータはこの値を編集しません。
 	 -------------------------------- */
 	if ( iRv >= 0 )
 	{
@@ -229,7 +229,7 @@ int CConvFile_Oudia06To101::LeftToRight(
 		if ( pdirRosen != NULL && pdirDispProp != NULL )
 		{
 			int cRessyasyubetsu = pdirRosen->getCNodeContainer()->sizeInName( nameRessyasyubetsu ) ;
-			//cRessyasyubetsu = [Rosen.Ressyasyubetsu] �̐� 
+			//cRessyasyubetsu = [Rosen.Ressyasyubetsu] の数 
 
 			for ( idxRessyasyubetsu = 0 ; 
 				iRv >= 0 && idxRessyasyubetsu < cRessyasyubetsu ; 
@@ -244,13 +244,13 @@ int CConvFile_Oudia06To101::LeftToRight(
 					int iJikokuhyouFontIndex = 0 ;
 					string strJikokuhyouFont = pdirRessyasyubetsu->getCNodeContainer()->getValue( nameJikokuhyouFont ) ;
 
-					//��[Rosen.Ressyasyubetsu]�ɁA[Rosen.Ressyasyubetsu.JikokuhyouFont]���Ȃ��ꍇ�B
-					//   ��[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=0 �Ƃ��܂��B
+					//◇[Rosen.Ressyasyubetsu]に、[Rosen.Ressyasyubetsu.JikokuhyouFont]がない場合。
+					//   □[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=0 とします。
 					if ( strJikokuhyouFont.length() == 0 )
 					{
 						iJikokuhyouFontIndex = 0 ;
 					}
-					//��[Rosen.Ressyasyubetsu]�ɁA[Rosen.Ressyasyubetsu.JikokuhyouFont]������ꍇ�B
+					//◇[Rosen.Ressyasyubetsu]に、[Rosen.Ressyasyubetsu.JikokuhyouFont]がある場合。
 					else
 					{
 						int cJikokuhyouFont = pdirDispProp->getCNodeContainer()->sizeInName( nameJikokuhyouFont ) ;
@@ -273,21 +273,21 @@ int CConvFile_Oudia06To101::LeftToRight(
 								break ;
 							}
 						}
-						//  ��[DispProp.JikokuhyouFont[]]�ɓ����t�H���g������ꍇ�B
-						//	  ��[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=
-						//		DispProp.JikokuhyouFont[]�́A����t�H���g�̃C���f�N�X
+						//  ◇[DispProp.JikokuhyouFont[]]に同じフォントがある場合。
+						//	  □[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=
+						//		DispProp.JikokuhyouFont[]の、同一フォントのインデクス
 						if ( idxJikokuhyouFont < cJikokuhyouFont )
 						{
 							iJikokuhyouFontIndex = idxJikokuhyouFont ;
 						}
-						//  ��[DispProp.JikokuhyouFont[]]�ɓ����t�H���g���Ȃ��ꍇ�B
+						//  ◇[DispProp.JikokuhyouFont[]]に同じフォントがない場合。
 						else
 						{
-							//    ��[DispProp.JikokuhyouFont[]]�̗v�f����8�ȓ��̏ꍇ�B
-							//      ��[DispProp.JikokuhyouFont[]]�̖����ɗv�f��ǉ����A
-							//	      [Rosen.Ressyasyubetsu.JikokuhyouFont]�̓��e���R�s�[
-							//      ��[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=
-							//	      ����ǉ�����DispProp.JikokuhyouFont[] �̃C���f�N�X
+							//    ◇[DispProp.JikokuhyouFont[]]の要素数が8以内の場合。
+							//      □[DispProp.JikokuhyouFont[]]の末尾に要素を追加し、
+							//	      [Rosen.Ressyasyubetsu.JikokuhyouFont]の内容をコピー
+							//      □[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=
+							//	      今回追加したDispProp.JikokuhyouFont[] のインデクス
 							if ( cJikokuhyouFont < 8 )
 							{
 								pdirDispProp->getCNodeContainer()->insertInName(
@@ -296,8 +296,8 @@ int CConvFile_Oudia06To101::LeftToRight(
 										nameJikokuhyouFont , strJikokuhyouFont ) ) ) ;
 								iJikokuhyouFontIndex = cJikokuhyouFont ;
 							}
-							//    ��else
-							//      ��[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=0 �Ƃ��܂��B
+							//    ◇else
+							//      □[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]=0 とします。
 							else
 							{
 								iJikokuhyouFontIndex = 0 ;
@@ -317,17 +317,17 @@ int CConvFile_Oudia06To101::LeftToRight(
 
 
 	/* --------------------------------
-	��4.2��[DispProp.JikokuhyouFont[]]
+	＜4.2＞[DispProp.JikokuhyouFont[]]
 
-	  �ϊ��́A[Rosen.Ressyasyubetsu.JikokuhyouFontIndex[]]�̕ϊ��Ɠ����ɍs���܂��B
+	  変換は、[Rosen.Ressyasyubetsu.JikokuhyouFontIndex[]]の変換と同時に行います。
 	 -------------------------------- */
 
 /*	// --------------------------------
 	//(1)[Rosen.Ressyasyubetsu.JikokuhyouFontIndex]
-	//  [Rosen.Ressyasyubetsu.JikokuhyouFontIndex]��V�݂��܂����B
-	//  ���̒l�́A0�`7�ŁA���̗�Ԏ�ʂ̎����\���Ŏg�p����t�H���g���w�肵�܂��B
-	//  ���̒l�́A[DispProp.JikokuhyouFont]�̃C���f�N�X���w�肵�܂��B
-	//  �y�ϊ����e�z���̒l�́A0�����蓖�Ă܂��B
+	//  [Rosen.Ressyasyubetsu.JikokuhyouFontIndex]を新設しました。
+	//  この値は、0～7で、この列車種別の時刻表示で使用するフォントを指定します。
+	//  この値は、[DispProp.JikokuhyouFont]のインデクスを指定します。
+	//  【変換内容】この値は、0を割り当てます。
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -340,7 +340,7 @@ int CConvFile_Oudia06To101::LeftToRight(
 		if ( pdirRosen != NULL )
 		{
 			int cRessyasyubetsu = pdirRosen->getCNodeContainer()->sizeInName( nameRessyasyubetsu ) ;
-			//cRessyasyubetsu = [Rosen.Ressyasyubetsu] �̐� 
+			//cRessyasyubetsu = [Rosen.Ressyasyubetsu] の数 
 
 			for ( idxRessyasyubetsu = 0 ; 
 				iRv >= 0 && idxRessyasyubetsu < cRessyasyubetsu ; 
@@ -361,9 +361,9 @@ int CConvFile_Oudia06To101::LeftToRight(
 	}
 	// --------------------------------
 	//(2)[DispProp.JikokuhyouFont]
-	//�@���̒l��8�̃G���g���������܂��B
+	//　この値は8つのエントリを持ちます。
 	//
-	//  �y�ϊ����e�z���̒l�́A�]����[DispProp.JikokuhyouFont](1��)���A8�ɕ������܂��B
+	//  【変換内容】この値は、従来の[DispProp.JikokuhyouFont](1つ)を、8つに複製します。
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -388,7 +388,7 @@ int CConvFile_Oudia06To101::LeftToRight(
 	}
 */
 	// --------------------------------
-	//FileTypeAppComment�𖖔��ɒǉ�
+	//FileTypeAppCommentを末尾に追加
 	// --------------------------------
 	if ( iRv >= 0 )
 	{
@@ -399,8 +399,8 @@ int CConvFile_Oudia06To101::LeftToRight(
 
 	
 	// --------------------------------
-	//	CConvNodeContainer ��
-	//	�o�C�g��ɕϊ�
+	//	CConvNodeContainer を
+	//	バイト列に変換
 	// --------------------------------
 	string strRightFormat ;
 	if ( iRv >= 0 )
@@ -411,7 +411,7 @@ int CConvFile_Oudia06To101::LeftToRight(
 	}
 
 
-	//strRightFormat = RightFile �̓��e
+	//strRightFormat = RightFile の内容
 	vector<char> binRightFormat ;
 	if ( iRv >= 0 )
 	{
@@ -459,7 +459,7 @@ int CConvFile_Oudia06To101::isLeftFormat(
 		strLeftFormat = OuLib::stringOf( binLeftFormat ) ;
 		strLeftFormat = OuLib::strLfOf( strLeftFormat ) ;
 	}
-	//strLeftFormat = pLeftFormat ���i�[����������ł��B
+	//strLeftFormat = pLeftFormat を格納した文字列です。
 	OuPropertiesText::CNodeContainer	nodecontainerLeftFormat ;
 	if ( iRv >= 0 )
 	{
@@ -470,7 +470,7 @@ int CConvFile_Oudia06To101::isLeftFormat(
 			&strErrorInfoString ) ;
 		if ( iResult < 0 )
 		{
-			iRv = -11 ;	//	�t�@�C�����������t�H�[�}�b�g�ł͂���܂���B
+			iRv = -11 ;	//	ファイルが正しいフォーマットではありません。
 		}
 	}
 	if ( iRv >= 0 )
@@ -479,7 +479,7 @@ int CConvFile_Oudia06To101::isLeftFormat(
 			nameFileType ) ;
 		if ( strValue != valueFileTypeLeftFormat )
 		{
-			iRv = -1 ;	//	FileType ������������܂���B
+			iRv = -1 ;	//	FileType が正しくありません。
 		}
 	}
 	return iRv ;
@@ -495,13 +495,13 @@ int CConvFile_Oudia06To101::RightToLeft(
 		IfByteBuffer* pLeftFormat , 
 		IfByteBuffer* pErrorInfoString ) 
 {
-	return -2 ;	//	���̃��\�b�h�̓T�|�[�g����Ă��܂���B
+	return -2 ;	//	このメソッドはサポートされていません。
 }
 
 int CConvFile_Oudia06To101::isRightFormat( 
 		const IfByteBuffer* pRightFormat ) 
 {
-	return -2 ;	//	���̃��\�b�h�̓T�|�[�g����Ă��܂���B
+	return -2 ;	//	このメソッドはサポートされていません。
 };
 
 

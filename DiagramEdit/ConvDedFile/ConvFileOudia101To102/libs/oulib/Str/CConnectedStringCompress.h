@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -79,22 +79,22 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
 @brief
-�y�T�v�z
-  CdConnectedString2 �I�u�W�F�N�g���ێ����Ă�����e���A������ɕϊ����܂��B���̂Ƃ��A�w���ږ��x�́w�T�u�A�C�e���x���������k���܂��B�ϊ���������������߂���@�\�������܂��B
+【概要】
+  CdConnectedString2 オブジェクトが保持している内容を、文字列に変換します。このとき、『項目名』の『サブアイテム』部分を圧縮します。変換した文字列を解釈する機能も持ちます。
 
-  ���̃N���X�́A CdConnectesString2 �̓��e���A������ɕϊ����܂��B���̓_�́A CdConnectedString::encode() �Ɠ����ł����A�w���ږ��x�́w�T�u�A�C�e���x���d�����Ă���ꍇ�́A�d�����Ă���w�T�u�A�C�e���x�̋L�q���ȗ����邱�Ƃɂ��A������̃T�C�Y�����炵�܂��B
-���ɁA�w�T�u�A�C�e���x�̐��������A����q�̃��x�����[���ꍇ�A�T�C�Y�̍팸���ʂ��傫���Ȃ�܂��B
+  このクラスは、 CdConnectesString2 の内容を、文字列に変換します。この点は、 CdConnectedString::encode() と同じですが、『項目名』の『サブアイテム』が重複している場合は、重複している『サブアイテム』の記述を省略することにより、文字列のサイズを減らします。
+特に、『サブアイテム』の数が多く、入れ子のレベルが深い場合、サイズの削減効果が大きくなります。
 
-  ���̃N���X���g�p�ł��� CdConnectedString2 �ɂ́A�ȉ��̏���������܂��B
+  このクラスが使用できる CdConnectedString2 には、以下の条件があります。
 
 
-�P�D  ���ׂẮw���ږ��x�́A���ʂ́w�T�u�A�C�e���K�w��؂蕶���x�i�w�T�u�A�C�e���x�̊K�w�̂���؂�A�P�o�C�g�̕����j�������Ȃ��Ă͂Ȃ�܂���B
+１．  すべての『項目名』は、共通の『サブアイテム階層区切り文字』（『サブアイテム』の階層のを区切る、１バイトの文字）を持たなくてはなりません。
 
 <H5>
-�i��j
+（例）
 </H5>
-  �ȉ��́A�w�T�u�A�C�e���K�w��؂蕶���x�� "." �Ƃ����w���ږ��x�̗�ł�
-�i�A�C�e���Ԃ̋�؂蕶��=���s�E���ڂƒl�̊Ԃ̋�؂蕶��="="�j�B
+  以下は、『サブアイテム階層区切り文字』を "." とした『項目名』の例です
+（アイテム間の区切り文字=改行・項目と値の間の区切り文字="="）。
 
 @code
 Itemname0=Value0
@@ -104,66 +104,66 @@ Subitem1.Subitem2.Itemname3=Value3
 Subitem1.Subitem3.Itemname4=Value4
 @endcode
 
-�y���̃N���X���������镶����z
+【このクラスが生成する文字列】
 
-  ������̍쐬�ɂ����ẮA�w�J�����g�T�u�A�C�e���x�̊T�O��������܂��B
-  �T�u�A�C�e���ɑ�����A�C�e���𕶎��񉻂���ۂ́A
+  文字列の作成においては、『カレントサブアイテム』の概念を取り入れます。
+  サブアイテムに属するアイテムを文字列化する際は、
 
-�P�D  �w�J�����g�T�u�A�C�e���x���A�o�͂���T�u�A�C�e���ɓ��ꂳ���āA
+１．  『カレントサブアイテム』を、出力するサブアイテムに入場させて、
 
-�Q�D  �T�u�A�C�e��������菜�������ږ��ƒl���������ށB
+２．  サブアイテム名を取り除いた項目名と値を書き込む。
 
-�R�D  �T�u�A�C�e���ɑ����鍀�ږ��E�l�����ׂď������񂾂�A�w�J�����g�T�u�A�C�e���x�́A���̃T�u�A�C�e������ޏꂷ��B
+３．  サブアイテムに属する項目名・値をすべて書き込んだら、『カレントサブアイテム』は、そのサブアイテムから退場する。
 
-�Ƃ����������Ƃ�܂��B
+という順序をとります。
 
-  �w�J�����g�T�u�A�C�e���x�̓���́A�X�^�b�N�̌`���Ƃ�܂��B���Ƃ��΁A
+  『カレントサブアイテム』の入場は、スタックの形をとります。たとえば、
 
-�P�D  �w�J�����g�T�u�A�C�e���x�� "Subitem1" �ɓ��ꂳ����B
+１．  『カレントサブアイテム』を "Subitem1" に入場させる。
 
-�Q�D  �w�J�����g�T�u�A�C�e���x�� "Subitem2"
- �i "Subitem1" �̉��� "Subitem2" �j�ɓ��ꂳ����B
+２．  『カレントサブアイテム』を "Subitem2"
+ （ "Subitem1" の下の "Subitem2" ）に入場させる。
 
-�R�D  �w�J�����g�T�u�A�C�e���x��ޏꂳ����i"Subitem2" ����̑ޏ�j�B
+３．  『カレントサブアイテム』を退場させる（"Subitem2" からの退場）。
 
-  ���̂Ƃ��́w�J�����g�T�u�A�C�e���x�́A"Subitem1" �ƂȂ�܂��B
+  このときの『カレントサブアイテム』は、"Subitem1" となります。
 
 
-  �w�J�����g�T�u�A�C�e���x���A�T�u�A�C�e���ɓ��ꂳ����ۂ́A������Ƃ��āw�J�����g�T�u�A�C�e������R�}���h�x���o�͂��܂��B
-  ����́A�ȉ��̌`���ƂȂ�܂��B
+  『カレントサブアイテム』を、サブアイテムに入場させる際は、文字列として『カレントサブアイテム入場コマンド』を出力します。
+  これは、以下の形式となります。
 
   <B>
-  �T�u�A�C�e�����{�w�T�u�A�C�e���K�w��؂蕶���x�{�w�A�C�e���Ԃ̋�؂蕶���x
+  サブアイテム名＋『サブアイテム階層区切り文字』＋『アイテム間の区切り文字』
   </B>
 
 <H5>
-�i��j
+（例）
 </H5>
-�i�T�u�A�C�e���K�w��؂蕶��="." �E�A�C�e���Ԃ̋�؂蕶��=���s�E���ڂƒl�̊Ԃ̋�؂蕶��="="�j
+（サブアイテム階層区切り文字="." ・アイテム間の区切り文字=改行・項目と値の間の区切り文字="="）
 @code
 Subitem1.
 @endcode
 
-  �w�J�����g�T�u�A�C�e���x���A�T�u�A�C�e������ޏꂳ����ۂ́A������Ƃ��āw�J�����g�T�u�A�C�e���ޏ�R�}���h�x���o�͂��܂��B
-  ����́A�ȉ��̌`���ƂȂ�܂��B
+  『カレントサブアイテム』を、サブアイテムから退場させる際は、文字列として『カレントサブアイテム退場コマンド』を出力します。
+  これは、以下の形式となります。
 
   <B>
-  �w�T�u�A�C�e���K�w��؂蕶���x�{�w�A�C�e���Ԃ̋�؂蕶���x
+  『サブアイテム階層区切り文字』＋『アイテム間の区切り文字』
   </B>
 
 <H5>
-�i��j
+（例）
 </H5>
-�i�T�u�A�C�e���K�w��؂蕶��="." �E�A�C�e���Ԃ̋�؂蕶��=���s�E���ڂƒl�̊Ԃ̋�؂蕶��="="�j
+（サブアイテム階層区切り文字="." ・アイテム間の区切り文字=改行・項目と値の間の区切り文字="="）
 @code
 .
 @endcode
 
 <H5>
-�i��j
+（例）
 </H5>
 
-  �ȉ��̂悤�ȃA�C�e�����o�͂���ꍇ��z�肵�܂��B(151�o�C�g)�i�T�u�A�C�e���K�w��؂蕶��="." �E�A�C�e���Ԃ̋�؂蕶��=���s�E���ڂƒl�̊Ԃ̋�؂蕶��="="�j
+  以下のようなアイテムを出力する場合を想定します。(151バイト)（サブアイテム階層区切り文字="." ・アイテム間の区切り文字=改行・項目と値の間の区切り文字="="）
 
 @code
 Itemname0=Value0
@@ -173,26 +173,26 @@ Subitem1.Subitem2.Itemname3=Value3
 Subitem1.Subitem3.Itemname4=Value4
 @endcode
 
-���̂Ƃ��̏o�͓��e�́A�ȉ��̂悤�ɂȂ�܂�( �J�b�R�ň͂܂�Ă��镔���́A�����̃R�����g�ł��B���ۂ̕�����ɂ͊܂܂�܂���)�B
+このときの出力内容は、以下のようになります( カッコで囲まれている部分は、説明のコメントです。実際の文字列には含まれません)。
 
 @code
-�i�J�����g�T�u�A�C�e����""�j
+（カレントサブアイテム＝""）
 Itemname0=Value0
 Subitem1.
-�i�J�����g�T�u�A�C�e����"Subitem1."�j
+（カレントサブアイテム＝"Subitem1."）
 Itemname1=Value1
 Subitem2.
-�i�J�����g�T�u�A�C�e����"Subitem1.Subitem2."�j
+（カレントサブアイテム＝"Subitem1.Subitem2."）
 Itemname2=Value2
 Itemname3=Value3
 .
-�i�J�����g�T�u�A�C�e����"Subitem1."�j
+（カレントサブアイテム＝"Subitem1."）
 Subitem3.
-�i�J�����g�T�u�A�C�e����"Subitem1.Subitem3."�j
+（カレントサブアイテム＝"Subitem1.Subitem3."）
 Itemname4=Value4
 @endcode
 
-�R�����g���������ŏI���ʂ́A�ȉ��̂悤�Ȃ��̂ł��i124�o�C�g�j�B
+コメントを除いた最終結果は、以下のようなものです（124バイト）。
 
 @code
 Itemname0=Value0
@@ -208,60 +208,60 @@ Itemname4=Value4
 
 
 
-�y�g�����P- CdConnectedString2 �Ɋi�[����Ă�����e�𕶎��񉻁z
+【使い方１- CdConnectedString2 に格納されている内容を文字列化】
 
-�P�D  �R���X�g���N�^�ł́A
+１．  コンストラクタでは、
 
-  - �T�u�A�C�e���K�w��؂蕶��(����l=".")
+  - サブアイテム階層区切り文字(既定値=".")
 
-���w�肵�Ă��������B
+を指定してください。
 
-�Q�D  �����񉻂���A�C�e����ێ����Ă��� CdConnectedString2 �I�u�W�F�N�g��
+２．  文字列化するアイテムを保持している CdConnectedString2 オブジェクトの
 
- - CdConnectedString2::m_chSplit �ɃA�C�e���Ԃ̋�؂蕶���E
- - CdConnectedString2::m_chEqualChar �Ɂw���ڂƒl�̊Ԃ̋�؂蕶���x
+ - CdConnectedString2::m_chSplit にアイテム間の区切り文字・
+ - CdConnectedString2::m_chEqualChar に『項目と値の間の区切り文字』
  - CdConnectedString2::m_bEncodeNoValue
 
-���w�肵�Ă��������B
+を指定してください。
 
-�R�D  encode() ���Ăяo�����Ƃɂ��A��������쐬���邱�Ƃ��ł��܂��B
+３．  encode() を呼び出すことにより、文字列を作成することができます。
 
 
-�y�g�����Q- encode() �ō쐬��������������߁z
+【使い方２- encode() で作成した文字列を解釈】
 
-�P�D  �R���X�g���N�^�ł́A
+１．  コンストラクタでは、
 
-  - �T�u�A�C�e���K�w��؂蕶��(����l=".")
+  - サブアイテム階層区切り文字(既定値=".")
 
-���w�肵�Ă��������B
+を指定してください。
 
-�Q�D  ����������߂������e���i�[���� CdConnectedString2 �I�u�W�F�N�g��
+２．  文字列を解釈した内容を格納する CdConnectedString2 オブジェクトの
 
- - CdConnectedString2::m_chSplit �ɃA�C�e���Ԃ̋�؂蕶���E
- - CdConnectedString2::m_chEqualChar �Ɂw���ڂƒl�̊Ԃ̋�؂蕶���x
+ - CdConnectedString2::m_chSplit にアイテム間の区切り文字・
+ - CdConnectedString2::m_chEqualChar に『項目と値の間の区切り文字』
 
-���w�肵�Ă��������B
+を指定してください。
 
-�R�D  decode() ���Ăяo���Ă��������B���̊֐��́A����������߂��āA CdConnectedString2 �Ɋi�[���܂��B
+３．  decode() を呼び出してください。この関数は、文字列を解釈して、 CdConnectedString2 に格納します。
 */
 class CConnectedStringCompress
 {
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
  private:
 	/**
-	 *	�T�u�A�C�e���K�w��؂蕶��(����l=".")
+	 *	サブアイテム階層区切り文字(既定値=".")
 	 */
 	char		m_chSubitemSeparater ;
 	
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 * @param chSubitemSeparater [in]
-	 *	�T�u�A�C�e���K�w��؂蕶��(����l=".") 
+	 *	サブアイテム階層区切り文字(既定値=".") 
 	 */
 	CConnectedStringCompress( 
 		char chSubitemSeparater = '.' );
@@ -273,48 +273,48 @@ class CConnectedStringCompress
 // ********************************
  public:
 	// ********************************
-	///@name CConnectedStringCompress-����
+	///@name CConnectedStringCompress-属性
 	// ********************************
 	virtual char getSubitemSeparater()const ;
 	virtual CConnectedStringCompress& setSubitemSeparater( char value ) ;
 	// ********************************
-	///@name CConnectedStringCompress-����
+	///@name CConnectedStringCompress-操作
 	// ********************************
 	/**
-	 *	CdConnectedString2 �Ɋi�[����Ă�����e�𕶎��񉻂��܂��B
+	 *	CdConnectedString2 に格納されている内容を文字列化します。
 	 *
-	 *	�����񉻂���O�� aCdConnectedString2 ��
+	 *	文字列化する前に aCdConnectedString2 に
 	 *
 	 *	- CdConnectedString2::m_chSplit
 	 *	- CdConnectedString2::m_chEqualChar
 	 *	- CdConnectedString2::m_bEncodeNoValue
 	 *
-	 *	��ݒ肵�Ă��Ȃ��Ă͂Ȃ�܂���B
+	 *	を設定していなくてはなりません。
 	 * @param aCdConnectedString2 [in]
-	 *	�����񉻂���A�C�e����ێ����Ă���I�u�W�F�N�g���w�肵�Ă��������B
+	 *	文字列化するアイテムを保持しているオブジェクトを指定してください。
 	 * @return
-	 *	�����񉻂������e��Ԃ��܂��B
+	 *	文字列化した内容を返します。
 	 */
 	virtual std::string encode( const CdConnectedString2& aCdConnectedString2 ) ;
 
 	/**
-	 *	encode() �ō쐬��������������߂��A���̓��e��
-	 *	 CdConnectedString2 �Ɋi�[���܂��B
+	 *	encode() で作成した文字列を解釈し、その内容を
+	 *	 CdConnectedString2 に格納します。
 	 *
-	 *	�֐����s�O�ɁA pCdConnectedString2 ��
+	 *	関数実行前に、 pCdConnectedString2 に
 	 *
 	 *	- CdConnectedString2::m_chSplit
 	 *	- CdConnectedString2::m_chEqualChar
 	 *
-	 *	��ݒ肵�Ă��Ȃ��Ă͂Ȃ�܂���B
+	 *	を設定していなくてはなりません。
 	 * @param aStr [in]
-	 *	���߂��镶������w�肵�Ă��������B
+	 *	解釈する文字列を指定してください。
 	 * @param pCdConnectedString2 [out]
-	 *	���̊֐��͂��̃I�u�W�F�N�g�ɁA���߂������e��ǉ����܂��B
-	 *	���̃I�u�W�F�N�g������܂ŕێ����Ă����f�[�^�͈ێ����܂��B
+	 *	この関数はこのオブジェクトに、解釈した内容を追加します。
+	 *	このオブジェクトがそれまで保持していたデータは維持します。
 	 * @return
-	 *	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-1 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B
+	 *	成功したら 0 以上、エラーなら負の数です。
+	 *	-	-1 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。
 	 */
 	virtual int decode( const std::string& aStr , 
 		CdConnectedString2* pCdConnectedString2 ) ;

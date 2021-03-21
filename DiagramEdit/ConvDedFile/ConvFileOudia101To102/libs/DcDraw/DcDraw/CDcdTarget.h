@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -79,83 +79,83 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
 * @brief
-* �y�T�v�z
-*	DcDraw���f���ɂ�����A�`��Ώۂ�DC��ێ�����I�u�W�F�N�g�ł��B
+* 【概要】
+*	DcDrawモデルにおける、描画対象とDCを保持するオブジェクトです。
 *
-* 	���̃I�u�W�F�N�g�ɂ́ADC�𐶐�������A�`��̈���W�������Ōv�Z����
-* 	�\�͂͂���܂���B���̂��߁A���ׂĂ̑����̓N���X���[�U�[��
-* 	�ݒ肷��K�v������܂��B
+* 	このオブジェクトには、DCを生成したり、描画領域座標を自分で計算する
+* 	能力はありません。このため、すべての属性はクラスユーザーが
+* 	設定する必要があります。
 *
-* �y�g�����z
+* 【使い方】
 *
-* �P�D  �`��ΏۂƂȂ�DC�𐶐����A�I�u�W�F�N�g�̃R���X�g���N�^�ɓn����
-* 	���������B�܂��A�`��̈�̍��W���A�����ɐݒ肵�Ă��������B
+* １．  描画対象となるDCを生成し、オブジェクトのコンストラクタに渡して
+* 	ください。また、描画領域の座標を、属性に設定してください。
 *
-* �Q�D   this �� IfDcDraw �I�u�W�F�N�g�ɓn���āA�`����s�킹�Ă��������B
+* ２．   this を IfDcDraw オブジェクトに渡して、描画を行わせてください。
 * 
 */
 class CDcdTarget : public IfDcdTarget 
 {
 // ********************************
-///@name	����
+///@name	属性
 // ********************************
 ///@{
  private:
 	/**
-	* 	DC(�f�o�C�X�R���e�L�X�g)�B
-	* 	����DC�́Athis��蒷���������Ȃ��Ă͂Ȃ�܂���B
-	* 	�R���X�g���N�^�Ō��܂�܂��B
+	* 	DC(デバイスコンテキスト)。
+	* 	このDCは、thisより長く生存しなくてはなりません。
+	* 	コンストラクタで決まります。
 	*/
 	HDC			m_hDc ;
 	
 	/**
-	* 	�`��̕K�v�ȗ̈�̍��W�͈�
-	* 	�P�ʂ́A�_���P�ʂł��B
+	* 	描画の必要な領域の座標範囲
+	* 	単位は、論理単位です。
 	*/
 	CdDcdZoneXy	m_zonexyZone ;
 	
 	/**
-	* 	�`�悪�L���Ȕ͈́B
-	* 	�ʏ�́A m_Zone �Ɠ����l�ł��B
+	* 	描画が有効な範囲。
+	* 	通常は、 m_Zone と同じ値です。
 	*/
 	CdDcdZoneXy	m_zonexyInvalidateZone ;
 ///@}
 
 // ********************************
-///@name	�W��
+///@name	集約
 // ********************************
 ///@{
  private:
 	/**
-	 *	GDI�I�u�W�F�N�g�̑����ƁA�n���h���̑Ώƕ\��ێ����܂��B
+	 *	GDIオブジェクトの属性と、ハンドルの対照表を保持します。
 	 */
 	CGdiCache	m_CGdiCache ;
 ///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	* @param hDc [in]
-	* 	DC(�f�o�C�X�R���e�L�X�g)�B
-	* 	����DC�́Athis��蒷���������Ȃ��Ă͂Ȃ�܂���B
+	* 	DC(デバイスコンテキスト)。
+	* 	このDCは、thisより長く生存しなくてはなりません。
 	* @param zonexyZone [in]
-	* 	�`��̕K�v�ȗ̈�̍��W�͈�
-	* 	�P�ʂ́A�_���P�ʂł��B
+	* 	描画の必要な領域の座標範囲
+	* 	単位は、論理単位です。
 	* @param zonexyIncalidateZone [in]
-	* 	�`�悪�L���Ȕ͈́B
-	* 	�ȗ������ꍇ�́AzonexyZone �Ɠ����l�ɂȂ�܂��B
+	* 	描画が有効な範囲。
+	* 	省略した場合は、zonexyZone と同じ値になります。
 	*/
 	CDcdTarget( HDC hDc , const CdDcdZoneXy& zonexyZone , 
 						const CdDcdZoneXy& zonexyInvalidateZone ) ;
 	/**
 	* @param hDc [in]
-	* 	DC(�f�o�C�X�R���e�L�X�g)�B
-	* 	����DC�́Athis��蒷���������Ȃ��Ă͂Ȃ�܂���B
+	* 	DC(デバイスコンテキスト)。
+	* 	このDCは、thisより長く生存しなくてはなりません。
 	* @param zonexyZone [in]
-	* 	�`��̕K�v�ȗ̈�̍��W�͈�
-	* 	�P�ʂ́A�_���P�ʂł��B
+	* 	描画の必要な領域の座標範囲
+	* 	単位は、論理単位です。
 	*/
 	CDcdTarget( HDC hDc , const CdDcdZoneXy& zonexyZone ) ;
 	
@@ -168,55 +168,55 @@ class CDcdTarget : public IfDcdTarget
  public:
 	/**
 	* @return
-	* 	�`����s��DC���擾���܂��B
-	* 	����HDC�̔j���̐Ӗ��́Athis�ɂ���܂��B
+	* 	描画を行うDCを取得します。
+	* 	このHDCの破棄の責務は、thisにあります。
 	*/
 	virtual HDC	getHdc() ;
 	
 	/**
 	* @return
-	* 	�`��̕K�v�ȗ̈�̍��W�͈͂��擾���邱�Ƃ��ł��܂��B
-	* 	�P�ʂ́A�_���P�ʂł��B
+	* 	描画の必要な領域の座標範囲を取得することができます。
+	* 	単位は、論理単位です。
 	*/
 	virtual CdDcdZoneXy getZone() ;
 	
 	/**
 	* @return
-	* 	�`�悪�L���Ȕ͈͂��擾�ł��܂��B
-	* 	�ʏ�́AgetZone()�Ɠ����̈�ƂȂ�܂��B
+	* 	描画が有効な範囲を取得できます。
+	* 	通常は、getZone()と同じ領域となります。
 	* 
-	* 	�E�C���h�E��WM_PAINT�ɂ��`��̏ꍇ�A���̊֐����Ԃ��̂́A
-	* 	�ĕ`�悪�K�v�ȗ̈�ƂȂ�܂��B
-	* 	���̗̈�𖳎����Ă����܂��܂���B�������A���͈̔͊O�ւ̕`���
-	* 	�Ӗ�������܂���̂ŁA���͈̔͊O�ւ̕`���}������悤�ɂ���΁A
-	* 	�`�揈���̌����̉��P�����҂ł��܂��B
+	* 	ウインドウのWM_PAINTによる描画の場合、この関数が返すのは、
+	* 	再描画が必要な領域となります。
+	* 	この領域を無視してもかまいません。ただし、この範囲外への描画は
+	* 	意味がありませんので、この範囲外への描画を抑制するようにすれば、
+	* 	描画処理の効率の改善が期待できます。
 	*/
 	virtual CdDcdZoneXy getDrawableZone() ;
 
 	/**
-	 	CdFontProp�I�u�W�F�N�g�̑��������ƂɁA�t�H���g�𐶐����܂�
+	 	CdFontPropオブジェクトの属性をもとに、フォントを生成します
 	 @param aCdFontProp [in]
-	 	�t�H���g�������w�肵�Ă��������B
+	 	フォント属性を指定してください。
 	 @return
-		�t�H���g�̃n���h����ێ����� CGdiHFontHolder ��Ԃ��܂��B
+		フォントのハンドルを保持する CGdiHFontHolder を返します。
 	*/
 	virtual Ou<CGdiHFontHolder>	createGdiHFontHolder(  const CdFontProp& aCdFontProp ) ;
 	
 	/**
-	 	CdPenProp�I�u�W�F�N�g�̑��������ƂɁA�y���𐶐����܂�
+	 	CdPenPropオブジェクトの属性をもとに、ペンを生成します
 	 @param aCdPenProp [in]
-	 	�y���������w�肵�Ă��������B
+	 	ペン属性を指定してください。
 	 @return
-		�y���̃n���h����ێ����� CGdiHPenHolder ��Ԃ��܂��B
+		ペンのハンドルを保持する CGdiHPenHolder を返します。
 	*/
 	virtual  Ou<CGdiHPenHolder>		createGdiHPenHolder(  const CdPenProp& aCdPenProp ) ;
 
 	/**
-	 	CdBrushProp�I�u�W�F�N�g�̑��������ƂɁA�u���V�𐶐����܂�
+	 	CdBrushPropオブジェクトの属性をもとに、ブラシを生成します
 	 @param aCdBrushProp [in]
-	 	�u���V�������w�肵�Ă��������B
+	 	ブラシ属性を指定してください。
 	 @return
-		�u���V�̃n���h����ێ����� CGdiHBrushHolder ��Ԃ��܂��B
+		ブラシのハンドルを保持する CGdiHBrushHolder を返します。
 	*/
 	virtual Ou<CGdiHBrushHolder>	createGdiHBrushHolder(  const CdBrushProp& aCdBrushProp ) ;
 
@@ -227,7 +227,7 @@ class CDcdTarget : public IfDcdTarget
 // ********************************
  public:
 	// ********************************
-	///@name	����
+	///@name	属性
 	// ********************************
 	///@{
 	virtual CDcdTarget& setZone( const CdDcdZoneXy& ev ) ;

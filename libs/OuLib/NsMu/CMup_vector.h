@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -85,28 +85,28 @@ namespace NsMu{
 // ****************************************************************
 /**
  @brief
-   STL�� std::vector �R���e�i���܂���R���e�i�N���X�ł��B
-   Mup �C���^�[�t�F�[�X����������񋟂��܂��B
+   STLの std::vector コンテナを包含するコンテナクラスです。
+   Mup インターフェースを介した操作を提供します。
  
-	�R���e�i�̗v�f�̑���́A Mup �C���^�[�t�F�[�X���\�b�h��
-	�g�����Ƃɂ������ł��܂��B
-	�܂��A ��܂��Ă��� std::vector �𒼐ڑ��삷�邱�Ƃ��ł��܂��B
-	�igetAdaptee() ���\�b�h���g���܂��j�B
+	コンテナの要素の操作は、 Mup インターフェースメソッドを
+	使うことにより実現できます。
+	また、 包含している std::vector を直接操作することもできます。
+	（getAdaptee() メソッドを使います）。
  
- @see �����o�֐��̐����́A CaMup_vector ���������������B
+ @see メンバ関数の説明は、 CaMup_vector をご覧ください。
  <H4>
-	�y�R���e�i���̗v�f�̃C���X�^���X�ɂ��āz
+	【コンテナ内の要素のインスタンスについて】
  </H4>
-	 �R���e�i�̃T�C�Y��ύX���郁�\�b�h���Ăяo�����ꍇ�A
-	�R���e�i���̃C���X�^���X�̍Ċ��蓖�Ă��������܂��B
-  �Ċ��蓖�Ă���������ƁAgetp() �Ŏ擾�����|�C���^�͖����ɂȂ�܂��B
+	 コンテナのサイズを変更するメソッドを呼び出した場合、
+	コンテナ内のインスタンスの再割り当てが発生します。
+  再割り当てが発生すると、getp() で取得したポインタは無効になります。
 
 
  @param ElementType
-	�i�[����f�[�^�̌^���w�肵�Ă��������B
+	格納するデータの型を指定してください。
 @param ContType
-	�i�[����f�[�^�^ ElementType ��ێ����� std::vector ��
-	std::deque ���w�肵�Ă��������B
+	格納するデータ型 ElementType を保持する std::vector か
+	std::deque を指定してください。
 */
 template< class ElementType , class ContType = std::vector<ElementType> >
 class CMup_vector : public Mup< ElementType >
@@ -115,14 +115,14 @@ public:
 
 private:	
 	// ********************************
-	///@name �֘A
+	///@name 関連
 	// ********************************
 	///@{
 	/**
-		����Ώۂ́ASTL�����_���A�N�Z�X�R���e�i�ł��B
+		操作対象の、STLランダムアクセスコンテナです。
 	
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-		����Ώۂ́A���̊֘A���L���ȊԂ͐������Ȃ��Ă͂Ȃ�܂���B
+		このオブジェクトの破棄の責務は、クラスユーザーにあります。
+		操作対象は、この関連が有効な間は生存しなくてはなりません。
 	*/
 	ContType	m_Adaptee ;
 	
@@ -130,7 +130,7 @@ private:
 
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	
 public:
@@ -140,7 +140,7 @@ public:
 	///@{
 	/**
 	 @return
-	 	�R���e�i�Ɋi�[����Ă���v�f�̌���Ԃ��܂��B
+	 	コンテナに格納されている要素の個数を返します。
 	*/
 	virtual int	size()const
 	{
@@ -148,16 +148,16 @@ public:
 	} ;
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
-	 	�v�f��Ԃ��܂��B
+	 	コンテナ内の、インデクスで指定された場所に格納されている
+	 	要素を返します。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	 	インデクスで指定された要素を返します。
 	
-		�C���f�N�X���s���ȏꍇ�̓���͖���`�ł��B
+		インデクスが不正な場合の動作は未定義です。
 	*/
 	virtual value_type get( int iIndex )const
 	{
@@ -179,18 +179,18 @@ public:
 	// ********************************
 	///@{
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f��ǉ����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素を追加します。
 	 @param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 以下です。
+	 	０は、先頭・size()なら末尾への追加になります。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
-		-	-1 ;	//	iIndex���s��
+	 	0以上は成功、負の数はエラーです
+		-	-1 ;	//	iIndexが不正
 	*/
 	virtual int insert( const value_type& element , int iIndex = INT_MAX ) 
 	{
@@ -200,33 +200,33 @@ public:
 		}
 		if ( !( 0 <= iIndex && iIndex <= (int)m_Adaptee.size() ) )
 		{
-			return -1 ;	//	iIndex���s��
+			return -1 ;	//	iIndexが不正
 		}
 		m_Adaptee.insert( m_Adaptee.begin() + iIndex , element ) ;
 		return ( 0 ) ;
 	};
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
-	 	�v�f���폜���܂��B
+	 	コンテナ内の、インデクスで指定された場所の
+	 	要素を削除します。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 @param iSize [in]
-	 	�폜����v�f�̐����w�肵�Ă��������B
-	 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 	削除する要素の数を指定してください。
+	 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 @attention
-		iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+		iIndex と iSize の両方を INT_MAX にすることはできません。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
-		-	-1 ;	//	iIndex���s��
+	 	0以上は成功、負の数はエラーです
+		-	-1 ;	//	iIndexが不正
 	*/
 	virtual int erase( int iIndex  , int iSize = 1 ) 
 	{
 		if ( iIndex == INT_MAX && iSize == INT_MAX )
 		{
-			return -1 ;	//	iIndex���s��
+			return -1 ;	//	iIndexが不正
 		}
 		if ( iIndex == INT_MAX )
 		{
@@ -238,7 +238,7 @@ public:
 		}
 		if ( !( 0 <= iIndex && iIndex + iSize <= (int)m_Adaptee.size() ) )
 		{
-			return -1 ;	//	iIndex���s��
+			return -1 ;	//	iIndexが不正
 		}
 		// --------------------------------
 		m_Adaptee.erase( 
@@ -248,17 +248,17 @@ public:
 	}
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f���㏑�����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素を上書きします。
 	 @param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
-		-	-1 ;	//	iIndex���s��
+	 	0以上は成功、負の数はエラーです
+		-	-1 ;	//	iIndexが不正
 	*/
 	virtual int set( const value_type& element , int iIndex ) 
 	{
@@ -268,7 +268,7 @@ public:
 		}
 		if ( !( 0 <= iIndex && iIndex < (int)m_Adaptee.size() ) )
 		{
-			return -1 ;	//	iIndex���s��
+			return -1 ;	//	iIndexが不正
 		}
 		m_Adaptee[iIndex] = element ;
 		return ( 0 ) ;
@@ -280,17 +280,17 @@ public:
 	// ********************************
 	///@{
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���v�f�ւ�
-	 	�� const �ȃ|�C���^���擾���邱�Ƃ��ł��܂��B
+	 	コンテナ内の、インデクスで指定された場所に格納されている要素への
+	 	非 const なポインタを取得することができます。
 	 @param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-		INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 以下です。
+	 	０は、先頭・size()なら末尾への追加になります。
+		INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���v�f�ւ�
-	 	�� const �ȃ|�C���^��Ԃ��܂��B
-	 	iSize ���͈͊O�̏ꍇ�́A NULL ��Ԃ��܂��B
+	 	コンテナ内の、インデクスで指定された場所に格納されている要素への
+	 	非 const なポインタを返します。
+	 	iSize が範囲外の場合は、 NULL を返します。
 	*/
 	virtual value_type* getp( int iIndex ) 
 	{
@@ -308,7 +308,7 @@ public:
 
 public:
 	// ********************************
-	///@name CaMup_vector-�֘A
+	///@name CaMup_vector-関連
 	// ********************************
 	///@{
 	ContType*	getAdaptee(){	return &m_Adaptee ;};

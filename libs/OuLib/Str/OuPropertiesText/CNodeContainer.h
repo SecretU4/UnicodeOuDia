@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CNodeContainer.h 294 2016-06-11 05:10:03Z okm $
@@ -83,13 +83,13 @@ namespace OuPropertiesText{
 // ****************************************************************
 /**
 @brief
-	Node �I�u�W�F�N�g��ێ�����R���e�i�ł��B
+	Node オブジェクトを保持するコンテナです。
 
-	�R���e�i�� Ou<CNode> ���i�[���邷�ׂĂ�public���\�b�h
-	(set()�Einsert() �Ȃ�)�́A
-	�����œn���ꂽ CNode �� clone ���i�[���܂��B
-	�R���e�i���� Ou<CNode> ���擾���邷�ׂẴ��\�b�h�́A
-	�R���e�i���� CNode �ւ̎Q�Ƃ�Ԃ��܂��B
+	コンテナに Ou<CNode> を格納するすべてのpublicメソッド
+	(set()・insert() など)は、
+	引数で渡された CNode の clone を格納します。
+	コンテナ内の Ou<CNode> を取得するすべてのメソッドは、
+	コンテナ内の CNode への参照を返します。
 */
 class CNodeContainer : public Mui< Ou<CNode> >
 {
@@ -101,34 +101,34 @@ private:
 	//	CNodeContainer::CaConst
 	// ----------------------------------------------------------------
 	/**
-		CNodeContainer �ɑ΂��āA
-		IfNodeContainerConst �C���^�[�t�F�[�X�����
-		�A�N�Z�X���邽�߂̃A�_�v�^�N���X�ł��B
+		CNodeContainer に対して、
+		IfNodeContainerConst インターフェースを介して
+		アクセスするためのアダプタクラスです。
 		
-		CNodeContainer �́A���̃A�_�v�^���W�񂵂Ă���A
-		getIfNodeContainerConst() ���\�b�h�ŁA
-		���̃A�_�v�^�ւ̃|�C���^��Ԃ��܂��B
+		CNodeContainer は、このアダプタを集約しており、
+		getIfNodeContainerConst() メソッドで、
+		このアダプタへのポインタを返します。
 	*/
 	class CaConst : public IfNodeContainerConst 
 	{
 	public:
 		// ********************************
-		///@name	IfNodeContainerConst-Property�̎擾
+		///@name	IfNodeContainerConst-Propertyの取得
 		// ********************************
 		///@{
 		/**
-			Property �� Name �ɑΉ����� Value ���擾���܂��B
+			Property の Name に対応する Value を取得します。
 		@param strName [in]
-			Property �� Name ���w�肵�Ă��������B
+			Property の Name を指定してください。
 		@return
-			�Ή�����Value��Ԃ��܂��B
+			対応するValueを返します。
 
-			Name�ɑΉ����� Property ��������Ȃ��ꍇ�́A
-			�󕶎����Ԃ��܂��B
+			Nameに対応する Property が見つからない場合は、
+			空文字列を返します。
 
-			Name �ɑΉ����� 2�ȏ��CPropertyString �C���X�^���X������
-			����ꍇ�́AInNameIndex ���ł������� CPropertyString �� Value 
-			��Ԃ��܂��B
+			Name に対応する 2個以上のCPropertyString インスタンスが存在
+			する場合は、InNameIndex が最も小さい CPropertyString の Value 
+			を返します。
 		*/
 		virtual std::string getValue( const std::string& strName )const ;
 		///@}
@@ -141,19 +141,19 @@ private:
 		
 		/**
 		 * @return
-		 * 	�R���e�i�Ɋi�[����Ă���v�f�̌���Ԃ��܂��B
+		 * 	コンテナに格納されている要素の個数を返します。
 		 */
 		virtual int	size()const ;
 		/**
-		 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
-		 * 	�v�f��Ԃ��܂��B
+		 * 	コンテナ内の、インデクスで指定された場所に格納されている
+		 * 	要素を返します。
 		 *
 		 * @param iIndex [in]
-		 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-		 * 	�͈͂͂O�ȏ� size() �����ł��B
-		 *	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+		 * 	０から始まるインデクスを指定してください。
+		 * 	範囲は０以上 size() 未満です。
+		 *	但し、INT_MAX は、末尾を指定したものとみなします。
 		 * @return
-		 * 	�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+		 * 	インデクスで指定された要素を返します。
 		 */
 		virtual Ou<const CNode> get( int iIndex )const ;
 		
@@ -161,58 +161,58 @@ private:
 		
 	public:
 		// ********************************
-		///@name	CNodeContainer-InNameIndex�ł̃A�N�Z�X
+		///@name	CNodeContainer-InNameIndexでのアクセス
 		// ********************************
 		///@{
 		
 		/**
-	 		�w��� Name �����v�f�̌���Ԃ��܂��B
+	 		指定の Name を持つ要素の個数を返します。
 		 @param strName [in]
-			Name ���w�肵�Ă��������B
+			Name を指定してください。
 		 @return
-	 		�v�f�̌���Ԃ��܂��B
+	 		要素の個数を返します。
 		*/
 		virtual int	sizeInName( const std::string& strName )const ;
 		/**
-	 		�R���e�i���́A�w��� Name �����v�f��Ԃ��܂��B
+	 		コンテナ内の、指定の Name を持つ要素を返します。
 		 @param strName [in]
-			Name ���w�肵�Ă��������B
+			Name を指定してください。
 		 @param iInNameIndex [in]
-	 		InNameIndex ���w�肵�Ă��������B
-			InNameIndex �́A���̃R���e�i���̓��� Name ������ Node ���ł́A
-			�O����n�܂�C���f�N�X�ł��B
-			�͈͂͂O�ȏ� sizeInName() �����ł��B
-			�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 		InNameIndex を指定してください。
+			InNameIndex は、このコンテナ内の同じ Name を持つ Node 内での、
+			０から始まるインデクスです。
+			範囲は０以上 sizeInName() 未満です。
+			但し、INT_MAX は、末尾を指定したものとみなします。
 		 @return
-	 		�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	 		インデクスで指定された要素を返します。
 		*/
 		virtual Ou<const CNode> getInName( const std::string& strName , int iInNameIndex )const ;
 		
 		
 
 		/**
-			InNameIndex ���R���e�i�̃C���f�N�X�ɕϊ����܂��B
+			InNameIndex をコンテナのインデクスに変換します。
 		@param strName [in]
-			Name ���w�肵�Ă��������B
+			Name を指定してください。
 		@param iInNameIndex [in]
-	 		�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 		�͈͂͂O�ȏ� sizeInName() �����ł��B
-	 		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 		０から始まるインデクスを指定してください。
+	 		範囲は０以上 sizeInName() 未満です。
+	 		但し、INT_MAX は、末尾を指定したものとみなします。
 		@return
-			�C���f�N�X ��Ԃ��܂��B
-			-	-1 ;	//	�C���f�N�X���s���ł��B
+			インデクス を返します。
+			-	-1 ;	//	インデクスが不正です。
 		*/
 		virtual int indexOfInNameIndex( 
 			const std::string& strName ,
 			int iInNameIndex )const ;
 		/**
-			�R���e�i�̃C���f�N�X���AInNameIndex �ɕϊ����܂��B
+			コンテナのインデクスを、InNameIndex に変換します。
 		@param iIndex [in]
-	 		�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 		�͈͂͂O�ȏ� size() �����ł��B
-	 		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 		０から始まるインデクスを指定してください。
+	 		範囲は０以上 size() 未満です。
+	 		但し、INT_MAX は、末尾を指定したものとみなします。
 		@return
-			InNameIndex ��Ԃ��܂��B
+			InNameIndex を返します。
 		*/
 		virtual int indexToInNameIndex( 
 			int iIndex )const ;
@@ -223,132 +223,132 @@ private:
 
 private:
 	// ********************************
-	///@name	�W��
+	///@name	集約
 	// ********************************
 	///@{
 	/**
-		Ou<CNode>[ index ] �̌`���ŁA�m�[�h��ێ����܂��B
+		Ou<CNode>[ index ] の形式で、ノードを保持します。
 	*/
 	ElementTypeStlCont	m_contCNode ;
 
 	/**
-		CNodeContainer �ɑ΂��āA
-		IfNodeContainerConst �C���^�[�t�F�[�X�����
-		�A�N�Z�X���邽�߂̃A�_�v�^�N���X�ł��B
+		CNodeContainer に対して、
+		IfNodeContainerConst インターフェースを介して
+		アクセスするためのアダプタクラスです。
 		
-		CNodeContainer �́A���̃A�_�v�^���W�񂵂Ă���A
-		getIfNodeContainerConst() ���\�b�h�ŁA
-		���̃A�_�v�^�ւ̃|�C���^��Ԃ��܂��B
+		CNodeContainer は、このアダプタを集約しており、
+		getIfNodeContainerConst() メソッドで、
+		このアダプタへのポインタを返します。
 	*/
 	CaConst	m_CaConst ;
 	///@}
 
 	// --------------------------------
-	///@name	�����f�[�^
+	///@name	内部データ
 	// --------------------------------
 	///@{
 	/**
-		index[ Name ][InNameIndex ] �̌`���ŁA
-		Index �� InNameIndex �̑Ώƕ\��ێ����܂��B
+		index[ Name ][InNameIndex ] の形式で、
+		Index と InNameIndex の対照表を保持します。
 	*/
 	CInNameIndexContainer	m_CInNameIndexContainer;
 	///@}
 	
 private:
 	// --------------------------------
-	///@name	�����֐�
+	///@name	下請関数
 	// --------------------------------
 	///@{
 	/**
-		Property �� Name �ɑΉ����� CPropertyString ������΁A
-		���̗v�f�ւ̃|�C���^���擾���邱�Ƃ��ł��܂��B
-		���̃I�u�W�F�N�g�̑�����ύX���邱�Ƃɂ��A
-		�R���e�i���� Property ��ύX���邱�Ƃ��ł��܂��B
+		Property の Name に対応する CPropertyString があれば、
+		その要素へのポインタを取得することができます。
+		このオブジェクトの属性を変更することにより、
+		コンテナ内の Property を変更することができます。
 	@param strName [in]
-		Property �� Name ���w�肵�Ă��������B
+		Property の Name を指定してください。
 	@return
-		�Ή����� CPropertyString �ւ̎Q�Ƃ�Ԃ��܂��B
+		対応する CPropertyString への参照を返します。
 
-		Name�ɑΉ����� Property ��������Ȃ��ꍇ�́A
-		NULL��Ԃ��܂��B
+		Nameに対応する Property が見つからない場合は、
+		NULLを返します。
 
-		Name �ɑΉ����� 2�ȏ��CPropertyString �C���X�^���X������
-		����ꍇ�́AInNameIndex ���ł������� CPropertyString �� CPropertyString 
-		��Ԃ��܂��B
+		Name に対応する 2個以上のCPropertyString インスタンスが存在
+		する場合は、InNameIndex が最も小さい CPropertyString の CPropertyString 
+		を返します。
 	*/
 	Ou<CPropertyString> getCPropertyString( const std::string& strName )const ;
 	///@}
 	
 public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	CNodeContainer();
 	virtual ~CNodeContainer();
 	/**
-		value ���W�񂷂�S�Ă� Node ��
-		�R�s�[���쐬���A������W�񂵂܂��B
-		value �ƃI�u�W�F�N�g�����L���邱�Ƃ͂���܂���B
+		value が集約する全ての Node の
+		コピーを作成し、それを集約します。
+		value とオブジェクトを共有することはありません。
 	*/
 	CNodeContainer( const CNodeContainer& value );
 	/**
-		value ���W�񂷂�S�Ă� Node ��
-		�R�s�[���쐬���A������W�񂵂܂��B
-		value �ƃI�u�W�F�N�g�����L���邱�Ƃ͂���܂���B
+		value が集約する全ての Node の
+		コピーを作成し、それを集約します。
+		value とオブジェクトを共有することはありません。
 	*/
 	CNodeContainer& operator=( const CNodeContainer& value );
 public:
 	// ********************************
-	///@name	�W��
+	///@name	集約
 	// ********************************
 	///@{
 	/**
 	@return
-		Node �I�u�W�F�N�g��ێ�����R���e�i���Q�Ƃ���C���^�[�t�F�[�X�ł��B\n
-		���̃C���^�[�t�F�[�X����́ACNodeContainer ���̑S�Ẵm�[�h�ɑ΂���
-		Ou<const CNode> ���擾���邱�Ƃ��ł��܂����A
-		�m�[�h�̒ǉ��E�ύX�E�폜�͂ł��܂���B
+		Node オブジェクトを保持するコンテナを参照するインターフェースです。\n
+		このインターフェースからは、CNodeContainer 内の全てのノードに対する
+		Ou<const CNode> を取得することができますが、
+		ノードの追加・変更・削除はできません。
 	*/
 	virtual const IfNodeContainerConst* getIfNodeContainerConst()const ;
 	///@}
 public:
 	// ********************************
-	///@name	CNodeContainer-Property�̎擾��ݒ�
+	///@name	CNodeContainer-Propertyの取得･設定
 	// ********************************
 	///@{
 	/**
-		Property �� Name �� Value ��ݒ肵�܂��B
+		Property の Name と Value を設定します。
 	@param strName [in]
-		Property �� Name ���w�肵�Ă��������B
+		Property の Name を指定してください。
 	@param strValue [in]
-		Property �� Value ���w�肵�Ă��������B
+		Property の Value を指定してください。
 
-		Name �ɑΉ����� Property (CPropertyString) ��
-		this �̃R���e�i���ɑ��݂��Ȃ��ꍇ�́A
-		CPropertyString �I�u�W�F�N�g���R���e�i�ɐV�K�ǉ����܂��B
+		Name に対応する Property (CPropertyString) が
+		this のコンテナ内に存在しない場合は、
+		CPropertyString オブジェクトをコンテナに新規追加します。
 
-		Name �ɑΉ����� CPropertyString �����݂��Ă���ꍇ�́A����
-		CPropertyStroing �I�u�W�F�N�g�� Value ���㏑�����܂��B
-		�������O������2�ȏ��CPropertyString �C���X�^���X������
-		����ꍇ�́AInNameIndex ���ł������� CPropertyString �� Value 
-		���㏑���܂��B
+		Name に対応する CPropertyString が存在している場合は、その
+		CPropertyStroing オブジェクトの Value を上書きします。
+		同じ名前を持つ2個以上のCPropertyString インスタンスが存在
+		する場合は、InNameIndex が最も小さい CPropertyString の Value 
+		を上書きます。
 	*/
 	virtual void setValue( const std::string& strName , 
 		const std::string& strValue ) ;
 
 	/**
-		Property �� Name �ɑΉ����� Value ���擾���܂��B
+		Property の Name に対応する Value を取得します。
 	@param strName [in]
-		Property �� Name ���w�肵�Ă��������B
+		Property の Name を指定してください。
 	@return
-		�Ή�����Value��Ԃ��܂��B
+		対応するValueを返します。
 
-		Name�ɑΉ����� Property ��������Ȃ��ꍇ�́A
-		�󕶎����Ԃ��܂��B
+		Nameに対応する Property が見つからない場合は、
+		空文字列を返します。
 
-		Name �ɑΉ����� 2�ȏ��CPropertyString �C���X�^���X������
-		����ꍇ�́AInNameIndex ���ł������� CPropertyString �� Value 
-		��Ԃ��܂��B
+		Name に対応する 2個以上のCPropertyString インスタンスが存在
+		する場合は、InNameIndex が最も小さい CPropertyString の Value 
+		を返します。
 	*/
 	virtual std::string getValue( const std::string& strName )const ;
 	///@}
@@ -361,19 +361,19 @@ public:
 	
 	/**
 	 * @return
-	 * 	�R���e�i�Ɋi�[����Ă���v�f�̌���Ԃ��܂��B
+	 * 	コンテナに格納されている要素の個数を返します。
 	 */
 	virtual int	size()const ;
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
-	 * 	�v�f��Ԃ��܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に格納されている
+	 * 	要素を返します。
 	 *
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �����ł��B
-	 *	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 未満です。
+	 *	但し、INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	 * 	インデクスで指定された要素を返します。
 	 */
 	virtual ElementType get( int iIndex )const ;
 	
@@ -385,157 +385,157 @@ public:
 	///@{
 	
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 * 	�v�f���㏑�����܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に、
+	 * 	要素を上書きします。
 	 * @param element [in]
-	 * 	�v�f���w�肵�Ă��������B
+	 * 	要素を指定してください。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �����ł��B
-	 *	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 未満です。
+	 *	但し、INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 * 	0以上は成功、負の数はエラーです
 	 */
 	virtual int set( const ElementType& element , int iIndex ) ;
 
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 * 	�v�f��ǉ����܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に、
+	 * 	要素を追加します。
 	 * @param element [in]
-	 * 	�v�f���w�肵�Ă��������B
+	 * 	要素を指定してください。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 * 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-	 *	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 以下です。
+	 * 	０は、先頭・size()なら末尾への追加になります。
+	 *	但し、INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 * 	0以上は成功、負の数はエラーです
 	 */
 	virtual int insert( const ElementType& element , int iIndex = INT_MAX ) ;
 	
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
-	 * 	�v�f���폜���܂��B
+	 * 	コンテナ内の、インデクスで指定された場所の
+	 * 	要素を削除します。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �����ł��B
-	 * 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 未満です。
+	 * 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 * @param iSize [in]
-	 * 	�폜����v�f�̐����w�肵�Ă��������B
-	 * 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 * 	削除する要素の数を指定してください。
+	 * 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 * @attention
-	 *	iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+	 *	iIndex と iSize の両方を INT_MAX にすることはできません。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 * 	0以上は成功、負の数はエラーです
 	 */
 	virtual int erase( int iIndex  , int iSize = 1 ) ;
 	
 	///@}
 public:
 	// ********************************
-	///@name	CNodeContainer-InNameIndex�ł̃A�N�Z�X
+	///@name	CNodeContainer-InNameIndexでのアクセス
 	// ********************************
 	///@{
 	
 	/**
-	 	�w��� Name �����v�f�̌���Ԃ��܂��B
+	 	指定の Name を持つ要素の個数を返します。
 	 @param strName [in]
-		Name ���w�肵�Ă��������B
+		Name を指定してください。
 	 @return
-	 	�v�f�̌���Ԃ��܂��B
+	 	要素の個数を返します。
 	*/
 	virtual int	sizeInName( const std::string& strName )const ;
 	/**
-	 	�R���e�i���́A�w��� Name �����v�f��Ԃ��܂��B
+	 	コンテナ内の、指定の Name を持つ要素を返します。
 	 @param strName [in]
-		Name ���w�肵�Ă��������B
+		Name を指定してください。
 	 @param iInNameIndex [in]
-	 	InNameIndex ���w�肵�Ă��������B
-		InNameIndex �́A���̃R���e�i���̓��� Name ������ Node ���ł́A
-		�O����n�܂�C���f�N�X�ł��B
-		�͈͂͂O�ȏ� sizeInName() �����ł��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	InNameIndex を指定してください。
+		InNameIndex は、このコンテナ内の同じ Name を持つ Node 内での、
+		０から始まるインデクスです。
+		範囲は０以上 sizeInName() 未満です。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	 @return
-	 	�C���f�N�X�Ŏw�肳�ꂽ�v�f��Ԃ��܂��B
+	 	インデクスで指定された要素を返します。
 	*/
 	virtual ElementType getInName( const std::string& strName , int iInNameIndex )const ;
 	
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f���㏑�����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素を上書きします。
 	@param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	@param iInNameIndex [in]
-	 	�O����n�܂�InNameIndex���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるInNameIndexを指定してください。
+	 	範囲は０以上 size() 未満です。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	@return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	*/
 	virtual int setInName( 
 		const ElementType& element , 
 		int iInNameIndex ) ;
 
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 	�v�f��ǉ����܂��B
+	 	コンテナ内の、インデクスで指定された場所に、
+	 	要素を追加します。
 	@param element [in]
-	 	�v�f���w�肵�Ă��������B
+	 	要素を指定してください。
 	@param iInNameIndex [in]
-	 	�O����n�܂�InNameIndex���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� sizeInName() �ȉ��ł��B
-	 	�O�́A�擪�EsizeInName()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-		�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるInNameIndexを指定してください。
+	 	範囲は０以上 sizeInName() 以下です。
+	 	０は、先頭・sizeInName()なら末尾への追加になります。
+		但し、INT_MAX は、末尾を指定したものとみなします。
 	@return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	*/
 	virtual int insertInName( 
 		const ElementType& element , 
 		int iInNameIndex = INT_MAX ) ;
 	
 	/**
-	 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
-	 	�v�f���폜���܂��B
+	 	コンテナ内の、インデクスで指定された場所の
+	 	要素を削除します。
 	@param strName [in]
-		Name ���w�肵�Ă��������B
+		Name を指定してください。
 	@param iInNameIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� sizeInName() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 sizeInName() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	@param iSize [in]
-	 	�폜����v�f�̐����w�肵�Ă��������B
-	 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 	削除する要素の数を指定してください。
+	 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	@attention
-		iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+		iIndex と iSize の両方を INT_MAX にすることはできません。
 	@return
-	 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 	0以上は成功、負の数はエラーです
 	*/
 	virtual int eraseInName( const std::string& strName , 
 		int  iInNameIndex  , int iSize = 1 ) ;
 	/**
-		InNameIndex ���R���e�i�̃C���f�N�X�ɕϊ����܂��B
+		InNameIndex をコンテナのインデクスに変換します。
 	@param strName [in]
-		Name ���w�肵�Ă��������B
+		Name を指定してください。
 	@param iInNameIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� sizeInName() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 sizeInName() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	@return
-		�C���f�N�X ��Ԃ��܂��B
-		-	-1 ;	//	�C���f�N�X���s���ł��B
+		インデクス を返します。
+		-	-1 ;	//	インデクスが不正です。
 	*/
 	virtual int indexOfInNameIndex( 
 		const std::string& strName ,
 		int iInNameIndex )const ;
 	/**
-		�R���e�i�̃C���f�N�X���AInNameIndex �ɕϊ����܂��B
+		コンテナのインデクスを、InNameIndex に変換します。
 	@param iIndex [in]
-	 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 	�͈͂͂O�ȏ� size() �����ł��B
-	 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 	０から始まるインデクスを指定してください。
+	 	範囲は０以上 size() 未満です。
+	 	但し、INT_MAX は、末尾を指定したものとみなします。
 	@return
-		InNameIndex ��Ԃ��܂��B
+		InNameIndex を返します。
 	*/
 	virtual int indexToInNameIndex( 
 		int iIndex )const ;

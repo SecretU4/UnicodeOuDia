@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,34 +81,34 @@ namespace entDgr{
 // ****************************************************************
 /**
 @brief
-�y�T�v�z
-�w�_�C���O�����G���e�B�e�B�N���X�Q�x�́w�_�C���O�����w�x�N���X�ł��B
-�w�_�C���x (CentDedDgrDia) �Ɋ܂܂��w�w�x�P��\���܂��B
+【概要】
+『ダイヤグラムエンティティクラス群』の『ダイヤグラム駅』クラスです。
+『ダイヤ』 (CentDedDgrDia) に含まれる『駅』１つを表します。
 
-���̃N���X�́A�w�_�C���O�����_�C���x (CentDedDgrDia) �ɕ�܂���܂��B
+このクラスは、『ダイヤグラムダイヤ』 (CentDedDgrDia) に包含されます。
 
-CentDedDgrDia : CentDedDgrEki �̑��d�x�́A
+CentDedDgrDia : CentDedDgrEki の多重度は、
 
-�P�F�i�w�w�x�̐��j 
+１：（『駅』の数） 
 
-�ƂȂ�܂��B
+となります。
 
-����́A
+これは、
 
-�i�w�H���x(CentDedRosen)�j�F�i�w�w�x�iCentDedEki�j�j
+（『路線』(CentDedRosen)）：（『駅』（CentDedEki））
 
-�̑��d�x�Ɠ����ł��B
+の多重度と同じです。
 
-���̃N���X�̑����Ƃ��āA�w���w�܂ł̉w�ԍŏ��b���x������܂��B
-�w���w�܂ł̉w�ԍŏ��b���x����A�w�_�C���O�����G���e�B�e�BY���W�x�𓱏o���܂��B
+このクラスの属性として、『次駅までの駅間最小秒数』があります。
+『次駅までの駅間最小秒数』から、『ダイヤグラムエンティティY座標』を導出します。
 
-�y�g�����z
+【使い方】
 
-  �����ł́A���̃N���X�̃I�u�W�F�N�g�𐶐�����̂́A
-�w�_�C���O�����_�C���x (CentDedDgrDia) �N���X�ɂ̃��\�b�h�����ł��B
-�N���X���[�U�[�͂��̃N���X�̃I�u�W�F�N�g�𒼐ڐ�������p���͂Ȃ��A
-�w�_�C���O�����_�C���x (CentDedDgrDia) �N���X�ɂ���Đ������ꂽ
-�I�u�W�F�N�g�̑������Q�Ƃ��邾���ł��B
+  原則では、このクラスのオブジェクトを生成するのは、
+『ダイヤグラムダイヤ』 (CentDedDgrDia) クラスにのメソッドだけです。
+クラスユーザーはこのクラスのオブジェクトを直接生成する用事はなく、
+『ダイヤグラムダイヤ』 (CentDedDgrDia) クラスによって生成された
+オブジェクトの属性を参照するだけです。
 
 
  */
@@ -116,119 +116,119 @@ class CentDedDgrEki
 {
 public:
 	/**
-		�_�C���O������ԏ��\��
+		ダイヤグラム列車情報表示
 	*/
 	enum EDiagramRessyajouhouHyouji
 	{
 		/**
-			�n���w�̏ꍇ�ɂ͕\��(����l)
+			始発駅の場合には表示(既定値)
 		*/
 		DiagramRessyajouhouHyouji_Origin ,
 		/**
-			��ɕ\������B
+			常に表示する。
 		*/
 		DiagramRessyajouhouHyouji_Anytime ,
 		/**
-			�\�����Ȃ��B
+			表示しない。
 		*/
 		DiagramRessyajouhouHyouji_Not ,
 	};
 
 private:	
 	// ********************************
-	///@name	����
+	///@name	属性
 	// ********************************
 	///@{
 	/**
-	 	�w���B
+	 	駅名。
 	 */
 	std::string  m_strEkimei ;
 	
 	/**
-	 	��v�w�Ȃ�^�ł��B
+	 	主要駅なら真です。
 	 */
 	bool  m_bIsSyuyoueki ;
 	
 	/**
-	 	�����Ԃ̉w�ԍŏ��b���B
+	 	下り列車の駅間最小秒数。
 	 
-	 	���̑����́A���̉w�Ǝ��̉wIndex�܂ł̊Ԃ́A
-		�����Ԃ̍ŏ����v�b���ł��B
+	 	この属性は、この駅と次の駅Indexまでの間の、
+		下り列車の最小所要秒数です。
 	 
-	 	���̒l�́A�w�_�C���O����Y���W�x�ł́A�w�ԕ��Ƃ���
-	 	�g���܂��B�w�_�C���O�����x�ł̉w�ԕ��iY���W�j�́A
-	 	m_iEkikanSaisyouSecKudari,m_iEkikanSaisyouSecNobori�̂���
-	 	�������ق��̒l�ƂȂ�܂��B
+	 	この値は、『ダイヤグラムY座標』での、駅間幅として
+	 	使います。『ダイヤグラム』での駅間幅（Y座標）は、
+	 	m_iEkikanSaisyouSecKudari,m_iEkikanSaisyouSecNoboriのうち
+	 	小さいほうの値となります。
 	 
-	 	�����Ԃ��猩�Ă̏I�_�w�ł́A���̒l�� 0 �ł��B
+	 	下り列車から見ての終点駅では、この値は 0 です。
 	 
-	 	�܂��A���̉w�Ԃł̉w�ԍŏ����v�b�����v�Z�s�\�i�f�[�^�Ȃ��j�̏ꍇ�́A
-	 	 0 �ł��B
+	 	また、この駅間での駅間最小所要秒数が計算不能（データなし）の場合は、
+	 	 0 です。
 	 */
 	int m_iEkikanSaisyouSecKudari ;
 	/**
-	 	����Ԃ̉w�ԍŏ��b���B
+	 	上り列車の駅間最小秒数。
 	 
-	 	���̑����́A���̉w�Ǝ��̉wIndex�܂ł̊Ԃ́A
-		����Ԃ̍ŏ����v�b���ł��B
+	 	この属性は、この駅と次の駅Indexまでの間の、
+		上り列車の最小所要秒数です。
 	 
-	 	�����Ԃ��猩�Ă̏I�_�w�ł́A���̒l�� 0 �ł��B
+	 	下り列車から見ての終点駅では、この値は 0 です。
 	 
-	 	�܂��A���̉w�Ԃł̉w�ԍŏ����v�b�����v�Z�s�\�i�f�[�^�Ȃ��j�̏ꍇ�́A
-	 	 0 �ł��B
+	 	また、この駅間での駅間最小所要秒数が計算不能（データなし）の場合は、
+	 	 0 です。
 	 */
 	int m_iEkikanSaisyouSecNobori ;
 
 	/**
-		�_�C���O�����̊���̉w�ԕ��B
+		ダイヤグラムの既定の駅間幅。
 
-		��Ԑݒ�̂Ȃ��w�Ԃ́A�_�C���O�����r���[��ł�
-		�c�����̕����w�_�C���O�����G���e�B�e�BY���W�x�P��(�b)�Ŏw�肵�܂��B
+		列車設定のない駅間の、ダイヤグラムビュー上での
+		縦方向の幅を『ダイヤグラムエンティティY座標』単位(秒)で指定します。
 	
-		����l�� 60 �ł��B
+		既定値は 60 です。
 	*/
 	int	m_iDgrYSizeEkikanDefault ;
 
 	/**
-		�_�C���O������ԏ��\���i����j
+		ダイヤグラム列車情報表示（下り）
 	
-		����l�� DiagramRessyajouhouHyouji_Origin �ł��B
+		既定値は DiagramRessyajouhouHyouji_Origin です。
 	*/	
 	EDiagramRessyajouhouHyouji m_eDiagramRessyajouhouHyoujiKudari ;
 	
 	/**
-		�_�C���O������ԏ��\���i���j
+		ダイヤグラム列車情報表示（上り）
 	
-		����l�� DiagramRessyajouhouHyouji_Origin �ł��B
+		既定値は DiagramRessyajouhouHyouji_Origin です。
 	*/
 	EDiagramRessyajouhouHyouji m_eDiagramRessyajouhouHyoujiNobori ;
 
 	/**
-		���̉w��Y���W�̍����B
-		���ʂ́A0�ł��B
+		この駅のY座標の高さ。
+		当面は、0です。
 	*/
 	int m_iDgrYSize ;
 	///@}	
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 @param strEkimei [in]
-		�w���B
+		駅名。
 	 @param bIsSyuyoueki [in]
-		��v�w�Ȃ�^
+		主要駅なら真
 	 @param iEkikanSaisyouSecKudari [in]
-		�����Ԃ̉w�ԍŏ��b���B
+		下り列車の駅間最小秒数。
 	 @param iEkikanSaisyouSecNobori [in]
-		����Ԃ̉w�ԍŏ��b���B
+		上り列車の駅間最小秒数。
 	 @param iDiagramDgrYZahyouKyoriDefault [in]
-		�_�C���O�����̊���̉w�ԕ��B
+		ダイヤグラムの既定の駅間幅。
 	 @param eDiagramRessyajouhouHyoujiKudari [in]
-		�_�C���O������ԏ��\���i����j
+		ダイヤグラム列車情報表示（下り）
 	 @param eDiagramRessyajouhouHyoujiNobori [in]
-		�_�C���O������ԏ��\���i���j
+		ダイヤグラム列車情報表示（上り）
 	*/
 	CentDedDgrEki( const std::string&  strEkimei ,
 		bool bIsSyuyoueki , 
@@ -249,7 +249,7 @@ private:
 // ********************************
  public:
 	// ********************************
-	///@name	CentDedDgrEki-����
+	///@name	CentDedDgrEki-属性
 	// ********************************
 	///@{
 	std::string  getEkimei()const{ return m_strEkimei ;};
@@ -268,24 +268,24 @@ private:
 	int getDgrYSize()const{	return m_iDgrYSize ;};
 	///@}
 	// ********************************
-	///@name	CentDedDgrEki-����
+	///@name	CentDedDgrEki-操作
 	// ********************************
 	///@{
 	/**
 	  @return
-	 	���̉w���牺������̎��̉w�i�w�wIndex�x�����̉w�j�܂ł́A
-	 	�w�_�C���O�����G���e�B�e�BY���W�x�ł̋�����Ԃ��܂��B
+	 	この駅から下り方向の次の駅（『駅Index』が次の駅）までの、
+	 	『ダイヤグラムエンティティY座標』での距離を返します。
 	 
-	 	  ���̒l�́A�w�����Ԃ̉w�ԍŏ��b���x�Ɓw����Ԃ̉w�ԍŏ��b���x��
-	 	�����̏������ق��ł��B
+	 	  この値は、『下り列車の駅間最小秒数』と『上り列車の駅間最小秒数』の
+	 	うちの小さいほうです。
 	 
-	 	  �A���A�w�����Ԃ̉w�ԍŏ��b���x�� 0 �ȉ��E�w����Ԃ̉w�ԍŏ��b���x
-	 	�� 1 �ȏ�̏ꍇ�́A���̒l�́w����Ԃ̉w�ԍŏ��b���x�ƂȂ�܂��B
-	 	���΂ɁA�w����Ԃ̉w�ԍŏ��b���x�� 0 �ȉ��E
-	 	�w�����Ԃ̉w�ԍŏ��b���x�� 1 �ȏ�̏ꍇ�́A���̒l��
-	 	�w�����Ԃ̉w�ԍŏ��b���x�ƂȂ�܂��B
+	 	  但し、『下り列車の駅間最小秒数』が 0 以下・『上り列車の駅間最小秒数』
+	 	が 1 以上の場合は、この値は『上り列車の駅間最小秒数』となります。
+	 	反対に、『上り列車の駅間最小秒数』が 0 以下・
+	 	『下り列車の駅間最小秒数』が 1 以上の場合は、この値は
+	 	『下り列車の駅間最小秒数』となります。
 	 
-	 	  ���̒l�̍ŏ��l��60�ł��B
+	 	  この値の最小値は60です。
 	 */
 	int getDgrYZahyouKyori()const ;
 	///@}

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -77,73 +77,73 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  @brief
-	�y�T�v�z
-	  �Q�̈ꎟ�����W�n�̊ԂŁA���W��ϊ����܂��B
+	【概要】
+	  ２つの一次元座標系の間で、座標を変換します。
 	
-	  ���̃N���X�́A���W�n Zone1 ��̍��W�l���A Zone2 ��̍��W�l��
-	�ϊ����邱�Ƃ��ł��܂��B
+	  このクラスは、座標系 Zone1 上の座標値を、 Zone2 上の座標値に
+	変換することができます。
 	
-	  ���W�n Zone1 �� Zone2 �́A CdDcdZone �^�̑��� m_Zone1,m_Zone2 �Ƃ���
-	�\���܂��B
-	  m_Zone1,m_Zone2 �́A�����w��͈́x�� 
-	���W�n Zone1 �E ���W�n Zone2 �ŕ\�������W�l�ł��B
+	  座標系 Zone1 と Zone2 は、 CdDcdZone 型の属性 m_Zone1,m_Zone2 として
+	表します。
+	  m_Zone1,m_Zone2 は、同じ『基準範囲』を 
+	座標系 Zone1 ・ 座標系 Zone2 で表した座標値です。
 	
-	  �i��j
+	  （例）
 	
-	  ���W�n���A
+	  座標系が、
 	
 	-	m_Zone1 = { Pos=0 , Size=10 }
 	-	m_Zone2 = { Pos=0 , Size=20 }
 	
-	�ł���ꍇ�A����́A
-	  �u���W�n Zone1 �ł͈̔� { Pos=0 , Size=10 } �́A
-	���W�n Zone2 �ł� { Pos=0 , Size=20 } �ƂȂ�v���Ƃ��Ӗ����܂��B
+	である場合、これは、
+	  「座標系 Zone1 での範囲 { Pos=0 , Size=10 } は、
+	座標系 Zone2 では { Pos=0 , Size=20 } となる」ことを意味します。
 	
-	  ���̏�ԂŁA
+	  この状態で、
 	
-	  Zone1��̈ʒu 5 �� Zone2 �ɕϊ�����ƁA 10 �ƂȂ�܂��B
+	  Zone1上の位置 5 を Zone2 に変換すると、 10 となります。
 	
-	  �܂��AZone1 ��͈̔�(CdDcdZone){ Pos= 3 , Size=5 } ���A
-	Zone2 �ɕϊ�����ƁA{ Pos=6 , Size=10 } �ƂȂ�܂��B
+	  また、Zone1 上の範囲(CdDcdZone){ Pos= 3 , Size=5 } を、
+	Zone2 に変換すると、{ Pos=6 , Size=10 } となります。
 	
  */
 class CconvDcdPosOnZone_DcdZone : public CconvDcdPosOnZone
 {
  private:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	/**
-		���W�n Zone1 �ł́A�w��͈́x�̍��W�l�B
+		座標系 Zone1 での、『基準範囲』の座標値。
 	 */
 	CdDcdZone	m_Zone1 ;
 	
 	/**
-		���W�n Zone2 �ł́A�w��͈́x�̍��W�l�B
+		座標系 Zone2 での、『基準範囲』の座標値。
 	 */
 	CdDcdZone	m_Zone2 ;
 	
 	///@}
  public:
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	/**
 	 @param aZone1 [in]
-		���W�n Zone1 �ł́A�w��͈́x�̍��W�l�B\n
-		Size �ɂ́A 0 ���w�肵�Ȃ��ł��������i�[������Z�ɂȂ�܂��j�B
+		座標系 Zone1 での、『基準範囲』の座標値。\n
+		Size には、 0 を指定しないでください（ゼロ割り算になります）。
 	 @param aZone2 [in]
-		���W�n Zone2 �ł́A�w��͈́x�̍��W�l�B\n
-		Size �ɂ́A 0 ���w�肵�Ȃ��ł��������i�[������Z�ɂȂ�܂��j�B
+		座標系 Zone2 での、『基準範囲』の座標値。\n
+		Size には、 0 を指定しないでください（ゼロ割り算になります）。
 	 */
 	CconvDcdPosOnZone_DcdZone( 
 		const CdDcdZone& aZone1 ,
 		const CdDcdZone& aZone2 ) ;
 
 	/**
-	 ���̃R���X�g���N�^�́A m_Zone1 , m_Zone2 �Ƃ��A
-		Pos=0 , Size=1 �ɏ��������܂��B
+	 このコンストラクタは、 m_Zone1 , m_Zone2 とも、
+		Pos=0 , Size=1 に初期化します。
 	 */
 	CconvDcdPosOnZone_DcdZone() ;
 
@@ -151,7 +151,7 @@ class CconvDcdPosOnZone_DcdZone : public CconvDcdPosOnZone
 
  public:
 	// ********************************
-	///@name CconvDcdPosOnZone_DcdZone-����
+	///@name CconvDcdPosOnZone_DcdZone-属性
 	// ********************************
 	///@{
 	CdDcdZone	getZone1()const ;
@@ -161,58 +161,58 @@ class CconvDcdPosOnZone_DcdZone : public CconvDcdPosOnZone
 	///@}
 	
 	// ********************************
-	///@name CconvDcdPosOnZone-����
+	///@name CconvDcdPosOnZone-操作
 	// ********************************
 	///@{
 	/**
-		Zone1 �̍��W�n
-		�ł̈ʒu���A
-		Zone2 �̍��W�n
-		�ɕϊ����܂��B
+		Zone1 の座標系
+		での位置を、
+		Zone2 の座標系
+		に変換します。
 	 @param value [in]
-		�ϊ��O�̒l���w�肵�ĉ������B
+		変換前の値を指定して下さい。
 	 @return
-		�ϊ���̒l��Ԃ��܂��B
-		m_Zone1.getSize()=0�̏ꍇ�́Am_posZone2Org �ɂȂ�܂��B
+		変換後の値を返します。
+		m_Zone1.getSize()=0の場合は、m_posZone2Org になります。
 	 */
 	virtual DcdPos Zone1PosToZone2( DcdPos value )const ;
 	
 	/**
-		Zone2 �̍��W�n
-		�ł̈ʒu���A
-		Zone1 �̍��W�n
-		�ɕϊ����܂��B
+		Zone2 の座標系
+		での位置を、
+		Zone1 の座標系
+		に変換します。
 	 @param value [in]
-		�ϊ��O�̒l���w�肵�ĉ������B
+		変換前の値を指定して下さい。
 	 @return
-		�ϊ���̒l��Ԃ��܂��B
-		m_Zone2.getSize()=0�̏ꍇ�́Am_posZone1Org �ɂȂ�܂��B
+		変換後の値を返します。
+		m_Zone2.getSize()=0の場合は、m_posZone1Org になります。
 	 */
 	virtual DcdPos Zone1PosFromZone2( DcdPos value )const ;
 
 	/**
-		Zone1 �̍��W�n
-		�ł͈̔͂��A
-		Zone2 �̍��W�n
-		�ɕϊ����܂��B
+		Zone1 の座標系
+		での範囲を、
+		Zone2 の座標系
+		に変換します。
 	 @param value [in]
-		�ϊ��O�̒l���w�肵�ĉ������B
+		変換前の値を指定して下さい。
 	 @return
-		�ϊ���̒l��Ԃ��܂��B
-		m_Zone1.getSize()=0�̏ꍇ�́ACdDcdZone(m_posZone1Org,0) �ɂȂ�܂��B
+		変換後の値を返します。
+		m_Zone1.getSize()=0の場合は、CdDcdZone(m_posZone1Org,0) になります。
 	 */
 	virtual CdDcdZone Zone1ToZone2( const CdDcdZone& value )const ;
 	
 	/**
-		Zone2 �̍��W�n
-		�ł͈̔͂��A
-		Zone1 �̍��W�n
-		�ɕϊ����܂��B
+		Zone2 の座標系
+		での範囲を、
+		Zone1 の座標系
+		に変換します。
 	 @param value [in]
-		�ϊ��O�̒l���w�肵�ĉ������B
+		変換前の値を指定して下さい。
 	 @return
-		�ϊ���̒l��Ԃ��܂��B
-		m_Zone2.getSize()=0�̏ꍇ�́ACdDcdZone(m_posZone2Org,0) �ɂȂ�܂��B
+		変換後の値を返します。
+		m_Zone2.getSize()=0の場合は、CdDcdZone(m_posZone2Org,0) になります。
 	 */
 	virtual CdDcdZone Zone1FromZone2( const CdDcdZone& value )const ;
 	///@}

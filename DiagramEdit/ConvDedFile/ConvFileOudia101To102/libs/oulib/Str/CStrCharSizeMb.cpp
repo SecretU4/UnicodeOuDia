@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -110,7 +110,7 @@ static string logCStrCharSizeMb(
 //	CStrCharSizeMb
 // ****************************************************************
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CStrCharSizeMb::CStrCharSizeMb() 
 {
@@ -174,7 +174,7 @@ int CStrCharSizeMb::CidxOfBidx( int iBidx , int* piOffset )const
 		return ( CharLength() );
 	}
 	
-	//�V�[�P���V�����T�[�`
+	//シーケンシャルサーチ
 	//{
 	//	int	idx  ;
 	//	for ( idx = 0 ; idx < m_ariBidx.size() ; idx ++ ){
@@ -184,7 +184,7 @@ int CStrCharSizeMb::CidxOfBidx( int iBidx , int* piOffset )const
 	//	}
 	//}
 
-	//�o�C�i���T�[�`
+	//バイナリサーチ
 	int idx = -1 ; 
 	int idxBegin = 0 ; 
 	int idxEnd = m_ariBidx.size() - 1 ;
@@ -199,8 +199,8 @@ int CStrCharSizeMb::CidxOfBidx( int iBidx , int* piOffset )const
 		}
 	}
 	if ( !( idxBegin <= idxEnd ) ){
-		//	�o�C�i���T�[�`�Ō��ʂ�������Ȃ������ꍇ�A
-		//	idxEnd�́A�����Ώۂ�菬�����A�Ŋ�̒l�̃C���f�N�X���w���Ă��܂��B
+		//	バイナリサーチで結果が見つからなかった場合、
+		//	idxEndは、検索対象より小さい、最寄の値のインデクスを指しています。
 		idx = idxEnd ;	
 	}
 	if ( piOffset != NULL ){
@@ -223,17 +223,17 @@ int CStrCharSizeMb::BidxOfCidx( int iCidx )const
 int CStrCharSizeMb::CsizeOfBidx( int iBidx )const 
 {
 	if ( iBidx < 0 ){
-		//iBidx �����̐�: 0��Ԃ��܂��B
+		//iBidx が負の数: 0を返します。
 		return ( 0 ) ;	
 	}	else if ( iBidx >= ByteLength() ){
-		//iBidx ��ByteLength() �ȏ� : 0��Ԃ��܂��B
+		//iBidx がByteLength() 以上 : 0を返します。
 		return ( 0 );
 	}
 	
 	int iOffset = 0 ;
 	int iCidx = CidxOfBidx( iBidx , &iOffset ) ;
 	if ( iOffset != 0 ){
-		//iBidx �������̂Q�o�C�g��: 0��Ԃ��܂��B
+		//iBidx が文字の２バイト目: 0を返します。
 		return ( 0 ) ;
 	}
 	return ( CsizeOfCidx( iCidx ) ) ;
@@ -242,9 +242,9 @@ int CStrCharSizeMb::CsizeOfBidx( int iBidx )const
 int CStrCharSizeMb::CsizeOfCidx( int iCidx )const 
 {
 	if ( iCidx < 0 ){
-		return ( 0 ) ;	//	iCidx �����̐�/CharLength() �ȏ� : 0��Ԃ��܂��B
+		return ( 0 ) ;	//	iCidx が負の数/CharLength() 以上 : 0を返します。
 	}	else if ( iCidx >= CharLength() ){
-		return ( 0 );	//	iCidx �����̐�/CharLength() �ȏ� : 0��Ԃ��܂��B
+		return ( 0 );	//	iCidx が負の数/CharLength() 以上 : 0を返します。
 	}
 	
 	return ( m_ariBidx[ iCidx + 1 ] - m_ariBidx[ iCidx ] ) ;
@@ -254,7 +254,7 @@ int CStrCharSizeMb::BidxNextChar( int iBidx , int iCharOffset )const
 {
 	int iCidx = CidxOfBidx( iBidx ) ;
 	//if ( iCidx == -2 ){
-	//	return ( -2 ) ;	//	iBidx �������̂Q�o�C�g�ڂ��w���Ă��� : -2 ��Ԃ��܂��B
+	//	return ( -2 ) ;	//	iBidx が文字の２バイト目を指している : -2 を返します。
 	//}
 	
 	iCidx += iCharOffset ;
@@ -275,30 +275,30 @@ int CStrCharSizeMb::BidxLast()const
 
 
 static const char* const hantozen_table[] = {
-	"��" , "�K" , 
-	"��" , "�M" ,
-	"��" , "�O" ,
-	"��" , "�Q" ,
-	"��" , "�S" ,
-	"��" , "�U" ,
-	"��" , "�W" ,
-	"��" , "�Y" , 
-	"��" , "�[" ,
-	"��" , "�]" ,
-	"��" , "�_" ,
-	"��" , "�a" ,
-	"��" , "�d" ,
-	"��" , "�f" ,
-	"��" , "�h" ,
-	"��" , "�o" ,
-	"��" , "�p" ,
-	"��" , "�s" ,
-	"��" , "�u" ,
-	"��" , "�v" , 
-	"��" , "�x" ,
-	"��" , "�y" ,
-	"��" , "�{" ,
-	"��" , "�|" ,
+	"ｶﾞ" , "ガ" , 
+	"ｷﾞ" , "ギ" ,
+	"ｸﾞ" , "グ" ,
+	"ｹﾞ" , "ゲ" ,
+	"ｺﾞ" , "ゴ" ,
+	"ｻﾞ" , "ザ" ,
+	"ｼﾞ" , "ジ" ,
+	"ｽﾞ" , "ズ" , 
+	"ｾﾞ" , "ゼ" ,
+	"ｿﾞ" , "ゾ" ,
+	"ﾀﾞ" , "ダ" ,
+	"ﾁﾞ" , "ヂ" ,
+	"ﾂﾞ" , "ヅ" ,
+	"ﾃﾞ" , "デ" ,
+	"ﾄﾞ" , "ド" ,
+	"ﾊﾞ" , "バ" ,
+	"ﾊﾟ" , "パ" ,
+	"ﾋﾟ" , "ピ" ,
+	"ﾌﾞ" , "ブ" ,
+	"ﾌﾟ" , "プ" , 
+	"ﾍﾞ" , "ベ" ,
+	"ﾍﾟ" , "ペ" ,
+	"ﾎﾞ" , "ボ" ,
+	"ﾎﾟ" , "ポ" ,
 };
 
 std::string CStrCharSizeMb::strToSingleByte( const std::string& strEv , 
@@ -321,7 +321,7 @@ std::string CStrCharSizeMb::strToSingleByte( const std::string& strEv ,
 			ch <<= 8 ;
 			ch |= (unsigned char)strEv[iBidx+1] ;
 			
-			//	�ϊ��\�ɂ��ϊ�
+			//	変換表による変換
 			int idxTbl ; 
 			for ( idxTbl = 1 ; 
 				idxTbl < sizeof(hantozen_table) / sizeof(hantozen_table[0]) ;
@@ -341,7 +341,7 @@ std::string CStrCharSizeMb::strToSingleByte( const std::string& strEv ,
 			}
 			
 			// --------------------------------
-			//	�֐��ɂ��ϊ�
+			//	関数による変換
 			unsigned short ch2 = _mbctombb( ch ) ;
 			if ( ch == ch2 ){
 				strRv += (char)( ( ch2 >> 8 ) & 0xff ) ;
@@ -382,7 +382,7 @@ std::string CStrCharSizeMb::strToDoubleByte( const std::string& strEv ,
 		}	else	{
 			unsigned short ch = (unsigned char)strEv[iBidx];
 			
-			//	�ϊ��\�ɂ��ϊ�
+			//	変換表による変換
 			if ( bDakutenChange ){
 				char b0 = strEv[iBidx] ;
 				char b1 = 0 ;
@@ -398,8 +398,8 @@ std::string CStrCharSizeMb::strToDoubleByte( const std::string& strEv ,
 						strRv += hantozen_table[idxTbl+1][0] ; 
 						strRv += hantozen_table[idxTbl+1][1] ;
 						if ( b1 != '\0' ){
-							//	�ϊ�����������Q�����g�������߁A
-							//	iBidx �͂Q�����ڂɈڂ��Ă����܂��B
+							//	変換元文字列を２文字使ったため、
+							//	iBidx は２文字目に移しておきます。
 							iBidx ++ ;
 						}
 						break ;
@@ -413,7 +413,7 @@ std::string CStrCharSizeMb::strToDoubleByte( const std::string& strEv ,
 				}
 			}
 			// --------------------------------
-			//	�֐��ɂ��ϊ�
+			//	関数による変換
 			unsigned short ch2 = _mbbtombc( ch ) ;
 			if ( ch == ch2 ){
 				strRv += (char)( ( ch2 >> 0 ) & 0xff ) ;

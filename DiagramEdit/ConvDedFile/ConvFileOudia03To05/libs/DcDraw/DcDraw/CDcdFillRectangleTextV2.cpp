@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -90,7 +90,7 @@ using namespace std ;
 //	CDcdFillRectangleTextV2
 // ****************************************************************
 // --------------------------------
-//@name �����֐�
+//@name 下請関数
 // --------------------------------
 HFONT CDcdFillRectangleTextV2::CreateVFont( 
 		IfDcdTarget* pIfDcdTarget ,
@@ -145,8 +145,8 @@ CDcdText CDcdFillRectangleTextV2::createCDcdTextH(
 		"" , 
 		CdDrawTextProp( aCdFontProp , colorrefText ) , 
 		"00" ) ;
-	//	aCDcdText �́A�㉺���E�����񂹂ɂ��܂��B
-	//	����́A���p�����P������\������ۂɁA�����ɕ\�����邽�߂ł��B
+	//	aCDcdText は、上下左右中央寄せにします。
+	//	これは、半角数字１文字を表示する際に、中央に表示するためです。
 	{
 		CdDrawTextProp	aCdDrawTextProp = aCDcdText.getCdDrawTextProp() ;
 		aCdDrawTextProp.setCdDrawTextFormat( 
@@ -163,7 +163,7 @@ CDcdText CDcdFillRectangleTextV2::createCDcdTextH(
 static bool isSpace( const string& aStr )
 {
 	static char* kyoukai[] = {
-		" " , "�@" ,
+		" " , "　" ,
 	};
 	for ( int idx = 0 ; idx < sizeof(kyoukai) / sizeof(kyoukai[0]) ; idx ++ ){
 		if ( aStr == kyoukai[idx] ) {
@@ -176,10 +176,10 @@ static bool isSpace( const string& aStr )
 static bool isKyoukai( const string& aStr )
 {
 	static char* kyoukai[] = {
-		"," , "�C" ,
-		"." , "�D" ,
-		      "�B" , 
-		      "�A" , 
+		"," , "，" ,
+		"." , "．" ,
+		      "。" , 
+		      "、" , 
 	};
 	for ( int idx = 0 ; idx < sizeof(kyoukai) / sizeof(kyoukai[0]) ; idx ++ ){
 		if ( aStr == kyoukai[idx] ) {
@@ -195,7 +195,7 @@ int CDcdFillRectangleTextV2::StringToMojiretsuyouso(
 {
 	int iRv = 0 ;
 	
-	//	���̃R���e�i������܂ŕێ����Ă����v�f�͔j�����܂��B
+	//	このコンテナがそれまで保持していた要素は破棄します。
 	pCMojiretsuyousoCont->erase( 0 , INT_MAX ) ;
 
 	CStrCharSizeMb	aCStrCharSizeMb( aStr ) ;
@@ -205,24 +205,24 @@ int CDcdFillRectangleTextV2::StringToMojiretsuyouso(
 		string strChar = aStr.substr( bidx , 
 			aCStrCharSizeMb.CsizeOfBidx( bidx ) ) ;
 		CMojiretsuyouso*	pCMojiretsuyousoPrev = pCMojiretsuyousoCont->getp( INT_MAX ) ;
-		//strChar = ����̕����B
-		//aCMojiretsuyousoPrev = ���O�̕�����v�f
+		//strChar = 今回の文字。
+		//aCMojiretsuyousoPrev = 直前の文字列要素
 
 		if ( aCStrCharSizeMb.CsizeOfBidx( bidx ) == 1 ){
-			//	����̕����͋󔒈ȊO�̂P�o�C�g�����ŁA
-			//	( ���O�̕�����v�f�� V_HANKAKU �A
-			//	���A���O�̕�����v�f����؂蕶����󔒂ŏI����Ă��Ȃ�
+			//	今回の文字は空白以外の１バイト文字で、
+			//	( 直前の文字列要素が V_HANKAKU 、
+			//	かつ、直前の文字列要素が区切り文字や空白で終わっていない
 			//	) 
-			//	�ꍇ�́A���O�̕�����v�f�ɕ�����ǉ����܂��B
+			//	場合は、直前の文字列要素に文字を追加します。
 			//
-			//	����̕����͂P�o�C�g�����ł���ꍇ�́A������v�f��ǉ����܂��B
+			//	今回の文字は１バイト文字である場合は、文字列要素を追加します。
 
 			string strCharPrev ;
 			if ( pCMojiretsuyousoPrev != NULL ){
 				strCharPrev = pCMojiretsuyousoPrev->getBubunMojiretsu().substr( 
 					pCMojiretsuyousoPrev->getBubunMojiretsu().size() - 1 , 1 ) ;
 			}
-			//strCharPrev = ���O�̕�����v�f�̖����̕���
+			//strCharPrev = 直前の文字列要素の末尾の文字
 
 			if ( !isSpace( strChar ) && 
 				pCMojiretsuyousoPrev != NULL && 
@@ -239,12 +239,12 @@ int CDcdFillRectangleTextV2::StringToMojiretsuyouso(
 				pCMojiretsuyousoCont->insert( aCMojiretsuyouso ) ;
 			}
 		}	else if ( aCStrCharSizeMb.CsizeOfBidx( bidx ) == 2 ){
-			//	����̕����͂Q�o�C�g�̋�؂蕶���ŁA
-			//	( ���O�̕�����v�f�� V_ZENKAKU 
+			//	今回の文字は２バイトの区切り文字で、
+			//	( 直前の文字列要素が V_ZENKAKU 
 			//	) 
-			//	�ꍇ�́A���O�̕�����v�f�ɕ�����ǉ����܂��B
+			//	場合は、直前の文字列要素に文字を追加します。
 			//
-			//	����̕����͂Q�o�C�g�����ł���ꍇ�́A������v�f��ǉ����܂��B
+			//	今回の文字は２バイト文字である場合は、文字列要素を追加します。
 			if ( isKyoukai( strChar ) && 
 				pCMojiretsuyousoPrev != NULL && 
 				pCMojiretsuyousoPrev->getType() == CMojiretsuyouso::V_ZENKAKU ){
@@ -260,24 +260,24 @@ int CDcdFillRectangleTextV2::StringToMojiretsuyouso(
 		}
 
 	}
-	//pCMojiretsuyousoCont = ������� V_ZENKAKU �� V_HANKAKU �̂Q��
-	//	�v�f�ɕ������܂����B
-	//	V_ZENKAKU �́A�����Ƃ��đS�p�����P�ł��B
-	//	�A���A[�S�p����][�S�p��؂蕶��]
-	//	�́A[�S�p����+�S�p��؂蕶��]�̂P�̗v�f�ɂȂ��Ă��܂��B
-	//	V_HANKAKU �́A�A���������p�������P�̗v�f�Ƃ��܂��B
+	//pCMojiretsuyousoCont = 文字列を V_ZENKAKU と V_HANKAKU の２つの
+	//	要素に分割しました。
+	//	V_ZENKAKU は、原則として全角文字１つです。
+	//	但し、[全角文字][全角区切り文字]
+	//	は、[全角文字+全角区切り文字]の１つの要素になっています。
+	//	V_HANKAKU は、連続した半角文字を１つの要素とします。
 
 	// --------------------------------	
 	int idxMojiretsuyouso ;
 	for ( idxMojiretsuyouso = 0 ; 
 			idxMojiretsuyouso < pCMojiretsuyousoCont->size() ;
 			idxMojiretsuyouso ++ ){
-		//	����̕�����v�f�����p�p�����P�������Q���� 
+		//	今回の文字列要素が半角英数字１文字か２文字 
 		//	AND 
 		//	( 
-		//		( �O�̕�����v�f�����݂��Ȃ�)
+		//		( 前の文字列要素が存在しない)
 		//		OR
-		//		( �O�̕�����v�f���i�󔒈ȊO�̔��p������̗v�f�j�łȂ�)
+		//		( 前の文字列要素が（空白以外の半角文字列の要素）でない)
 		//	) 
 		CMojiretsuyouso* pCMojiretsuyousoPrev = pCMojiretsuyousoCont->getp( idxMojiretsuyouso - 1 ) ;
 		CMojiretsuyouso* pCMojiretsuyouso = pCMojiretsuyousoCont->getp( idxMojiretsuyouso ) ;
@@ -319,14 +319,14 @@ int CDcdFillRectangleTextV2::MojiretsuyousoToMojiretsuyousoPlace(
 	CdDcdZoneXy	zonexyTarget = pIfDcdTarget->getZone() ;
 	pCMojiretsuyousoPlaceCont->erase( 0 , INT_MAX ) ;
 	// --------------------------------
-	//	�t�H���g���쐬
+	//	フォントを作成
 	// --------------------------------
 	HFONT hfontVertical = CreateVFont( pIfDcdTarget , fontHorizontal ) ;
-	//hFontVertical = �c�����̃t�H���g
+	//hFontVertical = 縦書きのフォント
 	
 	CDcdText aCDcdText( createCDcdTextH( 
 				fontHorizontal , CdColorProp( 0 , 0 , 0 ) ) ) ;
-	//aCDcdText = �������e�L�X�g�p�́ADcDraw�I�u�W�F�N�g
+	//aCDcdText = 横書きテキスト用の、DcDrawオブジェクト
 	
 
 	// --------------------------------
@@ -343,10 +343,10 @@ int CDcdFillRectangleTextV2::MojiretsuyousoToMojiretsuyousoPlace(
 			HFONT hFontOld = (HFONT)SelectObject( pIfDcdTarget->getHdc() , 
 				hfontVertical ) ;
 			// --------------------------------
-			//	������ނ̘A�������w����������x��
-			//	�I�[��T���܂��B
-			//	�A���A�s�ɕ\���ł��Ȃ��ꍇ�́A
-			//	������ł��؂�܂��B
+			//	同じ種類の連続した『部分文字列』の
+			//	終端を探します。
+			//	但し、行に表示できない場合は、
+			//	結合を打ち切ります。
 			// --------------------------------
 			string strMojiretsu ;
 			int idxMojiretsuyousoEnd = idxMojiretsuyousoCont ;
@@ -361,8 +361,8 @@ int CDcdFillRectangleTextV2::MojiretsuyousoToMojiretsuyousoPlace(
 				
 				if ( aCMojiretsuyousoEnd.getType() != 
 						aCMojiretsuyouso.getType() ){
-					//	����́w����������x�́A idxMojiretsuyousoCont �̈ʒu��
-					//	�w����������x�Ƃ͎�ނ��قȂ�܂��B
+					//	今回の『部分文字列』は、 idxMojiretsuyousoCont の位置の
+					//	『部分文字列』とは種類が異なります。
 					break ;
 				}
 
@@ -379,11 +379,11 @@ int CDcdFillRectangleTextV2::MojiretsuyousoToMojiretsuyousoPlace(
 				if ( logicalunitYOffset + aSize.cx <= 
 						zonexyTarget.getY().getSize() || 
 					( logicalunitYOffset == 0 && strMojiretsu.size() == 0 ) ){
-					//	����̕����́A���̍s�iiXLineNumber �̍s�j��
-					//	�\���ł��܂��B
+					//	今回の文字は、この行（iXLineNumber の行）に
+					//	表示できます。
 					//
-					//	���@�s�̐擪�ɂ͕K���P�w����������x��
-					//	���݂�����K�v������܂��B
+					//	※　行の先頭には必ず１つ『部分文字列』を
+					//	存在させる必要があります。
 					strMojiretsu = aString ;
 					logicalunitYSize = aSize.cx ;
 					iXLineWidth = aSize.cy ;
@@ -391,16 +391,16 @@ int CDcdFillRectangleTextV2::MojiretsuyousoToMojiretsuyousoPlace(
 					break ;
 				}
 			}
-			//idxMojiretsuyousoEnd = ���������w����������x�̎��̃C���f�N�X
-			//	�w����������x�����݂̍s�iiXLineNumber�j�Ɉ���`��ł��Ȃ�
-			//	�ꍇ�́A
-			//	idxMojiretsuyousoCont == idxMojiretsuyousoEnd �ƂȂ�܂��B
+			//idxMojiretsuyousoEnd = 結合される『部分文字列』の次のインデクス
+			//	『部分文字列』を現在の行（iXLineNumber）に一つも描画できない
+			//	場合は、
+			//	idxMojiretsuyousoCont == idxMojiretsuyousoEnd となります。
 			//
-			//	�܂��A���̏󋵂ŁAlogicalunitYOffset �� 0 �̏ꍇ�́A
-			//	���݂̍s�ɉ����`��ł��Ȃ��������ƂɂȂ�܂��B
-			//strMojiretsu = �������ꂽ���ʂ̕�����
-			//logicalunitYSize = �������ꂽ���ʂ̕�����́AY�����̃T�C�Y
-			//	�i�_���P�ʁj
+			//	また、この状況で、logicalunitYOffset が 0 の場合は、
+			//	現在の行に何も描画できなかったことになります。
+			//strMojiretsu = 結合された結果の文字列
+			//logicalunitYSize = 結合された結果の文字列の、Y方向のサイズ
+			//	（論理単位）
 			if ( idxMojiretsuyousoCont == idxMojiretsuyousoEnd ){
 				logicalunitYOffset = 0 ;
 				iXLineNumber ++ ;
@@ -419,8 +419,8 @@ int CDcdFillRectangleTextV2::MojiretsuyousoToMojiretsuyousoPlace(
 		}	else if ( aCMojiretsuyouso.getType() == 
 				CMojiretsuyouso::H_HANKAKU ){
 			// --------------------------------
-			//	������ނ̘A�������w����������x��
-			//	�����͍s���܂���B
+			//	同じ種類の連続した『部分文字列』の
+			//	結合は行いません。
 			// --------------------------------
 			string strMojiretsu ;
 			int idxMojiretsuyousoEnd = idxMojiretsuyousoCont ;
@@ -439,27 +439,27 @@ int CDcdFillRectangleTextV2::MojiretsuyousoToMojiretsuyousoPlace(
 				if ( logicalunitYOffset + aCdDcdSizeXy.getY() <= 
 						zonexyTarget.getY().getSize() || 
 					( logicalunitYOffset == 0 && strMojiretsu.size() == 0 ) ){
-					//	����̕����́A���̍s�iiXLineNumber �̍s�j��
-					//	�\���ł��܂��B
+					//	今回の文字は、この行（iXLineNumber の行）に
+					//	表示できます。
 					//
-					//	���@�s�̐擪�ɂ͕K���P�w����������x��
-					//	���݂�����K�v������܂��B
+					//	※　行の先頭には必ず１つ『部分文字列』を
+					//	存在させる必要があります。
 					strMojiretsu = aString ;
 					logicalunitYSize = aCdDcdSizeXy.getY() ;
 					iXLineWidth = aCdDcdSizeXy.getX() ;
 					idxMojiretsuyousoEnd ++ ;
 				}
 			}
-			//idxMojiretsuyousoEnd = ���������w����������x�̎��̃C���f�N�X
-			//	�w����������x�����݂̍s�iiXLineNumber�j�Ɉ���`��ł��Ȃ�
-			//	�ꍇ�́A
-			//	idxMojiretsuyousoCont == idxMojiretsuyousoEnd �ƂȂ�܂��B
+			//idxMojiretsuyousoEnd = 結合される『部分文字列』の次のインデクス
+			//	『部分文字列』を現在の行（iXLineNumber）に一つも描画できない
+			//	場合は、
+			//	idxMojiretsuyousoCont == idxMojiretsuyousoEnd となります。
 			//
-			//	�܂��A���̏󋵂ŁAlogicalunitYOffset �� 0 �̏ꍇ�́A
-			//	���݂̍s�ɉ����`��ł��Ȃ��������ƂɂȂ�܂��B
-			//strMojiretsu = �������ꂽ���ʂ̕�����
-			//logicalunitYSize = �������ꂽ���ʂ̕�����́AY�����̃T�C�Y
-			//	�i�_���P�ʁj
+			//	また、この状況で、logicalunitYOffset が 0 の場合は、
+			//	現在の行に何も描画できなかったことになります。
+			//strMojiretsu = 結合された結果の文字列
+			//logicalunitYSize = 結合された結果の文字列の、Y方向のサイズ
+			//	（論理単位）
 			if ( idxMojiretsuyousoCont == idxMojiretsuyousoEnd ){
 				logicalunitYOffset = 0 ;
 				iXLineNumber ++ ;
@@ -517,25 +517,25 @@ bool CDcdFillRectangleTextV2::DcDrawMojiretsuyousoPlace(
 	CdDcdZoneXy	zonexyTarget = pIfDcdTarget->getZone() ;
 
 	// --------------------------------
-	//	�t�H���g���쐬
+	//	フォントを作成
 	// --------------------------------
 	HFONT hfontVertical = CreateVFont( pIfDcdTarget , fontHorizontal ) ;
 	CdDcdSizeXy	sizeExtent = calcZenkakuCharExtent( pIfDcdTarget , fontHorizontal) ;
-	//hFontVertical = �c�����̃t�H���g
-	//sizeExtent = �e�L�X�g�S�p�{�b�N�X�P����������̃T�C�Y�B
-	//	�������A�T�C�Y�͐����`�ɂȂ�悤�ɍœK�����܂��B
-	//	�܂�AX,Y�̂����A�傫�����̕ӂɍ��킹�܂��B
+	//hFontVertical = 縦書きのフォント
+	//sizeExtent = テキスト全角ボックス１文字あたりのサイズ。
+	//	ただし、サイズは正方形になるように最適化します。
+	//	つまり、X,Yのうち、大きい方の辺に合わせます。
 
 	CDcdText aCDcdText( createCDcdTextH( 
 				fontHorizontal , colorTextColor ) ) ;
-	//aCDcdText = �������e�L�X�g�p�́ADcDraw�I�u�W�F�N�g
+	//aCDcdText = 横書きテキスト用の、DcDrawオブジェクト
 	// --------------------------------
 	int iLines = 1 ;
 	if ( pCMojiretsuyousoPlaceCont->size() > 0 ){
 		iLines = pCMojiretsuyousoPlaceCont->get( INT_MAX ).getXLineNumber() 
 			+ 1 ;
 	}
-	//iLines = X�����̍s��
+	//iLines = X方向の行数
 
 	int iXOffset = 0 ;
 	{
@@ -543,11 +543,11 @@ bool CDcdFillRectangleTextV2::DcDrawMojiretsuyousoPlace(
 			( zonexyTarget.getX().getSize() - iLines * sizeExtent.getX() ) 
 			/ 2 ;
 	}
-	//iXOffset = m_strText �̕`��́A���[�̍��W�B
-	//	����́AzonexyTarget.X.Pos ����̃I�t�Z�b�g�ł�
+	//iXOffset = m_strText の描画の、左端の座標。
+	//	これは、zonexyTarget.X.Pos からのオフセットです
 
 	// --------------------------------
-	//	������`��
+	//	文字を描画
 	// --------------------------------
 	for ( int idxCMojiretsuyousoPlaceCont = 0 ;
 			idxCMojiretsuyousoPlaceCont < pCMojiretsuyousoPlaceCont->size() ;
@@ -568,7 +568,7 @@ bool CDcdFillRectangleTextV2::DcDrawMojiretsuyousoPlace(
 				aCMojiretsuyouso.getType() == CMojiretsuyouso::V_HANKAKU )
 		{
 			// --------------------------------
-			//	�c�����t�H���g
+			//	縦書きフォント
 			// --------------------------------
 			HFONT hfontOld = (HFONT)SelectObject( pIfDcdTarget->getHdc() , 
 				hfontVertical ) ;
@@ -580,7 +580,7 @@ bool CDcdFillRectangleTextV2::DcDrawMojiretsuyousoPlace(
 				aConv.COLORREFOf( colorTextColor ) ) ;
 			// --------------------------------
 			TextOut( pIfDcdTarget->getHdc() , 
-				//	���́{�P�́A���ۂ̉�ʂ�������Œ��������l
+				//	下の＋１は、実際の画面を見た上で調整した値
 				iXPos + sizeExtent.getX() + 1 
 					- ( sizeExtent.getX() - aCMojiretsuyousoPlace.getXLineWidth() ) / 2 ,
 				iYPos , 
@@ -597,7 +597,7 @@ bool CDcdFillRectangleTextV2::DcDrawMojiretsuyousoPlace(
 		}	else if ( aCMojiretsuyouso.getType() == 
 				CMojiretsuyouso::H_HANKAKU ){
 			// --------------------------------
-			//	�������t�H���g
+			//	横書きフォント
 			// --------------------------------
 			CdDcdZoneXy	zoneChar( 
 				CdDcdZone( iXPos, sizeExtent.getX() ) , 
@@ -616,7 +616,7 @@ bool CDcdFillRectangleTextV2::DcDrawMojiretsuyousoPlace(
 
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CDcdFillRectangleTextV2::CDcdFillRectangleTextV2( 
 		const tstring&			strText  ,
@@ -662,7 +662,7 @@ bool CDcdFillRectangleTextV2::DcDraw( IfDcdTarget* pIfDcdTarget )
 	bool	bRv = false ;
 
 	// --------------------------------
-	//	�w�i�u���V�̕`��
+	//	背景ブラシの描画
 	// --------------------------------
 	{
 		if ( m_CDcdFillrect.DcDraw( pIfDcdTarget ) ) {
@@ -670,7 +670,7 @@ bool CDcdFillRectangleTextV2::DcDraw( IfDcdTarget* pIfDcdTarget )
 		}
 	}
 	// --------------------------------
-	//	�g���̕`��
+	//	枠線の描画
 	// --------------------------------
 	{
 		if ( m_CDcdRectangle.DcDraw( pIfDcdTarget ) ) {
@@ -679,7 +679,7 @@ bool CDcdFillRectangleTextV2::DcDraw( IfDcdTarget* pIfDcdTarget )
 	}
 
 	// ********************************
-	//	�e�L�X�g�̕`��
+	//	テキストの描画
 	// ********************************
 	CdDcdZoneXy	aCdDcdZoneXy ;
 	{
@@ -693,8 +693,8 @@ bool CDcdFillRectangleTextV2::DcDraw( IfDcdTarget* pIfDcdTarget )
 			aCdDcdZoneXy.getY().getSize() - m_logicalunitFrameHeight * 2 )
 			)  ;
 	}
-	//aCdDcdZoneXy = �e�L�X�g��`�悷��̈�ł��B
-	//	IfDcdTarget�̗̈悩��A�㉺���E�̘g�̈���������̈�ł��B
+	//aCdDcdZoneXy = テキストを描画する領域です。
+	//	IfDcdTargetの領域から、上下左右の枠領域を除いた領域です。
 
 	{
 		CaDcdTargetItemPosition aCaDcdTargetItemPosition( 

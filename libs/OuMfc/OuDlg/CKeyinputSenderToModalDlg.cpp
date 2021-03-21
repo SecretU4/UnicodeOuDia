@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -76,7 +76,7 @@ namespace OuDlg{
 //	CKeyinputSenderToModalDlg
 // ****************************************************************
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 CKeyinputSenderToModalDlg::CKeyinputSenderToModalDlg() :
 		m_hwndControl( NULL ) ,
@@ -88,7 +88,7 @@ CKeyinputSenderToModalDlg::CKeyinputSenderToModalDlg() :
 //	CKeyinputSenderToModalDlg
 // ********************************
 	// ********************************
-	//@name �w�]�����E�C���h�E�x����̑���
+	//@name 『転送元ウインドウ』からの操作
 	// ********************************
 bool CKeyinputSenderToModalDlg::
 	OnKeyDown( UINT nChar, UINT nRepCnt, UINT nFlags )
@@ -136,7 +136,7 @@ int CKeyinputSenderToModalDlg::startSend()
 	int iRv = 0 ;
 	if ( iRv >=0 ){
 		if ( m_bIsSend ){
-			iRv = -1 ;	//	���łɓ]�����ł��B
+			iRv = -1 ;	//	すでに転送中です。
 		}
 	}
 	if ( iRv >=0 ){
@@ -152,15 +152,15 @@ void CKeyinputSenderToModalDlg::endSend()
 	m_contmsgToSend.clear() ;
 }
 	// ********************************
-	//@name �w�]����_�C�A���O�x����̑���
+	//@name 『転送先ダイアログ』からの操作
 	// ********************************
 int CKeyinputSenderToModalDlg::registerCtrl( HWND hwndControl ) 
 {
 	int iRv = 0 ;
 	if ( iRv >= 0 ){
 		if ( !( m_bIsSend && m_hwndControl == NULL ) ){
-			//	���M���łȂ����A���łɁw�]����R���g���[���x��
-			//	�o�^�ς݂ł�
+			//	送信中でないか、すでに『転送先コントロール』が
+			//	登録済みです
 			iRv = -1 ;
 		}
 	}
@@ -180,7 +180,7 @@ void CKeyinputSenderToModalDlg::unregisterCtrl()
 	m_hwndControl = NULL ;
 }
 	// ********************************
-	//@name ����
+	//@name 操作
 	// ********************************
 bool CKeyinputSenderToModalDlg::isSend() 
 {
@@ -196,13 +196,13 @@ HWND CKeyinputSenderToModalDlg::getControl()
 	// ********************************
 bool CKeyinputSenderToModalDlg::AnyLetterOrDigitKeyIsDown()
 {
-	//	�A�N�Z�����[�^�L�[�ɂ��
-	//	���j���[�R�}���h�N����W�Q���Ȃ��悤�ɁA
-	//	ALT�L�[��CTRL�L�[��������Ă���Ƃ��́A
-	//	�_�C�A���O�N��������Ă��܂��B
-	//	�������A���ۂɂ̓A�N�Z�����[�^�L�[�̋@�\��
-	//	�E�C���h�E�� OnKeyDown() �����D�悳��邽�߁A
-	//	���̔���͌����ɂ͕K�v����܂���B
+	//	アクセラレータキーによる
+	//	メニューコマンド起動を妨害しないように、
+	//	ALTキーやCTRLキーが押されているときは、
+	//	ダイアログ起動を避けています。
+	//	ただし、実際にはアクセラレータキーの機構は
+	//	ウインドウの OnKeyDown() よりも優先されるため、
+	//	この判定は厳密には必要ありません。
 
 	//ALT
 	{
@@ -221,7 +221,7 @@ bool CKeyinputSenderToModalDlg::AnyLetterOrDigitKeyIsDown()
 
 	// --------------------------------
 	int iCount = 0 ;
-	//	�A���t�@�x�b�g�L�[��̐���
+	//	アルファベットキー上の数字
 	int iKeycode ;
 	for ( iKeycode = '0' ; iKeycode <= '9' ; iKeycode ++ ){
 		SHORT	iResult = GetKeyState( iKeycode ) ;
@@ -229,15 +229,15 @@ bool CKeyinputSenderToModalDlg::AnyLetterOrDigitKeyIsDown()
 			iCount ++ ;
 		}
 	}
-	//	�A���t�@�x�b�g�L�[(�啶���E������������̏ꍇ���A
-	//	������̏����ɊY�����܂�)
+	//	アルファベットキー(大文字・小文字いずれの場合も、
+	//	こちらの条件に該当します)
 	for ( iKeycode = 'A' ; iKeycode <= 'Z' ; iKeycode ++ ){
 		SHORT	iResult = GetKeyState( iKeycode ) ;
 		if ( iResult < 0 ){
 			iCount ++ ;
 		}
 	}
-	//	�e���L�[�� 0x60�`0x69�܂łł�
+	//	テンキーは 0x60～0x69までです
 	for ( iKeycode = 0x60 ; iKeycode <= 0x69 ; iKeycode ++ ){
 		SHORT	iResult = GetKeyState( iKeycode ) ;
 		if ( iResult < 0 ){

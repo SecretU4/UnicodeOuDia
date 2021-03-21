@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,63 +81,63 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  * @brief
- *  �w�w�x(CentDedEki) �I�u�W�F�N�g�̃R���e�i�ł��B
+ *  『駅』(CentDedEki) オブジェクトのコンテナです。
  *
- *	���̃N���X���̂́A IfCont< CentDedEki > �C���^�[�t�F�[�X��
- *	�T�|�[�g���܂��B���̃C���^�[�t�F�[�X�ɂ��A CentDedEki �I�u�W�F�N�g��
- *	�ǉ��E�ύX�E�폜���邱�Ƃ��ł��܂��B
+ *	このクラス自体は、 IfCont< CentDedEki > インターフェースを
+ *	サポートします。このインターフェースにより、 CentDedEki オブジェクトを
+ *	追加・変更・削除することができます。
  *
- *	  �����Ȃ��� getIfContGet() ���\�b�h�ɂ��A IfContGet< const CentDedEki* >
- *	�C���^�[�t�F�[�X���擾���邱�Ƃ��ł��܂��B
- *	  ���̃C���^�[�t�F�[�X���g���ƁA�R���e�i���� CentDedEki 
- *	�I�u�W�F�N�g�ɒ��ڃA�N�Z�X���邱�Ƃ��ł��܂����A
- *	CentDedEki �I�u�W�F�N�g�̑�����ύX���邱�Ƃ͂ł��܂���B
- *	�����̕ύX�́A set() ���\�b�h���g��Ȃ��Ă͂Ȃ�܂���B
+ *	  引数なしの getIfContGet() メソッドにより、 IfContGet< const CentDedEki* >
+ *	インターフェースを取得することができます。
+ *	  このインターフェースを使うと、コンテナ内の CentDedEki 
+ *	オブジェクトに直接アクセスすることができますが、
+ *	CentDedEki オブジェクトの属性を変更することはできません。
+ *	属性の変更は、 set() メソッドを使わなくてはなりません。
  *
- *	  �܂��A��ԕ���( ERessyahoukou )�̈������Ƃ� getIfContGet() 
- *	���\�b�h�ɂ��A ��ԕ����ʂ�
+ *	  また、列車方向( ERessyahoukou )の引数をとる getIfContGet() 
+ *	メソッドにより、 列車方向別の
  *		IfContGet< CentDedEkiCont::CdDedEki >
- *	�C���^�[�t�F�[�X���擾���邱�Ƃ��ł��܂��B
- *	���̕��@�ŁA�w�wOrder�x�ɑΉ�����w�̏����擾���邱�Ƃ��ł��܂��B
+ *	インターフェースを取得することができます。
+ *	この方法で、『駅Order』に対応する駅の情報を取得することもできます。
  *	
  * @attention
- *	this �� get() ���\�b�h�́A CentDedEki �I�u�W�F�N�g�̃R�s�[��Ԃ��܂��B
- *	get() ���\�b�h�ŕԂ��ꂽ�I�u�W�F�N�g�ɑ΂��āA
- *	CentDedEki �I�u�W�F�N�g���X�V���郁�\�b�h���Ăяo���Ă��A
- *	�R���e�i���̉w�I�u�W�F�N�g���X�V���邱�Ƃ͂ł��܂���B\n
- *	�R���e�i���̉w�I�u�W�F�N�g�̃��\�b�h���Ăяo���ꍇ�́A
- *	getIfContGet() �� IfContGet<const CentDedEki*>* ���擾���Ă���A
- *	���̃C���^�[�t�F�[�X�o�R�� CentDedEki* ���擾���A���̃|�C���^��
- *	���\�b�h���Ăяo���Ă��������B
+ *	this の get() メソッドは、 CentDedEki オブジェクトのコピーを返します。
+ *	get() メソッドで返されたオブジェクトに対して、
+ *	CentDedEki オブジェクトを更新するメソッドを呼び出しても、
+ *	コンテナ内の駅オブジェクトを更新することはできません。\n
+ *	コンテナ内の駅オブジェクトのメソッドを呼び出す場合は、
+ *	getIfContGet() で IfContGet<const CentDedEki*>* を取得してから、
+ *	そのインターフェース経由で CentDedEki* を取得し、そのポインタに
+ *	メソッドを呼び出してください。
  *
  *	<H4>
- *	�y�wIndex �� �wOrder �z
+ *	【駅Index と 駅Order 】
  *	</H4>
- *	  �R���e�i���̓���́w�w�x ( CentDedEki )�I�u�W�F�N�g
- *	���w�肷����@�ɂ́A
- *	�w�wIndex�x�E�w�wOrder�x�̂Q������܂��B�ǂ�����A
- *	0 �ȏ� ( �w�̐�) ���� �̐����ŁA�w�w�x���w�肵�܂��B
+ *	  コンテナ内の特定の『駅』 ( CentDedEki )オブジェクト
+ *	を指定する方法には、
+ *	『駅Index』・『駅Order』の２つがあります。どちらも、
+ *	0 以上 ( 駅の数) 未満 の整数で、『駅』を指定します。
  *	
- *	  �w�wIndex�x�́A�H���̉����Ԃ̎n���w�i����Ԃ̏I���w�j�� 0 �E 
- *	�����Ԃ̏I���w�i����Ԃ̎n���w�j �� ( �w�̐� - 1 ) �ƂȂ�܂��B
+ *	  『駅Index』は、路線の下り列車の始発駅（上り列車の終着駅）が 0 ・ 
+ *	下り列車の終着駅（上り列車の始発駅） が ( 駅の数 - 1 ) となります。
  *	
- *	  �w�wOrder�x�́A��Ԃ̕����ʂ̃C���f�N�X�ł��B�����ԁE�����
- *	�Ƃ��Ɏn���w�� 0 �E �I���w�� ( �w�̐� - 1 ) ��
- *	�Ȃ�܂��B
+ *	  『駅Order』は、列車の方向別のインデクスです。下り列車・上り列車
+ *	ともに始発駅が 0 ・ 終着駅が ( 駅の数 - 1 ) と
+ *	なります。
  *
- *	  �]���āA�w�wIndex�x�� 0 �̉w�́A�����ԂɂƂ��Ắw�wOrder�x ��
- *	 0 �ł����A����ԂɂƂ��Ắw�wOrder�x �� �i�w�̐� - 1 �j�ƂȂ�܂��B 
+ *	  従って、『駅Index』が 0 の駅は、下り列車にとっては『駅Order』 も
+ *	 0 ですが、上り列車にとっては『駅Order』 は （駅の数 - 1 ）となります。 
  *	
- *	  ���̃N���X�ł́A�w�wIndex�x���R���e�i���̗v�f�� Index 
- *	�Ƃ��܂��B���̃R���e�i�� CentDedEki �I�u�W�F�N�g�̏��Ԃ́A
- *	  �����Ԃ̎n���w���珇�ԂɂȂ��Ă��Ȃ��Ă͂Ȃ�܂���B
- *	\n  �������A getIfContGet( ERessyahoukou eRessyahoukou ) ���\�b�h�́A
- *	�w�wOrder�x���C���f�N�X�Ƃ����C���^�[�t�F�[�X��Ԃ��܂��B
+ *	  このクラスでは、『駅Index』をコンテナ内の要素の Index 
+ *	とします。このコンテナの CentDedEki オブジェクトの順番は、
+ *	  下り列車の始発駅から順番になっていなくてはなりません。
+ *	\n  ただし、 getIfContGet( ERessyahoukou eRessyahoukou ) メソッドは、
+ *	『駅Order』をインデクスとしたインターフェースを返します。
  */
 class CentDedEkiCont : public IfCont< CentDedEki >
 {
 // ********************************
-//	�C���i�[�^�C�v
+//	インナータイプ
 // ********************************
 public:
 	// ****************************************************************
@@ -145,69 +145,69 @@ public:
 	// ****************************************************************
 	/**
 	 * @brief
-	 *	�w�̏���ێ�����A�P���f�[�^�N���X�ł��B
-	 *	CentDedEkiCont::getIfContGet() ���\�b�h�ɂ��A 
-	 *	IfContGet< CentDedEkiCont::CdDedEki > �C���^�[�t�F�[�X���擾����ƁA
-	 *	�R���e�i���̉w�̑������A���̌`���Ŏ擾���邱�Ƃ��ł��܂��B
+	 *	駅の情報を保持する、単純データクラスです。
+	 *	CentDedEkiCont::getIfContGet() メソッドにより、 
+	 *	IfContGet< CentDedEkiCont::CdDedEki > インターフェースを取得すると、
+	 *	コンテナ内の駅の属性を、この形式で取得することができます。
 	 *
-	 *	���̒P���f�[�^�N���X�Ŏ擾������́A��ԕ���{����,���}�ɍ��킹��
-	 *	�`���ɂȂ��Ă��܂��B
-	 *	�Ⴆ�΁A�w�����`����[���蒅����]�ƂȂ��Ă���w���������ꍇ�A
+	 *	この単純データクラスで取得する情報は、列車方向{下り,上り}に合わせた
+	 *	形式になっています。
+	 *	例えば、駅時刻形式が[下り着時刻]となっている駅があった場合、
 	 *
-	 *	���̉w�� CentDedEkiCont::CdDedEki �I�u�W�F�N�g����������Ŏ擾�����
+	 *	その駅の CentDedEkiCont::CdDedEki オブジェクトを下り方向で取得すると
 	 *		- m_bChakujikokuHyouji = true ;
 	 *		- m_bHatsujikokuHyouji = false ;
 	 *
-	 *	�����w�� CentDedEkiCont::CdDedEki �I�u�W�F�N�g���������Ŏ擾�����
+	 *	同じ駅の CentDedEkiCont::CdDedEki オブジェクトを上り方向で取得すると
 	 *		- m_bChakujikokuHyouji = false ;
 	 *		- m_bHatsujikokuHyouji = true ;
 	 *
-	 *	�ƂȂ�܂��B
+	 *	となります。
 	 */
 	class CdDedEki
 	{
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	 private:
 		/**
-		 *	�w��
+		 *	駅名
 		 *
-		 *	�K��l�́A�󕶎���B
+		 *	規定値は、空文字列。
 		 */
 		string	m_strEkimei ;
 		
 		/**
-		 *	�w�����`���B
-		 *	�������\������B
+		 *	駅時刻形式。
+		 *	着時刻表示あり。
 		 */
 		bool m_bChakujikokuHyouji ;
 	
 		/**
-		 *	�w�����`���B
-		 *	�������\������B
+		 *	駅時刻形式。
+		 *	発時刻表示あり。
 		 */
 		bool m_bHatsujikokuHyouji ;
 		
 		/**
-		 *	�w�w�K�́x��\���񋓂ł��B
+		 *	『駅規模』を表す列挙です。
 		 *
-		 *	�K��l�́A Ekikibo_Ippan 
+		 *	規定値は、 Ekikibo_Ippan 
 		 */
 		CentDedEki::EEkikibo	m_eEkikibo ;
 	
 		/**
-		 *	���̉w�̉��i�I���w���j�ɁA���E������B
+		 *	この駅の下（終着駅より）に、境界線あり。
 		 *
-		 * 	���̑����� true �̉w�ł́A�����\��ʂ̉w���̉�����
-		 *	�������E����`�悵�܂��B
-		 * 	���̑����́A�w�r���[�Ǝ����\�r���[�ɓK�p����܂��B
+		 * 	この属性が true の駅では、時刻表画面の駅欄の下側に
+		 *	太い境界線を描画します。
+		 * 	この属性は、駅ビューと時刻表ビューに適用されます。
 		 */
 		bool m_bKyoukaisen ;
 	///@}
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 	 public:
 		CdDedEki() : 
@@ -233,7 +233,7 @@ public:
 	// ********************************
 	 public:
 		// ********************************
-		///@name CentDedEkiCont::CdDedEki-����
+		///@name CentDedEkiCont::CdDedEki-属性
 		// ********************************
 		///@{
 		string	getEkimei()const{	return m_strEkimei ;};
@@ -254,7 +254,7 @@ public:
 
 		/**
 		 * @return 
-		 *	�����̗����̎�����\������w�ł͐^�ł��B
+		 *	着発の両方の時刻を表示する駅では真です。
 		 */
 		bool isHatsuChakuHyouji()const{
 			return m_bChakujikokuHyouji && m_bHatsujikokuHyouji;};
@@ -268,9 +268,9 @@ private:
 	// ----------------------------------------------------------------
 	/**
 	 * @brief
-	 *	����́w�wOrder�x ���C���f�N�X�Ƃ����A
+	 *	下りの『駅Order』 をインデクスとした、
 	 *		 IfContGet< CentDedEkiCont::CdDedEki > 
-	 *	���쐬���邽�߂̃A�_�v�^�ł��B
+	 *	を作成するためのアダプタです。
 	 */
 	class ContKudari : public IfContGet< CdDedEki >
 	{
@@ -279,16 +279,16 @@ private:
 	// ********************************
 		/**
 		 * @return 
-		 *	�R���e�i�Ɋi�[����Ă���f�[�^�̌���Ԃ��܂��B 
+		 *	コンテナに格納されているデータの個数を返します。 
  		 */
 		virtual int  size()const ; 
 		/**
-		 *	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă��� 
-		 *	�f�[�^��Ԃ��܂��B 
+		 *	コンテナ内の、インデクスで指定された場所に格納されている 
+		 *	データを返します。 
 		 * @param iEkiOrder [in] 
-		 *	���������́w�wOrder�x���w�肵�Ă��������B 
-		 *	�͈͂͂O�ȏ� size() �����ł��B
-		 *	 INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+		 *	下りり方向の『駅Order』を指定してください。 
+		 *	範囲は０以上 size() 未満です。
+		 *	 INT_MAX は、末尾を指定したものとみなします。
 		 */
 		virtual CdDedEki get(int iEkiOrder )const ;
 	
@@ -300,9 +300,9 @@ private:
 	// ----------------------------------------------------------------
 	/**
 	 * @brief
-	 *	���́w�wOrder�x ���C���f�N�X�Ƃ����A	
+	 *	上りの『駅Order』 をインデクスとした、	
 	 *		 IfContGet< CentDedEkiCont::CdDedEki > 
-	 *	���쐬���邽�߂̃A�_�v�^�ł��B
+	 *	を作成するためのアダプタです。
 	 */
 	class ContNobori : public IfContGet< CdDedEki >
 	{
@@ -312,16 +312,16 @@ private:
 	 public:
 		/**
 		 * @return 
-		 *	�R���e�i�Ɋi�[����Ă���f�[�^�̌���Ԃ��܂��B 
+		 *	コンテナに格納されているデータの個数を返します。 
  		 */
 		virtual int  size()const ; 
 		/**
-		 *	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă��� 
-		 *	�f�[�^��Ԃ��܂��B 
+		 *	コンテナ内の、インデクスで指定された場所に格納されている 
+		 *	データを返します。 
 		 * @param iEkiOrder [in] 
-		 *	�������́w�wOrder�x���w�肵�Ă��������B 
-		 *	�͈͂͂O�ȏ� size() �����ł��B
-		 *	 INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+		 *	上り方向の『駅Order』を指定してください。 
+		 *	範囲は０以上 size() 未満です。
+		 *	 INT_MAX は、末尾を指定したものとみなします。
 		 */
 		virtual CdDedEki get(int iEkiOrder )const ;
 	
@@ -329,25 +329,25 @@ private:
 	friend class ContNobori ;
 	
 // ********************************
-///@name ���
+///@name 包含
 // ********************************
 private:
 	
 	/**
-	 *	�w�wIndex�x ���C���f�N�X�Ƃ��āA CentDedEki ��ێ�����R���e�i�B
+	 *	『駅Index』 をインデクスとして、 CentDedEki を保持するコンテナ。
 	 */
 	CCont_deque< CentDedEki >	m_CentDedEkiCont ;
 	
 	/**
-	 *	�w�wIndex�x ���C���f�N�X�Ƃ����A IfContGet< const CentDedEki* > ��
-	 *	�쐬���邽�߂̃A�_�v�^�ł��B
+	 *	『駅Index』 をインデクスとした、 IfContGet< const CentDedEki* > を
+	 *	作成するためのアダプタです。
 	 */
 	CaValueCont< CentDedEki >*	m_pCaValueCont ;
 
 
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
 public:
 	CentDedEkiCont() ;
@@ -381,16 +381,16 @@ public:
 // ********************************
  public:
 	// ********************************
-	///@name CentDedEkiCont-����
+	///@name CentDedEkiCont-操作
 	// ********************************
 	///@{
 	/**
-	 *	�w�wIndex�x ���C���f�N�X�ɂ��āA�R���e�i���̉w�I�u�W�F�N�g��
-	 *	�A�N�Z�X���邱�Ƃ̂ł��� IfContGet<CentDedEki*> �C���^�[�t�F�[�X��
-	 *	�擾���邱�Ƃ��ł��܂��B
+	 *	『駅Index』 をインデクスにして、コンテナ内の駅オブジェクトに
+	 *	アクセスすることのできる IfContGet<CentDedEki*> インターフェースを
+	 *	取得することができます。
 	 * @return 
-	 *	�R���e�i���̗v�f�̃I�u�W�F�N�g��
-	 *	�A�N�Z�X���邽�߂� IfContGet<CentDedEki*>* ��Ԃ��܂��B
+	 *	コンテナ内の要素のオブジェクトに
+	 *	アクセスするための IfContGet<CentDedEki*>* を返します。
 	 *
 	 */
 	IfContGet<const CentDedEki*>* getIfContGet()
@@ -403,17 +403,17 @@ public:
 	};
 	
 	/**
-	 *	�w�wOrder�x ���C���f�N�X�ɂ��āA�R���e�i���̉w�I�u�W�F�N�g��
-	 *	�����擾���邽�߂̃C���^�[�t�F�[�X��Ԃ��܂��B
+	 *	『駅Order』 をインデクスにして、コンテナ内の駅オブジェクトの
+	 *	情報を取得するためのインターフェースを返します。
 	 *
-	 *	���̃C���^�[�t�F�[�X�������ƁA�w�wOrder�x���C���f�N�X�Ɏw�肵�āA
-	 *	�Ή�����w�̏��� CentDedEkiCont::CdDedEki �`����
-	 *	�擾���邱�Ƃ��ł��܂��B
+	 *	このインターフェースをつかうと、『駅Order』をインデクスに指定して、
+	 *	対応する駅の情報を CentDedEkiCont::CdDedEki 形式で
+	 *	取得することができます。
 	 * @param eRessyahoukou [in]
-	 *	��ԕ������w�肵�Ă��������B
+	 *	列車方向を指定してください。
 	 * @return 
-	 *	�R���e�i���̉w�I�u�W�F�N�g CentDedEki �I�u�W�F�N�g�̑�����Ԃ�
-	 *	�C���^�[�t�F�[�X��Ԃ��܂��B
+	 *	コンテナ内の駅オブジェクト CentDedEki オブジェクトの属性を返す
+	 *	インターフェースを返します。
 	 */
 	IfContGet<CdDedEki>* getIfContGet( ERessyahoukou eRessyahoukou )
 	{
@@ -432,54 +432,54 @@ public:
 	
 	//yotei haisi
 	/**
-	 *	�w��́w�wOrder�x�̉w�ɂ�����A�������\���E�������\����
-	 *	�L���𒲂ׂ邱�Ƃ��ł��܂��B
+	 *	指定の『駅Order』の駅における、着時刻表示・発時刻表示の
+	 *	有無を調べることができます。
 	 * @param eRessyahoukou [in]
-	 *	��ԕ������w�肵�Ă��������B
+	 *	列車方向を指定してください。
 	 *	- Ressyahoukou_Kudari
 	 *	- Ressyahoukou_Nobori
-	 *	�̂����ꂩ�ł��B
+	 *	のいずれかです。
 	 * @param iEkiOrder [in]
-	 *	�w�wOrder�x���w�肵�Ă��������B
-	 *	INT_MAX �́A�����̉w���w�肵�����̂Ƃ݂Ȃ��܂��B
+	 *	『駅Order』を指定してください。
+	 *	INT_MAX は、末尾の駅を指定したものとみなします。
 	 * @param piChaku [out]
-	 *	���̊֐��́A�w��̉w����������\�����ׂ��ł���� 1 �A
-	 *	�����łȂ��Ȃ�0���������݂܂��B
+	 *	この関数は、指定の駅が着時刻を表示すべきであれば 1 、
+	 *	そうでないなら0を書き込みます。
 	 * @param piHatsu [out]
-	 *	���̊֐��́A�w��̉w����������\�����ׂ��ł���� 1 �A
-	 *	�����łȂ��Ȃ�0���������݂܂��B
+	 *	この関数は、指定の駅が発時刻を表示すべきであれば 1 、
+	 *	そうでないなら0を書き込みます。
 	 */
 	void getEkijikokukeisiki( ERessyahoukou eRessyahoukou , int iEkiOrder ,
 		int* piChaku , int* piHatsu )const ;
 	
 	
 	/**
-	 *	�w�wOrder(�w������Index)�x���A�w�wIndex�x�ɕϊ����܂��B
+	 *	『駅Order(駅方向別Index)』を、『駅Index』に変換します。
 	 * @param eRessyahoukou [in]
-	 *	��ԕ������w�肵�Ă��������B
+	 *	列車方向を指定してください。
 	 *	- Ressyahoukou_Kudari
 	 *	- Ressyahoukou_Nobori
-	 *	�̂����ꂩ�ł��B
+	 *	のいずれかです。
 	 * @param iEkiOrder [in]
-	 *	�w�wOrder�x���w�肵�Ă��������B
+	 *	『駅Order』を指定してください。
 	 * @return 
-	 *	0�ȏ�́w�wIndex�x��Ԃ��܂��B
-	 *	�������s���ȏꍇ�́A -1 ��Ԃ��܂��B
+	 *	0以上の『駅Index』を返します。
+	 *	引数が不正な場合は、 -1 を返します。
 	 */
 	int EkiIndexOfEkiOrder( ERessyahoukou eRessyahoukou , int iEkiOrder )const ;
 	
 	/**
-	 *	�w�wIndex�x���w�wOrder(�w������Index)�x�ɕϊ����܂��B
+	 *	『駅Index』を『駅Order(駅方向別Index)』に変換します。
 	 * @param eRessyahoukou [in]
-	 *	��ԕ������w�肵�Ă��������B
+	 *	列車方向を指定してください。
 	 *	- Ressyahoukou_Kudari
 	 *	- Ressyahoukou_Nobori
-	 *	�̂����ꂩ�ł��B
+	 *	のいずれかです。
 	 * @param iEkiIndex [in]
-	 *	�w�wIndex�x���w�肵�Ă��������B
+	 *	『駅Index』を指定してください。
 	 * @return 
-	 *	0�ȏ�́w�wOrder�x��Ԃ��܂��B
-	 *	�������s���ȏꍇ�́A -1 ��Ԃ��܂��B
+	 *	0以上の『駅Order』を返します。
+	 *	引数が不正な場合は、 -1 を返します。
 	 */
 	int EkiOrderOfEkiIndex(  ERessyahoukou eRessyahoukou , int iEkiIndex )const ;
 };

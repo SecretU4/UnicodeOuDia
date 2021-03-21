@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CentDedEkiTrackCont.cpp 378 2016-11-16 21:10:54Z okm $
@@ -75,7 +75,7 @@ Copyright (C) 2006-2017 take-okm
 namespace entDed{
 
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CentDedEkiTrackCont::CentDedEkiTrackCont() 
 {
@@ -89,8 +89,8 @@ CentDedEkiTrackCont& CentDedEkiTrackCont::operator=( const CentDedEkiTrackCont& 
 	const Mu<const CentDedEkiTrack*>* muSrc = value.getMuPtr() ;
 	
 	int idxSrc ;
-	//	�]�������A���{���̑O�B
-	//	�]���悪 Named �Ȃ�㏑���B�]���悪 ���{���Ȃ烋�[�v�I�� 
+	//	転送元が、上り本線の前。
+	//	転送先が Named なら上書き。転送先が 上り本線ならループ終了 
 	for ( idxSrc = 0  
 		; muSrc->get( idxSrc )->getTrackType() 
 			==  CentDedEkiTrack::ETrackType_Named 
@@ -106,15 +106,15 @@ CentDedEkiTrackCont& CentDedEkiTrackCont::operator=( const CentDedEkiTrackCont& 
 		}
 	}
 	
-	//	�]�������A���{��
-	//	�]���悪 Named �Ȃ�폜�B�]���悪 ���{���Ȃ� 
+	//	転送元が、上り本線
+	//	転送先が Named なら削除。転送先が 上り本線なら 
 	while( this->get( idxSrc ).getTrackType() != CentDedEkiTrack::ETrackType_NoboriMain )
 	{
 		this->erase( idxSrc ) ;
 	}
 	
-	//	�]�������A���{���Ɖ���{���̊ԁB
-	//	�]���悪 Named �Ȃ�㏑���B�]���悪 ����{���Ȃ烋�[�v�I�� 
+	//	転送元が、上り本線と下り本線の間。
+	//	転送先が Named なら上書き。転送先が 下り本線ならループ終了 
 	for ( idxSrc ++  
 		; muSrc->get( idxSrc )->getTrackType() 
 			==  CentDedEkiTrack::ETrackType_Named 
@@ -130,15 +130,15 @@ CentDedEkiTrackCont& CentDedEkiTrackCont::operator=( const CentDedEkiTrackCont& 
 		}
 	}
 	
-	//	�]�������A���{��
-	//	�]���悪 Named �Ȃ�폜�B�]���悪 ���{���Ȃ� 
+	//	転送元が、上り本線
+	//	転送先が Named なら削除。転送先が 上り本線なら 
 	while( this->get( idxSrc ).getTrackType() != CentDedEkiTrack::ETrackType_KudariMain )
 	{
 		this->erase( idxSrc ) ;
 	}
 	
-	//	�]�������A����{���̌��
-	//	�]���悪 Named �Ȃ�㏑���B�]���悪 ����{���Ȃ烋�[�v�I�� 
+	//	転送元が、下り本線の後ろ
+	//	転送先が Named なら上書き。転送先が 下り本線ならループ終了 
 	for ( idxSrc ++  
 		; idxSrc < muSrc->size()
 		; idxSrc ++ )
@@ -153,7 +153,7 @@ CentDedEkiTrackCont& CentDedEkiTrackCont::operator=( const CentDedEkiTrackCont& 
 		}
 	}
 	
-	//	�]����̗]����폜
+	//	転送先の余りを削除
 	this->erase( idxSrc , INT_MAX ) ; 
 	
 	
@@ -173,16 +173,16 @@ int CentDedEkiTrackCont::insert( const CentDedEkiTrack& element ,  int iIndex)
 	
 	if ( element.getTrackType() != CentDedEkiTrack::ETrackType_Named )
 	{
-		iRv = -11 ;	//	�{����ǉ����邱�Ƃ͏o���܂���B
+		iRv = -11 ;	//	本線を追加することは出来ません。
 	}
 	if ( iRv >= 0 )
 	{
 		iRv = super::insert( element ,  iIndex ) ;
 	}
-	//	  ���̃R���e�i�� CentDedEki �̎q�I�u�W�F�N�g�ŁA
-	//	���� CentDedEki �� CentDedRosen �ɕ�܂���Ă���ꍇ�A insert() 
-	//	���\�b�h�́ACentDedRosen::onEkiTrackInsert( iEkiIndex , iEkiTrackIndex ) 
-	//	�ɏ������Ϗ����܂��B
+	//	  このコンテナが CentDedEki の子オブジェクトで、
+	//	その CentDedEki が CentDedRosen に包含されている場合、 insert() 
+	//	メソッドは、CentDedRosen::onEkiTrackInsert( iEkiIndex , iEkiTrackIndex ) 
+	//	に処理を委譲します。
 	if ( iRv >= 0 )
 	{
 		CentDedRosen* pRosen = getRosen() ;
@@ -209,7 +209,7 @@ int CentDedEkiTrackCont::erase( int iIndex  , int iSize )
 	}
 	if ( !( 0 <= iIndex && iIndex + iSize <= (int)size() ) )
 	{
-		iRv = -1 ;	//	�C���f�N�X���͈͊O�ł��B
+		iRv = -1 ;	//	インデクスが範囲外です。
 	}
 	// --------------------------------	
 	if ( iRv >= 0 )
@@ -218,7 +218,7 @@ int CentDedEkiTrackCont::erase( int iIndex  , int iSize )
 		{
 			if ( getMuPtr()->get( iIndex + i )->getTrackType() != CentDedEkiTrack::ETrackType_Named )
 			{
-				iRv = -11 ;	//	�{�����폜���邱�Ƃ͏o���܂���B
+				iRv = -11 ;	//	本線を削除することは出来ません。
 			}
 		}
 	}
@@ -228,10 +228,10 @@ int CentDedEkiTrackCont::erase( int iIndex  , int iSize )
 		iRv = super::erase( iIndex , iSize ) ; 
 	}
 	// --------------------------------	
-	//	  ���̃R���e�i�� CentDedEki �̎q�I�u�W�F�N�g�ŁA
-	//	���� CentDedEki �� CentDedRosen �ɕ�܂���Ă���ꍇ�A erase() 
-	//	���\�b�h�́ACentDedRosen::onEkiTrackInsert( iEkiIndex , iEkiTrackIndex )
-	//	�ɏ������Ϗ����܂��B
+	//	  このコンテナが CentDedEki の子オブジェクトで、
+	//	その CentDedEki が CentDedRosen に包含されている場合、 erase() 
+	//	メソッドは、CentDedRosen::onEkiTrackInsert( iEkiIndex , iEkiTrackIndex )
+	//	に処理を委譲します。
 	if ( iRv >= 0 )
 	{
 		CentDedRosen* pRosen = getRosen() ;
@@ -267,7 +267,7 @@ int CentDedEkiTrackCont::set( const CentDedEkiTrack& element , int iIndex )
 	return iRv ; 
 }
 	// ********************************
-	//@name CentDedEkiTrackCont-�֘A
+	//@name CentDedEkiTrackCont-関連
 	// ********************************
 
 CentDedRosen* CentDedEkiTrackCont::getRosen() 
@@ -287,7 +287,7 @@ const CentDedRosen* CentDedEkiTrackCont::getRosen()const
 
 
 	// ********************************
-	///@name CentDedEkiTrackCont-����
+	///@name CentDedEkiTrackCont-操作
 	// ********************************
 int  CentDedEkiTrackCont::setable(  const CentDedEkiTrack& element , int iIndex ) const
 {
@@ -300,7 +300,7 @@ int  CentDedEkiTrackCont::setable(  const CentDedEkiTrack& element , int iIndex 
 	{
 		if ( getMuPtr()->get( iIndex )->getTrackType() != element.getTrackType() )
 		{
-			iRv = -11 ;	//	�Ԑ���ʂ̈قȂ�I�u�W�F�N�g���㏑�����邱�Ƃ͂ł��܂���B
+			iRv = -11 ;	//	番線種別の異なるオブジェクトを上書きすることはできません。
 		}
 	}
 

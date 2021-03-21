@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -81,178 +81,178 @@ class CentDedEkiCont ;
 // ****************************************************************
 /**
  * @brief
- *	CentDedDia �I�u�W�F�N�g�̃R���e�i�N���X�ł��B
+ *	CentDedDia オブジェクトのコンテナクラスです。
  *	
- *	���̃N���X���̂́A IfCont< CentDedDia > �C���^�[�t�F�[�X��
- *	�T�|�[�g���܂��B���̃C���^�[�t�F�[�X�ɂ��A CentDedDia �I�u�W�F�N�g��
- *	�ǉ��E�폜���邱�Ƃ��ł��܂��B
+ *	このクラス自体は、 IfCont< CentDedDia > インターフェースを
+ *	サポートします。このインターフェースにより、 CentDedDia オブジェクトを
+ *	追加・削除することができます。
  *
- *	�܂��A getIfContGet() ���\�b�h�ɂ��A
- *	IfCont< CentDedDia* > �C���^�[�t�F�[�X���擾���邱�Ƃ��ł��܂��B
- *	���̃C���^�[�t�F�[�X�ɂ��A�R���e�i���� CentDedDia �I�u�W�F�N�g��
- *	���ڃA�N�Z�X�i���\�b�h�ďo�j���s�����Ƃ��ł��܂��B
+ *	また、 getIfContGet() メソッドにより、
+ *	IfCont< CentDedDia* > インターフェースを取得することができます。
+ *	このインターフェースにより、コンテナ内の CentDedDia オブジェクトに
+ *	直接アクセス（メソッド呼出）を行うことができます。
  *
  * @attention
- *	this �� get() ���\�b�h�́A�_�C���I�u�W�F�N�g�̃R�s�[��Ԃ��܂��B
- *	get() ���\�b�h�ŕԂ��ꂽ�I�u�W�F�N�g�ɑ΂��āA
- *	CentDedDia �I�u�W�F�N�g���X�V���郁�\�b�h���Ăяo���Ă��A
- *	�R���e�i���̃_�C���I�u�W�F�N�g���X�V���邱�Ƃ͂ł��܂���B\n
- *	�R���e�i���̃_�C���I�u�W�F�N�g�̃��\�b�h���Ăяo���ꍇ�́A
- *	getIfContGet() �� IfContGet<CentDedDia*>* ���擾���Ă���A
- *	���̃C���^�[�t�F�[�X�o�R�� CentDedDia* ���擾���A���̃|�C���^��
- *	���\�b�h���Ăяo���Ă��������B
+ *	this の get() メソッドは、ダイヤオブジェクトのコピーを返します。
+ *	get() メソッドで返されたオブジェクトに対して、
+ *	CentDedDia オブジェクトを更新するメソッドを呼び出しても、
+ *	コンテナ内のダイヤオブジェクトを更新することはできません。\n
+ *	コンテナ内のダイヤオブジェクトのメソッドを呼び出す場合は、
+ *	getIfContGet() で IfContGet<CentDedDia*>* を取得してから、
+ *	そのインターフェース経由で CentDedDia* を取得し、そのポインタに
+ *	メソッドを呼び出してください。
  *	
- *	���̃R���e�i�� set() �E insert() �́A�w�肳�ꂽ CentDedDia �I�u�W�F�N�g
- *	���R�s�[�R���X�g���N�^�ŃR�s�[������ŁA�R���e�i�ɕێ����܂��B
- *	set()�E insert() �Ŏw�肵���I�u�W�F�N�g�́A�֐��I����͔j�����Ă�
- *	���܂��܂���B
+ *	このコンテナの set() ・ insert() は、指定された CentDedDia オブジェクト
+ *	をコピーコンストラクタでコピーした上で、コンテナに保持します。
+ *	set()・ insert() で指定したオブジェクトは、関数終了後は破棄しても
+ *	かまいません。
  *
- *	���̃I�u�W�F�N�g���ێ����� CentDedDia �́A�w�w�̐��x�����ׂ�
- *	�����łȂ��Ă͂Ȃ�܂���B
+ *	このオブジェクトが保持する CentDedDia は、『駅の数』がすべて
+ *	同じでなくてはなりません。
  *	
  * @attention
- *	 CentDedDia::m_strName �����́A����q�ƂȂ�܂��B
- *	�R���e�i���ɓ��� CentDedDia::m_strName �����I�u�W�F�N�g��
- *	�����i�[���邱�Ƃ͂ł��܂���B
+ *	 CentDedDia::m_strName 属性は、限定子となります。
+ *	コンテナ内に同じ CentDedDia::m_strName を持つオブジェクトを
+ *	複数格納することはできません。
  */
 class CentDedDiaCont : public CaContFilter< CentDedDia , CentDedDia* >
 {
 // ********************************
-//	�C���i�[�^�C�v
+//	インナータイプ
 // ********************************
 public:
 	typedef CaContFilter< CentDedDia , CentDedDia* >	super ;
 // ********************************
-///@name ����
+///@name 属性
 // ********************************
 ///@{
 private:
 	/**
-	 *	���̃R���e�i�Ɋ܂܂���Ԃ́w�w�����x�̐��i�_�C���Ɋ܂܂��w�̐��j�B
+	 *	このコンテナに含まれる列車の『駅時刻』の数（ダイヤに含まれる駅の数）。
 	 *
-	 *	���̒l�́A��Ԃ������Ă��� CentDedRosen �I�u�W�F�N�g��
-	 *	 CentDedEki �̐��ɓ������Ȃ�܂��B
+	 *	この値は、列車が属している CentDedRosen オブジェクトの
+	 *	 CentDedEki の数に等しくなります。
 	 *
-	 *	���̒l�́A�R���e�i�ɗv�f (  CentDedDia ) �I�u�W�F�N�g��ǉ�
-	 *	����ꍇ�ɕK�v�ɂȂ�܂��B
+	 *	この値は、コンテナに要素 (  CentDedDia ) オブジェクトを追加
+	 *	する場合に必要になります。
 	 */
 	int m_iEkiCount ;
 	
 	/**
-	 *	���̃R���e�i�Ɋ܂܂���Ԃ́w��Ԏ�ʁx�̐��B
+	 *	このコンテナに含まれる列車の『列車種別』の数。
 	 *
-	 *	���̒l�́A��Ԃ������Ă��� CentDedRosen �I�u�W�F�N�g��
-	 *	 CentDedRessyasyubetsu �̐��ɓ������Ȃ�܂��B
+	 *	この値は、列車が属している CentDedRosen オブジェクトの
+	 *	 CentDedRessyasyubetsu の数に等しくなります。
 	 *
-	 *	���̒l�́A�R���e�i�ɗv�f ( CentDedDia ) �I�u�W�F�N�g��ǉ�
-	 *	����ꍇ�ɕK�v�ɂȂ�܂��B
+	 *	この値は、コンテナに要素 ( CentDedDia ) オブジェクトを追加
+	 *	する場合に必要になります。
 	 */
 	int m_iRessyasyubetsuCount ;
 	
 ///@}
 
 // --------------------------------
-///@name CaContFilter-�I�[�o���C�h�\�ȉ��z�֐�
+///@name CaContFilter-オーバライド可能な仮想関数
 // --------------------------------
 ///@{
  protected:
 	/**
-	 *	  this �́A����Ώۂ̃R���e�i m_pAdaptee �ɑ΂��ėv�f��ǉ�
-	 *	����Ƃ��ɁA���̊֐����Ăяo���āA  ElementType1 �̒l value ���A
-	 *	 ElementType2 �ɕϊ����܂��B
+	 *	  this は、操作対象のコンテナ m_pAdaptee に対して要素を追加
+	 *	するときに、この関数を呼び出して、  ElementType1 の値 value を、
+	 *	 ElementType2 に変換します。
 	 *
-	 *	onSet() �Ăяo���ƁA onErase() �Ăяo���͑΂ɂȂ��Ă��܂��B
-	 *	 onSet() �ł���l��Ԃ����ꍇ�A���̗v�f�� m_pAdaptee ����
-	 *	��菜�����Ƃ��ɁA�K�� onSet() �ŕԂ����l�������Ƃ���
-	 *	 onErase() ���Ăяo����܂��B
+	 *	onSet() 呼び出しと、 onErase() 呼び出しは対になっています。
+	 *	 onSet() である値を返した場合、その要素が m_pAdaptee から
+	 *	取り除かれるときに、必ず onSet() で返した値を引数として
+	 *	 onErase() が呼び出されます。
 	 *	
 	 *	@param value [in] (const ElementType1&)
-	 *	  �ϊ�����ׂ��l���w�肵�Ă��������B
+	 *	  変換するべき値を指定してください。
 	 *	
 	 *	@param piResult [out]
-	 *	  ���̊֐��́A�l value �̕ϊ��ɐ��������Ƃ��͂��̒l�� 0 �ȏ�A
-	 *	���s�����Ƃ��͕��̐��ɂ��܂��B
-	 *	\n�֐��I����ɂ��̒l�����̐��ł���ꍇ�A this �͗v�f��
-	 *	�R���e�i�Ɋi�[���܂���B���̏ꍇ�Aset() �E insert() ��
-	 *	���s�ƂȂ�A *piResult �� set() �E insert() �̖߂�l�ƂȂ�܂��B
+	 *	  この関数は、値 value の変換に成功したときはこの値を 0 以上、
+	 *	失敗したときは負の数にします。
+	 *	\n関数終了後にこの値が負の数である場合、 this は要素を
+	 *	コンテナに格納しません。この場合、set() ・ insert() は
+	 *	失敗となり、 *piResult が set() ・ insert() の戻り値となります。
 	 *	
 	 *	@return (ElementType2)
-	 *	  value ��ϊ��������ʂ�Ԃ��܂��B�A���A�ϊ��Ɏ��s���A
-	 *	 *piResult �����̐��ł���ꍇ�́A���̖߂�l�ɂ͈Ӗ�������܂���B
+	 *	  value を変換した結果を返します。但し、変換に失敗し、
+	 *	 *piResult が負の数である場合は、この戻り値には意味がありません。
 	 *
 	 *	
 	 *	<H4>
-	 *	�y�I�[�o���C�h�z
+	 *	【オーバライド】
 	 *	</H4>
-	 *	value �̃R�s�[�� new �Ő������āA���̃|�C���^��Ԃ��܂��B
-	 *	�A���A�R�s�[��̃C���X�^���X�̉w���́A this ��  m_iEkiCount ��
-	 *	���킹�܂��B
+	 *	value のコピーを new で生成して、そのポインタを返します。
+	 *	但し、コピー後のインスタンスの駅数は、 this の  m_iEkiCount に
+	 *	合わせます。
 	 */
 	virtual adaptee_value_type onSet( const value_type& value , int* piResult ) ;
 	
 	/**
-	 *	  get() ���\�b�h�́A����Ώۂ̃R���e�i m_pAdaptee ����擾��������
-	 *	���̊֐����Ăяo���āA  ElementType2 �̒l value ���A
-	 *	 ElementType1 �ɕϊ����܂��B
+	 *	  get() メソッドは、操作対象のコンテナ m_pAdaptee から取得したあと
+	 *	この関数を呼び出して、  ElementType2 の値 value を、
+	 *	 ElementType1 に変換します。
 	 *	
 	 *	@param value [in] (const ElementType2&)
-	 *	  �ϊ�����ׂ��l���w�肵�Ă��������B
+	 *	  変換するべき値を指定してください。
 	 *	
 	 *	@return (ElementType1)
-	 *	  value ��ϊ��������ʂ�Ԃ��܂��B
+	 *	  value を変換した結果を返します。
 	 *	
 	 *	<H4>
-	 *	�y�I�[�o���C�h�z
+	 *	【オーバライド】
 	 *	</H4>
-	 *	  ElementType2 �̒l���A ElementType1 �ɕϊ����鏈��������
-	 *	���Ă��������B�ϊ����ʂ̒l�͖߂�l�Ƃ��Ă��������B
+	 *	  ElementType2 の値を、 ElementType1 に変換する処理を実装
+	 *	してください。変換結果の値は戻り値としてください。
 	 */
 	virtual value_type onGet( const adaptee_value_type& value )const ;
 	
 	/**
-	 *	  this �́A����Ώۂ̃R���e�i m_pAdaptee ����v�f����菜�����O�ɁA
-	 *	���̊֐����Ăяo���܂��B
+	 *	  this は、操作対象のコンテナ m_pAdaptee から要素を取り除く直前に、
+	 *	この関数を呼び出します。
 	 *
 	 *
-	 *	onSet() �Ăяo���ƁA onErase() �Ăяo���͑΂ɂȂ��Ă��܂��B
-	 *	 onSet() �ł���l��Ԃ����ꍇ�A���̗v�f�� m_pAdaptee ����
-	 *	��菜�����Ƃ��ɁA�K�� onSet() �ŕԂ����l�������Ƃ���
-	 *	 onErase() ���Ăяo����܂��B
+	 *	onSet() 呼び出しと、 onErase() 呼び出しは対になっています。
+	 *	 onSet() である値を返した場合、その要素が m_pAdaptee から
+	 *	取り除かれるときに、必ず onSet() で返した値を引数として
+	 *	 onErase() が呼び出されます。
 	 *	
 	 *	@param value [in] (const ElementType2&)
-	 *	  ����Ώۂ̃R���e�i m_pAdaptee �����菜���v�f���w�肵�Ă��������B
+	 *	  操作対象のコンテナ m_pAdaptee から取り除く要素を指定してください。
 	 *
 	 *	<H4>
-	 *	�y�I�[�o���C�h�z
+	 *	【オーバライド】
 	 *	</H4>
-	 *	  �v�f�� delete ���܂��B
+	 *	  要素を delete します。
 	 */
 	virtual void onErase( const adaptee_value_type& value ) ;
 ///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 * @param iEkiCount [in]]
-	 *	�w�̐��B\n
+	 *	駅の数。\n
 	 * @param iRessyasyubetsuCount [in]
-	 *	���̃R���e�i�Ɋ܂܂���Ԃ́w��Ԏ�ʁx�̐��B
-	 *	���̒l�́A��Ԃ������Ă��� CentDedRosen �I�u�W�F�N�g��
-	 *	 CentDedRessyasyubetsu �̐��ɓ������Ȃ�܂��B
+	 *	このコンテナに含まれる列車の『列車種別』の数。
+	 *	この値は、列車が属している CentDedRosen オブジェクトの
+	 *	 CentDedRessyasyubetsu の数に等しくなります。
 	 */
 	CentDedDiaCont( int iEkiCount , int iRessyasyubetsuCount ) ;
 
 	CentDedDiaCont( const CentDedDiaCont& value );
 	
 	/**
-	 *	���̃N���X�ւ̑�����s���܂����A
-	 *	this �́w�w�x�̐� ( m_iEkiCount ) �͕ύX���܂���B
+	 *	このクラスへの代入を行いますが、
+	 *	this の『駅』の数 ( m_iEkiCount ) は変更しません。
 	 *
-	 *	this ����܂���w��ԁx( CentDedRessya )  �̃R�s�[�ɂ́A
+	 *	this が包含する『列車』( CentDedRessya )  のコピーには、
 	 *	CentDedRessya& operator=( const CentDedRessya& value ) 
-	 *	���g���܂��B
+	 *	を使います。
 	 */
 	CentDedDiaCont& operator=( const CentDedDiaCont& value );
 
@@ -263,54 +263,54 @@ private:
 ///@{
  public:
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 * 	�v�f���㏑�����܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に、
+	 * 	要素を上書きします。
 	 * <H4>
-	 * �y�I�[�o���C�h�z
+	 * 【オーバライド】
 	 * </H4>
-	 *	element �̃R�s�[�� new �Ő������Ă���A�����
-	 *	����ΏۃR���e�i m_pAdaptee �Ɋi�[���܂��B
-	 *	\n m_pAdaptee �ɁA�����̃_�C���I�u�W�F�N�g�����݂���ꍇ�́A
-	 *	���\�b�h�͎��s���܂��B
+	 *	element のコピーを new で生成してから、それを
+	 *	操作対象コンテナ m_pAdaptee に格納します。
+	 *	\n m_pAdaptee に、同名のダイヤオブジェクトが存在する場合は、
+	 *	メソッドは失敗します。
 	 *
 	 * @param element [in]
-	 * 	�v�f���w�肵�Ă��������B
+	 * 	要素を指定してください。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �����ł��B
-	 *	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 未満です。
+	 *	但し、INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
-	 *	-	-1 ;	//	iIndex ���s���ł��B
-	 *	-	-2 ;	//	element �ɂ̓_�C�������w�肳��Ă��܂���B
-	 *	-	-3 ;	//	���łɓ����̃_�C�������݂��܂��B
+	 * 	0以上は成功、負の数はエラーです
+	 *	-	-1 ;	//	iIndex が不正です。
+	 *	-	-2 ;	//	element にはダイヤ名が指定されていません。
+	 *	-	-3 ;	//	すでに同名のダイヤが存在します。
 	 */
 	virtual int set( const CentDedDia& element , int iIndex ) ;
 
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 * 	�v�f��ǉ����܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に、
+	 * 	要素を追加します。
 	 * <H4>
-	 * �y�I�[�o���C�h�z
+	 * 【オーバライド】
 	 * </H4>
-	 *	element �̃R�s�[�� new �Ő������Ă���A�����
-	 *	����ΏۃR���e�i m_pAdaptee �Ɋi�[���܂��B
-	 *	\n m_pAdaptee �ɁA�����̃_�C���I�u�W�F�N�g�����݂���ꍇ�́A
-	 *	���\�b�h�͎��s���܂��B
+	 *	element のコピーを new で生成してから、それを
+	 *	操作対象コンテナ m_pAdaptee に格納します。
+	 *	\n m_pAdaptee に、同名のダイヤオブジェクトが存在する場合は、
+	 *	メソッドは失敗します。
 	 *
 	 * @param element [in]
-	 * 	�v�f���w�肵�Ă��������B
+	 * 	要素を指定してください。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 * 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-	 *	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 以下です。
+	 * 	０は、先頭・size()なら末尾への追加になります。
+	 *	但し、INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
+	 * 	0以上は成功、負の数はエラーです
 	 *
-	 *	-	-1 ;	//	�C���f�N�X���s���ł��B
-	 *	-	-2 ;	//	element �ɂ̓_�C�������w�肳��Ă��܂���B
-	 *	-	-3 ;	//	���łɓ����̃_�C�������݂��܂��B
+	 *	-	-1 ;	//	インデクスが不正です。
+	 *	-	-2 ;	//	element にはダイヤ名が指定されていません。
+	 *	-	-3 ;	//	すでに同名のダイヤが存在します。
 	 */
 	virtual int insert( const CentDedDia& element , int iIndex = INT_MAX ) ;
 ///@}
@@ -320,149 +320,149 @@ private:
 // ********************************
  public:
 	// ********************************
-	///@name ����
+	///@name 属性
 	// ********************************
 	///@{
 	virtual int getEkiCount()const ;
 	virtual int getRessyasyubetsuCount()const ;
 	///@}
 	// ********************************
-	///@name CentDedDiaCont-����
+	///@name CentDedDiaCont-操作
 	// ********************************
 	///@{
 	/**
 	 * @return 
-	 *	�R���e�i���̃_�C���I�u�W�F�N�g CentDedDia �ւ̃|�C���^��
-	 *	�A�N�Z�X���邽�߂� IfContGet<CentDedDia*>* ��Ԃ��܂��B
+	 *	コンテナ内のダイヤオブジェクト CentDedDia へのポインタに
+	 *	アクセスするための IfContGet<CentDedDia*>* を返します。
 	 */
 	IfContGet<CentDedDia*>* getIfContGet(){	return getAdaptee() ;	};
 	const IfContGet<CentDedDia*>* getIfContGet()const{	return getAdaptee() ;	};
 
 	/**
-	 *	�w��̃_�C����������
-	 *	�w�_�C���x ( CentDedDia ) �I�u�W�F�N�g�́A
-	 *	�C���f�N�X�𒲂ׂ܂��B
+	 *	指定のダイヤ名を持つ
+	 *	『ダイヤ』 ( CentDedDia ) オブジェクトの、
+	 *	インデクスを調べます。
 	 * @param strName [in]
-	 *	�w�_�C�����x���w�肵�Ă��������B
+	 *	『ダイヤ名』を指定してください。
 	 * @return 
-	 *	���������� 0 �ȏ�̃C���f�N�X�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-1 ;	//	�I�u�W�F�N�g���݂���܂���B
+	 *	成功したら 0 以上のインデクス、エラーなら負の数です。
+	 *	-	-1 ;	//	オブジェクトがみつかりません。
 	 */
 	int findCentDedDiaByName( const string& strName )const ;
 	///@}
 	// ********************************
-	///@name CentDedDiaCont-���� �w�̑���
+	///@name CentDedDiaCont-操作 駅の増減
 	// ********************************
 	///@{
 	/**
-	 *	���̃R���e�i�Ɋ܂܂�邷�ׂĂ�
-	 *	�w�_�C���x ( CentDedDia )�ɑ΂��A
-	 *	�w�w�x�I�u�W�F�N�g�̑����̕ύX��ʒm���܂��B
+	 *	このコンテナに含まれるすべての
+	 *	『ダイヤ』 ( CentDedDia )に対し、
+	 *	『駅』オブジェクトの属性の変更を通知します。
 	 *	
-	 *	���̊֐��́A�w�n���w�E�I���w�̉w�����`���ύX�ɔ����A�������E�������̏C���x
-	 *	���s�킹�܂��B
+	 *	この関数は、『始発駅・終着駅の駅時刻形式変更に伴う、着時刻・発時刻の修正』
+	 *	を行わせます。
 	 * @param iEkiOrder [in]
-	 *	�I�u�W�F�N�g��}������ʒu���w�wIndex�x�Ŏw�肵�Ă��������B
-	 *	�͈͂� 0 �ȏ� m_iEkiCount �ȉ��ł��B
+	 *	オブジェクトを挿入する位置を『駅Index』で指定してください。
+	 *	範囲は 0 以上 m_iEkiCount 以下です。
 	 * @return
-	 *	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+	 *	成功したら 0 以上、エラーなら負の数です。
 	 */
 	int onSetCentDedEki( const CentDedEkiCont* pCentDedEkiCont , int iEkiIndex ) ;
 
 	/**
-	 *	���̃R���e�i�Ɋ܂܂�邷�ׂĂ�
-	 *	�w�_�C���x ( CentDedDia )�ɑ΂��A
-	 *	�w�w�����x�I�u�W�F�N�g���A�w��̈ʒu�ɑ}�����܂��B
+	 *	このコンテナに含まれるすべての
+	 *	『ダイヤ』 ( CentDedDia )に対し、
+	 *	『駅時刻』オブジェクトを、指定の位置に挿入します。
 	 * @param iEkiOrder [in]
-	 *	�I�u�W�F�N�g��}������ʒu���w�wIndex�x�Ŏw�肵�Ă��������B
-	 *	�͈͂� 0 �ȏ� m_iEkiCount �ȉ��ł��B
-	 *	INT_MAX ���w�肷��ƁA�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 *	オブジェクトを挿入する位置を『駅Index』で指定してください。
+	 *	範囲は 0 以上 m_iEkiCount 以下です。
+	 *	INT_MAX を指定すると、末尾を指定したものとみなします。
 	 * @return
-	 *	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
+	 *	成功したら 0 以上、エラーなら負の数です。
 	 */
 	int insertCentDedEkiJikoku(	int iEkiIndex = INT_MAX ) ;
 	
 	/**
-	 *	���́w�_�C���R���e�i�x�Ɋ܂܂�邷�ׂĂ�
-	 *	�w�_�C���x ( CentDedDia )�ɑ΂��A
-	 *	�w�w�����x�I�u�W�F�N�g���A�w��̈ʒu����폜���܂��B
+	 *	この『ダイヤコンテナ』に含まれるすべての
+	 *	『ダイヤ』 ( CentDedDia )に対し、
+	 *	『駅時刻』オブジェクトを、指定の位置から削除します。
 	 * @param iEkiOrder [in]
-	 *	�I�u�W�F�N�g��}������ʒu���w�wIndex�x�Ŏw�肵�Ă��������B
-	 *	�͈͂� 0 �ȏ� m_iEkiCount �����ł��B
-	 *	INT_MAX ���w�肷��ƁA�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 *	オブジェクトを挿入する位置を『駅Index』で指定してください。
+	 *	範囲は 0 以上 m_iEkiCount 未満です。
+	 *	INT_MAX を指定すると、末尾を指定したものとみなします。
 	 * @return
-	 *	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-1 ;	//	�C���f�N�X���s���ł��B
+	 *	成功したら 0 以上、エラーなら負の数です。
+	 *	-	-1 ;	//	インデクスが不正です。
 	 */
 	int eraseCentDedEkiJikoku( int iEkiIndex = INT_MAX ) ;
 
 	/**
-	 *	�w��Ԏ�ʁx�̒ǉ��ɔ����A
-	 *	���́w��ԃR���e�i�x�Ɋ܂܂�邷�ׂĂ�
-	 *	�w��ԁx ( CentDedRessya ) �́w��Ԏ��Index�x���C�����܂��B
+	 *	『列車種別』の追加に伴い、
+	 *	この『列車コンテナ』に含まれるすべての
+	 *	『列車』 ( CentDedRessya ) の『列車種別Index』を修正します。
 	 *
-	 *	���́w��ԃR���e�i�x�Ɋ܂܂�邷�ׂĂ�
-	 *	�w��ԁx ( CentDedRessya ) �̂����A
-	 *	���� iRessyasyubetsuIndex �ȏ�� �w��Ԏ��Index�x������
-	 *	�w��ԁx ( CentDedRessya ) �́w��Ԏ��Index�x�� 1 ���Z���܂��B
+	 *	この『列車コンテナ』に含まれるすべての
+	 *	『列車』 ( CentDedRessya ) のうち、
+	 *	引数 iRessyasyubetsuIndex 以上の 『列車種別Index』を持つ
+	 *	『列車』 ( CentDedRessya ) の『列車種別Index』を 1 加算します。
 	 *
-	 *	�܂��A������ this �� m_iRessyasyubetsuCount �� 1 ���Z���܂��B
+	 *	また、同時に this の m_iRessyasyubetsuCount も 1 加算します。
 	 *
 	 * @param iRessyasyubetsuIndex [in]
-	 *	��Ԏ�ʂ̒ǉ��ʒu���w�肵�Ă��������B
-	 *	�͈͂� 0 �ȏ� m_iRessyasyubetsuCount �ȉ��ł��B
-	 *	INT_MAX ���w�肷��ƁA�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 *	列車種別の追加位置を指定してください。
+	 *	範囲は 0 以上 m_iRessyasyubetsuCount 以下です。
+	 *	INT_MAX を指定すると、末尾を指定したものとみなします。
 	 * @return
-	 *	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-1 ;	//	�C���f�N�X���s���ł��B
+	 *	成功したら 0 以上、エラーなら負の数です。
+	 *	-	-1 ;	//	インデクスが不正です。
 	 */
 	int insertRessyasyubetsuIndex( int iRessyasyubetsuIndex = INT_MAX ) ;
 	
 	/**
-	 *	�w��Ԏ�ʁx�̍폜�ɔ����A
-	 *	���́w��ԃR���e�i�x�Ɋ܂܂�邷�ׂĂ�
-	 *	�w��ԁx ( CentDedRessya ) �́w��Ԏ��Index�x���C�����܂��B
+	 *	『列車種別』の削除に伴い、
+	 *	この『列車コンテナ』に含まれるすべての
+	 *	『列車』 ( CentDedRessya ) の『列車種別Index』を修正します。
 	 *
-	 *	���́w��ԃR���e�i�x�Ɋ܂܂�邷�ׂĂ�
-	 *	�w��ԁx ( CentDedRessya ) �̂����A
-	 *	���� iRessyasyubetsuIndex ���傫�� �w��Ԏ��Index�x������
-	 *	�w��ԁx ( CentDedRessya ) �́w��Ԏ��Index�x�� 1 ���Z���܂��B
+	 *	この『列車コンテナ』に含まれるすべての
+	 *	『列車』 ( CentDedRessya ) のうち、
+	 *	引数 iRessyasyubetsuIndex より大きい 『列車種別Index』を持つ
+	 *	『列車』 ( CentDedRessya ) の『列車種別Index』を 1 減算します。
 	 *
-	 *	�܂��A������ this �� m_iRessyasyubetsuCount �� 1 ���Z���܂��B
+	 *	また、同時に this の m_iRessyasyubetsuCount も 1 加算します。
 	 *
 	 * @param iRessyasyubetsuIndex [in]
-	 *	�폜�����Ԏ��Index���w�肵�Ă��������B
-	 *	�͈͂� 0 �ȏ� m_iRessyasyubetsuCount �����ł��B
-	 *	INT_MAX ���w�肷��ƁA�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 *	削除する列車種別Indexを指定してください。
+	 *	範囲は 0 以上 m_iRessyasyubetsuCount 未満です。
+	 *	INT_MAX を指定すると、末尾を指定したものとみなします。
 	 * @return
-	 *	���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-	 *	-	-1 ;	//	�C���f�N�X���s���ł��B
-	 *	-	-3 ;	//	�w��Ԏ�ʁx�� iRessyasyubtsuIndex �̗�Ԃ����݂��܂��B
+	 *	成功したら 0 以上、エラーなら負の数です。
+	 *	-	-1 ;	//	インデクスが不正です。
+	 *	-	-3 ;	//	『列車種別』が iRessyasyubtsuIndex の列車が存在します。
 	 */
 	int eraseRessyasyubetsuIndex( int iRessyasyubetsuIndex  = INT_MAX ) ;
 
 	/**
-	 *	���̃R���e�i�ɁA�w�肳�ꂽ�w��Ԏ�ʁx�̗�Ԃ����邩�ۂ��𒲂ׂ܂��B
+	 *	このコンテナに、指定された『列車種別』の列車があるか否かを調べます。
 	 * @param iRessyasyubetsuIndex [in]
-	 *	�w��Ԏ��Index�x���w�肵�Ă��������B
-	 *	�͈͂́A 0 �ȏ� ��Ԏ�ʂ̐������ł��B
-	 *	INT_MAX �́A�����̗�Ԏ�ʂ��w�肵�����̂Ƃ݂Ȃ��܂��B
+	 *	『列車種別Index』を指定してください。
+	 *	範囲は、 0 以上 列車種別の数未満です。
+	 *	INT_MAX は、末尾の列車種別を指定したものとみなします。
 	 * @param piDiaIndex [out]
-	 *	���̊֐��͂��̕ϐ��ɁA�w��Ԏ�ʁx�̗�Ԃ���������
-	 *	�_�C���̃C���f�N�X���������݂܂��B
-	 *	�s�v�Ȃ� NULL �ł����܂��܂���B
+	 *	この関数はこの変数に、『列車種別』の列車が見つかった
+	 *	ダイヤのインデクスを書き込みます。
+	 *	不要なら NULL でもかまいません。
 	 * @param peRessyahoukou [out]
-	 *	���̊֐��͂��̕ϐ��ɁA�w��Ԏ�ʁx�̗�Ԃ���������
-	 *	�_�C���̗�ԕ������������݂܂��B
-	 *	�s�v�Ȃ� NULL �ł����܂��܂���B
+	 *	この関数はこの変数に、『列車種別』の列車が見つかった
+	 *	ダイヤの列車方向を書き込みます。
+	 *	不要なら NULL でもかまいません。
 	 * @param piRessyaIndex [out]
-	 *	���̊֐��͂��̕ϐ��ɁA�w��Ԏ�ʁx�̗�Ԃ���������
-	 *	���Index ���������݂܂��B
-	 *	�s�v�Ȃ� NULL �ł����܂��܂���B
+	 *	この関数はこの変数に、『列車種別』の列車が見つかった
+	 *	列車Index を書き込みます。
+	 *	不要なら NULL でもかまいません。
 	 * @return 
-	 *	-	1; //	�w��̗�Ԏ�ʂ̗�Ԃ����݂��܂��B
-	 *	-	0; //	�w��̗�Ԏ�ʂ̗�Ԃ͑��݂��܂���B
-	 *	-	-1 ;	//	�C���f�N�X���s��
+	 *	-	1; //	指定の列車種別の列車が存在します。
+	 *	-	0; //	指定の列車種別の列車は存在しません。
+	 *	-	-1 ;	//	インデクスが不正
 	 */
 	int isExistRessyaOfRessyasyubetsu( 
 		int iRessyasyubetsuIndex ,

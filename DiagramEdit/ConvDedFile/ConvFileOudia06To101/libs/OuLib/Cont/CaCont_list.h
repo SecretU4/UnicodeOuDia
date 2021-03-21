@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -78,114 +78,114 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  * @brief
- * �y�T�v�z
- *   IfValueCont �C���^�[�t�F�[�X�ŁASTL�̃��X�g�R���e�i
- *	�i std::list �j�𑀍삷��A�A�_�v�^�N���X�ł��B
+ * 【概要】
+ *   IfValueCont インターフェースで、STLのリストコンテナ
+ *	（ std::list ）を操作する、アダプタクラスです。
  *
- *   ���̃N���X�̃I�u�W�F�N�g�́A����ΏۂƂȂ��̃R���e�i�Ɗ֘A��
- *	�����܂��B
+ *   このクラスのオブジェクトは、操作対象となる一つのコンテナと関連を
+ *	持ちます。
  * 
- *   ���̃N���X�ł́A����ΏۃI�u�W�F�N�g�ł��郊�X�g�R���e�i����
- * �e�v�f�ɑ΂���A�����q�̔z�������I�� ( m_IteCont �� ) �ێ����܂��B
+ *   このクラスでは、操作対象オブジェクトであるリストコンテナ内の
+ * 各要素に対する、反復子の配列を内部的に ( m_IteCont に ) 保持します。
  * 
- *   this �Ƒ���ΏۃI�u�W�F�N�g�Ƃ̊Ԃ̊֘A��ݒ肷���
- * ( �R���X�g���N�^�E setAdaptee() )�A this �� m_pAdaptee ���X�L�������A
- *	�e�v�f�ɑ΂��锽���q���擾���āA�z��ɕۑ����܂��B
- *   IfValueCont< ElementType >  �C���^�[�t�F�[�X���g����
- *	�v�f�ɃA�N�Z�X����ꍇ�́A
- * ���̔z��ɕۑ�����Ă��锽���q���g���܂��B����ɂ��A���X�g�R���e�i��
- * �{�����Ƃ��郉���_���A�N�Z�X���v���ɂł���悤�ɂ��Ă��܂��B
+ *   this と操作対象オブジェクトとの間の関連を設定すると
+ * ( コンストラクタ・ setAdaptee() )、 this は m_pAdaptee をスキャンし、
+ *	各要素に対する反復子を取得して、配列に保存します。
+ *   IfValueCont< ElementType >  インターフェースを使って
+ *	要素にアクセスする場合は、
+ * この配列に保存されている反復子を使います。これにより、リストコンテナが
+ * 本来苦手とするランダムアクセスが迅速にできるようにしています。
  * 
- *    IfCont<DataType>  �C���^�[�t�F�[�X���g���āA�R���e�i���̗v�f��
- * ��������悤�ȑ�����s�����ꍇ�Athis �͓����I�ɕێ����Ă��锽���q��
- * �z����ꏏ�ɍX�V���܂��B
+ *    IfCont<DataType>  インターフェースを使って、コンテナ内の要素を
+ * 増減するような操作を行った場合、this は内部的に保持している反復子の
+ * 配列も一緒に更新します。
  * 
- *   this �Ɗ֘A�������Ă��鑀��ΏۃI�u�W�F�N�g�̃R���e�i�̗v�f����
- * ���ڕύX�����ꍇ�i IfCont �C���^�[�t�F�[�X���\�b�h�ȊO�̕��@�ŃR���e�i��
- * ���삵���ꍇ�j�́A�^�[�Q�b�g�I�u�W�F�N�g�ł��郊�X�g�R���e�i�ƁA
- *  this ���ێ����Ă��锽���q�̔z��( m_IteCont ) �Ƃ̓����������܂��B
- * ���̂Ƃ��́A scan() ���\�b�h���g���āA�����q�̔z����č\�z���Ȃ��Ă�
- * �Ȃ�܂���B
+ *   this と関連を持っている操作対象オブジェクトのコンテナの要素数を
+ * 直接変更した場合（ IfCont インターフェースメソッド以外の方法でコンテナを
+ * 操作した場合）は、ターゲットオブジェクトであるリストコンテナと、
+ *  this が保持している反復子の配列( m_IteCont ) との同期が失われます。
+ * このときは、 scan() メソッドを使って、反復子の配列を再構築しなくては
+ * なりません。
  * 
- * �y�g�����z
+ * 【使い方】
  * 
- * �P�D  �ʏ�́A���炩���ߑ���ΏۃI�u�W�F�N�g�iAdaptee�j
- * �i������ STL�o�����A�N�Z�X�R���e�i
- *	�istd::list , std::map , std::set �Ȃǁj�j�j �𐶐�
- * ���Ă��������B
+ * １．  通常は、あらかじめ操作対象オブジェクト（Adaptee）
+ * （原則は STL双方向アクセスコンテナ
+ *	（std::list , std::map , std::set など））） を生成
+ * してください。
  *
- *	�Q�D  ���̃N���X�̃e���v���[�g�����ɂ́A����ΏۃI�u�W�F�N�g�̌^��
- *	�w�肵�Ă��������B�܂��A�R���X�g���N�^�ł́A����ΏۃI�u�W�F�N�g
- *	�ւ̃|�C���^���w�肵�Ă��������B
+ *	２．  このクラスのテンプレート引数には、操作対象オブジェクトの型を
+ *	指定してください。また、コンストラクタでは、操作対象オブジェクト
+ *	へのポインタを指定してください。
  * 
 @code
 	std::list< CBase >	aList( NULL ) ;
 	CaCont_list< std::list< CBase > >	aCont( &aList )  ;
 @endcode
 
- * ��  ���̃N���X�ɁA����ΏۃI�u�W�F�N�g�𐶐������邱�Ƃ��ł��܂��B
- * ���̏ꍇ�́A�R���X�g���N�^�̈����� NULL ���w�肵�Ă��������B
+ * ※  このクラスに、操作対象オブジェクトを生成させることもできます。
+ * この場合は、コンストラクタの引数に NULL を指定してください。
  * 
 @code
 	CaCont_list< std::list< CBase > > aCont ;
 @endcode
- * �Q�D  ����Ȍ�́A IfCont �C���^�[�t�F�[�X�̃��\�b�h�𗘗p���āA
- * �R���e�i�𑀍삷�邱�Ƃ��ł��܂��B
+ * ２．  これ以後は、 IfCont インターフェースのメソッドを利用して、
+ * コンテナを操作することができます。
  *
  * <H4>
- *	�y�R���e�i���̃f�[�^�̃C���X�^���X�ɂ��āz
+ *	【コンテナ内のデータのインスタンスについて】
  * </H4>
- *	 �R���e�i�̃T�C�Y��ύX���郁�\�b�h���Ăяo�����ꍇ�ł��A
- *	�R���e�i���̃C���X�^���X�̍Ċ��蓖�Ă͋N����܂���B
- *   getp() �Ŏ擾�����|�C���^�́A�R���e�i���炻�̗v�f���폜����܂�
- *	�L���ł��B
+ *	 コンテナのサイズを変更するメソッドを呼び出した場合でも、
+ *	コンテナ内のインスタンスの再割り当ては起こりません。
+ *   getp() で取得したポインタは、コンテナからその要素を削除するまで
+ *	有効です。
  *
  *
  * @param ContType
- *	����Ώۂ̃R���e�i�̌^���w�肵�Ă��������B
- *	���̌^�́A�i�[����f�[�^�̌^���e���v���[�g�p�����[�^�Ɏw�肵��
- *	�o�����A�N�Z�X�R���e�i�istd::list , std::map , std::set �Ȃǁj�j�j
- * �łȂ��Ă͂Ȃ�܂���B
+ *	操作対象のコンテナの型を指定してください。
+ *	この型は、格納するデータの型をテンプレートパラメータに指定した
+ *	双方向アクセスコンテナ（std::list , std::map , std::set など）））
+ * でなくてはなりません。
  */
 template< class ContType >
 class CaCont_list : public IfValueCont< typename ContType::value_type >
 {
 // ********************************
-//	�C���i�[�^�C�v
+//	インナータイプ
 // ********************************
  public:
 	/**
-	 *	����Ώۂ̃R���e�i�̌^
+	 *	操作対象のコンテナの型
 	 */
 	typedef ContType	cont_type ;
 
 	/**
-	 *	����Ώۂ̃R���e�i�̌^
+	 *	操作対象のコンテナの型
 	 */
 	typedef std::deque< ContType::iterator >	IteCont ;
 
 // ********************************
-///@name �֘A
+///@name 関連
 // ********************************
 ///@{
  private:	
 	/**
-	 *   ����Ώۂ́ASTL�o�����A�N�Z�X�R���e�i�ł��B
+	 *   操作対象の、STL双方向アクセスコンテナです。
 	 *
-	 *	����Ώۂ��w�肹���ɂ��̃N���X�̃I�u�W�F�N�g�𐶐������ꍇ�A
-	 *	�R���X�g���N�^�́A����ΏۃR���e�i�𐶐����܂��B���̏ꍇ�A
-	 *  �����f�[�^ m_bIsDeleteObligatory �� true �ƂȂ�܂��B
+	 *	操作対象を指定せずにこのクラスのオブジェクトを生成した場合、
+	 *	コンストラクタは、操作対象コンテナを生成します。この場合、
+	 *  内部データ m_bIsDeleteObligatory は true となります。
 	 *
-	 *  ���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�����f�[�^ m_bIsDeleteObligatory ��
-	 *	 false �̏ꍇ�̓N���X���[�U�[�E true �̏ꍇ�� this �ɂ���܂��B
+	 *  このオブジェクトの破棄の責務は、内部データ m_bIsDeleteObligatory が
+	 *	 false の場合はクラスユーザー・ true の場合は this にあります。
 	 *	
-	 *	����Ώۂ́A���̊֘A���L���ȊԂ͐������Ȃ��Ă͂Ȃ�܂���B
+	 *	操作対象は、この関連が有効な間は生存しなくてはなりません。
 	 */
 	ContType*	m_pAdaptee ;
 	
 ///@}
 // --------------------------------
-///@name �����f�[�^
+///@name 内部データ
 // --------------------------------
 ///@{
  private:
@@ -195,21 +195,21 @@ class CaCont_list : public IfValueCont< typename ContType::value_type >
 	bool	m_bIsDeleteObligatory ;
 
 	/**
-	 *	  �^�[�Q�b�g�I�u�W�F�N�g�ł��郊�X�g�R���e�i���̊e�v�f�ɑ΂���A
-	 *	�����q�̔z���ێ�����R���e�i�ł��B
+	 *	  ターゲットオブジェクトであるリストコンテナ内の各要素に対する、
+	 *	反復子の配列を保持するコンテナです。
 	 */
 	IteCont	m_IteCont ;
 ///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	/**
 	 * @param pContType [in]
-	 *   �^�[�Q�b�g�́ASTL�����_���A�N�Z�X�R���e�i�ł��B
-	 *	���̃I�u�W�F�N�g�̔j���̐Ӗ��́A�N���X���[�U�[�ɂ���܂��B
-	 *	�^�[�Q�b�g�́A���̊֘A���L���ȊԂ͐������Ȃ��Ă͂Ȃ�܂���B\n
+	 *   ターゲットの、STLランダムアクセスコンテナです。
+	 *	このオブジェクトの破棄の責務は、クラスユーザーにあります。
+	 *	ターゲットは、この関連が有効な間は生存しなくてはなりません。\n
 	 */
 	CaCont_list( ContType* pContType )
 		: m_pAdaptee( pContType )
@@ -219,9 +219,9 @@ class CaCont_list : public IfValueCont< typename ContType::value_type >
 	};
 	
 	/**
-	 *   ���̃R���X�g���N�^�́A
-	 *	����Ώۂ� STL�����_���A�N�Z�X�R���e�i m_pAdaptee 
-	 *	���A���̃N���X�Ő������܂��B
+	 *   このコンストラクタは、
+	 *	操作対象の STLランダムアクセスコンテナ m_pAdaptee 
+	 *	を、このクラスで生成します。
 	 */
 	CaCont_list()
 		: m_pAdaptee( new ContType  )
@@ -231,9 +231,9 @@ class CaCont_list : public IfValueCont< typename ContType::value_type >
 	};
 	
 	/**
-	 *  �R�s�[�R���X�g���N�^�́A
-	 *	����Ώۂ� STL�����_���A�N�Z�X�R���e�i m_pAdaptee 
-	 *	���A���̃N���X�Ő������܂��B
+	 *  コピーコンストラクタは、
+	 *	操作対象の STLランダムアクセスコンテナ m_pAdaptee 
+	 *	を、このクラスで生成します。
 	 */
 	CaCont_list( const CaCont_list& value )
 		: m_pAdaptee( new ContType )
@@ -268,7 +268,7 @@ class CaCont_list : public IfValueCont< typename ContType::value_type >
 	
 	/**
 	 * @return
-	 * 	�R���e�i�Ɋi�[����Ă���f�[�^�̌���Ԃ��܂��B
+	 * 	コンテナに格納されているデータの個数を返します。
 	 */
 	virtual int	size()const
 	{
@@ -278,14 +278,14 @@ class CaCont_list : public IfValueCont< typename ContType::value_type >
 	// --------------------------------
 
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���
-	 * 	�f�[�^��Ԃ��܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に格納されている
+	 * 	データを返します。
 	 * @param idx [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �����ł��B
-	 *	INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 未満です。
+	 *	INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	�C���f�N�X�Ŏw�肳�ꂽ�f�[�^�ւ̎Q�Ƃ�Ԃ��܂��B
+	 * 	インデクスで指定されたデータへの参照を返します。
 	 */
 	virtual value_type get( int iIndex )const 
 	{
@@ -306,17 +306,17 @@ class CaCont_list : public IfValueCont< typename ContType::value_type >
 public:
 	
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 * 	�f�[�^���Z�b�g�i�㏑���j���܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に、
+	 * 	データをセット（上書き）します。
 	 * @param element [in]
-	 * 	�f�[�^���w�肵�Ă��������B
+	 * 	データを指定してください。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �����ł��B
-	 *	INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 未満です。
+	 *	INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
-	 *	-	-1 ;	//	iIndex���s��
+	 * 	0以上は成功、負の数はエラーです
+	 *	-	-1 ;	//	iIndexが不正
 	 */
 	virtual int set( const value_type& element , int iIndex ) 
 	{
@@ -324,25 +324,25 @@ public:
 			iIndex = m_pAdaptee->size() - 1 ; 
 		}
 		if ( !( 0 <= iIndex && iIndex < m_pAdaptee->size() ) ){
-			return -1 ;	//	iIndex���s��
+			return -1 ;	//	iIndexが不正
 		}
 		*m_IteCont[iIndex] = element ;
 		return ( 0 ) ;
 	};
 
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�ɁA
-	 * 	�f�[�^��ǉ����܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に、
+	 * 	データを追加します。
 	 * @param element [in]
-	 * 	�f�[�^���w�肵�Ă��������B
+	 * 	データを指定してください。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 * 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-	 *	INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 以下です。
+	 * 	０は、先頭・size()なら末尾への追加になります。
+	 *	INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
-	 *	-	-1 ;	//	iIndex���s��
+	 * 	0以上は成功、負の数はエラーです
+	 *	-	-1 ;	//	iIndexが不正
 	 */
 	virtual int insert( const value_type& element , int iIndex = INT_MAX ) 
 	{
@@ -350,7 +350,7 @@ public:
 			iIndex = m_pAdaptee->size() ; 
 		}
 		if ( !( 0 <= iIndex && iIndex <= m_pAdaptee->size() ) ){
-			return -1 ;	//	iIndex���s��
+			return -1 ;	//	iIndexが不正
 		}
 		{
 			ContType::iterator ite = m_pAdaptee->insert( 
@@ -362,25 +362,25 @@ public:
 	};
 	
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ��
-	 * 	�f�[�^���폜���܂��B
+	 * 	コンテナ内の、インデクスで指定された場所の
+	 * 	データを削除します。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �����ł��B
-	 * 	�A���AINT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 未満です。
+	 * 	但し、INT_MAX は、末尾を指定したものとみなします。
 	 * @param iSize [in]
-	 * 	�폜����v�f�̐����w�肵�Ă��������B
-	 * 	�A���AINT_MAX �́A iIndex ���疖���܂ł�\���܂��B
+	 * 	削除する要素の数を指定してください。
+	 * 	但し、INT_MAX は、 iIndex から末尾までを表します。
 	 * @attention
-	 *	iIndex �� iSize �̗����� INT_MAX �ɂ��邱�Ƃ͂ł��܂���B
+	 *	iIndex と iSize の両方を INT_MAX にすることはできません。
 	 * @return
-	 * 	0�ȏ�͐����A���̐��̓G���[�ł�
-	 *	-	-1 ;	//	iIndex ���s��
+	 * 	0以上は成功、負の数はエラーです
+	 *	-	-1 ;	//	iIndex が不正
 	 */
 	virtual int erase( int iIndex , int iSize = 1 ) 
 	{
 		if ( iIndex == INT_MAX && iSize == INT_MAX ){
-			return -1 ;	//	iIndex���s��
+			return -1 ;	//	iIndexが不正
 		}
 		if ( iIndex == INT_MAX ){
 			iIndex = m_pAdaptee->size() - iSize ; 
@@ -389,7 +389,7 @@ public:
 			iSize = m_pAdaptee->size() - iIndex ; 
 		}
 		if ( !( 0 <= iIndex && iIndex + iSize <= (int)m_pAdaptee->size() ) ){
-			return -1 ;	//	iIndex���s��
+			return -1 ;	//	iIndexが不正
 		}
 		// --------------------------------
 		m_pAdaptee->erase( m_IteCont[iIndex] , m_IteCont[ iIndex + iSize ] ) ;
@@ -405,17 +405,17 @@ public:
 ///@{
  public:
 	/**
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���v�f�ւ�
-	 * 	�� const �ȃ|�C���^���擾���邱�Ƃ��ł��܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に格納されている要素への
+	 * 	非 const なポインタを取得することができます。
 	 * @param iIndex [in]
-	 * 	�O����n�܂�C���f�N�X���w�肵�Ă��������B
-	 * 	�͈͂͂O�ȏ� size() �ȉ��ł��B
-	 * 	�O�́A�擪�Esize()�Ȃ疖���ւ̒ǉ��ɂȂ�܂��B
-	 *	INT_MAX �́A�������w�肵�����̂Ƃ݂Ȃ��܂��B
+	 * 	０から始まるインデクスを指定してください。
+	 * 	範囲は０以上 size() 以下です。
+	 * 	０は、先頭・size()なら末尾への追加になります。
+	 *	INT_MAX は、末尾を指定したものとみなします。
 	 * @return
-	 * 	�R���e�i���́A�C���f�N�X�Ŏw�肳�ꂽ�ꏊ�Ɋi�[����Ă���v�f�ւ�
-	 * 	�� const �ȃ|�C���^��Ԃ��܂��B
-	 * 	iSize ���͈͊O�̏ꍇ�́A NULL ��Ԃ��܂��B
+	 * 	コンテナ内の、インデクスで指定された場所に格納されている要素への
+	 * 	非 const なポインタを返します。
+	 * 	iSize が範囲外の場合は、 NULL を返します。
 	 */
 	virtual value_type* getp( int iIndex ) 
 	{
@@ -433,7 +433,7 @@ public:
 // ********************************
  public:
 	// ********************************
-	///@name CaCont_list-�֘A
+	///@name CaCont_list-関連
 	// ********************************
 	ContType*	getAdaptee(){	return m_pAdaptee ;};
 	const ContType*	getAdaptee()const{	return m_pAdaptee ;};
@@ -454,18 +454,18 @@ public:
 	};
 	
 	// ********************************
-	///@name CaCont_list-����
+	///@name CaCont_list-操作
 	// ********************************
 	/**
-	 *	 this �Ɗ֘A�������Ă���^�[�Q�b�g�I�u�W�F�N�g�̃R���e�i�́A
-	 *	�e�v�f�̔����q��ێ����Ă���R���e�i m_IteCont ���č\�z���܂��B
+	 *	 this と関連をもっているターゲットオブジェクトのコンテナの、
+	 *	各要素の反復子を保持しているコンテナ m_IteCont を再構築します。
 	 *
-	 *   this �Ɗ֘A�������Ă���^�[�Q�b�g�I�u�W�F�N�g�̃R���e�i�̗v�f����
-	 * ���ڕύX�����ꍇ�i IfCont �C���^�[�t�F�[�X���\�b�h�ȊO�̕��@�ŃR���e�i��
-	 * ���삵���ꍇ�j�́A�^�[�Q�b�g�I�u�W�F�N�g�ł��郊�X�g�R���e�i�ƁAthis ��
-	 * �ێ����Ă��锽���q�̔z��( m_IteCont ) �Ƃ̓����������܂��B
-	 * ���̂Ƃ��́A scan() ���\�b�h���g���āA�����q�̔z����č\�z���Ȃ��Ă�
-	 * �Ȃ�܂���B
+	 *   this と関連をもっているターゲットオブジェクトのコンテナの要素数を
+	 * 直接変更した場合（ IfCont インターフェースメソッド以外の方法でコンテナを
+	 * 操作した場合）は、ターゲットオブジェクトであるリストコンテナと、this が
+	 * 保持している反復子の配列( m_IteCont ) との同期が失われます。
+	 * このときは、 scan() メソッドを使って、反復子の配列を再構築しなくては
+	 * なりません。
 	 */
 	void scan() 
 	{

@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -82,30 +82,30 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /**
  * @brief
- *	GDI�I�u�W�F�N�g�̑����ƁA�n���h���̑Ώƕ\��ێ����܂��B
- *	�Ώƕ\�ɃG���g�����Ȃ��ꍇ�́AGDI�I�u�W�F�N�g�̃n���h���𐶐����āA
- *	�Ώƕ\�ɒǉ����܂��B
+ *	GDIオブジェクトの属性と、ハンドルの対照表を保持します。
+ *	対照表にエントリがない場合は、GDIオブジェクトのハンドルを生成して、
+ *	対照表に追加します。
  *
- *	�Ώƕ\�ɒǉ������G���g����GDI�I�u�W�F�N�g�̃n���h���̔j���̐Ӗ��́A
- *	this �ɂ���܂��B
+ *	対照表に追加したエントリのGDIオブジェクトのハンドルの破棄の責務は、
+ *	this にあります。
  *
- * �y�g�����z
+ * 【使い方】
  *
- *	�P�D  �R���X�g���N�^�ŃI�u�W�F�N�g�𐶐����Ă��������B
+ *	１．  コンストラクタでオブジェクトを生成してください。
  *
- *	�Q�D  CreateFont() ���g���ƁA�w�肳�ꂽ���� CdFontProp �ɑΉ�����
- *	�t�H���g�n���h���𐶐����ĕԂ��܂��B�����ɁA�����ƃn���h����Ώƕ\
- *	 m_HFONTMap �ɓo�^���܂��B
- *	  ���ɓ��������� CreateFont() ���Ăяo���ꂽ�ꍇ�́A�O���
- *	�t�H���g�n���h����Ԃ��܂��B
+ *	２．  CreateFont() を使うと、指定された属性 CdFontProp に対応する
+ *	フォントハンドルを生成して返します。同時に、属性とハンドルを対照表
+ *	 m_HFONTMap に登録します。
+ *	  次に同じ属性で CreateFont() が呼び出された場合は、前回の
+ *	フォントハンドルを返します。
  *	
- *	�R�D  �f�X�g���N�^�ł́A�Ώƕ\ m_HFONTMap �ɓo�^����Ă���
- *	�t�H���g�n���h�������ׂĉ�����܂��B
+ *	３．  デストラクタでは、対照表 m_HFONTMap に登録されている
+ *	フォントハンドルをすべて解放します。
  */
 class CGdiCache
 {
 // ********************************
-//	�C���i�[�^�C�v
+//	インナータイプ
 // ********************************
  public:
 
@@ -114,29 +114,29 @@ class CGdiCache
 	typedef std::map< CdBrushProp , HBRUSH >	HBRUSHMap ;
 
 // ********************************
-///@name �W��
+///@name 集約
 // ********************************
 ///@{
  private:
 	/**
-	 *	�t�H���g�����ƃt�H���g�n���h���̑Ώƕ\�ł��B
-	 *	HFONT �̔j���̐Ӗ��� this �ɂ���܂��B
+	 *	フォント属性とフォントハンドルの対照表です。
+	 *	HFONT の破棄の責務は this にあります。
 	 */
 	HFONTMap	m_HFONTMap ;
 	/**
-	 *	�y�������ƃy���n���h���̑Ώƕ\�ł��B
-	 *	HPEN �̔j���̐Ӗ��� this �ɂ���܂��B
+	 *	ペン属性とペンハンドルの対照表です。
+	 *	HPEN の破棄の責務は this にあります。
 	 */
 	HPENMap	m_HPENMap ;
 	/**
-	 *	�u���V�����ƃu���V�n���h���̑Ώƕ\�ł��B
-	 *	HBRUSH �̔j���̐Ӗ��� this �ɂ���܂��B
+	 *	ブラシ属性とブラシハンドルの対照表です。
+	 *	HBRUSH の破棄の責務は this にあります。
 	 */
 	HBRUSHMap	m_HBRUSHMap ;
 ///@}
 
 // ********************************
-//	�R���X�g���N�^
+//	コンストラクタ
 // ********************************
  public:
 	CGdiCache() ;
@@ -147,46 +147,46 @@ class CGdiCache
 // ********************************
  public:
 	/**
-	 * 	CdFontProp�I�u�W�F�N�g�̑��������ƂɁA�t�H���g�𐶐����܂�
+	 * 	CdFontPropオブジェクトの属性をもとに、フォントを生成します
 	 * @param aCdFontProp [in]
-	 * 	�t�H���g�������w�肵�Ă��������B
+	 * 	フォント属性を指定してください。
 	 * @param hDc [in]
-	 * 	CdFontProp �I�u�W�F�N�g�ɐݒ肳��Ă��鍂��������
-	 * 	PointTextHeight �Ŏw�肳��Ă���ꍇ�́ALOGFONT�ɕϊ�
-	 * 	����ۂɂ́A���̕ϊ��ɂ́A�t�H���g�̕`����s��HDC���K�v�ł��B
-	 * 	�����ɂ́A����HDC���w�肵�Ă��������B
-	 * 	�����A���̃P�[�X��HDC�� NULL ���w�肵���ꍇ�́A�X�N���[��DC��
-	 * 	���Ƃ�LOGFONT�\���̂��쐬���܂��B
-	 * 	CdFontProp �I�u�W�F�N�g�ɐݒ肳��Ă��鍂��������
-	 * 	Logicalunit... �Ŏw�肳��Ă���ꍇ�́A����HDC�ɂ�
-	 * 	�Ӗ�������܂���B
+	 * 	CdFontProp オブジェクトに設定されている高さ属性が
+	 * 	PointTextHeight で指定されている場合は、LOGFONTに変換
+	 * 	する際には、その変換には、フォントの描画を行うHDCが必要です。
+	 * 	ここには、そのHDCを指定してください。
+	 * 	もし、このケースでHDCに NULL を指定した場合は、スクリーンDCを
+	 * 	もとにLOGFONT構造体を作成します。
+	 * 	CdFontProp オブジェクトに設定されている高さ属性が
+	 * 	Logicalunit... で指定されている場合は、このHDCには
+	 * 	意味がありません。
 	 * @return
-	 *	�t�H���g�̃n���h����Ԃ��܂��B
-	 *	���̃n���h���̔j���̐Ӗ��́Athis�ɂ���܂��B
-	 *	�֐��ďo���́A�n���h����������Ă͂����܂���B
+	 *	フォントのハンドルを返します。
+	 *	このハンドルの破棄の責務は、thisにあります。
+	 *	関数呼出元は、ハンドルを解放してはいけません。
 	 */
 	virtual HFONT	CreateFont(  const CdFontProp& aCdFontProp , 
 			HDC hDc ) ;
 	
 	/**
-	 * 	CdPenProp�I�u�W�F�N�g�̑��������ƂɁA�y���𐶐����܂�
+	 * 	CdPenPropオブジェクトの属性をもとに、ペンを生成します
 	 * @param aCdPenProp [in]
-	 * 	�y���������w�肵�Ă��������B
+	 * 	ペン属性を指定してください。
 	 * @return
-	 *	�y���̃n���h����Ԃ��܂��B
-	 *	���̃n���h���̔j���̐Ӗ��́Athis�ɂ���܂��B
-	 *	�֐��ďo���́A�n���h����������Ă͂����܂���B
+	 *	ペンのハンドルを返します。
+	 *	このハンドルの破棄の責務は、thisにあります。
+	 *	関数呼出元は、ハンドルを解放してはいけません。
 	 */
 	virtual HPEN	CreatePen(  const CdPenProp& aCdPenProp ) ;
 
 	/**
-	 * 	CdBrushProp�I�u�W�F�N�g�̑��������ƂɁA�y���𐶐����܂�
+	 * 	CdBrushPropオブジェクトの属性をもとに、ペンを生成します
 	 * @param aCdBrushProp [in]
-	 * 	�y���������w�肵�Ă��������B
+	 * 	ペン属性を指定してください。
 	 * @return
-	 *	�y���̃n���h����Ԃ��܂��B
-	 *	���̃n���h���̔j���̐Ӗ��́Athis�ɂ���܂��B
-	 *	�֐��ďo���́A�n���h����������Ă͂����܂���B
+	 *	ペンのハンドルを返します。
+	 *	このハンドルの破棄の責務は、thisにあります。
+	 *	関数呼出元は、ハンドルを解放してはいけません。
 	 */
 	virtual HBRUSH	CreateBrush(  const CdBrushProp& aCdBrushProp ) ;
 };

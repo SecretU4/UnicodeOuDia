@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /*
 // ****************************************************************
@@ -83,17 +83,17 @@ namespace entDed{
 //	CdRessyaForSort_Ressya
 // ****************************************************************
 	/**
-		Mu<CentDedRessyaCont*> ���̗��(��Index)���A
-		��Ԏ�ʂŔ�r����֐��I�u�W�F�N�g�ł��B
+		Mu<CentDedRessyaCont*> 内の列車(のIndex)を、
+		列車種別で比較する関数オブジェクトです。
 	*/
 	class CentDedRessyaIdxCompare_Ressyasyubetsu
 	{
 		// ********************************
-		///@name �֘A
+		///@name 関連
 		// ********************************
 		///@{
 		/**
-			��ԃR���e�i�B
+			列車コンテナ。
 		*/
 		const Mu<const CentDedRessya*>* m_pCentDedRessyaCont  ; 
 
@@ -107,18 +107,18 @@ namespace entDed{
 		/**
 		@return
 			*m_pCentDedRessyaCont->get(idxleft ) < *m_pCentDedRessyaCont->get(idxright ) 
-			�Ȃ�^�ł��B
+			なら真です。
 
 		@note
-		  ��r��́A
-			- NULL�łȂ����̂�NULL�̂��̂Ƃł́ANULL�łȂ����̂���B
-			- ��Ԏ��Index�̏������ق�����B
-			- ��Ԗ����������ő���������B
-			- �����̒������Z��������B
-			- �������������ő���������B
-			- ��Ԕԍ��̒������Z��������B
-			- ��Ԕԍ����������ő���������B
-			- ���Index�̏�����������B
+		  比較基準は、
+			- NULLでないものとNULLのものとでは、NULLでないものが先。
+			- 列車種別Indexの小さいほうが先。
+			- 列車名が辞書順で早い方が先。
+			- 号数の長さが短い方が先。
+			- 号数が辞書順で早い方が先。
+			- 列車番号の長さが短い方が先。
+			- 列車番号が辞書順で早い方が先。
+			- 列車Indexの小さい方が先。
 		*/
 		bool operator()( 
 			int idxleft , 
@@ -127,21 +127,21 @@ namespace entDed{
 			const CentDedRessya& left  = *m_pCentDedRessyaCont->get(idxleft ) ;
 			const CentDedRessya& right = *m_pCentDedRessyaCont->get(idxright ) ;
 			// --------------------------------
-			//	�Е���NULL�̏ꍇ�̔�r
-			//	- NULL�łȂ����̂�NULL�̂��̂Ƃł́ANULL�łȂ����̂���B
+			//	片方がNULLの場合の比較
+			//	- NULLでないものとNULLのものとでは、NULLでないものが先。
 			// --------------------------------
 			if ( !left.isNull() && right.isNull() )
 			{
-				//	left��NULL�ŁAright�͔�NULL
+				//	leftはNULLで、rightは非NULL
 				return true ;
 			}
 			else if ( left.isNull() && !right.isNull() )
 			{
-				//	left�͔�NULL�ŁAright��NULL
+				//	leftは非NULLで、rightはNULL
 				return false ;
 			}
 			// --------------------------------
-			//	- ��Ԏ��Index�̏������ق�����B
+			//	- 列車種別Indexの小さいほうが先。
 			// --------------------------------
 			if ( left.getRessyasyubetsuIndex() < right.getRessyasyubetsuIndex() )
 			{
@@ -153,7 +153,7 @@ namespace entDed{
 			}
 
 			// --------------------------------
-			//	- ��Ԗ����������ő���������B
+			//	- 列車名が辞書順で早い方が先。
 			// --------------------------------
 			if ( left.getRessyamei() < right.getRessyamei() )
 			{
@@ -165,7 +165,7 @@ namespace entDed{
 			}
 
 			//// --------------------------------
-			////	- �����𐮐��������ꍇ�ɑ���������B
+			////	- 号数を整数化した場合に早い方が先。
 			//// --------------------------------
 			//{
 			//	int iLeftGousuu = OuLib::intOf( left.getGousuu() ) ;
@@ -181,7 +181,7 @@ namespace entDed{
 			//}
 
 			// --------------------------------
-			//	- �����̒������Z��������B
+			//	- 号数の長さが短い方が先。
 			// --------------------------------
 			{
 				if ( left.getGousuu().length()  < right.getGousuu().length() )
@@ -194,7 +194,7 @@ namespace entDed{
 				}
 			}
 			// --------------------------------
-			//	- �������������ő���������B
+			//	- 号数が辞書順で早い方が先。
 			// --------------------------------
 			{
 				if ( left.getGousuu()  < right.getGousuu() )
@@ -207,7 +207,7 @@ namespace entDed{
 				}
 			}
 			// --------------------------------
-			//	- ��Ԕԍ��̒������Z��������B
+			//	- 列車番号の長さが短い方が先。
 			// --------------------------------
 			{
 				if ( left.getRessyabangou().length()  < right.getRessyabangou().length() )
@@ -220,7 +220,7 @@ namespace entDed{
 				}
 			}
 			// --------------------------------
-			//	- ��Ԕԍ����������ő���������B
+			//	- 列車番号が辞書順で早い方が先。
 			// --------------------------------
 			{
 				if ( left.getRessyabangou()  < right.getRessyabangou() )
@@ -233,7 +233,7 @@ namespace entDed{
 				}
 			}
 			// --------------------------------
-			//	- ���Index�̏������ق�����B
+			//	- 列車Indexの小さいほうが先。
 			// --------------------------------
 			if ( idxleft < idxright )
 			{
@@ -249,17 +249,17 @@ namespace entDed{
 //	CDedRessyaSoater_Ressyasyubetsu
 // ****************************************************************
 	// ********************************
-	//@name �W��
+	//@name 集約
 	// ********************************
 
 	// ********************************
-	//@name ���
+	//@name 状態
 	// ********************************
 	// --------------------------------
-	//@name �����֐�
+	//@name 下請関数
 	// --------------------------------
 	// ********************************
-	//	�R���X�g���N�^
+	//	コンストラクタ
 	// ********************************
 CDedRessyaSoater_Ressyasyubetsu::CDedRessyaSoater_Ressyasyubetsu() 
 {
@@ -270,7 +270,7 @@ CDedRessyaSoater_Ressyasyubetsu::~CDedRessyaSoater_Ressyasyubetsu()
 }
 	
 	// --------------------------------
-	//@name sort �̉����֐�(template�p�^�[��)
+	//@name sort の下請関数(templateパターン)
 	// --------------------------------
 void CDedRessyaSoater_Ressyasyubetsu::sortRessyaIndex( 
 		const CentDedRessyaCont* pRessyaCont , 
@@ -280,20 +280,20 @@ void CDedRessyaSoater_Ressyasyubetsu::sortRessyaIndex(
 	bool bAbort = false ;
 
 	const Mu<const CentDedRessya*>* pCentDedRessyaCont = pRessyaCont->getMuPtr() ; 
-	//pCentDedRessyaCont = CentDedRessyaCont �I�u�W�F�N�g�ւ̃|�C���^��ێ�����
-	//	�R���e�i�ł��B
+	//pCentDedRessyaCont = CentDedRessyaCont オブジェクトへのポインタを保持する
+	//	コンテナです。
 
 	// --------------------------------
-	//	�\�[�g�p�w�����̃R���e�i�̓��e�ɏ]���A
-	//	�C���f�N�X���\�[�g
+	//	ソート用駅時刻のコンテナの内容に従い、
+	//	インデクスをソート
 	// --------------------------------
 	{
-		//	�\�[�g�� std::sort ���g�����߁A
-		//	�C���f�N�X�R���e�i�� std::vector �Ɉ�U�R�s�[����
+		//	ソートは std::sort を使うため、
+		//	インデクスコンテナを std::vector に一旦コピーする
 		CMup_vector<int>	contiRessyaIndexOrder ;
 		CaMui<int>( &contiRessyaIndexOrder ).insert( muRessyaIndexOrder , 0 , INT_MAX ) ;
 
-		//	std::vector �̓��e���\�[�g
+		//	std::vector の内容をソート
 		std::sort( 
 			contiRessyaIndexOrder.getAdaptee()->begin() ,
 			contiRessyaIndexOrder.getAdaptee()->end() ,
@@ -302,7 +302,7 @@ void CDedRessyaSoater_Ressyasyubetsu::sortRessyaIndex(
 					pCentDedRessyaCont ) ) ;
 
 
-		//	�\�[�g���ʂ��A���̃R���e�i�ɖ߂�
+		//	ソート結果を、元のコンテナに戻す
 		muRessyaIndexOrder->erase( 0 , INT_MAX ) ;
 		CaMui<int>( muRessyaIndexOrder ).insert( &contiRessyaIndexOrder , 0 , INT_MAX ) ;
 	}

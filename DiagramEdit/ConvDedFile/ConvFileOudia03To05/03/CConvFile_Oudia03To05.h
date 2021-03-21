@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 // ****************************************************************
 // $Id: CConvFile_Oudia03To05.h 10 2012-08-26 09:48:47Z okm $
@@ -71,7 +71,7 @@ Copyright (C) 2006-2017 take-okm
 #include "IfConvFile.h"
 /**
 @brief
-	OuDia�t�@�C�� Ver.3 �� Ver.4 �ɕϊ����܂��B
+	OuDiaファイル Ver.3 を Ver.4 に変換します。
 */
 class CConvFile_Oudia03To05 : public IfConvFile
 {
@@ -84,30 +84,30 @@ public:
 	// ********************************
 	///@{
 	/**
-		LeftFormat ���� RightFormat �ւ̕ϊ����s���܂��B
+		LeftFormat から RightFormat への変換を行います。
 	@param pLeftFormat [in]
-		LeftFormat �̃f�[�^���w�肵�Ă��������B
+		LeftFormat のデータを指定してください。
 	@param pRightFormat [out]
-		���̊֐��͕ϊ�������������A
-		���̃o�b�t�@�ɁARightFormat �̃f�[�^���������݂܂��B
+		この関数は変換が成功したら、
+		このバッファに、RightFormat のデータを書き込みます。
 	@param pErrorInfoString [out] 
-		���̊֐��͕ϊ������s������A
-		���̃o�b�t�@�ɃG���[�̓��e�������������
-		�������݂܂��B
-		�A���A���ׂĂ� ConvFile �N���X�����̋@�\���T�|�[�g���Ă���킯�ł�
-		����܂���B
+		この関数は変換が失敗したら、
+		このバッファにエラーの内容を示す文字列を
+		書き込みます。
+		但し、すべての ConvFile クラスがこの機能をサポートしているわけでは
+		ありません。
 	@return  
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	FileType ������������܂���B
-		-	-11 ;	//	Rosen �̓��e���s��
-		-	-21 ;	//	DispProp �̓��e���s��
-		-	-101 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
-		-	-211 ;	//	Ekimei ���w�肳��Ă��܂���B
-		-	-222 ;	//	Ekijikokukeisiki �̒l���s���ł��B
-		-	-232 ;	//	Ekikibo �̒l���s���ł��B
-		-	-311 ;	//	Syubetsumei ���w�肳��Ă��܂���B
-		-	-352 ;	//	DiagramSenStyle �̒l���s���ł��B
-		-	-412 ;	//	DiagramEkiatsukai �̒l���s���ł��B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	FileType が正しくありません。
+		-	-11 ;	//	Rosen の内容が不正
+		-	-21 ;	//	DispProp の内容が不正
+		-	-101 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
+		-	-211 ;	//	Ekimei が指定されていません。
+		-	-222 ;	//	Ekijikokukeisiki の値が不正です。
+		-	-232 ;	//	Ekikibo の値が不正です。
+		-	-311 ;	//	Syubetsumei が指定されていません。
+		-	-352 ;	//	DiagramSenStyle の値が不正です。
+		-	-412 ;	//	DiagramEkiatsukai の値が不正です。
 	*/
 	virtual int LeftToRight( 
 		const IfByteBuffer* pLeftFormat , 
@@ -115,51 +115,51 @@ public:
 		IfByteBuffer* pErrorInfoString ) ; 
 
 	/**
-		LeftFormat ���ϊ��\�ȃt�H�[�}�b�g�ł��邩�ۂ���
-		���肵�܂��B
+		LeftFormat が変換可能なフォーマットであるか否かを
+		判定します。
 		
-		���̊֐��� LeftFormat �̃f�[�^�̓����ɑ΂��ĊȒP�Ȍ�����
-		�s���܂��B
-		���̊֐����������Ă��A LeftToRight() ����������Ƃ�
-		����܂���B
+		この関数は LeftFormat のデータの特徴に対して簡単な検査を
+		行います。
+		この関数が成功しても、 LeftToRight() が成功するとは
+		限りません。
 	@param pLeftFormat [in]
-		LeftFormat �̃f�[�^���w�肵�Ă��������B
+		LeftFormat のデータを指定してください。
 	@return  
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	0 �ȏ� ;	//	�ϊ��\�ȃt�H�[�}�b�g�ł��B
-		-	-1 ;	//	FileType ������������܂���B
-		-	-11 ;	//	Rosen �̓��e���s��
-		-	-21 ;	//	DispProp �̓��e���s��
-		-	-101 ;	//	�J�����g�T�u�A�C�e������R�}���h�Ƒޏ�R�}���h���Ή����܂���B	
+		成功したら 0 以上、エラーなら負の数です。
+		-	0 以上 ;	//	変換可能なフォーマットです。
+		-	-1 ;	//	FileType が正しくありません。
+		-	-11 ;	//	Rosen の内容が不正
+		-	-21 ;	//	DispProp の内容が不正
+		-	-101 ;	//	カレントサブアイテム入場コマンドと退場コマンドが対応しません。	
 	*/
 	virtual int isLeftFormat( 
 		const IfByteBuffer* pLeftFormat)  ; 
 
 	/**
 	@return 
-		- true ;	//	RightToLeft(),isRightFormat() ���\�b�h���T�|�[�g���Ă��܂��B
-		- false ;	//	RightToLeft(),isRightFormat() ���\�b�h���T�|�[�g���Ă��܂���B
+		- true ;	//	RightToLeft(),isRightFormat() メソッドをサポートしています。
+		- false ;	//	RightToLeft(),isRightFormat() メソッドをサポートしていません。
 	*/
 	virtual bool RightToLeftIsSupported() ; 
 
 	/**
-		RightFormat ���� LeftFormat �ւ̕ϊ����s���܂��B
+		RightFormat から LeftFormat への変換を行います。
 	@param pRightFormat [in]
-		RightFormat �̃f�[�^���w�肵�Ă��������B
+		RightFormat のデータを指定してください。
 	@param pLeftFormat [out]
-		���̊֐��͕ϊ�������������A
-		���̃o�b�t�@�ɁALeftFormat �̃f�[�^���������݂܂��B
+		この関数は変換が成功したら、
+		このバッファに、LeftFormat のデータを書き込みます。
 	@param pErrorInfoString [out] 
-		���̊֐��͕ϊ������s������A
-		���̃o�b�t�@�ɃG���[�̓��e�������������
-		�������݂܂��B
-		�A���A���ׂĂ� ConvFile �N���X�����̋@�\���T�|�[�g���Ă���킯�ł�
-		����܂���B
-		�s�v�ł����NULL�ł����܂��܂���B
+		この関数は変換が失敗したら、
+		このバッファにエラーの内容を示す文字列を
+		書き込みます。
+		但し、すべての ConvFile クラスがこの機能をサポートしているわけでは
+		ありません。
+		不要であればNULLでもかまいません。
 	@return  
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	-1 ;	//	pLeftFormat �͐����� LeftFormat �ł͂���܂���B
-		-	-2 ;	//	���̃��\�b�h�̓T�|�[�g����Ă��܂���B
+		成功したら 0 以上、エラーなら負の数です。
+		-	-1 ;	//	pLeftFormat は正しい LeftFormat ではありません。
+		-	-2 ;	//	このメソッドはサポートされていません。
 	*/
 	virtual int RightToLeft( 
 		const IfByteBuffer* pRightFormat , 
@@ -167,20 +167,20 @@ public:
 		IfByteBuffer* pErrorInfoString ) ; 
 
 	/**
-		RightFormat ���ϊ��\�ȃt�H�[�}�b�g�ł��邩�ۂ���
-		���肵�܂��B
+		RightFormat が変換可能なフォーマットであるか否かを
+		判定します。
 		
-		���̊֐��� RightFormat �̃f�[�^�̓����ɑ΂��ĊȒP�Ȍ�����
-		�s���܂��B
-		���̊֐����������Ă��A LeftFromRight() ����������Ƃ�
-		����܂���B
+		この関数は RightFormat のデータの特徴に対して簡単な検査を
+		行います。
+		この関数が成功しても、 LeftFromRight() が成功するとは
+		限りません。
 	@param pRightFormat [in]
-		RightFormat �̃f�[�^���w�肵�Ă��������B
+		RightFormat のデータを指定してください。
 	@return  
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	0 �ȏ� ;	//	�ϊ��\�ȃt�H�[�}�b�g�ł��B
-		-	-1 ;	//	pRightFormat �͐����� RightFormat �ł͂���܂���B
-		-	-2 ;	//	���̃��\�b�h�̓T�|�[�g����Ă��܂���B
+		成功したら 0 以上、エラーなら負の数です。
+		-	0 以上 ;	//	変換可能なフォーマットです。
+		-	-1 ;	//	pRightFormat は正しい RightFormat ではありません。
+		-	-2 ;	//	このメソッドはサポートされていません。
 	*/
 	virtual int isRightFormat( 
 		const IfByteBuffer* pRightFormat ) ; 

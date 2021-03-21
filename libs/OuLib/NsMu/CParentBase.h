@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 /** @file */
 //$Id: CParentBase.h 348 2016-08-16 17:47:55Z okm $
@@ -72,21 +72,21 @@ namespace OuLib{
 namespace NsMu{
 
 
-/** @page parent_child_container �w�e�q�R���e�i�x�p�^�[�� 
+/** @page parent_child_container 『親子コンテナ』パターン 
 
-�@�w�e�q�R���e�i�x�p�^�[���́A�݌v�p�^�[���̈�ł��B
-�@�I�u�W�F�N�g���e�q�֌W�����w�I�u�W�F�N�g�c���[�\���x�ɂ����āA�q�I�u�W�F�N�g����e�I�u�W�F�N�g(�q�I�u�W�F�N�g��ێ�����R���e�i)�ւ̃A�N�Z�X��i��񋟂��܂��B
+　『親子コンテナ』パターンは、設計パターンの一つです。
+　オブジェクトが親子関係を持つ『オブジェクトツリー構造』において、子オブジェクトから親オブジェクト(子オブジェクトを保持するコンテナ)へのアクセス手段を提供します。
 
-�@�����ł́w�I�u�W�F�N�g�c���[�\���x�́A�����̃I�u�W�F�N�g����܊֌W���\�����ăh���C����\�����郂�f���̂��Ƃ��w���܂��B
-�@���̂悤�ȃI�u�W�F�N�g�c���[�\���ɂ́ADOM(Document Object Model)�AWindows�̃E�C���h�E�n���h���A�c���[�R���g���[���̃A�C�e���Ȃǂ�����܂��B�����̃I�u�W�F�N�g�c���[�\���ł́A�q�I�u�W�F�N�g����e�I�u�W�F�N�g�փA�N�Z�X�����i�����ʂɒ񋟂���Ă��܂��B
+　ここでの『オブジェクトツリー構造』は、複数のオブジェクトが包含関係を構成してドメインを表現するモデルのことを指します。
+　このようなオブジェクトツリー構造には、DOM(Document Object Model)、Windowsのウインドウハンドル、ツリーコントロールのアイテムなどがあります。これらのオブジェクトツリー構造では、子オブジェクトから親オブジェクトへアクセスする手段が普通に提供されています。
 
-�@�w�e�q�R���e�i�x�p�^�[���́A���́A�u�q�I�u�W�F�N�g����e�I�u�W�F�N�g�փA�N�Z�X�����i�v���������邽�߂̐݌v�p�^�[���ł��B
+　『親子コンテナ』パターンは、この、「子オブジェクトから親オブジェクトへアクセスする手段」を実現するための設計パターンです。
 
-�@NsMu�ł́A�ȉ��̃N���X��p���āA�w�e�q�R���e�i�x�p�^�[�����������܂��B
+　NsMuでは、以下のクラスを用いて、『親子コンテナ』パターンを実現します。
 
-  - CMuiCopiedParent , CMuiOuParent : �e�I�u�W�F�N�g�̋�ۃN���X�e���v���[�g
-  - CParentBase : �e�I�u�W�F�N�g�̊�{�N���X
-  - CChildBase  : �q�I�u�W�F�N�g�̊�{�N���X
+  - CMuiCopiedParent , CMuiOuParent : 親オブジェクトの具象クラステンプレート
+  - CParentBase : 親オブジェクトの基本クラス
+  - CChildBase  : 子オブジェクトの基本クラス
 
 */
 
@@ -94,16 +94,16 @@ namespace NsMu{
 
 /**
 @brief
-  ���̃N���X�́A�w�e�q�R���e�i�x�p�^�[�� �ɂ�����e�I�u�W�F�N�g(�R���e�i)�̊�{�N���X�ł��B
+  このクラスは、『親子コンテナ』パターン における親オブジェクト(コンテナ)の基本クラスです。
 
 @ref parent_child_container
 
-�@�w�e�q�R���e�i�x�p�^�[�����T�|�[�g���Ă���R���e�i�N���X�Ƃ��āACMuiCopiedParent�ACMuiOuParent ������܂��B�����̃N���X�́A���̃N���X���p�����Ă��܂��B�w�e�q�R���e�i�x�p�^�[���̐e�I�u�W�F�N�g�Ƃ��ċ@�\����R���e�i�N���X���ɂ�����e�I�u�W�F�N�g(�R���e�i)�́A���̃N���X���p������K�v������܂��B
+　『親子コンテナ』パターンをサポートしているコンテナクラスとして、CMuiCopiedParent、CMuiOuParent があります。これらのクラスは、このクラスを継承しています。『親子コンテナ』パターンの親オブジェクトとして機能するコンテナクラスをにおける親オブジェクト(コンテナ)は、このクラスを継承する必要があります。
 
-�@C++�̃R���e�i�́A�ʏ�̓N���X�e���v���[�g�Ŏ�������܂��BCMuiCopiedParent�ACMuiOuParent ���A�N���X�e���v���[�g�ł��B����ɑ΂��A���̃N���X�́A�e���v���[�g�p�����[�^�������܂���B�R���e�i�̃e���v���[�g�p�����[�^�Ɉˑ����Ȃ���{�N���X�Ƃ��ċ@�\���܂��B
-  ���̃N���X�ɂ́A���������������܂���B
+　C++のコンテナは、通常はクラステンプレートで実現されます。CMuiCopiedParent、CMuiOuParent も、クラステンプレートです。それに対し、このクラスは、テンプレートパラメータを持ちません。コンテナのテンプレートパラメータに依存しない基本クラスとして機能します。
+  このクラスには、属性も操作もありません。
 
-  �q�I�u�W�F�N�g���e�I�u�W�F�N�g�ɒǉ����ꂽ�Ƃ��A�e�I�u�W�F�N�g�́A�q�I�u�W�F�N�g�� CChildBase::setParent() ���\�b�h���Ăяo���āA�e�I�u�W�F�N�g�̃A�h���X���q�I�u�W�F�N�g�ɓo�^���܂��B���̂Ƃ��n�����e�I�u�W�F�N�g�̌^�́ACParentBase* �ł��B�q�I�u�W�F�N�g�́ACParentBase* ���A���ۂ̐e�I�u�W�F�N�g(�R���e�i)�̌^�Ƀ_�E���L���X�g���邱�Ƃɂ��A�e�I�u�W�F�N�g�̃��\�b�h���Ăяo�����Ƃ��ł��܂��B
+  子オブジェクトが親オブジェクトに追加されたとき、親オブジェクトは、子オブジェクトの CChildBase::setParent() メソッドを呼び出して、親オブジェクトのアドレスを子オブジェクトに登録します。このとき渡される親オブジェクトの型は、CParentBase* です。子オブジェクトは、CParentBase* を、実際の親オブジェクト(コンテナ)の型にダウンキャストすることにより、親オブジェクトのメソッドを呼び出すことができます。
 */
 class CParentBase
 {

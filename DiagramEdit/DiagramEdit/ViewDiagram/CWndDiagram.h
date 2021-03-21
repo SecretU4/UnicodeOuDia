@@ -29,38 +29,38 @@ You should have received a copy of the GNU General Public License along with
   do so, delete this exception statement from your version.
 
 
-(��: 
+(訳: 
 
-	OuDia - ��Ԏ����\�����ƂɁA�_�C���O������`�悷��Win32�A�v���P�[�V
-�����B
+	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+ョン。
 
 Copyright (C) 2006-2017 take-okm 
 
-���̃v���O�����̓t���[�\�t�g�E�F�A�ł��B���Ȃ��͂�����A�t���[�\�t�g�E�F�A��
-�c�ɂ���Ĕ��s���ꂽGNU ��ʌ��O���p������(�o�[�W����3���A����ȍ~�̃o�[�W��
-���̂����ǂꂩ)����߂�����̉��ōĔЕz�܂��͉��� ���邱�Ƃ��ł��܂��B
+このプログラムはフリーソフトウェアです。あなたはこれを、フリーソフトウェア財
+団によって発行されたGNU 一般公衆利用許諾書(バージョン3か、それ以降のバージョ
+ンのうちどれか)が定める条件の下で再頒布または改変 することができます。
 
-���̃v���O�����͗L�p�ł��邱�Ƃ�����ĔЕz����܂����A*�S���̖��ۏ� *�ł��B
-���Ɖ\���̕ۏ؂����ړI�ւ̓K�����́A���O�Ɏ����ꂽ���̂� �܂߁A�S������
-���܂���B�ڂ�����GNU ��ʌ��O���p���������������������B
+このプログラムは有用であることを願って頒布されますが、*全くの無保証 *です。
+商業可能性の保証や特定目的への適合性は、言外に示されたものも 含め、全く存在
+しません。詳しくはGNU 一般公衆利用許諾書をご覧ください。
 
-���Ȃ��͂��̃v���O�����Ƌ��ɁAGNU ��ʌ��O���p�������̃R�s�[���ꕔ �󂯎��
-�Ă���͂��ł��B�����󂯎���Ă��Ȃ���΁A<http://www.gnu.org/licenses/> ��
-�������������B
+あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
+ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
+ご覧ください。
 
 )
 
-  �����āA���ʂȗ�O�Ƃ��āAtake-okm �͂��̃v���O�����̃R�[�h�� 
+  加えて、特別な例外として、take-okm はこのプログラムのコードを 
   "MFC(Microsoft Foundation Class library) Version 9.0" 
-  (  ���邢�� "MFC Version 9.0" �Ɠ������C�Z���X���K�p���ꂽ
-  "MFC Version 9.0" �̉��ς��ꂽ�o�[�W����)�ƃ����N���A
-  �����N���ꂽ���҂��܂ތ������앨��Еz���鋖��^���܂��B
-  ���Ȃ��� "MFC" �ȊO�Ŏg���Ă��邷�ׂ�
-  �̃R�[�h�Ɋւ��Ă͑S�ʓI��GNU��ʌ��O���p�����_�񏑂ɏ]��Ȃ����
-  �Ȃ�܂���B���Ȃ������̃t�@�C�������ς����Ȃ�΁A���Ȃ��͂��̗�O
-  �����Ȃ��̃o�[�W�����̃t�@�C���Ɉ��������݂��邱�Ƃ��ł��܂����A��
-  ������`���͂���܂���B������O��݂������Ȃ���΁A���̗�O������
-  ���Ȃ��̃o�[�W��������͍폜���Ă��������B)
+  (  あるいは "MFC Version 9.0" と同じライセンスが適用された
+  "MFC Version 9.0" の改変されたバージョン)とリンクし、
+  リンクされた両者を含む結合著作物を頒布する許可を与えます。
+  あなたは "MFC" 以外で使われているすべて
+  のコードに関しては全面的にGNU一般公衆利用許諾契約書に従わなければ
+  なりません。あなたがこのファイルを改変したならば、あなたはこの例外
+  をあなたのバージョンのファイルに引き続き設けることもできますが、そ
+  うする義務はありません。もし例外を設けたくなければ、この例外条項を
+  あなたのバージョンからは削除してください。)
 */
 #if !defined(AFX_CWNDDIAGRAM_H__E5EA7615_628B_4059_BBA7_DD1DB661E133__INCLUDED_)
 #define AFX_CWNDDIAGRAM_H__E5EA7615_628B_4059_BBA7_DD1DB661E133__INCLUDED_
@@ -68,7 +68,7 @@ Copyright (C) 2006-2017 take-okm
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
-// CWndDiagram.h : �w�b�_�[ �t�@�C��
+// CWndDiagram.h : ヘッダー ファイル
 //
 
 #include "..\entDgr\CentDedDgrDia.h"
@@ -78,112 +78,112 @@ Copyright (C) 2006-2017 take-okm
 namespace ViewDiagram{
 	using namespace DcDrawLib::WinUtil ;
 /////////////////////////////////////////////////////////////////////////////
-// CWndDiagram �E�B���h�E
+// CWndDiagram ウィンドウ
 /**
  @brief
-�y�T�v�z
-	�_�C���O������`�悷��q�E�C���h�E�ł��B
-  CDcdDiagram �N���X���g���āA�N���C�A���g�̈�Ƀ_�C���O������`�悵�܂��B
+【概要】
+	ダイヤグラムを描画する子ウインドウです。
+  CDcdDiagram クラスを使って、クライアント領域にダイヤグラムを描画します。
 
-	���̃N���X�́ACDcdDiagram2,CDcdDiagram �I�u�W�F�N�g���܂��܂��B
-	���̃N���X�́ACDcdDiagram2,CDcdDiagram �I�u�W�F�N�g�̑��������Ƃ�
-	�`����s���܂��B
+	このクラスは、CDcdDiagram2,CDcdDiagram オブジェクトを包含します。
+	このクラスは、CDcdDiagram2,CDcdDiagram オブジェクトの属性をもとに
+	描画を行います。
 
 	<H4>
- �y�g�����P�|���I�Ɏq�E�C���h�E�𐶐�����z
+ 【使い方１－動的に子ウインドウを生成する】
 	</H4>
 
-	�P�D  �e�E�C���h�E�N���X�ł́A���̃N���X�̃C���X�^���X�𐶐����A
-	 Create() ���\�b�h�ŃE�C���h�E�iHWND�j�𐶐����Ă��������B
-	  ���̌�́A CWnd::ShowWindow() �E CWnd::UpdateWindow() 
-	�ŁA�q�E�C���h�E����ʏ�ɕ\�����Ă��������B@n
-	 �ʏ킱�̐����̎菇�́A�e�E�C���h�E�� OnCreate()(WM_CREATE) �ŁA
-	�s�����ƂɂȂ�܂��B
+	１．  親ウインドウクラスでは、このクラスのインスタンスを生成し、
+	 Create() メソッドでウインドウ（HWND）を生成してください。
+	  その後は、 CWnd::ShowWindow() ・ CWnd::UpdateWindow() 
+	で、子ウインドウを画面上に表示してください。@n
+	 通常この生成の手順は、親ウインドウの OnCreate()(WM_CREATE) で、
+	行うことになります。
 
-	�Q�D  setCentDedDgrDia() �ŁA�Ή�����w�_�C���O�����_�C���x�I�u�W�F�N�g��
-	this �̊֘A���m�����Ă��������B
+	２．  setCentDedDgrDia() で、対応する『ダイヤグラムダイヤ』オブジェクトと
+	this の関連を確立してください。
 
-	�R�D  readCdDedDispProp() �ŁA
-	�_�C���O�����̊e���̐F��t�H���g�̑������w�肵�ĉ������B
-	  �܂��A setVlineMode() �ŁA�r���̃��[�h��ݒ肵�Ă��������B
+	３．  readCdDedDispProp() で、
+	ダイヤグラムの各部の色やフォントの属性を指定して下さい。
+	  また、 setVlineMode() で、罫線のモードを設定してください。
 
-	�S�D  setZone_Dgr() �ŁA�E�C���h�E��ɕ\������_�C���O�����͈̔�
-	�i�X�N���[���ʒu�j���w�肵�ĉ������B
+	４．  setZone_Dgr() で、ウインドウ上に表示するダイヤグラムの範囲
+	（スクロール位置）を指定して下さい。
 	
-	�T�D  this �͂���ȍ~�A OnPaint() �ŁA
-	�w�_�C���O�����_�C���x CentDedDgrDia �I�u�W�F�N�g��
-	�i�[����Ă���_�C���̏������ƂɁA�E�C���h�E��
-	�_�C���O������`�悵�܂��B
+	５．  this はこれ以降、 OnPaint() で、
+	『ダイヤグラムダイヤ』 CentDedDgrDia オブジェクトに
+	格納されているダイヤの情報をもとに、ウインドウに
+	ダイヤグラムを描画します。
 	
 	<H4>
- �y�g�����Q�|CentDedDgrDia �̍X�V���z
+ 【使い方２－CentDedDgrDia の更新時】
 	</H4>
 
 	 <H5>
-	 CentDedDgrDia �I�u�W�F�N�g�̓��e���ω������ꍇ
+	 CentDedDgrDia オブジェクトの内容が変化した場合
 	 </H5>
 
-	onUpdateCentDedDgrDia() ���Ăяo���Ă��������B
-	  ���̊֐��́A �X�N���[���o�[�͈̔͂��œK�����A�E�C���h�E���ĕ`�悵��
-	�V�����_�C���̓��e���E�C���h�E�ɕ\�����܂��B
+	onUpdateCentDedDgrDia() を呼び出してください。
+	  この関数は、 スクロールバーの範囲を最適化し、ウインドウを再描画して
+	新しいダイヤの内容をウインドウに表示します。
 
 	 <H5>
-	   CentDedDgrDia �I�u�W�F�N�g�ɕ�܂����
-	�w�_�C���O������ԁx CentDedDgrRessya �I�u�W�F�N�g���ǉ��E�폜�E
-	�ύX���ꂽ�ꍇ
+	   CentDedDgrDia オブジェクトに包含される
+	『ダイヤグラム列車』 CentDedDgrRessya オブジェクトが追加・削除・
+	変更された場合
 	 </H5>
 
-	   onUpdateCentDedDgrRessya() ���Ăяo���Ă��������B
-	  ���̊֐��́A�E�C���h�E���ĕ`�悵�āA�V�����_�C���̓��e���E�C���h�E��
-	�\�����܂��B
+	   onUpdateCentDedDgrRessya() を呼び出してください。
+	  この関数は、ウインドウを再描画して、新しいダイヤの内容をウインドウに
+	表示します。
 
 	<H4>
- �y�g�����R�|�e�E�C���h�E�j���z
+ 【使い方３－親ウインドウ破棄】
 	</H4>
 	
- �P�D  �e�E�C���h�E���j�����ꂽ�Ƃ��i�e�E�C���h�E�� WM_DESTROY/OnDestroy() �j
-	�ł́A���̃I�u�W�F�N�g�ɑ΂��� CWnd::DestroyWindow() ���Ăяo����
-	CWndDcdGrid �� HWND ��j�����Ă���A���� CWndDcdGrid �I�u�W�F�N�g��
-	�j�����Ă��������B
+ １．  親ウインドウが破棄されたとき（親ウインドウの WM_DESTROY/OnDestroy() ）
+	では、このオブジェクトに対して CWnd::DestroyWindow() を呼び出して
+	CWndDcdGrid の HWND を破棄してから、この CWndDcdGrid オブジェクトを
+	破棄してください。
 
 
  */
 class CWndDiagram : public CWnd
 {
 // ********************************
-//	�C���i�[�^�C�v
+//	インナータイプ
 // ********************************
 public:
 	typedef CWnd	super ;
 private:
 	// ********************************
-	///@name	���
+	///@name	包含
 	// ********************************
 	///@{
 	/**
-		�w�_�C���O�����G���e�B�e�B�N���X�Q�x�̑��������ƂɁA IfDcdTarget 
-		�I�u�W�F�N�g�Ɂw�_�C���O�����x��`�悵�܂��B
+		『ダイヤグラムエンティティクラス群』の属性をもとに、 IfDcdTarget 
+		オブジェクトに『ダイヤグラム』を描画します。
 	
-		���̃I�u�W�F�N�g�̔j���̐Ӗ��́Athis�ɂ���܂��B
-		�R���X�g���N�^�Ő����E�f�X�g���N�^�łŔj�����܂��B
+		このオブジェクトの破棄の責務は、thisにあります。
+		コンストラクタで生成・デストラクタでで破棄します。
 	*/
 	CDcdDiagram2*	m_pCDcdDiagram ;
 	///@}
 
 	// --------------------------------
-	///@name �����f�[�^
+	///@name 内部データ
 	// --------------------------------
 	///@{
 	/**
-		�����l�͋U�ł��B
-		�ŏ��� onUpdateCentDedDgrDia() �ŁA 
-		.ini �t�@�C������A�X�N���[���ʒu��
-		�r���̐ݒ��ǂݍ��񂾂��Ƃ́A�^�ƂȂ�܂��B
+		初期値は偽です。
+		最初の onUpdateCentDedDgrDia() で、 
+		.ini ファイルから、スクロール位置と
+		罫線の設定を読み込んだあとは、真となります。
 	 */
 	bool m_bReadCWndDiagramDefault ;
 
 	/**
-		�X�N���[���o�[����
+		スクロールバー属性
 	*/
 	CdScrollbarProp	m_CdScrollbarPropX ;
 	/** @see m_CdScrollbarPropX */
@@ -192,76 +192,76 @@ private:
 	///@}
  protected:
 	// --------------------------------
-	///@name �����֐�
+	///@name 下請関数
 	// --------------------------------
 	///@{
 	/**
-		�����l�𐳋K�����܂��B
-		�ΏۂƂȂ�̂́A�ȉ��̑����ł��B
+		属性値を正規化します。
+		対象となるのは、以下の属性です。
 	
 		- m_pCDcdDiagram->m_zonexyZone_Dgr 
-		(m_pCentDedDgrDia->Zone() �̓����ɂȂ�悤�ɐ��K�����܂��B)
+		(m_pCentDedDgrDia->Zone() の内側になるように正規化します。)
 	
 	 @return
-		���炩�̒l��ύX�����ꍇ�͐^�ł��B
+		何らかの値を変更した場合は真です。
 	 */
 	virtual bool update_adjustProp() ;
 
 	/**
-		�E�C���h�E��̃R���g���[�����A���݂̏󋵂ɍ��킹��
-		�X�V���܂��B
+		ウインドウ上のコントロールを、現在の状況に合わせて
+		更新します。
 	
-		m_pCDcdDiagram �́A�_�C���O�����̕\���ʒu�̕ύX��
-		���킹�āA�E�C���h�E���X�N���[�����܂��B
+		m_pCDcdDiagram の、ダイヤグラムの表示位置の変更に
+		合わせて、ウインドウをスクロールします。
 
-		�X�N���[���o�[���A
+		スクロールバーを、
 		m_pCDcdDiagram->m_zonexyZone_Dgr 
-		�ɂ��킹�Ē������܂��B
+		にあわせて調整します。
 	 */
 	virtual void update_updateScreen() ;
 	///@}
 protected:
 	// --------------------------------
-	///@name MFC���b�Z�[�W�n���h���̉����֐�
+	///@name MFCメッセージハンドラの下請関数
 	// --------------------------------
 	///@{
 	/**
-		OnLButtonDblClk() �̉����֐��ł��B
+		OnLButtonDblClk() の下請関数です。
 
-		point ����Ԑ���ɂ���΁A�����\�r���[���J���A
-		�����\�r���[�̃t�H�[�J�X�� point ���w���Ă���
-		��ԁE�w�����Ɉړ������܂��B
+		point が列車線上にあれば、時刻表ビューを開き、
+		時刻表ビューのフォーカスを point が指している
+		列車・駅時刻に移動させます。
 	@param point [in]
-		�}�E�X�J�[�\���̍��W���w�肵�Ă��������B
-		���W�́A�N���C�A���g�̈�Ŏw�肵�Ă��������B
+		マウスカーソルの座標を指定してください。
+		座標は、クライアント領域で指定してください。
 	@return 
-		-	1 ;	//	�����\�r���[�ֈړ����܂���
-		-	-1 ;	//	point ����Ԑ���ɂ���܂���B
-		-	-2 ;	//	�_�C���O�����r���[�ɑΉ����� 
-				CentDedDia ��������܂���B
-		-	-3 ;	//	�����\�r���[���J���̂Ɏ��s���܂����B
+		-	1 ;	//	時刻表ビューへ移動しました
+		-	-1 ;	//	point が列車線上にありません。
+		-	-2 ;	//	ダイヤグラムビューに対応する 
+				CentDedDia が見つかりません。
+		-	-3 ;	//	時刻表ビューを開くのに失敗しました。
 
 	*/
 	int OnLButtonDblClk_openJikokuhyouView( CPoint point) ;
 	/**
-		OnLButtonDblClk() �̉����֐��ł��B
+		OnLButtonDblClk() の下請関数です。
 
-		point ���A�����̉w���̈�ɂ���΁A
-		�w�r���[���J���܂��B
-		�܂��Apoint �̒����̗�Ԑ��̉w�́A
-		�w�̃v���p�e�B�_�C�A���O���J���܂��B
+		point が、左側の駅名領域にあれば、
+		駅ビューを開きます。
+		また、point の直下の列車線の駅の、
+		駅のプロパティダイアログを開きます。
 	@param point [in]
-		�}�E�X�J�[�\���̍��W���w�肵�Ă��������B
-		���W�́A�N���C�A���g�̈�Ŏw�肵�Ă��������B
+		マウスカーソルの座標を指定してください。
+		座標は、クライアント領域で指定してください。
 	@return 
-		-	1 ;	//	�w�̃v���p�e�B�_�C�A���O���J���܂��B
+		-	1 ;	//	駅のプロパティダイアログを開きます。
 
 	*/
 	int OnLButtonDblClk_openDlgEkiProp( CPoint point) ;
 	///@}
 public:
 	// ********************************
-	///@name	CDcdDiagram-�֘A
+	///@name	CDcdDiagram-関連
 	// ********************************
 	///@{
 	CentDedDgrDia* getCentDedDgrDia() ;
@@ -269,47 +269,47 @@ public:
 	///@}
 public:
 	// ********************************
-	///@name CDcdDiagram-����-CdDedDispProp �ɂ͂Ȃ�����
+	///@name CDcdDiagram-属性-CdDedDispProp にはないもの
 	// ********************************
 	///@{
 	virtual bool	getDisplayRessyabangou()const ;
 
 	/**
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	*/
 	virtual int setDisplayRessyabangou( bool value ) ;
 
 	virtual bool	getDisplayRessyamei()const ;
 	/**
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	*/
 	virtual int setDisplayRessyamei( bool value ) ;
 
 	CdDcdPosXy	getPosDgr()const ;
 
 	/** @return 
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	*/
 	int setPosDgr( CdDcdPosXy value );
 
 	double getDcdPerDgrX()const ;
 
 	/** @return 
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	*/
 	int setDcdPerDgrX( double value ) ;
 
 	double getDcdPerDgrY()const ;
 
 	/** @return 
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	*/
 	int setDcdPerDgrY( double value ) ;
 
@@ -318,86 +318,86 @@ public:
 
 	/**
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	*/
 	virtual int setVlineMode( int value ) ;
 
 	/**
 		m_bDisplayRessyasenKudari , m_bDisplayRessyasenNobori 
-		�̒l���擾���܂��B
+		の値を取得します。
 	 @param eRessyahoukou [in]
-		��ԕ������w�肵�Ă��������B
-		- Ressyahoukou_Kudari ;	//	������ (m_bDisplayRessyasenKudari)
-		- Ressyahoukou_Nobori ; //	����� (m_bDisplayRessyasenNobori)
+		列車方向を指定してください。
+		- Ressyahoukou_Kudari ;	//	下り列車 (m_bDisplayRessyasenKudari)
+		- Ressyahoukou_Nobori ; //	上り列車 (m_bDisplayRessyasenNobori)
 	 @return 
-		- true ;	//	��Ԑ���\������
-		- false ;	//	��Ԑ���\�����Ȃ�
+		- true ;	//	列車線を表示する
+		- false ;	//	列車線を表示しない
 	 */
 	virtual bool getDisplayRessyasen(  ERessyahoukou eRessyahoukou )const ;
 	
 	/**
 		m_bDisplayRessyasenKudari , m_bDisplayRessyasenNobori 
-		�̒l��ݒ肵�܂��B
+		の値を設定します。
 	 @param eRessyahoukou [in]
-		��ԕ������w�肵�Ă��������B
-		- Ressyahoukou_Kudari ;	//	������ (m_bDisplayRessyasenKudari)
-		- Ressyahoukou_Nobori ; //	����� (m_bDisplayRessyasenNobori)
+		列車方向を指定してください。
+		- Ressyahoukou_Kudari ;	//	下り列車 (m_bDisplayRessyasenKudari)
+		- Ressyahoukou_Nobori ; //	上り列車 (m_bDisplayRessyasenNobori)
 	 @param value [in]
-		- true ;	//	��Ԑ���\������
-		- false ;	//	��Ԑ���\�����Ȃ�
+		- true ;	//	列車線を表示する
+		- false ;	//	列車線を表示しない
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	 */
 	virtual int setDisplayRessyasen( ERessyahoukou eRessyahoukou , 
 		bool value ) ;
 	
 	/**
 		CDcdDiagram::m_eStopMarkDraw 
-		�̒l���擾���܂��B
+		の値を取得します。
 	 @return
-		- StopMarkDraw_Not  ��ԋL����`�悵�܂���B  
-		- StopMarkDraw_BriefStop  �Z���Ԓ�Ԃ̉w�ɁA��ԋL����`�悵�܂��B  
+		- StopMarkDraw_Not  停車記号を描画しません。  
+		- StopMarkDraw_BriefStop  短時間停車の駅に、停車記号を描画します。  
 	*/
 	virtual CDcdDiagram::EStopMarkDraw	getStopMarkDraw()const ;
 
 	/**
 		CDcdDiagram::m_eStopMarkDraw 
-		�̒l��ݒ肵�܂��B
+		の値を設定します。
 	 @param value [in]
-		- StopMarkDraw_Not  ��ԋL����`�悵�܂���B  
-		- StopMarkDraw_BriefStop  �Z���Ԓ�Ԃ̉w�ɁA��ԋL����`�悵�܂��B  
+		- StopMarkDraw_Not  停車記号を描画しません。  
+		- StopMarkDraw_BriefStop  短時間停車の駅に、停車記号を描画します。  
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	*/
 	virtual int setStopMarkDraw( CDcdDiagram::EStopMarkDraw value ) ;
 
 	/**
-		���̃N���X���T�|�[�g����A
-		�c�r�̊Ԋu�̐ݒ�̑I�������擾���邱�Ƃ��ł��܂��B
+		このクラスがサポートする、
+		縦罫の間隔の設定の選択肢を取得することができます。
 	 @param pContVLINE [out]
-		���̊֐��͂��̃R���e�i�ɁA�c�r�̊Ԋu�̐ݒ���������݂܂��B
-		�R���e�i������܂ŕێ����Ă����v�f�͔j�����܂��B
-		���̃R���e�i�̃C���f�N�X�́Am_idxVlineMode �ɑΉ����܂��B
-		\n�s�v�ł���� NULL �ł����܂��܂���B
+		この関数はこのコンテナに、縦罫の間隔の設定を書き込みます。
+		コンテナがそれまで保持していた要素は破棄します。
+		このコンテナのインデクスは、m_idxVlineMode に対応します。
+		\n不要であれば NULL でもかまいません。
 	 @return
-		�I�����̐���Ԃ��܂��B	
+		選択肢の数を返します。	
 	 */
 	virtual int getVlineChoices( Mui<CDcdDiagram::VLINE>* pContVLINE ) ;
 	
 	// ********************************
-	///@name	CDcdDiagram-����
+	///@name	CDcdDiagram-操作
 	// ********************************
 	///@{
 	/**
-		CdDedDispProp �I�u�W�F�N�g�̑�������A 
-		�_�C���O�����̊e���̐F��t�H���g�̑��������肵�܂��B
+		CdDedDispProp オブジェクトの属性から、 
+		ダイヤグラムの各部の色やフォントの属性を決定します。
 	
-		�܂��A�E�C���h�E�̍ĕ`����s�킹�܂��B
+		また、ウインドウの再描画を行わせます。
 	
-		���̃��\�b�h���ݒ肷�鑮���́Am_pCDcdDiagram �̈ȉ��̂��̂ł��B
+		このメソッドが設定する属性は、m_pCDcdDiagram の以下のものです。
 	
 		- CdFontProp	m_fontpropDiaRessyaFont ;
 		- COLORREF	m_colorDiaMojiColor ;
@@ -408,61 +408,61 @@ public:
 		- int m_iDiaRessyajouhouHyoujiEkiOrderNobori ;
 		
 	 @param value [in]
-		CdDedDispProp �I�u�W�F�N�g���w�肵�ĉ������B
+		CdDedDispProp オブジェクトを指定して下さい。
 	 @return
-		����������0�ȏ�A�G���[�Ȃ畉�̐��ł��B
-		�A���A����ł� 0 �����Ԃ��܂���B
+		成功したら0以上、エラーなら負の数です。
+		但し、現状では 0 しか返しません。
 	 */	
 	virtual int readCdDedDispProp( const CdDedDispProp& value ) ;
 	
 	/**
-		���̃N���X���`����s���̈�̍��W���A
-	 	�w�_�C���O�����G���e�B�e�B���W�n�x�Ŏ擾���܂��B
-		���̒l�́Am_posDgr�Em_dwDcdPerDgrX�Em_dwDcdPerDgrY ����
-		���o����܂��B
+		このクラスが描画を行う領域の座標を、
+	 	『ダイヤグラムエンティティ座標系』で取得します。
+		この値は、m_posDgr・m_dwDcdPerDgrX・m_dwDcdPerDgrY から
+		導出されます。
 	@return 
-		���̃N���X���`����s���̈�̍��W��
-		�w�_�C���O�����G���e�B�e�B���W�n�x�ŕԂ��܂��B
+		このクラスが描画を行う領域の座標を
+		『ダイヤグラムエンティティ座標系』で返します。
 	@attention
-		pIfDcdTarget �ւ̃_�C���O�����\�����s�\�ȏꍇ�A
-		�߂�l��getX().getSize() , getY().getSize() �̂����ꂩ��
-		0�ɂȂ�܂��B
+		pIfDcdTarget へのダイヤグラム表示が不可能な場合、
+		戻り値のgetX().getSize() , getY().getSize() のいずれかが
+		0になります。
 	*/
 	virtual CdDcdZoneXy	getZone_Dgr()const ;
 
 	/**
-		���̃N���X���`����s���̈�̍��W���A
-	 	�w�_�C���O�����G���e�B�e�B���W�n�x�Őݒ肵�܂��B
-		���̒l�́Am_posDgr�Em_dwDcdPerDgrX�Em_dwDcdPerDgrY ��
-		���Z�̂����Őݒ肳��܂��B
+		このクラスが描画を行う領域の座標を、
+	 	『ダイヤグラムエンティティ座標系』で設定します。
+		この値は、m_posDgr・m_dwDcdPerDgrX・m_dwDcdPerDgrY に
+		換算のうえで設定されます。
 	@param value [in]
-		���̃N���X���`����s���̈�̍��W��
-		�w�_�C���O�����G���e�B�e�B���W�n�x�Ŏw�肵�Ă��������B
+		このクラスが描画を行う領域の座標を
+		『ダイヤグラムエンティティ座標系』で指定してください。
 
-		�_�C���O������ pIfDcdTarget ���ɕ`��ł��Ȃ��ꍇ�́A
-		setZone_Dgr() �͓��삵�܂���B
+		ダイヤグラムが pIfDcdTarget 内に描画できない場合は、
+		setZone_Dgr() は動作しません。
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	 */
 	virtual int setZone_Dgr( const CdDcdZoneXy& value ) ;
 	
 	/**
-		�E�C���h�E�T�C�Y�ύX���̓�����擾���܂��B
+		ウインドウサイズ変更時の動作を取得します。
 	@return 
-		- false:�\���͈͂�ύX(OuDia Ver.1.00.04 ����)
-		- true: �\���͈͂�ύX���Ȃ�(OuDia Ver.1.00.04 �݊�)
+		- false:表示範囲を変更(OuDia Ver.1.00.04 より後)
+		- true: 表示範囲を変更しない(OuDia Ver.1.00.04 互換)
 	*/
 	bool getKeepZoneDgrOnSize()const ;
 
 	/**
-		�E�C���h�E�T�C�Y�ύX���̓����ݒ肵�܂��B
+		ウインドウサイズ変更時の動作を設定します。
 	@param value [in] 
-		- false:�\���͈͂�ύX(OuDia Ver.1.00.04 ����)
-		- true: �\���͈͂�ύX���Ȃ�(OuDia Ver.1.00.04 �݊�)
+		- false:表示範囲を変更(OuDia Ver.1.00.04 より後)
+		- true: 表示範囲を変更しない(OuDia Ver.1.00.04 互換)
 	@return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	*/
 	int setKeepZoneDgrOnSize( bool value );
 	
@@ -470,70 +470,70 @@ public:
 	
 	
 	// ********************************
-	///@name	CDcdDiagrem-����
+	///@name	CDcdDiagrem-操作
 	// ********************************
 	///@{
 	///@}
 	// ********************************
-	///@name	CDcdDiagrem2-����
+	///@name	CDcdDiagrem2-属性
 	// ********************************
 	///@{
 	bool getHideIppanekiEkimei()const ;
 
 	/**
 	 @return
-		���������� 0 �ȏ�A�G���[�Ȃ畉�̐��ł��B
-		-	1 ;	//	�l���ύX����A�E�C���h�E���ĕ`�悳��܂����B
+		成功したら 0 以上、エラーなら負の数です。
+		-	1 ;	//	値が変更され、ウインドウが再描画されました。
 	*/
 	int setHideIppanekiEkimei( bool value )  ;
 	///@}
 	// ********************************
-	///@name	CDcdDiagrem2-����
+	///@name	CDcdDiagrem2-操作
 	// ********************************
 	///@{
 	/**
-		�E�C���h�E���ŁA�_�C���O������`�悷��̈�̑傫�������߂܂��B
-		�P�ʂ́A IfDcdTarget ��̍��W�ł��B
+		ウインドウ内で、ダイヤグラムを描画する領域の大きさを求めます。
+		単位は、 IfDcdTarget 上の座標です。
 	 @return
-		�_�C���O�����̕`��̈��Ԃ��܂��B
-		���̒l�� X,Y �����ꂩ�̃T�C�Y��0�ȉ��̏ꍇ�A
-		�_�C���O�����̕`��͂ł��܂���B
+		ダイヤグラムの描画領域を返します。
+		この値の X,Y いずれかのサイズが0以下の場合、
+		ダイヤグラムの描画はできません。
 	 */
 	virtual CdDcdZoneXy calcDiagramZoneDcd()const ;
 	///@}
 	// ********************************
-	///@name	CWndDiagram-���
+	///@name	CWndDiagram-包含
 	// ********************************
 	///@{
 	CDcdDiagram2* getCDcdDiagram() ;
 	///@}
 
 	// ********************************
-	///@name	CWndDiagram-�\�z
+	///@name	CWndDiagram-構築
 	// ********************************
 	///@{
 	/**
-		�E�C���h�E��HWND�𐶐����܂��B
+		ウインドウのHWNDを生成します。
 	 @param rect [in]
-		�E�C���h�E�̃T�C�Y�ƈʒu���w�肵�܂��B
-		CRect �I�u�W�F�N�g�܂��� RECT �\���̂��w��ł��܂��B
+		ウインドウのサイズと位置を指定します。
+		CRect オブジェクトまたは RECT 構造体を指定できます。
 	 @param pParentWnd [in]
-		�R���g���[���̐e�E�B���h�E (CDialog�̏ꍇ������) ���w�肵�܂��B
-		NULL �͎w��ł��܂���B
+		コントロールの親ウィンドウ (CDialogの場合が多い) を指定します。
+		NULL は指定できません。
 	 @param nID [in]
-		�R���g���[���� ID ���w�肵�܂��B
+		コントロールの ID を指定します。
 	 */
 	BOOL Create( const RECT& rect, CWnd* pParentWnd, UINT nID = 0 );
 
 	/**
-		�T�C�Y�O�ŁA�E�C���h�E��HWND�𐶐����܂��B
-		�e�E�C���h�E�̃T�C�Y�����ƂɈʒu�����肷��ꍇ�ɂ́A
-		��������g�����Ƃ��ł��܂��B
+		サイズ０で、ウインドウのHWNDを生成します。
+		親ウインドウのサイズをもとに位置を決定する場合には、
+		こちらを使うことができます。
 	 @param pParentWnd [in]
-		�R���g���[���̐e�E�B���h�E (CDialog�̏ꍇ������) ���w�肵�܂��B
-		NULL �͎w��ł��܂���B
+		コントロールの親ウィンドウ (CDialogの場合が多い) を指定します。
+		NULL は指定できません。
 	 @param nID [in]
-		�R���g���[���� ID ���w�肵�܂��B
+		コントロールの ID を指定します。
 	 */
 	BOOL Create( CWnd* pParentWnd, UINT nID  = 0 );
 	///@}
@@ -541,52 +541,52 @@ public:
 	///@}
 
 	// ********************************
-	///@name	CWndDiagram-����
+	///@name	CWndDiagram-操作
 	// ********************************
 	///@{
 	/**
-		�N���X���[�U�[�́A
-		 m_pCentDedDgrDia �I�u�W�F�N�g�̓��e���X�V�����Ƃ��ɁA
-		onUpdateCentDedDgrDia() ���Ăяo���Ă��������B
-		  ���̊֐��́A �X�N���[���o�[�͈̔͂��œK�����A�E�C���h�E���ĕ`�悵��
-		�V�����_�C���̓��e���E�C���h�E�ɕ\�����܂��B
+		クラスユーザーは、
+		 m_pCentDedDgrDia オブジェクトの内容を更新したときに、
+		onUpdateCentDedDgrDia() を呼び出してください。
+		  この関数は、 スクロールバーの範囲を最適化し、ウインドウを再描画して
+		新しいダイヤの内容をウインドウに表示します。
 	 */
 	virtual void onUpdateCentDedDgrDia() ;
 	
 	/**
-		�N���X���[�U�[�́A
-		   CentDedDgrDia �I�u�W�F�N�g�ɕ�܂����
-		�w�_�C���O������ԁx CentDedDgrRessya �I�u�W�F�N�g���ǉ��E�폜�E
-		�ύX���ꂽ�ꍇ
-		   onUpdateCentDedDgrRessya() ���Ăяo���Ă��������B
-		  ���̊֐��́A�E�C���h�E���ĕ`�悵�āA�V�����_�C���̓��e���E�C���h�E��
-		�\�����܂��B
+		クラスユーザーは、
+		   CentDedDgrDia オブジェクトに包含される
+		『ダイヤグラム列車』 CentDedDgrRessya オブジェクトが追加・削除・
+		変更された場合
+		   onUpdateCentDedDgrRessya() を呼び出してください。
+		  この関数は、ウインドウを再描画して、新しいダイヤの内容をウインドウに
+		表示します。
 	 */
 	virtual void onUpdateCentDedDgrRessya() ;
 	///@}
 
 // ----------------------------------------------------------------
-// �R���X�g���N�V����
+// コンストラクション
 public:
 	CWndDiagram();
 
-// �A�g���r���[�g
+// アトリビュート
 public:
 
-// �I�y���[�V����
+// オペレーション
 public:
 
-// �I�[�o�[���C�h
-	// ClassWizard �͉��z�֐��̃I�[�o�[���C�h�𐶐����܂��B
+// オーバーライド
+	// ClassWizard は仮想関数のオーバーライドを生成します。
 
 	//{{AFX_VIRTUAL(CWndDiagram)
 	//}}AFX_VIRTUAL
 
-// �C���v�������e�[�V����
+// インプリメンテーション
 public:
 	virtual ~CWndDiagram();
 
-	// �������ꂽ���b�Z�[�W �}�b�v�֐�
+	// 生成されたメッセージ マップ関数
 protected:
 	//{{AFX_MSG(CWndDiagram)
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
@@ -606,7 +606,7 @@ protected:
 /////////////////////////////////////////////////////////////////////////////
 
 //{{AFX_INSERT_LOCATION}}
-// Microsoft Visual C++ �͑O�s�̒��O�ɒǉ��̐錾��}�����܂��B
+// Microsoft Visual C++ は前行の直前に追加の宣言を挿入します。
 
 } //namespace ViewDiagram
 
