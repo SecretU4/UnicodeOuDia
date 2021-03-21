@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Static|Win32">
+      <Configuration>Release_Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B50D881D-5DC7-40B4-90FE-3DD6DDA524E2}</ProjectGuid>
+    <RootNamespace>DiagramEditLibPrj</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.31025.104</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\libs\DcDrawLib;..\..\libs\OuLib;..\..\libs\OuMfc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;..\..\libs\DcDrawLib;..\..\libs\OuLib;..\..\libs\OuMfc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;..\..\libs\DcDrawLib;..\..\libs\OuLib;..\..\libs\OuMfc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcdCd.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CconvDcDrawProp.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdBrushProp.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdColorProp.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\cddcdfreelineprop.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdDrawTextFormat.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\cddrawtextprop.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdFontProp.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdPenProp.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\DcDrawProp.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvContentPosToTarget.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvContentPosToTargetXy.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZoneXy.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone_DcdZone.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone_PosOrgAndRate.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CdDcdPosXy.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CdDcdSizeXy.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CdDcdZone.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CdDcdZoneXy.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CLineFunc.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\DcdType.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\Pos.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CaDcdGrid_PageSelector.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGrid.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridCell.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridXBorder.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridXColumn.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridYBorder.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridYColumn.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\DcdGrid.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CBoxSelect.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CFocus.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CPropStack.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CRandomSelect.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CSelect.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CSelectCell.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CWndDcdGrid.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CXDcdGrid.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CXDcdGrid_ZoneCacheTemp.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\WndDcdGrid3.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDrawLib.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDrawMfc\CDcdTargetMfcPrintInfo.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDrawMfc\DcDrawMfc.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CaContentPosToDcdTarget_Dim.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CaDcdTargetClip.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CaDcdTargetItemPosition.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CconvContentPosToDcdTarget.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CConverter_WinGdi.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcDeviceUnitSizeX.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcDeviceUnitSizeY.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdFillrect.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdFillrectRop.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdFreeLine.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdLine.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdRectangle.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTarget.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetCompatibleBitmap.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetGetDC.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetOnPaint.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetPrinter.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdText.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTextbox.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTextboxV3.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CdDeviceUnitSize.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CdWinGdi_DrawText_Format.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CGdiCache.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CGdiHBrushHolder.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CGdiHFontHolder.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CGdiHPenHolder.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CVerticalTextElement.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CVerticalTextElementBuilder.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\DcDraw.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\IfDcDraw.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\IfDcdTarget.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\print\CaDcdTargetZoomDisplay.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\print\Print.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\WinUtil\CconvWinUser.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\WinUtil\CdScrollbarProp.h" />
+    <ClInclude Include="..\..\libs\DcDrawLib\WinUtil\WinUtil.h" />
+    <ClInclude Include="..\..\libs\OuLib\dir\Dir.h" />
+    <ClInclude Include="..\..\libs\OuLib\dir\Directries.h" />
+    <ClInclude Include="..\..\libs\OuLib\logmsg\logmsg.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMuCast.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMui.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMuiFilter.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMuiSelect.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMup.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMuPtref.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMup_list.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMup_vector.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CChildBase.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMuiCopied.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMuiCopiedParent.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMuiOu.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMuiOuParent.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMup_deque.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMup_list.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMup_vector.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CParentBase.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\Mu.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\Mui.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\Mup.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsMu\NsMu.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsOu\dynamic_castOu.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsOu\NsOu.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsOu\Ou.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuBase.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuHolder.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuHolderBase.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuNew.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuStatic.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsPropEditUi2\CPropEditUi2.h" />
+    <ClInclude Include="..\..\libs\OuLib\NsPropEditUi2\NsPropEditUi2.h" />
+    <ClInclude Include="..\..\libs\OuLib\OuLib.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CConnectedStringCompress.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CdConnectedString.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CdConnectedString2.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CdFilenameStr.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CEnumToString.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CStrCharSizeMb.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CConvCsvDocument.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CdCsvCell.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CdCsvDocument.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CdCsvRow.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CsvDocument.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CConvNodeContainer.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CDirectory.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CInnameIndexContainer.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CNode.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CNodeContainer.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CPropertyString.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\COuErrorInfo.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\COuErrorInfoContainer.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\ErrorInfo.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\IfNodeContainerConst.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\OuPropertiesText.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\PcharOutToString.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\Str.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\stringSplit.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\strLf.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\strprintf.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\strtoint.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\strToVector.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\strToWstr.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\tstring.h" />
+    <ClInclude Include="..\..\libs\OuLib\Str\vectorToFile.h" />
+    <ClInclude Include="..\..\libs\OuMfc\FrameLeftPane\CWndSplitBarV.h" />
+    <ClInclude Include="..\..\libs\OuMfc\FrameLeftPane\FrameLeftPane.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CDropTargetDoctmpl.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiApp.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiDoctmplDocstrAlone.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiMainFrm.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootDoc.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootDoctmpl.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootFrame.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootView.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiSubDoc.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiSubDoctmpl.h" />
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\hidemdi.h" />
+    <ClInclude Include="..\..\libs\OuMfc\MfcUtil\MfcUtil.h" />
+    <ClInclude Include="..\..\libs\OuMfc\OuDlg\CKeyinputSenderToModalDlg.h" />
+    <ClInclude Include="..\..\libs\OuMfc\OuDlg\OuDlg.h" />
+    <ClInclude Include="..\..\libs\OuMfc\OuMfc.h" />
+    <ClInclude Include="..\..\libs\OuMfc\TreeCtrl\CaTreeCtrl.h" />
+    <ClInclude Include="..\..\libs\OuMfc\TreeCtrl\CTreeCtrlContextMenu.h" />
+    <ClInclude Include="..\..\libs\OuMfc\TreeCtrl\TreeCtrl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CconvDcDrawProp.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvContentPosToTarget.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvContentPosToTargetXy.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZoneXy.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone_DcdZone.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone_PosOrgAndRate.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CLineFunc.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CaDcdGrid_PageSelector.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGrid.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridCell.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridXBorder.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridXColumn.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridYBorder.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridYColumn.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CBoxSelect.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CFocus.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CPropStack.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CRandomSelect.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CSelect.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CSelectCell.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CWndDcdGrid.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CXDcdGrid.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDrawMfc\CDcdTargetMfcPrintInfo.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CaContentPosToDcdTarget_Dim.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CaDcdTargetClip.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CaDcdTargetItemPosition.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CconvContentPosToDcdTarget.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CConverter_WinGdi.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcDeviceUnitSizeX.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcDeviceUnitSizeY.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdFillrect.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdFillrectRop.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdFreeLine.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdLine.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdRectangle.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTarget.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetCompatibleBitmap.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetGetDC.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetOnPaint.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetPrinter.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdText.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTextbox.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTextboxV3.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CdWinGdi_DrawText_Format.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CGdiCache.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CVerticalTextElementBuilder.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\print\CaDcdTargetZoomDisplay.cpp" />
+    <ClCompile Include="..\..\libs\DcDrawLib\WinUtil\CconvWinUser.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\dir\Directries.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\logmsg\LogMsg.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\CConnectedStringCompress.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\CdConnectedString2.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\CdFilenameStr.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\CStrCharSizeMb.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\CsvDocument\CConvCsvDocument.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\CsvDocument\CdCsvDocument.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CConvNodeContainer.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CDirectory.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CInNameIndexContainer.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CNode.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CNodeContainer.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CPropertyString.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\COuErrorInfo.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\COuErrorInfoContainer.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\strLf.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\strprintf.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\strToWstr.cpp" />
+    <ClCompile Include="..\..\libs\OuLib\Str\vectorToFile.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\FrameLeftPane\CWndSplitBarV.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CDropTargetDoctmpl.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiApp.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiDoctmplDocstrAlone.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiMainFrm.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootDoc.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootDoctmpl.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootFrame.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootView.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiSubDoc.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiSubDoctmpl.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\MfcUtil\MfcUtil.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\OuDlg\CKeyinputSenderToModalDlg.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\TreeCtrl\CaTreeCtrl.cpp" />
+    <ClCompile Include="..\..\libs\OuMfc\TreeCtrl\CTreeCtrlContextMenu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

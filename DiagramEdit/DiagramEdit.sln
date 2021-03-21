@@ -1,14 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DiagramEdit", "DiagramEdit\DiagramEdit.vcproj", "{F3C4286C-FD52-4837-BE68-5741C667760F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B50D881D-5DC7-40B4-90FE-3DD6DDA524E2} = {B50D881D-5DC7-40B4-90FE-3DD6DDA524E2}
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DiagramEdit", "DiagramEdit\DiagramEdit.vcxproj", "{F3C4286C-FD52-4837-BE68-5741C667760F}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DiagramEdit_setup", "DiagramEdit_setup\DiagramEdit_setup.vdproj", "{1B6D9A2E-0415-4CA5-915D-8751D3042C35}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DiagramEditLibPrj", "DiagramEditLibPrj\DiagramEditLibPrj.vcproj", "{B50D881D-5DC7-40B4-90FE-3DD6DDA524E2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DiagramEditLibPrj", "DiagramEditLibPrj\DiagramEditLibPrj.vcxproj", "{B50D881D-5DC7-40B4-90FE-3DD6DDA524E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,5 +34,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4E82BA6-EFCD-486D-B033-E808AEABA9C7}
 	EndGlobalSection
 EndGlobal

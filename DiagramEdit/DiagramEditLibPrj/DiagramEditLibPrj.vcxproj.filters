@@ -1,0 +1,852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="DcDrawLib">
+      <UniqueIdentifier>{5d57f352-a0e9-410b-b60f-862f93f13a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DcDrawLib\DcdGrid">
+      <UniqueIdentifier>{f370b8e5-4135-4af1-9ed1-fde96cd4cc76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DcDrawLib\DcdGrid\WndDcdGrid3">
+      <UniqueIdentifier>{65fa3a3f-f9e4-4db6-9786-d76515a38d09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DcDrawLib\DcdCd">
+      <UniqueIdentifier>{f0d6f279-79a2-45db-897a-008aa00e1150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DcDrawLib\DcdCd\DcDrawProp">
+      <UniqueIdentifier>{661b728a-b404-4175-9bc2-d7e32e2bf6ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DcDrawLib\DcdCd\Pos">
+      <UniqueIdentifier>{5717606d-7fc2-4c4f-9dd9-336bb6a15a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DcDrawLib\DcDraw">
+      <UniqueIdentifier>{27cd7523-7298-4c18-8712-ef39ef88baaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DcDrawLib\DcDraw\Print">
+      <UniqueIdentifier>{d2f7b3be-39b1-4bb3-b80d-111cf4f6b8c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DcDrawLib\DcDrawMfc">
+      <UniqueIdentifier>{ac8abb50-1abb-494f-9b25-41a84ff66514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DcDrawLib\WinUtil">
+      <UniqueIdentifier>{02c62446-7ae8-4fe6-9f2d-4da569d977c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuMfc">
+      <UniqueIdentifier>{5f433ec3-083c-4ca7-aa3c-d9920885f841}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuMfc\FrameLeftPane">
+      <UniqueIdentifier>{e706fe55-d4c4-4f31-a36f-19049b5adcb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuMfc\Hidemdi">
+      <UniqueIdentifier>{db511308-7d45-4161-9b8c-2afb67015df1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuMfc\MfcUtil">
+      <UniqueIdentifier>{784ebec7-0f57-475b-9a9f-0aba1b34a378}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuMfc\OuDlg">
+      <UniqueIdentifier>{71abdf51-b96f-4ab3-b284-6431b175c9ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuMfc\TreeCtrl">
+      <UniqueIdentifier>{ab595bc5-e3fd-4041-b51b-9c437e88b533}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib">
+      <UniqueIdentifier>{5311eb00-bc3e-4c6e-a1d9-cf024b6b08ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib\dir">
+      <UniqueIdentifier>{1aa0f1fa-3813-46c0-be7e-3a885a9216d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib\logmsg">
+      <UniqueIdentifier>{415cb292-11dd-4f8f-8c7f-50ad34f09ae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib\NsMu">
+      <UniqueIdentifier>{02337fa2-e419-451c-835a-ce4e68aed670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib\NsOu">
+      <UniqueIdentifier>{8d31666f-51e6-4e95-abba-9519613150ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib\Str">
+      <UniqueIdentifier>{7465a5d1-0bfc-45f7-bf9a-4a76cdddd1d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib\Str\CsvDocument">
+      <UniqueIdentifier>{09ce7543-e9a7-4d7e-bace-06893ef1d7fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib\Str\OuPropertiesText">
+      <UniqueIdentifier>{7be3878a-043f-44a9-afe5-6118091c4f2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib\Str\OuPropertiesText\ErrorInfo">
+      <UniqueIdentifier>{d76fe5f9-3a02-4354-8a35-85f3357a1bed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OuLib\NsPropEditUi2">
+      <UniqueIdentifier>{48ab26b6-53d3-44da-9c79-7afb23d0fd02}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDrawLib.h">
+      <Filter>DcDrawLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CaDcdGrid_PageSelector.h">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGrid.h">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridCell.h">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridXBorder.h">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridXColumn.h">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridYBorder.h">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridYColumn.h">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\DcdGrid.h">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CBoxSelect.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CFocus.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CPropStack.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CRandomSelect.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CSelect.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CSelectCell.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CWndDcdGrid.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CXDcdGrid.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CXDcdGrid_ZoneCacheTemp.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\WndDcdGrid3.h">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcdCd.h">
+      <Filter>DcDrawLib\DcdCd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CconvDcDrawProp.h">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdBrushProp.h">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdColorProp.h">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\cddcdfreelineprop.h">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdDrawTextFormat.h">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\cddrawtextprop.h">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdFontProp.h">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CdPenProp.h">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\DcDrawProp.h">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvContentPosToTarget.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvContentPosToTargetXy.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone_DcdZone.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone_PosOrgAndRate.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZoneXy.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CdDcdPosXy.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CdDcdSizeXy.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CdDcdZone.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CdDcdZoneXy.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\CLineFunc.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\DcdType.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcdCd\Pos\Pos.h">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CaContentPosToDcdTarget_Dim.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CaDcdTargetClip.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CaDcdTargetItemPosition.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CconvContentPosToDcdTarget.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CConverter_WinGdi.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcDeviceUnitSizeX.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcDeviceUnitSizeY.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdFillrect.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdFillrectRop.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdFreeLine.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdLine.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdRectangle.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTarget.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetCompatibleBitmap.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetGetDC.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetOnPaint.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetPrinter.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdText.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTextbox.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CDcdTextboxV3.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CdDeviceUnitSize.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CdWinGdi_DrawText_Format.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CGdiCache.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CGdiHBrushHolder.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CGdiHFontHolder.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CGdiHPenHolder.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CVerticalTextElement.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\CVerticalTextElementBuilder.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\DcDraw.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\IfDcDraw.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\IfDcdTarget.h">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\print\CaDcdTargetZoomDisplay.h">
+      <Filter>DcDrawLib\DcDraw\Print</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDraw\print\Print.h">
+      <Filter>DcDrawLib\DcDraw\Print</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDrawMfc\CDcdTargetMfcPrintInfo.h">
+      <Filter>DcDrawLib\DcDrawMfc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\DcDrawMfc\DcDrawMfc.h">
+      <Filter>DcDrawLib\DcDrawMfc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\WinUtil\CconvWinUser.h">
+      <Filter>DcDrawLib\WinUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\WinUtil\CdScrollbarProp.h">
+      <Filter>DcDrawLib\WinUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\DcDrawLib\WinUtil\WinUtil.h">
+      <Filter>DcDrawLib\WinUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\OuMfc.h">
+      <Filter>OuMfc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\FrameLeftPane\CWndSplitBarV.h">
+      <Filter>OuMfc\FrameLeftPane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\FrameLeftPane\FrameLeftPane.h">
+      <Filter>OuMfc\FrameLeftPane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CDropTargetDoctmpl.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiApp.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiDoctmplDocstrAlone.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiMainFrm.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootDoc.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootDoctmpl.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootFrame.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootView.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiSubDoc.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\CHidemdiSubDoctmpl.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\Hidemdi\hidemdi.h">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\MfcUtil\MfcUtil.h">
+      <Filter>OuMfc\MfcUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\OuDlg\CKeyinputSenderToModalDlg.h">
+      <Filter>OuMfc\OuDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\OuDlg\OuDlg.h">
+      <Filter>OuMfc\OuDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\TreeCtrl\CaTreeCtrl.h">
+      <Filter>OuMfc\TreeCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\TreeCtrl\CTreeCtrlContextMenu.h">
+      <Filter>OuMfc\TreeCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuMfc\TreeCtrl\TreeCtrl.h">
+      <Filter>OuMfc\TreeCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\OuLib.h">
+      <Filter>OuLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\dir\Dir.h">
+      <Filter>OuLib\dir</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\dir\Directries.h">
+      <Filter>OuLib\dir</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\logmsg\logmsg.h">
+      <Filter>OuLib\logmsg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMuCast.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMui.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMuiFilter.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMuiSelect.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMup.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMup_list.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMup_vector.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CaMuPtref.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CChildBase.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMuiCopied.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMuiCopiedParent.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMuiOu.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMuiOuParent.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMup_deque.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMup_list.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CMup_vector.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\CParentBase.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\Mu.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\Mui.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\Mup.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsMu\NsMu.h">
+      <Filter>OuLib\NsMu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsOu\dynamic_castOu.h">
+      <Filter>OuLib\NsOu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsOu\NsOu.h">
+      <Filter>OuLib\NsOu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsOu\Ou.h">
+      <Filter>OuLib\NsOu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuBase.h">
+      <Filter>OuLib\NsOu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuHolder.h">
+      <Filter>OuLib\NsOu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuHolderBase.h">
+      <Filter>OuLib\NsOu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuNew.h">
+      <Filter>OuLib\NsOu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsOu\OuStatic.h">
+      <Filter>OuLib\NsOu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CConnectedStringCompress.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CdConnectedString.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CdConnectedString2.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CdFilenameStr.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CEnumToString.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CStrCharSizeMb.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\PcharOutToString.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\Str.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\stringSplit.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\strLf.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\strprintf.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\strtoint.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\strToVector.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\strToWstr.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\tstring.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\vectorToFile.h">
+      <Filter>OuLib\Str</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CConvCsvDocument.h">
+      <Filter>OuLib\Str\CsvDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CdCsvCell.h">
+      <Filter>OuLib\Str\CsvDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CdCsvDocument.h">
+      <Filter>OuLib\Str\CsvDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CdCsvRow.h">
+      <Filter>OuLib\Str\CsvDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\CsvDocument\CsvDocument.h">
+      <Filter>OuLib\Str\CsvDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CConvNodeContainer.h">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CDirectory.h">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CInnameIndexContainer.h">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CNode.h">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CNodeContainer.h">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\CPropertyString.h">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\IfNodeContainerConst.h">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\OuPropertiesText.h">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\COuErrorInfo.h">
+      <Filter>OuLib\Str\OuPropertiesText\ErrorInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\COuErrorInfoContainer.h">
+      <Filter>OuLib\Str\OuPropertiesText\ErrorInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\ErrorInfo.h">
+      <Filter>OuLib\Str\OuPropertiesText\ErrorInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsPropEditUi2\CPropEditUi2.h">
+      <Filter>OuLib\NsPropEditUi2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libs\OuLib\NsPropEditUi2\NsPropEditUi2.h">
+      <Filter>OuLib\NsPropEditUi2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CaDcdGrid_PageSelector.cpp">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGrid.cpp">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridCell.cpp">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridXBorder.cpp">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridXColumn.cpp">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridYBorder.cpp">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\CDcdGridYColumn.cpp">
+      <Filter>DcDrawLib\DcdGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CBoxSelect.cpp">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CFocus.cpp">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CPropStack.cpp">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CRandomSelect.cpp">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CSelect.cpp">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CSelectCell.cpp">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CWndDcdGrid.cpp">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdGrid\WndDcdGrid3\CXDcdGrid.cpp">
+      <Filter>DcDrawLib\DcdGrid\WndDcdGrid3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\DcDrawProp\CconvDcDrawProp.cpp">
+      <Filter>DcDrawLib\DcdCd\DcDrawProp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvContentPosToTarget.cpp">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvContentPosToTargetXy.cpp">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone_DcdZone.cpp">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZone_PosOrgAndRate.cpp">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CconvDcdPosOnZoneXy.cpp">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcdCd\Pos\CLineFunc.cpp">
+      <Filter>DcDrawLib\DcdCd\Pos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CaContentPosToDcdTarget_Dim.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CaDcdTargetClip.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CaDcdTargetItemPosition.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CconvContentPosToDcdTarget.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CConverter_WinGdi.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcDeviceUnitSizeX.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcDeviceUnitSizeY.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdFillrect.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdFillrectRop.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdFreeLine.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdLine.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdRectangle.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTarget.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetCompatibleBitmap.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetGetDC.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetOnPaint.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTargetPrinter.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdText.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTextbox.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CDcdTextboxV3.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CdWinGdi_DrawText_Format.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CGdiCache.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\CVerticalTextElementBuilder.cpp">
+      <Filter>DcDrawLib\DcDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDraw\print\CaDcdTargetZoomDisplay.cpp">
+      <Filter>DcDrawLib\DcDraw\Print</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\DcDrawMfc\CDcdTargetMfcPrintInfo.cpp">
+      <Filter>DcDrawLib\DcDrawMfc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\DcDrawLib\WinUtil\CconvWinUser.cpp">
+      <Filter>DcDrawLib\WinUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\FrameLeftPane\CWndSplitBarV.cpp">
+      <Filter>OuMfc\FrameLeftPane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CDropTargetDoctmpl.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiApp.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiDoctmplDocstrAlone.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiMainFrm.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootDoc.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootDoctmpl.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootFrame.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiRootView.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiSubDoc.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\Hidemdi\CHidemdiSubDoctmpl.cpp">
+      <Filter>OuMfc\Hidemdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\MfcUtil\MfcUtil.cpp">
+      <Filter>OuMfc\MfcUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\OuDlg\CKeyinputSenderToModalDlg.cpp">
+      <Filter>OuMfc\OuDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\TreeCtrl\CaTreeCtrl.cpp">
+      <Filter>OuMfc\TreeCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuMfc\TreeCtrl\CTreeCtrlContextMenu.cpp">
+      <Filter>OuMfc\TreeCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\dir\Directries.cpp">
+      <Filter>OuLib\dir</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\logmsg\LogMsg.cpp">
+      <Filter>OuLib\logmsg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\CConnectedStringCompress.cpp">
+      <Filter>OuLib\Str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\CdConnectedString2.cpp">
+      <Filter>OuLib\Str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\CdFilenameStr.cpp">
+      <Filter>OuLib\Str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\CStrCharSizeMb.cpp">
+      <Filter>OuLib\Str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\strLf.cpp">
+      <Filter>OuLib\Str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\strprintf.cpp">
+      <Filter>OuLib\Str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\strToWstr.cpp">
+      <Filter>OuLib\Str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\vectorToFile.cpp">
+      <Filter>OuLib\Str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\CsvDocument\CConvCsvDocument.cpp">
+      <Filter>OuLib\Str\CsvDocument</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\CsvDocument\CdCsvDocument.cpp">
+      <Filter>OuLib\Str\CsvDocument</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CConvNodeContainer.cpp">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CDirectory.cpp">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CInNameIndexContainer.cpp">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CNode.cpp">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CNodeContainer.cpp">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\CPropertyString.cpp">
+      <Filter>OuLib\Str\OuPropertiesText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\COuErrorInfo.cpp">
+      <Filter>OuLib\Str\OuPropertiesText\ErrorInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libs\OuLib\Str\OuPropertiesText\ErrorInfo\COuErrorInfoContainer.cpp">
+      <Filter>OuLib\Str\OuPropertiesText\ErrorInfo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
