@@ -1,26 +1,24 @@
-=================================================
-	OuDia ver 1.02.05 Source Code
-=================================================
+# OuDia ReadMe
 
-　このアーカイブは、OuDia のソースコードです。
+This repository is source code of *Oudia* - Win32 Application Software to draw a "Train Service Planning Diagram" based on a "Train Timetable" 
 
-＜1＞OuDiaについて
+## About OuDia
 
-　OuDia の概要・動作環境 につきましては、以下のマニュアルを参照してください。
+OuDia is Win32 Application Software to drow a **Train Service Planning Diagram** based on a **Train Timetable**.  
 
-	docs\index.html
+For overview and operating environment about *OuDia*, please refer to the [following manual](https://secretu4.github.io/UnicodeOuDia/).  
+If you want to go **original publisher site** of *OuDia*, you can visit [this site (Japanese)](http://take-okm.a.la9.jp/oudia/)
 
+## How to Build
 
-＜2＞ビルド方法
+To build *OuDia*, please see [OuDia_build.txt](DiagramEdit/OuDia_build.txt).
 
-  OuDia ビルド方法は、DiagrmaEdit\OuDia_build.txt をご覧ください。
+## Licence
 
+### English
 
-
-＜3＞利用許諾告知
-
-/*
-	OuDia - Win32 Application Software to draw a "Train Service Planning
+```
+    OuDia - Win32 Application Software to draw a "Train Service Planning
  Diagram" based on a "Train Timetable".
 
 Copyright (C) 2006-2017 take-okm
@@ -37,10 +35,12 @@ more details.
 
 You should have received a copy of the GNU General Public License along with
  this program. If not, see <http://www.gnu.org/licenses/>.
+```
 
-(訳: 
+### Japanese
 
-	OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
+``` 
+    OuDia - 列車時刻表をもとに、ダイヤグラムを描画するWin32アプリケーシ
 ョン。
 
 Copyright (C) 2006-2017 take-okm 
@@ -56,17 +56,14 @@ Copyright (C) 2006-2017 take-okm
 あなたはこのプログラムと共に、GNU 一般公衆利用許諾書のコピーを一部 受け取っ
 ているはずです。もし受け取っていなければ、<http://www.gnu.org/licenses/> を
 ご覧ください。
-
 )
-*/
+```
 
+## Licence agreement
 
+Please refer to the file below for the license agreement.
 
-◎使用許諾書は、以下のファイルをご覧ください。
-
-　GNU General Public License(GNU 一般公衆利用許諾書) 　gpl-3.0.txt
-　GNU General Public License(GNU 一般公衆利用許諾書)日本語訳 　gpl-3.0.ja.txt
-　GNU Free Documentation License(GNU フリー文書利用許諾契約書) 　fdl-1.3.txt
-　GNU Free Documentation License(GNU フリー文書利用許諾契約書)日本語訳　fdl-1.2.ja.txt
-
-
+* [GNU General Public License](docs/c91_siyoujouken/gpl-3.0.txt) or see [LICENSE file](LICENSE)
+* [GNU General Public License(GNU 一般公衆利用許諾書)日本語訳](docs/c91_siyoujouken/gpl-3.0.ja.txt)
+* [GNU Free Documentation License](docs/c91_siyoujouken/fdl-1.3.txt)
+* [GNU Free Documentation License(GNU フリー文書利用許諾契約書)日本語訳](docs/c91_siyoujouken/fdl-1.2.ja.txt)
