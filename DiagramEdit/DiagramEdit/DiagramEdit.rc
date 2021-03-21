@@ -801,14 +801,14 @@ END
 IDD_ROSEN_VIEW DIALOGEX 0, 0, 105, 160
 STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
 EXSTYLE WS_EX_CONTROLPARENT
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+FONT 9, "Source Han Sans", 0, 0, 0x1
 BEGIN
     CONTROL         "Tree1",IDC_TREE_ROSEN,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,1,1,82,128
 END
 
 IDD_RosenFileProp_Rosen DIALOGEX 0, 0, 151, 108
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_BORDER
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "路線名(&N)：",IDC_STATIC,6,10,34,8
     EDITTEXT        IDC_EDIT_RosenName,40,7,84,14,ES_AUTOHSCROLL
@@ -826,7 +826,7 @@ END
 
 IDD_RosenFileProp_FontColor DIALOGEX 0, 0, 248, 170
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "フォント設定(&F):",-1,6,7,46,8
     LTEXT           "時刻表ビュー 1,時刻表ビュー 2,時刻表ビュー 3,時刻表ビュー 4,時刻表ビュー 5,時刻表ビュー 6,時刻表ビュー 7,時刻表ビュー 8,時刻表ビュー 縦書き,ダイヤグラムビュー 駅名,ダイヤグラムビュー 時刻,ダイヤグラムビュー 列車,コメント",IDC_LIST_FONT_ITEMS,55,7,114,8,NOT WS_VISIBLE
@@ -844,7 +844,7 @@ END
 IDD_RosenFileProp DIALOGEX 0, 0, 263, 203
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "路線ファイルのプロパティ"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     CONTROL         "Tab1",IDC_TAB_MAIN,"SysTabControl32",WS_TABSTOP,2,1,259,181
     DEFPUSHBUTTON   "OK",IDOK,154,186,50,14
@@ -853,7 +853,7 @@ END
 
 IDD_RosenFileProp_Diagram DIALOGEX 0, 0, 188, 134
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "ダイヤグラム起点時刻(&L)：",IDC_STATIC,6,13,90,8
     EDITTEXT        IDC_EDIT_DiagramKitenJikoku,105,10,35,14,ES_AUTOHSCROLL
@@ -868,7 +868,7 @@ END
 IDD_EkiProp DIALOGEX 0, 0, 235, 116
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "駅のプロパティ"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "駅名(&A)：",IDC_STATIC,7,10,27,8
     EDITTEXT        IDC_EDIT_Ekimei,37,7,91,14,ES_AUTOHSCROLL
@@ -896,7 +896,7 @@ END
 IDD_RessyasyubetsuProp DIALOGEX 0, 0, 199, 182
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "列車種別のプロパティ"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "種別名(&N)：",IDC_STATIC,7,9,34,8
     EDITTEXT        IDC_EDIT_Syubetsumei,39,7,77,14,ES_AUTOHSCROLL
@@ -926,7 +926,7 @@ END
 IDD_DiaList DIALOG  0, 0, 187, 127
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "ダイヤ一覧"
-FONT 9, "ＭＳ Ｐゴシック"
+FONT 9, "Source Han Sans"
 BEGIN
     LTEXT           "ダイヤ",IDC_STATIC,7,7,20,8
     LISTBOX         IDC_LIST_Dia,7,17,120,88,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
@@ -944,7 +944,7 @@ END
 IDD_DiaProp DIALOGEX 0, 0, 187, 45
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "ダイヤのプロパティ"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "ダイヤ名(&N)：",IDC_STATIC,7,7,39,8
     EDITTEXT        IDC_EDIT_Name,7,23,110,14,ES_AUTOHSCROLL
@@ -956,7 +956,7 @@ END
 IDD_RessyaProp DIALOGEX 0, 0, 175, 124
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "列車のプロパティ"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "列車番号(&T)：",IDC_STATIC,12,10,40,8
     EDITTEXT        IDC_EDIT_Ressyabangou,53,7,40,14,ES_AUTOHSCROLL
@@ -976,7 +976,7 @@ END
 IDD_EkijikokuProp DIALOGEX 0, 0, 173, 94
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "駅時刻"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     GROUPBOX        "駅扱",IDC_STATIC,7,7,69,62
     CONTROL         "運行なし(&N)",IDC_RADIO_Ekiatsukai,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,18,50,10
@@ -997,7 +997,7 @@ END
 IDD_JikokuhyouViewProp DIALOGEX 0, 0, 147, 105
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "時刻表ビューのプロパティ"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "貼り付け移動量（分）(&P)：",IDC_STATIC,11,10,72,8
     EDITTEXT        IDC_EDIT_PasteZoubun,88,7,32,14,ES_AUTOHSCROLL
@@ -1011,7 +1011,7 @@ END
 IDD_PrintPageProp DIALOG  0, 0, 149, 93
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "印刷ページ設定"
-FONT 9, "ＭＳ Ｐゴシック"
+FONT 9, "Source Han Sans"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,18,72,50,14
     PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,80,72,50,14
@@ -1029,7 +1029,7 @@ END
 IDD_DiagramViewProp DIALOGEX 0, 0, 183, 130
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "ダイヤグラムビューのプロパティ"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "左端(時刻)(&L)：",IDC_STATIC,8,22,44,8
     EDITTEXT        IDC_EDIT_YokojikuPos,52,19,35,14,ES_AUTOHSCROLL
@@ -1059,7 +1059,7 @@ END
 IDD_DiaSaveSelect DIALOGEX 0, 0, 182, 104
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "保存するダイヤの選択"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     LTEXT           "ファイルに保存するダイヤ(&D) :",IDC_STATIC,7,7,106,10
     LISTBOX         IDC_LIST_Dia,7,17,120,76,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
@@ -1070,7 +1070,7 @@ END
 IDD_ModifyEkijikokuOperation2 DIALOGEX 0, 0, 258, 149
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "駅時刻変更"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     GROUPBOX        "駅扱",IDC_STATIC,7,7,183,44
     CONTROL         "変更する(&M)",IDC_CHECK_EkiatsukaiModify,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,19,52,10
@@ -1098,7 +1098,7 @@ IDD_OUJIKOKUHYOUCSV_EXPORT DIALOGEX 0, 0, 135, 64
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
 CAPTION "CSVへエクスポート"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+FONT 9, "Source Han Sans", 0, 0, 0x1
 BEGIN
     RTEXT           "出力する範囲 :",IDC_STATIC,7,10,44,8
     LTEXT           "本目(&F)から",IDC_STATIC,79,10,36,8
@@ -1115,7 +1115,7 @@ END
 IDD_AboutBoxGpl DIALOGEX 0, 0, 235, 158
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "OuDiaのﾊﾞｰｼﾞｮﾝ情報"
-FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+FONT 9, "Source Han Sans", 0, 0, 0x0
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,15,20,20
     LTEXT           "OuDia",IDC_STATIC,40,15,37,8,SS_NOPREFIX
