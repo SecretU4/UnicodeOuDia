@@ -126,6 +126,71 @@ std::wstring wstringOf( std::wstring strEs )
 	return ( strEs ) ;
 }
 
+// UTF-8 conversion helpers. These are deliberately separate from stringOf()
+// and wstringOf(), whose CP_ACP behavior is retained for legacy callers.
+bool utf8Of( const std::wstring& strEs , std::string* pstrUtf8 )
+{
+	if ( pstrUtf8 == NULL )
+	{
+		return false ;
+	}
+	pstrUtf8->clear() ;
+	if ( strEs.empty() )
+	{
+		return true ;
+	}
+	if ( strEs.size() > 0x7fffffff )
+	{
+		return false ;
+	}
+	int iBytes = WideCharToMultiByte( CP_UTF8 , WC_ERR_INVALID_CHARS ,
+		strEs.data() , (int)strEs.size() , NULL , 0 , NULL , NULL ) ;
+	if ( iBytes <= 0 )
+	{
+		return false ;
+	}
+	std::vector<char> szUtf8( iBytes ) ;
+	if ( WideCharToMultiByte( CP_UTF8 , WC_ERR_INVALID_CHARS ,
+		strEs.data() , (int)strEs.size() , &szUtf8[0] , iBytes ,
+		NULL , NULL ) != iBytes )
+	{
+		return false ;
+	}
+	pstrUtf8->assign( &szUtf8[0] , iBytes ) ;
+	return true ;
+}
+
+bool wstringFromUtf8( const std::string& strUtf8 , std::wstring* pstrEs )
+{
+	if ( pstrEs == NULL )
+	{
+		return false ;
+	}
+	pstrEs->clear() ;
+	if ( strUtf8.empty() )
+	{
+		return true ;
+	}
+	if ( strUtf8.size() > 0x7fffffff )
+	{
+		return false ;
+	}
+	int iChars = MultiByteToWideChar( CP_UTF8 , MB_ERR_INVALID_CHARS ,
+		strUtf8.data() , (int)strUtf8.size() , NULL , 0 ) ;
+	if ( iChars <= 0 )
+	{
+		return false ;
+	}
+	std::vector<wchar_t> szWide( iChars ) ;
+	if ( MultiByteToWideChar( CP_UTF8 , MB_ERR_INVALID_CHARS ,
+		strUtf8.data() , (int)strUtf8.size() , &szWide[0] , iChars ) != iChars )
+	{
+		return false ;
+	}
+	pstrEs->assign( &szWide[0] , iChars ) ;
+	return true ;
+}
+
 std::wstring wstringOf( const void* lpvEStr , int iESize ) 
 	//	ワイドかマルチバイトか分からない文字列をワイド文字列に変換します
 {
