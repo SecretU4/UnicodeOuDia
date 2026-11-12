@@ -71,6 +71,7 @@ Copyright (C) 2006-2017 take-okm
 /** @file */
 #include "stdafx.h"
 #include "CCellBuilder.h"
+#include "str/strToWstr.h"
 #include "..\..\resource.h"
 
 namespace ViewJikokuhyou{
@@ -599,9 +600,7 @@ void CCellBuilder::update01_03_01_setEkimei_Ressyabangou(
 			//	DcDrawオブジェクトに、属性を設定。
 			{
 				*pCDcDrawCell = createCDcdXColumn0() ;
-				pCDcDrawCell->setText( stringOf( 
-					(LPCTSTR)MfcUtil::LoadCString( 
-						IDS_WORD_Ressyabangou ) ) ) ;
+				pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Ressyabangou ) ) ) ;
 			}
 		}
 
@@ -686,9 +685,7 @@ void CCellBuilder::update01_03_02_02_setEkimei_Ressyasyubetsu(
 			//(1.3.*.3)　セルの DcDrawオブジェクトに、属性を設定。
 			{
 				*pCDcDrawCell = createCDcdXColumn0() ;
-				pCDcDrawCell->setText( stringOf( 
-					(LPCTSTR)MfcUtil::LoadCString( 
-						IDS_WORD_RESSYASYUBETSU ) ) ) ;
+				pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_RESSYASYUBETSU ) ) ) ;
 			}
 		}
 		CDcdGridYColumn* pCDcdGridYColumn = pCDcdGrid->getYColumn( 
@@ -771,9 +768,7 @@ void CCellBuilder::update01_03_02_03_setEkimei_Ressyamei(
 			//	DcDrawオブジェクトに、属性を設定。
 			{
 				*pCDcDrawCell = createCDcdXColumn0V() ;
-				pCDcDrawCell->setText( stringOf( 
-					(LPCTSTR)MfcUtil::LoadCString( 
-						IDS_WORD_Ressyamei ) ) ) ;
+				pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Ressyamei ) ) ) ;
 			}
 		}
 		CDcdGridYColumn* pCDcdGridYColumn = pCDcdGrid->getYColumn( 
@@ -1036,7 +1031,7 @@ void CCellBuilder::update01_03_02_06_setEkimei_Chaku(
 				//(1.3.*.3)　セルのDcDrawオブジェクトに、属性を設定。
 				{
 					*pCDcDrawCell = createCDcdEkimei() ;
-					pCDcDrawCell->setText( aCdDedEki.getEkimei() );
+					pCDcDrawCell->setText( wstringOf( aCdDedEki.getEkimei() ) );
 				}
 			}
 			CDcdGridYColumn* pCDcdGridYColumn = pCDcdGrid->getYColumn( 
@@ -1171,7 +1166,7 @@ void CCellBuilder::update01_03_02_07_setEkimei_Hatsu(
 				//(1.3.*.3)　セルのDcDrawオブジェクトに、属性を設定。
 				{
 					*pCDcDrawCell = createCDcdEkimei() ;
-					pCDcDrawCell->setText( aCdDedEki.getEkimei() );
+					pCDcDrawCell->setText( wstringOf( aCdDedEki.getEkimei() ) );
 				}
 			}
 
@@ -1285,9 +1280,7 @@ void CCellBuilder::update01_03_02_08_setEkimei_Bikou(
 				*pCDcDrawCell = createCDcdXColumn0V() ;
 				pCDcDrawCell->setLinesExtentX ( getBikouTextExtent().getX() ) ;
 				pCDcDrawCell->setLinesExtentY ( getBikouTextExtent().getY() ) ;
-				pCDcDrawCell->setText( stringOf( 
-					(LPCTSTR)MfcUtil::LoadCString( 
-					IDS_WORD_Bikou ) ) ) ;
+				pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Bikou ) ) ) ;
 			}
 		}
 		CDcdGridYColumn* pCDcdGridYColumn = pCDcdGrid->getYColumn( 
@@ -1376,9 +1369,7 @@ void CCellBuilder::update01_04_01_06_setChakuhatsu_Chaku(
 				//(1.4.1.*.3)　セルのDcDrawオブジェクトに、属性を設定。
 				{
 					*pCDcDrawCell = createCDcdHatsuchaku();
-					pCDcDrawCell->setText( stringOf( 
-						(LPCTSTR)MfcUtil::LoadCString( 
-						IDS_WORD_Chaku ) ) );
+					pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Chaku ) ) );
 				}
 			}
 		}
@@ -1436,9 +1427,7 @@ void CCellBuilder::update01_04_01_07_setChakuhatsu_Hatsu(
 				//(1.4.1.*.3)　セルのDcDrawオブジェクトに、属性を設定。
 				{
 					*pCDcDrawCell = createCDcdHatsuchaku();
-					pCDcDrawCell->setText( stringOf( 
-						(LPCTSTR)MfcUtil::LoadCString( 
-						IDS_WORD_Hatsu ) ) );
+					pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Hatsu ) ) );
 				}
 			}
 		}
@@ -1649,7 +1638,7 @@ void CCellBuilder::update02_02_01_setRessya_Ressyabangou(
 			string strText = pCentDedRessya->getRessyabangou() ;
 			
 			*pCDcDrawCell = createCDcdRessyabangou( idxRessyasyubetsu ) ;
-			pCDcDrawCell->setText( strText );
+			pCDcDrawCell->setText( wstringOf( strText ) );
 		}
 	}
 }
@@ -1719,7 +1708,7 @@ void CCellBuilder::update02_02_02_02_setRessya_Ressyasyubetsu(
 				strText = pCentDedRessyasyubetsu->getRyakusyou() ;
 			}
 			*pCDcDrawCell = createCDcdEkijikoku( idxRessyasyubetsu );
-			pCDcDrawCell->setText( strText );
+			pCDcDrawCell->setText( wstringOf( strText ) );
 		}
 	}
 
@@ -1773,7 +1762,7 @@ void CCellBuilder::update02_02_02_03_setRessya_Ressyamei(
 				strText = pCentDedRessya->getRessyamei() ;
 			}
 			*pCDcDrawCell = createCDcdRessyamei( idxRessyasyubetsu );
-			pCDcDrawCell->setText( strText );
+			pCDcDrawCell->setText( wstringOf( strText ) );
 		}
 	}
 
@@ -1824,7 +1813,7 @@ void CCellBuilder::update02_02_02_04_setRessya_Gousuu(
 				= pCentDedRessya->getRessyasyubetsuIndex() ;
 			string strText = pCentDedRessya->getGousuu() ;
 			*pCDcDrawCell = createCDcdRessyabangou( idxRessyasyubetsu );
-			pCDcDrawCell->setText( strText );
+			pCDcDrawCell->setText( wstringOf( strText ) );
 		}
 	}
 }
@@ -1991,7 +1980,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 				 case CentDedEkiJikoku::Ekiatsukai_Keiyunasi :
 					{
 						*pCDcDrawCell = createCDcdRessyabangou( idxRessyasyubetsu );
-						pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) );//"||"
+						pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) );//"||"
 					}
 					break ;
 				 case CentDedEkiJikoku::Ekiatsukai_Tsuuka :
@@ -2003,7 +1992,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 							//	時刻を表示
 							*pCDcDrawCell = createCDcdRessyabangou( idxRessyasyubetsu );
 							string strText = getCdDedJikokuConv().encode( aCdDedJikoku ) ;
-							pCDcDrawCell->setText(strText ) ;
+							pCDcDrawCell->setText( wstringOf( strText ) ) ;
 							pCDcDrawCell->setCdDrawTextProp( 
 								getCdDrawTextPropTsuuka() ) ;
 						}	
@@ -2011,7 +2000,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 						{
 							*pCDcDrawCell = createCDcdRessyabangou( 
 								idxRessyasyubetsu );
-							pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_TSUUKA ) ) ) );	//" ﾚ"
+							pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_TSUUKA ) ) );	//" ﾚ"
 						}
 					}
 					break ;
@@ -2023,7 +2012,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 							*pCDcDrawCell = createCDcdEkijikoku( 
 								idxRessyasyubetsu );
 							string strText = getCdDedJikokuConv().encode( aCdDedJikoku ) ;
-							pCDcDrawCell->setText(strText ) ;
+							pCDcDrawCell->setText( wstringOf( strText ) ) ;
 						}
 						//	停車駅の駅時刻が指定されていない
 						else 
@@ -2083,7 +2072,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 						aCentDedEkijikokuPrev.getEkiatsukai() == 
 								CentDedEkiJikoku::Ekiatsukai_Keiyunasi )
 					{
-						pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) );	//"||"
+						pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) );	//"||"
 					}
 				}
 			}
@@ -2199,7 +2188,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 					{
 						*pCDcDrawCell = createCDcdRessyabangou( 
 							idxRessyasyubetsu );
-						pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) );//"||"
+						pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) );//"||"
 					}
 					break ;
 				 case CentDedEkiJikoku::Ekiatsukai_Tsuuka :
@@ -2210,7 +2199,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 							//	『通過駅の駅時刻を表示する』指定になっている場合は
 							//	時刻を表示
 							string strText = getCdDedJikokuConv().encode( aCdDedJikoku ) ;
-							pCDcDrawCell->setText(strText ) ;
+							pCDcDrawCell->setText( wstringOf( strText ) ) ;
 							pCDcDrawCell->setCdDrawTextProp( 
 								getCdDrawTextPropTsuuka() ) ;
 						}	
@@ -2218,7 +2207,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 						{
 							*pCDcDrawCell = createCDcdRessyabangou( 
 								idxRessyasyubetsu );
-							pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_TSUUKA ) ) ) );	//" ﾚ"
+							pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_TSUUKA ) ) );	//" ﾚ"
 						}
 					}
 					break ;
@@ -2230,7 +2219,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 							*pCDcDrawCell = createCDcdEkijikoku( 
 								idxRessyasyubetsu );
 							string strText = getCdDedJikokuConv().encode( aCdDedJikoku ) ;
-							pCDcDrawCell->setText(strText ) ;
+							pCDcDrawCell->setText( wstringOf( strText ) ) ;
 						}
 						//	停車駅の駅時刻が指定されていない
 						else 
@@ -2290,7 +2279,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 						aCentDedEkijikokuNext.getEkiatsukai() == 
 							CentDedEkiJikoku::Ekiatsukai_Keiyunasi )
 					{
-						pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) );	//"||"
+						pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) );	//"||"
 					}
 
 				}
@@ -2345,7 +2334,7 @@ void CCellBuilder::update02_02_02_08_setRessya_Bikou(
 				idxRessyasyubetsu );
 			pCDcDrawCell->setLinesExtentX ( getBikouTextExtent().getX() ) ;
 			pCDcDrawCell->setLinesExtentY ( getBikouTextExtent().getY() ) ;
-			pCDcDrawCell->setText( strText );
+			pCDcDrawCell->setText( wstringOf( strText ) );
 		}
 	}
 }
