@@ -75,6 +75,7 @@ Copyright (C) 2006-2017 take-okm
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <windows.h>
 #include <algorithm>
 #include "strToWstr.h"
 
