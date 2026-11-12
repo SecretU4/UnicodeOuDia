@@ -136,6 +136,9 @@ void logmsg_setFilename( const char* lpszLogFilename )
 	g_szLogFilename
 		[ sizeof(g_szLogFilename) / sizeof(g_szLogFilename[0]) - 1 ] = '\0' ;
 #endif 
+#ifdef _WIN32
+	g_bWideLogFilename = false ;
+#endif
 }
 
 #ifdef _WIN32
