@@ -118,16 +118,8 @@ std::string cp932StringOf( const void* lpvEStr , int iESize )
 
 std::string stringOf( const void* lpvEStr , int iESize )
 {
-	if ( lpvEStr == NULL || iESize <= 0 ) return std::string() ;
-	// This compatibility overload accepts either UTF-16 bytes or CP932 bytes.
-	// UTF-16 buffers must contain a whole number of wchar_t code units.
-	if ( iESize % sizeof(wchar_t) == 0
-		&& IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) )
-	{
-		return stringOf( std::wstring( (LPCWSTR)lpvEStr ,
-			iESize / sizeof(wchar_t) ) ) ;
-	}
-	// New code should call cp932StringOf() explicitly for legacy byte data.
+	// A byte buffer is treated as legacy CP932. UTF-16 callers must pass
+	// std::wstring explicitly; encoding is never guessed from arbitrary bytes.
 	return cp932StringOf( lpvEStr , iESize ) ;
 }
 
@@ -211,15 +203,8 @@ bool wstringFromUtf8( const std::string& strUtf8 , std::wstring* pstrEs )
 }
 
 std::wstring wstringOf( const void* lpvEStr , int iESize )
-	// Wide or legacy CP932 buffer; UTF-8 must use the std::string overload.
+	// Byte buffers use CP932. UTF-16 callers must pass std::wstring explicitly.
 {
-	if ( lpvEStr == NULL || iESize <= 0 ) return std::wstring() ;
-	if ( iESize % sizeof(wchar_t) == 0
-		&& IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) )
-	{
-		return std::wstring( (LPCWSTR)lpvEStr ,
-			iESize / sizeof(wchar_t) ) ;
-	}
 	return cp932WstringOf( lpvEStr , iESize ) ;
 }
 
