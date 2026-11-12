@@ -112,6 +112,51 @@ using namespace OuMfc;
 
 /**	Undo の最大回数です。 */
 const int iUndoLevel = 8 ;
+
+// The historical format-conversion DLLs are MBCS/CP932 components.
+// Keep their byte contract isolated from the application's UTF-8 strings.
+static bool cp932BytesOfUtf8(
+	const std::string& utf8,
+	std::string* cp932 )
+{
+	if ( cp932 == NULL ) return false ;
+	cp932->clear() ;
+	std::wstring wide ;
+	if ( !wstringFromUtf8( utf8 , &wide ) ) return false ;
+	if ( wide.empty() ) return true ;
+	BOOL usedDefaultChar = FALSE ;
+	int cb = WideCharToMultiByte( 932 , WC_NO_BEST_FIT_CHARS ,
+		wide.data() , (int)wide.size() , NULL , 0 , NULL ,
+		&usedDefaultChar ) ;
+	if ( cb <= 0 || usedDefaultChar ) return false ;
+	std::vector<char> bytes( cb ) ;
+	usedDefaultChar = FALSE ;
+	if ( WideCharToMultiByte( 932 , WC_NO_BEST_FIT_CHARS ,
+		wide.data() , (int)wide.size() , &bytes[0] , cb , NULL ,
+		&usedDefaultChar ) != cb || usedDefaultChar )
+		return false ;
+	cp932->assign( &bytes[0] , cb ) ;
+	return true ;
+}
+
+static bool utf8OfCp932Bytes(
+	const std::string& cp932,
+	std::string* utf8 )
+{
+	if ( utf8 == NULL ) return false ;
+	utf8->clear() ;
+	if ( cp932.empty() ) return true ;
+	if ( cp932.size() > 0x7fffffff ) return false ;
+	int cch = MultiByteToWideChar( 932 , 0 , cp932.data() ,
+		(int)cp932.size() , NULL , 0 ) ;
+	if ( cch <= 0 ) return false ;
+	std::vector<wchar_t> wide( cch ) ;
+	if ( MultiByteToWideChar( 932 , 0 , cp932.data() ,
+		(int)cp932.size() , &wide[0] , cch ) != cch )
+		return false ;
+	return utf8Of( std::wstring( &wide[0] , cch ) , utf8 ) ;
+}
+
 // --------------------------------
 //@name	下請関数-WinDia形式
 // --------------------------------
@@ -1490,7 +1535,16 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		
 		bool	bFileTypeDetected = false ;
 		std::vector<char>	binFileContent ;
-		binFileContent = vectorCharOf( strCrlfOf( strOudFile ) ) ;
+		std::string strLegacyCp932 ;
+		if ( !cp932BytesOfUtf8( strCrlfOf( strOudFile ) ,
+			&strLegacyCp932 ) )
+		{
+			iRv = -32 ; // The legacy converter only accepts CP932 text.
+		}
+		else
+		{
+			binFileContent = vectorCharOf( strLegacyCp932 ) ;
+		}
 
 		LogMsg( "CDiagramEditDoc::OnOpenDocument()3" ) ;
 
@@ -1537,7 +1591,17 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		}
 		if ( iRv >= 0 )
 		{
-			strOudFile = strLfOf( stringOf( binFileContent ) ) ;
+			std::string strConvertedCp932 = stringOf( binFileContent ) ;
+			std::string strConvertedUtf8 ;
+			if ( !utf8OfCp932Bytes( strConvertedCp932 ,
+				&strConvertedUtf8 ) )
+			{
+				iRv = -33 ; // Converter returned invalid CP932 text.
+			}
+			else
+			{
+				strOudFile = strLfOf( strConvertedUtf8 ) ;
+			}
 		}
 		LogMsg( "CDiagramEditDoc::OnOpenDocument()101" ) ;
 	}
