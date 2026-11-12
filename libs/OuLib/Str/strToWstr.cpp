@@ -85,18 +85,14 @@ std::string stringOf( std::string strEs )
 	return ( strEs ) ;
 }
 
-std::string stringOf( std::wstring strEs ) 
+std::string stringOf( std::wstring strEs )
 {
-	std::vector<char>	szLs ;	
-	szLs.resize( WideCharToMultiByte( CP_ACP , 0 
-		, strEs.c_str() , strEs.length() + 1 
-		, NULL , 0 , NULL , FALSE ) + 1 ) ;
-	WideCharToMultiByte( CP_ACP , 0 
-		, strEs.c_str() , strEs.length() + 1 
-		, &szLs[0] , szLs.size() , NULL , FALSE ) ;
-	szLs[ szLs.size() - 1 ] = '\0' ;
-
-	return ( std::string( &szLs[0] ) ) ;
+	std::string strUtf8 ;
+	if ( !utf8Of( strEs , &strUtf8 ) )
+	{
+		return std::string() ;
+	}
+	return strUtf8 ;
 }
 
 
@@ -108,18 +104,14 @@ std::string stringOf( const void* lpvEStr , int iESize )
 	return ( stringOf( (LPCSTR)lpvEStr ) ) ;
 }
 
-std::wstring wstringOf( std::string strEs ) 
+std::wstring wstringOf( std::string strEs )
 {
-	std::vector<wchar_t>	szLs ;	
-	szLs.resize( MultiByteToWideChar( CP_ACP , 0 
-		, strEs.c_str() , strEs.length() + 1 
-		, NULL , 0 ) + 1 ) ;
-	MultiByteToWideChar( CP_ACP , 0 
-		, strEs.c_str() , strEs.length() + 1 
-		, &szLs[0]  , szLs.size() ) ;
-	szLs[ szLs.size() - 1 ] = L'\0' ;
-
-	return ( std::wstring( &szLs[0] ) ) ;
+	std::wstring strWide ;
+	if ( !wstringFromUtf8( strEs , &strWide ) )
+	{
+		return std::wstring() ;
+	}
+	return strWide ;
 }
 std::wstring wstringOf( std::wstring strEs ) 
 {
