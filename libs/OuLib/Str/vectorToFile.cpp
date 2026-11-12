@@ -281,7 +281,12 @@ int stringToFileUtf8( const std::string& aString ,
 		return -1 ;
 	}
 	int iRv = 0 ;
-	if ( !aString.empty() &&
+	const unsigned char bom[3] = { 0xef , 0xbb , 0xbf } ;
+	if ( fwrite( bom , 1 , 3 , pFile ) != 3 )
+	{
+		iRv = -2 ;
+	}
+	if ( iRv >= 0 && !aString.empty() &&
 		fwrite( aString.data() , 1 , aString.size() , pFile ) != aString.size() )
 	{
 		iRv = -2 ;
@@ -324,7 +329,9 @@ int stringFromFileUtf8( std::string* pString ,
 		raw.erase( 0 , 3 ) ;
 	}
 	std::wstring wide ;
-	if ( wstringFromUtf8( raw , &wide ) )
+	if ( raw.size() >= 3 && (unsigned char)raw[0] == 0xef &&
+		(unsigned char)raw[1] == 0xbb && (unsigned char)raw[2] == 0xbf &&
+		wstringFromUtf8( raw , &wide ) )
 	{
 		*pString = raw ;
 		return 0 ;
