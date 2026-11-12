@@ -443,7 +443,7 @@ void CDlgRosenFileProp_FontColor::OnButtonFontChange()
 			CFontDialog	aCFontDialog( &aConverter.LOGFONTOf( *pCdFontProp ) , 
 				CF_SCREENFONTS , NULL , this ) ;
 			if ( aCFontDialog.DoModal() == IDOK ){
-				pCdFontProp->setFacename( (LPCSTR)aCFontDialog.GetFaceName() ) ;
+				pCdFontProp->setFacename( stringOf( std::wstring( (LPCTSTR)aCFontDialog.GetFaceName() ) ) ) ;
 				pCdFontProp->setPointTextHeight( aCFontDialog.GetSize() / 10 ) ;
 				pCdFontProp->setBold( aCFontDialog.IsBold() != FALSE ) ;
 				pCdFontProp->setItaric( aCFontDialog.IsItalic() != FALSE ) ;
