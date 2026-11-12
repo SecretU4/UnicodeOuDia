@@ -707,7 +707,8 @@ int CDiagramEditDoc::CentDedEki_From_Cliboard(
 	string	strData ;
 	if ( iRv >= 0 )
 	{	
-		if (!IsClipboardFormatAvailable(getCF_CentDedEki())) 
+		if (!IsClipboardFormatAvailable(getCF_CentDedEki()) &&
+			!IsClipboardFormatAvailable( CF_UNICODETEXT )) 
 		{
 			iRv = -1 ;	//	クリップボードには有効なデータはありません。
 		}
@@ -851,7 +852,8 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_From_Cliboard(
 	string	strData ;
 	if ( iRv >= 0 )
 	{	
-		if (!IsClipboardFormatAvailable(getCF_CentDedRessyasyubetsu())) 
+		if (!IsClipboardFormatAvailable(getCF_CentDedRessyasyubetsu()) &&
+			!IsClipboardFormatAvailable( CF_UNICODETEXT )) 
 		{
 			iRv = -1 ;	//	クリップボードには有効なデータはありません。
 		}
@@ -984,7 +986,8 @@ int CDiagramEditDoc::CentDedRessyaCont_From_Cliboard(
 	// --------------------------------
 	string	strData ;
 	if ( iRv >= 0 ){	
-		if (!IsClipboardFormatAvailable(getCF_CentDedRessyaCont())) {
+		if (!IsClipboardFormatAvailable(getCF_CentDedRessyaCont()) &&
+			!IsClipboardFormatAvailable( CF_UNICODETEXT )) {
 			iRv = -1 ;	//	クリップボードには有効なデータはありません。
 		}
 	}
