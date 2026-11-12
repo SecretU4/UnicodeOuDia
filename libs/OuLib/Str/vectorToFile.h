@@ -157,7 +157,7 @@ int stringToFile( const std::string& aString ,
 int stringFromFile( std::string* pString , 
 					const std::string& strFilename ) ;
 
-/** Read UTF-8 (BOM or strict UTF-8); otherwise convert legacy CP932 to UTF-8. */
+/** Read BOM-marked UTF-8; otherwise treat as legacy CP932 to avoid ambiguous detection. */
 int stringFromFileUtf8( std::string* pString , const std::wstring& strFilename ) ;
 /** Legacy byte-preserving file access for external formats such as WinDIA. */
 int stringFromFile( std::string* pString , const std::wstring& strFilename ) ;
