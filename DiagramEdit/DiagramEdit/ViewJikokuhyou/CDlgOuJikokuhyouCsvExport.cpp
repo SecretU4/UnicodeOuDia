@@ -282,7 +282,7 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 			string strCsvDocument ;
 			CConvCsvDocument	aCConvCsvDocument ;
 			strCsvDocument = aCConvCsvDocument.encode( &aCdCsvDocument ) ;
-			int iResult = stringToFile( strCsvDocument , (LPCSTR)m_strCsvFilename ) ;
+			int iResult = stringToFileUtf8( strCsvDocument , std::wstring( (LPCTSTR)m_strCsvFilename ) ) ;
 			if ( iResult < 0 )
 			{
 				GetDlgItemText( IDC_TEXT_FILE_SAVE_FAILED , strError ) ;
