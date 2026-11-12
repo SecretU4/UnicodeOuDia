@@ -209,7 +209,7 @@ void logmsg_LogMsgV( int iLevel , const char* fmt , va_list	marker )
 				if ( aStat.st_size >= g_iLogCountLimit * 80 ){
 					//	サイズが『最大行数×80』バイトに達していた場合、
 					//	既存の内容を破棄します。
-					FILE*	pFile = fopen( g_szLogFilename , "wt" ) ;
+					FILE*	pFile = logmsg_fopen( "wt" ) ;
 		
 					if ( pFile != NULL ){
 						fclose( pFile ) ;
