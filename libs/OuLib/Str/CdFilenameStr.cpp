@@ -68,6 +68,7 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 */
 #include "Str\CdFilenameStr.h"
+#include "Str\strToWstr.h"
 #include "Str\CStrCharSizeMb.h"
 
 namespace OuLib {
@@ -97,6 +98,11 @@ CdFilenameStr::
 CdFilenameStr( std::string strFilename , bool bIsValidFilename ) 
 {
 	setFullpathFilename( strFilename, bIsValidFilename ) ;
+}
+
+CdFilenameStr::CdFilenameStr( const std::wstring& strFilename , bool bIsValidFilename )
+{
+	setFullpathFilename( stringOf( strFilename ) , bIsValidFilename ) ;
 }
 
 
