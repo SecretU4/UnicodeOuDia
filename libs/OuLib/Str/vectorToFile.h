@@ -157,6 +157,11 @@ int stringToFile( const std::string& aString ,
 int stringFromFile( std::string* pString , 
 					const std::string& strFilename ) ;
 
+/** Read a UTF-8 text file; legacy Shift-JIS/CP932 files are converted to UTF-8. */
+int stringFromFileUtf8( std::string* pString , const std::string& strFilename ) ;
+/** Write a UTF-8 text file without a BOM. */
+int stringToFileUtf8( const std::string& aString , const std::string& strFilename ) ;
+
 } //namespace Str {
 } //namespace OuLib {
 
