@@ -399,9 +399,9 @@ int CWndJikokuhyou::OnFileImportJikokuhyoucsv_Process( BOOL bQueryEnable )
 		if ( iRv >= 0 )
 		{
 			string strCsvDocument ;
-			int iResult = stringFromFile( 
+			int iResult = stringFromFileUtf8( 
 				&strCsvDocument , 
-				(LPCSTR)strCsvFilename ) ; 
+				std::wstring( (LPCTSTR)strCsvFilename ) ) ; 
 			if ( iResult < 0 )
 			{
 				strError.Format( IDS_ERR_FILENOTFOUND , 
