@@ -172,7 +172,7 @@ int CMainFrame::OnFileRosenFileInsert_Process( BOOL bQueryEnable )
 		string strFileContent ;
 		if ( iRv >= 0 )
 		{
-			int iResult = stringFromFile( 
+			int iResult = stringFromFileUtf8( 
 				&strFileContent , 
 				stringOf( (LPCTSTR)strOudFilename ) ) ;
 			if ( iResult < 0 )
@@ -357,7 +357,7 @@ int CMainFrame::OnFileRosenCreateSubRosen_Process( BOOL bQueryEnable )
 	{
 		OuPropertiesText::CConvNodeContainer aConv ;
 		string strOudContent = aConv.encode( &aCNodeContainer ) ;
-		int iResult = stringToFile( 
+		int iResult = stringToFileUtf8( 
 			strOudContent , 
 			stringOf( (LPCTSTR)strNewOudFilename ) ) ;
 		//iResult 
