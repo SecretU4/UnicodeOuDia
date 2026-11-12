@@ -174,7 +174,7 @@ int CMainFrame::OnFileRosenFileInsert_Process( BOOL bQueryEnable )
 		{
 			int iResult = stringFromFileUtf8( 
 				&strFileContent , 
-				stringOf( (LPCTSTR)strOudFilename ) ) ;
+				std::wstring( (LPCTSTR)strOudFilename ) ) ;
 			if ( iResult < 0 )
 			{
 				iRv = -11 ;	//	ファイルがみつかりません。
@@ -359,7 +359,7 @@ int CMainFrame::OnFileRosenCreateSubRosen_Process( BOOL bQueryEnable )
 		string strOudContent = aConv.encode( &aCNodeContainer ) ;
 		int iResult = stringToFileUtf8( 
 			strOudContent , 
-			stringOf( (LPCTSTR)strNewOudFilename ) ) ;
+			std::wstring( (LPCTSTR)strNewOudFilename ) ) ;
 		//iResult 
 		//	-1: ファイルがオープンできません。
 		//	-2 ; // 書き込みに失敗しました。 
