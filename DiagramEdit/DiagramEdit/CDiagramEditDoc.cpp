@@ -661,31 +661,14 @@ static int stringFromClipboard(
 			const char* pData = (const char*)GlobalLock( hGlobal ) ;
 			if ( pData != NULL )
 			{
-				std::string legacyOrUtf8( pData ) ;
+				std::string legacyCp932( pData ) ;
 				GlobalUnlock( hGlobal ) ;
 
-				std::wstring wide ;
-				if ( wstringFromUtf8( legacyOrUtf8 , &wide ) )
-				{
-					strData = legacyOrUtf8 ;
-				}
-				else if ( legacyOrUtf8.size() <= 0x7fffffff )
-				{
-					int cch = MultiByteToWideChar( 932 , 0 ,
-						legacyOrUtf8.data() , (int)legacyOrUtf8.size() ,
-						NULL , 0 ) ;
-					if ( cch > 0 )
-					{
-						std::vector<wchar_t> legacy( cch ) ;
-						if ( MultiByteToWideChar( 932 , 0 ,
-							legacyOrUtf8.data() , (int)legacyOrUtf8.size() ,
-							&legacy[0] , cch ) == cch )
-						{
-							wide.assign( &legacy[0] , cch ) ;
-							utf8Of( wide , &strData ) ;
-						}
-					}
-				}
+				// The registered OuDia clipboard formats have a fixed CP932
+				// byte contract. Do not guess UTF-8 from their byte contents.
+				strData = cp932StringOf(
+					legacyCp932.data() ,
+					(int)legacyCp932.size() ) ;
 			}
 		}
 	}
