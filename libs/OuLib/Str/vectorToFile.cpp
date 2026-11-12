@@ -335,6 +335,10 @@ int stringFromFileUtf8( std::string* pString ,
 		*pString = raw ;
 		return 0 ;
 	}
+	if ( hasUtf8Bom )
+	{
+		return -3 ;
+	}
 	// No BOM and invalid UTF-8: preserve compatibility with legacy CP932.
 	if ( raw.size() > 0x7fffffff )
 	{
@@ -406,6 +410,7 @@ int stringFromFileUtf8( std::string* pString ,
 		*pString = raw ;
 		return 0 ;
 	}
+	if ( hasUtf8Bom ) return -3 ;
 	if ( raw.size() > 0x7fffffff ) return -3 ;
 	int cch = MultiByteToWideChar( 932 , 0 , raw.data() ,
 		(int)raw.size() , NULL , 0 ) ;
