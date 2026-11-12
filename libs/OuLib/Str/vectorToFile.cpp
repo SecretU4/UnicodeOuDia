@@ -334,7 +334,7 @@ int stringFromFileUtf8( std::string* pString ,
 	{
 		return -3 ;
 	}
-	int cch = MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS ,
+	int cch = MultiByteToWideChar( 932 , 0 ,
 		raw.data() , (int)raw.size() , NULL , 0 ) ;
 	if ( cch <= 0 )
 	{
