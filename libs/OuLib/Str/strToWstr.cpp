@@ -96,12 +96,23 @@ std::string stringOf( std::wstring strEs )
 }
 
 
-std::string stringOf( const void* lpvEStr , int iESize ) 
+std::string stringOf( const void* lpvEStr , int iESize )
 {
-	if ( IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) ){
-		return( stringOf( (LPCWSTR)lpvEStr ) );
+	if ( lpvEStr == NULL || iESize <= 0 ) return std::string() ;
+	if ( IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) )
+	{
+		return stringOf( std::wstring( (LPCWSTR)lpvEStr ,
+			iESize / sizeof(wchar_t) ) ) ;
 	}
-	return ( stringOf( (LPCSTR)lpvEStr ) ) ;
+	// This overload is for legacy ANSI byte buffers only. New UTF-8 callers
+	// must pass std::string to wstringOf() instead of using this void* API.
+	int cch = MultiByteToWideChar( 932 , 0 , (LPCSTR)lpvEStr ,
+		iESize , NULL , 0 ) ;
+	if ( cch <= 0 ) return std::string() ;
+	std::vector<wchar_t> wide( cch ) ;
+	if ( MultiByteToWideChar( 932 , 0 , (LPCSTR)lpvEStr ,
+		iESize , &wide[0] , cch ) != cch ) return std::string() ;
+	return stringOf( std::wstring( &wide[0] , cch ) ) ;
 }
 
 std::wstring wstringOf( std::string strEs )
@@ -183,13 +194,19 @@ bool wstringFromUtf8( const std::string& strUtf8 , std::wstring* pstrEs )
 	return true ;
 }
 
-std::wstring wstringOf( const void* lpvEStr , int iESize ) 
-	//	ワイドかマルチバイトか分からない文字列をワイド文字列に変換します
+std::wstring wstringOf( const void* lpvEStr , int iESize )
+	// Wide or legacy CP932 buffer; UTF-8 must use the std::string overload.
 {
-	if ( IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) ){
-		return( wstringOf( (LPCWSTR)lpvEStr ) );
-	}
-	return ( wstringOf( (LPCSTR)lpvEStr ) ) ;
+	if ( lpvEStr == NULL || iESize <= 0 ) return std::wstring() ;
+	if ( IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) )
+		return std::wstring( (LPCWSTR)lpvEStr , iESize / sizeof(wchar_t) ) ;
+	int cch = MultiByteToWideChar( 932 , 0 , (LPCSTR)lpvEStr ,
+		iESize , NULL , 0 ) ;
+	if ( cch <= 0 ) return std::wstring() ;
+	std::vector<wchar_t> wide( cch ) ;
+	if ( MultiByteToWideChar( 932 , 0 , (LPCSTR)lpvEStr ,
+		iESize , &wide[0] , cch ) != cch ) return std::wstring() ;
+	return std::wstring( &wide[0] , cch ) ;
 }
 
 } //namespace Str 
