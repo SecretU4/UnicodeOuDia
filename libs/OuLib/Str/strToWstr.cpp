@@ -96,6 +96,26 @@ std::string stringOf( std::wstring strEs )
 }
 
 
+// Explicit legacy boundary: these functions decode CP932 bytes and return
+// Unicode (wstring) or UTF-8 (string) for the modern application.
+std::wstring cp932WstringOf( const void* lpvEStr , int iESize )
+{
+	if ( lpvEStr == NULL || iESize <= 0 ) return std::wstring() ;
+	int cch = MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS ,
+		(LPCSTR)lpvEStr , iESize , NULL , 0 ) ;
+	if ( cch <= 0 ) return std::wstring() ;
+	std::vector<wchar_t> wide( cch ) ;
+	if ( MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS ,
+		(LPCSTR)lpvEStr , iESize , &wide[0] , cch ) != cch )
+		return std::wstring() ;
+	return std::wstring( &wide[0] , cch ) ;
+}
+
+std::string cp932StringOf( const void* lpvEStr , int iESize )
+{
+	return stringOf( cp932WstringOf( lpvEStr , iESize ) ) ;
+}
+
 std::string stringOf( const void* lpvEStr , int iESize )
 {
 	if ( lpvEStr == NULL || iESize <= 0 ) return std::string() ;
@@ -104,15 +124,8 @@ std::string stringOf( const void* lpvEStr , int iESize )
 		return stringOf( std::wstring( (LPCWSTR)lpvEStr ,
 			iESize / sizeof(wchar_t) ) ) ;
 	}
-	// This overload is for legacy ANSI byte buffers only. New UTF-8 callers
-	// must pass std::string to wstringOf() instead of using this void* API.
-	int cch = MultiByteToWideChar( 932 , 0 , (LPCSTR)lpvEStr ,
-		iESize , NULL , 0 ) ;
-	if ( cch <= 0 ) return std::string() ;
-	std::vector<wchar_t> wide( cch ) ;
-	if ( MultiByteToWideChar( 932 , 0 , (LPCSTR)lpvEStr ,
-		iESize , &wide[0] , cch ) != cch ) return std::string() ;
-	return stringOf( std::wstring( &wide[0] , cch ) ) ;
+	// Compatibility overload for old callers with untagged legacy buffers.
+	return cp932StringOf( lpvEStr , iESize ) ;
 }
 
 std::wstring wstringOf( std::string strEs )
