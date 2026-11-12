@@ -1387,7 +1387,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 	string	strFile ;
 	if ( iRv >= 0 )
 	{
-		int iResult = stringFromFile( &strFile , lpszPathName ) ;
+		int iResult = stringFromFileUtf8( &strFile , stringOf( lpszPathName ) ) ;
 		//iResult = 
 		//	-1: ファイルがオープンできません。
 		//	-2 ; 読み込みに失敗しました。
@@ -1718,7 +1718,7 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 	//	stringの内容を、ファイルに書き込み
 	// --------------------------------
 	if ( iRv >= 0 ){
-		int iResult = stringToFile( aString , lpszPathName ) ;
+		int iResult = stringToFileUtf8( aString , stringOf( lpszPathName ) ) ;
 		//iResult = 
 		//	-1: ファイルがオープンできません。
 		//	-2 ; // 書き込みに失敗しました。 
