@@ -400,7 +400,7 @@ int stringFromFileUtf8( std::string* pString ,
 		(unsigned char)raw[2] == 0xbf ;
 	if ( hasUtf8Bom ) raw.erase( 0 , 3 ) ;
 	std::wstring wide ;
-	if ( hasUtf8Bom && wstringFromUtf8( raw , &wide ) )
+	if ( wstringFromUtf8( raw , &wide ) )
 	{
 		*pString = raw ;
 		return 0 ;
