@@ -119,6 +119,12 @@ int vectorToFile( const std::vector<char>& aVector ,
 int vectorFromFile( std::vector<char>* pVector , 
 					const std::string& strFilename ) ;
 
+/** Binary file access using a native UTF-16 Windows path. */
+int vectorToFile( const std::vector<char>& aVector ,
+	const std::wstring& strFilename ) ;
+int vectorFromFile( std::vector<char>* pVector ,
+	const std::wstring& strFilename ) ;
+
 /**
  	ファイルに、aString に格納されているデータを書き込みます。
  	Win32の場合は、テキストモードでの書き込みとなります。
