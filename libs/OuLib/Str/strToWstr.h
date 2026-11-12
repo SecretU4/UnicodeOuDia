@@ -121,6 +121,13 @@ std::wstring wstringOf( std::string strEs ) ;
 std::wstring wstringOf( std::wstring strEs ) ;
 
 /**
+ * UTF-8 と Unicode ワイド文字列の間を、システムコードページに依存せず変換します。
+ * 変換に失敗した場合は false を返し、出力先は空にします。
+ */
+bool utf8Of( const std::wstring& strEs , std::string* pstrUtf8 ) ;
+bool wstringFromUtf8( const std::string& strUtf8 , std::wstring* pstrEs ) ;
+
+/**
 * 	ワイドかマルチバイトか分からない文字列をワイド文字列に変換します
 * @param lpvEStr
 * 	ワイドかマルチバイトか分からない文字列の先頭アドレスを
