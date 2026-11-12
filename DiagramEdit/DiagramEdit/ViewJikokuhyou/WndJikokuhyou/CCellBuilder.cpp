@@ -1991,8 +1991,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 				 case CentDedEkiJikoku::Ekiatsukai_Keiyunasi :
 					{
 						*pCDcDrawCell = createCDcdRessyabangou( idxRessyasyubetsu );
-						pCDcDrawCell->setText( (LPCSTR)MfcUtil::LoadCString( 
-								IDS_WORD_JIKOKUHYOU_KEIYUNASI ) );//"||"
+						pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) );//"||"
 					}
 					break ;
 				 case CentDedEkiJikoku::Ekiatsukai_Tsuuka :
@@ -2012,8 +2011,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 						{
 							*pCDcDrawCell = createCDcdRessyabangou( 
 								idxRessyasyubetsu );
-							pCDcDrawCell->setText( (LPCSTR)MfcUtil::LoadCString( 
-								IDS_WORD_JIKOKUHYOU_TSUUKA ) );	//" ﾚ"
+							pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_TSUUKA ) ) ) );	//" ﾚ"
 						}
 					}
 					break ;
@@ -2085,8 +2083,7 @@ void CCellBuilder::update02_02_02_06_setRessya_Chaku(
 						aCentDedEkijikokuPrev.getEkiatsukai() == 
 								CentDedEkiJikoku::Ekiatsukai_Keiyunasi )
 					{
-						pCDcDrawCell->setText( (LPCSTR)MfcUtil::LoadCString( 
-							IDS_WORD_JIKOKUHYOU_KEIYUNASI ) );	//"||"
+						pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) );	//"||"
 					}
 				}
 			}
@@ -2202,8 +2199,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 					{
 						*pCDcDrawCell = createCDcdRessyabangou( 
 							idxRessyasyubetsu );
-						pCDcDrawCell->setText( (LPCSTR)MfcUtil::LoadCString( 
-								IDS_WORD_JIKOKUHYOU_KEIYUNASI ) );//"||"
+						pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) );//"||"
 					}
 					break ;
 				 case CentDedEkiJikoku::Ekiatsukai_Tsuuka :
@@ -2222,8 +2218,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 						{
 							*pCDcDrawCell = createCDcdRessyabangou( 
 								idxRessyasyubetsu );
-							pCDcDrawCell->setText( (LPCSTR)MfcUtil::LoadCString( 
-								IDS_WORD_JIKOKUHYOU_TSUUKA ) );	//" ﾚ"
+							pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_TSUUKA ) ) ) );	//" ﾚ"
 						}
 					}
 					break ;
@@ -2295,8 +2290,7 @@ void CCellBuilder::update02_02_02_07_setRessya_Hatsu(
 						aCentDedEkijikokuNext.getEkiatsukai() == 
 							CentDedEkiJikoku::Ekiatsukai_Keiyunasi )
 					{
-						pCDcDrawCell->setText( (LPCSTR)MfcUtil::LoadCString( 
-							IDS_WORD_JIKOKUHYOU_KEIYUNASI ) );	//"||"
+						pCDcDrawCell->setText( stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) );	//"||"
 					}
 
 				}
