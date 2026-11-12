@@ -71,6 +71,7 @@ Copyright (C) 2006-2017 take-okm
 #include "DcDraw/CaDcdTargetItemPosition.h"
 #include "DcDraw/CConverter_WinGdi.h"
 #include "str/stringsplit.h"
+#include "str/strToWstr.h"
 #include "MfcUtil\MfcUtil.h"
 
 #include "..\DiagramEdit.h"
@@ -294,13 +295,13 @@ BOOL CDlgRosenFileProp_FontColor::OnInitDialog()
 		CString	strLs ;
 		GetDlgItem( IDC_LIST_FONT_ITEMS )->GetWindowText( strLs ) ;
 
-		deque< string > arstr = splitc< deque< string > >( ',' , (LPCTSTR)strLs ) ;
+		deque< string > arstr = splitc< deque< string > >( ',' , stringOf( std::wstring( (LPCTSTR)strLs ) ) ) ;
 
 
 		CListBox*	pListBox = (CListBox*)GetDlgItem( IDC_LIST_FONT ) ;
 		int idx ;
 		for ( idx = 0 ; idx < (int)arstr.size() ; idx ++ ){
-			pListBox->AddString( arstr[ idx ].c_str() ) ;
+			pListBox->AddString( wstringOf( arstr[ idx ] ).c_str() ) ;
 		}
 		pListBox->SetCurSel( 0 ) ; 
 	}
@@ -311,13 +312,13 @@ BOOL CDlgRosenFileProp_FontColor::OnInitDialog()
 		CString	strLs ;
 		GetDlgItem( IDC_LIST_COLOR_ITEMS )->GetWindowText( strLs ) ;
 
-		deque< string > arstr = splitc< deque< string > >( ',' , (LPCTSTR)strLs ) ;
+		deque< string > arstr = splitc< deque< string > >( ',' , stringOf( std::wstring( (LPCTSTR)strLs ) ) ) ;
 
 
 		CListBox*	pListBox = (CListBox*)GetDlgItem( IDC_LIST_COLOR ) ;
 		int idx ;
 		for ( idx = 0 ; idx < (int)arstr.size() ; idx ++ ){
-			pListBox->AddString( arstr[ idx ].c_str() ) ;
+			pListBox->AddString( wstringOf( arstr[ idx ] ).c_str() ) ;
 		}
 		pListBox->SetCurSel( 0 ) ; 
 	}
