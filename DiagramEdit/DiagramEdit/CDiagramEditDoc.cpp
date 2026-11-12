@@ -476,128 +476,129 @@ UINT CDiagramEditDoc::getCF_CentDedEki()
 	-	-11 ;	//	クリップボードがオープンできません。
 	-	-12 ;	//	クリップボードへのデータ設定が失敗
 */
-static int stringToClipboard( 
-		HWND aHwnd , 
-		UINT uiClipboardFormat , 
-		const string& strData ) 
+static int stringToClipboard(
+		HWND aHwnd,
+		UINT uiClipboardFormat,
+		const string& strData )
 {
 	int iRv = 0 ;
-	// --------------------------------
-	//	クリップボードへの転送
-	// --------------------------------
-	HGLOBAL	hGlobal = NULL ;
-	if ( iRv >= 0 )
-	{	
-		hGlobal = GlobalAlloc( GMEM_MOVEABLE, strData.length() + 1);
-		if ( hGlobal == NULL )
-		{
-			iRv = -2 ;	//	メモリの確保に失敗しました。
-		}
-		else
-		{
-			void*	pGlobal = GlobalLock( hGlobal ) ;
-			memcpy( pGlobal , strData.c_str() , strData.length() + 1 ) ;
-			GlobalUnlock( hGlobal ) ;
-		}
-	}
-	//hGlobal = CentDedEki の内容を保持しています。
-	
-	bool	bIsOpen = false ;
-	if ( iRv >= 0 )
-	{	
-		if ( !OpenClipboard( aHwnd ) )
-		{
-			iRv = -11 ;	//	クリップボードがオープンできません。
-		}
-		else
-		{
-			bIsOpen = true ;
-		}
-	}
-	if ( iRv >= 0 ){	
-		EmptyClipboard();
-		HANDLE hResult = SetClipboardData( uiClipboardFormat , hGlobal);
-		if ( hResult == NULL )
-		{
-			iRv = -12 ;	//	クリップボードへのデータ設定が失敗
-		}
-		else
-		{
-			//	クリップボードへの転送が成功しましたので、
-			//	このアプリケーションは hGlobal を解放せずに放棄します。
-			hGlobal = NULL ;
-		}
-	}
-	if ( bIsOpen )
+	std::wstring wideData ;
+	if ( !wstringFromUtf8( strData , &wideData ) )
 	{
-		CloseClipboard();
+		iRv = -2 ;
 	}
-	if ( hGlobal != NULL )
+
+	// Keep the registered OuDia format for older versions. Its historical
+	// payload was the Japanese Windows code page; use CP932 when representable.
+	std::string legacyData ;
+	if ( iRv >= 0 )
 	{
-		GlobalFree( hGlobal ) ;
-		hGlobal = NULL ;
+		int cb = WideCharToMultiByte( 932 , 0 , wideData.c_str() ,
+			(int)wideData.size() , NULL , 0 , NULL , NULL ) ;
+		if ( cb > 0 )
+		{
+			std::vector<char> bytes( cb ) ;
+			if ( WideCharToMultiByte( 932 , 0 , wideData.c_str() ,
+				(int)wideData.size() , &bytes[0] , cb , NULL , NULL ) == cb )
+			{
+				legacyData.assign( &bytes[0] , cb ) ;
+			}
+		}
 	}
+	if ( legacyData.empty() )
+	{
+		legacyData = strData ;
+	}
+
+	HGLOBAL hLegacy = NULL ;
+	HGLOBAL hUnicode = NULL ;
+	if ( iRv >= 0 )
+	{
+		hLegacy = GlobalAlloc( GMEM_MOVEABLE , legacyData.size() + 1 ) ;
+		if ( hLegacy == NULL ) iRv = -2 ;
+	}
+	if ( iRv >= 0 )
+	{
+		void* p = GlobalLock( hLegacy ) ;
+		if ( p == NULL ) iRv = -2 ;
+		else
+		{
+			memcpy( p , legacyData.c_str() , legacyData.size() + 1 ) ;
+			GlobalUnlock( hLegacy ) ;
+		}
+	}
+	if ( iRv >= 0 )
+	{
+		const SIZE_T cbUnicode = ( wideData.size() + 1 ) * sizeof(wchar_t) ;
+		hUnicode = GlobalAlloc( GMEM_MOVEABLE , cbUnicode ) ;
+		if ( hUnicode == NULL ) iRv = -2 ;
+	}
+	if ( iRv >= 0 )
+	{
+		void* p = GlobalLock( hUnicode ) ;
+		if ( p == NULL ) iRv = -2 ;
+		else
+		{
+			memcpy( p , wideData.c_str() ,
+				( wideData.size() + 1 ) * sizeof(wchar_t) ) ;
+			GlobalUnlock( hUnicode ) ;
+		}
+	}
+
+	bool bIsOpen = false ;
+	if ( iRv >= 0 )
+	{
+		if ( !OpenClipboard( aHwnd ) ) iRv = -11 ;
+		else bIsOpen = true ;
+	}
+	if ( iRv >= 0 )
+	{
+		EmptyClipboard() ;
+		if ( SetClipboardData( uiClipboardFormat , hLegacy ) == NULL )
+			iRv = -12 ;
+		else hLegacy = NULL ;
+		if ( SetClipboardData( CF_UNICODETEXT , hUnicode ) == NULL )
+		{
+			if ( iRv >= 0 ) iRv = -12 ;
+		}
+		else hUnicode = NULL ;
+	}
+	if ( bIsOpen ) CloseClipboard() ;
+	if ( hLegacy != NULL ) GlobalFree( hLegacy ) ;
+	if ( hUnicode != NULL ) GlobalFree( hUnicode ) ;
 	return iRv ;
 }
 
 
-
-/**
-	string を、クリップボードにコピーします。
-@param aHwnd [in]
-	クリップボードのオーナーとなるウインドウを指定してください。
-@param uiClipboardFormat [in]
-	クリップボードフォーマットを指定してください。
-@param pstrData [out]
-	この関数はこの文字列に、クリップボードの文字列をコピーします。
-	不要なら NULL を指定してもかまいません。
-@return
-	成功したら 0 以上、エラーなら負の数です。
-	-	-1 ;	//	クリップボードには有効なデータはありません。
-	-	-11 ;	//	クリップボードがオープンできません。
-*/
-static int stringFromClipboard( 
-		HWND aHwnd , 
-		UINT uiClipboardFormat , 
+static int stringFromClipboard(
+		HWND aHwnd,
+		UINT uiClipboardFormat,
 		string* pstrData )
 {
 	int iRv = 0 ;
-	// --------------------------------
-	//	クリップボードからデータを取得
-	// --------------------------------
-	string	strData ;
-	if ( iRv >= 0 )
-	{	
-		if ( !IsClipboardFormatAvailable(uiClipboardFormat) ) 
-		{
-			iRv = -1 ;	//	クリップボードには有効なデータはありません。
-		}
-	}
-	bool	bIsOpen = false ;
-	if ( iRv >= 0 )
-	{ 
-		if ( !OpenClipboard( aHwnd ) )
-		{
-			iRv = -11 ;	//	クリップボードがオープンできません。
-		}
-		else
-		{
-			bIsOpen = true ;
-		}
+	string strData ;
+	bool bIsOpen = false ;
+	if ( !IsClipboardFormatAvailable( uiClipboardFormat ) &&
+		!IsClipboardFormatAvailable( CF_UNICODETEXT ) )
+	{
+		iRv = -1 ;
 	}
 	if ( iRv >= 0 )
 	{
-		HGLOBAL	hGlobal = NULL ;
-        hGlobal = GetClipboardData(uiClipboardFormat);
+		if ( !OpenClipboard( aHwnd ) ) iRv = -11 ;
+		else bIsOpen = true ;
+	}
+	if ( iRv >= 0 )
+	{
+		HGLOBAL hGlobal = GetClipboardData( uiClipboardFormat ) ;
 		if ( hGlobal != NULL )
 		{
-			const char* lpszData = (const char*)GlobalLock( hGlobal ) ;
-			if ( lpszData != NULL )
+			const char* pData = (const char*)GlobalLock( hGlobal ) ;
+			if ( pData != NULL )
 			{
-				strData = lpszData ;
+				strData = pData ;
 				GlobalUnlock( hGlobal ) ;
-				// Private OuDia clipboard formats used CP_ACP in older releases.
-				// Accept those payloads and normalize them to UTF-8.
+				// Private OuDia data may be CP932 (older releases) or UTF-8.
 				std::wstring wide ;
 				if ( !wstringFromUtf8( strData , &wide ) )
 				{
@@ -616,17 +617,23 @@ static int stringFromClipboard(
 				}
 			}
 		}
+		else
+		{
+			HGLOBAL hUnicode = GetClipboardData( CF_UNICODETEXT ) ;
+			if ( hUnicode != NULL )
+			{
+				const wchar_t* pWide = (const wchar_t*)GlobalLock( hUnicode ) ;
+				if ( pWide != NULL )
+				{
+					std::wstring wide( pWide ) ;
+					GlobalUnlock( hUnicode ) ;
+					if ( !utf8Of( wide , &strData ) ) iRv = -12 ;
+				}
+			}
+		}
 	}
-	if ( bIsOpen )
-	{
-        CloseClipboard();
-	} 
-	// --------------------------------
-	if ( pstrData != NULL )
-	{
-		*pstrData = strData ;
-	}
-	// --------------------------------
+	if ( bIsOpen ) CloseClipboard() ;
+	if ( pstrData != NULL ) *pstrData = strData ;
 	return iRv ;
 }
 
