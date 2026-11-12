@@ -491,33 +491,40 @@ static int stringToClipboard(
 	// Keep the registered OuDia format for older versions. Its historical
 	// payload was the Japanese Windows code page; use CP932 when representable.
 	std::string legacyData ;
-	if ( iRv >= 0 )
+	bool bCanPublishLegacyFormat = true ;
+	if ( iRv >= 0 && !wideData.empty() )
 	{
 		int cb = WideCharToMultiByte( 932 , 0 , wideData.c_str() ,
 			(int)wideData.size() , NULL , 0 , NULL , NULL ) ;
 		if ( cb > 0 )
 		{
 			std::vector<char> bytes( cb ) ;
+			BOOL bUsedDefaultChar = FALSE ;
 			if ( WideCharToMultiByte( 932 , 0 , wideData.c_str() ,
-				(int)wideData.size() , &bytes[0] , cb , NULL , NULL ) == cb )
+				(int)wideData.size() , &bytes[0] , cb , NULL ,
+				&bUsedDefaultChar ) == cb && !bUsedDefaultChar )
 			{
 				legacyData.assign( &bytes[0] , cb ) ;
 			}
+			else
+			{
+				bCanPublishLegacyFormat = false ;
+			}
 		}
-	}
-	if ( legacyData.empty() )
-	{
-		legacyData = strData ;
+		else
+		{
+			bCanPublishLegacyFormat = false ;
+		}
 	}
 
 	HGLOBAL hLegacy = NULL ;
 	HGLOBAL hUnicode = NULL ;
-	if ( iRv >= 0 )
+	if ( iRv >= 0 && bCanPublishLegacyFormat )
 	{
 		hLegacy = GlobalAlloc( GMEM_MOVEABLE , legacyData.size() + 1 ) ;
 		if ( hLegacy == NULL ) iRv = -2 ;
 	}
-	if ( iRv >= 0 )
+	if ( iRv >= 0 && hLegacy != NULL )
 	{
 		void* p = GlobalLock( hLegacy ) ;
 		if ( p == NULL ) iRv = -2 ;
@@ -554,9 +561,9 @@ static int stringToClipboard(
 	if ( iRv >= 0 )
 	{
 		EmptyClipboard() ;
-		if ( SetClipboardData( uiClipboardFormat , hLegacy ) == NULL )
-			iRv = -12 ;
-		else hLegacy = NULL ;
+		if ( hLegacy != NULL &&
+			SetClipboardData( uiClipboardFormat , hLegacy ) != NULL )
+			hLegacy = NULL ;
 		if ( SetClipboardData( CF_UNICODETEXT , hUnicode ) == NULL )
 		{
 			if ( iRv >= 0 ) iRv = -12 ;
