@@ -76,7 +76,7 @@ using namespace std ;
 	// ********************************
 	//	コンストラクタ・デストラクタ
 	// ********************************
-CConvFileDll::CConvFileDll( const string&	strDllFilename )
+CConvFileDll::CConvFileDll( const std::wstring&	strDllFilename )
 	: m_strDllFilename( strDllFilename ) 
 	, m_hModule( NULL ) 
 	, ConvFile2Dll_getIfConvFile( NULL )
@@ -118,7 +118,7 @@ int CConvFileDll::validate()
 	int iRv = 1 ;
 	if ( iRv >= 0 )
 	{
-		m_hModule = LoadLibrary( m_strDllFilename.c_str() ) ;
+		m_hModule = LoadLibraryW( m_strDllFilename.c_str() ) ;
 		if ( m_hModule == NULL )
 		{
 			iRv = -1 ;	//	DLLがロードできません。
