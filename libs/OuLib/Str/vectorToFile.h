@@ -161,6 +161,8 @@ int stringFromFile( std::string* pString ,
 int stringFromFileUtf8( std::string* pString , const std::string& strFilename ) ;
 /** Write a UTF-8 text file without a BOM. */
 int stringToFileUtf8( const std::string& aString , const std::string& strFilename ) ;
+int stringFromFileUtf8( std::string* pString , const std::wstring& strFilename ) ;
+int stringToFileUtf8( const std::string& aString , const std::wstring& strFilename ) ;
 
 } //namespace Str {
 } //namespace OuLib {
