@@ -312,7 +312,7 @@ int stringFromFileUtf8( std::string* pString ,
 	{
 		return iRv ;
 	}
-	if ( std::find( bytes.begin() , bytes.end() , '\\0' ) != bytes.end() )
+	if ( std::find( bytes.begin() , bytes.end() , '\0' ) != bytes.end() )
 	{
 		return -3 ;
 	}
@@ -391,7 +391,7 @@ int stringFromFileUtf8( std::string* pString ,
 	const bool readError = ferror( pFile ) != 0 ;
 	const bool closeError = fclose( pFile ) != 0 ;
 	if ( readError || closeError ) return -2 ;
-	if ( std::find( bytes.begin() , bytes.end() , '\\0' ) != bytes.end() )
+	if ( std::find( bytes.begin() , bytes.end() , '\0' ) != bytes.end() )
 		return -3 ;
 	std::string raw ;
 	if ( !bytes.empty() ) raw.assign( &bytes[0] , bytes.size() ) ;
