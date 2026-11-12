@@ -551,7 +551,7 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 				{
 					CString	strLs ;
 					strLs.LoadString( nameEEkijikokukeisiki[idx].m_iId ) ;
-					strEkijikokukeisiki = (LPCSTR)strLs ;
+					strEkijikokukeisiki = stringOf( std::wstring( (LPCTSTR)strLs ) ) ;
 					break ;
 				}
 			}
