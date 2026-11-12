@@ -119,12 +119,15 @@ std::string cp932StringOf( const void* lpvEStr , int iESize )
 std::string stringOf( const void* lpvEStr , int iESize )
 {
 	if ( lpvEStr == NULL || iESize <= 0 ) return std::string() ;
-	if ( IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) )
+	// This compatibility overload accepts either UTF-16 bytes or CP932 bytes.
+	// UTF-16 buffers must contain a whole number of wchar_t code units.
+	if ( iESize % sizeof(wchar_t) == 0
+		&& IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) )
 	{
 		return stringOf( std::wstring( (LPCWSTR)lpvEStr ,
 			iESize / sizeof(wchar_t) ) ) ;
 	}
-	// Compatibility overload for old callers with untagged legacy buffers.
+	// New code should call cp932StringOf() explicitly for legacy byte data.
 	return cp932StringOf( lpvEStr , iESize ) ;
 }
 
@@ -211,15 +214,13 @@ std::wstring wstringOf( const void* lpvEStr , int iESize )
 	// Wide or legacy CP932 buffer; UTF-8 must use the std::string overload.
 {
 	if ( lpvEStr == NULL || iESize <= 0 ) return std::wstring() ;
-	if ( IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) )
-		return std::wstring( (LPCWSTR)lpvEStr , iESize / sizeof(wchar_t) ) ;
-	int cch = MultiByteToWideChar( 932 , 0 , (LPCSTR)lpvEStr ,
-		iESize , NULL , 0 ) ;
-	if ( cch <= 0 ) return std::wstring() ;
-	std::vector<wchar_t> wide( cch ) ;
-	if ( MultiByteToWideChar( 932 , 0 , (LPCSTR)lpvEStr ,
-		iESize , &wide[0] , cch ) != cch ) return std::wstring() ;
-	return std::wstring( &wide[0] , cch ) ;
+	if ( iESize % sizeof(wchar_t) == 0
+		&& IsTextUnicode( (CONST LPVOID)lpvEStr , iESize , NULL ) )
+	{
+		return std::wstring( (LPCWSTR)lpvEStr ,
+			iESize / sizeof(wchar_t) ) ;
+	}
+	return cp932WstringOf( lpvEStr , iESize ) ;
 }
 
 } //namespace Str 
