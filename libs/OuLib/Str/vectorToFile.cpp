@@ -365,6 +365,37 @@ int stringFromFileUtf8( std::string* pString ,
 }
 
 
+
+int stringToFile( const std::string& aString ,
+	const std::wstring& strFilename )
+{
+	if ( strFilename.empty() ) return -1 ;
+	FILE* pFile = _wfopen( strFilename.c_str() , L"wb" ) ;
+	if ( pFile == NULL ) return -1 ;
+	int iRv = 0 ;
+	if ( !aString.empty() &&
+		fwrite( aString.data() , 1 , aString.size() , pFile ) != aString.size() )
+		iRv = -2 ;
+	if ( fclose( pFile ) != 0 && iRv >= 0 ) iRv = -2 ;
+	return iRv ;
+}
+
+int stringFromFile( std::string* pString ,
+	const std::wstring& strFilename )
+{
+	if ( pString == NULL || strFilename.empty() ) return -1 ;
+	FILE* pFile = _wfopen( strFilename.c_str() , L"rb" ) ;
+	if ( pFile == NULL ) return -1 ;
+	pString->clear() ;
+	char buffer[4096] ;
+	size_t count = 0 ;
+	while ( ( count = fread( buffer , 1 , sizeof(buffer) , pFile ) ) > 0 )
+		pString->append( buffer , count ) ;
+	const bool readError = ferror( pFile ) != 0 ;
+	const bool closeError = fclose( pFile ) != 0 ;
+	return ( readError || closeError ) ? -2 : 0 ;
+}
+
 int stringToFileUtf8( const std::string& aString ,
 	const std::wstring& strFilename )
 {
