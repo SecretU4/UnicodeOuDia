@@ -140,16 +140,17 @@ int vectorFromFile( std::vector<char>* pVector ,
 		
 		if ( pFile != NULL ){
 			char	szLs[1024] ;
-			int	iReadBytes = 0 ;
+			size_t	iReadBytes = 0 ;
 			do{
 				iReadBytes = fread( szLs , 1 , sizeof(szLs) , pFile ) ;
 				if ( iReadBytes > 0 ){
-					pVector->insert( pVector->end() , szLs , 
-													szLs + iReadBytes ) ;
-				}	else if ( iReadBytes < 0 ){
-					iRv = -2 ;	//	読み込みに失敗しました。
+					pVector->insert( pVector->end() , szLs ,
+														szLs + iReadBytes ) ;
 				}
-			}	while ( iReadBytes > 0 && iRv >= 0 ) ;
+			}	while ( iReadBytes == sizeof(szLs) ) ;
+			if ( ferror( pFile ) != 0 ){
+				iRv = -2 ;	//	読み込みに失敗しました。
+			}
 			if ( fclose( pFile ) != 0 ){
 				if ( iRv >= 0 ){
 					iRv = -2 ;	//	読み込みに失敗しました。
