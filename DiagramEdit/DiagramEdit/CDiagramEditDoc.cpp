@@ -1895,12 +1895,13 @@ void CDiagramEditDoc::SetPathName(LPCTSTR lpszPathName, BOOL bAddToMRU)
 
 		if ( GetTitle().IsEmpty() )
 		{
-			SetTitle(aCdFilenameStr.BaseFilename().c_str() );
+			SetTitle( wstringOf( aCdFilenameStr.BaseFilename() ).c_str() );
 		}
 		return ;
 	}	
 	
-	CHidemdiRootDoc::SetPathName(aCdFilenameStr.FullpathFilename().c_str() , bAddToMRU);
+	CHidemdiRootDoc::SetPathName(
+		wstringOf( aCdFilenameStr.FullpathFilename() ).c_str() , bAddToMRU);
 }
 
 void CDiagramEditDoc::OnUpdateEditUndo(CCmdUI *pCmdUI)
