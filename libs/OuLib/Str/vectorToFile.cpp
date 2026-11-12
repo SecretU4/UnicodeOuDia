@@ -353,13 +353,14 @@ int stringFromFileUtf8( std::string* pString ,
 		return 0 ;
 	}
 	if ( raw.size() > 0x7fffffff ) return -3 ;
-	int cch = MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS , raw.data() ,
+	int cch = MultiByteToWideChar( 932 , 0 , raw.data() ,
 		(int)raw.size() , NULL , 0 ) ;
 	if ( cch <= 0 ) return -3 ;
 	std::vector<wchar_t> legacy( cch ) ;
 	if ( MultiByteToWideChar( 932 , 0 , raw.data() , (int)raw.size() ,
 		&legacy[0] , cch ) != cch ) return -3 ;
 	wide.assign( &legacy[0] , cch ) ;
+	if ( wide.find( (wchar_t)0xfffd ) != std::wstring::npos ) return -3 ;
 	return utf8Of( wide , pString ) ? 0 : -3 ;
 }
 
