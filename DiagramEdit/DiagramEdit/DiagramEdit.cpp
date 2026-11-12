@@ -397,18 +397,18 @@ CString CDiagramEditApp::getCFileDialogFilterCsv()
 CconvJikokuhyouCsv CDiagramEditApp::createCconvJikokuhyouCsv() 
 {
 	return	CconvJikokuhyouCsv( 
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_Kudari ) , 
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_Nobori ) , 
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_Ressyabangou ) , 
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_RESSYASYUBETSU ) ,
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_Ressyamei ) ,
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_Gousuu ) ,
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_GOUSUU2 ) ,
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_Bikou ) ,
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_Chaku ) ,
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_Hatsu ) ,
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_TSUUKA ) , 
-		(LPCSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) //"||"
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Kudari ) ) ) , 
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Nobori ) ) ) , 
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Ressyabangou ) ) ) , 
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_RESSYASYUBETSU ) ) ) ,
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Ressyamei ) ) ) ,
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Gousuu ) ) ) ,
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_GOUSUU2 ) ) ) ,
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Bikou ) ) ) ,
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Chaku ) ) ) ,
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Hatsu ) ) ) ,
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_TSUUKA ) ) ) , 
+		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) //"||"
 	);	
 
 }
