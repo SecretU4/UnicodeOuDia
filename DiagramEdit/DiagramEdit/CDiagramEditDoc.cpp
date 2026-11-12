@@ -504,7 +504,7 @@ const CDedRosenFileData*	CDiagramEditDoc::getCDedRosenFileData()const
 
 UINT CDiagramEditDoc::getCF_CentDedEki()
 {
-	return RegisterClipboardFormat( "CF_CentDedEki" ) ;
+	return RegisterClipboardFormat( "CF_CentDedEki_UTF8" ) ;
 } ;
 
 /**
@@ -533,55 +533,21 @@ static int stringToClipboard(
 		iRv = -2 ;
 	}
 
-	// Keep the registered OuDia format for older versions. Its historical
-	// payload was the Japanese Windows code page; use CP932 when representable.
-	std::string legacyData ;
-	bool bCanPublishLegacyFormat = true ;
-	if ( iRv >= 0 && !wideData.empty() )
-	{
-		int cb = WideCharToMultiByte( 932 , 0 , wideData.c_str() ,
-			(int)wideData.size() , NULL , 0 , NULL , NULL ) ;
-		if ( cb > 0 )
-		{
-			std::vector<char> bytes( cb ) ;
-			BOOL bUsedDefaultChar = FALSE ;
-			if ( WideCharToMultiByte( 932 , 0 , wideData.c_str() ,
-				(int)wideData.size() , &bytes[0] , cb , NULL ,
-				&bUsedDefaultChar ) == cb && !bUsedDefaultChar )
-			{
-				legacyData.assign( &bytes[0] , cb ) ;
-			}
-			else
-			{
-				bCanPublishLegacyFormat = false ;
-			}
-		}
-		else
-		{
-			bCanPublishLegacyFormat = false ;
-		}
-	}
-
-	HGLOBAL hLegacy = NULL ;
+	HGLOBAL hUtf8 = NULL ;
 	HGLOBAL hUnicode = NULL ;
-	// The legacy format is an optional compatibility aid. Failure to
-	// allocate it must not prevent publishing the Unicode clipboard text.
-	if ( iRv >= 0 && bCanPublishLegacyFormat )
+	if ( iRv >= 0 )
 	{
-		hLegacy = GlobalAlloc( GMEM_MOVEABLE , legacyData.size() + 1 ) ;
+		hUtf8 = GlobalAlloc( GMEM_MOVEABLE , strData.size() + 1 ) ;
+		if ( hUtf8 == NULL ) iRv = -2 ;
 	}
-	if ( hLegacy != NULL )
+	if ( iRv >= 0 )
 	{
-		void* p = GlobalLock( hLegacy ) ;
-		if ( p == NULL )
-		{
-			GlobalFree( hLegacy ) ;
-			hLegacy = NULL ;
-		}
+		void* p = GlobalLock( hUtf8 ) ;
+		if ( p == NULL ) iRv = -2 ;
 		else
 		{
-			memcpy( p , legacyData.c_str() , legacyData.size() + 1 ) ;
-			GlobalUnlock( hLegacy ) ;
+			memcpy( p , strData.c_str() , strData.size() + 1 ) ;
+			GlobalUnlock( hUtf8 ) ;
 		}
 	}
 	if ( iRv >= 0 )
@@ -611,21 +577,21 @@ static int stringToClipboard(
 	if ( iRv >= 0 )
 	{
 		EmptyClipboard() ;
-		if ( hLegacy != NULL &&
-			SetClipboardData( uiClipboardFormat , hLegacy ) != NULL )
-			hLegacy = NULL ;
-		if ( SetClipboardData( CF_UNICODETEXT , hUnicode ) == NULL )
+		if ( SetClipboardData( uiClipboardFormat , hUtf8 ) == NULL )
+			iRv = -12 ;
+		else hUtf8 = NULL ;
+		if ( iRv >= 0 )
 		{
-			if ( iRv >= 0 ) iRv = -12 ;
+			if ( SetClipboardData( CF_UNICODETEXT , hUnicode ) == NULL )
+				iRv = -12 ;
+			else hUnicode = NULL ;
 		}
-		else hUnicode = NULL ;
 	}
 	if ( bIsOpen ) CloseClipboard() ;
-	if ( hLegacy != NULL ) GlobalFree( hLegacy ) ;
+	if ( hUtf8 != NULL ) GlobalFree( hUtf8 ) ;
 	if ( hUnicode != NULL ) GlobalFree( hUnicode ) ;
 	return iRv ;
 }
-
 
 static int stringFromClipboard(
 		HWND aHwnd,
@@ -651,8 +617,9 @@ static int stringFromClipboard(
 		else bIsOpen = true ;
 	}
 
-	// Prefer OuDia's structured format. Its historical payload is CP932,
-	// while CF_UNICODETEXT is the Unicode interoperability fallback.
+	// The application-specific formats carry UTF-8 bytes. CF_UNICODETEXT
+	// remains UTF-16 for interoperability with standard Windows applications.
+	bool bGotPrivateFormat = false ;
 	if ( iRv >= 0 && IsClipboardFormatAvailable( uiClipboardFormat ) )
 	{
 		HGLOBAL hGlobal = GetClipboardData( uiClipboardFormat ) ;
@@ -661,21 +628,21 @@ static int stringFromClipboard(
 			const char* pData = (const char*)GlobalLock( hGlobal ) ;
 			if ( pData != NULL )
 			{
-				std::string legacyCp932( pData ) ;
+				std::string utf8Data( pData ) ;
 				GlobalUnlock( hGlobal ) ;
-
-				// The registered OuDia clipboard formats have a fixed CP932
-				// byte contract. Do not guess UTF-8 from their byte contents.
-				strData = cp932StringOf(
-					legacyCp932.data() ,
-					(int)legacyCp932.size() ) ;
+				std::wstring wideCheck ;
+				if ( wstringFromUtf8( utf8Data , &wideCheck ) )
+				{
+					strData = utf8Data ;
+					bGotPrivateFormat = true ;
+				}
 			}
 		}
 	}
 
-	// If the private format is absent, inaccessible, or undecodable, try
-	// the standard UTF-16 clipboard representation instead.
-	if ( iRv >= 0 && strData.empty() &&
+	// Fall back to the standard UTF-16 representation if the private
+	// UTF-8 format is unavailable or contains invalid UTF-8.
+	if ( iRv >= 0 && !bGotPrivateFormat &&
 		IsClipboardFormatAvailable( CF_UNICODETEXT ) )
 	{
 		HGLOBAL hUnicode = GetClipboardData( CF_UNICODETEXT ) ;
@@ -691,9 +658,7 @@ static int stringFromClipboard(
 		}
 	}
 	if ( bIsOpen ) CloseClipboard() ;
-	if ( iRv >= 0 && strData.empty() &&
-		!IsClipboardFormatAvailable( uiClipboardFormat ) &&
-		!IsClipboardFormatAvailable( CF_UNICODETEXT ) )
+	if ( iRv >= 0 && !bGotPrivateFormat && strData.empty() )
 	{
 		iRv = -1 ;
 	}
@@ -843,7 +808,7 @@ bool CDiagramEditDoc::CentDedEki_IsClipboardFormatAvailable()
 
 UINT CDiagramEditDoc::getCF_CentDedRessyasyubetsu()
 {
-	return RegisterClipboardFormat( "CF_CentDedRessyasyubetsu" ) ;
+	return RegisterClipboardFormat( "CF_CentDedRessyasyubetsu_UTF8" ) ;
 } ;
 
 int CDiagramEditDoc::CentDedRessyasyubetsu_To_Cliboard( 
@@ -989,7 +954,7 @@ bool CDiagramEditDoc::CentDedRessyasyubetsu_IsClipboardFormatAvailable()
 
 UINT CDiagramEditDoc::getCF_CentDedRessyaCont() 
 {
-	return RegisterClipboardFormat( "CF_CentDedRessyaCont" ) ;
+	return RegisterClipboardFormat( "CF_CentDedRessyaCont_UTF8" ) ;
 }
 
 int CDiagramEditDoc::CentDedRessyaCont_To_Cliboard( 
