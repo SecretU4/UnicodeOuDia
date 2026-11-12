@@ -101,11 +101,11 @@ std::string stringOf( std::wstring strEs )
 std::wstring cp932WstringOf( const void* lpvEStr , int iESize )
 {
 	if ( lpvEStr == NULL || iESize <= 0 ) return std::wstring() ;
-	int cch = MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS ,
+	int cch = MultiByteToWideChar( 932 , 0 ,
 		(LPCSTR)lpvEStr , iESize , NULL , 0 ) ;
 	if ( cch <= 0 ) return std::wstring() ;
 	std::vector<wchar_t> wide( cch ) ;
-	if ( MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS ,
+	if ( MultiByteToWideChar( 932 , 0 ,
 		(LPCSTR)lpvEStr , iESize , &wide[0] , cch ) != cch )
 		return std::wstring() ;
 	return std::wstring( &wide[0] , cch ) ;
