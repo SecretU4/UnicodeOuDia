@@ -291,7 +291,12 @@ int stringFromFile( std::string* pString ,
 		pString->append( buffer , count ) ;
 	const bool readError = ferror( pFile ) != 0 ;
 	const bool closeError = fclose( pFile ) != 0 ;
-	return ( readError || closeError ) ? -2 : 0 ;
+	if ( readError || closeError )
+	{
+		pString->clear() ;
+		return -2 ;
+	}
+	return 0 ;
 }
 
 int stringToFileUtf8( const std::string& aString ,
