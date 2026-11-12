@@ -126,7 +126,7 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 	string	aString ;
 	CString	strError ;
 	if ( iRv >= 0 ){
-		int iResult = stringFromFile( &aString , lpszPathName ) ;
+		int iResult = stringFromFile( &aString , std::wstring( lpszPathName ) ) ;
 		//iResult = 
 		//	-1: ファイルがオープンできません。
 		//	-2 ; 読み込みに失敗しました。
@@ -307,7 +307,7 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 	// --------------------------------
 	LogMsg( "CDiagramEditDoc::OnSaveDocument()1" ) ;
 	if ( iRv >= 0 ){
-		int iResult = stringToFile( aString , lpszPathName ) ;
+		int iResult = stringToFile( aString , std::wstring( lpszPathName ) ) ;
 		//iResult = 
 		//	-1: ファイルがオープンできません。
 		//	-2 ; // 書き込みに失敗しました。 
