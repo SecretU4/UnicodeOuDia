@@ -123,13 +123,10 @@ int vectorFromFile( std::vector<char>* pVector ,
 					const std::string& strFilename ) 
 {
 	int	iRv = 0 ;
-	
-	if ( strFilename.empty() )
+	if ( pVector == NULL || strFilename.empty() )
 	{
 		iRv = -1 ;	//	ファイルオープンエラー
 	}
-	
-	
 	if ( iRv >= 0 ){
 		pVector->clear() ;
 	}
@@ -178,10 +175,9 @@ int stringToFile( const std::string& aString ,
 		FILE*	pFile = fopen( strFilename.c_str() , "wb" ) ;
 		
 		if ( pFile != NULL ){
-			int	iReadBytes = 0 ;
-			iReadBytes = fwrite( aString.c_str() , 1 , 
-								aString.size() , pFile ) ;
-			if ( iReadBytes != aString.size() ){
+			size_t iWrittenBytes = fwrite( aString.data() , 1 ,
+				aString.size() , pFile ) ;
+			if ( iWrittenBytes != aString.size() ){
 				iRv = -2 ;	//	書き込みに失敗しました。
 			}
 			if ( fclose( pFile ) != 0 ){
@@ -202,13 +198,10 @@ int stringFromFile( std::string* pString ,
 					const std::string& strFilename ) 
 {
 	int	iRv = 0 ;
-	
-	if ( strFilename.empty() )
+	if ( pString == NULL || strFilename.empty() )
 	{
 		iRv = -1 ;	//	ファイルオープンエラー
 	}
-
-	
 	if ( iRv >= 0 ){
 		pString->erase() ;
 	}
