@@ -320,18 +320,16 @@ int stringFromFileUtf8( std::string* pString ,
 	{
 		raw.assign( &bytes[0] , bytes.size() ) ;
 	}
-	// Strip an optional UTF-8 BOM.
-	if ( raw.size() >= 3 &&
+	const bool hasUtf8Bom = raw.size() >= 3 &&
 		(unsigned char)raw[0] == 0xef &&
 		(unsigned char)raw[1] == 0xbb &&
-		(unsigned char)raw[2] == 0xbf )
+		(unsigned char)raw[2] == 0xbf ;
+	if ( hasUtf8Bom )
 	{
 		raw.erase( 0 , 3 ) ;
 	}
 	std::wstring wide ;
-	if ( raw.size() >= 3 && (unsigned char)raw[0] == 0xef &&
-		(unsigned char)raw[1] == 0xbb && (unsigned char)raw[2] == 0xbf &&
-		wstringFromUtf8( raw , &wide ) )
+	if ( hasUtf8Bom && wstringFromUtf8( raw , &wide ) )
 	{
 		*pString = raw ;
 		return 0 ;
@@ -360,6 +358,64 @@ int stringFromFileUtf8( std::string* pString ,
 	}
 	return 0 ;
 }
+
+
+int stringToFileUtf8( const std::string& aString ,
+	const std::wstring& strFilename )
+{
+	if ( strFilename.empty() ) return -1 ;
+	FILE* pFile = _wfopen( strFilename.c_str() , L"wb" ) ;
+	if ( pFile == NULL ) return -1 ;
+	int iRv = 0 ;
+	const unsigned char bom[3] = { 0xef , 0xbb , 0xbf } ;
+	if ( fwrite( bom , 1 , 3 , pFile ) != 3 ) iRv = -2 ;
+	if ( iRv >= 0 && !aString.empty() &&
+		fwrite( aString.data() , 1 , aString.size() , pFile ) != aString.size() )
+		iRv = -2 ;
+	if ( fclose( pFile ) != 0 && iRv >= 0 ) iRv = -2 ;
+	return iRv ;
+}
+
+int stringFromFileUtf8( std::string* pString ,
+	const std::wstring& strFilename )
+{
+	if ( pString == NULL || strFilename.empty() ) return -1 ;
+	FILE* pFile = _wfopen( strFilename.c_str() , L"rb" ) ;
+	if ( pFile == NULL ) return -1 ;
+	std::vector<char> bytes ;
+	char buffer[4096] ;
+	size_t count = 0 ;
+	while ( ( count = fread( buffer , 1 , sizeof(buffer) , pFile ) ) > 0 )
+		bytes.insert( bytes.end() , buffer , buffer + count ) ;
+	const bool readError = ferror( pFile ) != 0 ;
+	const bool closeError = fclose( pFile ) != 0 ;
+	if ( readError || closeError ) return -2 ;
+	if ( std::find( bytes.begin() , bytes.end() , '\\0' ) != bytes.end() )
+		return -3 ;
+	std::string raw ;
+	if ( !bytes.empty() ) raw.assign( &bytes[0] , bytes.size() ) ;
+	const bool hasUtf8Bom = raw.size() >= 3 &&
+		(unsigned char)raw[0] == 0xef &&
+		(unsigned char)raw[1] == 0xbb &&
+		(unsigned char)raw[2] == 0xbf ;
+	if ( hasUtf8Bom ) raw.erase( 0 , 3 ) ;
+	std::wstring wide ;
+	if ( hasUtf8Bom && wstringFromUtf8( raw , &wide ) )
+	{
+		*pString = raw ;
+		return 0 ;
+	}
+	if ( raw.size() > 0x7fffffff ) return -3 ;
+	int cch = MultiByteToWideChar( 932 , 0 , raw.data() ,
+		(int)raw.size() , NULL , 0 ) ;
+	if ( cch <= 0 ) return -3 ;
+	std::vector<wchar_t> legacy( cch ) ;
+	if ( MultiByteToWideChar( 932 , 0 , raw.data() , (int)raw.size() ,
+		&legacy[0] , cch ) != cch ) return -3 ;
+	wide.assign( &legacy[0] , cch ) ;
+	return utf8Of( wide , pString ) ? 0 : -3 ;
+}
+
 
 
 } //namespace Str{
