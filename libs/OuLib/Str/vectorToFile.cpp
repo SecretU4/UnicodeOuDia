@@ -268,8 +268,6 @@ int stringFromFile( std::string* pString ,
  * New files are UTF-8 without BOM. Existing files without a UTF-8 BOM are
  * interpreted as legacy Windows Japanese code page 932.
  */
-#include "strToWstr.h"
-
 int stringToFileUtf8( const std::string& aString ,
 	const std::string& strFilename )
 {
