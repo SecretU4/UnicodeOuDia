@@ -71,6 +71,7 @@ Copyright (C) 2006-2017 take-okm
 #include "NsOu/dynamic_castOu.h"
 #include "str/strLf.h"
 #include "str/strToInt.h"
+#include "str/strToWstr.h"
 #include "LogMsg\LogMsg.h"
 #include "DcDraw\CConverter_WinGdi.h"
 #include "DcDrawMfc/CDcdTargetMfcPrintInfo.h"
@@ -130,7 +131,7 @@ void CDedCommentView::OnUpdate_All()
 		int iLineNum = GetEditCtrl().GetFirstVisibleLine() ;
 		int iStartChar , iEndChar ;
 		GetEditCtrl().GetSel( iStartChar , iEndChar ) ;
-		GetEditCtrl().SetWindowText( strCrlfOf( strLs ).c_str() ) ;
+		GetEditCtrl().SetWindowText( wstringOf( strCrlfOf( strLs ) ).c_str() ) ;
 		if ( iStartChar > GetEditCtrl().GetWindowTextLength() ){
 			iStartChar = GetEditCtrl().GetWindowTextLength() ;
 		}
@@ -161,7 +162,7 @@ void CDedCommentView::OnUpdate_Comment( Ou<CRfEditCmd_Comment> pCommand )
 		int iLineNum = GetEditCtrl().GetFirstVisibleLine() ;
 		int iStartChar , iEndChar ;
 		GetEditCtrl().GetSel( iStartChar , iEndChar ) ;
-		GetEditCtrl().SetWindowText( strCrlfOf( pCommand->getComment() ).c_str() ) ;
+		GetEditCtrl().SetWindowText( wstringOf( strCrlfOf( pCommand->getComment() ) ).c_str() ) ;
 		if ( iStartChar > GetEditCtrl().GetWindowTextLength() ){
 			iStartChar = GetEditCtrl().GetWindowTextLength() ;
 		}
