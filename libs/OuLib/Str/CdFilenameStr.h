@@ -209,6 +209,8 @@ class CdFilenameStr
 	* 	この場合は、一番右の '\' の右側もディレクトリとみなします。
 	*/
 	CdFilenameStr( std::string strFilename , bool bIsValidFilename = true ) ;
+	/** Accept a Windows UTF-16 path and store it internally as UTF-8. */
+	CdFilenameStr( const std::wstring& strFilename , bool bIsValidFilename = true ) ;
 
 // ********************************
 //	CdFilenameStr
