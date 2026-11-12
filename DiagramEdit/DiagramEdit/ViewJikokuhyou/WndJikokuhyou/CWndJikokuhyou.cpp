@@ -404,9 +404,24 @@ int CWndJikokuhyou::OnFileImportJikokuhyoucsv_Process( BOOL bQueryEnable )
 				std::wstring( (LPCTSTR)strCsvFilename ) ) ; 
 			if ( iResult < 0 )
 			{
-				strError.Format( IDS_ERR_FILENOTFOUND , 
-					(LPCTSTR)strCsvFilename ) ;
-				iRv = -11 ;	//	ファイルが見つかりません。
+				if ( iResult == -1 )
+				{
+					strError.Format( IDS_ERR_FILENOTFOUND ,
+						(LPCTSTR)strCsvFilename ) ;
+					iRv = -11 ; // File not found.
+				}
+				else if ( iResult == -3 )
+				{
+					strError.Format( IDS_ERR_FILEFORMAT ,
+						(LPCTSTR)strCsvFilename ) ;
+					iRv = -12 ; // Invalid text encoding or binary content.
+				}
+				else
+				{
+					strError.Format( IDS_ERR_FILEREAD ,
+						(LPCTSTR)strCsvFilename ) ;
+					iRv = -13 ; // Read failure.
+				}
 			}
 			else
 			{
