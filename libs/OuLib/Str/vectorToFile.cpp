@@ -75,6 +75,8 @@ Copyright (C) 2006-2017 take-okm
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <algorithm>
+#include "strToWstr.h"
 
 namespace OuLib{
 namespace Str{
@@ -258,6 +260,100 @@ int stringFromFile( std::string* pString ,
 
 	}
 	return ( iRv ) ;
+}
+
+
+/*
+ * UTF-8 text-file boundary helpers.
+ * New files are UTF-8 without BOM. Existing files without a UTF-8 BOM are
+ * interpreted as legacy Windows Japanese code page 932.
+ */
+#include "strToWstr.h"
+
+int stringToFileUtf8( const std::string& aString ,
+	const std::string& strFilename )
+{
+	if ( strFilename.empty() )
+	{
+		return -1 ;
+	}
+	FILE* pFile = fopen( strFilename.c_str() , "wb" ) ;
+	if ( pFile == NULL )
+	{
+		return -1 ;
+	}
+	int iRv = 0 ;
+	if ( !aString.empty() &&
+		fwrite( aString.data() , 1 , aString.size() , pFile ) != aString.size() )
+	{
+		iRv = -2 ;
+	}
+	if ( fclose( pFile ) != 0 && iRv >= 0 )
+	{
+		iRv = -2 ;
+	}
+	return iRv ;
+}
+
+int stringFromFileUtf8( std::string* pString ,
+	const std::string& strFilename )
+{
+	if ( pString == NULL || strFilename.empty() )
+	{
+		return -1 ;
+	}
+	std::vector<char> bytes ;
+	int iRv = vectorFromFile( &bytes , strFilename ) ;
+	if ( iRv < 0 )
+	{
+		return iRv ;
+	}
+	if ( std::find( bytes.begin() , bytes.end() , '\\0' ) != bytes.end() )
+	{
+		return -3 ;
+	}
+	std::string raw ;
+	if ( !bytes.empty() )
+	{
+		raw.assign( &bytes[0] , bytes.size() ) ;
+	}
+	// Strip an optional UTF-8 BOM.
+	if ( raw.size() >= 3 &&
+		(unsigned char)raw[0] == 0xef &&
+		(unsigned char)raw[1] == 0xbb &&
+		(unsigned char)raw[2] == 0xbf )
+	{
+		raw.erase( 0 , 3 ) ;
+	}
+	std::wstring wide ;
+	if ( wstringFromUtf8( raw , &wide ) )
+	{
+		*pString = raw ;
+		return 0 ;
+	}
+	// No BOM and invalid UTF-8: preserve compatibility with legacy CP932.
+	if ( raw.size() > 0x7fffffff )
+	{
+		return -3 ;
+	}
+	int cch = MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS ,
+		raw.data() , (int)raw.size() , NULL , 0 ) ;
+	if ( cch <= 0 )
+	{
+		return -3 ;
+	}
+	std::vector<wchar_t> legacy( cch ) ;
+	if ( MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS ,
+		raw.data() , (int)raw.size() , &legacy[0] , cch ) != cch )
+	{
+		return -3 ;
+	}
+	wide.assign( &legacy[0] , cch ) ;
+	if ( !utf8Of( wide , pString ) )
+	{
+		return -3 ;
+	}
+	return 0 ;
 }
 
 
