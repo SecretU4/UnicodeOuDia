@@ -98,11 +98,13 @@ int vectorToFile( const std::vector<char>& aVector ,
 		FILE*	pFile = fopen( strFilename.c_str() , "wb" ) ;
 		
 		if ( pFile != NULL ){
-			int	iReadBytes = 0 ;
-			iReadBytes = fwrite( &aVector.front() , 1 , 
-								aVector.size() , pFile ) ;
-			if ( iReadBytes != aVector.size() ){
-				iRv = -2 ;	//	書き込みに失敗しました。
+			if ( !aVector.empty() )
+			{
+				size_t iWrittenBytes = fwrite( &aVector[0] , 1 ,
+					aVector.size() , pFile ) ;
+				if ( iWrittenBytes != aVector.size() ){
+					iRv = -2 ;	//	書き込みに失敗しました。
+				}
 			}
 			if ( fclose( pFile ) != 0 ){
 				if ( iRv >= 0 ){
@@ -172,7 +174,7 @@ int stringToFile( const std::string& aString ,
 		iRv = -1 ;	//	ファイルオープンエラー
 	}
 	if ( iRv >= 0 ){
-		FILE*	pFile = fopen( strFilename.c_str() , "wt" ) ;
+		FILE*	pFile = fopen( strFilename.c_str() , "wb" ) ;
 		
 		if ( pFile != NULL ){
 			int	iReadBytes = 0 ;
@@ -230,26 +232,25 @@ int stringFromFile( std::string* pString ,
 	{
 		
 		
-		FILE*	pFile = fopen( strFilename.c_str() , "rt" ) ;
+		FILE*	pFile = fopen( strFilename.c_str() , "rb" ) ;
 		
 		if ( pFile != NULL ){
-			char	szLs[1024+1] ;
-			int	iReadBytes = 0 ;
+			char	szLs[1024] ;
+			size_t iReadBytes = 0 ;
 			do{
-				iReadBytes = fread( szLs , 1 , sizeof(szLs) - 1 , pFile ) ;
+				iReadBytes = fread( szLs , 1 , sizeof(szLs) , pFile ) ;
 				if ( iReadBytes > 0 ){
-					szLs[iReadBytes] = '\0' ;
-					int idx ;
-					for ( idx = 0 ; szLs[idx] != '\0' ; idx ++ ){} ;
-					if ( idx != iReadBytes ){
+					if ( std::find( szLs , szLs + iReadBytes , '\0' )
+						!= szLs + iReadBytes ){
 						iRv = -3 ;	//	ファイルには'\0' が含まれます。
 					}	else	{
-						*pString += szLs ;
+						pString->append( szLs , iReadBytes ) ;
 					}
-				}	else if ( iReadBytes < 0 ){
-					iRv = -2 ;	//	読み込みに失敗しました。
 				}
 			}	while ( iReadBytes > 0 && iRv >= 0 ) ;
+			if ( ferror( pFile ) != 0 && iRv >= 0 ){
+				iRv = -2 ;	//	読み込みに失敗しました。
+			}
 			if ( fclose( pFile ) != 0 ){
 				if ( iRv >= 0 ){
 					iRv = -2 ;	//	読み込みに失敗しました。
