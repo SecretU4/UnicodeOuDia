@@ -1077,7 +1077,7 @@ BOOL CDiagramEditApp::InitInstance()
 	//	LogMsg() ファイルのファイル名設定
 	// --------------------------------
 	{
-		logmsg_setFilename( makeLocalAppdataFilename( "OuDia.log" ) ) ;
+		logmsg_setFilenameW( makeLocalAppdataFilename( _T( "OuDia.log" ) ) ) ;
 
 		//	LogLevel は、このあとに 
 		//	.ini ファイルの[AppProp]LogLevel から読み出します。
