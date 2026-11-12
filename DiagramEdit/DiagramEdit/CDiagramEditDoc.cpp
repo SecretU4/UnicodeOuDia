@@ -592,8 +592,29 @@ static int stringFromClipboard(
 		if ( hGlobal != NULL )
 		{
 			const char* lpszData = (const char*)GlobalLock( hGlobal ) ;
-			strData = lpszData ;
-			GlobalUnlock( hGlobal ) ;
+			if ( lpszData != NULL )
+			{
+				strData = lpszData ;
+				GlobalUnlock( hGlobal ) ;
+				// Private OuDia clipboard formats used CP_ACP in older releases.
+				// Accept those payloads and normalize them to UTF-8.
+				std::wstring wide ;
+				if ( !wstringFromUtf8( strData , &wide ) )
+				{
+					int cch = MultiByteToWideChar( 932 , 0 , strData.data() ,
+						(int)strData.size() , NULL , 0 ) ;
+					if ( cch > 0 )
+					{
+						std::vector<wchar_t> legacy( cch ) ;
+						if ( MultiByteToWideChar( 932 , 0 , strData.data() ,
+							(int)strData.size() , &legacy[0] , cch ) == cch )
+						{
+							wide.assign( &legacy[0] , cch ) ;
+							utf8Of( wide , &strData ) ;
+						}
+					}
+				}
+			}
 		}
 	}
 	if ( bIsOpen )
