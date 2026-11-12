@@ -127,6 +127,11 @@ std::wstring wstringOf( std::wstring strEs ) ;
 bool utf8Of( const std::wstring& strEs , std::string* pstrUtf8 ) ;
 bool wstringFromUtf8( const std::string& strUtf8 , std::wstring* pstrEs ) ;
 
+/** Decode an explicitly CP932-encoded legacy byte buffer. */
+std::wstring cp932WstringOf( const void* lpvEStr , int iESize ) ;
+/** Decode a CP932 legacy byte buffer and return UTF-8 for std::string APIs. */
+std::string cp932StringOf( const void* lpvEStr , int iESize ) ;
+
 /**
 * 	ワイドかマルチバイトか分からない文字列をワイド文字列に変換します
 * @param lpvEStr
