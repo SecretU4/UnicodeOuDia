@@ -137,6 +137,9 @@ LogMsg() や LogMsgL() はログファイルを空にします。
 #define  LOGMSG_H
 #include <stdio.h>
 #include <stdarg.h>
+#ifdef _WIN32
+#include <wchar.h>
+#endif
 
 #ifdef __cplusplus
 extern "C"{
@@ -149,6 +152,9 @@ extern "C"{
  	ファイル名を指定してください。
 */
 void logmsg_setFilename( const char* lpszLogFilename );
+#ifdef _WIN32
+void logmsg_setFilenameW( const wchar_t* lpszLogFilename );
+#endif
 
 /**
  	ログの標準レベルを設定できます。
