@@ -161,10 +161,12 @@ int stringFromFile( std::string* pString ,
 int stringFromFileUtf8( std::string* pString , const std::string& strFilename ) ;
 /** Write a UTF-8 text file with a BOM. */
 int stringToFileUtf8( const std::string& aString , const std::string& strFilename ) ;
+/** Read UTF-8 (BOM or strict UTF-8); otherwise convert legacy CP932 to UTF-8. */
 int stringFromFileUtf8( std::string* pString , const std::wstring& strFilename ) ;
 /** Legacy byte-preserving file access for external formats such as WinDIA. */
 int stringFromFile( std::string* pString , const std::wstring& strFilename ) ;
 int stringToFile( const std::string& aString , const std::wstring& strFilename ) ;
+/** Write UTF-8 text with a BOM using a native UTF-16 file path. */
 int stringToFileUtf8( const std::string& aString , const std::wstring& strFilename ) ;
 
 } //namespace Str {
