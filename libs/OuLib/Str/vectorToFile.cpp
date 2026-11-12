@@ -356,7 +356,9 @@ int stringToFileUtf8( const std::string& aString ,
 int stringFromFileUtf8( std::string* pString ,
 	const std::wstring& strFilename )
 {
-	if ( pString == NULL || strFilename.empty() ) return -1 ;
+	if ( pString == NULL ) return -1 ;
+	pString->clear() ;
+	if ( strFilename.empty() ) return -1 ;
 	FILE* pFile = _wfopen( strFilename.c_str() , L"rb" ) ;
 	if ( pFile == NULL ) return -1 ;
 	std::vector<char> bytes ;
