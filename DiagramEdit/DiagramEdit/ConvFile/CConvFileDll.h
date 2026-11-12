@@ -112,7 +112,7 @@ private:
 		このクラスが利用するConvFileDllのファイル名。
 		コンストラクタで決まります。
 	*/
-	std::string	m_strDllFilename ;
+	std::wstring	m_strDllFilename ;
 
 	///@}
 	// --------------------------------
@@ -137,14 +137,14 @@ public:
 	// ********************************
 	//	コンストラクタ・デストラクタ
 	// ********************************
-	CConvFileDll( const std::string&	strDllFilename );
+	CConvFileDll( const std::wstring&	strDllFilename );
 	virtual ~CConvFileDll();
 
 	// ********************************
 	///@name 属性
 	// ********************************
 	///@{
-	std::string	getDllFilename()const
+	std::wstring	getDllFilename()const
 	{	return m_strDllFilename ;};
 	///@}
 
