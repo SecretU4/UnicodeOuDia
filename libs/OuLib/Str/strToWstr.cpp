@@ -119,7 +119,7 @@ std::wstring wstringOf( std::wstring strEs )
 }
 
 // UTF-8 conversion helpers. These are deliberately separate from stringOf()
-// and wstringOf(), whose CP_ACP behavior is retained for legacy callers.
+// and wstringOf(), which now use UTF-8 independently of the system code page.
 bool utf8Of( const std::wstring& strEs , std::string* pstrUtf8 )
 {
 	if ( pstrUtf8 == NULL )
