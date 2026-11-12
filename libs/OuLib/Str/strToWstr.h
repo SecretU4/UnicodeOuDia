@@ -101,12 +101,10 @@ std::string stringOf( std::string strEs ) ;
 std::string stringOf( std::wstring strEs ) ;
 
 /**
-* 	ワイドかマルチバイトか分からない文字列をマルチバイト文字列に変換します
-* @param lpvEStr
-* 	ワイドかマルチバイトか分からない文字列の先頭アドレスを
-* 	指定してください。
-* @param iESize
-* 	lpvEStrのバイト数を指定してください。
+* 	CP932 バイト列を UTF-8 文字列に変換します。
+* 	UTF-16 データは std::wstring オーバーロードを使用してください。
+* @param lpvEStr CP932 バイト列の先頭アドレス
+* @param iESize バイト数
 */
 std::string stringOf( const void* lpvEStr , int iESize ) ;
 
@@ -133,12 +131,10 @@ std::wstring cp932WstringOf( const void* lpvEStr , int iESize ) ;
 std::string cp932StringOf( const void* lpvEStr , int iESize ) ;
 
 /**
-* 	ワイドかマルチバイトか分からない文字列をワイド文字列に変換します
-* @param lpvEStr
-* 	ワイドかマルチバイトか分からない文字列の先頭アドレスを
-* 	指定してください。
-* @param iESize
-* 	lpvEStrのバイト数を指定してください。
+* 	CP932 バイト列をワイド文字列に変換します。
+* 	UTF-16 データは std::wstring オーバーロードを使用してください。
+* @param lpvEStr CP932 バイト列の先頭アドレス
+* @param iESize バイト数
 */
 std::wstring wstringOf( const void* lpvEStr , int iESize ) ;
 
