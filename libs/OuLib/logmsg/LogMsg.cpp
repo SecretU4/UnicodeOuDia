@@ -96,6 +96,10 @@ Copyright (C) 2006-2017 take-okm
 #include "LogMsg.h"
 
 static char g_szLogFilename[256] = "logMsg.log" ;
+#ifdef _WIN32
+static wchar_t g_wszLogFilename[256] = L"" ;
+static bool g_bWideLogFilename = false ;
+#endif
 
 /**
  * 	現在のログの標準レベルです。
@@ -134,6 +138,28 @@ void logmsg_setFilename( const char* lpszLogFilename )
 #endif 
 }
 
+#ifdef _WIN32
+void logmsg_setFilenameW( const wchar_t* lpszLogFilename )
+{
+	if ( lpszLogFilename == NULL ) return ;
+	wcsncpy_s( g_wszLogFilename ,
+		sizeof(g_wszLogFilename) / sizeof(g_wszLogFilename[0]) ,
+		lpszLogFilename , _TRUNCATE ) ;
+	g_bWideLogFilename = true ;
+}
+#endif
+
+static FILE* logmsg_fopen( const char* lpszMode )
+{
+#ifdef _WIN32
+	if ( g_bWideLogFilename )
+	{
+		if ( strcmp( lpszMode , "wt" ) == 0 ) return _wfopen( g_wszLogFilename , L"wt" ) ;
+		if ( strcmp( lpszMode , "a+" ) == 0 ) return _wfopen( g_wszLogFilename , L"a+" ) ;
+	}
+#endif
+	return fopen( g_szLogFilename , lpszMode ) ;
+}
 void logmsg_setLogLevel( int ev )
 {
 	g_iLogLevel = ev ;
@@ -159,7 +185,7 @@ void logmsg_LogMsgV( int iLevel , const char* fmt , va_list	marker )
 		if ( g_iLogCount >= g_iLogCountLimit ){
 			//	行数が g_iLogCountLimit に達していたら、既存の内容を
 			//	破棄します。
-			FILE*	pFile = fopen( g_szLogFilename , "wt" ) ;
+			FILE*	pFile = logmsg_fopen( "wt" ) ;
 		
 			if ( pFile != NULL ){
 				fclose( pFile ) ;
@@ -169,7 +195,14 @@ void logmsg_LogMsgV( int iLevel , const char* fmt , va_list	marker )
 #ifdef  LOGMSG_BYTELIMIT
 		{
 			struct stat	aStat ;
-			if ( stat( g_szLogFilename , &aStat ) == 0 ){
+#ifdef _WIN32
+			int iStatResult = g_bWideLogFilename
+				? _wstat( g_wszLogFilename , &aStat )
+				: stat( g_szLogFilename , &aStat ) ;
+#else
+			int iStatResult = stat( g_szLogFilename , &aStat ) ;
+#endif
+			if ( iStatResult == 0 ){
 				if ( aStat.st_size >= g_iLogCountLimit * 80 ){
 					//	サイズが『最大行数×80』バイトに達していた場合、
 					//	既存の内容を破棄します。
@@ -186,7 +219,7 @@ void logmsg_LogMsgV( int iLevel , const char* fmt , va_list	marker )
 		{
 			//	ログをファイルに追加します。
 	
-			FILE*	pFile = fopen( g_szLogFilename , "a+" ) ;
+			FILE*	pFile = logmsg_fopen( "a+" ) ;
 			if ( pFile != NULL ){
 #ifdef  LOGMSG_MILLISEC
 				struct timeb aTimeb ;
