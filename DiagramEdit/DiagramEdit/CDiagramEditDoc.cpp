@@ -564,15 +564,20 @@ static int stringToClipboard(
 
 	HGLOBAL hLegacy = NULL ;
 	HGLOBAL hUnicode = NULL ;
+	// The legacy format is an optional compatibility aid. Failure to
+	// allocate it must not prevent publishing the Unicode clipboard text.
 	if ( iRv >= 0 && bCanPublishLegacyFormat )
 	{
 		hLegacy = GlobalAlloc( GMEM_MOVEABLE , legacyData.size() + 1 ) ;
-		if ( hLegacy == NULL ) iRv = -2 ;
 	}
-	if ( iRv >= 0 && hLegacy != NULL )
+	if ( hLegacy != NULL )
 	{
 		void* p = GlobalLock( hLegacy ) ;
-		if ( p == NULL ) iRv = -2 ;
+		if ( p == NULL )
+		{
+			GlobalFree( hLegacy ) ;
+			hLegacy = NULL ;
+		}
 		else
 		{
 			memcpy( p , legacyData.c_str() , legacyData.size() + 1 ) ;
@@ -630,7 +635,12 @@ static int stringFromClipboard(
 	int iRv = 0 ;
 	string strData ;
 	bool bIsOpen = false ;
-	if ( !IsClipboardFormatAvailable( uiClipboardFormat ) &&
+	if ( pstrData == NULL )
+	{
+		iRv = -1 ;
+	}
+	if ( iRv >= 0 &&
+		!IsClipboardFormatAvailable( uiClipboardFormat ) &&
 		!IsClipboardFormatAvailable( CF_UNICODETEXT ) )
 	{
 		iRv = -1 ;
@@ -640,7 +650,10 @@ static int stringFromClipboard(
 		if ( !OpenClipboard( aHwnd ) ) iRv = -11 ;
 		else bIsOpen = true ;
 	}
-	if ( iRv >= 0 )
+
+	// Prefer OuDia's structured format. Its historical payload is CP932,
+	// while CF_UNICODETEXT is the Unicode interoperability fallback.
+	if ( iRv >= 0 && IsClipboardFormatAvailable( uiClipboardFormat ) )
 	{
 		HGLOBAL hGlobal = GetClipboardData( uiClipboardFormat ) ;
 		if ( hGlobal != NULL )
@@ -648,19 +661,25 @@ static int stringFromClipboard(
 			const char* pData = (const char*)GlobalLock( hGlobal ) ;
 			if ( pData != NULL )
 			{
-				strData = pData ;
+				std::string legacyOrUtf8( pData ) ;
 				GlobalUnlock( hGlobal ) ;
-				// Private OuDia data may be CP932 (older releases) or UTF-8.
+
 				std::wstring wide ;
-				if ( !wstringFromUtf8( strData , &wide ) )
+				if ( wstringFromUtf8( legacyOrUtf8 , &wide ) )
 				{
-					int cch = MultiByteToWideChar( 932 , 0 , strData.data() ,
-						(int)strData.size() , NULL , 0 ) ;
+					strData = legacyOrUtf8 ;
+				}
+				else if ( legacyOrUtf8.size() <= 0x7fffffff )
+				{
+					int cch = MultiByteToWideChar( 932 , 0 ,
+						legacyOrUtf8.data() , (int)legacyOrUtf8.size() ,
+						NULL , 0 ) ;
 					if ( cch > 0 )
 					{
 						std::vector<wchar_t> legacy( cch ) ;
-						if ( MultiByteToWideChar( 932 , 0 , strData.data() ,
-							(int)strData.size() , &legacy[0] , cch ) == cch )
+						if ( MultiByteToWideChar( 932 , 0 ,
+							legacyOrUtf8.data() , (int)legacyOrUtf8.size() ,
+							&legacy[0] , cch ) == cch )
 						{
 							wide.assign( &legacy[0] , cch ) ;
 							utf8Of( wide , &strData ) ;
@@ -669,26 +688,35 @@ static int stringFromClipboard(
 				}
 			}
 		}
-		else
+	}
+
+	// If the private format is absent, inaccessible, or undecodable, try
+	// the standard UTF-16 clipboard representation instead.
+	if ( iRv >= 0 && strData.empty() &&
+		IsClipboardFormatAvailable( CF_UNICODETEXT ) )
+	{
+		HGLOBAL hUnicode = GetClipboardData( CF_UNICODETEXT ) ;
+		if ( hUnicode != NULL )
 		{
-			HGLOBAL hUnicode = GetClipboardData( CF_UNICODETEXT ) ;
-			if ( hUnicode != NULL )
+			const wchar_t* pWide = (const wchar_t*)GlobalLock( hUnicode ) ;
+			if ( pWide != NULL )
 			{
-				const wchar_t* pWide = (const wchar_t*)GlobalLock( hUnicode ) ;
-				if ( pWide != NULL )
-				{
-					std::wstring wide( pWide ) ;
-					GlobalUnlock( hUnicode ) ;
-					if ( !utf8Of( wide , &strData ) ) iRv = -12 ;
-				}
+				std::wstring wide( pWide ) ;
+				GlobalUnlock( hUnicode ) ;
+				if ( !utf8Of( wide , &strData ) ) iRv = -12 ;
 			}
 		}
 	}
 	if ( bIsOpen ) CloseClipboard() ;
+	if ( iRv >= 0 && strData.empty() &&
+		!IsClipboardFormatAvailable( uiClipboardFormat ) &&
+		!IsClipboardFormatAvailable( CF_UNICODETEXT ) )
+	{
+		iRv = -1 ;
+	}
 	if ( pstrData != NULL ) *pstrData = strData ;
 	return iRv ;
 }
-
 
 int CDiagramEditDoc::CentDedEki_To_Cliboard( 
 	const Mu<CentDedEki>* pMuCentDedEki ) 
