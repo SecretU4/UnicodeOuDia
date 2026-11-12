@@ -176,12 +176,11 @@ void CDiagramEditApp::readVersionResource(
 	if ( szInfo.size() > 0 )
 	{
 		UINT uiLen = 0 ;
-		const char* lpszLegalCopyright ;
-		VerQueryValue( &szInfo[0] , _T( "\\StringFileInfo\\041104b0\\LegalCopyright" ) 
-			, (void**)&lpszLegalCopyright , &uiLen ) ; 
-		if ( uiLen > 0 )
+		const wchar_t* lpszLegalCopyright = NULL ;
+		if ( VerQueryValue( &szInfo[0] , _T( "\\StringFileInfo\\041104b0\\LegalCopyright" )
+			, (void**)&lpszLegalCopyright , &uiLen ) && lpszLegalCopyright != NULL )
 		{
-			strLegalCopyright = lpszLegalCopyright ;
+			utf8Of( std::wstring( lpszLegalCopyright ) , &strLegalCopyright ) ;
 		}
 	}
 	if ( pstrFileVersion != NULL ){	*pstrFileVersion = strFileVersion ;}
@@ -420,7 +419,7 @@ CString CDiagramEditApp::makeProgramDirFilename( const CString& strFilename )
 	CString	strProgramDir ;
 	{
 		TCHAR	szExe[MAX_PATH] ;
-		GetModuleFileName( NULL , szExe , sizeof(szExe) ) ;
+		GetModuleFileName( NULL , szExe , MAX_PATH ) ;
 		strProgramDir = szExe ;
 		int idx = strProgramDir.ReverseFind( _T( '\\' ) ) ;
 		strProgramDir = strProgramDir.Left( idx + 1 ) ;
