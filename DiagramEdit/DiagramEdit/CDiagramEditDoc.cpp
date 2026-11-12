@@ -162,7 +162,7 @@ static bool utf8OfCp932Bytes(
 // --------------------------------
 BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName ) 
 {
-	LogMsg( "CDiagramEditDoc::OnOpenDocument_WinDia(%s)" , lpszPathName ) ;
+	LogMsg( "CDiagramEditDoc::OnOpenDocument_WinDia(%s)" , stringOf( std::wstring( lpszPathName ) ).c_str() ) ;
 	int iRv = 0 ;
 
 	// --------------------------------
@@ -1398,7 +1398,7 @@ int CDiagramEditDoc::OnOpenDocument_ConvFile(
 						//strError += aCConvFileDll.getDllFilename().c_str()  ;
 						if ( strErrorInfoString.size() > 0 )
 						{
-							strError += strErrorInfoString.c_str() ;
+							strError += wstringOf( strErrorInfoString ).c_str() ;
 							strError += "\n" ;
 						}
 						iRv = -102 ;	//	ファイルの変換に失敗しました。
@@ -1424,7 +1424,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 {
 	CWaitCursor	aCWaitCursor ;
 
-	LogMsg( "CDiagramEditDoc::OnOpenDocument(%s)" , lpszPathName ) ;
+	LogMsg( "CDiagramEditDoc::OnOpenDocument(%s)" , stringOf( std::wstring( lpszPathName ) ).c_str() ) ;
 	//	Serialize は使いません。
 	//
 	//if (!CHidemdiRootDoc::OnOpenDocument(lpszPathName))
