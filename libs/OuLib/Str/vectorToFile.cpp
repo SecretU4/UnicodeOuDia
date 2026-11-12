@@ -341,7 +341,7 @@ int stringFromFileUtf8( std::string* pString ,
 		return -3 ;
 	}
 	std::vector<wchar_t> legacy( cch ) ;
-	if ( MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS ,
+	if ( MultiByteToWideChar( 932 , 0 ,
 		raw.data() , (int)raw.size() , &legacy[0] , cch ) != cch )
 	{
 		return -3 ;
