@@ -854,7 +854,8 @@ int CDiagramEditDoc::CentDedEki_From_Cliboard(
 
 bool CDiagramEditDoc::CentDedEki_IsClipboardFormatAvailable() 
 {
-	return ( IsClipboardFormatAvailable( getCF_CentDedEki() ) != 0 );
+	return ( IsClipboardFormatAvailable( getCF_CentDedEki() ) != 0 ||
+		IsClipboardFormatAvailable( CF_UNICODETEXT ) != 0 );
 }
 
 UINT CDiagramEditDoc::getCF_CentDedRessyasyubetsu()
@@ -999,7 +1000,8 @@ int CDiagramEditDoc::CentDedRessyasyubetsu_From_Cliboard(
 
 bool CDiagramEditDoc::CentDedRessyasyubetsu_IsClipboardFormatAvailable() 
 {
-	return ( IsClipboardFormatAvailable( getCF_CentDedRessyasyubetsu() ) != 0 );
+	return ( IsClipboardFormatAvailable( getCF_CentDedRessyasyubetsu() ) != 0 ||
+		IsClipboardFormatAvailable( CF_UNICODETEXT ) != 0 );
 }
 
 UINT CDiagramEditDoc::getCF_CentDedRessyaCont() 
@@ -1120,7 +1122,8 @@ int CDiagramEditDoc::CentDedRessyaCont_From_Cliboard(
 
 bool CDiagramEditDoc::CentDedRessyaCont_IsClipboardFormatAvailable() 
 {
-	return ( IsClipboardFormatAvailable( getCF_CentDedRessyaCont() ) != 0 );
+	return ( IsClipboardFormatAvailable( getCF_CentDedRessyaCont() ) != 0 ||
+		IsClipboardFormatAvailable( CF_UNICODETEXT ) != 0 );
 }
 	// ********************************
 	//@name 操作
