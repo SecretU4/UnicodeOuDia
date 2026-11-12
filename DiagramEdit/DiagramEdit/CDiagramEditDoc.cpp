@@ -1591,14 +1591,10 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		}
 		if ( iRv >= 0 )
 		{
-			std::wstring strConvertedUnicode ;
+			std::string strConvertedCp932 = stringOf( binFileContent ) ;
 			std::string strConvertedUtf8 ;
-			if ( binFileContent.size() > 0x7fffffff
-				|| ( !binFileContent.empty()
-					&& ( strConvertedUnicode = cp932WstringOf(
-						&binFileContent[0] ,
-						(int)binFileContent.size() ) ).empty() )
-				|| !utf8Of( strConvertedUnicode , &strConvertedUtf8 ) )
+			if ( !utf8OfCp932Bytes( strConvertedCp932 ,
+				&strConvertedUtf8 ) )
 			{
 				iRv = -33 ; // Converter returned invalid CP932 text.
 			}
