@@ -163,6 +163,42 @@ int vectorFromFile( std::vector<char>* pVector ,
 
 
 
+// Binary file access using native UTF-16 paths for the Unicode application.
+int vectorToFile( const std::vector<char>& aVector ,
+	const std::wstring& strFilename )
+{
+	if ( strFilename.empty() ) return -1 ;
+	FILE* pFile = _wfopen( strFilename.c_str() , L"wb" ) ;
+	if ( pFile == NULL ) return -1 ;
+	int iRv = 0 ;
+	if ( !aVector.empty() &&
+		fwrite( aVector.data() , 1 , aVector.size() , pFile )
+			!= aVector.size() ) iRv = -2 ;
+	if ( fclose( pFile ) != 0 && iRv >= 0 ) iRv = -2 ;
+	return iRv ;
+}
+
+int vectorFromFile( std::vector<char>* pVector ,
+	const std::wstring& strFilename )
+{
+	if ( pVector == NULL || strFilename.empty() ) return -1 ;
+	pVector->clear() ;
+	FILE* pFile = _wfopen( strFilename.c_str() , L"rb" ) ;
+	if ( pFile == NULL ) return -1 ;
+	char buffer[4096] ;
+	size_t count = 0 ;
+	while ( ( count = fread( buffer , 1 , sizeof(buffer) , pFile ) ) > 0 )
+		pVector->insert( pVector->end() , buffer , buffer + count ) ;
+	const bool readError = ferror( pFile ) != 0 ;
+	const bool closeError = fclose( pFile ) != 0 ;
+	if ( readError || closeError )
+	{
+		pVector->clear() ;
+		return -2 ;
+	}
+	return 0 ;
+}
+
 int stringToFile( const std::string& aString , 
 					const std::string& strFilename ) 
 {
