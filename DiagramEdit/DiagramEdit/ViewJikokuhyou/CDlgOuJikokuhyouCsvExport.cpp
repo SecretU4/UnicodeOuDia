@@ -302,8 +302,10 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 		if ( iRessyaIndex + iRessyaCount <  pCentDedRessyaContGet->size() )
 		{
 			iRessyaIndex += iRessyaCount ;
-			SetDlgItemText( IDC_EDIT_RESSYAINDEX , stringOf( iRessyaIndex + 1 ).c_str() ) ;
-			SetDlgItemText( IDC_EDIT_RESSYACOUNT , stringOf( iRessyaCount ).c_str() ) ;
+			std::wstring strRessyaIndex = wstringOf( stringOf( iRessyaIndex + 1 ) ) ;
+			std::wstring strRessyaCount = wstringOf( stringOf( iRessyaCount ) ) ;
+			SetDlgItemText( IDC_EDIT_RESSYAINDEX , strRessyaIndex.c_str() ) ;
+			SetDlgItemText( IDC_EDIT_RESSYACOUNT , strRessyaCount.c_str() ) ;
 		}
 	}
 	// --------------------------------
