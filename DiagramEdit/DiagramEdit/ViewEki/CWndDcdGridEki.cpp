@@ -93,6 +93,7 @@ Copyright (C) 2006-2017 take-okm
 #include "..\DedRosenFileData\EditCmd\EditCmd.h"
 #include "CDlgEkiProp.h"
 #include "CWndDcdGridEki.h"
+#include "str/strToWstr.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -535,7 +536,7 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 	{
 		Ou<CDcdTextbox>(getCXDcdGrid()
 			->getCell( 	0 , iYColumnNumber )->getIfDcDraw())
-				->setText( aCentDedEki.getEkimei() )  ;	
+				->setText( wstringOf( aCentDedEki.getEkimei() ) )  ;	
 	}
 	//	駅時刻形式
 	{
@@ -558,7 +559,7 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 		}
 		Ou<CDcdTextbox>(getCXDcdGrid()
 			->getCell( 1 , iYColumnNumber )->getIfDcDraw())->
-				setText( strEkijikokukeisiki )  ;	
+				setText( wstringOf( strEkijikokukeisiki ) )  ;	
 	}
 	//	駅規模
 	{
@@ -578,7 +579,7 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 		}
 		Ou<CDcdTextbox>(getCXDcdGrid()->
 			getCell( 2 , iYColumnNumber )->getIfDcDraw())
-				->setText( strEkikibo )  ;	
+				->setText( wstringOf( strEkikibo ) )  ;	
 		
 	}
 	// --------------------------------
