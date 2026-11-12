@@ -266,112 +266,9 @@ int stringFromFile( std::string* pString ,
 
 /*
  * UTF-8 text-file boundary helpers.
- * New files are UTF-8 without BOM. Existing files without a UTF-8 BOM are
+ * New files are UTF-8 with BOM. Existing files without a UTF-8 BOM are
  * interpreted as legacy Windows Japanese code page 932.
  */
-int stringToFileUtf8( const std::string& aString ,
-	const std::string& strFilename )
-{
-	if ( strFilename.empty() )
-	{
-		return -1 ;
-	}
-	FILE* pFile = fopen( strFilename.c_str() , "wb" ) ;
-	if ( pFile == NULL )
-	{
-		return -1 ;
-	}
-	int iRv = 0 ;
-	const unsigned char bom[3] = { 0xef , 0xbb , 0xbf } ;
-	if ( fwrite( bom , 1 , 3 , pFile ) != 3 )
-	{
-		iRv = -2 ;
-	}
-	if ( iRv >= 0 && !aString.empty() &&
-		fwrite( aString.data() , 1 , aString.size() , pFile ) != aString.size() )
-	{
-		iRv = -2 ;
-	}
-	if ( fclose( pFile ) != 0 && iRv >= 0 )
-	{
-		iRv = -2 ;
-	}
-	return iRv ;
-}
-
-int stringFromFileUtf8( std::string* pString ,
-	const std::string& strFilename )
-{
-	if ( pString == NULL || strFilename.empty() )
-	{
-		return -1 ;
-	}
-	std::vector<char> bytes ;
-	int iRv = vectorFromFile( &bytes , strFilename ) ;
-	if ( iRv < 0 )
-	{
-		return iRv ;
-	}
-	if ( std::find( bytes.begin() , bytes.end() , '\0' ) != bytes.end() )
-	{
-		return -3 ;
-	}
-	std::string raw ;
-	if ( !bytes.empty() )
-	{
-		raw.assign( &bytes[0] , bytes.size() ) ;
-	}
-	const bool hasUtf8Bom = raw.size() >= 3 &&
-		(unsigned char)raw[0] == 0xef &&
-		(unsigned char)raw[1] == 0xbb &&
-		(unsigned char)raw[2] == 0xbf ;
-	if ( hasUtf8Bom )
-	{
-		raw.erase( 0 , 3 ) ;
-	}
-	std::wstring wide ;
-	if ( hasUtf8Bom && wstringFromUtf8( raw , &wide ) )
-	{
-		*pString = raw ;
-		return 0 ;
-	}
-	if ( hasUtf8Bom )
-	{
-		return -3 ;
-	}
-	// Empty legacy text files are valid and contain no characters to convert.
-	if ( raw.empty() )
-	{
-		pString->clear() ;
-		return 0 ;
-	}
-	// No BOM: preserve compatibility with legacy CP932.
-	if ( raw.size() > 0x7fffffff )
-	{
-		return -3 ;
-	}
-	int cch = MultiByteToWideChar( 932 , 0 ,
-		raw.data() , (int)raw.size() , NULL , 0 ) ;
-	if ( cch <= 0 )
-	{
-		return -3 ;
-	}
-	std::vector<wchar_t> legacy( cch ) ;
-	if ( MultiByteToWideChar( 932 , 0 ,
-		raw.data() , (int)raw.size() , &legacy[0] , cch ) != cch )
-	{
-		return -3 ;
-	}
-	wide.assign( &legacy[0] , cch ) ;
-	if ( !utf8Of( wide , pString ) )
-	{
-		return -3 ;
-	}
-	return 0 ;
-}
-
-
-
 int stringToFile( const std::string& aString ,
 	const std::wstring& strFilename )
 {
@@ -405,6 +302,8 @@ int stringFromFile( std::string* pString ,
 int stringToFileUtf8( const std::string& aString ,
 	const std::wstring& strFilename )
 {
+	std::wstring validated ;
+	if ( !wstringFromUtf8( aString , &validated ) ) return -3 ;
 	if ( strFilename.empty() ) return -1 ;
 	FILE* pFile = _wfopen( strFilename.c_str() , L"wb" ) ;
 	if ( pFile == NULL ) return -1 ;
@@ -454,7 +353,7 @@ int stringFromFileUtf8( std::string* pString ,
 		return 0 ;
 	}
 	if ( raw.size() > 0x7fffffff ) return -3 ;
-	int cch = MultiByteToWideChar( 932 , 0 , raw.data() ,
+	int cch = MultiByteToWideChar( 932 , MB_ERR_INVALID_CHARS , raw.data() ,
 		(int)raw.size() , NULL , 0 ) ;
 	if ( cch <= 0 ) return -3 ;
 	std::vector<wchar_t> legacy( cch ) ;
