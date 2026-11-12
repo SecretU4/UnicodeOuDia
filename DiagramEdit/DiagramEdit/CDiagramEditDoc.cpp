@@ -1719,7 +1719,7 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 	CWaitCursor	aCWaitCursor ;
 
 	
-	LogMsg( "CDiagramEditDoc::OnSaveDocument(%s)" , lpszPathName ) ;
+	LogMsg( "CDiagramEditDoc::OnSaveDocument(%s)" , stringOf( std::wstring( lpszPathName ) ).c_str() ) ;
 	//Serialize() は使いません。
 	//
 	//return CHidemdiRootDoc::OnSaveDocument(lpszPathName);
