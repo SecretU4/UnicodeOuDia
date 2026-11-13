@@ -70,6 +70,7 @@ Copyright (C) 2006-2017 take-okm
 */
 /** @file */
 #include "stdafx.h"
+#include "str/strToWstr.h"
 
 
 
@@ -1406,9 +1407,9 @@ int CWjkState_Ressyahensyu::
 			CString	strFmt ;
 			strFmt.LoadString( IDS_ERR_EkikanSaisyouSecIsNone ) ;
 			CString strEkimei0 = pCentDedEkiCont->get( 
-				aCdYColSpec.getEkiOrder() ).getEkimei().c_str() ;
+				aCdYColSpec.getEkiOrder() ).getEkimei() ).c_str() ;
 			CString strEkimei1 = pCentDedEkiCont->get( 
-				aCdYColSpec.getEkiOrder() + 1 ).getEkimei().c_str() ;
+				aCdYColSpec.getEkiOrder() + 1 ).getEkimei() ).c_str() ;
 			CString aStr ;
 			aStr.Format( strFmt , strEkimei0 , strEkimei1 ) ;
 			
