@@ -142,7 +142,7 @@ int CDlgRosenFileProp_Rosen::updatePropEditorData()
 		aString = halfWidthOf( std::wstring( (LPCTSTR)aString ) ).c_str() ;
 		SetDlgItemText( IDC_EDIT_EkimeiLength , aString ) ;
 		GetDlgItemText( IDC_EDIT_JikokuhyouRessyaWidth , aString ) ;
-		aString = wstringOf( strToSingleByteUtf8( stringOf( std::wstring( (LPCTSTR)aString ) ) ) ).c_str() ;
+		aString = halfWidthOf( std::wstring( (LPCTSTR)aString ) ).c_str() ;
 		SetDlgItemText( IDC_EDIT_JikokuhyouRessyaWidth , aString ) ;
 
 		if ( !UpdateData() )
