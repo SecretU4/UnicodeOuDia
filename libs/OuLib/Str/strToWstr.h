@@ -129,6 +129,8 @@ bool wstringFromUtf8( const std::string& strUtf8 , std::wstring* pstrEs ) ;
 std::wstring cp932WstringOf( const void* lpvEStr , int iESize ) ;
 /** Decode a CP932 legacy byte buffer and return UTF-8 for std::string APIs. */
 std::string cp932StringOf( const void* lpvEStr , int iESize ) ;
+/** Encode a UTF-8 string as CP932 bytes; fail instead of silently replacing unrepresentable characters. */
+bool cp932BytesFromUtf8( const std::string& strUtf8 , std::string* pstrCp932 ) ;
 
 /**
 * 	CP932 バイト列をワイド文字列に変換します。
