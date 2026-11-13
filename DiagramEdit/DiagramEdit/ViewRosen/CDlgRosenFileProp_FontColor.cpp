@@ -328,11 +328,11 @@ BOOL CDlgRosenFileProp_FontColor::OnInitDialog()
 	// --------------------------------
 	m_pdcdrawFont = new CDcdTextbox(
 			 CdPenProp( 1 ) , 2 , 2 , 
-			"路線10 10:00" , CdDrawTextProp( ) ,  
-			"" , 1 )  ;
+			_T( "路線10 10:00" ) , CdDrawTextProp( ) ,  
+			_T( "" ) , 1 )  ;
 	
 	m_pdcdrawFontV = new CDcdTextboxV3(
-		"路線10 10:00" , CdFontProp() ,
+		_T( "路線10 10:00" ) , CdFontProp() ,
 		1 , 8 , 
 		CdColorProp( 0 , 0 , 0 ) ,
 		2 , 2 , 
