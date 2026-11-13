@@ -1595,9 +1595,6 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 				}
 				break ;
 
-				case -4 :
-					strError = _T( "Encoding selection was cancelled." ) ;
-					break ;
 			}
 			//iRv = 
 			//	-1: ファイルがオープンできません。
@@ -1794,7 +1791,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 	//	エラーメッセージの表示
 	// --------------------------------
 	LogMsg( "CDiagramEditDoc::OnOpenDocument()=%d" , iRv ) ;
-	if ( iRv < 0 )
+	if ( iRv < 0 && iRv != -4 )
 	{
 		string strFileTypeAppComment ;
 		//	strFileTypeAppComment を取得
