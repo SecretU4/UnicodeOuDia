@@ -190,7 +190,7 @@ int CMainFrame::OnFileRosenFileInsert_Process( BOOL bQueryEnable )
 				&aCOuErrorInfoContainer ) ;
 			if ( iResult < 0 )
 			{
-				strErrorMsgSub = aCOuErrorInfoContainer.toOuErrorInfoText().c_str() ;
+				strErrorMsgSub = wstringOf( aCOuErrorInfoContainer.toOuErrorInfoText() ).c_str() ;
 				iRv = -12 ;	//	ファイルの形式が不正です。
 			}
 		}
