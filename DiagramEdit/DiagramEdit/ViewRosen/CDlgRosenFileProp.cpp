@@ -281,7 +281,7 @@ BOOL CDlgRosenFileProp::OnInitDialog()
 		m_CDlgRosenFileProp_FontColor.GetDlgItem( IDC_STATIC_TABNAME )->GetWindowText( aStr ) ;
 		TC_ITEM	LTcItem ;
 		LTcItem.mask = TCIF_TEXT ;
-		LTcItem.pszText = const_cast<char*>( (LPCTSTR)aStr ) ;
+		LTcItem.pszText = const_cast<LPTSTR>( (LPCTSTR)aStr ) ;
 		m_tabMAIN.InsertItem( m_tabMAIN.GetItemCount() 
 											, &LTcItem ) ;
 	}	
@@ -290,7 +290,7 @@ BOOL CDlgRosenFileProp::OnInitDialog()
 		m_CDlgRosenFileProp_Diagram.GetDlgItem( IDC_STATIC_TABNAME )->GetWindowText( aStr ) ;
 		TC_ITEM	LTcItem ;
 		LTcItem.mask = TCIF_TEXT ;
-		LTcItem.pszText = const_cast<char*>( (LPCTSTR)aStr ) ;
+		LTcItem.pszText = const_cast<LPTSTR>( (LPCTSTR)aStr ) ;
 		m_tabMAIN.InsertItem( m_tabMAIN.GetItemCount() 
 											, &LTcItem ) ;
 	}	
