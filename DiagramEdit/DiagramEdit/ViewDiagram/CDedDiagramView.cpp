@@ -1642,7 +1642,7 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			strText += " " ;
 		}
 		pdcdCaption = OuNew<CDcdText>( new CDcdText( 
-			strText , getCdDrawTextPropStandard() ) ) ;
+			wstringOf( strText ) , getCdDrawTextPropStandard() ) ) ;
 	}
 	// --------------------------------
 	{
@@ -1732,12 +1732,12 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			strSono.Format( IDS_WORD_Sono , iXPage + 1 ) ;
 			strCaption += stringOf( std::wstring( (LPCTSTR)strSono ) ) ;
 			strCaption += " " ;
-			pdcdCaption->setText( strCaption ) ;
+			pdcdCaption->setText( wstringOf( strCaption ) ) ;
 		}
 		//ページ番号も決定
 		{
 			string	strPage = stringOf( iPage + 1) ;
-			pdcdPage->setText( strPage ) ;
+			pdcdPage->setText( wstringOf( strPage ) ) ;
 		}
 	}
 
