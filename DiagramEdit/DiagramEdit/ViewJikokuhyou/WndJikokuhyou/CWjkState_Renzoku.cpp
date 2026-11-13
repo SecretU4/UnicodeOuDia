@@ -340,7 +340,7 @@ bool CWjkState_Renzoku::update_updateScreen( bool bOnExit )
 					m_strMinutes.c_str() ) ;
 				CDcdGridCell* pCell = getCWndDcdGrid()->getCFocus()->getFocusCell() ;
 				Ou<CDcdTextbox>	pCDcdTextbox = pCell->getIfDcDraw() ;
-				pCDcdTextbox->setText( strJikoku ) ;
+				pCDcdTextbox->setText( wstringOf( strJikoku ) ) ;
 				getCWndDcdGrid()->InvalidateCell( posFocusCell.getX() , posFocusCell.getY() ) ;
 
 				iRv = 1 ;
