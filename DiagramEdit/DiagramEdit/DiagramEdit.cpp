@@ -261,7 +261,7 @@ CJikokuhyouDoc* CDiagramEditApp::openCJikokuhyouDoc(
 	if ( iRv >= 0 )
 	{
 		CString	strDocument ;
-		strDocument.Format( "%s\n%d" , pCentDedDia->getName().c_str() , 
+		strDocument.Format( _T( "%s\n%d" ) , wstringOf( pCentDedDia->getName() ).c_str() , 
 			(int)eRessyahoukou ) ;
 		//strDocument= pCentDedDia に対応する"<ダイヤ名>\n<列車方向>"
 		
@@ -298,7 +298,7 @@ CDedDiagramDoc* CDiagramEditApp::openCDedDiagramDoc( const CentDedDia* pCentDedD
 		return NULL ;
 	}
 
-	CString	strDocument = pCentDedDia->getName().c_str() ;
+	CString	strDocument = wstringOf( pCentDedDia->getName() ).c_str() ;
 	CDocument*	pCDocument = m_pdoctmplDiagram->OpenDocumentFile( strDocument ) ;
 	
 	return ( (CDedDiagramDoc*)pCDocument ) ;
@@ -914,8 +914,8 @@ int CDiagramEditApp::readCWndJikokuhyouViewProp( CWndJikokuhyou* pCWndJikokuhyou
 	//ModifyEkijikoku
 	if ( iRv >= 0 )
 	{
-		string	strValue = GetProfileString( 
-			nameSection , nameCWndJikokuhyou_ModifyEkijikoku ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( 
+			nameSection , nameCWndJikokuhyou_ModifyEkijikoku ) ) ;
 		if ( strValue.empty() )
 		{
 			iRv = -1 ;	//	ModifyEkijikoku が指定されていません。
