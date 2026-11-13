@@ -178,7 +178,7 @@ static int utf8TextOfOudFileBytes(
 {
 	if ( utf8Text == NULL ) return -3 ;
 	utf8Text->clear() ;
-	if ( rawBytes.find( '\\0' ) != std::string::npos ) return -3 ;
+	if ( rawBytes.find( '\0' ) != std::string::npos ) return -3 ;
 
 	std::string content = rawBytes ;
 	const bool hasUtf8Bom = content.size() >= 3 &&
@@ -242,13 +242,13 @@ static int utf8TextOfOudFileBytes(
 	CString prompt ;
 	if ( commentWide.empty() )
 	{
-		prompt = _T( "This .oud file has no UTF-8 BOM and is valid as both UTF-8 and CP932.\\n\\n"
-			"Yes: open as UTF-8\\nNo: open as CP932\\nCancel: do not open" ) ;
+		prompt = _T( "This .oud file has no UTF-8 BOM and is valid as both UTF-8 and CP932.\n\n"
+			"Yes: open as UTF-8\nNo: open as CP932\nCancel: do not open" ) ;
 	}
 	else
 	{
-		prompt.Format( _T( "This .oud file has no UTF-8 BOM and is valid as both UTF-8 and CP932.\\n"
-			"Last saved by: %s\\n\\nYes: open as UTF-8\\nNo: open as CP932\\nCancel: do not open" ) ,
+		prompt.Format( _T( "This .oud file has no UTF-8 BOM and is valid as both UTF-8 and CP932.\n"
+			"Last saved by: %s\n\nYes: open as UTF-8\nNo: open as CP932\nCancel: do not open" ) ,
 			commentWide.c_str() ) ;
 	}
 	const int choice = AfxMessageBox( prompt , MB_YESNOCANCEL | MB_ICONQUESTION ) ;
