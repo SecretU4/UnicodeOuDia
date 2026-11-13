@@ -1090,7 +1090,7 @@ BOOL CDiagramEditApp::InitInstance()
 	//SetRegistryKey(_T("DiagramEdit"));
 	{
 		free((void*)m_pszProfileName);
-		m_pszProfileName=_tcsdup( makeLocalAppdataFilename( "OuDia.ini" ) );
+		m_pszProfileName=_tcsdup( makeLocalAppdataFilename( _T( "OuDia.ini" ) ) );
 	}
 	LoadStdProfileSettings();  // 標準の INI ファイルのオプションをローﾄﾞします (MRU を含む)
 
