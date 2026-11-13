@@ -73,7 +73,6 @@ Copyright (C) 2006-2017 take-okm
 
 #include "..\DiagramEdit.h"
 #include "CDlgJikokuhyouViewProp.h"
-#include "str/strToWstr.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
