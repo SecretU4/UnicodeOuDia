@@ -471,7 +471,7 @@ void CWndDcdGridRessyasyubetsu::OnUpdate_setCentDedRessyasyubetsu_To_Column(
 		CdDcdSizeXy	sizeRessyasyubetsumei ;
 		CDcdTextbox	aCDcdTextbox( _T( "京都京都京都" ) ,
 			fontpropDefault , 
-			"" , 1 , 2 , 2 ) ;
+			_T( "" ) , 1 , 2 , 2 ) ;
 		aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsumei ) ;
 
 		getCXDcdGrid()->getYColumn( iYColumnNumber )->setColumnSize( sizeRessyasyubetsumei.getY() ) ;
@@ -1451,7 +1451,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			CDcdTextbox	aCDcdTextbox( 
 				_T( "0" ) ,
 				fontpropDefault ,
-				"" , 1 , 2 , 2 ) ;
+				_T( "" ) , 1 , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsumei ) ;
 			getCXDcdGrid()->getXColumn( XCOLUMNNNO_RESSYASYUBETSUNO )->setColumnSize( sizeRessyasyubetsumei.getX() ) ;
 		}
@@ -1461,7 +1461,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			CDcdTextbox	aCDcdTextbox( 
 				_T( "京都京都京都京都京都京都" ) ,
 				fontpropDefault ,
-				"" , 1 , 2 , 2 ) ;
+				_T( "" ) , 1 , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsumei ) ;
 			getCXDcdGrid()->getXColumn( XCOLUMNNNO_RESSYASYUBETSU )->setColumnSize( sizeRessyasyubetsumei.getX() ) ;
 		}
@@ -1472,7 +1472,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			CDcdTextbox	aCDcdTextbox( 
 				_T( "京都都" ) ,
 				fontpropDefault ,
-				"" , XCOLUMNNNO_RYAKUSYOU , 2 , 2 ) ;
+				_T( "" ) , XCOLUMNNNO_RYAKUSYOU , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsujikokukeisiki ) ;
 
 			getCXDcdGrid()->getXColumn( XCOLUMNNNO_RYAKUSYOU )->setColumnSize( sizeRessyasyubetsujikokukeisiki.getX() ) ;
@@ -1483,7 +1483,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			CDcdTextbox	aCDcdTextbox( 
 				_T( "京都京都京都" ) ,
 				fontpropDefault ,
-				"" , 1 , 2 , 2 ) ;
+				_T( "" ) , 1 , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsukibo ) ;
 
 			getCXDcdGrid()->getXColumn( XCOLUMNNNO_LINESTYLE )->setColumnSize( sizeRessyasyubetsukibo.getX() ) ;
@@ -1496,7 +1496,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			CDcdTextbox	aCDcdTextbox( 
 				_T( "京都京都京都京都京都京都" ) ,
 				fontpropDefault ,
-				"" , 1 , 2 , 2 ) ;
+				_T( "" ) , 1 , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsumei ) ;
 
 			getCXDcdGrid()->getYColumn( YCOLUMNNNO_HEADER )->setColumnSize( sizeRessyasyubetsumei.getY() ) ;
