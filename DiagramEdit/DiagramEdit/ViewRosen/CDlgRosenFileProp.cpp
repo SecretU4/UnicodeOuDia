@@ -272,7 +272,7 @@ BOOL CDlgRosenFileProp::OnInitDialog()
 		m_CDlgRosenFileProp_Rosen.GetDlgItem( IDC_STATIC_TABNAME )->GetWindowText( aStr ) ;
 		TC_ITEM	LTcItem ;
 		LTcItem.mask = TCIF_TEXT ;
-		LTcItem.pszText = const_cast<char*>( (LPCTSTR)aStr ) ;
+		LTcItem.pszText = const_cast<LPTSTR>( (LPCTSTR)aStr ) ;
 		m_tabMAIN.InsertItem( m_tabMAIN.GetItemCount() 
 											, &LTcItem ) ;
 	}	
