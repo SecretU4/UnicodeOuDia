@@ -151,7 +151,7 @@ std::wstring halfWidthWstringOf( const std::wstring& strWide )
 	{
 		return strWide ;
 	}
-	std::wstring strResult( cch , L'\\0' ) ;
+	std::wstring strResult( cch , L'\0' ) ;
 	if ( LCMapStringW( LOCALE_INVARIANT , LCMAP_HALFWIDTH ,
 		strWide.data() , (int)strWide.size() , &strResult[0] , cch ) != cch )
 	{
