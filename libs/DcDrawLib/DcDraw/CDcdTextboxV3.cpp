@@ -235,7 +235,7 @@ int CDcdTextboxV3::VerticalTextElementToElementPlace(
 			//	但し、行に表示できない場合は、
 			//	結合を打ち切ります。
 			// --------------------------------
-			string strMojiretsu ;
+			wstring strMojiretsu ;
 			int idxMojiretsuyousoEnd = idxMojiretsuyousoCont ;
 			int logicalunitYSize = 0 ;
 			int iXLineWidth = 0 ;
@@ -255,10 +255,10 @@ int CDcdTextboxV3::VerticalTextElementToElementPlace(
 				}
 
 
-				string aString = strMojiretsu + 
+				wstring aString = strMojiretsu + 
 					aCStrElementEnd.getString() ;
 				SIZE	aSize ;
-				GetTextExtentPoint32( 
+				GetTextExtentPoint32W( 
 					pIfDcdTarget->getHdc() , 
 					aString.c_str() , 
 					(int)aString.size() , 
@@ -465,7 +465,7 @@ bool CDcdTextboxV3::DcDrawElementPlace(
 				* sizeExtent.getX() ;
 		int iYPos = zonexyTarget.getY().getPos() + 
 				aCStrElementPlace.getYOffset() ;
-		string strChar = aCStrElement.getString() ;
+		wstring strChar = aCStrElement.getString() ;
 		
 		if ( aCStrElement.getType() == CVerticalTextElement::V_ZENKAKU || 
 				aCStrElement.getType() == CVerticalTextElement::V_HANKAKU )
@@ -482,7 +482,7 @@ bool CDcdTextboxV3::DcDrawElementPlace(
 				pIfDcdTarget->getHdc() , 
 				aConv.COLORREFOf( colorTextColor ) ) ;
 			// --------------------------------
-			TextOut( pIfDcdTarget->getHdc() , 
+			TextOutW( pIfDcdTarget->getHdc() , 
 				//	下の＋１は、実際の画面を見た上で調整した値
 				iXPos + sizeExtent.getX() + 1 
 					- ( sizeExtent.getX() - aCStrElementPlace.getXLineWidth() ) / 2 ,
