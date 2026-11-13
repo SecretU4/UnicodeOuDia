@@ -71,7 +71,7 @@ Copyright (C) 2006-2017 take-okm
 #include "stdafx.h"
 #include "NsMu\CConvTable.h"
 #include "CPropEditUi_EkiJikoku.h"
-#include "str\CStrCharSizeMb.h"
+#include "str\strToWstr.h"
 #include "str\strLf.h"
 
 namespace ViewJikokuhyou{
@@ -110,8 +110,7 @@ static int	getJikokuFromUI(
 {
 	int	iRv = 0 ;
 	CdDedJikoku	aCdDedJikoku ;
-	string	strControl = CStrCharSizeMb::strToSingleByte( 
-		OuLib::Str::strTrim( strUIJikoku ) ) ;
+	string	strControl = stringOf( halfWidthWstringOf( wstringOf( OuLib::Str::strTrim( strUIJikoku ) ) ) ) ;
 
 	int iResult = aCdDedJikoku.decode( strControl ) ;
 	if ( iResult < 0 )
