@@ -469,7 +469,7 @@ void CWndDcdGridRessyasyubetsu::OnUpdate_setCentDedRessyasyubetsu_To_Column(
 		CDcdTargetGetDC	aCDcdTarget( NULL ) ;
 
 		CdDcdSizeXy	sizeRessyasyubetsumei ;
-		CDcdTextbox	aCDcdTextbox( "京都京都京都" ,
+		CDcdTextbox	aCDcdTextbox( _T( "京都京都京都" ) ,
 			fontpropDefault , 
 			"" , 1 , 2 , 2 ) ;
 		aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsumei ) ;
@@ -1449,7 +1449,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			//	種別番号
 			CdDcdSizeXy	sizeRessyasyubetsumei ;
 			CDcdTextbox	aCDcdTextbox( 
-				"0" ,
+				_T( "0" ) ,
 				fontpropDefault ,
 				"" , 1 , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsumei ) ;
@@ -1459,7 +1459,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			//	種別名
 			CdDcdSizeXy	sizeRessyasyubetsumei ;
 			CDcdTextbox	aCDcdTextbox( 
-				"京都京都京都京都京都京都" ,
+				_T( "京都京都京都京都京都京都" ) ,
 				fontpropDefault ,
 				"" , 1 , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsumei ) ;
@@ -1470,7 +1470,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			CdDcdSizeXy	sizeRessyasyubetsujikokukeisiki ;
 
 			CDcdTextbox	aCDcdTextbox( 
-				"京都都" ,
+				_T( "京都都" ) ,
 				fontpropDefault ,
 				"" , XCOLUMNNNO_RYAKUSYOU , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsujikokukeisiki ) ;
@@ -1481,7 +1481,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 			//	線スタイル
 			CdDcdSizeXy	sizeRessyasyubetsukibo ;
 			CDcdTextbox	aCDcdTextbox( 
-				"京都京都京都" ,
+				_T( "京都京都京都" ) ,
 				fontpropDefault ,
 				"" , 1 , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsukibo ) ;
@@ -1494,7 +1494,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		{
 			CdDcdSizeXy	sizeRessyasyubetsumei ;
 			CDcdTextbox	aCDcdTextbox( 
-				"京都京都京都京都京都京都" ,
+				_T( "京都京都京都京都京都京都" ) ,
 				fontpropDefault ,
 				"" , 1 , 2 , 2 ) ;
 			aCDcdTextbox.getItemSize( &aCDcdTarget , &sizeRessyasyubetsumei ) ;
