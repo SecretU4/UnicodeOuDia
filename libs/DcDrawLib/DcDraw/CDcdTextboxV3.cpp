@@ -68,7 +68,7 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 */
 #include <deque>
-#include "str\CStrCharSizeMb.h"
+#include "str\strToWstr.h"
 #include "NsMu\CMup_deque.h"
 #include "logmsg\logmsg.h"
 #include "DcDraw\CaDcdTargetItemPosition.h"
@@ -235,7 +235,7 @@ int CDcdTextboxV3::VerticalTextElementToElementPlace(
 			//	但し、行に表示できない場合は、
 			//	結合を打ち切ります。
 			// --------------------------------
-			wstring strMojiretsu ;
+			wwstring strMojiretsu ;
 			int idxMojiretsuyousoEnd = idxMojiretsuyousoCont ;
 			int logicalunitYSize = 0 ;
 			int iXLineWidth = 0 ;
@@ -255,7 +255,7 @@ int CDcdTextboxV3::VerticalTextElementToElementPlace(
 				}
 
 
-				wstring aString = strMojiretsu + 
+				wwstring aString = strMojiretsu + 
 					aCStrElementEnd.getString() ;
 				SIZE	aSize ;
 				GetTextExtentPoint32W( 
@@ -319,7 +319,7 @@ int CDcdTextboxV3::VerticalTextElementToElementPlace(
 			//	同じ種類の連続した『部分文字列』の
 			//	結合は行いません。
 			// --------------------------------
-			string strMojiretsu ;
+			wstring strMojiretsu ;
 			int idxMojiretsuyousoEnd = idxMojiretsuyousoCont ;
 			int logicalunitYSize = 0 ;
 			int iXLineWidth = 0 ;
@@ -327,7 +327,7 @@ int CDcdTextboxV3::VerticalTextElementToElementPlace(
 				CVerticalTextElement	aCStrElementEnd = 
 					pCStrElementCont->get( idxMojiretsuyousoEnd ) ;
 				
-				string aString = strMojiretsu + 
+				wstring aString = strMojiretsu + 
 					aCStrElementEnd.getString() ;
 				aCDcdText.setText( aString ) ;
 				CdDcdSizeXy aCdDcdSizeXy ;
@@ -391,7 +391,7 @@ int CDcdTextboxV3::VerticalTextElementToElementPlace(
 				pCStrElementPlaceCont->get( idx ) ;
 			LogMsgL(3, "\t[%d] \"%s\" %d iY=%d iX=%d iXLineWidth=%d" ,
 				idx , 
-				aCStrElementPlace.getCStrElement().getString().c_str() ,
+				stringOf( aCStrElementPlace.getCStrElement().getString() ).c_str() ,
 				aCStrElementPlace.getCStrElement().getType() ,
 				aCStrElementPlace.getYOffset() ,
 				aCStrElementPlace.getXLineNumber() , 
