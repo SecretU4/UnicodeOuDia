@@ -139,6 +139,28 @@ std::wstring wstringOf( std::wstring strEs )
 	return ( strEs ) ;
 }
 
+std::wstring halfWidthWstringOf( const std::wstring& strWide )
+{
+	if ( strWide.empty() || strWide.size() > 0x7fffffff )
+	{
+		return strWide ;
+	}
+	int cch = LCMapStringW( LOCALE_INVARIANT , LCMAP_HALFWIDTH ,
+		strWide.data() , (int)strWide.size() , NULL , 0 ) ;
+	if ( cch <= 0 )
+	{
+		return strWide ;
+	}
+	std::wstring strResult( cch , L'\\0' ) ;
+	if ( LCMapStringW( LOCALE_INVARIANT , LCMAP_HALFWIDTH ,
+		strWide.data() , (int)strWide.size() , &strResult[0] , cch ) != cch )
+	{
+		return strWide ;
+	}
+	return strResult ;
+}
+
+
 // UTF-8 conversion helpers. These are deliberately separate from stringOf()
 // and wstringOf(), which now use UTF-8 independently of the system code page.
 bool utf8Of( const std::wstring& strEs , std::string* pstrUtf8 )
