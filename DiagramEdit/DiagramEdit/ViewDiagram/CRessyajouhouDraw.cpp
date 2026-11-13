@@ -209,10 +209,11 @@ void CRessyajouhouDraw::onCentDedDgrEkiJikoku(
 	{
 		return ;
 	}
-	//strRessyajouhou = 表示する列車情報の文字列
+	//strRessyajouhou = 表示する列車情報のUTF-8文字列
+	const std::wstring strRessyajouhouW = wstringOf( strRessyajouhou ) ;
 	CdDcdSizeXy	sizexyText_Dcd ;
 	{
-		CDcdText	dcdText( strRessyajouhou , 
+		CDcdText	dcdText( strRessyajouhouW , 
 			m_pCDcdDiagram->getDiaRessyaFont() ) ;
 		dcdText.getItemSize( m_pIfDcdTarget , &sizexyText_Dcd ) ;
 	}
@@ -335,9 +336,9 @@ void CRessyajouhouDraw::onCentDedDgrEkiJikoku(
 		int iBkModePrev = SetBkMode( m_pIfDcdTarget->getHdc() , 
 			TRANSPARENT ) ;
 		// --------------------------------
-		TextOut( m_pIfDcdTarget->getHdc() , 
+		TextOutW( m_pIfDcdTarget->getHdc() , 
 			posText_Dcd.getX() , posText_Dcd.getY() ,
-			strRessyajouhou.c_str() , strRessyajouhou.size() ) ;
+			strRessyajouhouW.c_str() , (int)strRessyajouhouW.size() ) ;
 
 		// --------------------------------
 		//	フォント・色・背景モードの選択を解除
