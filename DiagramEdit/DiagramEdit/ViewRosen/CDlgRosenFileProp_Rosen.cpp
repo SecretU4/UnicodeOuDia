@@ -82,6 +82,22 @@ static char THIS_FILE[] = __FILE__;
 
 namespace ViewRosen{
 
+// CStrCharSizeMb is a legacy CP932 byte-string utility. Keep its input and
+// output at an explicit CP932 boundary while the dialog stores UTF-8.
+static std::string strToSingleByteUtf8( const std::string& strUtf8 )
+{
+	std::string strCp932 ;
+	if ( !cp932BytesFromUtf8( strUtf8 , &strCp932 ) )
+	{
+		// Preserve characters that CP932 cannot represent.
+		return strUtf8 ;
+	}
+	std::string strSingleByteCp932 =
+		CStrCharSizeMb::strToSingleByte( strCp932 ) ;
+	return cp932StringOf(
+		strSingleByteCp932.data() , (int)strSingleByteCp932.size() ) ;
+}
+
 /////////////////////////////////////////////////////////////////////////////
 // CDlgRosenFileProp_Rosen ダイアログ
 // ********************************
@@ -117,7 +133,7 @@ int CDlgRosenFileProp_Rosen::updatePropEditorData()
 	{
 		CString	aString ;
 		GetDlgItemText( IDC_EDIT_EkimeiLength , aString ) ;
-		aString = wstringOf( CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)aString ) ) ) ).c_str() ;
+		aString = wstringOf( strToSingleByteUtf8( stringOf( std::wstring( (LPCTSTR)aString ) ) ) ).c_str() ;
 		SetDlgItemText( IDC_EDIT_EkimeiLength , aString ) ;
 		GetDlgItemText( IDC_EDIT_JikokuhyouRessyaWidth , aString ) ;
 		aString = wstringOf( CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)aString ) ) ) ).c_str() ;
