@@ -345,7 +345,7 @@ int CMainFrame::OnFileRosenCreateSubRosen_Process( BOOL bQueryEnable )
 	if ( iRv >= 0 )
 	{
 		string strFileTypeAppComment ;
-		strFileTypeAppComment += AfxGetAppName() ;
+		strFileTypeAppComment += stringOf( std::wstring( AfxGetAppName() ) ) ;
 		strFileTypeAppComment += " Ver. " ;
 		strFileTypeAppComment += getCDiagramEditApp()->getProgramVer() ;
 		aCNodeContainer.setValue( nameFileTypeAppComment , strFileTypeAppComment );
