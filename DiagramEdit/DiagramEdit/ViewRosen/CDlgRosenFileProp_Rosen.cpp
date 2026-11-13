@@ -81,28 +81,6 @@ static char THIS_FILE[] = __FILE__;
 
 namespace ViewRosen{
 
-// Convert display-width text as Unicode; do not pass UTF-8 bytes to the
-// legacy multibyte CStrCharSizeMb utility.
-static std::wstring halfWidthOf( const std::wstring& strWide )
-{
-	if ( strWide.empty() || strWide.size() > 0x7fffffff )
-	{
-		return strWide ;
-	}
-	int cch = LCMapStringW( LOCALE_INVARIANT , LCMAP_HALFWIDTH ,
-		strWide.data() , (int)strWide.size() , NULL , 0 ) ;
-	if ( cch <= 0 )
-	{
-		return strWide ;
-	}
-	std::wstring strResult( cch , L'\0' ) ;
-	if ( LCMapStringW( LOCALE_INVARIANT , LCMAP_HALFWIDTH ,
-		strWide.data() , (int)strWide.size() , &strResult[0] , cch ) != cch )
-	{
-		return strWide ;
-	}
-	return strResult ;
-}
 /////////////////////////////////////////////////////////////////////////////
 // CDlgRosenFileProp_Rosen ダイアログ
 // ********************************
@@ -138,7 +116,7 @@ int CDlgRosenFileProp_Rosen::updatePropEditorData()
 	{
 		CString	aString ;
 		GetDlgItemText( IDC_EDIT_EkimeiLength , aString ) ;
-		aString = halfWidthOf( std::wstring( (LPCTSTR)aString ) ).c_str() ;
+		aString = halfWidthWstringOf( std::wstring( (LPCTSTR)aString ) ).c_str() ;
 		SetDlgItemText( IDC_EDIT_EkimeiLength , aString ) ;
 		GetDlgItemText( IDC_EDIT_JikokuhyouRessyaWidth , aString ) ;
 		aString = halfWidthOf( std::wstring( (LPCTSTR)aString ) ).c_str() ;
