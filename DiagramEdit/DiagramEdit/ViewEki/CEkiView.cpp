@@ -343,7 +343,7 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			strText += stringOf( std::wstring( (LPCTSTR)aString ) ) ;
 		}
 		pdcdCaption = OuNew<CDcdText>( new CDcdText( 
-			strText , getCdDrawTextPropStandard() ) ) ;
+			wstringOf( strText ) , getCdDrawTextPropStandard() ) ) ;
 	}
 	// --------------------------------
 	{
