@@ -309,7 +309,7 @@ void CDlgDiaList::OnButtonNew()
 		int idxDia = pCentDedRosen->getCentDedDiaCont()->findCentDedDiaByName( strDiaName ) ;
 		if ( idxDia >= 0 ){
 			CString strError ;
-			strError.Format( IDS_ERR_DiaNameDuplex , strDiaName.c_str() ) ;
+			strError.Format( IDS_ERR_DiaNameDuplex , wstringOf( strDiaName ).c_str() ) ;
 			MessageBox( strError , NULL , MB_OK | MB_ICONERROR ) ;
 			return ;
 		}
@@ -332,7 +332,7 @@ void CDlgDiaList::OnButtonNew()
 		//	ダイアログの更新
 		// --------------------------------
 		//	リストボックスにアイテムを追加
-		m_listboxDia.AddString( strDiaName.c_str() ) ;
+		m_listboxDia.AddString( wstringOf( strDiaName ).c_str() ) ;
 		m_listboxDia.SetCurSel( m_listboxDia.GetCount() - 1 ) ;
 
 		updateControl() ;
