@@ -504,7 +504,7 @@ void CWndDcdGridRessyasyubetsu::OnUpdate_setCentDedRessyasyubetsu_To_Column(
 		Ou<CDcdTextbox> pCDcdTextbox = 
 			getCXDcdGrid()->getCell( XCOLUMNNNO_RESSYASYUBETSU , iYColumnNumber )->getIfDcDraw() ;
 		pCDcdTextbox->
-			setText( aCentDedRessyasyubetsu.getSyubetsumei() )  ;	
+			setText( wstringOf( aCentDedRessyasyubetsu.getSyubetsumei() ) )  ;	
 
 		//	フォント属性
 		CdDrawTextProp	aCdDrawTextProp = 
@@ -522,7 +522,7 @@ void CWndDcdGridRessyasyubetsu::OnUpdate_setCentDedRessyasyubetsu_To_Column(
 		
 		//略称のテキスト
 		pCDcdTextbox->setText( 
-			aCentDedRessyasyubetsu.getRyakusyou() )  ;	
+			wstringOf( aCentDedRessyasyubetsu.getRyakusyou() ) )  ;	
 		
 		//略称のフォント属性
 		CdDrawTextProp	aCdDrawTextProp = 
@@ -579,7 +579,7 @@ void CWndDcdGridRessyasyubetsu::OnUpdate_setRessyasyubetsuNoXColumn()
 		{
 			aStr = stringOf( iYColumnNumber - YCOLUMNNNO_RESSYASYUBETSU_0 ) ;
 		}
-		pCDcdTextbox->setText( aStr )  ;	
+		pCDcdTextbox->setText( wstringOf( aStr ) )  ;	
 		
 		//	セルを更新
 		InvalidateCell( XCOLUMNNNO_RESSYASYUBETSUNO , iYColumnNumber ) ;
