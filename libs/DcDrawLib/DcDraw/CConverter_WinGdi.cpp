@@ -80,6 +80,7 @@ namespace DcDrawLib{
 namespace DcDraw{
 
 using namespace std ;
+using namespace OuLib::Str ;
 
 // ****************************************************************
 //	CConverter_WinGdi
@@ -192,15 +193,12 @@ void CConverter_WinGdi::toLOGFONT( const CdFontProp& aCdFontProp ,
 
 	pLOGFONT->lfCharSet = DEFAULT_CHARSET;
 
-	if ( aCdFontProp.getFacename().empty() )
-	{
-		_tcscpy( pLOGFONT->lfFaceName , 
-			CdFontPropOf( DEFAULT_GUI_FONT ) .getFacename().c_str() ) ;
-	}
-	else
-	{
-		_tcscpy( pLOGFONT->lfFaceName , aCdFontProp.getFacename().c_str() ) ;
-	}
+	const string strFaceNameUtf8 = aCdFontProp.getFacename().empty()
+		? CdFontPropOf( DEFAULT_GUI_FONT ).getFacename()
+		: aCdFontProp.getFacename() ;
+	const wstring strFaceName = wstringOf( strFaceNameUtf8 ) ;
+	_tcsncpy_s( pLOGFONT->lfFaceName , LF_FACESIZE ,
+		strFaceName.c_str() , _TRUNCATE ) ;
 
 	if ( aCdFontProp.getBold() )
 	{
@@ -234,7 +232,7 @@ void CConverter_WinGdi::toCdFontProp(
 		pCdFontProp->setLogicalunitTextHeight( - aLOGFONT.lfHeight ) ;
 	}
 	if ( aLOGFONT.lfFaceName[0] != '\0' ){
-		pCdFontProp->setFacename( aLOGFONT.lfFaceName ) ;
+		pCdFontProp->setFacename( stringOf( wstring( aLOGFONT.lfFaceName ) ) ) ;
 	}
 	if ( aLOGFONT.lfWeight >= FW_BOLD ){
 		pCdFontProp->setBold( true ) ;
