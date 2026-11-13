@@ -68,6 +68,7 @@ Copyright (C) 2006-2017 take-okm
 #include "stdafx.h"
 #include "..\DiagramEdit.h"
 #include "CDedDiagramDoc.h"
+#include "str/strToWstr.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -89,17 +90,17 @@ void CDedDiagramDoc::SetTitle( LPCTSTR lpszTitle )
 	 *
 	 *	strDocument= "<ダイヤ名>"
 	 */
-	m_strDiaName = lpszTitle ;
+	m_strDiaName = stringOf( std::wstring( lpszTitle ) ) ;
 	
 	// --------------------------------
 	//	タイトル文字列の作成
 	// --------------------------------
 	{
-		CString	strDiamei =m_strDiaName.c_str() ;
+		CString	strDiamei = wstringOf( m_strDiaName ).c_str() ;
 		CString	strRessyahoukou ;
 		strRessyahoukou.LoadString( IDS_WORD_DIAGRAM ) ;
 
-		strDiamei += " " ;
+		strDiamei += _T( " " ) ;
 		strDiamei += strRessyahoukou ;
 		super::SetTitle( strDiamei ) ;
 	}
