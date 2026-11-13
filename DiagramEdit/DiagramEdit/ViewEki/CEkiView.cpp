@@ -72,6 +72,7 @@ Copyright (C) 2006-2017 take-okm
 #include "logmsg/LogMsg.h"
 #include "NsOu/OuNew.h"
 #include "str/strToInt.h"
+#include "str/strToWstr.h"
 #include "DcDraw/print/CaDcdTargetZoomDisplay.h"
 #include "DcDraw\CConverter_WinGdi.h"
 #include "DcDraw\CaDcdTargetItemPosition.h"
@@ -339,7 +340,7 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 
 			CString	aString ;
 			aString.LoadString( IDS_WORD_EKI ) ;
-			strText += (LPCTSTR)aString ;
+			strText += stringOf( std::wstring( (LPCTSTR)aString ) ) ;
 		}
 		pdcdCaption = OuNew<CDcdText>( new CDcdText( 
 			strText , getCdDrawTextPropStandard() ) ) ;
