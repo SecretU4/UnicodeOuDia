@@ -71,6 +71,7 @@ Copyright (C) 2006-2017 take-okm
 
 #include "..\DiagramEdit.h"
 #include "CDlgRessyaProp.h"
+#include "str/strToWstr.h"
 
 
 #ifdef _DEBUG
@@ -126,7 +127,7 @@ void CDlgRessyaProp::CPropEditUiInternal::UiDataToUi( const UIDATA* pUiData )
 	//strRessyabangou,bRessyabangouIsEnable
 	{
 		CEdit* pControl = (CEdit*)( pOuter->GetDlgItem( IDC_EDIT_Ressyabangou ) ) ;
-		pControl->SetWindowText( pUiData->strRessyabangou.c_str() ) ;
+		pControl->SetWindowText( wstringOf( pUiData->strRessyabangou ).c_str() ) ;
 		pControl->EnableWindow( pUiData->bRessyabangouIsEnable ) ;
 		pControl->SetSel( 0 , -1 ) ;
 	}
@@ -139,21 +140,21 @@ void CDlgRessyaProp::CPropEditUiInternal::UiDataToUi( const UIDATA* pUiData )
 	//strRessyamei,bRessyameiIsEnable
 	{
 		CEdit* pControl = (CEdit*)( pOuter->GetDlgItem( IDC_EDIT_Ressyamei ) ) ;
-		pControl->SetWindowText( pUiData->strRessyamei.c_str() ) ;
+		pControl->SetWindowText( wstringOf( pUiData->strRessyamei ).c_str() ) ;
 		pControl->EnableWindow( pUiData->bRessyameiIsEnable ) ;
 		pControl->SetSel( 0 , -1 ) ;
 	}
 	//strGousuu,bGousuuIsEnable
 	{
 		CEdit* pControl = (CEdit*)( pOuter->GetDlgItem( IDC_EDIT_Gousuu ) ) ;
-		pControl->SetWindowText( pUiData->strGousuu.c_str() ) ;
+		pControl->SetWindowText( wstringOf( pUiData->strGousuu ).c_str() ) ;
 		pControl->EnableWindow( pUiData->bGousuuIsEnable ) ;
 		pControl->SetSel( 0 , -1 ) ;
 	}
 	//strBikou,bBikouIsEnable
 	{
 		CEdit* pControl = (CEdit*)( pOuter->GetDlgItem( IDC_EDIT_Bikou ) ) ;
-		pControl->SetWindowText( pUiData->strBikou.c_str() ) ;
+		pControl->SetWindowText( wstringOf( pUiData->strBikou ).c_str() ) ;
 		pControl->EnableWindow( pUiData->bBikouIsEnable ) ;
 		pControl->SetSel( 0 , -1 ) ;
 	}
@@ -194,7 +195,7 @@ void CDlgRessyaProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData )
 		CEdit* pControl = (CEdit*)( pOuter->GetDlgItem( IDC_EDIT_Ressyabangou ) ) ;
 		CString strText ;
 		pControl->GetWindowText( strText ) ;
-		pUiData->strRessyabangou = strText ;
+		pUiData->strRessyabangou = stringOf( std::wstring( (LPCTSTR)strText ) ) ;
 	}
 	//iRessyasyubetsuIndex,bRessyasyubetsuIndexIsEnable
 	{
@@ -211,21 +212,21 @@ void CDlgRessyaProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData )
 		CComboBox* pControl = (CComboBox*)( pOuter->GetDlgItem( IDC_EDIT_Ressyamei ) ) ;
 		CString strText ;
 		pControl->GetWindowText( strText ) ;
-		pUiData->strRessyamei = strText ;
+		pUiData->strRessyamei = stringOf( std::wstring( (LPCTSTR)strText ) ) ;
 	}
 	//strGousuu,bGousuuIsEnable
 	{
 		CComboBox* pControl = (CComboBox*)( pOuter->GetDlgItem( IDC_EDIT_Gousuu ) ) ;
 		CString strText ;
 		pControl->GetWindowText( strText ) ;
-		pUiData->strGousuu = strText ;
+		pUiData->strGousuu = stringOf( std::wstring( (LPCTSTR)strText ) ) ;
 	}
 	//strBikou,bBikouIsEnable
 	{
 		CComboBox* pControl = (CComboBox*)( pOuter->GetDlgItem( IDC_EDIT_Bikou ) ) ;
 		CString strText ;
 		pControl->GetWindowText( strText ) ;
-		pUiData->strBikou = strText ;
+		pUiData->strBikou = stringOf( std::wstring( (LPCTSTR)strText ) ) ;
 	}
 }
 		
@@ -234,7 +235,7 @@ void CDlgRessyaProp::CPropEditUiInternal::ShowError(
 			const std::string& strInfo )  
 {
 	CDlgRessyaProp* pOuter = (CDlgRessyaProp*)( (BYTE*)this - offsetof( CDlgRessyaProp , m_PropEditUiInternal ) ) ;
-	CString strErrorMsg = strErrorReason.c_str() ;
+	CString strErrorMsg = wstringOf( strErrorReason ).c_str() ;
 
 	pOuter->MessageBox( strErrorMsg , NULL , MB_OK | MB_ICONEXCLAMATION ) ;
 }
@@ -419,7 +420,7 @@ BOOL CDlgRessyaProp::OnInitDialog()
 					+ strSyubetsumei ;
 			}
 
-			pCComboBox->AddString( strSyubetsumei.c_str() ) ;
+			pCComboBox->AddString( wstringOf( strSyubetsumei ).c_str() ) ;
 		}
 	}
 
