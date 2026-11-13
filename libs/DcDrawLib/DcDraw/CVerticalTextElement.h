@@ -118,7 +118,7 @@ private:
 	/**
 	  	文字列要素に含まれる部分文字列。
 	 */
-	 std::string m_strString ;
+	 std::wstring m_strString ;
 	
 	/**
 	  	『文字列要素』の種類
@@ -137,7 +137,7 @@ public:
 	  	『文字列要素』の種類
 	 */
 	CVerticalTextElement( 
-		const std::string& strBubunMojiretsu ,
+		const std::wstring& strBubunMojiretsu ,
 		EType	eType ) :
 		m_strString( strBubunMojiretsu ) ,
 		m_eType( eType ){};
@@ -149,8 +149,8 @@ public:
 	///@name CVerticalTextElement-属性
 	// ********************************
 	///@{
-	std::string getString()const{ return m_strString ;};
-	CVerticalTextElement& setString( const std::string& value )
+	std::wstring getString()const{ return m_strString ;};
+	CVerticalTextElement& setString( const std::wstring& value )
 	{	m_strString = value ;	return *this ; };
 	EType	getType()const{ return m_eType ;};
 	CVerticalTextElement& setType( EType value )
