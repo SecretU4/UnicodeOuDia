@@ -245,7 +245,7 @@ void CDedCommentView::OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint)
 			CString	strLs ;
 			GetEditCtrl().GetWindowText( strLs ) ;
 			OuNew<CRfEditCmd> pCmd( 
-				new CRfEditCmd_Comment( strLfOf( (LPCTSTR)strLs ) ) ) ;
+				new CRfEditCmd_Comment( strLfOf( stringOf( std::wstring( (LPCTSTR)strLs ) ) ) ) ) ;
 			int  iResult = getCDiagramEditDoc()->executeEditCmd( pCmd ) ;
 			ASSERT( iResult >= 0 ) ;
 			
