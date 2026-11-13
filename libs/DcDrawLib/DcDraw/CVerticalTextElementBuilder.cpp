@@ -78,187 +78,144 @@ namespace DcDraw{
 
 
 
-bool CVerticalTextElementBuilder::isSpace( const string& aStr )
+bool CVerticalTextElementBuilder::isSpace( const std::wstring& aStr )
 {
-	const char* const kyoukai[] = {
-		" " , "　" ,
+	const wchar_t* const kyoukai[] = {
+		L" " , L"　",
 	};
-	for ( int idx = 0 ; idx < sizeof(kyoukai) / sizeof(kyoukai[0]) ; idx ++ ){
-		if ( aStr == kyoukai[idx] ) {
-			return true ;
-		}
+	for ( int idx = 0 ; idx < sizeof(kyoukai) / sizeof(kyoukai[0]) ; idx ++ )
+	{
+		if ( aStr == kyoukai[idx] ) return true ;
 	}
-	return ( false ) ;
+	return false ;
 }
 
-bool CVerticalTextElementBuilder::isDelimiter( const string& aStr )
+bool CVerticalTextElementBuilder::isDelimiter( const std::wstring& aStr )
 {
-	const char* const kyoukai[] = {
-		"," , "，" ,
-		"." , "．" ,
-		      "。" , 
-		      "、" , 
+	const wchar_t* const kyoukai[] = {
+		L"," , L"，" ,
+		L"." , L"．" ,
+		L"。" ,
+		L"、" ,
 	};
-	for ( int idx = 0 ; idx < sizeof(kyoukai) / sizeof(kyoukai[0]) ; idx ++ ){
-		if ( aStr == kyoukai[idx] ) {
-			return true ;
-		}
+	for ( int idx = 0 ; idx < sizeof(kyoukai) / sizeof(kyoukai[0]) ; idx ++ )
+	{
+		if ( aStr == kyoukai[idx] ) return true ;
 	}
-	return ( false ) ;
+	return false ;
 }
 
+static size_t utf16CharLengthAt( const std::wstring& str , size_t idx )
+{
+	if ( idx + 1 < str.size() &&
+		str[idx] >= 0xd800 && str[idx] <= 0xdbff &&
+		str[idx + 1] >= 0xdc00 && str[idx + 1] <= 0xdfff )
+	{
+		return 2 ;
+	}
+	return 1 ;
+}
 
-	// ********************************
-	//@name CVerticalTextElementBuilder-操作
-	// ********************************
-void CVerticalTextElementBuilder::scan( 
-		const std::string& aStr , 
+static bool isHalfWidthCharacter( wchar_t ch )
+{
+	return ch <= 0x007f || ( ch >= 0xff61 && ch <= 0xff9f ) ;
+}
+
+static bool isAsciiDigitString( const std::wstring& str )
+{
+	if ( str.empty() || str.size() > 2 ) return false ;
+	for ( size_t idx = 0 ; idx < str.size() ; idx ++ )
+	{
+		if ( str[idx] < L'0' || str[idx] > L'9' ) return false ;
+	}
+	return true ;
+}
+
+void CVerticalTextElementBuilder::scan(
+		const std::wstring& aStr ,
 		Mui<CVerticalTextElement>* muCVerticalTextElement ,
-		bool bTwoDegiLateral  ) 
+		bool bTwoDegiLateral )
 {
-	int iRv = 0 ;
-
-	//	このコンテナがそれまで保持していた要素は破棄します。
 	muCVerticalTextElement->erase( 0 , INT_MAX ) ;
 
-	CStrCharSizeMb	aCStrCharSizeMb( aStr ) ;
-	for ( int bidx = 0 ; 
-			bidx < aCStrCharSizeMb.ByteLength() ; 
-			bidx = aCStrCharSizeMb.BidxNextChar( bidx ) )
+	for ( size_t idx = 0 ; idx < aStr.size() ; )
 	{
-		LogMsgL( 3 , "CDcdTextboxV3::StringToMojiretsuyouso"
-			"bidx=%d CsizeOfBidx=%d" , bidx , aCStrCharSizeMb.CsizeOfBidx( bidx ) ) ;
-
-		string strChar = aStr.substr( bidx , 
-			aCStrCharSizeMb.CsizeOfBidx( bidx ) ) ;
-		CVerticalTextElement	aElementPrev ;
+		const size_t cch = utf16CharLengthAt( aStr , idx ) ;
+		const std::wstring strChar = aStr.substr( idx , cch ) ;
+		CVerticalTextElement aElementPrev ;
 		if ( muCVerticalTextElement->size() > 0 )
 		{
 			aElementPrev = muCVerticalTextElement->get( INT_MAX ) ;
 		}
-		//strChar = 今回の文字。
-		//aElementPrev = 直前の文字列要素
 
-		if ( aCStrCharSizeMb.CsizeOfBidx( bidx ) == 1 )
+		if ( isHalfWidthCharacter( aStr[idx] ) )
 		{
-			//	今回の文字は１バイト文字
-
-			string strCharPrev ;
-			if ( !aElementPrev.isNull() ){
-				strCharPrev = aElementPrev.getString().substr( 
+			std::wstring strCharPrev ;
+			if ( !aElementPrev.isNull() && !aElementPrev.getString().empty() )
+			{
+				strCharPrev = aElementPrev.getString().substr(
 					aElementPrev.getString().size() - 1 , 1 ) ;
 			}
-			//strCharPrev = 直前の文字列要素の末尾の文字
-
-			if ( !isSpace( strChar ) && 
-				!aElementPrev.isNull() && 
-				aElementPrev.getType() == aElementPrev.V_HANKAKU &&
+			if ( !isSpace( strChar ) &&
+				!aElementPrev.isNull() &&
+				aElementPrev.getType() == CVerticalTextElement::V_HANKAKU &&
 				!isDelimiter( strCharPrev ) && !isSpace( strCharPrev ) )
 			{
-				//	今回の文字は空白以外の１バイト文字で、
-				//	( 直前の文字列要素が V_HANKAKU 、
-				//	かつ、直前の文字列要素が区切り文字や空白で終わっていない
-				//	) 
-				//	場合は、直前の文字列要素に文字を追加します。
-				//
-				aElementPrev.setString( aElementPrev.getString() + strChar );
+				aElementPrev.setString( aElementPrev.getString() + strChar ) ;
 				muCVerticalTextElement->set( aElementPrev , INT_MAX ) ;
 			}
 			else
 			{
-				//	文字列要素を追加します。
-				CVerticalTextElement	aElement( strChar , CVerticalTextElement::V_HANKAKU ) ;
-
+				CVerticalTextElement aElement(
+					strChar , CVerticalTextElement::V_HANKAKU ) ;
 				muCVerticalTextElement->insert( aElement ) ;
 			}
 		}
-		else if ( aCStrCharSizeMb.CsizeOfBidx( bidx ) == 2 )
+		else
 		{
-			//	今回の文字は２バイト文字である場合は、文字列要素を追加します。
-
-			//	今回の文字は２バイトの区切り文字で、
-			//	( 直前の文字列要素が V_ZENKAKU 
-			//	) 
-			//	場合は、直前の文字列要素に文字を追加します。
-			//
-			if ( isDelimiter( strChar ) && 
-				!aElementPrev.isNull() && 
+			if ( isDelimiter( strChar ) &&
+				!aElementPrev.isNull() &&
 				aElementPrev.getType() == CVerticalTextElement::V_ZENKAKU )
 			{
-				aElementPrev.setString( aElementPrev.getString() + strChar );
+				aElementPrev.setString( aElementPrev.getString() + strChar ) ;
 				muCVerticalTextElement->set( aElementPrev , INT_MAX ) ;
-
 			}
 			else
 			{
-				//	新しい文字列要素を追加します。
-				CVerticalTextElement aElement( strChar , CVerticalTextElement::V_ZENKAKU ) ;
+				CVerticalTextElement aElement(
+					strChar , CVerticalTextElement::V_ZENKAKU ) ;
 				muCVerticalTextElement->insert( aElement ) ;
-
 			}
 		}
-
+		idx += cch ;
 	}
-	//muCVerticalTextElement = 文字列を V_ZENKAKU と V_HANKAKU の２つの
-	//	要素に分割しました。
-	//	V_ZENKAKU は、原則として全角文字１つです。
-	//	但し、[全角文字][全角区切り文字]
-	//	は、[全角文字+全角区切り文字]の１つの要素になっています。
-	//	V_HANKAKU は、連続した半角文字を１つの要素とします。
 
-	// --------------------------------
-	//	2桁以下の半角数字を横書きにする
-	// --------------------------------
-	if ( bTwoDegiLateral  )
+	if ( bTwoDegiLateral )
 	{
-		// --------------------------------	
-		int idxMojiretsuyouso ;
-		for ( idxMojiretsuyouso = 0 ; 
-				idxMojiretsuyouso < muCVerticalTextElement->size() ;
-				idxMojiretsuyouso ++ )
+		for ( int idx = 0 ; idx < muCVerticalTextElement->size() ; idx ++ )
 		{
-			//	今回の文字列要素が半角英数字１文字か２文字 
-			//	AND 
-			//	( 
-			//		( 前の文字列要素が存在しない)
-			//		OR
-			//		( 前の文字列要素が（空白以外の半角文字列の要素）でない)
-			//	) 
-			//	
-			//	の場合は、水平方向に半角英数字を1文字・2文字で並べます。
 			CVerticalTextElement aElementPrev ;
-			if ( idxMojiretsuyouso > 0 )
+			if ( idx > 0 )
 			{
-				aElementPrev = muCVerticalTextElement->get( idxMojiretsuyouso - 1 ) ;
+				aElementPrev = muCVerticalTextElement->get( idx - 1 ) ;
 			}
-			CVerticalTextElement aElement = muCVerticalTextElement->get( idxMojiretsuyouso ) ;
-			string strCurr = aElement.getString() ;
-			if ( aElement.getType() == CVerticalTextElement::V_HANKAKU )
+			CVerticalTextElement aElement = muCVerticalTextElement->get( idx ) ;
+			const std::wstring strCurr = aElement.getString() ;
+			if ( aElement.getType() == CVerticalTextElement::V_HANKAKU &&
+				isAsciiDigitString( strCurr ) )
 			{
-				if ( 
-					( strCurr.size() == 1 && isdigit( (unsigned char)strCurr[0] ) ) || 
-					( strCurr.size() == 2 && isdigit( (unsigned char)strCurr[0] ) && isdigit( (unsigned char)strCurr[1] ) ) 
-				){
-
-					if ( aElementPrev.isNull() || 
-						!(  
-							aElementPrev.getType() == CVerticalTextElement::V_HANKAKU && 
-							!isSpace( aElementPrev.getString() ) 
-						) 
-					){
-						aElement.setType( CVerticalTextElement::H_HANKAKU ) ;
-						muCVerticalTextElement->set( aElement , idxMojiretsuyouso ) ;
-					}
+				if ( aElementPrev.isNull() ||
+					!( aElementPrev.getType() == CVerticalTextElement::V_HANKAKU &&
+						!isSpace( aElementPrev.getString() ) ) )
+				{
+					aElement.setType( CVerticalTextElement::H_HANKAKU ) ;
+					muCVerticalTextElement->set( aElement , idx ) ;
 				}
-					
 			}
-
 		}
-	}	
+	}
+}
 
-};
-
-} //namespace DcDraw
 } //namespace DcDrawLib
 
 
