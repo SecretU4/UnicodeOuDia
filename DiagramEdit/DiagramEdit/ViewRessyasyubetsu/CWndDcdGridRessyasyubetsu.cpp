@@ -75,6 +75,7 @@ Copyright (C) 2006-2017 take-okm
 #include "NsOu\OuNew.h"
 #include "NsOu\dynamic_castOu.h"
 #include "str\strtoint.h"
+#include "str\strToWstr.h"
 #include "DcDraw\CDcdTargetGetDC.h"
 #include "DcDraw\CConverter_WinGdi.h"
 
