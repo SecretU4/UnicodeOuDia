@@ -71,6 +71,7 @@ Copyright (C) 2006-2017 take-okm
 
 #include "..\diagramedit.h"
 #include "CDlgDiaSaveSelect.h"
+#include "str/strToWstr.h"
 
 
 #ifdef _DEBUG
@@ -125,7 +126,7 @@ BOOL CDlgDiaSaveSelect::OnInitDialog()
 	{
 		CListBox* pCListBox = (CListBox*)GetDlgItem( IDC_LIST_Dia ) ;
 		for ( int idx = 0 ; idx < m_contstrDia.size() ; idx ++ ){
-			pCListBox->AddString( m_contstrDia.get( idx ).c_str() ) ;
+			pCListBox->AddString( wstringOf( m_contstrDia.get( idx ) ).c_str() ) ;
 		}
 	}
 	
