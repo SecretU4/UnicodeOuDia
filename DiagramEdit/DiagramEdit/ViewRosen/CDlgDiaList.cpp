@@ -74,6 +74,7 @@ Copyright (C) 2006-2017 take-okm
 #include "..\DedRosenFileData\EditCmd\CRfEditCmd_Dia.h"
 #include "..\DedRosenFileData\EditCmd\CRfEditCmd_DiaProp.h"
 #include "CDlgDiaList.h"
+#include "str/strToWstr.h"
 #include "CDlgDiaProp.h"
 
 #ifdef _DEBUG
@@ -109,7 +110,7 @@ void CDlgDiaList::updateControl()
 					string	strDiaName = pCentDedDia->getName() ;
 					CString	strItem ;
 					m_listboxDia.GetText( idx , strItem ) ;
-					if ( strDiaName != (LPCTSTR)strItem ){
+					if ( strDiaName != stringOf( std::wstring( (LPCTSTR)strItem ) ) ){
 						bMustUpdate = true ;
 					}
 				}
@@ -132,7 +133,7 @@ void CDlgDiaList::updateControl()
 				{
 					const CentDedDia*	pCentDedDia = pCentDedDiaContGet->get( idx ) ;
 					string	strDiaName = pCentDedDia->getName() ;
-					m_listboxDia.AddString( strDiaName.c_str() ) ;
+					m_listboxDia.AddString( wstringOf( strDiaName ).c_str() ) ;
 				}
 				
 				// --------------------------------
@@ -208,7 +209,7 @@ void CDlgDiaList::execDlgDiaProp()
 			int idxDia = pCentDedRosen->getCentDedDiaCont()->findCentDedDiaByName( strDiaName ) ;
 			if ( idxDia >= 0 ){
 				CString strError ;
-				strError.Format( IDS_ERR_DiaNameDuplex , strDiaName.c_str() ) ;
+				strError.Format( IDS_ERR_DiaNameDuplex , wstringOf( strDiaName ).c_str() ) ;
 				MessageBox( strError , NULL , MB_OK | MB_ICONERROR ) ;
 				return ;
 			}
@@ -370,7 +371,7 @@ void CDlgDiaList::OnButtonDelete()
 		CString	strCaption ;
 		GetDlgItemText( IDC_STATIC_ERROR_DeleteDiaPrompt , strMsgFormat ) ;
 		GetDlgItemText( IDC_STATIC_ERROR_DeleteDiaPrompt2 , strCaption ) ;
-		strMsg.Format( strMsgFormat , strDiaName.c_str() ) ;
+		strMsg.Format( strMsgFormat , wstringOf( strDiaName ).c_str() ) ;
 		int iResult = MessageBox( strMsg , strCaption , MB_OKCANCEL | MB_ICONQUESTION ) ;
 		if ( iResult != IDOK ){
 			return ;
