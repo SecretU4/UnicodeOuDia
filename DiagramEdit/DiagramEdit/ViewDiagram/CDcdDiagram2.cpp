@@ -104,9 +104,9 @@ CdDcdFreeLineProp	CDcdDiagram2::getCdLinePropBold()const
 
 CDcdText	CDcdDiagram2::getCDcdTextJikoku()const
 {
-	return CDcdText( "" , 
+	return CDcdText( _T( "" ) , 
 		CdDrawTextProp( m_fontpropDiaJikokuFont , m_colorDiaMojiColor ) ,
-		"00" ) ;
+		_T( "00" ) ) ;
 };
 
 CDcdText	CDcdDiagram2::getCDcdTextEkimei()const
@@ -118,9 +118,9 @@ CDcdText	CDcdDiagram2::getCDcdTextEkimei()const
 	//strExtent = 路線ファイルデータに保存されている値をもとにして、
 	//	作成した、文字列幅の基準文字列です。
 
-	return CDcdText( "" , 
+	return CDcdText( _T( "" ) , 
 		CdDrawTextProp( m_fontpropDiaEkimeiFont , m_colorDiaMojiColor ) ,
-		strExtent ) ;
+		wstringOf( strExtent ) ) ;
 };
 
 	// ********************************
@@ -234,7 +234,7 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 
 			//	時刻のテキストを設定
 			dcdtextJikoku.setText( 
-				stringOf( CdDedJikoku( posDgrX ).getHour() ) ) ;
+				wstringOf( stringOf( CdDedJikoku( posDgrX ).getHour() ) ) ) ;
 
 			//	座標を、Dgr→Dcdに変換
 			DcdPos posDcdX = XDgrToDcd( pIfDcdTarget , posDgrX ) ;
@@ -385,7 +385,7 @@ bool CDcdDiagram2::DcDraw( IfDcdTarget* pIfDcdTarget )
 			CentDedDgrEki	aCentDedDgrEki = 
 				pCentDedDgrEkiCont->get( iEkiIndex ) ;
 			DcdPos posDgrY = getCentDedDgrDia()->getDgrYPosOfEki( iEkiIndex ) ;
-			dcdtextEkimei.setText( aCentDedDgrEki.getEkimei() ) ;
+			dcdtextEkimei.setText( wstringOf( aCentDedDgrEki.getEkimei() ) ) ;
 
 			//	駅名を描画
 			if ( aCentDedDgrEki.getIsSyuyoueki() ||
