@@ -69,6 +69,7 @@ Copyright (C) 2006-2017 take-okm
 
 #include "..\DiagramEdit.h"
 #include "CDlgEkiProp.h"
+#include "str/strToWstr.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -113,7 +114,7 @@ void CDlgEkiProp::CPropEditUiInternal::UiDataToUi( const UIDATA* pUiData )
 	// 駅名 
 	{
 		CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Ekimei ) ;
-		pEdit->SetWindowText( pUiData->strEkimei.c_str() ) ;
+		pEdit->SetWindowText( wstringOf( pUiData->strEkimei ).c_str() ) ;
 		pEdit->SetSel( 0 , -1 ) ;
 	}	
 	// 境界線あり 
@@ -185,7 +186,7 @@ void CDlgEkiProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData )
 		CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Ekimei ) ;
 		CString aString ;
 		pEdit->GetWindowText( aString ) ;
-		pUiData->strEkimei = (LPCTSTR)aString ;
+		pUiData->strEkimei = stringOf( std::wstring( (LPCTSTR)aString ) ) ;
 	}
 	// 境界線あり 
 	{
@@ -251,7 +252,7 @@ void CDlgEkiProp::CPropEditUiInternal::ShowError(
 {
 	CDlgEkiProp* pOuter = (CDlgEkiProp*)( (char*)this - offsetof( CDlgEkiProp , m_PropEditUiInternal ) ) ;
 
-	CString strErrorMsg = strErrorReason.c_str() ;
+	CString strErrorMsg = wstringOf( strErrorReason ).c_str() ;
 
 	if ( strErrorReason == ERRMSG_EKIMEI_TOO_LONG )
 	{
