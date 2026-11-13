@@ -73,6 +73,7 @@ Copyright (C) 2006-2017 take-okm
 
 #include "..\DiagramEdit.h"
 #include "CDlgJikokuhyouViewProp.h"
+#include "str/strToWstr.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -135,7 +136,7 @@ void CDlgJikokuhyouViewProp::OnOK()
 		CString	strLs ;
 		pCWnd->GetWindowText( strLs ) ;
 		strLs = tstringOf( 
-			CStrCharSizeMb::strToSingleByte( (LPCTSTR)strLs ) ).c_str();
+			CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)strLs ) ) ) ).c_str();
 		if ( strLs.IsEmpty() )
 		{
 			strLs = _T( "0" ) ;
