@@ -76,6 +76,7 @@ Copyright (C) 2006-2017 take-okm
 #include "..\CRfEditCmdHolder.h"
 #include "..\DedRosenFileData\EditCmd\EditCmd.h"
 #include "CDlgRosenView.h"
+#include "str/strToWstr.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -272,7 +273,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 		
 		string	strRosenName = pCentDedRosen->getName() ;
 		if ( strRosenName.size() > 0 ){
-			strItem = strRosenName.c_str() ;
+			strItem = wstringOf( strRosenName ).c_str() ;
 		}
 
 		int nImage = 0 ;
@@ -336,7 +337,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 			const CentDedDia*	pCentDedDia = pCentDedDiaContGet->get( idxDia ) ;
 			string	strDiaName = pCentDedDia->getName() ;
 
-			HTREEITEM itemDiaName = m_treeROSEN.InsertItem( strDiaName.c_str() , 
+			HTREEITEM itemDiaName = m_treeROSEN.InsertItem( wstringOf( strDiaName ).c_str() , 
 				nImage , nSelectedImage , itemDia , TVI_LAST ) ;
 			m_treeROSEN.SetItemState( itemDiaName , TVIS_EXPANDED ,  TVIS_EXPANDED ) ;
 
