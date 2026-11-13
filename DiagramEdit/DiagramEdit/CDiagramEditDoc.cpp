@@ -1705,7 +1705,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 			strFmt.LoadString( IDS_ERR_FileTypeAppComment ) ;
 			CString strLs ;
 			strLs.Format( strFmt , wstringOf( strFileTypeAppComment ).c_str() ) ;
-			strError += "\n\n(" ;
+			strError += _T( "\n\n(" ) ;
 			strError += strLs ;
 			strError += _T( ")" ) ;
 
