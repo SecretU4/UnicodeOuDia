@@ -320,13 +320,13 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream )
 
 	if ( pErrorStream != NULL )
 	{
-		fprintf( pErrorStream , "rmempdir(%s)\\n" , strDir.c_str() ) ;
+		fprintf( pErrorStream , "rmempdir(%s)\n" , strDir.c_str() ) ;
 	}
 
 	if ( iRv >= 0 )
 	{
 		const std::wstring strDirWide = wstringOf( strDir ) ;
-		const std::wstring strSearch = strDirWide + L"\\\\*" ;
+		const std::wstring strSearch = strDirWide + L"\\*" ;
 		struct _wfinddata_t c_file ;
 		intptr_t hFile = _wfindfirst( strSearch.c_str() , &c_file ) ;
 		if ( hFile != -1L )
@@ -339,7 +339,7 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream )
 					if ( strFoundWide != L"." && strFoundWide != L".." )
 					{
 						const std::string strFound = stringOf( strFoundWide ) ;
-						int iResult = rmempdir( strDir + "\\\\" + strFound , pErrorStream ) ;
+						int iResult = rmempdir( strDir + "\\" + strFound , pErrorStream ) ;
 						if ( iRv >= 0 )
 						{
 							if ( iResult == -1 )
@@ -359,7 +359,7 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream )
 					{
 						const std::string strFound = stringOf( std::wstring( c_file.name ) ) ;
 						fprintf( pErrorStream ,
-							"\\tこのディレクトリにはファイルがあります。(%s)\\n" ,
+							"\tこのディレクトリにはファイルがあります。(%s)\n" ,
 							strFound.c_str() ) ;
 					}
 					iRv = -2 ;
@@ -378,21 +378,21 @@ int rmempdir( const std::string& strDir , FILE* pErrorStream )
 			if ( pErrorStream != NULL )
 			{
 				fprintf( pErrorStream ,
-					"\\tディレクトリ %s の削除に失敗しました。\\n" ,
+					"\tディレクトリ %s の削除に失敗しました。\n" ,
 					strDir.c_str() ) ;
 			}
 			iRv = -1 ;
 		}
 		else if ( pErrorStream != NULL )
 		{
-			fprintf( pErrorStream , "\\tディレクトリ %s を削除\\n" ,
+			fprintf( pErrorStream , "\tディレクトリ %s を削除\n" ,
 				strDir.c_str() ) ;
 		}
 	}
 
 	if ( pErrorStream != NULL )
 	{
-		fprintf( pErrorStream , "rmempdir(%s)=%d\\n" , strDir.c_str() , iRv ) ;
+		fprintf( pErrorStream , "rmempdir(%s)=%d\n" , strDir.c_str() , iRv ) ;
 	}
 	return ( iRv ) ;
 }
