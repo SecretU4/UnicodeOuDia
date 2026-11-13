@@ -1024,10 +1024,10 @@ int CWndDcdGridRessyasyubetsu::OnEditClear_Process( BOOL bQueryEnable )
 			{
 				CString	strRessyasyubetsuName = 
 					pMuCentDedRessyasyubetsu->get( iRessyasyubetsuIndex )
-					->getSyubetsumei().c_str()  ;
+					->getSyubetsumei().empty() ? _T( "" ) : wstringOf( pMuCentDedRessyasyubetsu->get( iRessyasyubetsuIndex )->getSyubetsumei() ).c_str() ;
 				CString	strDiaName = 
 					pCentDedRosen->getCentDedDiaCont()->getMuPtr()->
-					get( iDiaIndex )->getName().c_str() ;
+					get( iDiaIndex )->getName().empty() ? _T( "" ) : wstringOf( pCentDedRosen->getCentDedDiaCont()->getMuPtr()->get( iDiaIndex )->getName() ).c_str() ;
 				CString	strRessyahoukou ;
 				if ( eRessyahoukou == Ressyahoukou_Kudari )
 				{
