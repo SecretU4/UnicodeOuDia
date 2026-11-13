@@ -67,7 +67,6 @@ Copyright (C) 2006-2017 take-okm
 
 #include "stdafx.h"
 #include "str/strToInt.h"
-#include "str/CStrCharSizeMb.h"
 
 #include "..\diagramedit.h"
 #include "..\entDed\entDed.h"
@@ -183,7 +182,7 @@ void CDlgDiagramViewProp::OnOK()
 		if ( iRv >= 0 )
 		{
 			if ( jikokuYokojikuPos.decode( 
-				CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)m_strEDIT_YokojikuPos ) ) ) 
+				stringOf( halfWidthWstringOf( std::wstring( (LPCTSTR)m_strEDIT_YokojikuPos ) ) ) 
 				) < 0 )
 			{
 				iRv = -1 ;	//	横軸表示範囲の起点が、時刻として解釈できません。
@@ -192,7 +191,7 @@ void CDlgDiagramViewProp::OnOK()
 		if ( iRv >= 0 )
 		{
 			if ( jikanYokojikuSize.decode( 
-				CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)m_strEDIT_YokojikuSize ) ) ) 
+				stringOf( halfWidthWstringOf( std::wstring( (LPCTSTR)m_strEDIT_YokojikuSize ) ) ) 
 				) < 0 )
 			{
 				iRv = -2 ;	//	横軸表示範囲が、時間として解釈できません。
