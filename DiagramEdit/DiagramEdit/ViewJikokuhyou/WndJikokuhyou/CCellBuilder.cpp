@@ -150,9 +150,9 @@ CDcdTextbox CCellBuilder::createCDcdXColumn0()const
 	//	作成した、文字列幅の基準文字列です。
 
 	CDcdTextbox aCDcd( 
-		"" , 
+		_T( "" ) , 
 		getCdDrawTextPropMenutext() ,
-		strExtent ,
+		wstringOf( strExtent ) ,
 		1 ,
 		RectangleTextFrameWidth , RectangleTextFrameWidth ,
 		CdPenProp() ,
@@ -173,7 +173,7 @@ CDcdTextboxV3 CCellBuilder::createCDcdXColumn0V()const
 	CConverter_WinGdi	aConv ;
 
 	CDcdTextboxV3 aCDcd( 
-		"" , 
+		_T( "" ) , 
 		aCdDedDispProp.getJikokuhyouVFont() ,
 		getRessyameiTextExtent().getX() ,
 		getRessyameiTextExtent().getY() ,
@@ -193,9 +193,9 @@ CDcdTextbox CCellBuilder::createCDcdEkimei()const
 	//	作成した、文字列幅の基準文字列です。
 
 	CDcdTextbox aCDcd( 
-		"" , 
+		_T( "" ) , 
 		getCdDrawTextPropStandard() ,
-		strExtent ,
+		wstringOf( strExtent ) ,
 		1 ,
 		RectangleTextFrameWidth , RectangleTextFrameWidth ,
 		CdPenProp() ,
@@ -206,16 +206,16 @@ CDcdTextbox CCellBuilder::createCDcdEkimei()const
 
 CDcdTextbox CCellBuilder::createCDcdHatsuchaku()const
 {
-	string strExtent = MfcUtil::LoadCString( IDS_WORD_Chaku );
+	std::wstring strExtent = (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Chaku ) ;
 
 	//strExtent = 路線ファイルデータに保存されている値をもとにして、
 	//	作成した、文字列幅の基準文字列です。
 
 
 	CDcdTextbox aCDcd( 
-		"" , 
+		_T( "" ) , 
 		getCdDrawTextPropStandard() ,
-		strExtent ,
+		wstringOf( strExtent ) ,
 		1 ,
 		RectangleTextFrameWidth , RectangleTextFrameWidth ,
 		CdPenProp() ,
@@ -244,9 +244,9 @@ CDcdTextbox CCellBuilder::createCDcdRessyabangou(
 
 
 	CDcdTextbox aCDcd( 
-		"" , 
+		_T( "" ) , 
 		aCdDrawTextProp ,
-		strCellExtent ,
+		wstringOf( strCellExtent ) ,
 		1 ,
 		RectangleTextFrameWidth , RectangleTextFrameWidth ,
 		CdPenProp() ,
@@ -264,7 +264,7 @@ CDcdTextboxV3 CCellBuilder::createCDcdRessyamei(
 	CdDedDispProp	aCdDedDispProp = m_pCDedRosenFileData->getCdDedDispProp() ;
 
 	CDcdTextboxV3 aCDcd( 
-		"" , 
+		_T( "" ) , 
 		aCdDedDispProp.getJikokuhyouVFont(),
 		getRessyameiTextExtent().getX() ,
 		getRessyameiTextExtent().getY() ,
