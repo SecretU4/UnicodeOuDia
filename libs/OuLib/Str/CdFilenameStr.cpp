@@ -225,34 +225,25 @@ std::string CdFilenameStr::	Filename() const
 	return ( strRv ) ;
 }
 	
-CdFilenameStr& CdFilenameStr::setFilename( std::string ev ) 
+CdFilenameStr& CdFilenameStr::setFilename( std::string ev )
 {
-	CStrCharSizeMb	ite( ev ) ;
-	int	iBidx ;
-	for ( iBidx = ite.BidxLast() ; iBidx >  0 ; iBidx = ite.BidxNextChar( iBidx , -1 ) ) {
-		if ( ite.CsizeOfBidx( iBidx ) == 1 ){
-			if ( ev[iBidx] == '.' ) {
-				break ;	//	iExtPeriod = 拡張子の前の'.'のインデクスです。
-			}
-			if ( ev[iBidx]  == '\\' || ev[iBidx]  == ':' ){
-				iBidx = -1 ;
-				break ;
-					//iBidx = -1は拡張子がみつからなかったことを示します。
-			}
-		}
+	// UTF-8 continuation bytes cannot contain these ASCII path delimiters.
+	const std::string::size_type iSeparator = ev.find_last_of( "\\\\:" ) ;
+	const std::string::size_type iPeriod = ev.find_last_of( '.' ) ;
+	if ( iPeriod != std::string::npos && iPeriod > 0 &&
+		( iSeparator == std::string::npos || iPeriod > iSeparator ) )
+	{
+		m_strBaseFilename = ev.substr( 0 , iPeriod ) ;
+		m_strExtension = ev.substr( iPeriod + 1 ) ;
 	}
-	//iBidx = 拡張子の前の'.'のインデクスです。
-	//	みつからなければ-1です
-	if ( iBidx > 0 ){
-		m_strBaseFilename = ev.substr( 0 , iBidx ) ; 
-		m_strExtension    = ev.substr( iBidx + 1 ) ; 
-	}	else	{
+	else
+	{
 		m_strBaseFilename = ev ;
 		m_strExtension.erase() ;
 	}
 	return ( *this ) ;
 }
-	
+
 // --------------------------------
 	
 std::string CdFilenameStr::FullpathFilename() const 
@@ -283,7 +274,7 @@ std::string CdFilenameStr::FullpathFilename() const
 	return ( strRv ) ;
 }
 
-CdFilenameStr& CdFilenameStr::setFullpathFilename( std::string ev ) 
+CdFilenameStr& CdFilenameStr::setFullpathFilename( std::string ev )
 {
 	// --------------------------------
 	//	すべて削除
@@ -293,102 +284,70 @@ CdFilenameStr& CdFilenameStr::setFullpathFilename( std::string ev )
 	m_bIsRelativePath = true ;
 	m_strBaseFilename.erase() ;
 	m_strExtension.erase() ;
+
 	// --------------------------------
 	//	ドライブ名
 	// --------------------------------
+	const std::string::size_type iColon = ev.find( ':' ) ;
+	const std::string::size_type iSeparatorOrPeriod = ev.find_first_of( "\\\\." ) ;
+	if ( iColon != std::string::npos &&
+		( iSeparatorOrPeriod == std::string::npos || iColon < iSeparatorOrPeriod ) )
 	{
-		CStrCharSizeMb	ite( ev )  ;
-		int	iBidx ;
-		for ( iBidx = 0 ; iBidx < ite.ByteLength() ; iBidx = ite.BidxNextChar( iBidx ) ) {
-			if ( ite.CsizeOfBidx( iBidx ) == 1 ){
-				if ( ev[ iBidx ] == ':' ) {
-					break ;	
-					//iBidx = ドライブ名のあとの':'のインデクスです。
-				}
-				if (ev[ iBidx ] == '\\' || ev[ iBidx ] == '.' ){
-					iBidx = ite.ByteLength() ;	
-					//iBidx = ite.ByteLength()  は、
-					//		ドライブ名がないことを示します。
-				}
-			}
-		}
-		if ( iBidx < ite.ByteLength()  ){
-			m_strDrive = ev.substr( 0 , iBidx ) ; 
-			ev = ev.substr( iBidx + 1 ) ; 
-		}
-	}	
-	//ev = ドライブと次の':'を削除したものに
-	//	なりました。
-
-	// --------------------------------
-	//	ファイル名	
-	// --------------------------------
-	if ( m_bIsValidFilename ){
-		CStrCharSizeMb	ite( ev )  ;
-		int	iBidx ;
-		for ( iBidx = ite.BidxLast() ; iBidx >= 0 ; iBidx = ite.BidxNextChar( iBidx , -1 ) ){
-			if ( ite.CsizeOfBidx( iBidx ) == 1 ){
-				if ( ev[ iBidx ] == '\\' ){
-					break ;	//	iBidx = ファイル名の直前の'\'か':'のインデクスです。
-				}
-			}
-		}
-		setFilename( ev.substr( iBidx + 1 ) ) ;
-		ev = ev.substr( 0 , iBidx + 1 ) ; 
+		m_strDrive = ev.substr( 0 , iColon ) ;
+		ev = ev.substr( iColon + 1 ) ;
 	}
-	//ev = ファイル名を削除したものに
-	//	なりました。
 
 	// --------------------------------
-	//	先頭と末尾の '\' を扱う
+	//	ファイル名
 	// --------------------------------
-	if ( ev.length() > 0 ){
-		CStrCharSizeMb	ite( ev )  ;
-		if ( ite.CsizeOfBidx( 0 ) == 1 && ev[0] == '\\' ){
-			m_bIsRelativePath = false ;	
-			//	ディレクトリの先頭が'\' なら、絶対パスです。
-			ev = ev.substr( 1 ) ;
-		}		
-	}
-	//ev=先頭の '\' を削除しました。
-
-	if ( ev.length() > 0 ){
-		CStrCharSizeMb	ite( ev )  ;
-		if ( ite.CsizeOfBidx( ite.BidxLast() ) == 1 && ev[ite.BidxLast()] == '\\' ){
-			ev = ev.substr( 0 , ite.BidxLast() ) ;
-		}		
-	}
-	//ev=末尾の '\' を削除しました。
-
-	// --------------------------------
-	//	ディレクトリを、 '\' を境界で
-	//	切り離します。
-	// --------------------------------
-	while( ev.length() > 0 ){
-		CStrCharSizeMb	ite( ev )  ;
-		int	iBidx ;
-		for ( iBidx = 0 ; iBidx < ite.ByteLength() ; iBidx = ite.BidxNextChar( iBidx ) ){
-			if ( ite.CsizeOfBidx( iBidx ) == 1 ){
-				if ( ev[ iBidx ] == '\\' ) {
-					break ;	
-					//iBidx = ドライブ名のあとの'\'のインデクスです。
-				}
-			}
+	if ( m_bIsValidFilename )
+	{
+		const std::string::size_type iLastSeparator = ev.find_last_of( '\\\\' ) ;
+		if ( iLastSeparator == std::string::npos )
+		{
+			setFilename( ev ) ;
+			ev.clear() ;
 		}
-		m_contstrDir.push_back( ev.substr( 0 , iBidx ) ) ; 
-		ev = ev.substr( iBidx ) ; 
-		ite.scan( ev ) ;
-		if ( ite.ByteLength() > 0 ){
-			if ( ite.CsizeOfBidx( 0 ) == 1 ){
-				if ( ev[0] == '\\' ) {
-					ev = ev.substr( 1 ) ;
-				}
-			}
+		else
+		{
+			setFilename( ev.substr( iLastSeparator + 1 ) ) ;
+			ev = ev.substr( 0 , iLastSeparator + 1 ) ;
 		}
-	}	
+	}
 
+	// --------------------------------
+	//	先頭と末尾の '\\' を扱う
+	// --------------------------------
+	if ( !ev.empty() && ev[0] == '\\\\' )
+	{
+		m_bIsRelativePath = false ;
+		ev = ev.substr( 1 ) ;
+	}
+	if ( !ev.empty() && ev[ev.size() - 1] == '\\\\' )
+	{
+		ev.erase( ev.size() - 1 ) ;
+	}
+
+	// --------------------------------
+	//	ディレクトリを、 '\\' を境界で切り離す
+	// --------------------------------
+	while ( !ev.empty() )
+	{
+		const std::string::size_type iSeparator = ev.find( '\\\\' ) ;
+		if ( iSeparator == std::string::npos )
+		{
+			m_contstrDir.push_back( ev ) ;
+			ev.clear() ;
+		}
+		else
+		{
+			m_contstrDir.push_back( ev.substr( 0 , iSeparator ) ) ;
+			ev = ev.substr( iSeparator + 1 ) ;
+		}
+	}
 	return ( *this ) ;
 }
+
 CdFilenameStr& CdFilenameStr::setFullpathFilename( std::string ev , 
 										bool bIsValidFilename ) 
 {
