@@ -1650,7 +1650,7 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 		CdDrawTextFormat	aFormat = aProp.getCdDrawTextFormat() ;
 		aFormat.setHorizontal( aFormat.H_CENTER ) ;
 		aProp.setCdDrawTextFormat( aFormat ) ;
-		pdcdPage = OuNew<CDcdText>( new CDcdText( "" ,aProp , "99" ) ) ;
+		pdcdPage = OuNew<CDcdText>( new CDcdText( _T( "" ) ,aProp , _T( "99" ) ) ) ;
 	}
 
 	LogMsg( "CDedDiagramView::OnPrint()4" ) ;
