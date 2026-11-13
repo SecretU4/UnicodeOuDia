@@ -117,6 +117,8 @@ std::wstring wstringOf( std::string strEs ) ;
 * 	マルチバイト/ワイドの文字列 をワイド文字列に変換します。
 */
 std::wstring wstringOf( std::wstring strEs ) ;
+/** Map full-width display characters to half-width using Unicode (UTF-16). */
+std::wstring halfWidthWstringOf( const std::wstring& strWide ) ;
 
 /**
  * UTF-8 と Unicode ワイド文字列の間を、システムコードページに依存せず変換します。
