@@ -68,6 +68,7 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 /** @file */
 #include "stdafx.h"
+#include "str/strToWstr.h"
 #include <math.h>
 
 #include "DcDraw\CDcdText.h"
@@ -201,7 +202,7 @@ void CRessyajouhouDraw::onCentDedDgrEkiJikoku(
 			strRessyajouhou += pCentDedDgrRessya->getGousuu() ;
 			CString	aStr ;
 			aStr.LoadString( IDS_WORD_GOUSUU2 ) ;
-			strRessyajouhou += (LPCTSTR)aStr ;
+			strRessyajouhou += stringOf( std::wstring( (LPCTSTR)aStr ) ) ;
 		}
 	}
 	if ( strRessyajouhou.empty() )
