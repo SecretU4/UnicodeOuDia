@@ -73,6 +73,7 @@ Copyright (C) 2006-2017 take-okm
 #include "..\DiagramEdit.h"
 #include "CDlgRosenFileProp.h"
 #include "CDlgRosenFileProp_Diagram.h"
+#include "str/strToWstr.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -111,7 +112,7 @@ void CDlgRosenFileProp_Diagram::updateUI()
 	CDlgRosenFileProp::CPropEditorData* pPropEditorData = GetParent()->getPropEditorData() ;
 
 	m_strEDIT_DoagramKitenJikoku = 
-		g_CdDedJikokuConv.encode( pPropEditorData->getUIKitenJikoku() ).c_str() ;
+		wstringOf( g_CdDedJikokuConv.encode( pPropEditorData->getUIKitenJikoku() ) ).c_str() ;
 	m_iEDIT_DiagramDgrYZahyouKyoriDefault = 
 		pPropEditorData->getUIDiagramDgrYZahyouKyoriDefault() / 60  ;
 
@@ -132,7 +133,7 @@ int CDlgRosenFileProp_Diagram::updatePropEditorData()
 	if ( iRv >= 0 )
 	{
 		if ( jikokuKitenJikoku.decode( 
-				CStrCharSizeMb::strToSingleByte( (LPCTSTR)m_strEDIT_DoagramKitenJikoku ) ) < 0 )
+				CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)m_strEDIT_DoagramKitenJikoku ) ) ) ) < 0 )
 		{
 			iRv = -11 ;	//	ダイヤグラム起点時刻が不正です
 		}
