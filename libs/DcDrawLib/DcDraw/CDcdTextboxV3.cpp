@@ -235,7 +235,7 @@ int CDcdTextboxV3::VerticalTextElementToElementPlace(
 			//	但し、行に表示できない場合は、
 			//	結合を打ち切ります。
 			// --------------------------------
-			wwstring strMojiretsu ;
+			wstring strMojiretsu ;
 			int idxMojiretsuyousoEnd = idxMojiretsuyousoCont ;
 			int logicalunitYSize = 0 ;
 			int iXLineWidth = 0 ;
@@ -255,7 +255,7 @@ int CDcdTextboxV3::VerticalTextElementToElementPlace(
 				}
 
 
-				wwstring aString = strMojiretsu + 
+				wstring aString = strMojiretsu + 
 					aCStrElementEnd.getString() ;
 				SIZE	aSize ;
 				GetTextExtentPoint32W( 
