@@ -90,8 +90,8 @@ using namespace std ;
 // ********************************
 void CJikokuhyouDoc::SetTitle( LPCTSTR lpszTitle )
 {
-	string	strTitle = lpszTitle ;
-	vector<string>	arstrTitle = splitc< vector< string > >( '\n' , lpszTitle  ) ;
+	string	strTitle = stringOf( std::wstring( lpszTitle ) ) ;
+	vector<string>	arstrTitle = splitc< vector< string > >( '\n' , strTitle ) ;
 	m_strDiaName = arstrTitle[0] ;
 	m_eRessyahoukou = (ERessyahoukou)atoi( arstrTitle[1].c_str() ) ;
 
@@ -104,14 +104,14 @@ void CJikokuhyouDoc::SetTitle( LPCTSTR lpszTitle )
 	//	タイトル文字列の作成
 	// --------------------------------
 	{
-		CString	strDiamei =m_strDiaName.c_str() ;
+		CString	strDiamei = wstringOf( m_strDiaName ).c_str() ;
 		CString	strRessyahoukou ;
 		if ( m_eRessyahoukou == Ressyahoukou_Kudari ){
 			strRessyahoukou.LoadString( IDS_WORD_KUDARIJIKOKUHYOU ) ;
 		}	else	{
 			strRessyahoukou.LoadString( IDS_WORD_NOBORIJIKOKUHYOU ) ;
 		}
-		strDiamei += " " ;
+		strDiamei += _T( " " ) ;
 		strDiamei += strRessyahoukou ;
 		super::SetTitle( strDiamei ) ;
 	}
