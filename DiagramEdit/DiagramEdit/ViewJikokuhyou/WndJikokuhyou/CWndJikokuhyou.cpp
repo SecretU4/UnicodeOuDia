@@ -465,7 +465,7 @@ int CWndJikokuhyou::OnFileImportJikokuhyoucsv_Process( BOOL bQueryEnable )
 					(LPCTSTR)strCsvFilename , iResult ) ;
 				strError += _T( "\n" ) ;
 				strError += _T( "(" ) ;
-				strError += strErrorInfoString.c_str()  ;
+				strError += wstringOf( strErrorInfoString ).c_str()  ;
 				strError += _T( ")" ) ;
 				iRv = iResult - 100 ;
 				//	-101 ; // 行が少なすぎます。
