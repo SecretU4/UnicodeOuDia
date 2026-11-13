@@ -641,8 +641,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 	//DiagramPosDgr
 	if ( iRv >= 0 )
 	{
-		string	strValue = GetProfileString( nameSection , 
-			nameCWndDiagram_DiagramPosDgr ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( nameSection , 
+			nameCWndDiagram_DiagramPosDgr ) ) ;
 		deque<string>	contstrValue = 
 			splitc< deque< string > >( ',' , strValue ) ;
 		if ( contstrValue.size() != 2 )
@@ -658,8 +658,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 	}
 	//DcdPerDgrX
 	if ( iRv >= 0 ){
-		string	strValue = GetProfileString( nameSection , 
-			nameCWndDiagram_DcdPerDgrX ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( nameSection , 
+			nameCWndDiagram_DcdPerDgrX ) ) ;
 		if ( strValue.empty() ){
 			iRv = -2 ;	//	DcdPerDgrX が指定されていません。
 		}	else	{
@@ -668,8 +668,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 	}
 	//DcdPerDgrY
 	if ( iRv >= 0 ){
-		string	strValue = GetProfileString( nameSection , 
-			nameCWndDiagram_DcdPerDgrY ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( nameSection , 
+			nameCWndDiagram_DcdPerDgrY ) ) ;
 		if ( strValue.empty() ){
 			iRv = -2 ;	//	DcdPerDgrY が指定されていません。
 		}	else	{
@@ -681,8 +681,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 
 	//DiagramVlineMode
 	if ( iRv >= 0 ){
-		string	strValue = GetProfileString( nameSection , 
-			nameCWndDiagram_VlineMode ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( nameSection , 
+			nameCWndDiagram_VlineMode ) ) ;
 		if ( strValue.empty() ){
 			iRv = -2 ;	//	DiagramVlineMode が指定されていません。
 		}	else	{
@@ -693,8 +693,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 	//DisplayRessyabangou
 	if ( iRv >= 0 )
 	{
-		string	strValue = GetProfileString( nameSection , 
-			nameCWndDiagram_DisplayRessyabangou ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( nameSection , 
+			nameCWndDiagram_DisplayRessyabangou ) ) ;
 		if ( strValue.empty() )
 		{
 			iRv = -3 ;	//	DisplayRessyabangou が指定されていません。
@@ -707,8 +707,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 
 	//DisplayRessyamei
 	if ( iRv >= 0 ){
-		string	strValue = GetProfileString( nameSection , 
-			nameCWndDiagram_DisplayRessyamei ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( nameSection , 
+			nameCWndDiagram_DisplayRessyamei ) ) ;
 		if ( strValue.empty() ){
 			iRv = -4 ;	//	DisplayRessyamei が指定されていません。
 		}	else	{
@@ -718,8 +718,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 	//DisplayRessyasen
 	if ( iRv >= 0 )
 	{
-		string	strValue = GetProfileString( 
-			nameSection , nameCWndDiagram_DisplayRessyasen ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( 
+			nameSection , nameCWndDiagram_DisplayRessyasen ) ) ;
 		deque<string>	contstrValue = 
 			splitc< deque< string > >( ',' , strValue ) ;
 		if ( contstrValue.size() != 2 )
@@ -735,8 +735,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 	//DiagramHideIppanekiEkimei
 	if ( iRv >= 0 )
 	{
-		string	strValue = GetProfileString( 
-			nameSection , nameCWndDiagram_HideIppanekiEkimei ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( 
+			nameSection , nameCWndDiagram_HideIppanekiEkimei ) ) ;
 		if ( strValue.empty() )
 		{
 			iRv = -6 ;	//	HideIppanekiEkimei が指定されていません。
@@ -749,8 +749,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 	//DiagramStopMarkDraw
 	if ( iRv >= 0 )
 	{
-		string	strValue = GetProfileString( 
-			nameSection , nameCWndDiagram_StopMarkDraw ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( 
+			nameSection , nameCWndDiagram_StopMarkDraw ) ) ;
 		if ( strValue.empty() )
 		{
 			iRv = -7 ;	//	StopMarkDraw が指定されていません。
@@ -763,8 +763,8 @@ int CDiagramEditApp::readCWndDiagramViewProp( CWndDiagram* pCWndDiagram )
 	//DiagramKeepZoneDgrOnSize
 	if ( iRv >= 0 )
 	{
-		string	strValue = GetProfileString( 
-			nameSection , nameCWndDiagram_KeepZoneDgrOnSize ) ;
+		string	strValue = stringOf( (LPCTSTR)GetProfileString( 
+			nameSection , nameCWndDiagram_KeepZoneDgrOnSize ) ) ;
 		if ( strValue.empty() )
 		{
 			iRv = -8 ;	//	KeepZoneDgrOnSize が指定されていません。
@@ -1100,7 +1100,7 @@ BOOL CDiagramEditApp::InitInstance()
 	{
 		//	印刷ページ設定
 		CString aStr = GetProfileString( nameSection , namePrintPageProp ) ;
-		m_CdPrintPageProp.decode( (LPCTSTR)aStr ) ;
+		m_CdPrintPageProp.decode( stringOf( std::wstring( (LPCTSTR)aStr ) ) ) ;
 
 		//	LogLevel設定
 		logmsg_setLogLevel( GetProfileInt( nameSection , nameLogLevel , 0 ) );
@@ -1313,7 +1313,7 @@ void CDiagramEditApp::OnUpdateFileSave(CCmdUI* pCmdUI)
 int CDiagramEditApp::ExitInstance() 
 {
 	string	strPrintPageProp = m_CdPrintPageProp.encode() ;
-	WriteProfileString( nameSection , namePrintPageProp , strPrintPageProp.c_str() ) ;
+	WriteProfileString( nameSection , namePrintPageProp , tstringOf( strPrintPageProp ).c_str() ) ;
 
 	return CHidemdiApp::ExitInstance();
 }
