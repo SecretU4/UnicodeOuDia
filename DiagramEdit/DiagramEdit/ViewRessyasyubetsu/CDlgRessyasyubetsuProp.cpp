@@ -76,6 +76,7 @@ Copyright (C) 2006-2017 take-okm
 #include "..\DiagramEdit.h"
 #include "..\entDed\CconvCentDed.h"
 #include "CDlgRessyasyubetsuProp.h"
+#include "str/strToWstr.h"
 
 
 #ifdef _DEBUG
@@ -118,13 +119,13 @@ UiDataToUi( const UIDATA* pUiData )
 	{
 		CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Syubetsumei ) ;
 		pEdit->EnableWindow(  pUiData->bSyubetsumeiIsEnable ? TRUE : FALSE ) ;
-		pEdit->SetWindowText( pUiData->strSyubetsumei.c_str() ) ;
+		pEdit->SetWindowText( wstringOf( pUiData->strSyubetsumei ).c_str() ) ;
 		pEdit->SetSel( 0 , -1 ) ;
 	}
 	// 略称（種別名の略称）
 	{
 		CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Ryakusyou ) ;
-		pEdit->SetWindowText( pUiData->strRyakusyou.c_str() ) ;
+		pEdit->SetWindowText( wstringOf( pUiData->strRyakusyou ).c_str() ) ;
 		pEdit->SetSel( 0 , -1 ) ;
 	}
 	
@@ -266,7 +267,7 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData 
 			CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Syubetsumei ) ;
 			CString aString ;
 			pEdit->GetWindowText( aString ) ;
-			pUiData->strSyubetsumei = (LPCTSTR)aString ;
+			pUiData->strSyubetsumei = stringOf( std::wstring( (LPCTSTR)aString ) ) ;
 		}
 	}
 	// 略称（種別名の略称）
@@ -276,7 +277,7 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData 
 			CEdit* pEdit = (CEdit*)pOuter->GetDlgItem( IDC_EDIT_Ryakusyou ) ;
 			CString aString ;
 			pEdit->GetWindowText( aString ) ;
-			pUiData->strRyakusyou = (LPCTSTR)aString ;
+			pUiData->strRyakusyou = stringOf( std::wstring( (LPCTSTR)aString ) ) ;
 		}
 	}
 	
@@ -360,7 +361,7 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::ShowError(
 
 {
 	CDlgRessyasyubetsuProp* pOuter = (CDlgRessyasyubetsuProp*)( (char*)this - offsetof( CDlgRessyasyubetsuProp , m_PropEditUiInternal ) ) ;
-	CString strErrorMsg = strErrorReason.c_str() ;
+	CString strErrorMsg = wstringOf( strErrorReason ).c_str() ;
 	if ( strErrorReason == ERRMSG_SYUBETUSMEI_EMPTY )
 	{
 		pOuter->GetDlgItem( IDC_ERROR_SyubetsumeiEmpty )->GetWindowText( strErrorMsg )  ;
