@@ -1360,7 +1360,7 @@ int CDiagramEditDoc::OnOpenDocument_ConvFile(
 				if ( iResult < 0 )
 				{
 					strError = MfcUtil::LoadCString( IDS_ERR_DLLNOTFOUND ) ;
-					strError += "\n" ;
+					strError += _T( "\n" ) ;
 					strError += aCConvFileDll.getDllFilename().c_str()  ;
 					iRv = -101 ;
 				}
@@ -1394,12 +1394,12 @@ int CDiagramEditDoc::OnOpenDocument_ConvFile(
 					{
 						
 						strError = MfcUtil::LoadCString( IDS_ERR_FILECONVERT_FAILED ) ;
-						strError += "\n" ;
+						strError += _T( "\n" ) ;
 						//strError += aCConvFileDll.getDllFilename().c_str()  ;
 						if ( strErrorInfoString.size() > 0 )
 						{
 							strError += wstringOf( strErrorInfoString ).c_str() ;
-							strError += "\n" ;
+							strError += _T( "\n" ) ;
 						}
 						iRv = -102 ;	//	ファイルの変換に失敗しました。
 					}
@@ -1655,10 +1655,10 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 			string strOuErrorInfoText = aCOuErrorInfoContainer.toOuErrorInfoText() ;
 			if ( !strOuErrorInfoText.empty() )
 			{
-				strError += "\n\n" ;
-				strError += "(" ;
-				strError += strOuErrorInfoText.c_str() ;
-				strError += ")" ;
+				strError += _T( "\n\n" ) ;
+				strError += _T( "(" ) ;
+				strError += wstringOf( strOuErrorInfoText ).c_str() ;
+				strError += _T( ")" ) ;
 			}
 
 		}
@@ -1704,10 +1704,10 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 			CString strFmt ;
 			strFmt.LoadString( IDS_ERR_FileTypeAppComment ) ;
 			CString strLs ;
-			strLs.Format( strFmt , strFileTypeAppComment.c_str() ) ;
+			strLs.Format( strFmt , wstringOf( strFileTypeAppComment ).c_str() ) ;
 			strError += "\n\n(" ;
 			strError += strLs ;
-			strError += ")" ;
+			strError += _T( ")" ) ;
 
 		}
 		AfxMessageBox( strError , MB_ICONSTOP ) ; 
