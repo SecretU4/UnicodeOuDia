@@ -85,6 +85,26 @@ namespace WinDia{
 using namespace OuLib ;
 using namespace std ;
 
+// WinDIA files are CP932 byte streams; model std::string values are UTF-8.
+static string utf8OfWinDiaBytes( const string& strCp932 )
+{
+	return OuLib::Str::cp932StringOf( strCp932.data() , (int)strCp932.size() ) ;
+}
+
+static string winDiaBytesOfUtf8( const string& strUtf8 )
+{
+	const wstring strWide = OuLib::Str::wstringOf( strUtf8 ) ;
+	if ( strWide.empty() ) return string() ;
+	const int iSize = WideCharToMultiByte( 932 , 0 , strWide.data() ,
+		(int)strWide.size() , NULL , 0 , NULL , NULL ) ;
+	if ( iSize <= 0 ) return string() ;
+	string strRv( iSize , '\0' ) ;
+	if ( WideCharToMultiByte( 932 , 0 , strWide.data() ,
+		(int)strWide.size() , &strRv[0] , iSize , NULL , NULL ) != iSize )
+		return string() ;
+	return strRv ;
+}
+
 /** 時刻の書式を保持します。 */
 const CdDedJikoku::CConv	g_CdDedJikokuConv(
 	true ,		//	NoColon 
@@ -473,7 +493,7 @@ static int CentDedRosen_readWinDIASection( CentDedRosen* pCentDedRosen ,
 	int iRv = 0 ;
 	// --------------------------------
 	if ( pstrcontSection->size() > 0 ){
-		pCentDedRosen->setName( pstrcontSection->get( 0 ) ) ;
+		pCentDedRosen->setName( utf8OfWinDiaBytes( pstrcontSection->get( 0 ) ) ) ;
 	}
 	// --------------------------------
 	return ( iRv ) ;
@@ -498,7 +518,7 @@ static int CentDedRosen_writeWinDIASection(
 	int iRv = 0 ;
 	// --------------------------------
 	{
-		pstrcontSection->insert( pCentDedRosen->getName() ) ;
+		pstrcontSection->insert( winDiaBytesOfUtf8( pCentDedRosen->getName() ) ) ;
 	}
 	// --------------------------------
 	return ( iRv ) ;
@@ -558,7 +578,7 @@ static int CentDedRosen_readEkiSection( CentDedRosen* pCentDedRosen ,
 			eEkikibo = CentDedEki::Ekikibo_Syuyou ;
 		}		
 
-		CentDedEki aCentDedEki( strEkimei , 
+		CentDedEki aCentDedEki( utf8OfWinDiaBytes( strEkimei ) , 
 			eEkijikokukeisiki ,
 			eEkikibo , false ) ;
 		pCentDedEkiCont->insert( aCentDedEki ) ;
@@ -619,7 +639,7 @@ static int CentDedRosen_writeEkiSection(
 			break ;
 		}
 		
-		strEkimei = pCentDedEki->getEkimei() ;
+		strEkimei = winDiaBytesOfUtf8( pCentDedEki->getEkimei() ) ;
 		
 		string	strLine = strEkiZokusei + ',' + strEkimei ;
 		
@@ -784,8 +804,8 @@ static int CentDedRosen_readSensyuSection( CentDedRosen* pCentDedRosen ,
 		if ( pCentDedRessyasyubetsu == NULL ){
 			iRv = -1 ;	//	Train00 の番号部分の値が不適切です。
 		}	else	{
-			pCentDedRessyasyubetsu->setSyubetsumei( strSyubetsumei ) ;
-			pCentDedRessyasyubetsu->setRyakusyou( strRyakusyou ) ;
+			pCentDedRessyasyubetsu->setSyubetsumei( utf8OfWinDiaBytes( strSyubetsumei ) ) ;
+			pCentDedRessyasyubetsu->setRyakusyou( utf8OfWinDiaBytes( strRyakusyou ) ) ;
 		}
 	}
 
@@ -909,8 +929,8 @@ static int CentDedRosen_writeSensyuSection( const CentDedRosen* pCentDedRosen ,
 				idxRessyasyubetsu  ++ ){
 			const CentDedRessyasyubetsu* pCentDedRessyasyubetsu = 
 				pCentDedRessyasyubetsuContGet->get( idxRessyasyubetsu ) ;
-			string	strSyubetsumei = pCentDedRessyasyubetsu->getSyubetsumei() ;
-			string	strRyakusyou = pCentDedRessyasyubetsu->getRyakusyou() ;
+			string strSyubetsumei = winDiaBytesOfUtf8( pCentDedRessyasyubetsu->getSyubetsumei() ) ;
+			string strRyakusyou = winDiaBytesOfUtf8( pCentDedRessyasyubetsu->getRyakusyou() ) ;
 
 			if ( strRyakusyou.length() > 4 ){
 				iRv = -2 ;	//	略称の長さが半角５文字を超える列車種別があります。
@@ -993,9 +1013,9 @@ static int CentDedRosen_readKudariNoboriSection(
 			string	strGousuu = contstrItem[3] ;
 			
 			aCentDedRessya.setRessyasyubetsuIndex( iRessyasyubetsuIdx ) ;
-			aCentDedRessya.setRessyabangou( strRessyabangou ) ;
-			aCentDedRessya.setRessyamei( strRessyamei ) ;
-			aCentDedRessya.setGousuu( strGousuu ) ;
+			aCentDedRessya.setRessyabangou( utf8OfWinDiaBytes( strRessyabangou ) ) ;
+			aCentDedRessya.setRessyamei( utf8OfWinDiaBytes( strRessyamei ) ) ;
+			aCentDedRessya.setGousuu( utf8OfWinDiaBytes( strGousuu ) ) ;
 		}
 		// --------------------------------
 		//	駅時刻
@@ -1068,7 +1088,7 @@ static int CentDedRosen_readKudariNoboriSection(
 				if ( strBikou.size() > 0 && strBikou[0] == '%' ){
 					strBikou.erase( 0 , 1 ) ;
 				}
-				aCentDedRessya.setBikou( strBikou ) ;
+				aCentDedRessya.setBikou( utf8OfWinDiaBytes( strBikou ) ) ;
 			}
 		}
 		// --------------------------------
@@ -1116,11 +1136,11 @@ static int CentDedRosen_writeKudariNoboriSection(
 			strLine += stringOf( pCentDedRessya->getRessyasyubetsuIndex() ) ;
 		}
 		strLine += ',' ;
-		strLine += pCentDedRessya->getRessyabangou() ;
+		strLine += winDiaBytesOfUtf8( pCentDedRessya->getRessyabangou() ) ;
 		strLine += ',' ;
-		strLine += pCentDedRessya->getRessyamei() ;
+		strLine += winDiaBytesOfUtf8( pCentDedRessya->getRessyamei() ) ;
 		strLine += ',' ;
-		strLine += pCentDedRessya->getGousuu() ;
+		strLine += winDiaBytesOfUtf8( pCentDedRessya->getGousuu() ) ;
 		// --------------------------------
 		//	駅時刻
 		// --------------------------------
@@ -1176,7 +1196,7 @@ static int CentDedRosen_writeKudariNoboriSection(
 		//	備考
 		// --------------------------------
 		if ( iRv >= 0 ){
-			string strBikou = pCentDedRessya->getBikou() ;
+			string strBikou = winDiaBytesOfUtf8( pCentDedRessya->getBikou() ) ;
 			if ( !strBikou.empty() ){
 				strLine += ",%" ;
 				strLine += strBikou ; 
