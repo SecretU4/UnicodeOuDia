@@ -245,7 +245,7 @@ BOOL CDlgModifyEkijikokuOperation2::OnInitDialog()
 		for ( idxEki = 0 ; idxEki < (int)m_contstrEkimei.size() ; idxEki ++ )
 		{
 			CString	strItem ;
-			strItem = m_contstrEkimei[idxEki].c_str() ;
+			strItem = wstringOf( m_contstrEkimei[idxEki] ).c_str() ;
 			pCComnoBox->AddString( strItem + strChaku ) ;
 			pCComnoBox->AddString( strItem + strHatsu ) ;
 		}
