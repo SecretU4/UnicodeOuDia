@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "str/strToWstr.h"
 #include "..\diagramedit.h"
 #include "cdlgmodifyekijikokuoperation2.h"
 
