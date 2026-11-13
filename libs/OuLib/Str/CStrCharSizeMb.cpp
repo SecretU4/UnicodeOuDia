@@ -68,6 +68,7 @@ Copyright (C) 2006-2017 take-okm
 // ****************************************************************
 */
 #include <mbstring.h>
+#include <windows.h>
 #include "CStrCharSizeMb.h"
 
 namespace OuLib {
@@ -135,7 +136,8 @@ CStrCharSizeMb& CStrCharSizeMb::scan( const std::string& ev )
 	for ( idx = 0 ; idx < (int)ev.length() ; ){
 		m_ariBidx.push_back( idx ) ;
 		unsigned char	ch = (unsigned char)ev[idx] ;
-		int iSize = _mbclen( &ch ) ;
+		// This byte-oriented helper is reserved for legacy CP932 buffers.
+		int iSize = ( idx + 1 < (int)ev.length() && IsDBCSLeadByteEx( 932 , ch ) ) ? 2 : 1 ;
 		idx += iSize ;
 	}
 
