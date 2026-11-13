@@ -69,6 +69,7 @@ Copyright (C) 2006-2017 take-okm
 
 #include "..\DiagramEdit.h"
 #include "CDlgDiaProp.h"
+#include "str/strToWstr.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -93,7 +94,7 @@ CDlgDiaProp::CDlgDiaProp(
 	//{{AFX_DATA_INIT(CDlgDiaProp)
 	m_strEDIT_Name = _T("");
 	//}}AFX_DATA_INIT
-	m_strEDIT_Name = m_strName.c_str() ;
+	m_strEDIT_Name = wstringOf( m_strName ).c_str() ;
 }
 
 
@@ -124,7 +125,7 @@ void CDlgDiaProp::OnOK()
 			GetDlgItemText( IDC_STATIC_ERROR_NameNotSet , strError ) ; 
 			iRv = -1 ;	//	ダイヤ名が設定されていません。
 		}	else	{
-			m_strName = (LPCTSTR)m_strEDIT_Name ;
+			m_strName = stringOf( std::wstring( (LPCTSTR)m_strEDIT_Name ) ) ;
 		}
 	}
 	if ( iRv >= 0 ){
