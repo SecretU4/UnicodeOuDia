@@ -137,9 +137,9 @@ CDcdTextbox	CWndDcdGridEki::getCDcdEkijikokukeisiki()const
 	//CdFontProp aCdFontProp( getCDiagramEditDoc()->getCDedRosenFileData()->
 	//	getCdDedDispProp().getJikokuhyouFont() ) ;
 	CdFontProp aCdFontProp(	CConverter_WinGdi().CdFontPropOf( DEFAULT_GUI_FONT ) ) ;
-	return CDcdTextbox( "" ,
+	return CDcdTextbox( _T( "" ) ,
 		aCdFontProp ,
-		_T( "京都京都京都" ) , 1 , 2 , 2 , CdPenProp() , 
+		_T( _T( "京都京都京都" ) ) , 1 , 2 , 2 , CdPenProp() , 
 		CConverter_WinGdi().CdBrushPropOf( WHITE_BRUSH ) ) ;
 };
 	
@@ -148,9 +148,9 @@ CDcdTextbox	CWndDcdGridEki::getCDcdEkikibo()const
 	//CdFontProp aCdFontProp( getCDiagramEditDoc()->getCDedRosenFileData()->
 	//	getCdDedDispProp().getJikokuhyouFont() ) ;
 	CdFontProp aCdFontProp(	CConverter_WinGdi().CdFontPropOf( DEFAULT_GUI_FONT ) ) ;
-	return CDcdTextbox( "" ,
+	return CDcdTextbox( _T( "" ) ,
 		aCdFontProp ,
-		"京都京都京都" , 1 , 2 , 2 , CdPenProp() , 
+		_T( "京都京都京都" ) , 1 , 2 , 2 , CdPenProp() , 
 		CConverter_WinGdi().CdBrushPropOf( WHITE_BRUSH ) ) ;
 };
 	
