@@ -1406,9 +1406,9 @@ int CWjkState_Ressyahensyu::
 					->getMuPtr( getRessyahoukou() ) ;
 			CString	strFmt ;
 			strFmt.LoadString( IDS_ERR_EkikanSaisyouSecIsNone ) ;
-			CString strEkimei0 = pCentDedEkiCont->get( 
+			CString strEkimei0 = wstringOf( pCentDedEkiCont->get( 
 				aCdYColSpec.getEkiOrder() ).getEkimei() ).c_str() ;
-			CString strEkimei1 = pCentDedEkiCont->get( 
+			CString strEkimei1 = wstringOf( pCentDedEkiCont->get( 
 				aCdYColSpec.getEkiOrder() + 1 ).getEkimei() ).c_str() ;
 			CString aStr ;
 			aStr.Format( strFmt , strEkimei0 , strEkimei1 ) ;
