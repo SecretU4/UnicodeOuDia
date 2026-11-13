@@ -66,7 +66,6 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
-#include "str/CStrCharSizeMb.h"
 
 #include "..\DiagramEdit.h"
 #include "CDlgRosenFileProp.h"
