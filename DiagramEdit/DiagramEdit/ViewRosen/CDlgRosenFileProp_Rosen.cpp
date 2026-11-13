@@ -82,22 +82,28 @@ static char THIS_FILE[] = __FILE__;
 
 namespace ViewRosen{
 
-// CStrCharSizeMb is a legacy CP932 byte-string utility. Keep its input and
-// output at an explicit CP932 boundary while the dialog stores UTF-8.
-static std::string strToSingleByteUtf8( const std::string& strUtf8 )
+// Convert display-width text as Unicode; do not pass UTF-8 bytes to the
+// legacy multibyte CStrCharSizeMb utility.
+static std::wstring halfWidthOf( const std::wstring& strWide )
 {
-	std::string strCp932 ;
-	if ( !cp932BytesFromUtf8( strUtf8 , &strCp932 ) )
+	if ( strWide.empty() || strWide.size() > 0x7fffffff )
 	{
-		// Preserve characters that CP932 cannot represent.
-		return strUtf8 ;
+		return strWide ;
 	}
-	std::string strSingleByteCp932 =
-		CStrCharSizeMb::strToSingleByte( strCp932 ) ;
-	return cp932StringOf(
-		strSingleByteCp932.data() , (int)strSingleByteCp932.size() ) ;
+	int cch = LCMapStringW( LOCALE_INVARIANT , LCMAP_HALFWIDTH ,
+		strWide.data() , (int)strWide.size() , NULL , 0 ) ;
+	if ( cch <= 0 )
+	{
+		return strWide ;
+	}
+	std::wstring strResult( cch , L'\0' ) ;
+	if ( LCMapStringW( LOCALE_INVARIANT , LCMAP_HALFWIDTH ,
+		strWide.data() , (int)strWide.size() , &strResult[0] , cch ) != cch )
+	{
+		return strWide ;
+	}
+	return strResult ;
 }
-
 /////////////////////////////////////////////////////////////////////////////
 // CDlgRosenFileProp_Rosen ダイアログ
 // ********************************
@@ -133,7 +139,7 @@ int CDlgRosenFileProp_Rosen::updatePropEditorData()
 	{
 		CString	aString ;
 		GetDlgItemText( IDC_EDIT_EkimeiLength , aString ) ;
-		aString = wstringOf( strToSingleByteUtf8( stringOf( std::wstring( (LPCTSTR)aString ) ) ) ).c_str() ;
+		aString = halfWidthOf( std::wstring( (LPCTSTR)aString ) ).c_str() ;
 		SetDlgItemText( IDC_EDIT_EkimeiLength , aString ) ;
 		GetDlgItemText( IDC_EDIT_JikokuhyouRessyaWidth , aString ) ;
 		aString = wstringOf( strToSingleByteUtf8( stringOf( std::wstring( (LPCTSTR)aString ) ) ) ).c_str() ;
