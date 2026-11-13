@@ -228,7 +228,7 @@ std::string CdFilenameStr::	Filename() const
 CdFilenameStr& CdFilenameStr::setFilename( std::string ev )
 {
 	// UTF-8 continuation bytes cannot contain these ASCII path delimiters.
-	const std::string::size_type iSeparator = ev.find_last_of( "\\\\:" ) ;
+	const std::string::size_type iSeparator = ev.find_last_of( "\\:" ) ;
 	const std::string::size_type iPeriod = ev.find_last_of( '.' ) ;
 	if ( iPeriod != std::string::npos && iPeriod > 0 &&
 		( iSeparator == std::string::npos || iPeriod > iSeparator ) )
@@ -289,7 +289,7 @@ CdFilenameStr& CdFilenameStr::setFullpathFilename( std::string ev )
 	//	ドライブ名
 	// --------------------------------
 	const std::string::size_type iColon = ev.find( ':' ) ;
-	const std::string::size_type iSeparatorOrPeriod = ev.find_first_of( "\\\\." ) ;
+	const std::string::size_type iSeparatorOrPeriod = ev.find_first_of( "\\." ) ;
 	if ( iColon != std::string::npos &&
 		( iSeparatorOrPeriod == std::string::npos || iColon < iSeparatorOrPeriod ) )
 	{
@@ -302,7 +302,7 @@ CdFilenameStr& CdFilenameStr::setFullpathFilename( std::string ev )
 	// --------------------------------
 	if ( m_bIsValidFilename )
 	{
-		const std::string::size_type iLastSeparator = ev.find_last_of( '\\\\' ) ;
+		const std::string::size_type iLastSeparator = ev.find_last_of( '\\' ) ;
 		if ( iLastSeparator == std::string::npos )
 		{
 			setFilename( ev ) ;
@@ -318,12 +318,12 @@ CdFilenameStr& CdFilenameStr::setFullpathFilename( std::string ev )
 	// --------------------------------
 	//	先頭と末尾の '\\' を扱う
 	// --------------------------------
-	if ( !ev.empty() && ev[0] == '\\\\' )
+	if ( !ev.empty() && ev[0] == '\\' )
 	{
 		m_bIsRelativePath = false ;
 		ev = ev.substr( 1 ) ;
 	}
-	if ( !ev.empty() && ev[ev.size() - 1] == '\\\\' )
+	if ( !ev.empty() && ev[ev.size() - 1] == '\\' )
 	{
 		ev.erase( ev.size() - 1 ) ;
 	}
@@ -333,7 +333,7 @@ CdFilenameStr& CdFilenameStr::setFullpathFilename( std::string ev )
 	// --------------------------------
 	while ( !ev.empty() )
 	{
-		const std::string::size_type iSeparator = ev.find( '\\\\' ) ;
+		const std::string::size_type iSeparator = ev.find( '\\' ) ;
 		if ( iSeparator == std::string::npos )
 		{
 			m_contstrDir.push_back( ev ) ;
