@@ -68,7 +68,6 @@ Copyright (C) 2006-2017 take-okm
 #include "stdafx.h"
 
 
-#include "str/CStrCharSizeMb.h"
 
 #include "..\DiagramEdit.h"
 #include "CDlgRosenFileProp.h"
@@ -133,7 +132,7 @@ int CDlgRosenFileProp_Diagram::updatePropEditorData()
 	if ( iRv >= 0 )
 	{
 		if ( jikokuKitenJikoku.decode( 
-				CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)m_strEDIT_DoagramKitenJikoku ) ) ) ) < 0 )
+				stringOf( halfWidthWstringOf( std::wstring( (LPCTSTR)m_strEDIT_DoagramKitenJikoku ) ) ) ) < 0 )
 		{
 			iRv = -11 ;	//	ダイヤグラム起点時刻が不正です
 		}
