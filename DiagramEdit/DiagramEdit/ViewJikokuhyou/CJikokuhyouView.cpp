@@ -69,6 +69,7 @@ Copyright (C) 2006-2017 take-okm
 
 #include "NsOu/OuNew.h"
 #include "str/strToInt.h"
+#include "str/strToWstr.h"
 #include "DcDraw/CDcdLine.h"
 #include "DcDraw/CDcdTargetPrinter.h"
 #include "DcDraw/CDcDeviceUnitSizeX.h"
@@ -428,7 +429,7 @@ void CJikokuhyouView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			}	else	{
 				strHoukou.LoadString( IDS_WORD_Nobori ) ;
 			}
-			strText += (LPCTSTR)strHoukou ;
+			strText += stringOf( std::wstring( (LPCTSTR)strHoukou ) ) ;
 			strText += " " ;
 		}
 
@@ -544,7 +545,7 @@ void CJikokuhyouView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			string	strCaption = pdcdCaption->getText() ;
 			CString	strSono ;
 			strSono.Format( IDS_WORD_Sono , iXPage + 1 ) ;
-			strCaption += (LPCTSTR)strSono ;
+			strCaption += stringOf( std::wstring( (LPCTSTR)strSono ) ) ;
 			strCaption += " " ;
 			pdcdCaption->setText( strCaption ) ;
 		}
