@@ -73,6 +73,7 @@ Copyright (C) 2006-2017 take-okm
 
 #include "..\DiagramEdit.h"
 #include "CDlgEkijikokuProp.h"
+#include "str/strToWstr.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -113,14 +114,14 @@ void CDlgEkijikokuProp::CPropEditUiInternal::UiDataToUi( const UIDATA* pUiData )
 	//IDC_EDIT_Chakujikoku
 	{
 		CEdit* pControl = (CEdit*)( pOuter->GetDlgItem( IDC_EDIT_Chakujikoku ) ) ;
-		pControl->SetWindowText( pUiData->strChakujikoku.c_str() ) ;
+		pControl->SetWindowText( wstringOf( pUiData->strChakujikoku ).c_str() ) ;
 		pControl->EnableWindow( pUiData->bChakujikokuIsEnable ) ;
 		pControl->SetSel( 0 , -1 ) ;
 	}
 	//IDC_EDIT_Hatsujikoku
 	{
 		CEdit* pControl = (CEdit*)( pOuter->GetDlgItem( IDC_EDIT_Hatsujikoku ) ) ;
-		pControl->SetWindowText( pUiData->strHatsujikoku.c_str() ) ;
+		pControl->SetWindowText( wstringOf( pUiData->strHatsujikoku ).c_str() ) ;
 		pControl->EnableWindow( pUiData->bHatsujikokuIsEnable ) ;
 		pControl->SetSel( 0 , -1 ) ;
 	}
@@ -155,14 +156,14 @@ void  CDlgEkijikokuProp::CPropEditUiInternal::UiDataFromUi( UIDATA* pUiData )
 			CString strText ;
 			CEdit* pControl = (CEdit*)( pOuter->GetDlgItem( IDC_EDIT_Chakujikoku ) ) ;
 			pControl->GetWindowText( strText ) ;
-			pUiData->strChakujikoku = (LPCTSTR)strText ;
+			pUiData->strChakujikoku = stringOf( std::wstring( (LPCTSTR)strText ) ) ;
 		}
 		//IDC_EDIT_Hatsujikoku
 		{
 			CString strText ;
 			CEdit* pControl = (CEdit*)( pOuter->GetDlgItem( IDC_EDIT_Hatsujikoku ) ) ;
 			pControl->GetWindowText( strText ) ;
-			pUiData->strHatsujikoku = (LPCTSTR)strText ;
+			pUiData->strHatsujikoku = stringOf( std::wstring( (LPCTSTR)strText ) ) ;
 		}
 		//IDC_CHECK_MODIFYHATSUJIKOKU
 		{
@@ -218,7 +219,7 @@ void CDlgEkijikokuProp::CPropEditUiInternal::ShowError(
 			const std::string& strInfo )  
 {
 	CDlgEkijikokuProp* pOuter = (CDlgEkijikokuProp*)( (BYTE*)this - offsetof( CDlgEkijikokuProp , m_PropEditUiInternal ) ) ;
-	CString strErrorMsg = strErrorReason.c_str() ;
+	CString strErrorMsg = wstringOf( strErrorReason ).c_str() ;
 
 	if ( strErrorReason == ERRMSG_INVALID_CHAKUJIKOKU )
 	{
