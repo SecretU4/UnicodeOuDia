@@ -135,7 +135,7 @@ BOOL CDlgRosenfileInsert::OnInitDialog()
 		for ( int iEkiIndex = 0 ; iEkiIndex < m_CentDedEkiCont.size() ; iEkiIndex ++ )
 		{
 			m_wndCOMBO_EKIINDEX_TO_ADD.AddString( 
-				tstring( m_CentDedEkiCont.getMuPtr()->get( iEkiIndex )->getEkimei() ).c_str() ) ;
+				wstringOf( m_CentDedEkiCont.getMuPtr()->get( iEkiIndex )->getEkimei() ).c_str() ) ;
 		}
 		m_wndCOMBO_EKIINDEX_TO_ADD.SetCurSel( m_CentDedEkiCont.size() - 1 ) ;
 	}
