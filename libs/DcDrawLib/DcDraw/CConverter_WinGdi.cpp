@@ -70,6 +70,7 @@ Copyright (C) 2006-2017 take-okm
 #include <string.h>
 #include <tchar.h>
 #include "CConverter_WinGdi.h"
+#include "str\\strToWstr.h"
 #include "CDcDeviceUnitSizeY.h"
 #include "DcdCd\DcDrawProp\CdDrawTextProp.h"
 #include "DcdCd\DcDrawProp\CdColorProp.h"
