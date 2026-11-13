@@ -116,28 +116,6 @@ std::string cp932StringOf( const void* lpvEStr , int iESize )
 	return stringOf( cp932WstringOf( lpvEStr , iESize ) ) ;
 }
 
-bool cp932BytesFromUtf8( const std::string& strUtf8 , std::string* pstrCp932 )
-{
-	if ( pstrCp932 == NULL ) return false ;
-	pstrCp932->clear() ;
-	std::wstring wide ;
-	if ( !wstringFromUtf8( strUtf8 , &wide ) ) return false ;
-	if ( wide.empty() ) return true ;
-	if ( wide.size() > 0x7fffffff ) return false ;
-	BOOL usedDefaultChar = FALSE ;
-	int cb = WideCharToMultiByte( 932 , WC_NO_BEST_FIT_CHARS ,
-		wide.data() , (int)wide.size() , NULL , 0 , NULL ,
-		&usedDefaultChar ) ;
-	if ( cb <= 0 || usedDefaultChar ) return false ;
-	std::vector<char> bytes( cb ) ;
-	usedDefaultChar = FALSE ;
-	if ( WideCharToMultiByte( 932 , WC_NO_BEST_FIT_CHARS ,
-		wide.data() , (int)wide.size() , &bytes[0] , cb , NULL ,
-		&usedDefaultChar ) != cb || usedDefaultChar )
-		return false ;
-	pstrCp932->assign( &bytes[0] , cb ) ;
-	return true ;
-}
 
 
 std::string stringOf( const void* lpvEStr , int iESize )
