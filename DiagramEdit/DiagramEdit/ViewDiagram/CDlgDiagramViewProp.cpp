@@ -73,6 +73,7 @@ Copyright (C) 2006-2017 take-okm
 #include "..\entDed\entDed.h"
 #include "DcdCd/Pos/CLineFunc.h"
 #include "CDlgDiagramViewProp.h"
+#include "str/strToWstr.h"
 
 using namespace std ;
 
@@ -126,8 +127,8 @@ CDlgDiagramViewProp::CDlgDiagramViewProp(
 
 	if ( m_bEnableYokojiku )
 	{
-		m_strEDIT_YokojikuPos = g_CdDedJikokuConv.encode( CdDedJikoku( m_zonexyCWndDiagramZone_Dgr.getX().getPos() ) ).c_str() ;
-		m_strEDIT_YokojikuSize = g_CdDedJikanConv.encode( CdDedJikan( m_zonexyCWndDiagramZone_Dgr.getX().getSize() ) ).c_str() ;
+		m_strEDIT_YokojikuPos = wstringOf( g_CdDedJikokuConv.encode( CdDedJikoku( m_zonexyCWndDiagramZone_Dgr.getX().getPos() ) ) ).c_str() ;
+		m_strEDIT_YokojikuSize = wstringOf( g_CdDedJikanConv.encode( CdDedJikan( m_zonexyCWndDiagramZone_Dgr.getX().getSize() ) ) ).c_str() ;
 	}
 	if ( m_bEnableTatejiku )
 	{
@@ -182,7 +183,7 @@ void CDlgDiagramViewProp::OnOK()
 		if ( iRv >= 0 )
 		{
 			if ( jikokuYokojikuPos.decode( 
-				CStrCharSizeMb::strToSingleByte( (LPCTSTR)m_strEDIT_YokojikuPos ) 
+				CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)m_strEDIT_YokojikuPos ) ) ) 
 				) < 0 )
 			{
 				iRv = -1 ;	//	横軸表示範囲の起点が、時刻として解釈できません。
@@ -191,7 +192,7 @@ void CDlgDiagramViewProp::OnOK()
 		if ( iRv >= 0 )
 		{
 			if ( jikanYokojikuSize.decode( 
-				CStrCharSizeMb::strToSingleByte( (LPCTSTR)m_strEDIT_YokojikuSize ) 
+				CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)m_strEDIT_YokojikuSize ) ) ) 
 				) < 0 )
 			{
 				iRv = -2 ;	//	横軸表示範囲が、時間として解釈できません。
@@ -300,7 +301,7 @@ void CDlgDiagramViewProp::OnOK()
 				string	strJikoku = g_CdDedJikokuConv.encode( CdDedJikoku( m_zonexyCentDedDiaZone_Dgr.getX().getPos() ) ) ;
 				CString	strFmt ;
 				GetDlgItem(IDC_ERR_4)->GetWindowText( strFmt ) ;
-				strError.Format( strFmt , strJikoku.c_str() ) ;
+				strError.Format( strFmt , wstringOf( strJikoku ).c_str() ) ;
 			}
 			break ;
 		 case -6 :	
