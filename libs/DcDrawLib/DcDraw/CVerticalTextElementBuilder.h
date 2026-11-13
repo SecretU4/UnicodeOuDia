@@ -100,7 +100,7 @@ protected:
 	@return
 		- true: aStr は 空白(全角・半角)です。
 	*/
-	static bool isSpace( const string& aStr );
+	static bool isSpace( const std::wstring& aStr );
 
 	/**
 		文字が句読点類( , . 、。)か否かを判断します。
@@ -109,7 +109,7 @@ protected:
 	@return
 		- true: aStr は 句読点です。
 	*/
-	static bool isDelimiter( const string& aStr );
+	static bool isDelimiter( const std::wstring& aStr );
 	///@}
 public:
 	// ********************************
@@ -170,7 +170,7 @@ public:
 	  	終わるものとします。
 	 */
 	static void scan( 
-		const std::string& aStr , 
+		const std::wstring& aStr , 
 		Mui<CVerticalTextElement>* muCVerticalTextElement ,
 		bool bTwoDegiLateral = true ) ;
 
