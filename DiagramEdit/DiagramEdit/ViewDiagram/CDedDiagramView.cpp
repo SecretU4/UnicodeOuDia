@@ -1729,7 +1729,7 @@ void CDedDiagramView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			string	strCaption = pdcdCaption->getText() ;
 			CString	strSono ;
 			strSono.Format( IDS_WORD_Sono , iXPage + 1 ) ;
-			strCaption += (LPCTSTR)strSono ;
+			strCaption += stringOf( std::wstring( (LPCTSTR)strSono ) ) ;
 			strCaption += " " ;
 			pdcdCaption->setText( strCaption ) ;
 		}
