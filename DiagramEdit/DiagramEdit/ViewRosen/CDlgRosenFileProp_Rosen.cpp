@@ -71,6 +71,7 @@ Copyright (C) 2006-2017 take-okm
 #include "..\DiagramEdit.h"
 #include "CDlgRosenFileProp.h"
 #include "CDlgRosenFileProp_Rosen.h"
+#include "str/strToWstr.h"
 
 
 #ifdef _DEBUG
@@ -97,7 +98,7 @@ void CDlgRosenFileProp_Rosen::updateUI()
 	CDlgRosenFileProp::CPropEditorData*	pPropEditorData = GetParent()->getPropEditorData() ;	
 	// --------------------------------
 	m_strEDIT_RosenName 
-		= pPropEditorData->getUIRosenName().c_str()  ;	
+		= wstringOf( pPropEditorData->getUIRosenName() ).c_str()  ;	
 	m_iEDIT_EkimeiLength 
 		= pPropEditorData->getUIDispProp().getEkimeiLength()  ;	
 	m_iEDIT_JikokuhyouRessyaWidth 
@@ -116,7 +117,7 @@ int CDlgRosenFileProp_Rosen::updatePropEditorData()
 	{
 		CString	aString ;
 		GetDlgItemText( IDC_EDIT_EkimeiLength , aString ) ;
-		aString = CStrCharSizeMb::strToSingleByte( (LPCTSTR)aString ).c_str() ;
+		aString = wstringOf( CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)aString ) ) ) ).c_str() ;
 		SetDlgItemText( IDC_EDIT_EkimeiLength , aString ) ;
 		GetDlgItemText( IDC_EDIT_JikokuhyouRessyaWidth , aString ) ;
 		aString = CStrCharSizeMb::strToSingleByte( (LPCTSTR)aString ).c_str() ;
@@ -129,7 +130,7 @@ int CDlgRosenFileProp_Rosen::updatePropEditorData()
 	}
 	if ( iRv >= 0 )
 	{
-		pPropEditorData->setUIRosenName( (LPCTSTR)m_strEDIT_RosenName ) ;
+		pPropEditorData->setUIRosenName( stringOf( std::wstring( (LPCTSTR)m_strEDIT_RosenName ) ) ) ;
 		{
 			CdDedDispProp	aDispProp = pPropEditorData->getUIDispProp() ;
 			aDispProp.setEkimeiLength( m_iEDIT_EkimeiLength ) ;
