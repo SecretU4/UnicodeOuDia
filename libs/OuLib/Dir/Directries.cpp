@@ -275,142 +275,128 @@ int findFile( const string& strSearch ,
 // ****************************************************************
 //@name ディレクトリ作成
 // ****************************************************************
-int mkdirs( const std::string& strDir ) 
+int mkdirs( const std::string& strDir )
 {
 	int iRv = 0 ;
-	CdFilenameStr	aCdFilenameStr( strDir , false ) ;
-	//fnSearch = 検索パス文字列です。
-	//例："c:\tiny\u*"
-
-	CdFilenameStr	aCdFilenameStrCurr = aCdFilenameStr ;
+	CdFilenameStr aCdFilenameStr( strDir , false ) ;
+	CdFilenameStr aCdFilenameStrCurr = aCdFilenameStr ;
 	aCdFilenameStrCurr.setDirs( CdFilenameStr::ContstrDir() ) ;
 
-	for ( int iDirCount = 1 ; 
-		iRv >= 0 && iDirCount <= aCdFilenameStr.DirCount() ;  
+	for ( int iDirCount = 1 ;
+		iRv >= 0 && iDirCount <= aCdFilenameStr.DirCount() ;
 		iDirCount ++ )
 	{
 		aCdFilenameStrCurr.addDirLast( aCdFilenameStr.DirAt( iDirCount - 1 ) ) ;
-		std::string strDirCurr = aCdFilenameStrCurr.FullpathFilename() ;
+		const std::wstring strDirCurr = wstringOf(
+			aCdFilenameStrCurr.FullpathFilename() ) ;
 
-
-		struct _finddata_t aFinddata ;
-		intptr_t fHandle = _findfirst(
-			strDirCurr.c_str() , 
-			&aFinddata ) ;
+		struct _wfinddata_t aFinddata ;
+		intptr_t fHandle = _wfindfirst( strDirCurr.c_str() , &aFinddata ) ;
 		if ( fHandle == -1 )
 		{
-			//	ディレクトリが見つかりませんでした。
-			int iResult = _mkdir( strDirCurr.c_str() ) ;
+			int iResult = _wmkdir( strDirCurr.c_str() ) ;
 			if ( iResult != 0 )
 			{
-				iRv = -1 ;	//	ディレクトリの作成に失敗しました。
+				iRv = -1 ;
 			}
 			else
 			{
-				iRv = 1 ;	//	ディレクトリの作成に成功しました。
+				iRv = 1 ;
 			}
+		}
+		else
+		{
 			_findclose( fHandle ) ;
 		}
 	}
-
 	return ( iRv ) ;
 }
 
 
 
-int rmempdir( const std::string& strDir , FILE* pErrorStream ) 
-{ 
-	//	処理が成功している間は0以上、エラーなら負の数となります 
-	int iRv = 0 ; 
+int rmempdir( const std::string& strDir , FILE* pErrorStream )
+{
+	int iRv = 0 ;
 
 	if ( pErrorStream != NULL )
 	{
-		fprintf( pErrorStream , "rmempdir(%s)\n" , strDir.c_str() ) ; 
+		fprintf( pErrorStream , "rmempdir(%s)\\n" , strDir.c_str() ) ;
 	}
 
-	// -------------------------------- 
-	//	strDir のサブディレクトリの削除を試行 
-	// -------------------------------- 
-	if ( iRv >= 0 ) 
-	{ 
-	   struct _finddata_t c_file; 
-	   intptr_t hFile; 
-
-	   // Find first .c file in current directory 
-	   if( (hFile = _findfirst( ( strDir + "\\*" ).c_str() , 
-		   &c_file )) == -1L ) 
-	   { 
-	   } 
-	   else 
-	   { 
-		   do { 
-			   if ( c_file.attrib & _A_SUBDIR ) 
-			   { 
-				   string strFound = c_file.name ; 
-				   if ( strFound != "." && strFound != ".." ) 
-				   { 
-					    int iResult = rmempdir( strDir + "\\" + strFound , pErrorStream ) ; 
-						if ( iRv >= 0 ) 
-					    { 
-							if ( iResult == -1 ) 
-							{ 
-								iRv = -3 ;	//	サブディレクトリの削除に失敗しました。 
-							} 
-							else 
-							{ 
-								iRv = iResult ; 
-							} 
-					    } 
-				   } 
-			   } 
-			   else 
-			   { 
-				    //	普通のファイルが見つかりました。 
-				    //	このディレクトリは削除できません。 
-					if ( iRv >= 0 ) 
-				    { 
-						if ( pErrorStream != NULL )
+	if ( iRv >= 0 )
+	{
+		const std::wstring strDirWide = wstringOf( strDir ) ;
+		const std::wstring strSearch = strDirWide + L"\\\\*" ;
+		struct _wfinddata_t c_file ;
+		intptr_t hFile = _wfindfirst( strSearch.c_str() , &c_file ) ;
+		if ( hFile != -1L )
+		{
+			do
+			{
+				if ( c_file.attrib & _A_SUBDIR )
+				{
+					const std::wstring strFoundWide( c_file.name ) ;
+					if ( strFoundWide != L"." && strFoundWide != L".." )
+					{
+						const std::string strFound = stringOf( strFoundWide ) ;
+						int iResult = rmempdir( strDir + "\\\\" + strFound , pErrorStream ) ;
+						if ( iRv >= 0 )
 						{
-							fprintf( pErrorStream , "\tこのディレクトリにはファイルがあります。(%s)\n" , 
-								c_file.name ) ; 
+							if ( iResult == -1 )
+							{
+								iRv = -3 ;
+							}
+							else
+							{
+								iRv = iResult ;
+							}
 						}
-						iRv = -2 ;	//	このディレクトリにはファイルがあります。 
-					} 
-			   } 
-		   } while( _findnext( hFile, &c_file ) == 0 ); 
-		  _findclose( hFile ); 
-	   } 
-	} 
-	// -------------------------------- 
-	//	strDir が空なら、このディレクトリの削除を試行 
-	// -------------------------------- 
-	if ( iRv >= 0 ) 
-	{ 
-		if ( _rmdir( strDir.c_str() )!= 0 ) 
-		{ 
+					}
+				}
+				else if ( iRv >= 0 )
+				{
+					if ( pErrorStream != NULL )
+					{
+						const std::string strFound = stringOf( std::wstring( c_file.name ) ) ;
+						fprintf( pErrorStream ,
+							"\\tこのディレクトリにはファイルがあります。(%s)\\n" ,
+							strFound.c_str() ) ;
+					}
+					iRv = -2 ;
+				}
+			}
+			while ( _wfindnext( hFile , &c_file ) == 0 ) ;
+			_findclose( hFile ) ;
+		}
+	}
+
+	if ( iRv >= 0 )
+	{
+		const std::wstring strDirWide = wstringOf( strDir ) ;
+		if ( _wrmdir( strDirWide.c_str() ) != 0 )
+		{
 			if ( pErrorStream != NULL )
 			{
-				fprintf( pErrorStream , "\tディレクトリ %s の削除に失敗しました。\n" , 
-					strDir.c_str() ) ; 
+				fprintf( pErrorStream ,
+					"\\tディレクトリ %s の削除に失敗しました。\\n" ,
+					strDir.c_str() ) ;
 			}
-			iRv = -1 ;	//	strDirの削除に失敗しました。 
-		} 
-		else 
-		{ 
-			if ( pErrorStream != NULL )
-			{
-				fprintf( pErrorStream , "\tディレクトリ %s を削除\n" , 
-					strDir.c_str()  ) ; 
-			}
-		} 
-	} 
+			iRv = -1 ;
+		}
+		else if ( pErrorStream != NULL )
+		{
+			fprintf( pErrorStream , "\\tディレクトリ %s を削除\\n" ,
+				strDir.c_str() ) ;
+		}
+	}
 
 	if ( pErrorStream != NULL )
 	{
-		fprintf( pErrorStream , "rmempdir(%s)=%d\n" , strDir.c_str() , iRv ) ; 
+		fprintf( pErrorStream , "rmempdir(%s)=%d\\n" , strDir.c_str() , iRv ) ;
 	}
-	return ( iRv ) ; 
-} 
+	return ( iRv ) ;
+}
+
 
 
 } //namespace Dir{
