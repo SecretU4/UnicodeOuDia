@@ -1595,9 +1595,10 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 				}
 				break ;
 
-				 case -4 :
+				case -4 :
 					strError = _T( "Encoding selection was cancelled." ) ;
-					break ;			}
+					break ;
+			}
 			//iRv = 
 			//	-1: ファイルがオープンできません。
 			//	-2 ; 読み込みに失敗しました。
