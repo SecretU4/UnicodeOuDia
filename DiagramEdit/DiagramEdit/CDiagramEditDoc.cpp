@@ -157,6 +157,114 @@ static bool utf8OfCp932Bytes(
 	return utf8Of( std::wstring( &wide[0] , cch ) , utf8 ) ;
 }
 
+// A current-format .oud file must be decoded as UTF-8 or CP932 before
+// model validation. FileTypeAppComment is shown as a hint, not trusted as
+// an encoding declaration: old and Unicode builds can share a version number.
+static bool isValidCurrentOudText( const std::string& text )
+{
+	CconvCDedRosenFileData conv ;
+	if ( conv.isEncodeAbleFormat( text ) < 0 ) return false ;
+	CDedRosenFileData data ;
+	COuErrorInfoContainer errors ;
+	return conv.CDedRosenFileData_from_string( &data , text , &errors ) >= 0 ;
+}
+
+// Returns UTF-8 text. Legacy FileType values are kept on the CP932 path for
+// the historical conversion DLLs. Current-format BOM-less files are tested
+// in both encodings; if both parse, the user chooses rather than risking
+// silent mojibake.
+static int utf8TextOfOudFileBytes(
+	const std::string& rawBytes , std::string* utf8Text )
+{
+	if ( utf8Text == NULL ) return -3 ;
+	utf8Text->clear() ;
+	if ( rawBytes.find( '\\0' ) != std::string::npos ) return -3 ;
+
+	std::string content = rawBytes ;
+	const bool hasUtf8Bom = content.size() >= 3 &&
+		(unsigned char)content[0] == 0xef &&
+		(unsigned char)content[1] == 0xbb &&
+		(unsigned char)content[2] == 0xbf ;
+	if ( hasUtf8Bom )
+	{
+		content.erase( 0 , 3 ) ;
+		std::wstring wide ;
+		if ( !wstringFromUtf8( content , &wide ) ) return -3 ;
+		*utf8Text = content ;
+		return 0 ;
+	}
+
+	// The OuPropertiesText syntax and metadata keys are ASCII. Decoding this
+	// structural layer from raw bytes is safe for both UTF-8 and CP932 payloads.
+	CNodeContainer metadata ;
+	CConvNodeContainer metadataDecoder ;
+	const bool hasMetadata = metadataDecoder.decode( content , &metadata ) >= 0 ;
+	const std::string fileType = hasMetadata ? metadata.getValue( "FileType" ) : std::string() ;
+
+	if ( fileType != "OuDia.1.02" )
+	{
+		// Older formats are passed to the legacy CP932 conversion DLL chain.
+		return utf8OfCp932Bytes( content , utf8Text ) ? 0 : -3 ;
+	}
+
+	std::string utf8Candidate ;
+	std::wstring wideCandidate ;
+	const bool utf8Decodes = wstringFromUtf8( content , &wideCandidate ) ;
+	if ( utf8Decodes ) utf8Candidate = content ;
+	const bool utf8Parses = utf8Decodes && isValidCurrentOudText( utf8Candidate ) ;
+
+	std::string cp932Candidate ;
+	const bool cp932Decodes = utf8OfCp932Bytes( content , &cp932Candidate ) ;
+	const bool cp932Parses = cp932Decodes && isValidCurrentOudText( cp932Candidate ) ;
+
+	if ( utf8Parses && !cp932Parses )
+	{
+		*utf8Text = utf8Candidate ;
+		return 0 ;
+	}
+	if ( cp932Parses && !utf8Parses )
+	{
+		*utf8Text = cp932Candidate ;
+		return 0 ;
+	}
+	if ( !utf8Parses && !cp932Parses ) return -3 ;
+
+	// Both interpretations produce a structurally valid OuDia document.
+	// The save-comment version is not a reliable discriminator by itself.
+	const std::string appComment = metadata.getValue( "FileTypeAppComment" ) ;
+	std::wstring commentWide ;
+	for ( std::string::const_iterator it = appComment.begin() ;
+		it != appComment.end() ; ++it )
+	{
+		const unsigned char ch = (unsigned char)*it ;
+		commentWide += ( ch >= 0x20 && ch < 0x7f ) ? (wchar_t)ch : L'?' ;
+	}
+	CString prompt ;
+	if ( commentWide.empty() )
+	{
+		prompt = _T( "This .oud file has no UTF-8 BOM and is valid as both UTF-8 and CP932.\\n\\n"
+			"Yes: open as UTF-8\\nNo: open as CP932\\nCancel: do not open" ) ;
+	}
+	else
+	{
+		prompt.Format( _T( "This .oud file has no UTF-8 BOM and is valid as both UTF-8 and CP932.\\n"
+			"Last saved by: %s\\n\\nYes: open as UTF-8\\nNo: open as CP932\\nCancel: do not open" ) ,
+			commentWide.c_str() ) ;
+	}
+	const int choice = AfxMessageBox( prompt , MB_YESNOCANCEL | MB_ICONQUESTION ) ;
+	if ( choice == IDYES )
+	{
+		*utf8Text = utf8Candidate ;
+		return 0 ;
+	}
+	if ( choice == IDNO )
+	{
+		*utf8Text = cp932Candidate ;
+		return 0 ;
+	}
+	return -4 ;
+}
+
 // --------------------------------
 //@name	下請関数-WinDia形式
 // --------------------------------
@@ -1449,7 +1557,12 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 	string	strFile ;
 	if ( iRv >= 0 )
 	{
-		int iResult = stringFromFileUtf8( &strFile , std::wstring( lpszPathName ) ) ;
+		std::string rawFileBytes ;
+		int iResult = stringFromFile( &rawFileBytes , std::wstring( lpszPathName ) ) ;
+		if ( iResult >= 0 )
+		{
+			iResult = utf8TextOfOudFileBytes( rawFileBytes , &strFile ) ;
+		}
 		//iResult = 
 		//	-1: ファイルがオープンできません。
 		//	-2 ; 読み込みに失敗しました。
@@ -1481,7 +1594,10 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
-			}
+
+				 case -4 :
+					strError = _T( "Encoding selection was cancelled." ) ;
+					break ;			}
 			//iRv = 
 			//	-1: ファイルがオープンできません。
 			//	-2 ; 読み込みに失敗しました。
