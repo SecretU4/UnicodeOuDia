@@ -69,7 +69,6 @@ Copyright (C) 2006-2017 take-okm
 
 #include "str/tstring.h"
 #include "str/strToWstr.h"
-#include "str/CStrCharSizeMb.h"
 
 #include "..\DiagramEdit.h"
 #include "CDlgJikokuhyouViewProp.h"
@@ -134,8 +133,7 @@ void CDlgJikokuhyouViewProp::OnOK()
 		CWnd* pCWnd = GetDlgItem( IDC_EDIT_PasteZoubun ) ;
 		CString	strLs ;
 		pCWnd->GetWindowText( strLs ) ;
-		strLs = tstringOf( 
-			CStrCharSizeMb::strToSingleByte( stringOf( std::wstring( (LPCTSTR)strLs ) ) ) ).c_str();
+		strLs = halfWidthWstringOf( std::wstring( (LPCTSTR)strLs ) ).c_str();
 		if ( strLs.IsEmpty() )
 		{
 			strLs = _T( "0" ) ;
