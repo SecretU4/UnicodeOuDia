@@ -419,7 +419,7 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 		//ページ番号を決定
 		{
 			string	strPage = stringOf( iPage + 1) ;
-			pdcdPage->setText( strPage ) ;
+			pdcdPage->setText( wstringOf( strPage ) ) ;
 		}
 	}
 	// --------------------------------
