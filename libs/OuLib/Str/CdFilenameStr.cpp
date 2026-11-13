@@ -69,7 +69,6 @@ Copyright (C) 2006-2017 take-okm
 */
 #include "Str\CdFilenameStr.h"
 #include "Str\strToWstr.h"
-#include "Str\CStrCharSizeMb.h"
 
 namespace OuLib {
 namespace Str {
