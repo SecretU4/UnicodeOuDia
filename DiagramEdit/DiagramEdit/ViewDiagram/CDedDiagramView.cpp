@@ -76,6 +76,7 @@ Copyright (C) 2006-2017 take-okm
 #include "DcDrawMfc/CDcdTargetMfcPrintInfo.h"
 #include "DcDraw/print/CaDcdTargetZoomDisplay.h"
 #include "str/strToInt.h"
+#include "str/strToWstr.h"
 
 #include "..\diagramedit.h"
 #include "..\entDed\CentDedRosen.h"
