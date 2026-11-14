@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 #include "MfcUtil\MfcUtil.h"
 #include "str\CsvDocument\CdCsvDocument.h"
 #include "str\CsvDocument\CconvCsvDocument.h"
@@ -126,7 +127,6 @@ END_MESSAGE_MAP()
 BOOL CDlgOuJikokuhyouCsvExport::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
-	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	
 	// --------------------------------
 	int iRv = 0 ;
@@ -149,6 +149,7 @@ BOOL CDlgOuJikokuhyouCsvExport::OnInitDialog()
 	
 	// --------------------------------
 	
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
 	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
