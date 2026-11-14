@@ -251,6 +251,7 @@ protected:  // コントロール バー用メンバ
 protected:
 	//{{AFX_MSG(CMainFrame)
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg void OnInitMenuPopup(CMenu* pPopupMenu, UINT nIndex, BOOL bSysMenu);
 	afx_msg void OnFileRosenfileInsert();
 	afx_msg void OnUpdateFileRosenfileInsert(CCmdUI *pCmdUI);
 	afx_msg void OnFileRosenCreateSubRosen();

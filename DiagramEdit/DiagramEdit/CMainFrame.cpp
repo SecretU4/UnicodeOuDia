@@ -97,6 +97,131 @@ using namespace OuLib::Str::OuPropertiesText::ErrorInfo ;
 static char THIS_FILE[] = __FILE__;
 #endif
 
+
+namespace
+{
+    std::wstring LocalizedMenuText(
+        CLocalizationManager& localization,
+        const wchar_t* key,
+        const wchar_t* fallback)
+    {
+        return localization.GetText(key, fallback);
+    }
+
+    bool GetPopupMenuTranslation(
+        CLocalizationManager& localization,
+        const std::wstring& currentText,
+        std::wstring* translatedText)
+    {
+        struct PopupTranslation
+        {
+            const wchar_t* key;
+            const wchar_t* japanese;
+        };
+        static const PopupTranslation translations[] =
+        {
+            { L"Menu.File", L"ﾌｧｲﾙ(&F)" },
+            { L"Menu.Edit", L"編集(&E)" },
+            { L"Menu.View", L"表示(&V)" },
+            { L"Menu.Window", L"ｳｨﾝﾄﾞｳ(&W)" },
+            { L"Menu.Help", L"ﾍﾙﾌﾟ(&H)" },
+            { L"Menu.DisplayLanguage", L"表示言語(&L)" }
+        };
+
+        for (size_t i = 0; i < sizeof(translations) / sizeof(translations[0]); ++i)
+        {
+            const std::wstring translated = localization.GetText(
+                translations[i].key, translations[i].japanese);
+            if (currentText == translations[i].japanese ||
+                currentText == translated)
+            {
+                *translatedText = translated;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool GetCommandMenuTranslation(
+        CLocalizationManager& localization,
+        UINT commandId,
+        std::wstring* translatedText)
+    {
+        const wchar_t* key = NULL;
+        const wchar_t* fallback = NULL;
+        switch (commandId)
+        {
+        case ID_FILE_NEW: key = L"Menu.New"; fallback = L"新規作成(&N)"; break;
+        case ID_FILE_OPEN: key = L"Menu.Open"; fallback = L"開く(&O)..."; break;
+        case ID_FILE_CLOSE: key = L"Menu.Close"; fallback = L"閉じる(&C)"; break;
+        case ID_FILE_SAVE: key = L"Menu.Save"; fallback = L"上書き保存(&S)"; break;
+        case ID_FILE_SAVE_AS: key = L"Menu.SaveAs"; fallback = L"名前を付けて保存(&A)..."; break;
+        case ID_FILE_PRINT: key = L"Menu.Print"; fallback = L"印刷(&P)..."; break;
+        case ID_FILE_PRINT_PREVIEW: key = L"Menu.PrintPreview"; fallback = L"印刷ﾌﾟﾚﾋﾞｭｰ(&V)"; break;
+        case ID_FILE_PRINT_SETUP: key = L"Menu.PrintSetup"; fallback = L"ﾌﾟﾘﾝﾀの設定(&R)..."; break;
+        case ID_APP_EXIT: key = L"Menu.Exit"; fallback = L"ｱﾌﾟﾘｹｰｼｮﾝの終了(&X)"; break;
+        case ID_EDIT_UNDO: key = L"Menu.Undo"; fallback = L"元に戻す(&U)"; break;
+        case ID_EDIT_REDO: key = L"Menu.Redo"; fallback = L"やり直し(&R)"; break;
+        case ID_EDIT_CUT: key = L"Menu.Cut"; fallback = L"切り取り(&T)"; break;
+        case ID_EDIT_COPY: key = L"Menu.Copy"; fallback = L"ｺﾋﾟｰ(&C)"; break;
+        case ID_EDIT_PASTE: key = L"Menu.Paste"; fallback = L"貼り付け(&P)"; break;
+        case ID_EDIT_CLEAR: key = L"Menu.Clear"; fallback = L"消去"; break;
+        case ID_VIEW_TOOLBAR: key = L"Menu.ToolBar"; fallback = L"ﾂｰﾙ ﾊﾞｰ(&T)"; break;
+        case ID_VIEW_STATUS_BAR: key = L"Menu.StatusBar"; fallback = L"ｽﾃｰﾀｽ ﾊﾞｰ(&S)"; break;
+        case ID_APP_ABOUT: key = L"Menu.About"; fallback = L"OuDia のﾊﾞｰｼﾞｮﾝ情報(&A)..."; break;
+        case ID_HELP: key = L"Menu.HelpContents"; fallback = L"目次..."; break;
+        case ID_LANGUAGE_JAPANESE: key = L"Settings.LanguageJapanese"; fallback = L"日本語"; break;
+        case ID_LANGUAGE_ENGLISH: key = L"Settings.LanguageEnglish"; fallback = L"英語"; break;
+        case ID_LANGUAGE_KOREAN: key = L"Settings.LanguageKorean"; fallback = L"韓国語"; break;
+        default: return false;
+        }
+        *translatedText = localization.GetText(key, fallback);
+        return true;
+    }
+
+    void LocalizeMenuTree(HMENU menu, CLocalizationManager& localization)
+    {
+        if (menu == NULL)
+        {
+            return;
+        }
+
+        const int itemCount = GetMenuItemCount(menu);
+        for (int i = 0; i < itemCount; ++i)
+        {
+            wchar_t textBuffer[512] = {};
+            MENUITEMINFOW itemInfo = {};
+            itemInfo.cbSize = sizeof(itemInfo);
+            itemInfo.fMask = MIIM_FTYPE | MIIM_ID | MIIM_SUBMENU | MIIM_STRING;
+            itemInfo.dwTypeData = textBuffer;
+            itemInfo.cch = static_cast<UINT>(sizeof(textBuffer) / sizeof(textBuffer[0]) - 1);
+            if (!GetMenuItemInfoW(menu, static_cast<UINT>(i), TRUE, &itemInfo))
+            {
+                continue;
+            }
+
+            if (itemInfo.hSubMenu != NULL)
+            {
+                LocalizeMenuTree(itemInfo.hSubMenu, localization);
+            }
+
+            std::wstring translated;
+            const std::wstring currentText(textBuffer);
+            const bool hasTranslation = itemInfo.hSubMenu != NULL
+                ? GetPopupMenuTranslation(localization, currentText, &translated)
+                : GetCommandMenuTranslation(localization, itemInfo.wID, &translated);
+            if (hasTranslation && translated != currentText)
+            {
+                MENUITEMINFOW updateInfo = {};
+                updateInfo.cbSize = sizeof(updateInfo);
+                updateInfo.fMask = MIIM_STRING;
+                updateInfo.dwTypeData = const_cast<LPWSTR>(translated.c_str());
+                SetMenuItemInfoW(menu, static_cast<UINT>(i), TRUE, &updateInfo);
+            }
+        }
+    }
+}
+
 /////////////////////////////////////////////////////////////////////////////
 // CMainFrame
 // --------------------------------
@@ -490,6 +615,7 @@ IMPLEMENT_DYNAMIC(CMainFrame, CHidemdiMainfrm)
 BEGIN_MESSAGE_MAP(CMainFrame, CHidemdiMainfrm)
 	//{{AFX_MSG_MAP(CMainFrame)
 	ON_WM_CREATE()
+	ON_WM_INITMENUPOPUP()
 	ON_COMMAND(ID_ROSEN_FILE_PROP, OnRosenFileProp)
 	ON_COMMAND(ID_WINDOW_ROSEN_VIEW, OnWindowRosenView)
 	ON_COMMAND(ID_ROSEN_DIALIST, OnRosenDialist)
@@ -523,6 +649,19 @@ CMainFrame::CMainFrame()
 
 CMainFrame::~CMainFrame()
 {
+}
+
+
+void CMainFrame::OnInitMenuPopup(CMenu* pPopupMenu, UINT nIndex, BOOL bSysMenu)
+{
+	CHidemdiMainfrm::OnInitMenuPopup(pPopupMenu, nIndex, bSysMenu);
+
+	CMenu* pMenu = GetMenu();
+	CDiagramEditApp* pApp = static_cast<CDiagramEditApp*>(AfxGetApp());
+	if (pMenu != NULL && pApp != NULL)
+	{
+		LocalizeMenuTree(pMenu->GetSafeHmenu(), pApp->getLocalizationManager());
+	}
 }
 
 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
