@@ -102,6 +102,9 @@
     <ClCompile Include="CRfEditCmdHolder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LocalizationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="DiagramEdit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -455,6 +458,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CRfEditCmdHolder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalizationManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DiagramEdit.h">
@@ -875,6 +881,9 @@
     <None Include="res\DiagramEdit.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="Languages\\ja.ini" />
+    <None Include="Languages\\en.ini" />
+    <None Include="Languages\\ko.ini" />
     <None Include="ClassDiagram1.cd" />
     <None Include="DiagramEdit.reg" />
   </ItemGroup>

@@ -78,6 +78,7 @@ Copyright (C) 2006-2017 take-okm
 #endif
 
 #include "resource.h"       // メイン シンボル
+#include "LocalizationManager.h"
 
 #include "CMainFrame.h"
 #include "CDiagramEditDoc.h"

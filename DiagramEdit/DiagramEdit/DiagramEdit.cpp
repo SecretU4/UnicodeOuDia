@@ -1095,6 +1095,23 @@ BOOL CDiagramEditApp::InitInstance()
 	LoadStdProfileSettings();  // 標準の INI ファイルのオプションをローﾄﾞします (MRU を含む)
 
 	// --------------------------------
+	//	表示言語の読み込み
+	// --------------------------------
+	{
+		CString strLanguageCode = GetProfileString(
+			nameSection, _T("Language"), _T("ja"));
+		CString strLanguageFilename = _T("Languages\\");
+		strLanguageFilename += strLanguageCode;
+		strLanguageFilename += _T(".ini");
+
+		// 言語ファイルは UTF-8 で保存し、Windows のファイル API には
+		// UTF-16 のパスを渡します。
+		m_localizationManager.Load(
+			std::wstring((LPCTSTR)makeProgramDirFilename(strLanguageFilename)),
+			stringOf(std::wstring((LPCTSTR)strLanguageCode)));
+	}
+
+	// --------------------------------
 	//	.Iniファイルの読み込み
 	// --------------------------------
 	{

@@ -252,6 +252,7 @@ if exist "$(ProjectDir)$(Configuration)\*.chm" copy /Y "$(ProjectDir)$(Configura
     <ClCompile Include="DedRosenFileData\EditCmd\CRfEditCmd_Rosen.cpp" />
     <ClCompile Include="DedRosenFileData\EditCmd\CRfEditCmd_RosenFileData.cpp" />
     <ClCompile Include="DiagramEdit.cpp" />
+    <ClCompile Include="LocalizationManager.cpp" />
     <ClCompile Include="entDed\CconvCentDed.cpp" />
     <ClCompile Include="entDed\CdDedJikan.cpp" />
     <ClCompile Include="entDed\CdDedJikoku.cpp" />
@@ -400,6 +401,7 @@ if exist "$(ProjectDir)$(Configuration)\*.chm" copy /Y "$(ProjectDir)$(Configura
     <ClInclude Include="DedRosenFileData\EditCmd\CRfEditCmd_Rosen.h" />
     <ClInclude Include="DedRosenFileData\EditCmd\CRfEditCmd_RosenFileData.h" />
     <ClInclude Include="DiagramEdit.h" />
+    <ClInclude Include="LocalizationManager.h" />
     <ClInclude Include="entDed\CconvCentDed.h" />
     <ClInclude Include="entDed\CdDedJikan.h" />
     <ClInclude Include="entDed\CdDedJikoku.h" />
@@ -523,6 +525,9 @@ if exist "$(ProjectDir)$(Configuration)\*.chm" copy /Y "$(ProjectDir)$(Configura
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Languages\\ja.ini"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Include="Languages\\en.ini"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Include="Languages\\ko.ini"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
     <None Include="DiagramEdit.reg" />
     <None Include="res\DiagramEdit.rc2" />
   </ItemGroup>
