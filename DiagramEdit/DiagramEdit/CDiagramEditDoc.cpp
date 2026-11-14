@@ -630,7 +630,7 @@ const CDedRosenFileData*	CDiagramEditDoc::getCDedRosenFileData()const
 
 UINT CDiagramEditDoc::getCF_CentDedEki()
 {
-	return RegisterClipboardFormat( "CF_CentDedEki_UTF8" ) ;
+	return RegisterClipboardFormat( _T("CF_CentDedEki_UTF8") ) ;
 } ;
 
 /**
@@ -934,7 +934,7 @@ bool CDiagramEditDoc::CentDedEki_IsClipboardFormatAvailable()
 
 UINT CDiagramEditDoc::getCF_CentDedRessyasyubetsu()
 {
-	return RegisterClipboardFormat( "CF_CentDedRessyasyubetsu_UTF8" ) ;
+	return RegisterClipboardFormat( _T("CF_CentDedRessyasyubetsu_UTF8") ) ;
 } ;
 
 int CDiagramEditDoc::CentDedRessyasyubetsu_To_Cliboard( 
@@ -1080,7 +1080,7 @@ bool CDiagramEditDoc::CentDedRessyasyubetsu_IsClipboardFormatAvailable()
 
 UINT CDiagramEditDoc::getCF_CentDedRessyaCont() 
 {
-	return RegisterClipboardFormat( "CF_CentDedRessyaCont_UTF8" ) ;
+	return RegisterClipboardFormat( _T("CF_CentDedRessyaCont_UTF8") ) ;
 }
 
 int CDiagramEditDoc::CentDedRessyaCont_To_Cliboard( 
