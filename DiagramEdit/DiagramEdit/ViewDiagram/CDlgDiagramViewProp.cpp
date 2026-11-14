@@ -339,19 +339,20 @@ BOOL CDlgDiagramViewProp::OnInitDialog()
 	{
 		CComboBox* pCombo = (CComboBox*)GetDlgItem( IDC_COMBO_Jikanmemori );
 		const wchar_t* pszItems[] = {
-			L"1\\x5206\\x76ee",
-			L"2\\x5206\\x76ee",
-			L"5\\x5206\\x76ee",
-			L"10\\x5206\\x76ee",
-			L"15\\x5206\\x76ee",
-			L"20\\x5206\\x76ee",
-			L"30\\x5206\\x76ee",
-			L"60\\x5206\\x76ee"
+			L"1\x5206\x76ee",
+			L"2\x5206\x76ee",
+			L"5\x5206\x76ee",
+			L"10\x5206\x76ee",
+			L"15\x5206\x76ee",
+			L"20\x5206\x76ee",
+			L"30\x5206\x76ee",
+			L"60\x5206\x76ee"
 		};
 		if ( pCombo != NULL )
 		{
 			pCombo->ResetContent();
 			for ( int i = 0; i < 8; ++i ) pCombo->AddString( pszItems[i] );
+			pCombo->SetCurSel( m_iCOMBO_Jikanmemori );
 		}
 	}
 	
