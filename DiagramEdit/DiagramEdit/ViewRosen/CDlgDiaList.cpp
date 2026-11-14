@@ -275,6 +275,7 @@ END_MESSAGE_MAP()
 BOOL CDlgDiaList::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	
 	updateControl() ;
 	
