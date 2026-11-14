@@ -547,6 +547,7 @@ END_MESSAGE_MAP()
 BOOL CDlgRessyasyubetsuProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	const CLocalizationManager& localization = ((CDiagramEditApp*)AfxGetApp())->getLocalizationManager();
 
 	// Add combo-box labels as UTF-16 instead of loading legacy CP932 DLGINIT data.
 	{
@@ -575,12 +576,12 @@ BOOL CDlgRessyasyubetsuProp::OnInitDialog()
 		if ( pLine != NULL )
 		{
 			pLine->ResetContent();
-			for ( int i = 0; i < 4; ++i ) pLine->AddString( pszLineStyles[i] );
+			for ( int i = 0; i < 4; ++i ) { const std::wstring original( pszLineStyles[i] ); const std::wstring translated = localization.GetText( L"Text." + original, original ); pLine->AddString( translated.c_str() ); }
 		}
 		if ( pStop != NULL )
 		{
 			pStop->ResetContent();
-			for ( int i = 0; i < 2; ++i ) pStop->AddString( pszStopMarks[i] );
+			for ( int i = 0; i < 2; ++i ) { const std::wstring original( pszStopMarks[i] ); const std::wstring translated = localization.GetText( L"Text." + original, original ); pStop->AddString( translated.c_str() ); }
 		}
 	}
 
