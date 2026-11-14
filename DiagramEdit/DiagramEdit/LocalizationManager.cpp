@@ -263,7 +263,17 @@ bool CLocalizationManager::Load(
         }
 
         const std::wstring key = Trim(line.substr(0, separator));
-        const std::wstring value = Trim(line.substr(separator + 1));
+        std::wstring value = Trim(line.substr(separator + 1));
+        for (size_t escape = 0; (escape = value.find(L"\\n", escape)) != std::wstring::npos; )
+        {
+            value.replace(escape, 2, L"\n");
+            ++escape;
+        }
+        for (size_t escape = 0; (escape = value.find(L"\\t", escape)) != std::wstring::npos; )
+        {
+            value.replace(escape, 2, L"\t");
+            ++escape;
+        }
         if (!key.empty())
         {
             loadedTexts[section + L"." + key] = value;
