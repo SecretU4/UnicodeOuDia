@@ -763,7 +763,7 @@ int CWndDcdGridRessyasyubetsu::OnEditCut_Process( BOOL bQueryEnable )
 			{
 				strErrorMessage.Format( _T( "Error(%d)" ) , iRv ) ; 
 			}
-			MessageBox( strErrorMessage , NULL , MB_ICONSTOP | MB_OK ) ; 
+			MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMessage)).c_str() , NULL , MB_ICONSTOP | MB_OK ) ; 
 		}
 		// ****************************************************************
 	}
@@ -918,7 +918,7 @@ int CWndDcdGridRessyasyubetsu::OnEditPaste_Process( BOOL bQueryEnable )
 			CString strErrorMessage ;
 			strErrorMessage.Format( _T( "Error=%d" ) , iRv ) ;
 
-			MessageBox( strErrorMessage , NULL , MB_ICONSTOP | MB_OK ) ; 
+			MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMessage)).c_str() , NULL , MB_ICONSTOP | MB_OK ) ; 
 		}
 	}
 	return iRv ;
@@ -1047,7 +1047,7 @@ int CWndDcdGridRessyasyubetsu::OnEditClear_Process( BOOL bQueryEnable )
 			{
 				strErrorMessage.Format( _T( "Error(%d)" ) , iRv ) ; 
 			}
-			MessageBox( strErrorMessage , NULL , MB_ICONSTOP | MB_OK ) ; 
+			MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMessage)).c_str() , NULL , MB_ICONSTOP | MB_OK ) ; 
 		}
 		// ****************************************************************
 	}
@@ -1091,7 +1091,7 @@ OnEDITRessyasyubetsuInsert_Process( BOOL bQueryEnable )
 			}
 			if ( strErrorMessage.GetLength() > 0 )
 			{
-				MessageBox( strErrorMessage , NULL , MB_ICONSTOP | MB_OK ) ; 
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMessage)).c_str() , NULL , MB_ICONSTOP | MB_OK ) ; 
 			}
 		}
 		// ****************************************************************
