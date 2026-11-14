@@ -76,6 +76,7 @@ Copyright (C) 2006-2017 take-okm
 
 #define VC_EXTRALEAN		// Windows ヘッダーから殆ど使用されないスタッフを除外します。
 
+#include "LocalizationManager.h"
 #include <afxwin.h>         // MFC のコアおよび標準コンポーネント
 #include <afxext.h>         // MFC の拡張部分
 #include <afxdtctl.h>		// MFC の Internet Explorer 4 コモン コントロール サポート
