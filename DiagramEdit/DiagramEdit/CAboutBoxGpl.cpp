@@ -91,6 +91,13 @@ CAboutBoxGpl::~CAboutBoxGpl()
 {
 }
 
+BOOL CAboutBoxGpl::OnInitDialog()
+{
+    CDialog::OnInitDialog();
+    ((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
+    return TRUE;
+}
+
 void CAboutBoxGpl::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
