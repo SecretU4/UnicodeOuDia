@@ -201,9 +201,27 @@ static int utf8TextOfOudFileBytes(
 	const bool hasMetadata = metadataDecoder.decode( content , &metadata ) >= 0 ;
 	const std::string fileType = hasMetadata ? metadata.getValue( "FileType" ) : std::string() ;
 
+	if ( fileType == "OuDia.1.10" )
+	{
+		// OuDia.1.10 defines UTF-8 regardless of whether the BOM is present.
+		std::wstring wide ;
+		if ( !wstringFromUtf8( content , &wide ) ) return -3 ;
+		*utf8Text = content ;
+		return 0 ;
+	}
 	if ( fileType != "OuDia.1.02" )
 	{
-		// Older formats are passed to the legacy CP932 conversion DLL chain.
+		// Do not reinterpret an explicitly unknown/future format as CP932.
+		// Known historical FileTypes (and very old files without FileType)
+		// continue through the legacy CP932 conversion DLL chain.
+		const bool isKnownLegacyFileType =
+			fileType.empty() ||
+			fileType == "OuDia.2" ||
+			fileType == "OuDia.3" ||
+			fileType == "OuDia.5" ||
+			fileType == "OuDia.6" ||
+			fileType == "OuDia.1.01" ;
+		if ( !isKnownLegacyFileType ) return -3 ;
 		return utf8OfCp932Bytes( content , utf8Text ) ? 0 : -3 ;
 	}
 
