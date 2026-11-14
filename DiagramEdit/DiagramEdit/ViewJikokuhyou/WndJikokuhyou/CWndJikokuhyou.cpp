@@ -492,7 +492,7 @@ int CWndJikokuhyou::OnFileImportJikokuhyoucsv_Process( BOOL bQueryEnable )
 		{
 			if ( !strError.IsEmpty() )
 			{
-				MessageBox( strError , NULL , MB_ICONSTOP ) ;
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , NULL , MB_ICONSTOP ) ;
 			}
 		}
 		// ****************************************************************
@@ -1397,7 +1397,7 @@ int CWndJikokuhyou::execCdModifyEkijikokuCmd(
 		{
 			strError.Format( IDS_ERR_ERRORCODE , iRv ) ;
 		}
-		MessageBox( strError , NULL , MB_ICONEXCLAMATION | MB_OK ) ; 
+		MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , NULL , MB_ICONEXCLAMATION | MB_OK ) ; 
 	}
 	return ( iRv ) ;
 
