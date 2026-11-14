@@ -47,5 +47,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: OuDia-${{ matrix.configuration }}-Win32
-          path: DiagramEdit\${{ matrix.configuration }}\oudia.exe
+          path: DiagramEdit\${{ matrix.configuration }}\${{ matrix.configuration == 'Debug' && 'DiagramEdit.exe' || 'oudia.exe' }}
           if-no-files-found: error
