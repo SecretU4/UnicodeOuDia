@@ -881,9 +881,9 @@
     <None Include="res\DiagramEdit.rc2">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="Languages\\ja.ini" />
-    <None Include="Languages\\en.ini" />
-    <None Include="Languages\\ko.ini" />
+    <None Include="Languages\ja.ini" />
+    <None Include="Languages\en.ini" />
+    <None Include="Languages\ko.ini" />
     <None Include="ClassDiagram1.cd" />
     <None Include="DiagramEdit.reg" />
   </ItemGroup>

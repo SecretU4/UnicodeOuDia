@@ -525,9 +525,9 @@ if exist "$(ProjectDir)$(Configuration)\*.chm" copy /Y "$(ProjectDir)$(Configura
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
-    <None Include="Languages\\ja.ini"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
-    <None Include="Languages\\en.ini"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
-    <None Include="Languages\\ko.ini"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Include="Languages\ja.ini"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Include="Languages\en.ini"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Include="Languages\ko.ini"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
     <None Include="DiagramEdit.reg" />
     <None Include="res\DiagramEdit.rc2" />
   </ItemGroup>

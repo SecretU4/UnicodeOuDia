@@ -158,6 +158,7 @@ private:
 		  印刷ページに関するプロパティを保持します。
 	 */
 	CdPrintPageProp	m_CdPrintPageProp ;
+	CLocalizationManager	m_localizationManager ;
 	
 	///@}
 private:
@@ -183,6 +184,8 @@ private:
 	///@{
 	CdPrintPageProp	getCdPrintPageProp(){
 		return m_CdPrintPageProp ; };
+	CLocalizationManager& getLocalizationManager(){
+		return m_localizationManager ; };
 	std::string getProgramVer()const ;
 	///@}
 
