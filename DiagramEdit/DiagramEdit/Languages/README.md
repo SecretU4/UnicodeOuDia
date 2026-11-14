@@ -6,7 +6,7 @@ The application supports three language codes:
 - `en`: English
 - `ko`: Korean
 
-Each file is UTF-8 encoded and uses INI-style sections. Keep section/key names identical across all language files. Add menu commands under `[Menu]`, language settings under `[Settings]`, shared buttons under `[Common]`, and dialog, menu-popup, list-option, and message text under `[Text]`.
+Each file is UTF-8 encoded and uses INI-style sections. Keep section/key names identical across all language files. Add menu commands under `[Menu]`, language settings under `[Settings]`, shared buttons under `[Common]`, and dialog, menu-popup, fixed option-list, toolbar tooltip, status-bar, file-filter, and message text under `[Text]`.
 
 Example:
 
