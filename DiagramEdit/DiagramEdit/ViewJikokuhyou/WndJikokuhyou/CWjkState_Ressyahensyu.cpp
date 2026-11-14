@@ -1406,6 +1406,7 @@ int CWjkState_Ressyahensyu::
 					->getMuPtr( getRessyahoukou() ) ;
 			CString	strFmt ;
 			strFmt.LoadString( IDS_ERR_EkikanSaisyouSecIsNone ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 			CString strEkimei0 = wstringOf( pCentDedEkiCont->get( 
 				aCdYColSpec.getEkiOrder() ).getEkimei() ).c_str() ;
 			CString strEkimei1 = wstringOf( pCentDedEkiCont->get( 
