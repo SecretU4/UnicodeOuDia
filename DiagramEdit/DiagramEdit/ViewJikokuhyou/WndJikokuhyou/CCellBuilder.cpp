@@ -685,7 +685,9 @@ void CCellBuilder::update01_03_02_02_setEkimei_Ressyasyubetsu(
 			//(1.3.*.3)　セルの DcDrawオブジェクトに、属性を設定。
 			{
 				*pCDcDrawCell = createCDcdXColumn0() ;
-				pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_RESSYASYUBETSU ) ) ) ;
+				CString trainTypeHeader = MfcUtil::LoadCString( IDS_WORD_RESSYASYUBETSU );
+                trainTypeHeader = LocalizeUiText(std::wstring((LPCTSTR)trainTypeHeader)).c_str();
+                pCDcDrawCell->setText( std::wstring( (LPCTSTR)trainTypeHeader ) ) ;
 			}
 		}
 		CDcdGridYColumn* pCDcdGridYColumn = pCDcdGrid->getYColumn( 
