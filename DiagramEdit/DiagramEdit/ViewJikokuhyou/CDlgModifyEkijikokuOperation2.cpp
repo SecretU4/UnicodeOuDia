@@ -236,6 +236,7 @@ END_MESSAGE_MAP()
 BOOL CDlgModifyEkijikokuOperation2::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	{
 		CComboBox*	pCComnoBox = (CComboBox*)GetDlgItem( IDC_COMBO_JikokuOrderCopySrc ) ;
 		CString	strChaku ;
