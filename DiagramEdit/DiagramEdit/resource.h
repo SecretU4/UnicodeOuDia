@@ -345,7 +345,12 @@ Copyright (C) 2006-2017 take-okm
 #define ID_MENUITEM_OPEN                32888
 #define ID_VIEW_UPDATE                  59394
 
-// Language selection commands\n#define ID_LANGUAGE_JAPANESE           32891\n#define ID_LANGUAGE_ENGLISH            32892\n#define ID_LANGUAGE_KOREAN             32893\n\n// Next default values for new objects
+// Language selection commands
+#define ID_LANGUAGE_JAPANESE           32891
+#define ID_LANGUAGE_ENGLISH            32892
+#define ID_LANGUAGE_KOREAN             32893
+
+// Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS

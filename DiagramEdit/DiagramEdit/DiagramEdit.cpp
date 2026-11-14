@@ -1300,18 +1300,21 @@ BOOL CDiagramEditApp::InitInstance()
 
 void CDiagramEditApp::OnLanguageJapanese()
 {
+	m_localizationManager.SetLanguageCode("ja");
 	WriteProfileString(nameSection, _T("Language"), _T("ja"));
 	AfxMessageBox(_T("言語設定を変更しました。変更を適用するには、OuDiaを再起動してください。"));
 }
 
 void CDiagramEditApp::OnLanguageEnglish()
 {
+	m_localizationManager.SetLanguageCode("en");
 	WriteProfileString(nameSection, _T("Language"), _T("en"));
 	AfxMessageBox(_T("The display language has been changed. Restart OuDia to apply the change."));
 }
 
 void CDiagramEditApp::OnLanguageKorean()
 {
+	m_localizationManager.SetLanguageCode("ko");
 	WriteProfileString(nameSection, _T("Language"), _T("ko"));
 	AfxMessageBox(_T("표시 언어를 변경했습니다. 변경 사항을 적용하려면 OuDia를 다시 시작하세요."));
 }
