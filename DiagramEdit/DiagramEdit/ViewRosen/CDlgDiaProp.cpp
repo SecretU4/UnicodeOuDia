@@ -138,6 +138,7 @@ void CDlgDiaProp::OnOK()
 BOOL CDlgDiaProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	
 	// TODO: この位置に初期化の補足処理を追加してください
 	
