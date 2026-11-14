@@ -126,6 +126,7 @@ END_MESSAGE_MAP()
 BOOL CDlgOuJikokuhyouCsvExport::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	
 	// --------------------------------
 	int iRv = 0 ;
