@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include "..\DiagramEdit.h"
 #include "CDlgPrintPageProp.h"
@@ -121,6 +122,13 @@ END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CDlgPrintPageProp メッセージ ハンドラ
+
+BOOL CDlgPrintPageProp::OnInitDialog()
+{
+    CDialog::OnInitDialog();
+    ((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
+    return TRUE;
+}
 
 void CDlgPrintPageProp::OnOK() 
 {
