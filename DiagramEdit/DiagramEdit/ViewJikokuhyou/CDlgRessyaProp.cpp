@@ -392,6 +392,7 @@ END_MESSAGE_MAP()
 BOOL CDlgRessyaProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 
 	//IDC_COMBO_Ressyasyubetsu
 	{
