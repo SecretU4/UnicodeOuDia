@@ -409,9 +409,9 @@ BOOL CDlgEkiProp::OnInitDialog()
 		CComboBox* pKudari = (CComboBox*)GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiKudari );
 		CComboBox* pNobori = (CComboBox*)GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiNobori );
 		const wchar_t* pszItems[] = {
-			L"\\x59cb\\x767a\\x306a\\x3089\\x8868\\x793a",
-			L"\\x5e38\\x306b\\x8868\\x793a",
-			L"\\x8868\\x793a\\x3057\\x306a\\x3044"
+			L"\x59cb\x767a\x306a\x3089\x8868\x793a",
+			L"\x5e38\x306b\x8868\x793a",
+			L"\x8868\x793a\x3057\x306a\x3044"
 		};
 		if ( pKudari != NULL )
 		{
