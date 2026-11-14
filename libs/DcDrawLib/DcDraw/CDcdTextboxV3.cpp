@@ -168,9 +168,9 @@ CDcdText CDcdTextboxV3::createCDcdTextH(
 	aCdFontProp.setIsEscapementHolyzontal() ;
 
 	CDcdText	aCDcdText( 
-		"" , 
+		TEXT("") , 
 		CdDrawTextProp( aCdFontProp , colorrefText ) , 
-		"00" ) ;
+		TEXT("00") ) ;
 	//	aCDcdText は、上下左右中央寄せにします。
 	//	これは、半角数字１文字を表示する際に、中央に表示するためです。
 	{
