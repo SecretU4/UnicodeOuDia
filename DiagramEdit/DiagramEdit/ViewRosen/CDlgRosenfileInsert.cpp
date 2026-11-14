@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 #include "..\DiagramEdit.h"
 #include "CDlgRosenfileInsert.h"
 
@@ -128,7 +129,6 @@ void CDlgRosenfileInsert::OnBnClickedButtonAddRosenfilename()
 BOOL CDlgRosenfileInsert::OnInitDialog()
 {
 	CDialog::OnInitDialog();
-	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 
 
 	//COMBO_EKIINDEX_TO_ADD
@@ -140,6 +140,7 @@ BOOL CDlgRosenfileInsert::OnInitDialog()
 		}
 		m_wndCOMBO_EKIINDEX_TO_ADD.SetCurSel( m_CentDedEkiCont.size() - 1 ) ;
 	}
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// 例外 : OCX プロパティ ページは必ず FALSE を返します。
 }
