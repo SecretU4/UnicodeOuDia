@@ -303,7 +303,10 @@ int CconvCDedRosenFileData::isEncodeAbleFormat(
 {
 	int iRv = 0 ;
 	string strFileType = pCNodeContainer->getValue( nameFileType ) ;
-	if ( strFileType != getFileType() )
+	// OuDia.1.02 is the existing CP932 format. OuDia.1.10 keeps the
+	// same document schema but defines UTF-8 as its text encoding.
+	if ( strFileType != "OuDia.1.02" &&
+		strFileType != getFileType() )
 	{
 		iRv = -1 ;	//	FileType が正しくありません。
 	}
