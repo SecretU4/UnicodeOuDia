@@ -312,6 +312,7 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILENOTFOUND ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
@@ -319,6 +320,7 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEREAD ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
@@ -326,6 +328,7 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEFORMAT ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
@@ -369,6 +372,7 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 		if ( strError.IsEmpty() ){
 			CString	strFmt ;
 			strFmt.LoadString( IDS_ERR_ERRORCODE ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 			strError.Format( strFmt , iRv ) ;
 		}
 		AfxMessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , MB_ICONSTOP ) ; 
@@ -412,6 +416,7 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 			iRv = -101 ;	//	ダイヤが存在しません。
 			CString strFmt ;
 			strFmt.LoadString( IDS_ERR_NoDia ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 			strError.Format( strFmt , lpszPathName ) ;
 		}
 		else if ( pCentDedRosen->getCentDedDiaCont()->getMuPtr()->size() == 1 )
@@ -455,6 +460,7 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_RessyasyubetsuTooMany ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
@@ -462,6 +468,7 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 				 {
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_RyakusyouTooLong ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				 }
 			}
@@ -488,6 +495,7 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILECREATE ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
@@ -495,6 +503,7 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEWRITE ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
@@ -513,6 +522,7 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 		if ( strError.IsEmpty() ){
 			CString	strFmt ;
 			strFmt.LoadString( IDS_ERR_ERRORCODE ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 			strError.Format( strFmt , iRv ) ;
 		}
 		AfxMessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , MB_ICONSTOP ) ; 
@@ -1595,6 +1605,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILENOTFOUND ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
@@ -1602,6 +1613,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEREAD ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
@@ -1609,6 +1621,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 				{
 					CString	strFmt ;
 					strFmt.LoadString( IDS_ERR_FILEFORMAT ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 					strError.Format( strFmt , lpszPathName ) ;
 				}
 				break ;
@@ -1781,6 +1794,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 			{
 				CString	strFmt ;
 				strFmt.LoadString( IDS_ERR_FILEFORMAT_ERRORCODE ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 				strError.Format( strFmt , lpszPathName , iRv ) ;
 			}
 
@@ -1829,12 +1843,14 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 		{
 			CString	strFmt ;
 			strFmt.LoadString( IDS_ERR_ERRORCODE ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 			strError.Format( strFmt , iRv ) ;
 		}
 		if ( !strFileTypeAppComment.empty() )
 		{
 			CString strFmt ;
 			strFmt.LoadString( IDS_ERR_FileTypeAppComment ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 			CString strLs ;
 			strLs.Format( strFmt , wstringOf( strFileTypeAppComment ).c_str() ) ;
 			strError += _T( "\n\n(" ) ;
@@ -1966,6 +1982,7 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 		{
 			CString	strFmt ;
 			strFmt.LoadString( IDS_ERR_ERRORCODE ) ;
+		strFmt = LocalizeUiText(std::wstring((LPCTSTR)strFmt)).c_str();
 			strError.Format( strFmt , iRv ) ;
 		}
 		AfxMessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , MB_ICONSTOP ) ; 
