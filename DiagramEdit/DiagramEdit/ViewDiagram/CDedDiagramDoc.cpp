@@ -99,6 +99,7 @@ void CDedDiagramDoc::SetTitle( LPCTSTR lpszTitle )
 		CString	strDiamei = wstringOf( m_strDiaName ).c_str() ;
 		CString	strRessyahoukou ;
 		strRessyahoukou.LoadString( IDS_WORD_DIAGRAM ) ;
+		strRessyahoukou = LocalizeUiText(std::wstring((LPCTSTR)strRessyahoukou)).c_str();
 
 		strDiamei += _T( " " ) ;
 		strDiamei += strRessyahoukou ;
