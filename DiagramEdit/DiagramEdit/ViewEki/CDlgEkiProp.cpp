@@ -401,6 +401,7 @@ END_MESSAGE_MAP()
 BOOL CDlgEkiProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 
 	// Combo-box items are added as Unicode strings at runtime.
 	// Avoid DLGINIT, whose string payload is interpreted using MFC's
@@ -408,6 +409,7 @@ BOOL CDlgEkiProp::OnInitDialog()
 	{
 		CComboBox* pKudari = (CComboBox*)GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiKudari );
 		CComboBox* pNobori = (CComboBox*)GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiNobori );
+		const CLocalizationManager& localization = ((CDiagramEditApp*)AfxGetApp())->getLocalizationManager();
 		const wchar_t* pszItems[] = {
 			L"\x59cb\x767a\x306a\x3089\x8868\x793a",
 			L"\x5e38\x306b\x8868\x793a",
@@ -416,12 +418,12 @@ BOOL CDlgEkiProp::OnInitDialog()
 		if ( pKudari != NULL )
 		{
 			pKudari->ResetContent();
-			for ( int i = 0; i < 3; ++i ) pKudari->AddString( pszItems[i] );
+			for ( int i = 0; i < 3; ++i ) { const std::wstring original( pszItems[i] ); const std::wstring translated = localization.GetText( L"Text." + original, original ); pKudari->AddString( translated.c_str() ); }
 		}
 		if ( pNobori != NULL )
 		{
 			pNobori->ResetContent();
-			for ( int i = 0; i < 3; ++i ) pNobori->AddString( pszItems[i] );
+			for ( int i = 0; i < 3; ++i ) { const std::wstring original( pszItems[i] ); const std::wstring translated = localization.GetText( L"Text." + original, original ); pNobori->AddString( translated.c_str() ); }
 		}
 	}
 
