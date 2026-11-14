@@ -149,6 +149,7 @@ protected:
 
 	// 生成されたメッセージ マップ関数
 	//{{AFX_MSG(CDlgJikokuhyouViewProp)
+	virtual BOOL OnInitDialog();
 	virtual void OnOK();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
