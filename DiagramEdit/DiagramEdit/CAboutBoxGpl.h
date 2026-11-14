@@ -93,6 +93,7 @@ public:
 	enum { IDD = IDD_AboutBoxGpl };
 
 protected:
+	virtual BOOL OnInitDialog();
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV サポート
 
 	DECLARE_MESSAGE_MAP()
