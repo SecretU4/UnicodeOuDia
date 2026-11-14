@@ -100,14 +100,6 @@ static char THIS_FILE[] = __FILE__;
 
 namespace
 {
-    std::wstring LocalizedMenuText(
-        CLocalizationManager& localization,
-        const wchar_t* key,
-        const wchar_t* fallback)
-    {
-        return localization.GetText(key, fallback);
-    }
-
     bool GetPopupMenuTranslation(
         CLocalizationManager& localization,
         const std::wstring& currentText,
