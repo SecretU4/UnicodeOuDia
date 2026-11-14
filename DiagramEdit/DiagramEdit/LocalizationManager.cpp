@@ -258,7 +258,7 @@ std::wstring CLocalizationManager::TranslateText(const std::wstring& original) c
                 p = next;
             }
         }
-        if (!matched || t != original.size()) continue;
+        if (!matched || t != normalized.size()) continue;
 
         std::wstring translated;
         size_t capture = 0;
