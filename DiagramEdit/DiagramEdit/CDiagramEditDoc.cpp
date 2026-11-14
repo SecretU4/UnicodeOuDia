@@ -371,7 +371,7 @@ BOOL CDiagramEditDoc::OnOpenDocument_WinDia( LPCTSTR lpszPathName )
 			strFmt.LoadString( IDS_ERR_ERRORCODE ) ;
 			strError.Format( strFmt , iRv ) ;
 		}
-		AfxMessageBox( strError , MB_ICONSTOP ) ; 
+		AfxMessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , MB_ICONSTOP ) ; 
 		return ( FALSE ) ;
 	}
 	//	ドキュメントのファイル名は、
@@ -515,7 +515,7 @@ BOOL CDiagramEditDoc::OnSaveDocument_WinDia(  LPCTSTR lpszPathName )
 			strFmt.LoadString( IDS_ERR_ERRORCODE ) ;
 			strError.Format( strFmt , iRv ) ;
 		}
-		AfxMessageBox( strError , MB_ICONSTOP ) ; 
+		AfxMessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , MB_ICONSTOP ) ; 
 		return ( FALSE ) ;
 	}
 
@@ -1842,7 +1842,7 @@ BOOL CDiagramEditDoc::OnOpenDocument(LPCTSTR lpszPathName)
 			strError += _T( ")" ) ;
 
 		}
-		AfxMessageBox( strError , MB_ICONSTOP ) ; 
+		AfxMessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , MB_ICONSTOP ) ; 
 	}
 	return ( iRv >= 0 ) ;
 }
@@ -1968,7 +1968,7 @@ BOOL CDiagramEditDoc::OnSaveDocument(LPCTSTR lpszPathName)
 			strFmt.LoadString( IDS_ERR_ERRORCODE ) ;
 			strError.Format( strFmt , iRv ) ;
 		}
-		AfxMessageBox( strError , MB_ICONSTOP ) ; 
+		AfxMessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , MB_ICONSTOP ) ; 
 		return ( FALSE ) ;
 	}
 	//	保存に成功したら、明示的に
