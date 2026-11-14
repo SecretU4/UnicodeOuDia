@@ -76,7 +76,14 @@ Copyright (C) 2006-2017 take-okm
 
 namespace ViewJikokuhyou{
 namespace WndJikokuhyou{
-	using namespace OuLib::Str;
+	static CString loadLocalizedCString(UINT resourceId)
+{
+    CString value = MfcUtil::LoadCString(resourceId);
+    value = LocalizeUiText(std::wstring((LPCTSTR)value)).c_str();
+    return value;
+}
+
+using namespace OuLib::Str;
 using DcDraw::CDcdTextboxV3 ;
 
 // --------------------------------
@@ -206,7 +213,7 @@ CDcdTextbox CCellBuilder::createCDcdEkimei()const
 
 CDcdTextbox CCellBuilder::createCDcdHatsuchaku()const
 {
-	std::wstring strExtent = (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Chaku ) ;
+	std::wstring strExtent = (LPCTSTR)loadLocalizedCString( IDS_WORD_Chaku ) ;
 
 	//strExtent = 路線ファイルデータに保存されている値をもとにして、
 	//	作成した、文字列幅の基準文字列です。
@@ -600,7 +607,7 @@ void CCellBuilder::update01_03_01_setEkimei_Ressyabangou(
 			//	DcDrawオブジェクトに、属性を設定。
 			{
 				*pCDcDrawCell = createCDcdXColumn0() ;
-				pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Ressyabangou ) ) ) ;
+				pCDcDrawCell->setText( std::wstring( (LPCTSTR)loadLocalizedCString( IDS_WORD_Ressyabangou ) ) ) ;
 			}
 		}
 
@@ -685,7 +692,7 @@ void CCellBuilder::update01_03_02_02_setEkimei_Ressyasyubetsu(
 			//(1.3.*.3)　セルの DcDrawオブジェクトに、属性を設定。
 			{
 				*pCDcDrawCell = createCDcdXColumn0() ;
-				CString trainTypeHeader = MfcUtil::LoadCString( IDS_WORD_RESSYASYUBETSU );
+				CString trainTypeHeader = loadLocalizedCString( IDS_WORD_RESSYASYUBETSU );
                 trainTypeHeader = LocalizeUiText(std::wstring((LPCTSTR)trainTypeHeader)).c_str();
                 pCDcDrawCell->setText( std::wstring( (LPCTSTR)trainTypeHeader ) ) ;
 			}
@@ -770,7 +777,7 @@ void CCellBuilder::update01_03_02_03_setEkimei_Ressyamei(
 			//	DcDrawオブジェクトに、属性を設定。
 			{
 				*pCDcDrawCell = createCDcdXColumn0V() ;
-				pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Ressyamei ) ) ) ;
+				pCDcDrawCell->setText( std::wstring( (LPCTSTR)loadLocalizedCString( IDS_WORD_Ressyamei ) ) ) ;
 			}
 		}
 		CDcdGridYColumn* pCDcdGridYColumn = pCDcdGrid->getYColumn( 
@@ -1282,7 +1289,7 @@ void CCellBuilder::update01_03_02_08_setEkimei_Bikou(
 				*pCDcDrawCell = createCDcdXColumn0V() ;
 				pCDcDrawCell->setLinesExtentX ( getBikouTextExtent().getX() ) ;
 				pCDcDrawCell->setLinesExtentY ( getBikouTextExtent().getY() ) ;
-				pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Bikou ) ) ) ;
+				pCDcDrawCell->setText( std::wstring( (LPCTSTR)loadLocalizedCString( IDS_WORD_Bikou ) ) ) ;
 			}
 		}
 		CDcdGridYColumn* pCDcdGridYColumn = pCDcdGrid->getYColumn( 
@@ -1371,7 +1378,7 @@ void CCellBuilder::update01_04_01_06_setChakuhatsu_Chaku(
 				//(1.4.1.*.3)　セルのDcDrawオブジェクトに、属性を設定。
 				{
 					*pCDcDrawCell = createCDcdHatsuchaku();
-					pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Chaku ) ) );
+					pCDcDrawCell->setText( std::wstring( (LPCTSTR)loadLocalizedCString( IDS_WORD_Chaku ) ) );
 				}
 			}
 		}
@@ -1429,7 +1436,7 @@ void CCellBuilder::update01_04_01_07_setChakuhatsu_Hatsu(
 				//(1.4.1.*.3)　セルのDcDrawオブジェクトに、属性を設定。
 				{
 					*pCDcDrawCell = createCDcdHatsuchaku();
-					pCDcDrawCell->setText( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Hatsu ) ) );
+					pCDcDrawCell->setText( std::wstring( (LPCTSTR)loadLocalizedCString( IDS_WORD_Hatsu ) ) );
 				}
 			}
 		}
