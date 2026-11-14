@@ -885,7 +885,7 @@ BOOL CWndDiagram::Create( const RECT& rect, CWnd* pParentWnd, UINT nID )
 			, LoadCursor( NULL , IDC_ARROW ) 
 			, (HBRUSH)GetStockObject( WHITE_BRUSH ) 
 			, NULL ) 
-		, "CWndDiagram"	//	この文字列が表示されることはありません
+		, _T("CWndDiagram")	//	この文字列が表示されることはありません
 		, WS_CHILD | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 		, rect
 		, pParentWnd
@@ -900,7 +900,7 @@ BOOL CWndDiagram::Create( CWnd* pParentWnd, UINT nID )
 			, LoadCursor( NULL , IDC_ARROW ) 
 			, (HBRUSH)GetStockObject( WHITE_BRUSH ) 
 			, NULL ) 
-		, "CWndDiagram"	//	この文字列が表示されることはありません
+		, _T("CWndDiagram")	//	この文字列が表示されることはありません
 		, WS_CHILD | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 		, CRect( 0 , 0 , 0 , 0 ) 
 		, pParentWnd
