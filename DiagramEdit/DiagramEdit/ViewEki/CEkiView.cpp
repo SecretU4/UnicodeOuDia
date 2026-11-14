@@ -340,6 +340,7 @@ void CEkiView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 
 			CString	aString ;
 			aString.LoadString( IDS_WORD_EKI ) ;
+		aString = LocalizeUiText(std::wstring((LPCTSTR)aString)).c_str();
 			strText += stringOf( std::wstring( (LPCTSTR)aString ) ) ;
 		}
 		pdcdCaption = OuNew<CDcdText>( new CDcdText( 
