@@ -237,7 +237,7 @@ void CDlgRessyaProp::CPropEditUiInternal::ShowError(
 	CDlgRessyaProp* pOuter = (CDlgRessyaProp*)( (BYTE*)this - offsetof( CDlgRessyaProp , m_PropEditUiInternal ) ) ;
 	CString strErrorMsg = wstringOf( strErrorReason ).c_str() ;
 
-	pOuter->MessageBox( strErrorMsg , NULL , MB_OK | MB_ICONEXCLAMATION ) ;
+	pOuter->MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_OK | MB_ICONEXCLAMATION ) ;
 }
 
 
