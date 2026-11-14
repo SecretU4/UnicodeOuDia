@@ -204,7 +204,7 @@ namespace
                 : GetCommandMenuTranslation(localization, itemInfo.wID, &translated);
             if (!hasTranslation)
             {
-                const std::wstring::size_type shortcut = currentText.find(L'\\t');
+                const std::wstring::size_type shortcut = currentText.find(L'\t');
                 const std::wstring label = shortcut == std::wstring::npos
                     ? currentText : currentText.substr(0, shortcut);
                 const std::wstring suffix = shortcut == std::wstring::npos
