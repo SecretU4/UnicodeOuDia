@@ -377,7 +377,7 @@ int CDedDiagramView::OnDiagramXDgrSizeInc_Process( BOOL bQueryEnable )
 			}
 			if ( strErrorMsg.GetLength() > 0 )
 			{
-				MessageBox( strErrorMsg , 0 , MB_ICONERROR ) ;
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , 0 , MB_ICONERROR ) ;
 			}
 		}
 		// ****************************************************************
@@ -481,7 +481,7 @@ int CDedDiagramView::OnDiagramXDgrSizeDec_Process( BOOL bQueryEnable )
 			}
 			if ( strErrorMsg.GetLength() > 0 )
 			{
-				MessageBox( strErrorMsg , 0 , MB_ICONERROR ) ;
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , 0 , MB_ICONERROR ) ;
 			}
 		}
 		// ****************************************************************
@@ -583,7 +583,7 @@ int CDedDiagramView::OnDiagramYDgrSizeInc_Process( BOOL bQueryEnable )
 			}
 			if ( strErrorMsg.GetLength() > 0 )
 			{
-				MessageBox( strErrorMsg , 0 , MB_ICONERROR ) ;
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , 0 , MB_ICONERROR ) ;
 			}
 		}
 		// ****************************************************************
@@ -687,7 +687,7 @@ int CDedDiagramView::OnDiagramYDgrSizeDec_Process( BOOL bQueryEnable )
 			}
 			if ( strErrorMsg.GetLength() > 0 )
 			{
-				MessageBox( strErrorMsg , 0 , MB_ICONERROR ) ;
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , 0 , MB_ICONERROR ) ;
 			}
 		}
 		// ****************************************************************
@@ -740,7 +740,7 @@ int CDedDiagramView::OnDiagramYDgrSizeReset_Process( BOOL bQueryEnable )
 			}
 			if ( strErrorMsg.GetLength() > 0 )
 			{
-				MessageBox( strErrorMsg , 0 , MB_ICONERROR ) ;
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , 0 , MB_ICONERROR ) ;
 			}
 		}
 		// ****************************************************************
