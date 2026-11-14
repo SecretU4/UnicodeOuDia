@@ -660,7 +660,7 @@ void CMainFrame::OnWindowRosenView()
 void CMainFrame::OnUpdateINDICATOR_PasteZoubun(CCmdUI *pCmdUI)
 {
     pCmdUI->Enable( FALSE ); 
-    pCmdUI->SetText( "" ); 
+    pCmdUI->SetText( _T("") ); 
 
 }
 
