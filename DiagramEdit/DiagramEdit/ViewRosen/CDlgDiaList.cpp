@@ -211,7 +211,7 @@ void CDlgDiaList::execDlgDiaProp()
 			if ( idxDia >= 0 ){
 				CString strError ;
 				strError.Format( IDS_ERR_DiaNameDuplex , wstringOf( strDiaName ).c_str() ) ;
-				MessageBox( strError , NULL , MB_OK | MB_ICONERROR ) ;
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , NULL , MB_OK | MB_ICONERROR ) ;
 				return ;
 			}
 		}
@@ -312,7 +312,7 @@ void CDlgDiaList::OnButtonNew()
 		if ( idxDia >= 0 ){
 			CString strError ;
 			strError.Format( IDS_ERR_DiaNameDuplex , wstringOf( strDiaName ).c_str() ) ;
-			MessageBox( strError , NULL , MB_OK | MB_ICONERROR ) ;
+			MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , NULL , MB_OK | MB_ICONERROR ) ;
 			return ;
 		}
 		// --------------------------------
