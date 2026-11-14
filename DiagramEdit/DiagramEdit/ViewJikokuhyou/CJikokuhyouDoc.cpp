@@ -108,8 +108,10 @@ void CJikokuhyouDoc::SetTitle( LPCTSTR lpszTitle )
 		CString	strRessyahoukou ;
 		if ( m_eRessyahoukou == Ressyahoukou_Kudari ){
 			strRessyahoukou.LoadString( IDS_WORD_KUDARIJIKOKUHYOU ) ;
+		strRessyahoukou = LocalizeUiText(std::wstring((LPCTSTR)strRessyahoukou)).c_str();
 		}	else	{
 			strRessyahoukou.LoadString( IDS_WORD_NOBORIJIKOKUHYOU ) ;
+		strRessyahoukou = LocalizeUiText(std::wstring((LPCTSTR)strRessyahoukou)).c_str();
 		}
 		strDiamei += _T( " " ) ;
 		strDiamei += strRessyahoukou ;
