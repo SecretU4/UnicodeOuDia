@@ -546,6 +546,7 @@ END_MESSAGE_MAP()
 BOOL CDlgRessyasyubetsuProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 
 	// Add combo-box labels as UTF-16 instead of loading legacy CP932 DLGINIT data.
 	{
