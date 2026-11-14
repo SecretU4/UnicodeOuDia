@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "LocalizationManager.h"
+#include "DiagramEdit.h"
 
 #include <windows.h>
 #include <fstream>
@@ -310,4 +311,10 @@ void CLocalizationManager::SetLanguageCode(const std::string& languageCode)
     {
         m_languageCode = languageCode;
     }
+}
+
+std::wstring LocalizeUiText(const std::wstring& original)
+{
+    CDiagramEditApp* app = static_cast<CDiagramEditApp*>(AfxGetApp());
+    return app == NULL ? original : app->getLocalizationManager().TranslateText(original);
 }
