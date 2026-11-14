@@ -492,11 +492,11 @@ CString CDiagramEditApp::makeHtmlHelpUrl( const CString& strTopic )
 	// ********************************
 	//@name	操作- .ini ファイル
 	// ********************************
-const TCHAR nameCWndDiagram_DiagramPosDgr[] = "DiagramPosDgr" ;
-const TCHAR nameCWndDiagram_DcdPerDgrX[] = "DcdPerDgrX" ;
-const TCHAR nameCWndDiagram_DcdPerDgrY[] = "DcdPerDgrY" ;
+const TCHAR nameCWndDiagram_DiagramPosDgr[] = _T("DiagramPosDgr") ;
+const TCHAR nameCWndDiagram_DcdPerDgrX[] = _T("DcdPerDgrX") ;
+const TCHAR nameCWndDiagram_DcdPerDgrY[] = _T("DcdPerDgrY") ;
 
-const TCHAR nameCWndDiagram_VlineMode[] = "DiagramVlineMode" ;
+const TCHAR nameCWndDiagram_VlineMode[] = _T("DiagramVlineMode") ;
 const TCHAR nameCWndDiagram_DisplayRessyabangou[] = 
 	"DiagramDisplayRessyabangou" ;
 const TCHAR nameCWndDiagram_DisplayRessyamei[] = 
@@ -541,7 +541,7 @@ int CDiagramEditApp::writeCWndDiagramViewProp( const CWndDiagram* pCWndDiagram )
 		WriteProfileString( 
 			nameSection , 
 			nameCWndDiagram_DiagramPosDgr , 
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 	//"DcdPerDgrX" ;
 	{
@@ -550,7 +550,7 @@ int CDiagramEditApp::writeCWndDiagramViewProp( const CWndDiagram* pCWndDiagram )
 		WriteProfileString( 
 			nameSection , 
 			nameCWndDiagram_DcdPerDgrX , 
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 
 	//"DcdPerDgrY" ;
@@ -560,7 +560,7 @@ int CDiagramEditApp::writeCWndDiagramViewProp( const CWndDiagram* pCWndDiagram )
 		WriteProfileString( 
 			nameSection , 
 			nameCWndDiagram_DcdPerDgrY , 
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 
 
@@ -569,7 +569,7 @@ int CDiagramEditApp::writeCWndDiagramViewProp( const CWndDiagram* pCWndDiagram )
 		string	strValue ;
 		strValue += stringOf( idxVlineMode ) ;
 		WriteProfileString( nameSection , nameCWndDiagram_VlineMode , 
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 	
 	//DisplayRessyabangou
@@ -577,7 +577,7 @@ int CDiagramEditApp::writeCWndDiagramViewProp( const CWndDiagram* pCWndDiagram )
 		string	strValue ;
 		strValue += stringOf( bDisplayRessyabangou ) ;
 		WriteProfileString( nameSection , nameCWndDiagram_DisplayRessyabangou ,
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 	
 	//DisplayRessyamei
@@ -585,7 +585,7 @@ int CDiagramEditApp::writeCWndDiagramViewProp( const CWndDiagram* pCWndDiagram )
 		string	strValue ;
 		strValue += stringOf( bDisplayRessyamei ) ;
 		WriteProfileString( nameSection , nameCWndDiagram_DisplayRessyamei ,
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 	
 	//DisplayRessyasen
@@ -595,28 +595,28 @@ int CDiagramEditApp::writeCWndDiagramViewProp( const CWndDiagram* pCWndDiagram )
 		strValue += ',' ;
 		strValue += ( bDisplayRessyasenNobori ? "1" : "0" ) ;
 		WriteProfileString( nameSection , nameCWndDiagram_DisplayRessyasen ,
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 	//DiagramHideIppanekiEkimei
 	if ( iRv >= 0 )
 	{
 		string	strValue = ( bHideIppanekiEkimei ? "1" : "0" ) ;
 		WriteProfileString( nameSection , nameCWndDiagram_HideIppanekiEkimei ,
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 	//DiagramStopMarkDraw
 	if ( iRv >= 0 )
 	{
 		string strValue = stringOf( (int)eStopMarkDraw ) ;
 		WriteProfileString( nameSection , nameCWndDiagram_StopMarkDraw , 
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 	//DiagramKeepZoneDgrOnSize
 	if ( iRv >= 0 )
 	{
 		string strValue = ( bKeepZoneDgrOnSize ? "1" : "0" ) ;
 		WriteProfileString( nameSection , nameCWndDiagram_KeepZoneDgrOnSize ,
-			strValue.c_str() ) ;
+			tstringOf( strValue ).c_str() ) ;
 	}
 	return ( iRv ) ;
 }
@@ -845,7 +845,7 @@ int CDiagramEditApp::writeCWndJikokuhyouViewProp( const CWndJikokuhyou* pCWndJik
 	if ( iRv >= 0 )
 	{
 		string strValue ;
-		strValue = ( bModifyEkijikoku ? _T( "1" ) : _T( "0" ) ) ;
+		strValue = ( bModifyEkijikoku ? "1" : "0" ) ;
 		WriteProfileString( nameSection , nameCWndJikokuhyou_ModifyEkijikoku ,
 			tstringOf( strValue ).c_str() ) ;
 	}
