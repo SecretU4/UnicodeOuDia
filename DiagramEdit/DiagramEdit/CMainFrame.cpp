@@ -620,6 +620,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CHidemdiMainfrm)
 	//{{AFX_MSG_MAP(CMainFrame)
 	ON_WM_CREATE()
 	ON_WM_INITMENUPOPUP()
+	ON_NOTIFY_EX_RANGE(TTN_NEEDTEXT, 0, 0x0000FFFF, OnToolTipText)
 	ON_COMMAND(ID_ROSEN_FILE_PROP, OnRosenFileProp)
 	ON_COMMAND(ID_WINDOW_ROSEN_VIEW, OnWindowRosenView)
 	ON_COMMAND(ID_ROSEN_DIALIST, OnRosenDialist)
@@ -655,6 +656,31 @@ CMainFrame::~CMainFrame()
 {
 }
 
+
+BOOL CMainFrame::OnToolTipText(UINT, NMHDR* pNMHDR, LRESULT* pResult)
+{
+    if (pNMHDR == NULL) return FALSE;
+
+    UINT commandId = static_cast<UINT>(pNMHDR->idFrom);
+    TOOLTIPTEXT* tooltip = reinterpret_cast<TOOLTIPTEXT*>(pNMHDR);
+    if (tooltip->uFlags & TTF_IDISHWND)
+        commandId = static_cast<UINT>(::GetDlgCtrlID(reinterpret_cast<HWND>(pNMHDR->idFrom)));
+    if (commandId == 0) return FALSE;
+
+    CString resourceText;
+    if (!resourceText.LoadString(commandId)) return FALSE;
+
+    const int separator = resourceText.Find(_T('\n'));
+    if (separator >= 0) resourceText = resourceText.Mid(separator + 1);
+
+    const std::wstring translated =
+        LocalizeUiText(std::wstring((LPCTSTR)resourceText));
+    m_strToolTipText = translated.c_str();
+    tooltip->lpszText = const_cast<LPTSTR>((LPCTSTR)m_strToolTipText);
+    tooltip->hinst = NULL;
+    if (pResult != NULL) *pResult = 0;
+    return TRUE;
+}
 
 void CMainFrame::OnInitMenuPopup(CMenu* pPopupMenu, UINT nIndex, BOOL bSysMenu)
 {
