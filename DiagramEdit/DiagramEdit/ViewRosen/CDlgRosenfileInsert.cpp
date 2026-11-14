@@ -179,7 +179,7 @@ void CDlgRosenfileInsert::OnOK()
 		}
 		if ( !strErrorMsg.IsEmpty() )
 		{
-			MessageBox( strErrorMsg , NULL , MB_ICONSTOP ) ;
+			MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_ICONSTOP ) ;
 		}
 	}
 }
