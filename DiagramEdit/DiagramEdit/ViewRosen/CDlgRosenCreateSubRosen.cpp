@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include "str\strToWstr.h"
 #include "str\tstring.h"
@@ -113,7 +114,6 @@ END_MESSAGE_MAP()
 BOOL CDlgRosenCreateSubRosen::OnInitDialog()
 {
 	CDialog::OnInitDialog();
-	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 
 	int iRv = 0 ;
 
@@ -157,6 +157,7 @@ BOOL CDlgRosenCreateSubRosen::OnInitDialog()
 		MessageBox( strErrorMsg , NULL , MB_ICONSTOP );
 		EndDialog( IDCANCEL ) ;
 	}
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// 例外 : OCX プロパティ ページは必ず FALSE を返します。
 }
