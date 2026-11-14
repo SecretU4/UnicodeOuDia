@@ -66,7 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
-#include "..\\DiagramEdit.h"
+#include "DiagramEdit.h"
 #include "resource.h"
 #include "CDlgProgress.h"
 
