@@ -217,6 +217,11 @@ void CLocalizationManager::ApplyToDialog(HWND dialog) const
     EnumChildWindows(dialog, TranslateDialogChild, reinterpret_cast<LPARAM>(&context));
 }
 
+std::wstring CLocalizationManager::TranslateText(const std::wstring& original) const
+{
+    return TranslateDialogText(this, original);
+}
+
 CLocalizationManager::CLocalizationManager()
     : m_languageCode("ja")
 {
