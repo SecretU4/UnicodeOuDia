@@ -334,6 +334,26 @@ void CDlgDiagramViewProp::OnOK()
 BOOL CDlgDiagramViewProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+
+	// Add time-scale labels as UTF-16 instead of legacy CP932 DLGINIT data.
+	{
+		CComboBox* pCombo = (CComboBox*)GetDlgItem( IDC_COMBO_Jikanmemori );
+		const wchar_t* pszItems[] = {
+			L"1\\x5206\\x76ee",
+			L"2\\x5206\\x76ee",
+			L"5\\x5206\\x76ee",
+			L"10\\x5206\\x76ee",
+			L"15\\x5206\\x76ee",
+			L"20\\x5206\\x76ee",
+			L"30\\x5206\\x76ee",
+			L"60\\x5206\\x76ee"
+		};
+		if ( pCombo != NULL )
+		{
+			pCombo->ResetContent();
+			for ( int i = 0; i < 8; ++i ) pCombo->AddString( pszItems[i] );
+		}
+	}
 	
 	if( !m_bEnableYokojiku )
 	{
