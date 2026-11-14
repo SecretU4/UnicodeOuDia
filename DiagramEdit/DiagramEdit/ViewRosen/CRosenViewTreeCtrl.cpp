@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //	$Id: CRosenViewTreeCtrl.cpp 261 2016-01-23 03:59:53Z okm $
 // ****************************************************************
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 #include "TreeCtrl\CaTreeCtrl.h"
 
 #include "CDlgRosenView.h"
@@ -97,6 +98,7 @@ BOOL CRosenViewTreeCtrl::OnContextMenu_TrackPopupMenu(
 		CMenu	aMenu ;
 		aMenu.LoadMenu( IDR_MENU_ROSENVIEW_CONTEXT ) ;
 		CMenu* pContextMenu = aMenu.GetSubMenu( 0 ) ;
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToMenu(pContextMenu->GetSafeHmenu());
 		//pContextMenu->SetDefaultItem( 0 , TRUE ) ;
 		pContextMenu->TrackPopupMenu( TPM_LEFTALIGN , x , y , AfxGetMainWnd() ) ;
 
@@ -111,6 +113,7 @@ BOOL CRosenViewTreeCtrl::OnContextMenu_TrackPopupMenu(
 		CMenu	aMenu ;
 		aMenu.LoadMenu( IDR_MENU_ROSENVIEW_CONTEXT ) ;
 		CMenu* pContextMenu = aMenu.GetSubMenu( 1 ) ;
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToMenu(pContextMenu->GetSafeHmenu());
 		//pContextMenu->SetDefaultItem( 0 , TRUE ) ;
 		UINT uiRet = pContextMenu->TrackPopupMenu( TPM_LEFTALIGN | TPM_RETURNCMD , 
 			x , y , pWnd ) ;
@@ -129,6 +132,7 @@ BOOL CRosenViewTreeCtrl::OnContextMenu_TrackPopupMenu(
 		CMenu	aMenu ;
 		aMenu.LoadMenu( IDR_MENU_ROSENVIEW_CONTEXT ) ;
 		CMenu* pContextMenu = aMenu.GetSubMenu( 2 ) ;
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToMenu(pContextMenu->GetSafeHmenu());
 		//pContextMenu->SetDefaultItem( 0 , TRUE ) ;
 		UINT uiRet = pContextMenu->TrackPopupMenu( TPM_LEFTALIGN | TPM_RETURNCMD , 
 			x , y , pWnd ) ;
@@ -147,6 +151,7 @@ BOOL CRosenViewTreeCtrl::OnContextMenu_TrackPopupMenu(
 		CMenu	aMenu ;
 		aMenu.LoadMenu( IDR_MENU_ROSENVIEW_CONTEXT ) ;
 		CMenu* pContextMenu = aMenu.GetSubMenu( 3 ) ;
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToMenu(pContextMenu->GetSafeHmenu());
 		//pContextMenu->SetDefaultItem( 0 , TRUE ) ;
 		pContextMenu->TrackPopupMenu( TPM_LEFTALIGN , x , y , AfxGetMainWnd() ) ;
 
@@ -162,6 +167,7 @@ BOOL CRosenViewTreeCtrl::OnContextMenu_TrackPopupMenu(
 		CMenu	aMenu ;
 		aMenu.LoadMenu( IDR_MENU_ROSENVIEW_CONTEXT ) ;
 		CMenu* pContextMenu = aMenu.GetSubMenu( 5 ) ;
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToMenu(pContextMenu->GetSafeHmenu());
 		//pContextMenu->SetDefaultItem( 0 , TRUE ) ;
 		UINT uiRet = pContextMenu->TrackPopupMenu( TPM_LEFTALIGN | TPM_RETURNCMD , 
 			x , y , pWnd ) ;
@@ -181,6 +187,7 @@ BOOL CRosenViewTreeCtrl::OnContextMenu_TrackPopupMenu(
 		CMenu	aMenu ;
 		aMenu.LoadMenu( IDR_MENU_ROSENVIEW_CONTEXT ) ;
 		CMenu* pContextMenu = aMenu.GetSubMenu( 5 ) ;
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToMenu(pContextMenu->GetSafeHmenu());
 		//pContextMenu->SetDefaultItem( 0 , TRUE ) ;
 		UINT uiRet = pContextMenu->TrackPopupMenu( TPM_LEFTALIGN | TPM_RETURNCMD , 
 			x , y , pWnd ) ;
@@ -200,6 +207,7 @@ BOOL CRosenViewTreeCtrl::OnContextMenu_TrackPopupMenu(
 		CMenu	aMenu ;
 		aMenu.LoadMenu( IDR_MENU_ROSENVIEW_CONTEXT ) ;
 		CMenu* pContextMenu = aMenu.GetSubMenu( 6 ) ;
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToMenu(pContextMenu->GetSafeHmenu());
 		//pContextMenu->SetDefaultItem( 0 , TRUE ) ;
 		UINT uiRet = pContextMenu->TrackPopupMenu( TPM_LEFTALIGN | TPM_RETURNCMD , 
 			x , y , pWnd ) ;
@@ -218,6 +226,7 @@ BOOL CRosenViewTreeCtrl::OnContextMenu_TrackPopupMenu(
 		CMenu	aMenu ;
 		aMenu.LoadMenu( IDR_MENU_ROSENVIEW_CONTEXT ) ;
 		CMenu* pContextMenu = aMenu.GetSubMenu( 7 ) ;
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToMenu(pContextMenu->GetSafeHmenu());
 		//pContextMenu->SetDefaultItem( 0 , TRUE ) ;
 		UINT uiRet = pContextMenu->TrackPopupMenu( TPM_LEFTALIGN | TPM_RETURNCMD , 
 			x , y , pWnd ) ;
