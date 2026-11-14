@@ -546,7 +546,43 @@ END_MESSAGE_MAP()
 BOOL CDlgRessyasyubetsuProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
-	
+
+	// Add combo-box labels as UTF-16 instead of loading legacy CP932 DLGINIT data.
+	{
+		CComboBox* pFont = (CComboBox*)GetDlgItem( IDC_COMBO_JikokuhyouFontIndex );
+		CComboBox* pLine = (CComboBox*)GetDlgItem( IDC_COMBO_DiagramSenStyle );
+		CComboBox* pStop = (CComboBox*)GetDlgItem( IDC_COMBO_StopMarkDrawType );
+		const wchar_t* pszLineStyles[] = {
+			L"\\x5b9f\\x7dda",
+			L"\\x7834\\x7dda",
+			L"\\x70b9\\x7dda",
+			L"\\x4e00\\x70b9\\x9396\\x7dda"
+		};
+		const wchar_t* pszStopMarks[] = {
+			L"\\x505c\\x8eca\\x99c5\\x3092\\x660e\\x793a",
+			L"\\x660e\\x793a\\x3057\\x306a\\x3044"
+		};
+		if ( pFont != NULL )
+		{
+			pFont->ResetContent();
+			for ( int i = 1; i <= 8; ++i )
+			{
+				wchar_t szNumber[2] = { (wchar_t)(L'0' + i), L'\\0' };
+				pFont->AddString( szNumber );
+			}
+		}
+		if ( pLine != NULL )
+		{
+			pLine->ResetContent();
+			for ( int i = 0; i < 4; ++i ) pLine->AddString( pszLineStyles[i] );
+		}
+		if ( pStop != NULL )
+		{
+			pStop->ResetContent();
+			for ( int i = 0; i < 2; ++i ) pStop->AddString( pszStopMarks[i] );
+		}
+	}
+
 	//	編集を開始
 	m_PropEditUiInternal.StartEdit() ;
 
