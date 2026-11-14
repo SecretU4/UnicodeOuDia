@@ -168,3 +168,11 @@ const std::string& CLocalizationManager::GetLanguageCode() const
 {
     return m_languageCode;
 }
+
+void CLocalizationManager::SetLanguageCode(const std::string& languageCode)
+{
+    if (IsSupportedLanguage(languageCode))
+    {
+        m_languageCode = languageCode;
+    }
+}

@@ -20,6 +20,7 @@ public:
         const std::wstring& fallbackText) const;
 
     const std::string& GetLanguageCode() const;
+    void SetLanguageCode(const std::string& languageCode);
 
 private:
     std::string m_languageCode;
