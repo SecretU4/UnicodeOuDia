@@ -204,7 +204,14 @@ namespace
                 : GetCommandMenuTranslation(localization, itemInfo.wID, &translated);
             if (!hasTranslation)
             {
-                translated = localization.GetText(L"Text." + currentText, currentText);
+                const std::wstring::size_type shortcut = currentText.find(L'\\t');
+                const std::wstring label = shortcut == std::wstring::npos
+                    ? currentText : currentText.substr(0, shortcut);
+                const std::wstring suffix = shortcut == std::wstring::npos
+                    ? std::wstring() : currentText.substr(shortcut);
+                const std::wstring translatedLabel =
+                    localization.GetText(L"Text." + label, label);
+                translated = translatedLabel + suffix;
                 hasTranslation = translated != currentText;
             }
             if (hasTranslation && translated != currentText)
