@@ -202,6 +202,7 @@ void CRessyajouhouDraw::onCentDedDgrEkiJikoku(
 			strRessyajouhou += pCentDedDgrRessya->getGousuu() ;
 			CString	aStr ;
 			aStr.LoadString( IDS_WORD_GOUSUU2 ) ;
+		aStr = LocalizeUiText(std::wstring((LPCTSTR)aStr)).c_str();
 			strRessyajouhou += stringOf( std::wstring( (LPCTSTR)aStr ) ) ;
 		}
 	}
