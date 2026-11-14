@@ -1864,6 +1864,7 @@ void CCellBuilder::update02_02_02_05_setRessya_Gou(
 			if ( !pCentDedRessya->getGousuu().empty() )
 			{
 				strText.LoadString( IDS_WORD_GOUSUU2 ) ;
+		strText = LocalizeUiText(std::wstring((LPCTSTR)strText)).c_str();
 			}
 
 			*pCDcDrawCell = createCDcdRessyabangou( idxRessyasyubetsu );
