@@ -67,6 +67,7 @@ Copyright (C) 2006-2017 take-okm
 /** @file */
 
 #include "stdafx.h"
+#include <afxpriv.h>
 
 #include "NsOu/OuNew.h"
 #include "str/vectorToFile.h"
