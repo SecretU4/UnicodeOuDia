@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include "DcDraw/CDcdTargetOnPaint.h"
 #include "DcDraw/CaDcdTargetItemPosition.h"
@@ -343,6 +344,7 @@ BOOL CDlgRosenFileProp_FontColor::OnInitDialog()
 	// --------------------------------
 	updateUIState() ;
 
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
 	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
