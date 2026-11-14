@@ -301,6 +301,7 @@ BOOL CDlgEkijikokuProp::OnInitDialog()
 	LogMsg( "CDlgEkijikokuProp::OnInitDialog()" ) ;
 
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	LogMsg( "CDlgEkijikokuProp::OnInitDialog()1 " ) ;
 	
 	m_PropEditUiInternal.StartEdit() ;
