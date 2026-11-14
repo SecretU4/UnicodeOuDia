@@ -385,6 +385,7 @@ CString CDiagramEditApp::getCFileDialogOudFilter()
 	{
 		CString	strFilterName ;
 		pRootDoctmpl()->GetDocString( strFilterName , CDocTemplate::filterName ) ;
+		strFilterName = LocalizeUiText(std::wstring((LPCTSTR)strFilterName)).c_str();
 		CString	strExt ;
 		pRootDoctmpl()->GetDocString( strExt , CDocTemplate::filterExt ) ;
 		strFilter += strFilterName ;
@@ -432,18 +433,18 @@ CString CDiagramEditApp::getCFileDialogFilterCsv()
 CconvJikokuhyouCsv CDiagramEditApp::createCconvJikokuhyouCsv() 
 {
 	return	CconvJikokuhyouCsv( 
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Kudari ) ) ) , 
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Nobori ) ) ) , 
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Ressyabangou ) ) ) , 
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_RESSYASYUBETSU ) ) ) ,
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Ressyamei ) ) ) ,
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Gousuu ) ) ) ,
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_GOUSUU2 ) ) ) ,
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Bikou ) ) ) ,
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Chaku ) ) ) ,
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_Hatsu ) ) ) ,
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_TSUUKA ) ) ) , 
-		stringOf( std::wstring( (LPCTSTR)MfcUtil::LoadCString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) ) ) //"||"
+		localizedResourceString( IDS_WORD_Kudari ) , 
+		localizedResourceString( IDS_WORD_Nobori ) , 
+		localizedResourceString( IDS_WORD_Ressyabangou ) , 
+		localizedResourceString( IDS_WORD_RESSYASYUBETSU ) ,
+		localizedResourceString( IDS_WORD_Ressyamei ) ,
+		localizedResourceString( IDS_WORD_Gousuu ) ,
+		localizedResourceString( IDS_WORD_GOUSUU2 ) ,
+		localizedResourceString( IDS_WORD_Bikou ) ,
+		localizedResourceString( IDS_WORD_Chaku ) ,
+		localizedResourceString( IDS_WORD_Hatsu ) ,
+		localizedResourceString( IDS_WORD_JIKOKUHYOU_TSUUKA ) , 
+		localizedResourceString( IDS_WORD_JIKOKUHYOU_KEIYUNASI ) //"||"
 	);	
 
 }
