@@ -30,3 +30,6 @@ private:
     std::string m_languageCode;
     std::map<std::wstring, std::wstring> m_texts;
 };
+
+// Translates a complete UI message when a matching Text entry exists.
+std::wstring LocalizeUiText(const std::wstring& original);
