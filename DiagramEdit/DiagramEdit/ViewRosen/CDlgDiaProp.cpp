@@ -131,7 +131,7 @@ void CDlgDiaProp::OnOK()
 	if ( iRv >= 0 ){
 		CDialog::OnOK();
 	}	else	{
-		MessageBox( strError , NULL , MB_OK | MB_ICONEXCLAMATION ) ;
+		MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , NULL , MB_OK | MB_ICONEXCLAMATION ) ;
 	}
 }
 
