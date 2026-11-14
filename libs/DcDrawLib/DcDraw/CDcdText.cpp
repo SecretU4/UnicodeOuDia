@@ -216,7 +216,7 @@ bool CDcdText::getItemSize( IfDcdTarget* pIfDcdTarget ,
 	}
 	//--------------------------------
 	
-	string strExtent ;
+	tstring strExtent ;
 	if ( iRv >= 0 ){
 		strExtent = m_strExtent ;
 		if ( strExtent.empty() ){
