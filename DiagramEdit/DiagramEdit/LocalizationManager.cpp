@@ -262,6 +262,7 @@ std::wstring CLocalizationManager::TranslateText(const std::wstring& original) c
     const std::wstring exact = TranslateDialogText(this, original);
     if (exact != original) return exact;
 
+    const std::wstring normalized = MakeDialogTextKey(original).substr(5);
     for (std::map<std::wstring, std::wstring>::const_iterator entry = m_texts.begin();
          entry != m_texts.end(); ++entry)
     {
@@ -287,14 +288,14 @@ std::wstring CLocalizationManager::TranslateText(const std::wstring& original) c
                       (pattern[next + 1] == L's' || pattern[next + 1] == L'd')))
                     ++next;
                 const std::wstring literal = pattern.substr(p, next - p);
-                const size_t found = literal.empty() ? original.size() :
-                    original.find(literal, t);
+                const size_t found = literal.empty() ? normalized.size() :
+                    normalized.find(literal, t);
                 if (found == std::wstring::npos || found < t)
                 {
                     matched = false;
                     break;
                 }
-                captures.push_back(original.substr(t, found - t));
+                captures.push_back(normalized.substr(t, found - t));
                 t = found;
             }
             else
@@ -305,7 +306,7 @@ std::wstring CLocalizationManager::TranslateText(const std::wstring& original) c
                       (pattern[next + 1] == L's' || pattern[next + 1] == L'd')))
                     ++next;
                 const std::wstring literal = pattern.substr(p, next - p);
-                if (original.compare(t, literal.size(), literal) != 0)
+                if (normalized.compare(t, literal.size(), literal) != 0)
                 {
                     matched = false;
                     break;
