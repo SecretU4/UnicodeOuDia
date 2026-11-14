@@ -254,6 +254,7 @@ protected:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnInitMenuPopup(CMenu* pPopupMenu, UINT nIndex, BOOL bSysMenu);
 	afx_msg BOOL OnToolTipText(UINT nID, NMHDR* pNMHDR, LRESULT* pResult);
+	afx_msg LRESULT OnSetMessageString(WPARAM wParam, LPARAM lParam);
 	afx_msg void OnFileRosenfileInsert();
 	afx_msg void OnUpdateFileRosenfileInsert(CCmdUI *pCmdUI);
 	afx_msg void OnFileRosenCreateSubRosen();
