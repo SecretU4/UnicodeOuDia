@@ -525,7 +525,7 @@ BOOL CWndDcdGrid::Create(
 			, LoadCursor( NULL , IDC_ARROW ) 
 			, (HBRUSH)GetStockObject( WHITE_BRUSH ) 
 			, NULL ) 
-		, "CWndDcdGrid"	//	この文字列が表示されることはありません
+		, TEXT("CWndDcdGrid")	//	この文字列が表示されることはありません
 		, WS_CHILD | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 		, rect
 		, pParentWnd
@@ -540,7 +540,7 @@ BOOL CWndDcdGrid::Create( CWnd* pParentWnd, UINT nID )
 			, LoadCursor( NULL , IDC_ARROW ) 
 			, (HBRUSH)GetStockObject( WHITE_BRUSH ) 
 			, NULL ) 
-		, "CWndDcdGrid"	//	この文字列が表示されることはありません
+		, TEXT("CWndDcdGrid")	//	この文字列が表示されることはありません
 		, WS_CHILD | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 		, CRect( 0 , 0 , 0 , 0 ) 
 		, pParentWnd
