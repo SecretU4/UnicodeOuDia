@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include "NsMu/CaMui.h"
 
@@ -122,7 +123,6 @@ END_MESSAGE_MAP()
 BOOL CDlgDiaSaveSelect::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
-	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	
 	{
 		CListBox* pCListBox = (CListBox*)GetDlgItem( IDC_LIST_Dia ) ;
@@ -131,6 +131,7 @@ BOOL CDlgDiaSaveSelect::OnInitDialog()
 		}
 	}
 	
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
 	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
