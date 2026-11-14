@@ -333,6 +333,7 @@ CString CDiagramEditApp::getCFileDialogFilter()
 {
 	CString	strWinDIAFilter ;
 	strWinDIAFilter.LoadString( IDS_WinDIAFilter ) ;
+		strWinDIAFilter = LocalizeUiText(std::wstring((LPCTSTR)strWinDIAFilter)).c_str();
 
 	CString	strFilter ;
 	//OuDia
@@ -354,6 +355,7 @@ CString CDiagramEditApp::getCFileDialogFilter()
 	{
 		CString allFilter;
 		VERIFY(allFilter.LoadString(AFX_IDS_ALLFILTER));
+		allFilter = LocalizeUiText(std::wstring((LPCTSTR)allFilter)).c_str();
 		strFilter += allFilter;
 		strFilter += _T( "|" ) ;
 		strFilter += _T("*.*");
@@ -380,6 +382,7 @@ CString CDiagramEditApp::getCFileDialogOudFilter()
 	{
 		CString allFilter;
 		VERIFY(allFilter.LoadString(AFX_IDS_ALLFILTER));
+		allFilter = LocalizeUiText(std::wstring((LPCTSTR)allFilter)).c_str();
 		strFilter += allFilter;
 		strFilter += _T( "|" ) ;
 		strFilter += _T("*.*");
@@ -392,6 +395,7 @@ CString CDiagramEditApp::getCFileDialogFilterCsv()
 {
 	CString	strWinDIAFilter ;
 	strWinDIAFilter.LoadString( IDS_WinDIAFilter ) ;
+		strWinDIAFilter = LocalizeUiText(std::wstring((LPCTSTR)strWinDIAFilter)).c_str();
 
 	CString	strFilter ;
 	//CSV
@@ -402,6 +406,7 @@ CString CDiagramEditApp::getCFileDialogFilterCsv()
 	{
 		CString allFilter;
 		VERIFY(allFilter.LoadString(AFX_IDS_ALLFILTER));
+		allFilter = LocalizeUiText(std::wstring((LPCTSTR)allFilter)).c_str();
 		strFilter += allFilter;
 		strFilter += _T( "|" ) ;
 		strFilter += _T("*.*");
