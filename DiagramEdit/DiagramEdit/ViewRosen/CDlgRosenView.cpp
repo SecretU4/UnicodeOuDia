@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //	$Id: CDlgRosenView.cpp 295 2016-06-11 05:14:13Z okm $
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include <deque>
 
@@ -519,6 +520,7 @@ BOOL CDlgRosenView::OnInitDialog()
 
 	// --------------------------------
 	
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
 	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
