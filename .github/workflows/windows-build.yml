@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: windows-debug-build
+  group: windows-build
   cancel-in-progress: true
 
 jobs:
@@ -39,10 +39,25 @@ jobs:
         run: |
           msbuild DiagramEdit\DiagramEdit\DiagramEdit.vcxproj /m /v:minimal /t:Build /p:Configuration=Debug /p:Platform=Win32 /p:PlatformToolset=v143 /p:RestorePackages=false
 
-      - name: Upload executable
+      - name: Build OuDia Release (Win32, static runtime)
+        shell: pwsh
+        run: |
+          msbuild DiagramEdit\DiagramEdit\DiagramEdit.vcxproj /m /v:minimal /t:Build /p:Configuration=Release_Static /p:Platform=Win32 /p:PlatformToolset=v143 /p:RestorePackages=false
+
+      - name: Upload Debug executable
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: OuDia-Debug-Win32
           path: DiagramEdit\DiagramEdit\Debug\DiagramEdit.exe
+          if-no-files-found: error
+
+      - name: Upload Release package
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: OuDia-Release-Win32-Static
+          path: |
+            DiagramEdit\DiagramEdit\Release_Static\oudia.exe
+            DiagramEdit\DiagramEdit_setup\CollectedOnBuild\**
           if-no-files-found: error
