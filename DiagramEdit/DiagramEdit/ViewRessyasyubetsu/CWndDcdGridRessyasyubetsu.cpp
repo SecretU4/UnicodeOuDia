@@ -748,10 +748,12 @@ int CWndDcdGridRessyasyubetsu::OnEditCut_Process( BOOL bQueryEnable )
 				if ( eRessyahoukou == Ressyahoukou_Kudari )
 				{
 					strRessyahoukou.LoadString( IDS_WORD_Kudari ) ;
+		strRessyahoukou = LocalizeUiText(std::wstring((LPCTSTR)strRessyahoukou)).c_str();
 				}
 				else
 				{
 					strRessyahoukou.LoadString( IDS_WORD_Nobori ) ;
+		strRessyahoukou = LocalizeUiText(std::wstring((LPCTSTR)strRessyahoukou)).c_str();
 				}
 				CString	strMsg ;
 				strMsg.Format( IDS_ERR_ExistRessyaOfRessyasyubetsu ,
@@ -1032,10 +1034,12 @@ int CWndDcdGridRessyasyubetsu::OnEditClear_Process( BOOL bQueryEnable )
 				if ( eRessyahoukou == Ressyahoukou_Kudari )
 				{
 					strRessyahoukou.LoadString( IDS_WORD_Kudari ) ;
+		strRessyahoukou = LocalizeUiText(std::wstring((LPCTSTR)strRessyahoukou)).c_str();
 				}
 				else
 				{
 					strRessyahoukou.LoadString( IDS_WORD_Nobori ) ;
+		strRessyahoukou = LocalizeUiText(std::wstring((LPCTSTR)strRessyahoukou)).c_str();
 				}
 				CString	strMsg ;
 				strMsg.Format( IDS_ERR_ExistRessyaOfRessyasyubetsu ,
@@ -1526,6 +1530,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		// 種別名
 		CString	aString ;
 		aString.LoadString( IDS_WORD_Ressyasyubetsumei ) ;
+		aString = LocalizeUiText(std::wstring((LPCTSTR)aString)).c_str();
 
 		Ou<CDcdTextbox>	pCDcdTextbox = 
 			getCXDcdGrid()->getCell( XCOLUMNNNO_RESSYASYUBETSU , YCOLUMNNNO_HEADER )->getIfDcDraw() ;
@@ -1546,6 +1551,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		// 略称
 		CString	aString ;
 		aString.LoadString( IDS_WORD_Ryakusyou ) ;
+		aString = LocalizeUiText(std::wstring((LPCTSTR)aString)).c_str();
 
 		Ou<CDcdTextbox>	pCDcdTextbox = 
 			getCXDcdGrid()->getCell( XCOLUMNNNO_RYAKUSYOU , YCOLUMNNNO_HEADER )->getIfDcDraw() ;
@@ -1567,6 +1573,7 @@ int CWndDcdGridRessyasyubetsu::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		//	線スタイル
 		CString	aString ;
 		aString.LoadString( IDS_WORD_Senstyle ) ;
+		aString = LocalizeUiText(std::wstring((LPCTSTR)aString)).c_str();
 
 		Ou<CDcdTextbox>	pCDcdTextbox = 
 			getCXDcdGrid()->getCell( XCOLUMNNNO_LINESTYLE , YCOLUMNNNO_HEADER )->getIfDcDraw() ;
