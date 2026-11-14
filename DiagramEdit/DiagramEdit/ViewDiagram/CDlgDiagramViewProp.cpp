@@ -326,7 +326,7 @@ void CDlgDiagramViewProp::OnOK()
 			}
 			break ;
 		}
-		MessageBox( strError , NULL , MB_ICONEXCLAMATION | MB_OK ) ;
+		MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , NULL , MB_ICONEXCLAMATION | MB_OK ) ;
 	}
 
 }
