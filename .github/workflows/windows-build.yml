@@ -44,5 +44,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: OuDia-Debug-Win32
-          path: DiagramEdit\${{ matrix.configuration }}\DiagramEdit.exe
+          path: DiagramEdit\Debug\DiagramEdit.exe
           if-no-files-found: error
