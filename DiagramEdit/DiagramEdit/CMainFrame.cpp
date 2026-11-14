@@ -199,9 +199,14 @@ namespace
 
             std::wstring translated;
             const std::wstring currentText(textBuffer);
-            const bool hasTranslation = itemInfo.hSubMenu != NULL
+            bool hasTranslation = itemInfo.hSubMenu != NULL
                 ? GetPopupMenuTranslation(localization, currentText, &translated)
                 : GetCommandMenuTranslation(localization, itemInfo.wID, &translated);
+            if (!hasTranslation)
+            {
+                translated = localization.GetText(L"Text." + currentText, currentText);
+                hasTranslation = translated != currentText;
+            }
             if (hasTranslation && translated != currentText)
             {
                 MENUITEMINFOW updateInfo = {};
