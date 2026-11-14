@@ -128,6 +128,7 @@ void CDlgRosenfileInsert::OnBnClickedButtonAddRosenfilename()
 BOOL CDlgRosenfileInsert::OnInitDialog()
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 
 
 	//COMBO_EKIINDEX_TO_ADD
