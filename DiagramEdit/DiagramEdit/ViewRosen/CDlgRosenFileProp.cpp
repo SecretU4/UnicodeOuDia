@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include "DcDraw\CConverter_WinGdi.h"
 
@@ -328,6 +329,7 @@ BOOL CDlgRosenFileProp::OnInitDialog()
 	// --------------------------------
 	UpdateChildWindowShow() ;
 
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
 	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
