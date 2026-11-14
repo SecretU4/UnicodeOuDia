@@ -288,6 +288,7 @@ END_MESSAGE_MAP()
 BOOL CDlgRosenFileProp_FontColor::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	const CLocalizationManager& localization = ((CDiagramEditApp*)AfxGetApp())->getLocalizationManager();
 	
 	// --------------------------------
 	//	フォントリストボックス
@@ -302,7 +303,9 @@ BOOL CDlgRosenFileProp_FontColor::OnInitDialog()
 		CListBox*	pListBox = (CListBox*)GetDlgItem( IDC_LIST_FONT ) ;
 		int idx ;
 		for ( idx = 0 ; idx < (int)arstr.size() ; idx ++ ){
-			pListBox->AddString( wstringOf( arstr[ idx ] ).c_str() ) ;
+			const std::wstring original = wstringOf( arstr[ idx ] );
+			const std::wstring translated = localization.GetText( L"Text." + original, original );
+			pListBox->AddString( translated.c_str() ) ;
 		}
 		pListBox->SetCurSel( 0 ) ; 
 	}
