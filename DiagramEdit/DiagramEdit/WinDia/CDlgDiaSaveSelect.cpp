@@ -122,6 +122,7 @@ END_MESSAGE_MAP()
 BOOL CDlgDiaSaveSelect::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	
 	{
 		CListBox* pCListBox = (CListBox*)GetDlgItem( IDC_LIST_Dia ) ;
