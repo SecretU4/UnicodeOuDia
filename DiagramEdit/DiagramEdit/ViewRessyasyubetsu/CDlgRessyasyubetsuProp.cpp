@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include "MfcUtil\MfcUtil.h"
 #include "DcDraw\CConverter_WinGdi.h"
@@ -546,7 +547,6 @@ END_MESSAGE_MAP()
 BOOL CDlgRessyasyubetsuProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
-	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 
 	// Add combo-box labels as UTF-16 instead of loading legacy CP932 DLGINIT data.
 	{
@@ -588,6 +588,7 @@ BOOL CDlgRessyasyubetsuProp::OnInitDialog()
 	m_PropEditUiInternal.StartEdit() ;
 
 	
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
 	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
