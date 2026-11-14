@@ -220,7 +220,81 @@ void CLocalizationManager::ApplyToDialog(HWND dialog) const
 
 std::wstring CLocalizationManager::TranslateText(const std::wstring& original) const
 {
-    return TranslateDialogText(this, original);
+    const std::wstring exact = TranslateDialogText(this, original);
+    if (exact != original) return exact;
+
+    for (std::map<std::wstring, std::wstring>::const_iterator entry = m_texts.begin();
+         entry != m_texts.end(); ++entry)
+    {
+        const std::wstring prefix = L"Text.";
+        if (entry->first.compare(0, prefix.size(), prefix) != 0) continue;
+        const std::wstring pattern = entry->first.substr(prefix.size());
+        if (pattern.find(L"%s") == std::wstring::npos &&
+            pattern.find(L"%d") == std::wstring::npos) continue;
+
+        std::vector<std::wstring> captures;
+        size_t p = 0;
+        size_t t = 0;
+        bool matched = true;
+        while (p < pattern.size())
+        {
+            if (pattern[p] == L'%' && p + 1 < pattern.size() &&
+                (pattern[p + 1] == L's' || pattern[p + 1] == L'd'))
+            {
+                p += 2;
+                size_t next = p;
+                while (next < pattern.size() &&
+                    !(pattern[next] == L'%' && next + 1 < pattern.size() &&
+                      (pattern[next + 1] == L's' || pattern[next + 1] == L'd')))
+                    ++next;
+                const std::wstring literal = pattern.substr(p, next - p);
+                const size_t found = literal.empty() ? original.size() :
+                    original.find(literal, t);
+                if (found == std::wstring::npos || found < t)
+                {
+                    matched = false;
+                    break;
+                }
+                captures.push_back(original.substr(t, found - t));
+                t = found;
+            }
+            else
+            {
+                size_t next = p;
+                while (next < pattern.size() &&
+                    !(pattern[next] == L'%' && next + 1 < pattern.size() &&
+                      (pattern[next + 1] == L's' || pattern[next + 1] == L'd')))
+                    ++next;
+                const std::wstring literal = pattern.substr(p, next - p);
+                if (original.compare(t, literal.size(), literal) != 0)
+                {
+                    matched = false;
+                    break;
+                }
+                t += literal.size();
+                p = next;
+            }
+        }
+        if (!matched || t != original.size()) continue;
+
+        std::wstring translated;
+        size_t capture = 0;
+        for (size_t i = 0; i < entry->second.size(); ++i)
+        {
+            if (entry->second[i] == L'%' && i + 1 < entry->second.size() &&
+                (entry->second[i + 1] == L's' || entry->second[i + 1] == L'd'))
+            {
+                if (capture < captures.size()) translated += captures[capture++];
+                ++i;
+            }
+            else
+            {
+                translated += entry->second[i];
+            }
+        }
+        return translated;
+    }
+    return original;
 }
 
 CLocalizationManager::CLocalizationManager()
