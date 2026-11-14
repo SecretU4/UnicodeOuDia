@@ -553,21 +553,21 @@ BOOL CDlgRessyasyubetsuProp::OnInitDialog()
 		CComboBox* pLine = (CComboBox*)GetDlgItem( IDC_COMBO_DiagramSenStyle );
 		CComboBox* pStop = (CComboBox*)GetDlgItem( IDC_COMBO_StopMarkDrawType );
 		const wchar_t* pszLineStyles[] = {
-			L"\\x5b9f\\x7dda",
-			L"\\x7834\\x7dda",
-			L"\\x70b9\\x7dda",
-			L"\\x4e00\\x70b9\\x9396\\x7dda"
+			L"\x5b9f\x7dda",
+			L"\x7834\x7dda",
+			L"\x70b9\x7dda",
+			L"\x4e00\x70b9\x9396\x7dda"
 		};
 		const wchar_t* pszStopMarks[] = {
-			L"\\x505c\\x8eca\\x99c5\\x3092\\x660e\\x793a",
-			L"\\x660e\\x793a\\x3057\\x306a\\x3044"
+			L"\x505c\x8eca\x99c5\x3092\x660e\x793a",
+			L"\x660e\x793a\x3057\x306a\x3044"
 		};
 		if ( pFont != NULL )
 		{
 			pFont->ResetContent();
 			for ( int i = 1; i <= 8; ++i )
 			{
-				wchar_t szNumber[2] = { (wchar_t)(L'0' + i), L'\\0' };
+				wchar_t szNumber[2] = { (wchar_t)(L'0' + i), L'\0' };
 				pFont->AddString( szNumber );
 			}
 		}
