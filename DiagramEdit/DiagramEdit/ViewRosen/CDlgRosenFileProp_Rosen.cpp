@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include "..\DiagramEdit.h"
 #include "CDlgRosenFileProp.h"
@@ -183,6 +184,7 @@ BOOL CDlgRosenFileProp_Rosen::OnInitDialog()
 	
 	// TODO: この位置に初期化の補足処理を追加してください
 	
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
 	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
