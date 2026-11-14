@@ -170,7 +170,7 @@ namespace
                 reinterpret_cast<LPARAM>(items[i].text.c_str()));
             if (index < 0) continue;
             SendMessage(window, setData, index, static_cast<LPARAM>(items[i].data));
-            if (static_cast<LRESULT>(i) == selected) newSelection = index;
+            if (newSelection < 0 && !selectedText.empty() && items[i].text == selectedText) newSelection = index;
         }
         if (newSelection >= 0) SendMessage(window, setSelection, newSelection, 0);
     }
