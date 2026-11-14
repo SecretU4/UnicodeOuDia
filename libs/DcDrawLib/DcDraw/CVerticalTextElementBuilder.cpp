@@ -216,6 +216,7 @@ void CVerticalTextElementBuilder::scan(
 	}
 }
 
+} //namespace DcDraw
 } //namespace DcDrawLib
 
 
