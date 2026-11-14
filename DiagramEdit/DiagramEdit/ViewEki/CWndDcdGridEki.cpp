@@ -552,6 +552,7 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 				{
 					CString	strLs ;
 					strLs.LoadString( nameEEkijikokukeisiki[idx].m_iId ) ;
+		strLs = LocalizeUiText(std::wstring((LPCTSTR)strLs)).c_str();
 					strEkijikokukeisiki = stringOf( std::wstring( (LPCTSTR)strLs ) ) ;
 					break ;
 				}
@@ -572,6 +573,7 @@ void CWndDcdGridEki::OnUpdate_setCentDedEki_To_Column(
 				{
 					CString	strLs ;
 					strLs.LoadString( nameEkikibo[idx].m_iId ) ;
+		strLs = LocalizeUiText(std::wstring((LPCTSTR)strLs)).c_str();
 					strEkikibo = stringOf( std::wstring( (LPCTSTR)strLs ) ) ;
 					break ;
 				}
@@ -1512,6 +1514,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 			CString	aString ;
 			aString.LoadString( IDS_WORD_Ekimei ) ;
+		aString = LocalizeUiText(std::wstring((LPCTSTR)aString)).c_str();
 			Ou<CDcdTextbox>(pCDcdGridCell->getIfDcDraw())->setText( (LPCTSTR)aString ) ;
 		}
 		{
@@ -1525,6 +1528,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 			CString	aString ;
 			aString.LoadString( IDS_WORD_Jikokukeisiki ) ;
+		aString = LocalizeUiText(std::wstring((LPCTSTR)aString)).c_str();
 			Ou<CDcdTextbox>(pCDcdGridCell->getIfDcDraw())->setText( (LPCTSTR)aString ) ;
 		}
 		{
@@ -1538,6 +1542,7 @@ int CWndDcdGridEki::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 			CString	aString ;
 			aString.LoadString( IDS_WORD_Ekikibo ) ;
+		aString = LocalizeUiText(std::wstring((LPCTSTR)aString)).c_str();
 			Ou<CDcdTextbox>(pCDcdGridCell->getIfDcDraw())->setText( (LPCTSTR)aString ) ;
 		}
 	}
