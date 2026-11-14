@@ -193,7 +193,7 @@ void CDlgJikokuhyouViewProp::OnOK()
 		}
 		if ( strErrorMsg.GetLength() > 0 )
 		{
-			MessageBox( strErrorMsg , NULL , MB_ICONERROR ) ; 
+			MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_ICONERROR ) ; 
 		}
 	}
 }
