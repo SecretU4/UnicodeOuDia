@@ -134,7 +134,7 @@ public:
 	 @return
 		PropertyTextアイテム "FileType" の値です。
 	*/
-	static std::string getFileType(){	return "OuDia.1.02" ; } ;
+	static std::string getFileType(){	return "OuDia.1.10" ; } ;
 	
 	
 	
