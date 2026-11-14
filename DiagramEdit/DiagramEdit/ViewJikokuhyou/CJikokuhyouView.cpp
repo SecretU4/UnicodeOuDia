@@ -426,8 +426,10 @@ void CJikokuhyouView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 			CString	strHoukou ;
 			if ( pCJikokuhyouDoc->getRessyahoukou() == Ressyahoukou_Kudari ){
 				strHoukou.LoadString( IDS_WORD_Kudari ) ;
+		strHoukou = LocalizeUiText(std::wstring((LPCTSTR)strHoukou)).c_str();
 			}	else	{
 				strHoukou.LoadString( IDS_WORD_Nobori ) ;
+		strHoukou = LocalizeUiText(std::wstring((LPCTSTR)strHoukou)).c_str();
 			}
 			strText += stringOf( std::wstring( (LPCTSTR)strHoukou ) ) ;
 			strText += " " ;
