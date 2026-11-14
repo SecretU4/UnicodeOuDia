@@ -540,6 +540,9 @@ public:
 protected:
 	//{{AFX_MSG(CDiagramEditApp)
 	afx_msg void OnAppAbout();
+	void OnLanguageJapanese();
+	void OnLanguageEnglish();
+	void OnLanguageKorean();
 	afx_msg void OnVIEWEki();
 	afx_msg void OnUpdateFileSave(CCmdUI* pCmdUI);
 	afx_msg void OnFILEPrintPageProp();

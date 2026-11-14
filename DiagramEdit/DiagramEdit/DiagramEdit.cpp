@@ -1000,6 +1000,9 @@ int CDiagramEditApp::readCWndDcdGridEkiProp(
 BEGIN_MESSAGE_MAP(CDiagramEditApp, CHidemdiApp)
 	//{{AFX_MSG_MAP(CDiagramEditApp)
 	ON_COMMAND(ID_APP_ABOUT, OnAppAbout)
+	ON_COMMAND(ID_LANGUAGE_JAPANESE, OnLanguageJapanese)
+	ON_COMMAND(ID_LANGUAGE_ENGLISH, OnLanguageEnglish)
+	ON_COMMAND(ID_LANGUAGE_KOREAN, OnLanguageKorean)
 	ON_UPDATE_COMMAND_UI(ID_FILE_SAVE, OnUpdateFileSave)
 	ON_COMMAND(ID_FILE_PrintPageProp, OnFILEPrintPageProp)
 	ON_COMMAND(ID_FILE_OPEN, OnFileOpen)
@@ -1294,6 +1297,25 @@ BOOL CDiagramEditApp::InitInstance()
 
 
 // ダイアログを実行するためのアプリケーション コマンド
+
+void CDiagramEditApp::OnLanguageJapanese()
+{
+	WriteProfileString(nameSection, _T("Language"), _T("ja"));
+	AfxMessageBox(_T("言語設定を変更しました。変更を適用するには、OuDiaを再起動してください。"));
+}
+
+void CDiagramEditApp::OnLanguageEnglish()
+{
+	WriteProfileString(nameSection, _T("Language"), _T("en"));
+	AfxMessageBox(_T("The display language has been changed. Restart OuDia to apply the change."));
+}
+
+void CDiagramEditApp::OnLanguageKorean()
+{
+	WriteProfileString(nameSection, _T("Language"), _T("ko"));
+	AfxMessageBox(_T("표시 언어를 변경했습니다. 변경 사항을 적용하려면 OuDia를 다시 시작하세요."));
+}
+
 void CDiagramEditApp::OnAppAbout()
 {
 	string strProgramVer ;
