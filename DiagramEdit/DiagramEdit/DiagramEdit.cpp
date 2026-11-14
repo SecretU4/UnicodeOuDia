@@ -126,6 +126,19 @@ static BOOL saveLanguageSetting(LPCTSTR languageCode, const CString& filename)
 		savedLanguage, _countof(savedLanguage), filename);
 	return (_tcscmp(savedLanguage, languageCode) == 0);
 }
+static CString loadLocalizedCString(UINT resourceId)
+{
+    CString value = MfcUtil::LoadCString(resourceId);
+    value = LocalizeUiText(std::wstring((LPCTSTR)value)).c_str();
+    return value;
+}
+
+static string localizedResourceString(UINT resourceId)
+{
+    const CString value = loadLocalizedCString(resourceId);
+    return stringOf(std::wstring((LPCTSTR)value));
+}
+
 const TCHAR namePrintPageProp[] = _T( "PrintPageProp" ) ;
 const TCHAR nameLogLevel[] = _T( "LogLevel" ) ;
 
@@ -340,6 +353,7 @@ CString CDiagramEditApp::getCFileDialogFilter()
 	{
 		CString	strFilterName ;
 		pRootDoctmpl()->GetDocString( strFilterName , CDocTemplate::filterName ) ;
+		strFilterName = LocalizeUiText(std::wstring((LPCTSTR)strFilterName)).c_str();
 		CString	strExt ;
 		pRootDoctmpl()->GetDocString( strExt , CDocTemplate::filterExt ) ;
 		strFilter += strFilterName ;
@@ -400,7 +414,7 @@ CString CDiagramEditApp::getCFileDialogFilterCsv()
 	CString	strFilter ;
 	//CSV
 	{
-		strFilter += MfcUtil::LoadCString( IDS_CSVFilter )  ;
+		strFilter += loadLocalizedCString( IDS_CSVFilter ) ;
 	}
 	//all
 	{
