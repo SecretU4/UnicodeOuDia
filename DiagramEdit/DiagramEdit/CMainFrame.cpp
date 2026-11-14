@@ -621,6 +621,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CHidemdiMainfrm)
 	ON_WM_CREATE()
 	ON_WM_INITMENUPOPUP()
 	ON_NOTIFY_EX_RANGE(TTN_NEEDTEXT, 0, 0x0000FFFF, OnToolTipText)
+	ON_MESSAGE(WM_SETMESSAGESTRING, OnSetMessageString)
 	ON_COMMAND(ID_ROSEN_FILE_PROP, OnRosenFileProp)
 	ON_COMMAND(ID_WINDOW_ROSEN_VIEW, OnWindowRosenView)
 	ON_COMMAND(ID_ROSEN_DIALIST, OnRosenDialist)
@@ -656,6 +657,46 @@ CMainFrame::~CMainFrame()
 {
 }
 
+
+LRESULT CMainFrame::OnSetMessageString(WPARAM wParam, LPARAM lParam)
+{
+    CString resourceText;
+    if (wParam != 0)
+    {
+        if (!resourceText.LoadString(static_cast<UINT>(wParam)))
+            return CHidemdiMainfrm::OnSetMessageString(wParam, lParam);
+    }
+    else if (lParam != 0)
+    {
+        resourceText = reinterpret_cast<LPCTSTR>(lParam);
+    }
+    else
+    {
+        return CHidemdiMainfrm::OnSetMessageString(wParam, lParam);
+    }
+
+    CString displayText = resourceText;
+    const int separator = displayText.Find(_T('\n'));
+    if (separator >= 0)
+    {
+        const CString description = displayText.Left(separator);
+        std::wstring translated =
+            LocalizeUiText(std::wstring((LPCTSTR)description));
+        if (translated == std::wstring((LPCTSTR)description))
+        {
+            const CString shortText = displayText.Mid(separator + 1);
+            translated = LocalizeUiText(std::wstring((LPCTSTR)shortText));
+        }
+        displayText = translated.c_str();
+    }
+    else
+    {
+        displayText = LocalizeUiText(std::wstring((LPCTSTR)displayText)).c_str();
+    }
+
+    return CHidemdiMainfrm::OnSetMessageString(
+        0, reinterpret_cast<LPARAM>((LPCTSTR)displayText));
+}
 
 BOOL CMainFrame::OnToolTipText(UINT, NMHDR* pNMHDR, LRESULT* pResult)
 {
