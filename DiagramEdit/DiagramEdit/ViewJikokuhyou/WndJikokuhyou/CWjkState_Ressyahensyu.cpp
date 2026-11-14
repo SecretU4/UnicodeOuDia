@@ -1436,7 +1436,7 @@ int CWjkState_Ressyahensyu::
 			}
 			if ( strErrorMessage.GetLength() > 0 )
 			{
-				getCWndDcdGrid()->MessageBox( strErrorMessage , NULL , 
+				getCWndDcdGrid()->MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMessage)).c_str() , NULL , 
 					MB_OK | MB_ICONEXCLAMATION ) ;
 			}
 		}
@@ -2307,7 +2307,7 @@ int CWjkState_Ressyahensyu::
 			if ( strErrorMsg.IsEmpty() )
 			{
 				getCWndDcdGrid()->MessageBox( 
-					strErrorMsg , NULL , MB_ICONSTOP ) ;
+					LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_ICONSTOP ) ;
 			}
 		}
 
@@ -2440,7 +2440,7 @@ int CWjkState_Ressyahensyu::
 			if ( strErrorMsg.IsEmpty() )
 			{
 				getCWndDcdGrid()->MessageBox( 
-					strErrorMsg , NULL , MB_ICONSTOP ) ;
+					LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_ICONSTOP ) ;
 			}
 		}
 	}
