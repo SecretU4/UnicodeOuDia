@@ -186,7 +186,7 @@ namespace
             const std::wstring::size_type tab = current.find(L'\t');
             const std::wstring label = tab == std::wstring::npos ? current : current.substr(0, tab);
             const std::wstring suffix = tab == std::wstring::npos ? std::wstring() : current.substr(tab);
-            const std::wstring translated = manager->GetText(L"Text." + label, label) + suffix;
+            const std::wstring translated = TranslateDialogText(manager, label) + suffix;
             if (translated != current)
             {
                 MENUITEMINFOW update = {};
