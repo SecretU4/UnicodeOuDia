@@ -109,6 +109,29 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CDiagramEditApp
 const TCHAR nameSection[] = _T( "AppProp" ) ;
+
+// Save and read the language preference using one explicit LocalAppData INI path.
+static CString getLanguageProfileFilename()
+{
+	return makeLocalAppdataFilename(_T("OuDia.ini"));
+}
+
+static BOOL saveLanguageSetting(LPCTSTR languageCode)
+{
+	const CString filename = getLanguageProfileFilename();
+	if (!WritePrivateProfileString(nameSection, _T("Language"), languageCode, filename))
+	{
+		return FALSE;
+	}
+
+	WritePrivateProfileString(NULL, NULL, NULL, filename);
+
+	TCHAR savedLanguage[16] = {};
+	GetPrivateProfileString(
+		nameSection, _T("Language"), _T(""),
+		savedLanguage, _countof(savedLanguage), filename);
+	return (_tcscmp(savedLanguage, languageCode) == 0);
+}
 const TCHAR namePrintPageProp[] = _T( "PrintPageProp" ) ;
 const TCHAR nameLogLevel[] = _T( "LogLevel" ) ;
 
@@ -1101,8 +1124,12 @@ BOOL CDiagramEditApp::InitInstance()
 	//	表示言語の読み込み
 	// --------------------------------
 	{
-		CString strLanguageCode = GetProfileString(
-			nameSection, _T("Language"), _T("ja"));
+		TCHAR savedLanguage[16] = {};
+		const CString languageProfileFilename = getLanguageProfileFilename();
+		GetPrivateProfileString(
+			nameSection, _T("Language"), _T("ja"),
+			savedLanguage, _countof(savedLanguage), languageProfileFilename);
+		CString strLanguageCode(savedLanguage);
 		CString strLanguageFilename = _T("Languages\\");
 		strLanguageFilename += strLanguageCode;
 		strLanguageFilename += _T(".ini");
@@ -1300,22 +1327,37 @@ BOOL CDiagramEditApp::InitInstance()
 
 void CDiagramEditApp::OnLanguageJapanese()
 {
+	if (!saveLanguageSetting(_T("ja")))
+	{
+		AfxMessageBox(_T("言語設定を保存できませんでした。OuDia.ini の書き込み権限を確認してください。"));
+		return;
+	}
+
 	m_localizationManager.SetLanguageCode("ja");
-	WriteProfileString(nameSection, _T("Language"), _T("ja"));
 	AfxMessageBox(_T("言語設定を変更しました。変更を適用するには、OuDiaを再起動してください。"));
 }
 
 void CDiagramEditApp::OnLanguageEnglish()
 {
+	if (!saveLanguageSetting(_T("en")))
+	{
+		AfxMessageBox(_T("The language setting could not be saved. Please check write permissions for OuDia.ini."));
+		return;
+	}
+
 	m_localizationManager.SetLanguageCode("en");
-	WriteProfileString(nameSection, _T("Language"), _T("en"));
 	AfxMessageBox(_T("The display language has been changed. Restart OuDia to apply the change."));
 }
 
 void CDiagramEditApp::OnLanguageKorean()
 {
+	if (!saveLanguageSetting(_T("ko")))
+	{
+		AfxMessageBox(_T("언어 설정을 저장하지 못했습니다. OuDia.ini 파일의 쓰기 권한을 확인하세요."));
+		return;
+	}
+
 	m_localizationManager.SetLanguageCode("ko");
-	WriteProfileString(nameSection, _T("Language"), _T("ko"));
 	AfxMessageBox(_T("표시 언어를 변경했습니다. 변경 사항을 적용하려면 OuDia를 다시 시작하세요."));
 }
 
@@ -1355,7 +1397,7 @@ void CDiagramEditApp::OnUpdateFileSave(CCmdUI* pCmdUI)
 int CDiagramEditApp::ExitInstance() 
 {
 	CString strLanguageCode(wstringOf(m_localizationManager.GetLanguageCode()).c_str());
-	WriteProfileString(nameSection, _T("Language"), strLanguageCode);
+	saveLanguageSetting(strLanguageCode);
 
 	string	strPrintPageProp = m_CdPrintPageProp.encode() ;
 	WriteProfileString( nameSection , namePrintPageProp , tstringOf( strPrintPageProp ).c_str() ) ;
