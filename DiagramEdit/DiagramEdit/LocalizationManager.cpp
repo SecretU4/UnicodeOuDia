@@ -97,6 +97,45 @@ namespace
     }
 }
 
+namespace
+{
+    struct DialogTranslationContext
+    {
+        const CLocalizationManager* manager;
+    };
+
+    BOOL CALLBACK TranslateDialogChild(HWND window, LPARAM parameter)
+    {
+        DialogTranslationContext* context = reinterpret_cast<DialogTranslationContext*>(parameter);
+        if (context == NULL || context->manager == NULL) return TRUE;
+        const int length = GetWindowTextLengthW(window);
+        if (length <= 0) return TRUE;
+        std::vector<wchar_t> buffer(static_cast<size_t>(length) + 1);
+        GetWindowTextW(window, &buffer[0], length + 1);
+        const std::wstring original(&buffer[0]);
+        const std::wstring translated = context->manager->GetText(L"Text." + original, original);
+        if (translated != original) SetWindowTextW(window, translated.c_str());
+        return TRUE;
+    }
+}
+
+void CLocalizationManager::ApplyToDialog(HWND dialog) const
+{
+    if (dialog == NULL) return;
+    const int length = GetWindowTextLengthW(dialog);
+    if (length > 0)
+    {
+        std::vector<wchar_t> buffer(static_cast<size_t>(length) + 1);
+        GetWindowTextW(dialog, &buffer[0], length + 1);
+        const std::wstring original(&buffer[0]);
+        const std::wstring translated = GetText(L"Text." + original, original);
+        if (translated != original) SetWindowTextW(dialog, translated.c_str());
+    }
+    DialogTranslationContext context;
+    context.manager = this;
+    EnumChildWindows(dialog, TranslateDialogChild, reinterpret_cast<LPARAM>(&context));
+}
+
 CLocalizationManager::CLocalizationManager()
     : m_languageCode("ja")
 {
