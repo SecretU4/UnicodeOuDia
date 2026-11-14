@@ -242,7 +242,9 @@ BOOL CDlgModifyEkijikokuOperation2::OnInitDialog()
 		CString	strChaku ;
 		CString	strHatsu ;
 		strChaku.LoadString( IDS_WORD_Chaku ) ;
+		strChaku = LocalizeUiText(std::wstring((LPCTSTR)strChaku)).c_str();
 		strHatsu.LoadString( IDS_WORD_Hatsu ) ;
+		strHatsu = LocalizeUiText(std::wstring((LPCTSTR)strHatsu)).c_str();
 		int idxEki ;
 		for ( idxEki = 0 ; idxEki < (int)m_contstrEkimei.size() ; idxEki ++ )
 		{
