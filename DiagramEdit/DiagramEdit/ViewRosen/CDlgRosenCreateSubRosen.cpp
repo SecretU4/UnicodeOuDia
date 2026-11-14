@@ -154,7 +154,7 @@ BOOL CDlgRosenCreateSubRosen::OnInitDialog()
 	}
 	if ( !strErrorMsg.IsEmpty() )
 	{
-		MessageBox( strErrorMsg , NULL , MB_ICONSTOP );
+		MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_ICONSTOP );
 		EndDialog( IDCANCEL ) ;
 	}
 		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
@@ -197,7 +197,7 @@ void CDlgRosenCreateSubRosen::OnOK()
 		}
 		if ( !strErrorMsg.IsEmpty() )
 		{
-			MessageBox( strErrorMsg , NULL , MB_ICONSTOP );
+			MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_ICONSTOP );
 		}
 	}
 	else
