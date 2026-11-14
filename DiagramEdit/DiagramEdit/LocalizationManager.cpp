@@ -106,7 +106,7 @@ namespace
         std::wstring key = L"Text.";
         for (size_t i = 0; i < normalized.size(); ++i)
         {
-            if (text[i] == L'\r') continue;
+            if (normalized[i] == L'\r') continue;
             if (text[i] == L'\n') key += L"\\n";
             else key += text[i];
         }
