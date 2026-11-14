@@ -334,10 +334,12 @@ void CDlgDiagramViewProp::OnOK()
 BOOL CDlgDiagramViewProp::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 
 	// Add time-scale labels as UTF-16 instead of legacy CP932 DLGINIT data.
 	{
 		CComboBox* pCombo = (CComboBox*)GetDlgItem( IDC_COMBO_Jikanmemori );
+		const CLocalizationManager& localization = ((CDiagramEditApp*)AfxGetApp())->getLocalizationManager();
 		const wchar_t* pszItems[] = {
 			L"1\x5206\x76ee",
 			L"2\x5206\x76ee",
@@ -351,7 +353,7 @@ BOOL CDlgDiagramViewProp::OnInitDialog()
 		if ( pCombo != NULL )
 		{
 			pCombo->ResetContent();
-			for ( int i = 0; i < 8; ++i ) pCombo->AddString( pszItems[i] );
+			for ( int i = 0; i < 8; ++i ) { const std::wstring original( pszItems[i] ); const std::wstring translated = localization.GetText( L"Text." + original, original ); pCombo->AddString( translated.c_str() ); }
 			pCombo->SetCurSel( m_iCOMBO_Jikanmemori );
 		}
 	}
