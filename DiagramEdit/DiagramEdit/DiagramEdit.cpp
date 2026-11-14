@@ -498,17 +498,17 @@ const TCHAR nameCWndDiagram_DcdPerDgrY[] = _T("DcdPerDgrY") ;
 
 const TCHAR nameCWndDiagram_VlineMode[] = _T("DiagramVlineMode") ;
 const TCHAR nameCWndDiagram_DisplayRessyabangou[] = 
-	"DiagramDisplayRessyabangou" ;
+	_T( "DiagramDisplayRessyabangou" ) ;
 const TCHAR nameCWndDiagram_DisplayRessyamei[] = 
-	"DiagramDisplayRessyamei" ;
+	_T( "DiagramDisplayRessyamei" ) ;
 const TCHAR nameCWndDiagram_DisplayRessyasen[] = 
-	"DiagramDisplayRessyasen" ;
+	_T( "DiagramDisplayRessyasen" ) ;
 const TCHAR nameCWndDiagram_HideIppanekiEkimei[] = 
-	"DiagramHideIppanekiEkimei" ;
+	_T( "DiagramHideIppanekiEkimei" ) ;
 const TCHAR nameCWndDiagram_StopMarkDraw[] = 
-	"DiagramStopMarkDraw" ;
+	_T( "DiagramStopMarkDraw" ) ;
 const TCHAR nameCWndDiagram_KeepZoneDgrOnSize[] = 
-	"DiagramKeepZoneDgrOnSize" ;
+	_T( "DiagramKeepZoneDgrOnSize" ) ;
 
 int CDiagramEditApp::writeCWndDiagramViewProp( const CWndDiagram* pCWndDiagram )
 {
