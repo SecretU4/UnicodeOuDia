@@ -17,6 +17,7 @@ public:
 
     // Returns the translated value, or fallbackText when the key is absent.
     void ApplyToDialog(HWND dialog) const;
+    void ApplyToMenu(HMENU menu) const;
     std::wstring TranslateText(const std::wstring& original) const;
 
     std::wstring GetText(
