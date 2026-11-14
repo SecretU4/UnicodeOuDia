@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include "str/tstring.h"
 #include "str/strToWstr.h"
@@ -120,6 +121,13 @@ END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CDlgJikokuhyouViewProp メッセージ ハンドラ
+
+BOOL CDlgJikokuhyouViewProp::OnInitDialog()
+{
+    CDialog::OnInitDialog();
+    ((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
+    return TRUE;
+}
 
 void CDlgJikokuhyouViewProp::OnOK() 
 {
