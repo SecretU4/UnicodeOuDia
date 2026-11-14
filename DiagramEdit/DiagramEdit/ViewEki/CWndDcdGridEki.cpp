@@ -959,7 +959,7 @@ int CWndDcdGridEki:: OnEDITEkiInsert_Process( BOOL bQueryEnable )
 			}
 			if ( strErrorMessage.GetLength() > 0 )
 			{
-				MessageBox( strErrorMessage , NULL , MB_ICONSTOP | MB_OK ) ; 
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMessage)).c_str() , NULL , MB_ICONSTOP | MB_OK ) ; 
 			}
 		}
 		// ****************************************************************
@@ -1025,7 +1025,7 @@ int CWndDcdGridEki::OnEditEkiInvert_Process( BOOL bQueryEnable )
 			}
 			if ( strErrorMessage.GetLength() > 0 )
 			{
-				MessageBox( strErrorMessage , NULL , MB_ICONSTOP | MB_OK ) ; 
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMessage)).c_str() , NULL , MB_ICONSTOP | MB_OK ) ; 
 			}
 		}
 		// ****************************************************************
@@ -1391,7 +1391,7 @@ int CWndDcdGridEki::execEkiPropDlg( bool bInsert , BOOL bQueryEnable )
 			}
 			if ( strErrorMessage.GetLength() > 0 )
 			{
-				MessageBox( strErrorMessage , NULL , MB_ICONSTOP | MB_OK ) ; 
+				MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMessage)).c_str() , NULL , MB_ICONSTOP | MB_OK ) ; 
 			}
 		}
 
