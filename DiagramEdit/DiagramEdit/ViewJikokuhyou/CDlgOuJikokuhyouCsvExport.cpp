@@ -316,7 +316,7 @@ void CDlgOuJikokuhyouCsvExport::OnOK()
 	{
 		if ( !strError.IsEmpty() )
 		{
-			MessageBox( strError , NULL , MB_ICONEXCLAMATION ) ;
+			MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , NULL , MB_ICONEXCLAMATION ) ;
 		}
 	}
 	//CDialog::OnOK();
