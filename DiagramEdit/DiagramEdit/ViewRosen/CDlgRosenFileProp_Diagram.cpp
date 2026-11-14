@@ -157,7 +157,7 @@ int CDlgRosenFileProp_Diagram::updatePropEditorData()
 		}
 		if ( !strError.IsEmpty() )
 		{
-			MessageBox( strError , NULL ,  MB_OK | MB_ICONEXCLAMATION ) ;
+			MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strError)).c_str() , NULL ,  MB_OK | MB_ICONEXCLAMATION ) ;
 		}
 	}
 
