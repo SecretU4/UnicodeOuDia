@@ -202,6 +202,7 @@ END_MESSAGE_MAP()
 BOOL CDlgRosenFileProp_Diagram::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
+	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	
 	// --------------------------------
 	updateUIState() ;
