@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //	$Id: CDlgDiaList.cpp 378 2016-11-16 21:10:54Z okm $
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 
 #include "NsOu/OuNew.h"
 #include "NsMu/CaMui.h"
@@ -275,10 +276,10 @@ END_MESSAGE_MAP()
 BOOL CDlgDiaList::OnInitDialog() 
 {
 	CDialog::OnInitDialog();
-	((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	
 	updateControl() ;
 	
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // コントロールにフォーカスを設定しないとき、戻り値は TRUE となります
 	              // 例外: OCX プロパティ ページの戻り値は FALSE となります
 }
