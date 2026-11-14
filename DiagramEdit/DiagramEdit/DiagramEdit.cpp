@@ -1354,7 +1354,7 @@ void CDiagramEditApp::OnUpdateFileSave(CCmdUI* pCmdUI)
 
 int CDiagramEditApp::ExitInstance() 
 {
-	CString strLanguageCode(m_localizationManager.GetLanguageCode().c_str());
+	CString strLanguageCode(wstringOf(m_localizationManager.GetLanguageCode()).c_str());
 	WriteProfileString(nameSection, _T("Language"), strLanguageCode);
 
 	string	strPrintPageProp = m_CdPrintPageProp.encode() ;
