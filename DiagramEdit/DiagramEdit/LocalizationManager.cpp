@@ -102,11 +102,15 @@ namespace
 {
     std::wstring MakeDialogTextKey(const std::wstring& text)
     {
-        const std::wstring normalized = Trim(text);
+        size_t first = 0;
+        size_t last = text.size();
+        while (first < last && (text[first] == L' ' || text[first] == L'\t')) ++first;
+        while (last > first && (text[last - 1] == L' ' || text[last - 1] == L'\t')) --last;
+
         std::wstring key = L"Text.";
-        for (size_t i = 0; i < normalized.size(); ++i)
+        for (size_t i = first; i < last; ++i)
         {
-            if (normalized[i] == L'\r') continue;
+            if (text[i] == L'\r') continue;
             if (text[i] == L'\n') key += L"\\n";
             else key += text[i];
         }
