@@ -218,6 +218,45 @@ void CLocalizationManager::ApplyToDialog(HWND dialog) const
     EnumChildWindows(dialog, TranslateDialogChild, reinterpret_cast<LPARAM>(&context));
 }
 
+namespace
+{
+    void TranslateMenuTree(HMENU menu, const CLocalizationManager* manager)
+    {
+        if (menu == NULL || manager == NULL) return;
+        const int count = GetMenuItemCount(menu);
+        for (int i = 0; i < count; ++i)
+        {
+            wchar_t buffer[512] = {};
+            MENUITEMINFOW info = {};
+            info.cbSize = sizeof(info);
+            info.fMask = MIIM_SUBMENU | MIIM_STRING;
+            info.dwTypeData = buffer;
+            info.cch = 511;
+            if (!GetMenuItemInfoW(menu, static_cast<UINT>(i), TRUE, &info)) continue;
+            if (info.hSubMenu != NULL) TranslateMenuTree(info.hSubMenu, manager);
+
+            std::wstring current(buffer);
+            const std::wstring::size_type tab = current.find(L'\t');
+            const std::wstring label = tab == std::wstring::npos ? current : current.substr(0, tab);
+            const std::wstring suffix = tab == std::wstring::npos ? std::wstring() : current.substr(tab);
+            const std::wstring translated = manager->GetText(L"Text." + label, label) + suffix;
+            if (translated != current)
+            {
+                MENUITEMINFOW update = {};
+                update.cbSize = sizeof(update);
+                update.fMask = MIIM_STRING;
+                update.dwTypeData = const_cast<LPWSTR>(translated.c_str());
+                SetMenuItemInfoW(menu, static_cast<UINT>(i), TRUE, &update);
+            }
+        }
+    }
+}
+
+void CLocalizationManager::ApplyToMenu(HMENU menu) const
+{
+    TranslateMenuTree(menu, this);
+}
+
 std::wstring CLocalizationManager::TranslateText(const std::wstring& original) const
 {
     const std::wstring exact = TranslateDialogText(this, original);
