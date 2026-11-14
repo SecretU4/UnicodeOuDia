@@ -402,6 +402,29 @@ BOOL CDlgEkiProp::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
+	// Combo-box items are added as Unicode strings at runtime.
+	// Avoid DLGINIT, whose string payload is interpreted using MFC's
+	// resource character format and caused mojibake in Unicode builds.
+	{
+		CComboBox* pKudari = (CComboBox*)GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiKudari );
+		CComboBox* pNobori = (CComboBox*)GetDlgItem( IDC_COMBO_DiagramRessyajouhouHyoujiNobori );
+		const wchar_t* pszItems[] = {
+			L"\\x59cb\\x767a\\x306a\\x3089\\x8868\\x793a",
+			L"\\x5e38\\x306b\\x8868\\x793a",
+			L"\\x8868\\x793a\\x3057\\x306a\\x3044"
+		};
+		if ( pKudari != NULL )
+		{
+			pKudari->ResetContent();
+			for ( int i = 0; i < 3; ++i ) pKudari->AddString( pszItems[i] );
+		}
+		if ( pNobori != NULL )
+		{
+			pNobori->ResetContent();
+			for ( int i = 0; i < 3; ++i ) pNobori->AddString( pszItems[i] );
+		}
+	}
+
 	//	編集を開始
 	m_PropEditUiInternal.StartEdit() ;
 	
