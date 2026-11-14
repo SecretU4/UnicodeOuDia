@@ -2,6 +2,7 @@
 
 #include <map>
 #include <string>
+#include <windows.h>
 
 // Loads UTF-8 localization files and provides Japanese fallback text.
 // Keys use the form "Section.Key", for example "Common.OK".
@@ -15,6 +16,8 @@ public:
     bool Load(const std::wstring& filePath, const std::string& languageCode);
 
     // Returns the translated value, or fallbackText when the key is absent.
+    void ApplyToDialog(HWND dialog) const;
+
     std::wstring GetText(
         const std::wstring& key,
         const std::wstring& fallbackText) const;
