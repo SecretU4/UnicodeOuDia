@@ -734,6 +734,7 @@ CString CWndJikokuhyou::OnUpdateINDICATOR_PasteZoubun_Process()
 	{
 		//	連続入力モード
 		strLs.LoadString( IDS_INDICATOR_Renzoku ) ;
+		strLs = LocalizeUiText(std::wstring((LPCTSTR)strLs)).c_str();
 	}
 	else
 	{
