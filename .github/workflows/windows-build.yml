@@ -9,16 +9,13 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: windows-debug-build
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: windows-2022
-    strategy:
-      fail-fast: false
-      matrix:
-        configuration:
-          - Debug
-          - Release
-          - Release_Static
 
     steps:
       - name: Check out source
@@ -40,12 +37,12 @@ jobs:
       - name: Build OuDia (Win32)
         shell: pwsh
         run: |
-          msbuild DiagramEdit\DiagramEdit\DiagramEdit.vcxproj /m /v:minimal /t:Build /p:Configuration=${{ matrix.configuration }} /p:Platform=Win32 /p:PlatformToolset=v143 /p:RestorePackages=false
+          msbuild DiagramEdit\DiagramEdit\DiagramEdit.vcxproj /m /v:minimal /t:Build /p:Configuration=Debug /p:Platform=Win32 /p:PlatformToolset=v143 /p:RestorePackages=false
 
       - name: Upload executable
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: OuDia-${{ matrix.configuration }}-Win32
-          path: DiagramEdit\${{ matrix.configuration }}\${{ matrix.configuration == 'Debug' && 'DiagramEdit.exe' || 'oudia.exe' }}
+          name: OuDia-Debug-Win32
+          path: DiagramEdit\${{ matrix.configuration }}\DiagramEdit.exe
           if-no-files-found: error
