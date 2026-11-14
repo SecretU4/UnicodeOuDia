@@ -221,9 +221,9 @@
     </Bscmake>
     <PostBuildEvent>
       <Command>echo ConvFileDllとヘルプをsetupプロジェクトディレクトリにコピーします
-if not exist "$(SolutionDir)DiagramEdit_setup\CollectedOnBuild" mkdir "$(SolutionDir)DiagramEdit_setup\CollectedOnBuild"
-if exist "$(ProjectDir)$(Configuration)\*.dll" copy /Y "$(ProjectDir)$(Configuration)\*.dll" "$(SolutionDir)DiagramEdit_setup\CollectedOnBuild"
-if exist "$(ProjectDir)$(Configuration)\*.chm" copy /Y "$(ProjectDir)$(Configuration)\*.chm" "$(SolutionDir)DiagramEdit_setup\CollectedOnBuild"
+if not exist "$(ProjectDir)..\DiagramEdit_setup\CollectedOnBuild" mkdir "$(ProjectDir)..\DiagramEdit_setup\CollectedOnBuild"
+if exist "$(ProjectDir)$(Configuration)\*.dll" copy /Y "$(ProjectDir)$(Configuration)\*.dll" "$(ProjectDir)..\DiagramEdit_setup\CollectedOnBuild"
+if exist "$(ProjectDir)$(Configuration)\*.chm" copy /Y "$(ProjectDir)$(Configuration)\*.chm" "$(ProjectDir)..\DiagramEdit_setup\CollectedOnBuild"
 
 </Command>
     </PostBuildEvent>
