@@ -666,6 +666,10 @@ void CMainFrame::OnInitMenuPopup(CMenu* pPopupMenu, UINT nIndex, BOOL bSysMenu)
 	{
 		LocalizeMenuTree(pMenu->GetSafeHmenu(), pApp->getLocalizationManager());
 	}
+	if (pPopupMenu != NULL && pApp != NULL)
+	{
+		pApp->getLocalizationManager().ApplyToMenu(pPopupMenu->GetSafeHmenu());
+	}
 }
 
 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
