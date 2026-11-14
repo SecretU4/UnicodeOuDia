@@ -66,6 +66,7 @@ Copyright (C) 2006-2017 take-okm
 //
 
 #include "stdafx.h"
+#include "..\\DiagramEdit.h"
 #include "resource.h"
 #include "CDlgProgress.h"
 
@@ -157,6 +158,7 @@ BOOL CDlgProgress::OnInitDialog()
 
 	// TODO:  ここに初期化を追加してください
 
+		((CDiagramEditApp*)AfxGetApp())->getLocalizationManager().ApplyToDialog(GetSafeHwnd());
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// 例外 : OCX プロパティ ページは必ず FALSE を返します。
 }
