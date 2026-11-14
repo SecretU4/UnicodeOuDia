@@ -371,7 +371,7 @@ void CDlgRessyasyubetsuProp::CPropEditUiInternal::ShowError(
 	{
 		pOuter->GetDlgItem( IDC_ERROR_RyakusyouLength )->GetWindowText( strErrorMsg )  ;
 	}
-	pOuter->MessageBox( strErrorMsg , NULL , MB_OK | MB_ICONEXCLAMATION ) ;
+	pOuter->MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_OK | MB_ICONEXCLAMATION ) ;
 
 }
 
