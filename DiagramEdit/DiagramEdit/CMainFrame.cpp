@@ -151,20 +151,20 @@ namespace
         const wchar_t* fallback = NULL;
         switch (commandId)
         {
-        case ID_FILE_NEW: key = L"Menu.New"; fallback = L"新規作成(&N)"; break;
-        case ID_FILE_OPEN: key = L"Menu.Open"; fallback = L"開く(&O)..."; break;
+        case ID_FILE_NEW: key = L"Menu.New"; fallback = L"新規作成(&N)\tCtrl+N"; break;
+        case ID_FILE_OPEN: key = L"Menu.Open"; fallback = L"開く(&O)...\tCtrl+O"; break;
         case ID_FILE_CLOSE: key = L"Menu.Close"; fallback = L"閉じる(&C)"; break;
-        case ID_FILE_SAVE: key = L"Menu.Save"; fallback = L"上書き保存(&S)"; break;
+        case ID_FILE_SAVE: key = L"Menu.Save"; fallback = L"上書き保存(&S)\tCtrl+S"; break;
         case ID_FILE_SAVE_AS: key = L"Menu.SaveAs"; fallback = L"名前を付けて保存(&A)..."; break;
-        case ID_FILE_PRINT: key = L"Menu.Print"; fallback = L"印刷(&P)..."; break;
+        case ID_FILE_PRINT: key = L"Menu.Print"; fallback = L"印刷(&P)...\tCtrl+P"; break;
         case ID_FILE_PRINT_PREVIEW: key = L"Menu.PrintPreview"; fallback = L"印刷ﾌﾟﾚﾋﾞｭｰ(&V)"; break;
         case ID_FILE_PRINT_SETUP: key = L"Menu.PrintSetup"; fallback = L"ﾌﾟﾘﾝﾀの設定(&R)..."; break;
         case ID_APP_EXIT: key = L"Menu.Exit"; fallback = L"ｱﾌﾟﾘｹｰｼｮﾝの終了(&X)"; break;
-        case ID_EDIT_UNDO: key = L"Menu.Undo"; fallback = L"元に戻す(&U)"; break;
-        case ID_EDIT_REDO: key = L"Menu.Redo"; fallback = L"やり直し(&R)"; break;
-        case ID_EDIT_CUT: key = L"Menu.Cut"; fallback = L"切り取り(&T)"; break;
-        case ID_EDIT_COPY: key = L"Menu.Copy"; fallback = L"ｺﾋﾟｰ(&C)"; break;
-        case ID_EDIT_PASTE: key = L"Menu.Paste"; fallback = L"貼り付け(&P)"; break;
+        case ID_EDIT_UNDO: key = L"Menu.Undo"; fallback = L"元に戻す(&U)\tCtrl+Z"; break;
+        case ID_EDIT_REDO: key = L"Menu.Redo"; fallback = L"やり直し(&R)\tCtrl+Y"; break;
+        case ID_EDIT_CUT: key = L"Menu.Cut"; fallback = L"切り取り(&T)\tCtrl+X"; break;
+        case ID_EDIT_COPY: key = L"Menu.Copy"; fallback = L"ｺﾋﾟｰ(&C)\tCtrl+C"; break;
+        case ID_EDIT_PASTE: key = L"Menu.Paste"; fallback = L"貼り付け(&P)\tCtrl+V"; break;
         case ID_EDIT_CLEAR: key = L"Menu.Clear"; fallback = L"消去"; break;
         case ID_VIEW_TOOLBAR: key = L"Menu.ToolBar"; fallback = L"ﾂｰﾙ ﾊﾞｰ(&T)"; break;
         case ID_VIEW_STATUS_BAR: key = L"Menu.StatusBar"; fallback = L"ｽﾃｰﾀｽ ﾊﾞｰ(&S)"; break;
