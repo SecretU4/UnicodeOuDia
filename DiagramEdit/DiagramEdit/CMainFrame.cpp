@@ -368,7 +368,7 @@ int CMainFrame::OnFileRosenFileInsert_Process( BOOL bQueryEnable )
 	}
 	if ( !strErrorMsg.IsEmpty() )
 	{
-		MessageBox( strErrorMsg , NULL , MB_ICONSTOP ) ;
+		MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_ICONSTOP ) ;
 	}
 	return iRv ;
 }
@@ -530,7 +530,7 @@ int CMainFrame::OnFileRosenCreateSubRosen_Process( BOOL bQueryEnable )
 	}
 	if ( !strErrorMsg.IsEmpty() )
 	{
-		MessageBox( strErrorMsg , NULL , MB_ICONSTOP ) ;
+		MessageBox( LocalizeUiText(std::wstring((LPCTSTR)strErrorMsg)).c_str() , NULL , MB_ICONSTOP ) ;
 	}
 	return iRv ;
 
