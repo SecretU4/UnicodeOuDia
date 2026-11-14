@@ -271,6 +271,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 	{
 		CString	strItem ;
 		strItem.LoadString( IDS_WORD_ROSEN ) ;
+		strItem = LocalizeUiText(std::wstring((LPCTSTR)strItem)).c_str();
 		
 		string	strRosenName = pCentDedRosen->getName() ;
 		if ( strRosenName.size() > 0 ){
@@ -290,6 +291,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 	{
 		CString	strItem ;
 		strItem.LoadString( IDS_WORD_EKI ) ;
+		strItem = LocalizeUiText(std::wstring((LPCTSTR)strItem)).c_str();
 		int nImage = 1 ;
 		int nSelectedImage = 1 ;
 
@@ -301,6 +303,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 	{
 		CString	strItem ;
 		strItem.LoadString( IDS_WORD_RESSYASYUBETSU ) ;
+		strItem = LocalizeUiText(std::wstring((LPCTSTR)strItem)).c_str();
 		int nImage = 2 ;
 		int nSelectedImage = 2 ;
 
@@ -313,6 +316,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 	{
 		CString	strItem ;
 		strItem.LoadString( IDS_WORD_DIA ) ;
+		strItem = LocalizeUiText(std::wstring((LPCTSTR)strItem)).c_str();
 		int nImage = 3 ;
 		int nSelectedImage = 3 ;
 
@@ -348,6 +352,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 			{
 				CString	strItem ;
 				strItem.LoadString( IDS_WORD_KUDARIJIKOKUHYOU ) ;
+		strItem = LocalizeUiText(std::wstring((LPCTSTR)strItem)).c_str();
 				int nImage = 5 ;
 				int nSelectedImage = 5 ;
 
@@ -357,6 +362,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 			{
 				CString	strItem ;
 				strItem.LoadString( IDS_WORD_NOBORIJIKOKUHYOU ) ;
+		strItem = LocalizeUiText(std::wstring((LPCTSTR)strItem)).c_str();
 				int nImage = 6 ;
 				int nSelectedImage = 6 ;
 
@@ -369,6 +375,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 			{
 				CString	strItem ;
 				strItem.LoadString( IDS_WORD_DIAGRAM ) ;
+		strItem = LocalizeUiText(std::wstring((LPCTSTR)strItem)).c_str();
 				int nImage = 7 ;
 				int nSelectedImage = 7 ;
 
@@ -384,6 +391,7 @@ void CDlgRosenView::UpdateROSEN( const CentDedRosen* pCentDedRosen )
 	{
 		CString	strItem ;
 		strItem.LoadString( IDS_WORD_COMMENT ) ;
+		strItem = LocalizeUiText(std::wstring((LPCTSTR)strItem)).c_str();
 		int nImage = 8 ;
 		int nSelectedImage = 8 ;
 
