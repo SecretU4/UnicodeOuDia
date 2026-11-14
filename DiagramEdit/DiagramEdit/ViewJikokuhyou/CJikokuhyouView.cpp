@@ -542,12 +542,12 @@ void CJikokuhyouView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 	{
 		//キャプションにページを追加
 		{
-			string	strCaption = pdcdCaption->getText() ;
+			std::wstring	strCaption = pdcdCaption->getText() ;
 			CString	strSono ;
 			strSono.Format( IDS_WORD_Sono , iXPage + 1 ) ;
-			strCaption += stringOf( std::wstring( (LPCTSTR)strSono ) ) ;
-			strCaption += " " ;
-			pdcdCaption->setText( wstringOf( strCaption ) ) ;
+			strCaption += std::wstring( (LPCTSTR)strSono ) ;
+			strCaption += L" " ;
+			pdcdCaption->setText( strCaption ) ;
 		}
 		//ページ番号も決定
 		{
